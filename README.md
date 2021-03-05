@@ -4,7 +4,7 @@
   * [提问前请看](http://www.360doc.com/content/19/1223/08/30422483_881502108.shtml)
   
 * 下载分流
-  * [Gitee](https://gitee.com/u81668899/FFXIV_Auxiliary_Tools)
+  * [github](https://github.com/u81668899/FFXIV_Auxiliary_Tools)
 
 * 部分触发器依赖 [鲶鱼精邮差](https://nga.178.com/read.php?tid=19724323)
 
@@ -23,10 +23,10 @@
 
 ```仓库地址:
 触发器整合：
-https://gitee.com/u81668899/FFXIV_Auxiliary_Tools/raw/master/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/TriggernometryExport.xml
+https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools/raw/master/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/TriggernometryExport.xml
 
 5.0副本触发器
-https://gitee.com/u81668899/FFXIV_Auxiliary_Tools/raw/master/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E8%A7%A6%E5%8F%91%E5%99%A8/5.0%E8%A7%A6%E5%8F%91%E5%99%A8.xml
+https://github.com/u81668899/FFXIV_Auxiliary_Tools/raw/master/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E8%A7%A6%E5%8F%91%E5%99%A8/5.0%E8%A7%A6%E5%8F%91%E5%99%A8.xml
 
 配置【鲶鱼精邮差】监听端口（导入时需勾选“允许触发器启动进程”）
 //复制到本地以修改端口
