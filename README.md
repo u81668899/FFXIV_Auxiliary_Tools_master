@@ -28,7 +28,7 @@ https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernomet
 自动交巨匠：
 https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E8%87%AA%E5%8A%A8%E4%BA%A4%E5%B7%A8%E5%8C%A0.xml
 
-5.0副本触发器
+副本触发器（含博兹雅绝亚绝神兵伊甸等）：
 https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E8%A7%A6%E5%8F%91%E5%99%A8/5.0%E8%A7%A6%E5%8F%91%E5%99%A8.xml
 
 配置【鲶鱼精邮差】监听端口（导入时需勾选“允许触发器启动进程”）
