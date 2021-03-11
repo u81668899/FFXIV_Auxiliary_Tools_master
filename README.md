@@ -1,6 +1,6 @@
 # FFXIV_Auxiliary_Tools_master
 
-* QQ群:935709792
+* 该仓库由修改souma版而来，大多数内容都是抄的
   * [提问前请看](http://www.360doc.com/content/19/1223/08/30422483_881502108.shtml)
   
 * 下载分流
@@ -38,7 +38,7 @@ https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernomet
 //复制到本地以修改端口
 //已经下载到本地的可以也选择运行'设置鲶鱼精邮差端口.bat'进行设置
 //或者直接使用触发器进行配置
-https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry触发器/触发器设置鲶鱼精端口环境变量.xml
+https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E8%A7%A6%E5%8F%91%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%B2%B6%E9%B1%BC%E7%B2%BE%E7%AB%AF%E5%8F%A3%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.xml
 
 Aho 团辅监控
 https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/Aho's%20Raid%20Buffs.xml
