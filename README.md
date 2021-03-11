@@ -1,4 +1,4 @@
-# FFXIV_Auxiliary_Tools
+# FFXIV_Auxiliary_Tools_master
 
 * QQ群:935709792
   * [提问前请看](http://www.360doc.com/content/19/1223/08/30422483_881502108.shtml)
