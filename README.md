@@ -4,7 +4,7 @@
   * [提问前请看](http://www.360doc.com/content/19/1223/08/30422483_881502108.shtml)
   
 * 下载分流
-  * [github](https://github.com/u81668899/FFXIV_Auxiliary_Tools)
+  * [github](https://github.com/u81668899/FFXIV_Auxiliary_Tools_master)
 
 * 部分触发器依赖 [鲶鱼精邮差](https://nga.178.com/read.php?tid=19724323)
 
