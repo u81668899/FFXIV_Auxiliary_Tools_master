@@ -1,319 +1,294 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder FFXIVJobFilter="8192" Id="6fd0c8d9-bfb0-4169-8e75-7e27b3e566e4" ZoneFilterRegularExpression="水晶都" Name="自动交接巨匠" Enabled="false">
+  <ExportedFolder FFXIVJobFilterEnabled="True" FFXIVJobFilter="8192" ZoneFilterEnabled="True" Id="6fd0c8d9-bfb0-4169-8e75-7e27b3e566e4" ZoneFilterRegularExpression="^旧萨雷安$" Name="自动交接巨匠" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Name="3.“做好就拿来给我吧！”" Id="8349b7e1-12fc-4f22-8b0c-d90f9789782c" RegularExpression="做好就拿来给我吧！$">
+      <Trigger Enabled="true" Name="3.“你拿来委托的物品了吗？”" Id="8349b7e1-12fc-4f22-8b0c-d90f9789782c" RegularExpression="^.{14} ChatLog 00:003D:阿尔德伊恩:你拿来委托的物品了吗？ 交到这边的窗口就行。">
         <Actions>
-          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" TriggerForce="regexp,conditions" ActionType="Trigger" ExecutionDelayExpression="325">
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="150">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+            </Condition>
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="15.75" TextAuraBackground="Lime" TextAuraName="3." TextAuraExpression="3." TextAuraXIniExpression="520" TextAuraYIniExpression="466" TextAuraWIniExpression="177" TextAuraHIniExpression="64" TextAuraOIniExpression="100" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+          <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraBackground="Lime" TextAuraName="3." TextAuraExpression="3." TextAuraXIniExpression="520" TextAuraYIniExpression="466" TextAuraWIniExpression="177" TextAuraHIniExpression="64" TextAuraOIniExpression="100" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="6.“呃，东西在哪？”" Id="df2377ac-c768-43f6-8fa7-e5771ec7c070" RegularExpression="^.{14} 00:(003d:莫伊丝:如今|003d:莫伊丝:呃，东西在哪？)">
+      <Trigger Enabled="true" Name="6.“呃，东西在哪？”" Id="df2377ac-c768-43f6-8fa7-e5771ec7c070" RegularExpression="^.{14} ChatLog 00:003D:阿尔德伊恩:你怎么了？做好的东西忘记拿了？ 我看你那没有委托的物品啊……|理符受理限额不足，距离下次更新限额还有">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="Trigger">
+          <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="6ed38ebf-823e-4b4e-b002-692d0339a2ae" ActionType="Trigger">
+          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="6ed38ebf-823e-4b4e-b002-692d0339a2ae" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="120">
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="e3654cb5-de1d-476e-a063-339445d9a820" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="200">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
           </Action>
-          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="511">
+          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="120">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="185">
+          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="511">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="185">
+          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="185">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="773">
+          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="185">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="510">
+          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="773">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="9" LogLevel="-1" UseTTSTextExpression="交接巨匠失败" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+          <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="510">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="10" FolderOp="DisableFolder" FolderId="6fd0c8d9-bfb0-4169-8e75-7e27b3e566e4" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Folder">
+          <Action OrderNumber="10" UseTTSTextExpression="巨匠结束了" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          </Action>
+          <Action OrderNumber="11" FolderOp="DisableFolder" FolderId="6fd0c8d9-bfb0-4169-8e75-7e27b3e566e4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Folder">
+            <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="1.“有什么事？”" Id="54e0bd9b-08e6-45ee-935a-de320492dcbc" RegularExpression="^.{14} 00:003d:埃利库鲁:我这里负责将中庸工艺馆" PrevActionsRefire="Deny" PeriodRefire="Deny">
+      <Trigger Enabled="true" Name="1.“一般那些委托给拾穗人总会的工作”" Id="54e0bd9b-08e6-45ee-935a-de320492dcbc" RegularExpression="^.{14} ChatLog 00:003D:格里格:一般那些委托给拾穗人总会的工作， 我们都会以理符的形式发布出去，介绍给登记在册工匠会员处理。 你怎么样，有看中合适的任务吗？" PrevActionsRefire="Deny" PeriodRefire="Deny">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" TextAuraEffect="Bold" TextAuraFontSize="24" TextAuraBackground="#80FF00" TextAuraName="1." TextAuraExpression="1." TextAuraXIniExpression="647" TextAuraYIniExpression="272" TextAuraWIniExpression="115" TextAuraHIniExpression="117" TextAuraOIniExpression="100" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+          <Action OrderNumber="1" TextAuraEffect="Bold" TextAuraFontSize="24" TextAuraBackground="#80FF00" TextAuraName="1." TextAuraExpression="1." TextAuraXIniExpression="647" TextAuraYIniExpression="272" TextAuraWIniExpression="115" TextAuraHIniExpression="117" TextAuraOIniExpression="100" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="130">
+          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="105" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="400">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="130">
+          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1050">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="943">
+          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="742">
+          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="400">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="100">
+          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="511">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="511">
+          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="673">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="673">
+          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="673">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="641">
+          <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="641">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="535">
+          <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="535">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="611">
+          <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="611">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="571">
+          <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="571">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="353">
+          <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="353">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="353">
+          <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="353">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="15" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" TriggerForce="regexp,conditions" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="321">
+          <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" TriggerForce="regexp,conditions" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="321">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="16" LogLevel="-1" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="1." TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+          <Action OrderNumber="16" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="1." TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="${var:OnOperate}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
         </Condition>
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="2.接受了任地“水晶都”的任务" Id="e3654cb5-de1d-476e-a063-339445d9a820" RegularExpression="^.{14} 00:0039:接受了任地“水晶都”的任务“批发委托：用于保证精密质量的药水”。">
+      <Trigger Enabled="true" Name="2.接受了任地“旧萨雷安”的任务" Id="e3654cb5-de1d-476e-a063-339445d9a820" RegularExpression="^.{14} ChatLog 00:0039::接受了任地“旧萨雷安”的任务“制作委托：(专心工作用的炼金药|提高品质用的炼金药|治愈身心的茶)”。">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="15" TextAuraBackground="#FF8040" TextAuraName="2." TextAuraExpression="2." TextAuraXIniExpression="525" TextAuraYIniExpression="340" TextAuraWIniExpression="118" TextAuraHIniExpression="92" TextAuraOIniExpression="100" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+          <Action OrderNumber="1" TextAuraFontSize="15" TextAuraBackground="#FF8040" TextAuraName="2." TextAuraExpression="2." TextAuraXIniExpression="525" TextAuraYIniExpression="340" TextAuraWIniExpression="118" TextAuraHIniExpression="92" TextAuraOIniExpression="100" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="CommandingCS" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="CommandingCS" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="265">
+          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="265">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="265">
+          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="265">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
+          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="187" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1844">
+          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="187" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="184">
+          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="187" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1444">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="530">
+          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="187" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="184">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="660">
+          <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="530">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="630">
+          <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="660">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
+          <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="200">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
+          <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="200">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
+          <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="14" LogLevel="-1" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="2." TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+          <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          </Action>
+          <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="430">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="2." TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="4.因缴纳了优质道具，得到了额外100％的报酬奖励。" Id="8ef5a519-ca74-4e13-9bf4-daf1da094e22" RegularExpression="^.{14} 00:0039:因缴纳了优质道具，">
+      <Trigger Enabled="true" Name="4.因缴纳了优质道具，得到了额外100％的报酬奖励。" Id="8ef5a519-ca74-4e13-9bf4-daf1da094e22" RegularExpression="^.{14} ChatLog 00:0039::因缴纳了优质道具， 得到了额外100%的报酬奖励。">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="CommandingCS" VariableExpression="${var:CommandingCS}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="CommandingCS" VariableExpression="${var:CommandingCS}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="Trigger" ExecutionDelayExpression="50">
+          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="Trigger" ExecutionDelayExpression="50">
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="6ed38ebf-823e-4b4e-b002-692d0339a2ae" TriggerForce="regexp,conditions" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="610">
+          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="6ed38ebf-823e-4b4e-b002-692d0339a2ae" TriggerForce="regexp,conditions" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="610">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="KeyPress" ExecutionDelayExpression="310">
+          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="KeyPress" ExecutionDelayExpression="310">
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="3." TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+          <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="3." TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="5.理符任务完成！" Id="6ed38ebf-823e-4b4e-b002-692d0339a2ae" RegularExpression="^.{14} 00:003e:获得了.{3,6}金币。">
+      <Trigger Enabled="true" Name="5.理符任务完成！" Id="6ed38ebf-823e-4b4e-b002-692d0339a2ae" RegularExpression="^.{14} (?:\w+ |)00:003E::?获得了.{3,6}金币。" PrevActionsRefire="Deny">
         <Actions>
-          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="120">
+          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="120">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="511">
+          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="120">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="545">
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="8349b7e1-12fc-4f22-8b0c-d90f9789782c" ActionType="Trigger" ExecutionDelayExpression="50">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+            </Condition>
           </Action>
-          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="185">
+          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="120">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="240">
+          <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="511">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="773">
+          <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="545">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="510">
+          <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="185">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          </Action>
+          <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="240">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="773">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="816">
+            <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
         </Condition>
-        <Conditions />
       </Trigger>
       <Trigger Enabled="false" Name="说明: /target &lt;circle&gt;宏绑定+按键" Id="a0d88297-f9f5-44e5-8dd1-51155624f475" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="false" Name="说明: /target &lt;triangle&gt;宏绑定-按键" Id="ec20e745-682b-4db0-94dd-0a969e51ead8" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="false" Name="说明: 把巨匠放在物品栏第一格" Id="19fae528-f022-414e-a69e-e2ccc55830e8" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="false" Name="说明: 给埃利库鲁标记三角" Id="54f09c74-891b-4b9e-9853-4118d5048fd9" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="false" Name="说明: 给莫伊丝标记圆圈" Id="06e4a6b0-bf28-4198-8eb7-ac80071a1ab1" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="false" Name="说明: 站在摊位前，右键“5.理符任务完成!”启动循环，或者聊天栏输入&quot;/e 开始接巨匠&quot;" Id="f8d41526-f1b3-4d5e-9815-8747f37d7953" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="0.自动接巨匠" Id="b176097b-425a-43e1-bba8-3542d88062c0" RegularExpression="^.{14} 00:0038:开始接巨匠$">
+      <Trigger Enabled="true" Name="0.自动接巨匠" Id="b176097b-425a-43e1-bba8-3542d88062c0" RegularExpression="^.{14} ChatLog 00:0038::开始接巨匠$">
         <Actions>
-          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="6ed38ebf-823e-4b4e-b002-692d0339a2ae" TriggerForce="regexp,conditions" ActionType="Trigger">
+          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="6ed38ebf-823e-4b4e-b002-692d0339a2ae" TriggerForce="regexp,conditions,parent" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="7.错误接受" Id="aeed7d07-6c8d-4d8a-b48a-39677c2d11aa" RegularExpression="^.{14} ChatLog 00:0039::接受了任地“旧萨雷安”的任务“制作委托：">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="e3654cb5-de1d-476e-a063-339445d9a820" ActionType="Trigger" ExecutionDelayExpression="200">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" FolderOp="DisableFolder" FolderId="6fd0c8d9-bfb0-4169-8e75-7e27b3e566e4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Folder">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:CommandingCS}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="And">
+          <ConditionSingle Enabled="false" ExpressionL="${var:CommandingCS}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="false" Name="说明:2里面的104按键根据自身闲杂理符选择2个或3个" Id="b10a3f06-f393-41de-a15a-6f74e55025dc" RegularExpression="">
+        <Actions />
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
