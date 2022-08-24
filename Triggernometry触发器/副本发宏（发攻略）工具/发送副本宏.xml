@@ -1,27 +1,24 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="d99dc292-e5f6-40e8-93c8-1f19ba63f545" Name="发送副本宏 v1.5.0" Enabled="true">
+  <ExportedFolder Id="d99dc292-e5f6-40e8-93c8-1f19ba63f545" Name="发送副本宏 v1.6.0" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Sequential="True" Name="3 发送" Id="fc1a5216-3bad-4ac6-8929-1c91a200ff8e" RegularExpression="^.{14} 00:0038:发宏($| ?(?&lt;map&gt;.+)$)" PrevActions="Interrupt">
+      <Trigger Enabled="true" Sequential="True" Name="3 发送" Id="fc1a5216-3bad-4ac6-8929-1c91a200ff8e" RegularExpression="^.{14} ChatLog 00:0038::发宏($| (?&lt;map&gt;.+)$)" PrevActions="Interrupt">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="AT_发宏" VariableExpression="${var:AT_发宏}+1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" Asynchronous="False" Description="(Don't touch)" DescriptionOverride="True">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="AT_发宏" VariableExpression="${var:AT_发宏}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="(Don't touch)" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${evar:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="123" VariableExpression="${map}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Asynchronous="False" Description="(Don't touch)">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="123" VariableExpression="${map}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Asynchronous="False" Description="(Don't touch)">
             <Condition Enabled="false" Grouping="And" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="未配置鲶鱼精邮差。" UseTTSVolumeExpression="" UseTTSRateExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="300">
+          <Action OrderNumber="3" UseTTSTextExpression="未配置鲶鱼精邮差。" UseTTSVolumeExpression="" UseTTSRateExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="300">
             <Condition Enabled="true" Grouping="Not">
               <ConditionSingle Enabled="true" ExpressionL="${_env[PostNamazu]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e ${tvarrl:ExtremeMacroText[${_zone}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Description="发送默语第一页" DescriptionOverride="True">
+          <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/e ${tvarrl:ExtremeMacroText[${_zone}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="发送默语第一页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionGroup Enabled="true" Grouping="Not">
@@ -32,9 +29,8 @@
                 <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${map}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e ${tvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Description="发送默语第二页" DescriptionOverride="True">
+          <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e ${tvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="发送默语第二页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${_zone}][2]}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
@@ -43,9 +39,8 @@
                 <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/p ${tvarrl:ExtremeMacroText[${_zone}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Description="发送小队第一页" DescriptionOverride="True">
+          <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/p ${tvarrl:ExtremeMacroText[${_zone}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="发送小队第一页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionGroup Enabled="true" Grouping="Not">
@@ -57,9 +52,8 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/p ${tvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Description="发送小队第二页" DescriptionOverride="True">
+          <Action OrderNumber="7" NamedCallbackName="command" NamedCallbackParam="/p ${tvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="发送小队第二页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${_zone}][2]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
@@ -69,9 +63,8 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e ${tvarrl:ExtremeMacroText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图默语第一页" DescriptionOverride="True">
+          <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/e ${tvarrl:ExtremeMacroText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图默语第一页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
@@ -79,17 +72,15 @@
                 <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${map}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e ${tvarrl:ExtremeMacroText[${map}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图默语第二页" DescriptionOverride="True">
+          <Action OrderNumber="9" NamedCallbackName="command" NamedCallbackParam="/e ${tvarrl:ExtremeMacroText[${map}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图默语第二页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${map}][2]}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/p ${tvarrl:ExtremeMacroText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图小队第一页" DescriptionOverride="True">
+          <Action OrderNumber="10" NamedCallbackName="command" NamedCallbackParam="/p ${tvarrl:ExtremeMacroText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图小队第一页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -98,18 +89,16 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="11" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/p ${tvarrl:ExtremeMacroText[${map}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图小队第二页" DescriptionOverride="True">
+          <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/p ${tvarrl:ExtremeMacroText[${map}][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="100" Asynchronous="False" Description="特定地图小队第二页" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${map}][2]}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="12" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/e ${tvarrl:FBBOSSText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Asynchronous="False" Description="发送BOSS默语" DescriptionOverride="True">
+          <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/e ${tvarrl:FBBOSSText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="发送BOSS默语" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
@@ -117,29 +106,35 @@
                 <ConditionSingle Enabled="true" ExpressionL="${tvarrl:FBBOSSText[${map}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="13" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/p ${tvarrl:FBBOSSText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Asynchronous="False" Description="发送BOSS小队" DescriptionOverride="True">
+          <Action OrderNumber="13" NamedCallbackName="command" NamedCallbackParam="/p ${tvarrl:FBBOSSText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="发送BOSS小队" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:AT_FBBOSS}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
               <ConditionGroup Enabled="true" Grouping="Not">
                 <ConditionSingle Enabled="true" ExpressionL="${tvarrl:FBBOSSText[${map}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="14" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e 未组队状态下无法发送小队消息。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Description="未组队" DescriptionOverride="True">
+          <Action OrderNumber="14" NamedCallbackName="command" NamedCallbackParam="/sh ${tvarrl:FBBOSSText[${map}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="发送BOSS喊话" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+              <ConditionGroup Enabled="true" Grouping="Not">
+                <ConditionSingle Enabled="true" ExpressionL="${tvarrl:FBBOSSText[${map}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              </ConditionGroup>
+            </Condition>
+          </Action>
+          <Action OrderNumber="15" NamedCallbackName="command" NamedCallbackParam="/e 未组队状态下无法发送小队消息。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="未组队" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="1|3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionGroup Enabled="true" Grouping="Not">
                 <ConditionSingle Enabled="true" ExpressionL="${tvarrl:ExtremeMacroText[${_zone}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="15" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e 此副本暂未收录。" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Asynchronous="False" Description="此副本暂未收录" DescriptionOverride="True">
+          <Action OrderNumber="16" NamedCallbackName="command" NamedCallbackParam="/e 此副本暂未收录。" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="此副本暂未收录" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="Or">
               <ConditionGroup Enabled="true" Grouping="And">
                 <ConditionSingle Enabled="true" ExpressionL="${map}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -147,23 +142,21 @@
                 <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="0|1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
-          <Action OrderNumber="16" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e 此Boss暂未收录。" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Asynchronous="False" Description="此Boss暂未收录" DescriptionOverride="True">
+          <Action OrderNumber="17" NamedCallbackName="command" NamedCallbackParam="/e 此Boss暂未收录。" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="此Boss暂未收录" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="2|3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:AT_发宏}" ExpressionTypeL="Numeric" ExpressionR="2|3|4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${tvarrl:FBBOSSText[${map}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
         </Actions>
-        <Condition Enabled="true" Grouping="Or">
+        <Condition Enabled="false" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="拉诺西亚|黑衣森林|萨纳兰|库尔札斯中央高地|摩杜纳|库尔札斯西部高地|龙堡|翻云雾海|阿巴拉提亚云海|魔大陆阿济兹拉|基拉巴尼亚|红玉海|延夏|太阳神草原|雷克兰德|伊尔美格|珂露西亚|安穆·艾兰|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="5 你得先进本啊！！" Id="b95578b7-6332-47aa-83a4-90e0add7211c" RegularExpression="^.{14} 00:0038:发宏 $">
+      <Trigger Enabled="true" Sequential="True" Name="5 你得先进本啊！！" Id="b95578b7-6332-47aa-83a4-90e0add7211c" RegularExpression="^.{14} ChatLog 00:0038::发宏 $">
         <Actions>
-          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/e 你得先进本啊！&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="GenericJson" Asynchronous="False">
+          <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e 你得先进本啊！&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -171,35 +164,30 @@
           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="拉诺西亚|黑衣森林|萨纳兰|库尔札斯中央高地|摩杜纳|库尔札斯西部高地|龙堡|翻云雾海|阿巴拉提亚云海|魔大陆阿济兹拉|基拉巴尼亚|红玉海|延夏|太阳神草原|雷克兰德|伊尔美格|珂露西亚|安穆·艾兰|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="true" Name="1 摧毁变量" Id="1b851ae0-ca18-49df-bbd3-ee776d9ea12e" RegularExpression="^.{14} 00:0038:发宏">
+      <Trigger Enabled="true" Name="1 摧毁变量" Id="1b851ae0-ca18-49df-bbd3-ee776d9ea12e" RegularExpression="^.{14} ChatLog 00:0038::发宏">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="AT_发宏" VariableExpression="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="3000" RefireInterrupt="True">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="AT_发宏" VariableExpression="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="3000" RefireInterrupt="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="2 载入文本csv地址" Id="dcbdc57b-086b-4e5a-bc36-ea4e51b4c108" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000" EditAutofire="True">
+      <Trigger Enabled="true" Name="2 载入文本csv地址" Id="dcbdc57b-086b-4e5a-bc36-ea4e51b4c108" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000">
         <Actions>
-          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\small_budding\Documents\GitHub\FFXIV_Auxiliary_Tools-master\Triggernometry触发器\副本发宏（发攻略）工具\BOSS.csv" DiskFileOpVar="FBBOSSText" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="DiskFile" Asynchronous="False" Description="将此出修改为本地&quot;BOSS.csv&quot;文件地址" DescriptionOverride="True">
+          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\Administrator.DESKTOP-MJQHBL0\Documents\GitHub\FFXIV_Auxiliary_Tools_master\Triggernometry触发器\副本发宏（发攻略）工具\BOSS.csv" DiskFileOpVar="FBBOSSText" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="DiskFile" Asynchronous="False" Description="将此出修改为本地&quot;BOSS.csv&quot;文件地址" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\small_budding\Documents\GitHub\FFXIV_Auxiliary_Tools-master\Triggernometry触发器\副本发宏（发攻略）工具\宏.csv" DiskFileOpVar="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="DiskFile" ExecutionDelayExpression="200" Description="将此出修改为本地&quot;宏.csv&quot;文件地址" DescriptionOverride="True">
+          <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\Administrator.DESKTOP-MJQHBL0\Documents\GitHub\FFXIV_Auxiliary_Tools_master\Triggernometry触发器\副本发宏（发攻略）工具\宏.csv" DiskFileOpVar="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="DiskFile" ExecutionDelayExpression="200" Description="将此出修改为本地&quot;宏.csv&quot;文件地址" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/%E5%AE%8F.csv" DiskFileOpVar="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="DiskFile" ExecutionDelayExpression="500" Asynchronous="False" Description="网络副本文件" DescriptionOverride="True">
+          <Action OrderNumber="3" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/%E5%AE%8F.csv" DiskFileOpVar="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" ExecutionDelayExpression="500" Asynchronous="False" Description="网络副本文件" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="4" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/BOSS.csv" DiskFileOpVar="FBBOSSText" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="DiskFile" ExecutionDelayExpression="200" Asynchronous="False" Description="网络boss文件" DescriptionOverride="True">
+          <Action OrderNumber="4" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://raw.fastgit.org/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/BOSS.csv" DiskFileOpVar="FBBOSSText" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" ExecutionDelayExpression="200" Asynchronous="False" Description="网络boss文件" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="AT_发宏" VariableExpression="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" RefireInterrupt="True">
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="AT_发宏" VariableExpression="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" RefireInterrupt="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
@@ -208,80 +196,63 @@
       </Trigger>
       <Trigger Enabled="false" IsReadme="True" Name="使用说明（请务必阅读清楚  用不了本人概不负责）" Id="01a360f7-9bca-49e2-a13d-5432c5816dd1" RegularExpression="" Description="使用远程触发器导入时，请勾选“允许触发器操作文件”，并手动右键更新一次触发器，否则将无法使用。&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;1.开启依赖：[鲶鱼精邮差]&#xD;&#xA;&#xD;&#xA;2.配置鲶鱼精邮差的端口环境(bat)。重启ACT&#xD;&#xA;&#xD;&#xA;3.使用宏&#xD;&#xA;&#xD;&#xA;  &quot;/e 站位宏&quot;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;使用上面的宏，会将当前所在副本的对应喊话到默语频道(仅自己可见)。&#xD;&#xA;如3秒内连打2次宏，则发送到小队频道。&#xD;&#xA;&#xD;&#xA;附：&#xD;&#xA;  E1S-E4S写法&#xD;&#xA;  伊甸零式希望乐园 (觉醒之章1)&#xD;&#xA;  伊甸零式希望乐园 (觉醒之章2)&#xD;&#xA;  伊甸零式希望乐园 (觉醒之章3)&#xD;&#xA;  伊甸零式希望乐园 (觉醒之章4)&#xD;&#xA;&#xD;&#xA;https://nga.178.com/read.php?&amp;tid=19753093">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="1. 此为soumade 副本发宏工具扩展，可与原版配合使用，请把次文件放入原本目录下 也可以不放、、、" DescriptionOverride="True">
+          <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="1. 此为soumade 副本发宏工具扩展，可与原版配合使用，请把次文件放入原本目录下 也可以不放、、、" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="2. 主要作用是细化每个BOSS的攻略 以及方便个人给某些目标一些备注提示" DescriptionOverride="True">
+          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="2. 主要作用是细化每个BOSS的攻略 以及方便个人给某些目标一些备注提示" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="3. 请务必下载配套的.cvs文件并在&lt;载入文本&gt;中 设置下载文件的目录" DescriptionOverride="True">
+          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="3. 请务必下载配套的.cvs文件并在&lt;载入文本&gt;中 设置下载文件的目录" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="4. 将原版的宏设置为 /e 发宏 &lt;t&gt;" DescriptionOverride="True">
+          <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="4. 将原版的宏设置为 /e 发宏 &lt;t&gt;" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="5. 使用上面的宏，会将当前目标的对应喊话到默语频道(仅自己可见)。" DescriptionOverride="True">
+          <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="5. 使用上面的宏，会将当前目标的对应喊话到默语频道(仅自己可见)。" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="6" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="6. 如3秒内连打2次宏，则发送到小队频道。" DescriptionOverride="True">
+          <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="6. 如3秒内连打2次宏，则发送到小队频道。" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="6.1 点3次则会进入boss搜索模式，会搜索选定的目标的攻略，发送的默语" DescriptionOverride="True">
+          <Action OrderNumber="7" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="6.1 点3次则会进入boss搜索模式，会搜索选定的目标的攻略，发送的默语" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="8" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="6.2 点4次当然也就发到小队啦" DescriptionOverride="True">
+          <Action OrderNumber="8" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="6.2 点4次当然也就发到小队啦" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="9" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="6.3  可以不用选定目标 直接手动输入来实现查询  /e 发宏 要查询的副本名或目标名称" DescriptionOverride="True">
+          <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="6.3  可以不用选定目标 直接手动输入来实现查询  /e 发宏 要查询的副本名或目标名称" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="10" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="7. .cvs文件请用txt文本打开 修改格式为  目标名称,&quot;要备注的内容&quot;" DescriptionOverride="True">
+          <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="7. .cvs文件请用txt文本打开 修改格式为  目标名称,&quot;要备注的内容&quot;" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="11" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="8. 其他功能：你甚至可以用这个给某人设置备注（比如：这是个镐子@！） " DescriptionOverride="True">
+          <Action OrderNumber="11" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="8. 其他功能：你甚至可以用这个给某人设置备注（比如：这是个镐子@！） " DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="12" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="8. 警告 此扩展没有匹配限制 无法区分重名 比如 真/极神 等等" DescriptionOverride="True">
+          <Action OrderNumber="12" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="8. 警告 此扩展没有匹配限制 无法区分重名 比如 真/极神 等等" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="13" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="9. 目前副本BOSS只更新了一点点  高难本简写部分站位宏" DescriptionOverride="True">
+          <Action OrderNumber="13" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="9. 目前副本BOSS只更新了一点点  高难本简写部分站位宏" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="14" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="9.1 高难本的名称均采用了通用简写 例： 极绿宝石" DescriptionOverride="True">
+          <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="9.1 高难本的名称均采用了通用简写 例： 极绿宝石" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="15" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="9.2 有门神的BOSS会把某些门神单独提出 例如:E12S门神 (本体名称不变)" DescriptionOverride="True">
+          <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="9.2 有门神的BOSS会把某些门神单独提出 例如:E12S门神 (本体名称不变)" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="16" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="10. 问就是懒！！！！！！！！ 要么等我龟速更新 要么自己更 不服你来打我鸭~~" DescriptionOverride="True">
+          <Action OrderNumber="16" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="10. 问就是懒！！！！！！！！ 要么等我龟速更新 要么自己更 不服你来打我鸭~~" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="17" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" Enabled="False" ActionType="Variable" Description="11. 若某些东西显示不完整 那就是文本长度超过上限 请自行删减（本体也是如此）" DescriptionOverride="True">
+          <Action OrderNumber="17" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Description="11. 若某些东西显示不完整 那就是文本长度超过上限 请自行删减（本体也是如此）" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="4 强制手动刷新文本宏（方便修改文本后更新）" Id="5bc50547-49cf-4815-bcea-ab87402e3dbd" RegularExpression="^.{14} 00:0038:刷新文本#" EditAutofire="True">
+      <Trigger Enabled="false" Name="4 强制手动刷新文本宏（方便修改文本后更新）" Id="5bc50547-49cf-4815-bcea-ab87402e3dbd" RegularExpression="^.{14} ChatLog 00:0038::刷新文本#" EditAutofire="True">
         <Actions>
-          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ae41237c-6527-4d4f-b5fc-260e386663de" TriggerForce="true" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Trigger" Asynchronous="False" Description="刷新文本宏   /e 刷新文本#" DescriptionOverride="True">
+          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ae41237c-6527-4d4f-b5fc-260e386663de" TriggerForce="true" ActionType="Trigger" Asynchronous="False" Description="刷新文本宏   /e 刷新文本#" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
