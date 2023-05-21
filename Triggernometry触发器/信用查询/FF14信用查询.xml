@@ -5,7 +5,7 @@
       <Folder Id="29f46c49-6d49-4bcc-b991-c9fd32b7ed41" Name="加入小队" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="J1" Id="ad74111c-6d0e-437e-900c-e89250b53919" RegularExpression="^.{14} 00:0039:加入了(.+)组建的“.+”队伍。$">
+          <Trigger Enabled="true" Sequential="True" Name="J1" Id="ad74111c-6d0e-437e-900c-e89250b53919" RegularExpression="^.{14} ChatLog 00:0039::加入了(.+)组建的“.+”队伍。$">
             <Actions>
               <Action OrderNumber="1" LogMessageText="Query:$1" LogProcess="True" LogLevel="-1" MessageBoxText="异服" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="true" Grouping="Or">
@@ -22,7 +22,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="J2" Id="7e71658f-1d6b-4c0e-b82a-064d0c12ec52" RegularExpression="^.{14} 00:1039:加入了(.+)的小队。$">
+          <Trigger Enabled="true" Sequential="True" Name="J2" Id="7e71658f-1d6b-4c0e-b82a-064d0c12ec52" RegularExpression="^.{14} ChatLog 00:1039::加入了(.+)的小队。$">
             <Actions>
               <Action OrderNumber="1" LogMessageText="Query:$1" LogProcess="True" LogLevel="-1" MessageBoxText="异服" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="true" Grouping="Or">
@@ -37,7 +37,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="J3" Id="b01bf637-64a4-4376-984d-c3ca4974c93b" RegularExpression="^.{14} 00:2239:(.+)加入了小队。$">
+          <Trigger Enabled="true" Sequential="True" Name="J3" Id="b01bf637-64a4-4376-984d-c3ca4974c93b" RegularExpression="^.{14} ChatLog 00:2239:l::(.+)加入了小队。$">
             <Actions>
               <Action OrderNumber="1" LogMessageText="Query:$1" LogProcess="True" LogLevel="-1" MessageBoxText="异服" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="true" Grouping="Or">
@@ -57,7 +57,7 @@
       <Folder Id="b6eb4485-134f-4732-a912-315ec0946ceb" Name="通用功能" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="宏" Id="e74b2836-efb5-4777-b12e-b943a270a304" RegularExpression="(?i)^.{14} 00:0038:(?:信用|credit|查询|query|查|cha|信|xin)[: ](.+)$">
+          <Trigger Enabled="true" Name="宏" Id="e74b2836-efb5-4777-b12e-b943a270a304" RegularExpression="(?i)^.{14} ChatLog 00:0038::(?:信用|credit|查询|query|查|cha|信|xin)[: ](.+)$">
             <Actions>
               <Action OrderNumber="1" LogMessageText="Query:$1" LogProcess="True" LogLevel="-1" MessageBoxText="异服" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="true" Grouping="Or">
@@ -134,7 +134,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="在线名单" Id="f0eb99de-9c63-4984-8fc7-9cd6bf7d3e47" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000" Description="^.{14} 01:Changed Zone to |^.{14} 00:0039:进入了休息区。&#xD;&#xA;3600000">
+          <Trigger Enabled="true" Name="在线名单" Id="f0eb99de-9c63-4984-8fc7-9cd6bf7d3e47" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000" Description="^.{14} 01:Changed Zone to |^.{14} ChatLog 00:0039::进入了休息区。&#xD;&#xA;3600000">
             <Actions>
               <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://gitee.com/soumasumire/FFXIV_Auxiliary_Tools/raw/master/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E4%BF%A1%E7%94%A8%E6%9F%A5%E8%AF%A2/BlackList1.csv" DiskFileOpVar="封号名单1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="DiskFile">
                 <Condition Enabled="false" Grouping="Or" />
@@ -210,7 +210,7 @@
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="个人本地名单（请复制到本地触发器中启用）" Id="0a327c45-28d4-4f16-8dc9-21b0dbfa1911" RegularExpression="^.{15}00:0839:(?:“.+”任务开始。| has begun\.|「.+」の攻略を開始した。|“.+”任务结束了。| has ended\.|「.+」の攻略を終了した。|)" EditAutofire="True">
+      <Trigger Enabled="true" Name="个人本地名单（请复制到本地触发器中启用）" Id="0a327c45-28d4-4f16-8dc9-21b0dbfa1911" RegularExpression="^.{14} ChatLog 00:0839::(?:“.+”任务开始。| has begun\.|「.+」の攻略を開始した。|“.+”任务结束了。| has ended\.|「.+」の攻略を終了した。|)" EditAutofire="True">
         <Actions>
           <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="D:\FF14\黑名单.csv" DiskFileOpVar="个人本地名单" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
             <Condition Enabled="false" Grouping="Or" />
