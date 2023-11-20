@@ -1,0 +1,165 @@
+{
+  "$type": "NoTankYou.Configuration, NoTankYou",
+  "NumberOfWaitFrames": 30,
+  "ProcessingMainMode": 1,
+  "ProcessingSubMode": 0,
+  "DisableInAllianceRaid": true,
+  "TerritoryChangeDelayTime": 8000,
+  "DeathGracePeriod": 5000,
+  "FoodEarlyWarningTime": 600.0,
+  "FoodSoloMode": true,
+  "WindowSnappingEnabled": true,
+  "GlobalScaleFactor": 0.85,
+  "OverrideIndividualScaleSettings": true,
+  "TankStanceSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 58.0,
+      "Y": 117.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 220.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "DancePartnerSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 59.0,
+      "Y": 114.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 219.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "FaerieSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 57.0,
+      "Y": 116.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 219.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "KardionSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 59.0,
+      "Y": 118.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 218.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "SummonerSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 58.0,
+      "Y": 116.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 218.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "BlueMageSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 58.0,
+      "Y": 118.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 220.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "FoodSettings": {
+    "$type": "NoTankYou.Configuration+ModuleSettings, NoTankYou",
+    "Enabled": true,
+    "Forced": false,
+    "Reposition": false,
+    "BannerPosition": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 279.0,
+      "Y": 119.0
+    },
+    "BannerSize": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 220.25,
+      "Y": 63.75
+    },
+    "PositionChanged": false,
+    "ScaleFactor": 1.0,
+    "ShowShield": false,
+    "ShowText": true,
+    "ShowIcon": false
+  },
+  "TerritoryBlacklist": [],
+  "FoodTerritoryWhitelist": [],
+  "ForceWindowUpdate": false,
+  "Version": 3
+}

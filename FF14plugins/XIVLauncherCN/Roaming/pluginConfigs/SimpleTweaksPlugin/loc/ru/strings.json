@@ -1,0 +1,914 @@
+{
+  "AutoOpenLootWindow / Description": {
+    "message": "Открывать окно добычи при получении группой новых предметов.",
+    "description": "[AutoOpenLootWindow] Tweak Description"
+  },
+  "AutoOpenLootWindow / Name": {
+    "message": "Открывать окно добычи при добавлении новых предметов.",
+    "description": "[AutoOpenLootWindow] Tweak Name"
+  },
+  "ChatTweaks / Name": {
+    "message": "Настройки чата",
+    "description": "[ChatTweaks] Tweak Name"
+  },
+  "ChatTweaks@ChatNameColours / Description": {
+    "message": "Дает игрокам в чате случайный, или установленный вручную цвет.",
+    "description": "[ChatNameColours] Tweak Description"
+  },
+  "ChatTweaks@ChatNameColours / Name": {
+    "message": "Цвета имен в чате",
+    "description": "[ChatNameColours] Tweak Name"
+  },
+  "ChatTweaks@ChatNameColours / NameAlreadyAddedError": {
+    "message": "Имя уже есть в списке.",
+    "description": "[ChatNameColours] Chat Name Colours - Name is already in list."
+  },
+  "ChatTweaks@ChatNameColours / Player Name": {
+    "message": "Имя игрока",
+    "description": "[ChatNameColours] Chat Name Colours - Player Name"
+  },
+  "ChatTweaks@ChatNameColours / RandomColours": {
+    "message": "Использовать случайные цвета для игроков вне списка",
+    "description": "[ChatNameColours] Chat Name Colours - Use random colours for unlisted players"
+  },
+  "ChatTweaks@ChatNameColours / Server": {
+    "message": "Сервер",
+    "description": "[ChatNameColours] Chat Name Colours - Server"
+  },
+  "ChatTweaks@ClickableLinks / Description": {
+    "message": "Находит ссылки в чате и позволяет переходить по ним.",
+    "description": "[ClickableLinks] Tweak Description"
+  },
+  "ChatTweaks@ClickableLinks / Name": {
+    "message": "Интерактивные ссылки в чате",
+    "description": "[ClickableLinks] Tweak Name"
+  },
+  "ChatTweaks@DisableChatAutoscroll / AllowAutoscrollLabel": {
+    "message": "Разрешить автопрокрутку в:",
+    "description": "[DisableChatAutoscroll] Smart AutoScroll - Always allow autoscrolling in:"
+  },
+  "ChatTweaks@DisableChatAutoscroll / Description": {
+    "message": "Предотвращает автопрокрутку при получении новых сообщений во время просмотра старых.",
+    "description": "[DisableChatAutoscroll] Tweak Description"
+  },
+  "ChatTweaks@DisableChatAutoscroll / Name": {
+    "message": "Умная автопрокрутка",
+    "description": "[DisableChatAutoscroll] Tweak Name"
+  },
+  "ChatTweaks@DisableChatAutoscroll / TabLabel": {
+    "message": "Вкладка {0}",
+    "description": "[DisableChatAutoscroll] Smart AutoScroll - Tab {0}"
+  },
+  "ChatTweaks@DisableChatMovement / Description": {
+    "message": "Предотвращает перемещение окна чата.",
+    "description": "[DisableChatMovement] Tweak Description"
+  },
+  "ChatTweaks@DisableChatMovement / Name": {
+    "message": "Закрепить положение окна чата",
+    "description": "[DisableChatMovement] Tweak Name"
+  },
+  "ChatTweaks@DisableChatResize / Description": {
+    "message": "Предотвращает изменение размера окна чата.",
+    "description": "[DisableChatResize] Tweak Description"
+  },
+  "ChatTweaks@DisableChatResize / Name": {
+    "message": "Постоянный размер окна чата",
+    "description": "[DisableChatResize] Tweak Name"
+  },
+  "ChatTweaks@RenameChatTabs / Description": {
+    "message": "Позволяет переименовать вкладки General и Battle в окне чата.",
+    "description": "[RenameChatTabs] Tweak Description"
+  },
+  "ChatTweaks@RenameChatTabs / Name": {
+    "message": "Переименовать вкладки чата",
+    "description": "[RenameChatTabs] Tweak Name"
+  },
+  "ChatTweaks@RenameChatTabs / TabLabel": {
+    "message": "Вкладка {0}",
+    "description": "[RenameChatTabs] Rename Chat Tabs - Tab {0}"
+  },
+  "ChrDirCommand / Description": {
+    "message": "Добавляет команду, открывающую папку с локальными настройками персонажа.",
+    "description": "[ChrDirCommand] Tweak Description"
+  },
+  "CommandAlias / Description": {
+    "message": "Позволяет изменить вводимые в чат команды на другие.",
+    "description": "[CommandAlias] Tweak Description"
+  },
+  "CommandAlias / EmptyInputError": {
+    "message": "Ввод не должен быть пустым.",
+    "description": "[CommandAlias] Command Alias - Input must not be empty."
+  },
+  "CommandAlias / EmptyOutputError": {
+    "message": "Вывод не должен быть пустым.",
+    "description": "[CommandAlias] Command Alias - Output must not be empty."
+  },
+  "CommandAlias / Enabled": {
+    "message": "Включен",
+    "description": "[CommandAlias] Command Alias - Enabled"
+  },
+  "CommandAlias / Input Command": {
+    "message": "Входная команда",
+    "description": "[CommandAlias] Command Alias - Input Command"
+  },
+  "CommandAlias / Instruction": {
+    "message": "Добавьте список псевдонимов. Не начинайте команды с '/'.\nПсевдонимы намеренно не работают с макросами.",
+    "description": "[CommandAlias] Command Alias - Add list of command alias. Do not start command with the '/'\nThese aliases, by design, do not work with macros."
+  },
+  "CommandAlias / MacroHelp": {
+    "message": "Псевдонимы не поддерживаются в макросах для предотвращения их отправки на сервер в случае облачного резервного копирования. Пожалуйста, используйте оригинальные команды.",
+    "description": "[CommandAlias] Macro Help Tooltip"
+  },
+  "CommandAlias / Name": {
+    "message": "Псевдоним команд",
+    "description": "[CommandAlias] Tweak Name"
+  },
+  "CommandAlias / New Label": {
+    "message": "Новый:",
+    "description": "[CommandAlias] Command Alias - New:"
+  },
+  "CommandAlias / Output Command": {
+    "message": "Выходная команда",
+    "description": "[CommandAlias] Command Alias - Output Command"
+  },
+  "CommandAlias / ProtectedCommandError": {
+    "message": "'/{0}' является защищённой командой.",
+    "description": "[CommandAlias] Command Alias - '/{0}' is a protected command."
+  },
+  "DisableClickTargeting / AddButton": {
+    "message": "Доб.",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Add"
+  },
+  "DisableClickTargeting / CombatHeader": {
+    "message": "Только\nв бою",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Only in\nCombat"
+  },
+  "DisableClickTargeting / Description": {
+    "message": "Позволяет отключить взятие в цель нажатием левой и правой кнопок мыши.",
+    "description": "[DisableClickTargeting] Tweak Description"
+  },
+  "DisableClickTargeting / EverythingDisabled": {
+    "message": "Ничего не произойдет, если все отключено...",
+    "description": "[DisableClickTargeting] Disable Click Targeting - It is doing nothing if everything is disabled..."
+  },
+  "DisableClickTargeting / LeftHeader": {
+    "message": "Выключить\nпо левой",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable\nLeft"
+  },
+  "DisableClickTargeting / Name": {
+    "message": "Отключить прицел кликом мыши",
+    "description": "[DisableClickTargeting] Tweak Name"
+  },
+  "DisableClickTargeting / NameFiltering": {
+    "message": "Включить фильтрацию имён",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Enable Name Filtering"
+  },
+  "DisableClickTargeting / NameFiltersLabel": {
+    "message": "Фильтры имён:",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Name Filters:"
+  },
+  "DisableClickTargeting / RemoveTooltip": {
+    "message": "Удалить {0}",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Remove {0}"
+  },
+  "DisableClickTargeting / RightHeader": {
+    "message": "Выключить\nпо правой",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable\nRight"
+  },
+  "DisableClickTargeting / SimpleCombatOnly": {
+    "message": "Отключать только в бою",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Only disable in combat"
+  },
+  "DisableClickTargeting / SimpleDisableLeftClick": {
+    "message": "Отключить прицел левой кнопкой мыши",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable Left Click Targeting"
+  },
+  "DisableClickTargeting / SimpleDisableRightClick": {
+    "message": "Отключить прицел правой кнопкой мыши",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable Right Click Targeting"
+  },
+  "DisableTitleScreenMovie / Description": {
+    "message": "Предотвращает воспроизведение заставки в главном меню после 60 секунд.",
+    "description": "[DisableTitleScreenMovie] Tweak Description"
+  },
+  "DisableTitleScreenMovie / Name": {
+    "message": "Отключить заставку в главном меню",
+    "description": "[DisableTitleScreenMovie] Tweak Name"
+  },
+  "FixedShadowDistance / Name": {
+    "message": "Фиксированное расстояние теней",
+    "description": "[FixedShadowDistance] Tweak Name"
+  },
+  "FixTarget / Description": {
+    "message": "Позволяет использовать команду '/target' для взятия в прицел игроков и NPC по их именам.",
+    "description": "[FixTarget] Tweak Description"
+  },
+  "FixTarget / Name": {
+    "message": "Исправленная команда '/target'",
+    "description": "[FixTarget] Tweak Name"
+  },
+  "General Options / Hide KoFi": {
+    "message": "Скрыть ссылку на Ko-fi.",
+    "description": "General Options / Hide KoFi - Hide Ko-fi link."
+  },
+  "General Options / Language": {
+    "message": "Язык",
+    "description": "General Options / Language - Language"
+  },
+  "General Options / Show Experimental Tweaks": {
+    "message": "Показать экспериментальные настройки.",
+    "description": "General Options / Show Experimental Tweaks - Show Experimental Tweaks."
+  },
+  "General Options / Show Tweak Descriptions": {
+    "message": "Показывать описания настроек.",
+    "description": "General Options / Show Tweak Descriptions - Show tweak descriptions."
+  },
+  "General Options / Show Tweak IDs": {
+    "message": "Показывать ID настройки.",
+    "description": "General Options / Show Tweak IDs - Show tweak IDs."
+  },
+  "General Options / TabHeader": {
+    "message": "Общие параметры",
+    "description": "General Options / TabHeader - General Options"
+  },
+  "General Tweaks": {
+    "message": "Общие настройки",
+    "description": "General Tweaks Tab Header"
+  },
+  "Hide Tweak": {
+    "message": "Скрыть настройку",
+    "description": "Hide Tweak - Hide Tweak"
+  },
+  "LongVeil / Description": {
+    "message": "Заменяет свадебные вуали на их длинные варианты, обычно видимые только внутри Sanctum of the Twelve.",
+    "description": "[LongVeil] Tweak Description"
+  },
+  "LongVeil / Name": {
+    "message": "Длинные вуали",
+    "description": "[LongVeil] Tweak Name"
+  },
+  "MoreGearSets / Description": {
+    "message": "Увеличивает максимальное количество наборов снаряжения до 100.",
+    "description": "[MoreGearSets] Tweak Description"
+  },
+  "MoreGearSets / Name": {
+    "message": "Больше наборов снаряжения",
+    "description": "[MoreGearSets] Tweak Name"
+  },
+  "SetOptionCommand / alias": {
+    "message": "псевдоним",
+    "description": "[SetOptionCommand] Set Option Command - alias"
+  },
+  "SetOptionCommand / Available Options": {
+    "message": "Доступные варианты",
+    "description": "[SetOptionCommand] Set Option Command - Available Options"
+  },
+  "SetOptionCommand / Description": {
+    "message": "Добавляет команды для изменения различных настроек.",
+    "description": "[SetOptionCommand] Tweak Description"
+  },
+  "SetOptionCommand / Name": {
+    "message": "Добавить команду настроек",
+    "description": "[SetOptionCommand] Tweak Name"
+  },
+  "SetOptionCommand / option": {
+    "message": "опция",
+    "description": "[SetOptionCommand] Set Option Command - option"
+  },
+  "SetOptionCommand / values": {
+    "message": "значения",
+    "description": "[SetOptionCommand] Set Option Command - values"
+  },
+  "TooltipTweaks / Name": {
+    "message": "Настройки подсказок",
+    "description": "[TooltipTweaks] Tweak Name"
+  },
+  "TooltipTweaks@CopyHotkey / Cancel": {
+    "message": "Отмена",
+    "description": "[CopyHotkey] Item Hotkeys - Cancel"
+  },
+  "TooltipTweaks@CopyHotkey / Confirm": {
+    "message": "Подтвердить",
+    "description": "[CopyHotkey] Item Hotkeys - Confirm"
+  },
+  "TooltipTweaks@CopyHotkey / Copy Item Name": {
+    "message": "Копировать название",
+    "description": "[CopyHotkey] Item Hotkeys - Copy Item Name"
+  },
+  "TooltipTweaks@CopyHotkey / Description": {
+    "message": "Добавляет сочетания клавиш для различных действий при видимом окне описания предметов.",
+    "description": "[CopyHotkey] Tweak Description"
+  },
+  "TooltipTweaks@CopyHotkey / Name": {
+    "message": "Сочетания клавиш для предметов",
+    "description": "[CopyHotkey] Tweak Name"
+  },
+  "TooltipTweaks@CopyHotkey / NoHelpText": {
+    "message": "Не показывать помощь по сочетаниям клавиш в описаниях",
+    "description": "[CopyHotkey] Item Hotkeys - Don't show hotkey help on Tooltip"
+  },
+  "TooltipTweaks@CopyHotkey / View on Eriones (JP)": {
+    "message": "Смотреть на Eriones (JP)",
+    "description": "[CopyHotkey] Item Hotkeys - View on Eriones (JP)"
+  },
+  "TooltipTweaks@CopyHotkey / View on Gamer Escape": {
+    "message": "Смотреть на Gamer Escape",
+    "description": "[CopyHotkey] Item Hotkeys - View on Gamer Escape"
+  },
+  "TooltipTweaks@CopyHotkey / View on Garland Tools": {
+    "message": "Смотреть на Garland Tools",
+    "description": "[CopyHotkey] Item Hotkeys - View on Garland Tools"
+  },
+  "TooltipTweaks@CopyHotkey / View on Teamcraft": {
+    "message": "Смотреть на Teamcraft",
+    "description": "[CopyHotkey] Item Hotkeys - View on Teamcraft"
+  },
+  "TooltipTweaks@FoodStats / Description": {
+    "message": "Вычисляет прибавку к характеристикам от расходников на основе текущих характеристик персонажа.",
+    "description": "[FoodStats] Tweak Description"
+  },
+  "TooltipTweaks@FoodStats / Highlight Active": {
+    "message": "Выделять действующие эффекты",
+    "description": "[FoodStats] Show expected food and potion stats - Highlight Active"
+  },
+  "TooltipTweaks@FoodStats / Name": {
+    "message": "Показывать ожидаемые характеристики еды и зелий",
+    "description": "[FoodStats] Tweak Name"
+  },
+  "TooltipTweaks@MateriaStats / Colour Value": {
+    "message": "Цветные значения",
+    "description": "[MateriaStats] Materia Stats - Colour Value"
+  },
+  "TooltipTweaks@MateriaStats / Description": {
+    "message": "Показывает прикрепленные материи при отображении характеристик предмета.",
+    "description": "[MateriaStats] Tweak Description"
+  },
+  "TooltipTweaks@MateriaStats / Name": {
+    "message": "Характеристики материи",
+    "description": "[MateriaStats] Tweak Name"
+  },
+  "TooltipTweaks@MateriaStats / Show Delta": {
+    "message": "Показать разницу",
+    "description": "[MateriaStats] Materia Stats - Show Delta"
+  },
+  "TooltipTweaks@MateriaStats / Show Total": {
+    "message": "Показать сумму",
+    "description": "[MateriaStats] Materia Stats - Show Total"
+  },
+  "TooltipTweaks@MateriaStats / Simplified Combined Display": {
+    "message": "Упрощенное комбинированное отображение",
+    "description": "[MateriaStats] Materia Stats - Simplified Combined Display"
+  },
+  "TooltipTweaks@PrecisionDurability / Description": {
+    "message": "Показывает дробную часть прочности.",
+    "description": "[PrecisionDurability] Tweak Description"
+  },
+  "TooltipTweaks@PrecisionDurability / Name": {
+    "message": "Точное значение прочности",
+    "description": "[PrecisionDurability] Tweak Name"
+  },
+  "TooltipTweaks@PrecisionDurability / Trailing Zeros": {
+    "message": "Показывать конечные нули",
+    "description": "[PrecisionDurability] Precise Durability - Trailing Zeros"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Description": {
+    "message": "Показывает дробную часть процента Spiritbond.",
+    "description": "[PrecisionSpiritbond] Tweak Description"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Name": {
+    "message": "Точное значение Spiritbond",
+    "description": "[PrecisionSpiritbond] Tweak Name"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Trailing Zeros": {
+    "message": "Показывать конечные нули",
+    "description": "[PrecisionSpiritbond] Precise Spiritbond - Trailing Zeros"
+  },
+  "TooltipTweaks@ShowItemID / Description": {
+    "message": "Показывать ID навыков и предметов в их описаниях.",
+    "description": "[ShowItemID] Tweak Description"
+  },
+  "TooltipTweaks@ShowItemID / Name": {
+    "message": "Показывать ID",
+    "description": "[ShowItemID] Tweak Name"
+  },
+  "UiAdjustments / Name": {
+    "message": "Настройки интерфейса",
+    "description": "[UiAdjustments] Tweak Name"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Name": {
+    "message": "Изменение боевых диалоговых окон",
+    "description": "[BattleTalkAdjustments] Tweak Name"
+  },
+  "UiAdjustments@BattleTalkAdjustments / PositionPreviewText": {
+    "message": "НОВОЕ РАСПОЛОЖЕНИЕ ДИАЛОГОВОГО ОКНА В БОЮ",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - NEW BATTLE TALK DIALOGUE BOX POSITION"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Scale": {
+    "message": "Масштаб",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - Scale"
+  },
+  "UiAdjustments@BattleTalkAdjustments / X Offset": {
+    "message": "Смещение по X",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - X Offset"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Y Offset": {
+    "message": "Смещение по Y",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - Y Offset"
+  },
+  "UiAdjustments@CastBarAdjustments / Align Ability Name": {
+    "message": "Выровнять название навыка",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Align Ability Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Description": {
+    "message": "Позволяет скрыть или переместить определенные части шкалы подготовки.",
+    "description": "[CastBarAdjustments] Tweak Description"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Ability Name": {
+    "message": "Скрыть название навыка",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Ability Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Casting": {
+    "message": "Скрыть надпись 'Casting'",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide 'Casting' Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Countdown Text": {
+    "message": "Скрыть обратный отсчет",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Countdown Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Icon": {
+    "message": "Скрыть иконку",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Icon"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Interrupted Text": {
+    "message": "Скрыть надпись 'Interrupted'",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Interrupted Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Name": {
+    "message": "Корректировка шкалы подготовки",
+    "description": "[CastBarAdjustments] Tweak Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Offset": {
+    "message": "Смещение",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Offset"
+  },
+  "UiAdjustments@CastBarAdjustments / Show SlideCast Marker": {
+    "message": "Показать зону SlideCast",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Show SlideCast Marker"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Marker Colour": {
+    "message": "Цвет SlideCast зоны",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Marker Colour"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Offset Time": {
+    "message": "Размер SlideCast зоны",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Offset Time"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Ready Colour": {
+    "message": "Цвет готового Slidecast",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Ready Colour"
+  },
+  "UiAdjustments@ComboTimer / Always Visible": {
+    "message": "Всегда видим",
+    "description": "[ComboTimer] [Config] Always Visible"
+  },
+  "UiAdjustments@ComboTimer / Description": {
+    "message": "Показывает обратный отсчет для комбо навыков.",
+    "description": "[ComboTimer] Tweak Description"
+  },
+  "UiAdjustments@ComboTimer / Font Size": {
+    "message": "Размер шрифта",
+    "description": "[ComboTimer] [Config] Font Size"
+  },
+  "UiAdjustments@ComboTimer / Hide 'COMBO' Text": {
+    "message": "Скрыть надпись 'COMBO'",
+    "description": "[ComboTimer] [Config] Hide 'COMBO' Text"
+  },
+  "UiAdjustments@ComboTimer / Name": {
+    "message": "Таймер комбо",
+    "description": "[ComboTimer] Tweak Name"
+  },
+  "UiAdjustments@ComboTimer / Text Color": {
+    "message": "Цвет текста",
+    "description": "[ComboTimer] [Config] Text Color"
+  },
+  "UiAdjustments@ComboTimer / Text Outline Color": {
+    "message": "Цвет обводки",
+    "description": "[ComboTimer] [Config] Text Outline Color"
+  },
+  "UiAdjustments@ComboTimer / X Position Offset": {
+    "message": "Смещение по X",
+    "description": "[ComboTimer] [Config] X Position Offset"
+  },
+  "UiAdjustments@ComboTimer / Y Position Offset": {
+    "message": "Смещение по Y",
+    "description": "[ComboTimer] [Config] Y Position Offset"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / AddButton": {
+    "message": "Доб.",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Add"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Description": {
+    "message": "Позволяет изменить и скрыть теги компаний и метку Wanderer.",
+    "description": "[CustomFreeCompanyTags] Tweak Description"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / FC Tag": {
+    "message": "Тег FC",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - FC Tag"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / FCAlreadyAddedError": {
+    "message": "Имя уже есть в списке.",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - FC is already on list."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Name": {
+    "message": "Пользовательские теги Free Company",
+    "description": "[CustomFreeCompanyTags] Tweak Name"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / NoFCNote": {
+    "message": "Введите названии компании для добавления в список.",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Enter name to add FC to list."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Replace": {
+    "message": "Заменить",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Replace"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Replacement": {
+    "message": "Замена",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Replacement"
+  },
+  "UiAdjustments@CustomTimeFormat / Description": {
+    "message": "Позволять настроить формат отображения времени на часах. Использует форматирование строк C#.",
+    "description": "[CustomTimeFormat] Tweak Description"
+  },
+  "UiAdjustments@CustomTimeFormat / Eorzea Time": {
+    "message": "Время Эорзии",
+    "description": "[CustomTimeFormat] Custom Time Formats - Eorzea Time"
+  },
+  "UiAdjustments@CustomTimeFormat / Local Time": {
+    "message": "Местное время",
+    "description": "[CustomTimeFormat] Custom Time Formats - Local Time"
+  },
+  "UiAdjustments@CustomTimeFormat / Name": {
+    "message": "Пользовательский формат времени",
+    "description": "[CustomTimeFormat] Tweak Name"
+  },
+  "UiAdjustments@CustomTimeFormat / Server Time": {
+    "message": "Серверное время",
+    "description": "[CustomTimeFormat] Custom Time Formats - Server Time"
+  },
+  "UiAdjustments@ExamineItemLevel / Description": {
+    "message": "Вычисляет уровень экипировки других игроков при осмотре.\nКрасное значение означает, что игрок носит предмет, подстраивающийся под его уровень. Тогда расчет выполняется, используя предельный уровень этого предмета.",
+    "description": "[ExamineItemLevel] Tweak Description"
+  },
+  "UiAdjustments@ExamineItemLevel / ItemLevelIcon": {
+    "message": "Показать значок уровня экипировки",
+    "description": "[ExamineItemLevel] Item Level in Examine - Show Item Level Icon"
+  },
+  "UiAdjustments@ExamineItemLevel / Name": {
+    "message": "Уровень экипировки в Осмотре",
+    "description": "[ExamineItemLevel] Tweak Name"
+  },
+  "UiAdjustments@ExpPercentage / Decimals": {
+    "message": "Знаков после запятой",
+    "description": "[ExpPercentage] [Config] Decimals"
+  },
+  "UiAdjustments@ExpPercentage / Description": {
+    "message": "Вычисляет и отображает текущий процент заполнения полоски опыта.",
+    "description": "[ExpPercentage] Tweak Description"
+  },
+  "UiAdjustments@ExpPercentage / Name": {
+    "message": "Показать процент опыта",
+    "description": "[ExpPercentage] Tweak Name"
+  },
+  "UiAdjustments@ExpPercentage / Only show percentage": {
+    "message": "Показывать только процент",
+    "description": "[ExpPercentage] [Config] Only show percentage"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / BlockClickOnGearset": {
+    "message": "Блокировка выбора предметов в составе наборов снаряжения.",
+    "description": "[ExtendedDesynthesisWindow] Extended Desynthesis Window - Block clicking on gearset items."
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / Description": {
+    "message": "Показывает текущий и оптимальный для предмета уровень в окне десинтеза.\nТакже помечает предметы в составе наборов снаряжения, с возможностью предотвращения их выбора.",
+    "description": "[ExtendedDesynthesisWindow] Tweak Description"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / Name": {
+    "message": "Расширенное окно десинтеза",
+    "description": "[ExtendedDesynthesisWindow] Tweak Name"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / YellowForSkillGain": {
+    "message": "Выделить желтым потенциальный прирост навыка",
+    "description": "[ExtendedDesynthesisWindow] Extended Desynthesis Window - Highlight potential skill gains (Yellow)"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / Description": {
+    "message": "Добавляет опцию телепортации к поместью игроков в другие меню.",
+    "description": "[ExtraEstateTeleportation] Tweak Description"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / Name": {
+    "message": "Дополнительные телепорты к поместьям",
+    "description": "[ExtraEstateTeleportation] Tweak Name"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / PartyList": {
+    "message": "Состав группы",
+    "description": "[ExtraEstateTeleportation] Extra Estate Teleportation - Party List"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / PartyMemberList": {
+    "message": "Состав группы (окно Social)",
+    "description": "[ExtraEstateTeleportation] Extra Estate Teleportation - Party Member List (Social window)"
+  },
+  "UiAdjustments@HideAchievementsNotifications / Description": {
+    "message": "Полностью скрывает уведомления о близких к получению достижений при входе в игру и при переходе между локациями.",
+    "description": "[HideAchievementsNotifications] Tweak Description"
+  },
+  "UiAdjustments@HideAchievementsNotifications / HideLogIn": {
+    "message": "Скрыть уведомления при входе в игру.",
+    "description": "[HideAchievementsNotifications] Hide Achievements Nearing Completion Notifications - Hide the login notification."
+  },
+  "UiAdjustments@HideAchievementsNotifications / HideZoneIn": {
+    "message": "Скрыть уведомления при переходе в локацию.",
+    "description": "[HideAchievementsNotifications] Hide Achievements Nearing Completion Notifications - Hide the zone-in notification."
+  },
+  "UiAdjustments@HideAchievementsNotifications / Name": {
+    "message": "Скрыть уведомления о близких к получению достижениях",
+    "description": "[HideAchievementsNotifications] Tweak Name"
+  },
+  "UiAdjustments@HideExperienceBar / Description": {
+    "message": "Скрывает полосу опыта при максимальном уровне.",
+    "description": "[HideExperienceBar] Tweak Description"
+  },
+  "UiAdjustments@HideExperienceBar / Name": {
+    "message": "Скрыть полоску опыта на максимальном уровне",
+    "description": "[HideExperienceBar] Tweak Name"
+  },
+  "UiAdjustments@HideJobGauge / Description": {
+    "message": "Позволяет скрыть классовые индикаторы вне боя и инстансов.",
+    "description": "[HideJobGauge] Tweak Description"
+  },
+  "UiAdjustments@HideJobGauge / Name": {
+    "message": "Скрыть классовые индикаторы",
+    "description": "[HideJobGauge] Tweak Name"
+  },
+  "UiAdjustments@HideJobGauge / Show In Combat": {
+    "message": "Показывать в бою",
+    "description": "[HideJobGauge] [Config] Show In Combat"
+  },
+  "UiAdjustments@HideJobGauge / Show In Duty": {
+    "message": "Показывать в Duty",
+    "description": "[HideJobGauge] [Config] Show In Duty"
+  },
+  "UiAdjustments@ImprovedWorldVisit / Description": {
+    "message": "Упрощает меню посещения миров, и показывает текущее расположение в списке.",
+    "description": "[ImprovedWorldVisit] Tweak Description"
+  },
+  "UiAdjustments@ImprovedWorldVisit / Name": {
+    "message": "Упрощенное окно посещения миров",
+    "description": "[ImprovedWorldVisit] Tweak Name"
+  },
+  "UiAdjustments@LargeCooldownCounter / Description": {
+    "message": "Увеличивает размер счетчиков времени перезарядки на панели быстрого доступа.",
+    "description": "[LargeCooldownCounter] Tweak Description"
+  },
+  "UiAdjustments@LargeCooldownCounter / Edge Colour": {
+    "message": "Цвет обводки",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Edge Colour"
+  },
+  "UiAdjustments@LargeCooldownCounter / Font": {
+    "message": "Шрифт",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Font"
+  },
+  "UiAdjustments@LargeCooldownCounter / Font Size Adjust": {
+    "message": "Размер шрифта",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Font Size Adjust"
+  },
+  "UiAdjustments@LargeCooldownCounter / Name": {
+    "message": "Большие счетчики перезарядки",
+    "description": "[LargeCooldownCounter] Tweak Name"
+  },
+  "UiAdjustments@LargeCooldownCounter / Simple Mode": {
+    "message": "Простой режим",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Simple Mode"
+  },
+  "UiAdjustments@LargeCooldownCounter / SimpleModeDescription": {
+    "message": "Возвращает старую проверку перезарядки приемов.\nИсправляет проблемы с XIVCombo.\nЕсть проблемы при выходе за границы диапазона.\nПри включенном простом режиме нельзя менять цвет текста.",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Reverts to old cooldown checking.\nFixes issues with XIVCombo.\nHas some issues when out of range.\nCannot change colour of text with Simple Mode enabled."
+  },
+  "UiAdjustments@LargeCooldownCounter / Text Colour": {
+    "message": "Цвет текста",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Text Colour"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / Description": {
+    "message": "Устанавливает ограничение на количество эффектов, отображаемых на цели.",
+    "description": "[LimitTargetStatusEffects] Tweak Description"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / LimitOnlyInCombat": {
+    "message": "Ограничивать только в бою",
+    "description": "[LimitTargetStatusEffects] Limit Target Status Effects - Only limit in combat##LimitOnlyInCombat"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / Name": {
+    "message": "Ограничить эффекты на цели",
+    "description": "[LimitTargetStatusEffects] Tweak Name"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / NbStatusEffects": {
+    "message": "Количество отображаемых эффектов",
+    "description": "[LimitTargetStatusEffects] Limit Target Status Effects - Number of status effects displayed##nbStatusEffectsDisplayed"
+  },
+  "UiAdjustments@MarketEnhancements / Description": {
+    "message": "Улучшения интерфейса доски объявлений, например включение в стоимость налога и подсветку невыгодных предложений.",
+    "description": "[MarketEnhancements] Tweak Description"
+  },
+  "UiAdjustments@MarketEnhancements / Highlight items that can be purchased from an NPC for cheaper. (Red)": {
+    "message": "Выделять цветом предметы, которые дешевле продаются у NPC. (Красный)",
+    "description": "[MarketEnhancements] [Config] Highlight items that can be purchased from an NPC for cheaper. (Red)"
+  },
+  "UiAdjustments@MarketEnhancements / Highlight items that can be sold to NPC for more. (Green)": {
+    "message": "Выделять цветом предметы, которые можно выгоднее продать торговцам. (Зеленый)",
+    "description": "[MarketEnhancements] [Config] Highlight items that can be sold to NPC for more. (Green)"
+  },
+  "UiAdjustments@MarketEnhancements / Include tax in single price.": {
+    "message": "Включать налог в стоимость одной единицы.",
+    "description": "[MarketEnhancements] [Config] Include tax in single price."
+  },
+  "UiAdjustments@MarketEnhancements / Include tax in total price.": {
+    "message": "Включать налог в полную стоимость товара.",
+    "description": "[MarketEnhancements] [Config] Include tax in total price."
+  },
+  "UiAdjustments@MarketEnhancements / Name": {
+    "message": "Улучшения рынка",
+    "description": "[MarketEnhancements] Tweak Name"
+  },
+  "UiAdjustments@MinimapAdjustments / Description": {
+    "message": "Позволяет скрывать элементы миникарты.",
+    "description": "[MinimapAdjustments] Tweak Description"
+  },
+  "UiAdjustments@MinimapAdjustments / Name": {
+    "message": "Корректировка миникарты",
+    "description": "[MinimapAdjustments] Tweak Name"
+  },
+  "UiAdjustments@OldNameplatesTweak / Description": {
+    "message": "Возвращает старое оформление именных табличек.",
+    "description": "[OldNameplatesTweak] Tweak Description"
+  },
+  "UiAdjustments@OldNameplatesTweak / Name": {
+    "message": "Старый стиль именных табличек",
+    "description": "[OldNameplatesTweak] Tweak Name"
+  },
+  "UiAdjustments@ParameterBarAdjustments / AutoHideMp": {
+    "message": "Скрывать полосу маны для классов, не использующих ее",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Bar on jobs that don't use MP"
+  },
+  "UiAdjustments@ParameterBarAdjustments / CP Bar Color": {
+    "message": "Цвет полосы CP",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - CP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Description": {
+    "message": "Позволяет скрывать и передвигать основные индикаторы (полосы здоровье и ману).",
+    "description": "[ParameterBarAdjustments] Tweak Description"
+  },
+  "UiAdjustments@ParameterBarAdjustments / GP Bar Color": {
+    "message": "Цвет полосы GP",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - GP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide 'HP' Text": {
+    "message": "Скрыть надпись 'HP'",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide 'HP' Text"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide 'MP' Text": {
+    "message": "Скрыть надпись 'MP'",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide 'MP' Text"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide HP Bar": {
+    "message": "Скрыть полосу здоровья",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide HP Bar"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide HP Value": {
+    "message": "Скрыть значение здоровья",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide HP Value"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide MP Bar": {
+    "message": "Скрыть полосу маны",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Bar"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide MP Value": {
+    "message": "Скрыть значение маны",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Value"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide Target Cycling": {
+    "message": "Скрыть прокрутку целей",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide Target Cycling"
+  },
+  "UiAdjustments@ParameterBarAdjustments / HP Bar Color": {
+    "message": "Цвет полосы здоровья",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - HP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / MP Bar Color": {
+    "message": "Цвет полосы маны",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - MP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Name": {
+    "message": "Корректировки основных индикаторов",
+    "description": "[ParameterBarAdjustments] Tweak Name"
+  },
+  "UiAdjustments@PartyListStatusTimers / Description": {
+    "message": "Показывать таймер эффектов в списке группы.",
+    "description": "[PartyListStatusTimers] Tweak Description"
+  },
+  "UiAdjustments@PartyListStatusTimers / Name": {
+    "message": "Таймеры эффектов в списке группы",
+    "description": "[PartyListStatusTimers] Tweak Name"
+  },
+  "UiAdjustments@ReducedDeepDungeonInfo / Description": {
+    "message": "Удаляет избыточные сведения из меню персонажа в Deep Dungeon.",
+    "description": "[ReducedDeepDungeonInfo] Tweak Description"
+  },
+  "UiAdjustments@ReducedDeepDungeonInfo / Name": {
+    "message": "Сжатые сведения в Deep Dungeon",
+    "description": "[ReducedDeepDungeonInfo] Tweak Name"
+  },
+  "UiAdjustments@RememberTitleSorting / Description": {
+    "message": "Запоминает вариант сортировки в меню выбора титула.",
+    "description": "[RememberTitleSorting] Tweak Description"
+  },
+  "UiAdjustments@RememberTitleSorting / Name": {
+    "message": "Запомнить сортировку титулов",
+    "description": "[RememberTitleSorting] Tweak Name"
+  },
+  "UiAdjustments@RemoveCommunityFinder / Description": {
+    "message": "Скрывает кнопки Community Finder в социальных окнах.",
+    "description": "[RemoveCommunityFinder] Tweak Description"
+  },
+  "UiAdjustments@RemoveCommunityFinder / Name": {
+    "message": "Убрать Community Finder",
+    "description": "[RemoveCommunityFinder] Tweak Name"
+  },
+  "UiAdjustments@ShiftTargetCastBarText / Description": {
+    "message": "Перемещает текст на шкале подготовки цели для удобства чтения",
+    "description": "[ShiftTargetCastBarText] Tweak Description"
+  },
+  "UiAdjustments@ShiftTargetCastBarText / Name": {
+    "message": "Переместить текст на шкале подготовки цели",
+    "description": "[ShiftTargetCastBarText] Tweak Name"
+  },
+  "UiAdjustments@ShowShieldOnHPBar / Description": {
+    "message": "Показывает примерный объем барьера на полосе здоровья.",
+    "description": "[ShowShieldOnHPBar] Tweak Description"
+  },
+  "UiAdjustments@ShowShieldOnHPBar / Name": {
+    "message": "Барьер на полосе здоровья",
+    "description": "[ShowShieldOnHPBar] Tweak Name"
+  },
+  "UiAdjustments@SmartNameplates / Description": {
+    "message": "Позволяет скрыть имена игроков в бою при определенных условиях.",
+    "description": "[SmartNameplates] Tweak Description"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Alliance Members": {
+    "message": "Игнорировать членов альянса",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Alliance Members"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Dead Players": {
+    "message": "Игнорировать мертвых игроков",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Dead Players"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Friends": {
+    "message": "Игнорировать друзей",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Friends"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Party Members": {
+    "message": "Игнорировать участников группы",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Party Members"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Targeted Players": {
+    "message": "Игнорировать игроков в прицеле",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Targeted Players"
+  },
+  "UiAdjustments@SmartNameplates / IgnorePlayersNote": {
+    "message": "Данные опции отключают действие для определенных групп игроков.",
+    "description": "[SmartNameplates] Smart Nameplates - The following options will disable the tweak for certain players."
+  },
+  "UiAdjustments@SmartNameplates / Name": {
+    "message": "Умные имена",
+    "description": "[SmartNameplates] Tweak Name"
+  },
+  "UiAdjustments@SmartNameplates / Show HP": {
+    "message": "Показывать здоровье",
+    "description": "[SmartNameplates] Smart Nameplates - Show HP"
+  },
+  "UiAdjustments@TargetHP / Description": {
+    "message": "Показывает точное (или округленное) значение здоровья цели.",
+    "description": "[TargetHP] Tweak Description"
+  },
+  "UiAdjustments@TargetHP / Name": {
+    "message": "Здоровье цели",
+    "description": "[TargetHP] Tweak Name"
+  },
+  "UiAdjustments@TimeUntilGpMax / Description": {
+    "message": "Показывает примерное время до полного восстановления GP при игре за собирателей.",
+    "description": "[TimeUntilGpMax] Tweak Description"
+  },
+  "UiAdjustments@TimeUntilGpMax / Name": {
+    "message": "Таймер восстановления GP",
+    "description": "[TimeUntilGpMax] Tweak Name"
+  },
+  "Unhide Tweak": {
+    "message": "Показать настройку",
+    "description": "Unhide Tweak - Unhide Tweak"
+  }
+}

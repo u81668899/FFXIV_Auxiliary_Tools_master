@@ -1,0 +1,369 @@
+{
+  "$type": "VfxEditor.Configuration, VFXEditor",
+  "LogAllFiles": false,
+  "LogDebug": false,
+  "LogVfxDebug": false,
+  "HideWithUI": true,
+  "SaveRecentLimit": 10,
+  "OverlayLimit": true,
+  "OverlayRemoveDelay": 1.0,
+  "WriteLocation": "C:\\Users\\Administrator.DESKTOP-MJQHBL0\\AppData\\Roaming\\XIVLauncher\\pluginConfigs\\VFXEditor",
+  "UpdateWriteLocation": true,
+  "RecentSelects": [],
+  "RecentSelectsTMB": [],
+  "RecentSelectsPAP": [],
+  "RecentSelectsScd": [],
+  "FavoriteVfx": [],
+  "FavoriteTmb": [],
+  "FavoritePap": [],
+  "FavoriteScd": [],
+  "ManagerConfigs": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[VfxEditor.ManagerConfiguration, VFXEditor]], System.Private.CoreLib",
+    "Vfx": {
+      "$type": "VfxEditor.ManagerConfiguration, VFXEditor",
+      "RecentItems": [
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 4,
+          "DisplayString": "[ACTION] 土神召唤II Cast",
+          "Path": "vfx/common/eff/cmsm_firct0s.avfx"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 1,
+          "DisplayString": "[GAME] vfx/monster/m7107",
+          "Path": "vfx/monster/m7107"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 0,
+          "DisplayString": "[LOCAL] vfx/monster/m7107",
+          "Path": "vfx/monster/m7107"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 1,
+          "DisplayString": "[GAME] vfx/monster/m7107/eff/m7107_sp01c0k1.a",
+          "Path": "vfx/monster/m7107/eff/m7107_sp01c0k1.a"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 1,
+          "DisplayString": "[GAME] vfx/monster/m7107/eff/m7107_sp01c0",
+          "Path": "vfx/monster/m7107/eff/m7107_sp01c0"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 1,
+          "DisplayString": "[GAME] vfx/monster/m7107/eff/m7107_sp01c0k1.avf",
+          "Path": "vfx/monster/m7107/eff/m7107_sp01c0k1.avf"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 1,
+          "DisplayString": "[GAME] vfx/monster/m7107/em7107_sp01c0k1.avfx",
+          "Path": "vfx/monster/m7107/em7107_sp01c0k1.avfx"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 1,
+          "DisplayString": "[GAME] vfx/monster/m7107/eff/m7107_sp01c0k1.avfx",
+          "Path": "vfx/monster/m7107/eff/m7107_sp01c0k1.avfx"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 4,
+          "DisplayString": "[ACTION] 死星核爆 #3",
+          "Path": "vfx/action/ab_swl_abl027/eff/ab_swl027t0s.avfx"
+        },
+        {
+          "$type": "VfxEditor.Select.SelectResult, VFXEditor",
+          "Type": 4,
+          "DisplayString": "[ACTION] 全能之主 Cast",
+          "Path": "vfx/common/eff/mon_eisyo03t.avfx"
+        }
+      ],
+      "Favorites": [],
+      "UseCustomWindowColor": false,
+      "TitleBg": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgActive": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgCollapsed": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      }
+    },
+    "Tmb": {
+      "$type": "VfxEditor.ManagerConfiguration, VFXEditor",
+      "RecentItems": [],
+      "Favorites": [],
+      "UseCustomWindowColor": false,
+      "TitleBg": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgActive": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgCollapsed": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      }
+    },
+    "Pap": {
+      "$type": "VfxEditor.ManagerConfiguration, VFXEditor",
+      "RecentItems": [],
+      "Favorites": [],
+      "UseCustomWindowColor": false,
+      "TitleBg": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgActive": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgCollapsed": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      }
+    },
+    "Scd": {
+      "$type": "VfxEditor.ManagerConfiguration, VFXEditor",
+      "RecentItems": [],
+      "Favorites": [],
+      "UseCustomWindowColor": false,
+      "TitleBg": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgActive": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgCollapsed": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      }
+    },
+    "Eid": {
+      "$type": "VfxEditor.ManagerConfiguration, VFXEditor",
+      "RecentItems": [],
+      "Favorites": [],
+      "UseCustomWindowColor": false,
+      "TitleBg": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgActive": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgCollapsed": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      }
+    },
+    "Uld": {
+      "$type": "VfxEditor.ManagerConfiguration, VFXEditor",
+      "RecentItems": [],
+      "Favorites": [],
+      "UseCustomWindowColor": false,
+      "TitleBg": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgActive": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      },
+      "TitleBgCollapsed": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.12941177,
+        "Y": 0.1254902,
+        "Z": 0.12941177,
+        "W": 1.0
+      }
+    }
+  },
+  "FilepickerImagePreview": true,
+  "AutosaveEnabled": false,
+  "AutosaveSeconds": 300,
+  "BlockGameInputsWhenFocused": false,
+  "SaveKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "SaveAsKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "OpenKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "DocumentsKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "UpdateKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "CopyKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "PasteKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "UndoKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "RedoKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "SpawnOnSelfKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "SpawnOnGroundKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "SpawnOnTargetKeybind": {
+    "$type": "VfxEditor.KeybindConfiguration, VFXEditor",
+    "Modifier": 1,
+    "Key": 29
+  },
+  "VFXNodeLibraryItems": [],
+  "MaxUndoSize": 10,
+  "DoubleClickNavigate": true,
+  "LoopMusic": true,
+  "LoopSoundEffects": false,
+  "ScdVolume": 1.0,
+  "SimulateScdLoop": false,
+  "UseDegreesForAngles": false,
+  "CurveEditorLineColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.1,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "CurveEditorPointColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 1.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "CurveEditorSelectedColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.884,
+    "Z": 0.561,
+    "W": 1.0
+  },
+  "CurveEditorPrimarySelectedColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.984375,
+    "Y": 0.7265625,
+    "Z": 0.0117647,
+    "W": 1.0
+  },
+  "CurveEditorLineWidth": 2,
+  "CurveEditorColorRingSize": 3,
+  "CurveEditorGrabbingDistance": 25,
+  "CurveEditorPointSize": 7,
+  "CurveEditorSelectedSize": 10,
+  "CurveEditorPrimarySelectedSize": 12,
+  "TimelineSelectedColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.532,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TimelineBarColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.44,
+    "Y": 0.457,
+    "Z": 0.492,
+    "W": 1.0
+  },
+  "Version": 0,
+  "IsEnabled": true,
+  "IsVisible": false
+}

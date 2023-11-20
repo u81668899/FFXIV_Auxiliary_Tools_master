@@ -1,0 +1,15 @@
+{
+  "$type": "RankSSpawnHelper.Configuration, RankSSpawnHelper-Extra",
+  "_autoDiscardItem": true,
+  "_autoLeaveDuty": false,
+  "_autoJournal": false,
+  "_itemsToDiscard": [
+    27759
+  ],
+  "_summonMinion": false,
+  "_clickDelay": 100,
+  "_mainSetTimeMessage": "在{tpos}发现了S级狩猎怪{tname} {etmsg}",
+  "_etMessageSet": "将会在ET{et}开打",
+  "_etMessageUnset": "ET未定，请勿抢开跟开",
+  "_printInYell": false
+}

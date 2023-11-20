@@ -1,0 +1,49 @@
+{
+  "$type": "EurekaTrackerAutoPopper.Configuration, EurekaTrackerAutoPopper",
+  "ChatFormat": "/sh  $p - $t",
+  "EchoNMPop": true,
+  "PlaySoundEffect": true,
+  "ShowPopToast": false,
+  "UseShortNames": true,
+  "ShowPopWindow": true,
+  "ShowPullTimer": true,
+  "UseEorzeaTimer": false,
+  "UseTwelveHourFormat": false,
+  "RandomizeMapCoords": true,
+  "EchoFairies": true,
+  "ShowFairyToast": false,
+  "ShowBunnyWindow": false,
+  "OnlyEasyBunny": true,
+  "BunnyCircleDraw": true,
+  "CircleColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.16052085,
+    "Y": 0.72398186,
+    "Z": 0.2727031,
+    "W": 1.0
+  },
+  "TimeInEureka": 755408153,
+  "KilledBunnies": 4,
+  "Stats": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib",
+    "763": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+      "2009530": 0,
+      "2009531": 0,
+      "2009532": 1
+    },
+    "795": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+      "2009530": 0,
+      "2009531": 0,
+      "2009532": 3
+    },
+    "827": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+      "2009530": 10,
+      "2009531": 17,
+      "2009532": 18
+    }
+  },
+  "Version": 0
+}

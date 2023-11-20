@@ -1,0 +1,33 @@
+{
+  "$type": "EnemyListDebuffs.EnemyListDebuffsPluginConfig, EnemyListDebuffs",
+  "Enabled": false,
+  "UpdateInterval": 100,
+  "GroupX": -79,
+  "GroupY": 0,
+  "NodeSpacing": 0,
+  "Scale": 1.0,
+  "FillFromRight": true,
+  "IconX": 0,
+  "IconY": 0,
+  "IconWidth": 18,
+  "IconHeight": 24,
+  "DurationX": -2,
+  "DurationY": 16,
+  "FontSize": 12,
+  "DurationPadding": 2,
+  "DurationTextColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 1.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "DurationEdgeColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "Version": 0
+}

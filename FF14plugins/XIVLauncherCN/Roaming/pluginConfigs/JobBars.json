@@ -1,0 +1,256 @@
+{
+  "$type": "JobBars.Data.Configuration, JobBars",
+  "Use4K": true,
+  "AttachAddon": 0,
+  "CooldownAttachAddon": 2,
+  "GaugeScale": 1.0,
+  "GaugeHorizontal": false,
+  "GaugeAlignRight": false,
+  "GaugeBottomToTop": false,
+  "GaugesEnabled": true,
+  "GaugesHideOutOfCombat": false,
+  "GaugeGCDTextVisible": true,
+  "GaugePositionType": 0,
+  "GaugePositionGlobal": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 200.0,
+    "Y": 200.0
+  },
+  "GaugePerJobPosition": {
+    "$type": "JobBars.Data.VectorValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector2, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeSplitPosition": {
+    "$type": "JobBars.Data.VectorValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector2, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeIndividualScale": {
+    "$type": "JobBars.Data.FloatValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeEnabled": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib",
+      "龙神召唤": true
+    }
+  },
+  "GaugeOrder": {
+    "$type": "JobBars.Data.IntValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeVertical": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeProcOrder": {
+    "$type": "JobBars.Data.IntValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeProcColor": {
+    "$type": "JobBars.Data.ColorConfig, JobBars",
+    "Color": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeHideInactive": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeInvert": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeShowSegments": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeReverseFill": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeColor": {
+    "$type": "JobBars.Data.ColorConfig, JobBars",
+    "Color": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeType": {
+    "$type": "JobBars.Data.ComboValueConfig`1[[JobBars.Gauges.GaugeVisualType, JobBars]], JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[JobBars.Gauges.GaugeVisualType, JobBars]], System.Private.CoreLib"
+    }
+  },
+  "GaugeShowText": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeSwapText": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeTimerOffset": {
+    "$type": "JobBars.Data.FloatValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeGCDRolling": {
+    "$type": "JobBars.Data.ComboValueConfig`1[[JobBars.Gauges.Rolling.GaugeGCDRollingType, JobBars]], JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[JobBars.Gauges.Rolling.GaugeGCDRollingType, JobBars]], System.Private.CoreLib"
+    }
+  },
+  "GaugeSlidecastTime": 0.5,
+  "GaugeCompletionSound": {
+    "$type": "JobBars.Data.ComboValueConfig`1[[JobBars.Gauges.GaugeCompleteSoundType, JobBars]], JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[JobBars.Gauges.GaugeCompleteSoundType, JobBars]], System.Private.CoreLib"
+    }
+  },
+  "GaugeLowTimerWarning_2": {
+    "$type": "JobBars.Data.FloatValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeSoundEffect_2": {
+    "$type": "JobBars.Data.IntValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugeCompletionSoundEffect_2": {
+    "$type": "JobBars.Data.IntValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "GaugePulse": true,
+  "BuffPosition": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 200.0,
+    "Y": 200.0
+  },
+  "BuffScale": 1.0,
+  "BuffBarEnabled": true,
+  "BuffPartyListEnabled": true,
+  "BuffHideOutOfCombat": false,
+  "BuffIncludeParty": true,
+  "BuffOrderByActive": true,
+  "BuffDisplayTimer": 30.0,
+  "BuffThinBorder": false,
+  "BuffSquare": false,
+  "BuffEnabled": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "BuffHorizontal": 5,
+  "BuffRightToLeft": false,
+  "BuffBottomToTop": false,
+  "BuffTextSize": 18,
+  "CooldownPosition": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": -40.0,
+    "Y": 40.0
+  },
+  "CooldownScale": 1.0,
+  "CooldownsSpacing": 40.0,
+  "CooldownsEnabled": true,
+  "CooldownsHideOutOfCombat": false,
+  "CooldownsShowBorderWhenActive": true,
+  "CooldownsHideActiveBuffDuration": false,
+  "CooldownsShowPartyMembers": true,
+  "CooldownsLeftAligned": false,
+  "CooldownEnabled": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib",
+      "昏乱 (召唤师)": true
+    }
+  },
+  "CooldownOrder": {
+    "$type": "JobBars.Data.IntValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "CustomCooldown": [],
+  "CursorsEnabled": false,
+  "CursorHideWhenHeld": false,
+  "CursorHideOutOfCombat": false,
+  "CursorPosition": 0,
+  "CursorCustomPosition": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 200.0,
+    "Y": 200.0
+  },
+  "CursorInnerScale": 1.5,
+  "CursorOuterScale": 1.2,
+  "CursorInnerColor": "MP Pink",
+  "CursorOuterColor": "Health Green",
+  "CursorType": {
+    "$type": "JobBars.Data.ComboValueConfig`1[[JobBars.Cursors.CursorType, JobBars]], JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[JobBars.Cursors.CursorType, JobBars]], System.Private.CoreLib"
+    }
+  },
+  "CursorStatus": {
+    "$type": "JobBars.Data.ComboValueConfig`1[[JobBars.Helper.ItemData, JobBars]], JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[JobBars.Helper.ItemData, JobBars]], System.Private.CoreLib"
+    }
+  },
+  "CursorStatusDuration": {
+    "$type": "JobBars.Data.FloatValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "IconsEnabled": true,
+  "IconEnabled": {
+    "$type": "JobBars.Data.BoolValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "IconComboType": {
+    "$type": "JobBars.Data.ComboValueConfig`1[[JobBars.UI.UIIconComboType, JobBars]], JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[JobBars.UI.UIIconComboType, JobBars]], System.Private.CoreLib"
+    }
+  },
+  "IconTimerOffset": {
+    "$type": "JobBars.Data.FloatValueConfig, JobBars",
+    "Values": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+    }
+  },
+  "Version": 2
+}

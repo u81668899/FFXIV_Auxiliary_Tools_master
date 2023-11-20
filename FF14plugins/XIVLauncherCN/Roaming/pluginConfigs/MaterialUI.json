@@ -1,0 +1,312 @@
+{
+  "$type": "MaterialUI.Config, MaterialUI",
+  "firstTime": false,
+  "openOnStart": false,
+  "style": "black",
+  "localEnabled": true,
+  "localPath": "D:\\FF14plugins\\FF14MOD\\weiyue",
+  "modOptions": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[MaterialUI.ModConfig, MaterialUI]], System.Private.CoreLib",
+    "aetheris_job_gauges": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "aetheris_job_icons": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "alt_partylist_target": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "alternative_materia_icons": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": true,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "alternative_teleport_icons": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "bar_enmity": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib",
+        "enmity1": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 0.24705882,
+          "Y": 0.6862745,
+          "Z": 0.4745098
+        },
+        "enmity2": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 0.76862746,
+          "Z": 0.20392157
+        },
+        "enmity3": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 0.9019608,
+          "Y": 0.5921569,
+          "Z": 0.2901961
+        },
+        "enmity4": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 0.8156863,
+          "Y": 0.32941177,
+          "Z": 0.32156864
+        }
+      }
+    },
+    "black_edge_icon_pack": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "black_edge_icon_pack_vanilla": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "black_edge_rounded_icon_pack": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "borderless_main_command_icons": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "curved_windows": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "custom_notification_color": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib",
+        "notification": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 0.3764706,
+          "Y": 0.39215687,
+          "Z": 0.40392157
+        }
+      }
+    },
+    "dark_and_silver_menu_icons": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "dogemap_and_coin": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "dracula_dungeon": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "mecha_cursor": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "minimal_gauges_v2": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "minimal_target_cursor": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "rainbow_window": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib",
+        "second": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "third": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    },
+    "silver_minimap": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "static_proc": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib",
+        "highlight_frame": {
+          "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    },
+    "status_icons_circle": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "status_icons_square": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "status_icons_square_colored": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    },
+    "status_icons_teardrop": {
+      "$type": "MaterialUI.ModConfig, MaterialUI",
+      "enabled": false,
+      "colors": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib"
+      }
+    }
+  },
+  "thirdPartyModRepos": [],
+  "Version": 0,
+  "accentOnly": false,
+  "color": {
+    "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+    "X": 0.3882353,
+    "Y": 0.23529412,
+    "Z": 0.70980394
+  },
+  "colorOptions": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector3, System.Private.CoreLib]], System.Private.CoreLib",
+    "party": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.6784314,
+      "Z": 0.21960784
+    },
+    "enemy": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.6784314,
+      "Z": 0.21960784
+    },
+    "proc": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.6784314,
+      "Z": 0.21960784
+    },
+    "shield": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.827451,
+      "Z": 0.0
+    },
+    "targetcast": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 0.81960785,
+      "Y": 0.5254902,
+      "Z": 0.043137256
+    },
+    "targetcastinter": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 0.54509807,
+      "Y": 0.05882353,
+      "Z": 0.05882353
+    },
+    "recast": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "recast1": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "recast2": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 0.8392157,
+      "Y": 0.42745098,
+      "Z": 0.0
+    },
+    "limitbreak1": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 0.09803922,
+      "Y": 0.8627451,
+      "Z": 0.87058824
+    },
+    "limitbreak2": {
+      "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+      "X": 0.74509805,
+      "Y": 0.3882353,
+      "Z": 0.8666667
+    }
+  }
+}

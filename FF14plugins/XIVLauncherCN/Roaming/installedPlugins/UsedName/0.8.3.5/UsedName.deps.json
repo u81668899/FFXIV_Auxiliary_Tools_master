@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "UsedName/0.8.3.5": {
+        "dependencies": {
+          "Dalamud.ContextMenu": "1.2.3",
+          "DalamudPackager": "2.1.11",
+          "XivCommon": "7.0.2"
+        },
+        "runtime": {
+          "UsedName.dll": {}
+        }
+      },
+      "Dalamud.ContextMenu/1.2.3": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.ContextMenu.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
+      },
+      "DalamudPackager/2.1.11": {},
+      "XivCommon/7.0.2": {
+        "runtime": {
+          "lib/net7.0-windows7.0/XivCommon.dll": {
+            "assemblyVersion": "7.0.2.0",
+            "fileVersion": "7.0.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UsedName/0.8.3.5": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dalamud.ContextMenu/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ydemplF7DNcA/LLeongDVzWUD/JV0Fw3EwA2+P0jYq3Le2ZYSt4U8qyJq4FyoChqt0lFG8BxYCAzfeWp4Jmnqw==",
+      "path": "dalamud.contextmenu/1.2.3",
+      "hashPath": "dalamud.contextmenu.1.2.3.nupkg.sha512"
+    },
+    "DalamudPackager/2.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9qlAWoRRTiL/geAvuwR/g6Bcbrd/bJJgVnB/RurBiyKs6srsP0bvpoo8IK+Eg8EA6jWeM6/YJWs66w4FIAzqPw==",
+      "path": "dalamudpackager/2.1.11",
+      "hashPath": "dalamudpackager.2.1.11.nupkg.sha512"
+    },
+    "XivCommon/7.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-raQqMKIquvM+BjDJz8QW8zOa2cajMtlwfKBlocNtkzNy/HMC7PGzkh8kN9KbUrwxc7PPvn6EjEXsAU9q9EUKJQ==",
+      "path": "xivcommon/7.0.2",
+      "hashPath": "xivcommon.7.0.2.nupkg.sha512"
+    }
+  }
+}

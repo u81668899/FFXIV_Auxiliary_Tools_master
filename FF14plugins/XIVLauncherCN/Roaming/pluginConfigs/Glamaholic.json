@@ -1,0 +1,19 @@
+{
+  "$type": "Glamaholic.Configuration, Glamaholic",
+  "ShowEditorMenu": true,
+  "ShowExamineMenu": true,
+  "ShowTryOnMenu": true,
+  "ShowKofiButton": true,
+  "ItemFilterShowObtainedOnly": false,
+  "Version": 1,
+  "Plates": [
+    {
+      "$type": "Glamaholic.SavedPlate, Glamaholic",
+      "Name": "Untitled Plate",
+      "Items": {
+        "$type": "System.Collections.Generic.Dictionary`2[[Glamaholic.PlateSlot, Glamaholic],[Glamaholic.SavedGlamourItem, Glamaholic]], System.Private.CoreLib"
+      },
+      "Tags": []
+    }
+  ]
+}

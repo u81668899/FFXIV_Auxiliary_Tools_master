@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AutoMiniGame/1.0.0": {
+        "dependencies": {
+          "BouncyCastle.NetCore": "1.9.0",
+          "DalamudPackager": "2.1.8"
+        },
+        "runtime": {
+          "AutoMiniGame.dll": {}
+        }
+      },
+      "BouncyCastle.NetCore/1.9.0": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.21290.1"
+          }
+        }
+      },
+      "DalamudPackager/2.1.8": {}
+    }
+  },
+  "libraries": {
+    "AutoMiniGame/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BouncyCastle.NetCore/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FpWfsqjMp+RNavLqMlviDPlbdf7q4j/pr9SHfc1LKcZz5PRjciuYo59nFnw+eJi+H8cm0eH5uVZStwAv1LRdCw==",
+      "path": "bouncycastle.netcore/1.9.0",
+      "hashPath": "bouncycastle.netcore.1.9.0.nupkg.sha512"
+    },
+    "DalamudPackager/2.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YqagNXs9InxmqkXzq7kLveImxnodkBEicAhydMXVp7dFjC7xb76U6zGgAax4/BWIWfZeWzr5DJyQSev31kj81A==",
+      "path": "dalamudpackager/2.1.8",
+      "hashPath": "dalamudpackager.2.1.8.nupkg.sha512"
+    }
+  }
+}

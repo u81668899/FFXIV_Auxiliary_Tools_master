@@ -1,0 +1,360 @@
+{
+  "$type": "XIVAutoAttack.Configuration.PluginConfiguration, AutoAction_CN",
+  "Version": 6,
+  "VoiceVolume": 80,
+  "EnabledCombos": [
+    "BRD - 吟游诗人",
+    "DNC - 舞者",
+    "MCH - 机工士"
+  ],
+  "DiabledActions": [
+    7537,
+    7538,
+    7540,
+    7548,
+    16151
+  ],
+  "Events": [],
+  "CombosConfigurations": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib]], System.Private.CoreLib",
+    "31": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "MCH_Opener",
+            "value": true
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "MCH_Automaton",
+            "value": true
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "MCH_Reassemble",
+            "value": true
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "DelayHypercharge",
+            "value": false
+          }
+        ],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "25": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "AutoLeylines",
+            "value": true
+          }
+        ],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "37": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      },
+      "神秘作者-Script": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "40": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "GCDHeal",
+            "value": true
+          }
+        ],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "21": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "无": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "24": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "逆光": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "UseLilyWhenFull",
+            "value": true
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "UsePreRegen",
+            "value": false
+          }
+        ],
+        "texts": [],
+        "combos": []
+      },
+      "神秘作者-Script": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "28": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "逆光 & Ana Amari": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "GCDHeal",
+            "value": false
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "prevDUN",
+            "value": false
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "GiveT",
+            "value": false
+          }
+        ],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "23": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [
+          {
+            "$type": "XIVAutoAttack.Configuration.FloatConfiguration, AutoAction_CN",
+            "name": "WANDTime",
+            "value": 43.0
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.FloatConfiguration, AutoAction_CN",
+            "name": "MAGETime",
+            "value": 34.0
+          },
+          {
+            "$type": "XIVAutoAttack.Configuration.FloatConfiguration, AutoAction_CN",
+            "name": "ARMYTime",
+            "value": 43.0
+          }
+        ],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "BindWAND",
+            "value": false
+          }
+        ],
+        "texts": [],
+        "combos": [
+          {
+            "$type": "XIVAutoAttack.Configuration.ComboConfiguration, AutoAction_CN",
+            "name": "FirstSong",
+            "value": 0
+          }
+        ]
+      }
+    },
+    "38": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "无": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      },
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "19": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "汐ベMoon": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [],
+        "texts": [],
+        "combos": []
+      }
+    },
+    "35": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN]], System.Private.CoreLib",
+      "无": {
+        "$type": "XIVAutoAttack.Configuration.ActionConfiguration, AutoAction_CN",
+        "doubles": [],
+        "bools": [
+          {
+            "$type": "XIVAutoAttack.Configuration.BooleanConfiguration, AutoAction_CN",
+            "name": "UseVercure",
+            "value": true
+          }
+        ],
+        "texts": [],
+        "combos": []
+      }
+    }
+  },
+  "ComboChoices": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "27": "神秘作者-Script",
+    "37": "汐ベMoon",
+    "24": "逆光",
+    "38": "汐ベMoon"
+  },
+  "TargetToHostileTypes": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Byte, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "AddDotGCDCount": 2,
+  "AutoBreak": true,
+  "UseAbility": true,
+  "UseDefenceAbility": true,
+  "NeverReplaceIcon": true,
+  "AutoProvokeForTank": true,
+  "AutoUseTrueNorth": true,
+  "ChangeTargetForFate": true,
+  "MoveTowardsScreen": true,
+  "AutoSayingOut": false,
+  "UseDtr": false,
+  "SayingLocation": true,
+  "ShowLocation": true,
+  "UseToast": false,
+  "RaiseAll": false,
+  "CheckForCasting": false,
+  "PoslockCasting": false,
+  "PoslockModifier": 17,
+  "RaisePlayerByCasting": true,
+  "RaisePlayerBySwift": true,
+  "RaiseBrinkofDeath": true,
+  "LessMPNoRaise": 0,
+  "AutoShield": true,
+  "AddEnemyListToHostile": false,
+  "UseAOEWhenManual": false,
+  "UseItem": false,
+  "ShowLocationWrong": true,
+  "ShowMoveTarget": false,
+  "ShowTarget": false,
+  "ChooseAttackMark": true,
+  "AttackMarkAOE": true,
+  "FilterStopMark": true,
+  "UseOverlayWindow": true,
+  "TeachingMode": false,
+  "TeachingModeColor": {
+    "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 1.0,
+    "Z": 0.8
+  },
+  "MovingTargetColor": {
+    "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 1.0,
+    "Z": 0.8
+  },
+  "TargetColor": {
+    "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.2,
+    "Z": 0.0
+  },
+  "SubTargetColor": {
+    "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.9,
+    "Z": 0.0
+  },
+  "KeyBoardNoise": true,
+  "UseAreaAbilityFriendly": true,
+  "AutoStartCountdown": false,
+  "AttackSafeMode": false,
+  "UseHealWhenNotAHealer": true,
+  "ObjectMinRadius": 0.0,
+  "HealthDifference": 0.5,
+  "HealingOfTimeSubtractSingles": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "HealingOfTimeSubtractAreas": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "HealthAreaAbilitys": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "HealthAreaAbility": 0.75,
+  "HealthAreafSpells": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "HealthAreafSpell": 0.65,
+  "HealthSingleAbilitys": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "HealthSingleAbility": 0.7,
+  "HealthSingleSpells": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib",
+    "WhiteMage": 0.55
+  },
+  "HealthSingleSpell": 0.55,
+  "HealthForDyingTanks": {
+    "$type": "System.Collections.Generic.Dictionary`2[[XIVAutoAttack.Data.ClassJobID, AutoAction_CN],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "InterruptibleTime": 0.5,
+  "SpecialDuration": 3.0,
+  "WeaponInterval": 0.67,
+  "WeaponFaster": 0.08,
+  "WeaponDelay": 0.0,
+  "LocationWrongText": "",
+  "ScriptComboFolder": "D:\\FF14plugins\\auto",
+  "MoveTargetAngle": 24,
+  "TargetingTypes": [
+    0,
+    1
+  ],
+  "TargetingIndex": 0
+}

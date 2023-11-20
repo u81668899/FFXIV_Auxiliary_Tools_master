@@ -1,0 +1,13 @@
+{
+  "$type": "Orchestrion.Configuration, orchestrion",
+  "showSongInNative": true,
+  "handleSpecialModes": true,
+  "Version": 1,
+  "ShowSongInTitleBar": true,
+  "ShowSongInChat": true,
+  "ShowIdInNative": true,
+  "SongReplacements": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[Orchestrion.SongReplacement, orchestrion]], System.Private.CoreLib"
+  },
+  "FavoriteSongs": []
+}

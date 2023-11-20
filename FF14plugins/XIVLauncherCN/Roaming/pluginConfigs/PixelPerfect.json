@@ -1,0 +1,69 @@
+{
+  "$type": "PixelPerfect.Config, PixelPerfect",
+  "Version": 5,
+  "Bitch": true,
+  "DoodleBag": [
+    {
+      "$type": "PixelPerfect.Drawing, PixelPerfect",
+      "Name": "自己的点位",
+      "Enabled": true,
+      "Job": 0,
+      "JobsBool": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "Type": 2,
+      "Colour": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.9416193,
+        "Y": 0.9667327,
+        "Z": 0.020291848,
+        "W": 1.0
+      },
+      "North": true,
+      "Thickness": 10.0,
+      "Segments": 100,
+      "Radius": 3.0,
+      "Vector": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": -2.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "W": 0.0
+      },
+      "Filled": true,
+      "Combat": true,
+      "Instance": false,
+      "Unsheathed": false,
+      "Offset": false,
+      "RotateOffset": false,
+      "Outline": false,
+      "OutlineColour": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0,
+        "W": 1.0
+      }
+    }
+  ]
+}

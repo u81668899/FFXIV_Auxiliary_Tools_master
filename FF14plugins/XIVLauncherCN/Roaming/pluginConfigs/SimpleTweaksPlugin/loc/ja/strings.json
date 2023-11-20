@@ -1,0 +1,938 @@
+{
+  "AutoOpenLootWindow / Description": {
+    "message": "ロット可能なアイテムが追加された時、自動でロット画面を開きます。",
+    "description": "[AutoOpenLootWindow] Tweak Description"
+  },
+  "AutoOpenLootWindow / Name": {
+    "message": "アイテムの追加時にロットウィンドウを開く",
+    "description": "[AutoOpenLootWindow] Tweak Name"
+  },
+  "CharaViewIncreasedZoom / Description": {
+    "message": "\"試着\" や \"調べる\" などのキャラクタープレビューをほぼ無限にズームできるようにします。",
+    "description": "[CharaViewIncreasedZoom] Tweak Description"
+  },
+  "CharaViewIncreasedZoom / Name": {
+    "message": "より大きなキャラクタープレビューのズーム",
+    "description": "[CharaViewIncreasedZoom] Tweak Name"
+  },
+  "ChatTweaks / Name": {
+    "message": "チャット拡張機能",
+    "description": "[ChatTweaks] Tweak Name"
+  },
+  "ChatTweaks@ChatNameColours / Description": {
+    "message": "チャット内のプレイヤーネームにランダムに色をつけるか、手動で設定できるようにします。",
+    "description": "[ChatNameColours] Tweak Description"
+  },
+  "ChatTweaks@ChatNameColours / Name": {
+    "message": "チャット内の名前の色",
+    "description": "[ChatNameColours] Tweak Name"
+  },
+  "ChatTweaks@ChatNameColours / NameAlreadyAddedError": {
+    "message": "この名前は既にリストにあります",
+    "description": "[ChatNameColours] Chat Name Colours - Name is already in list."
+  },
+  "ChatTweaks@ChatNameColours / Player Name": {
+    "message": "プレイヤーネーム",
+    "description": "[ChatNameColours] Chat Name Colours - Player Name"
+  },
+  "ChatTweaks@ChatNameColours / RandomColours": {
+    "message": "リストにないプレイヤーにはランダムな色を使用する",
+    "description": "[ChatNameColours] Chat Name Colours - Use random colours for unlisted players"
+  },
+  "ChatTweaks@ChatNameColours / Server": {
+    "message": "サーバー",
+    "description": "[ChatNameColours] Chat Name Colours - Server"
+  },
+  "ChatTweaks@ClickableLinks / Description": {
+    "message": "チャットに貼られたリンクを認識して、クリックできるようにします。",
+    "description": "[ClickableLinks] Tweak Description"
+  },
+  "ChatTweaks@ClickableLinks / Name": {
+    "message": "チャット内のクリック可能なリンク",
+    "description": "[ClickableLinks] Tweak Name"
+  },
+  "ChatTweaks@DisableChatAutoscroll / AllowAutoscrollLabel": {
+    "message": "常に自動スクロールを許可する：",
+    "description": "[DisableChatAutoscroll] Smart AutoScroll - Always allow autoscrolling in:"
+  },
+  "ChatTweaks@DisableChatAutoscroll / Description": {
+    "message": "チャットを上にスクロールしているときは新着があっても自動スクロールしないようにします。",
+    "description": "[DisableChatAutoscroll] Tweak Description"
+  },
+  "ChatTweaks@DisableChatAutoscroll / Name": {
+    "message": "スマート自動スクロール",
+    "description": "[DisableChatAutoscroll] Tweak Name"
+  },
+  "ChatTweaks@DisableChatAutoscroll / TabLabel": {
+    "message": "タブ {0}",
+    "description": "[DisableChatAutoscroll] Smart AutoScroll - Tab {0}"
+  },
+  "ChatTweaks@DisableChatMovement / Description": {
+    "message": "チャットウィンドウを移動できないようにします。",
+    "description": "[DisableChatMovement] Tweak Description"
+  },
+  "ChatTweaks@DisableChatMovement / Name": {
+    "message": "チャットウィンドウの移動無効化",
+    "description": "[DisableChatMovement] Tweak Name"
+  },
+  "ChatTweaks@DisableChatResize / Description": {
+    "message": "チャットウィンドウをリサイズできないようにします。",
+    "description": "[DisableChatResize] Tweak Description"
+  },
+  "ChatTweaks@DisableChatResize / Name": {
+    "message": "チャットウィンドウのリサイズ無効化",
+    "description": "[DisableChatResize] Tweak Name"
+  },
+  "ChatTweaks@RenameChatTabs / Description": {
+    "message": "チャットウィンドウの \"General\" \"Battle\" タブの名前を変更します。",
+    "description": "[RenameChatTabs] Tweak Description"
+  },
+  "ChatTweaks@RenameChatTabs / Name": {
+    "message": "チャットタブの名前変更",
+    "description": "[RenameChatTabs] Tweak Name"
+  },
+  "ChatTweaks@RenameChatTabs / TabLabel": {
+    "message": "タブ {0}",
+    "description": "[RenameChatTabs] Rename Chat Tabs - Tab {0}"
+  },
+  "ChrDirCommand / Description": {
+    "message": "クライアントのキャラクターデータが格納されているフォルダを開くコマンドを追加します。",
+    "description": "[ChrDirCommand] Tweak Description"
+  },
+  "ChrDirCommand / Name": {
+    "message": "キャラクターディレクトリコマンド",
+    "description": "[ChrDirCommand] Tweak Name"
+  },
+  "CommandAlias / Description": {
+    "message": "チャットボックスに入力されたコマンドをほかのコマンドに置き換えます。",
+    "description": "[CommandAlias] Tweak Description"
+  },
+  "CommandAlias / EmptyInputError": {
+    "message": "入力コマンドは空白にできません",
+    "description": "[CommandAlias] Command Alias - Input must not be empty."
+  },
+  "CommandAlias / EmptyOutputError": {
+    "message": "出力コマンドは空白にできません",
+    "description": "[CommandAlias] Command Alias - Output must not be empty."
+  },
+  "CommandAlias / Enabled": {
+    "message": "有効",
+    "description": "[CommandAlias] Command Alias - Enabled"
+  },
+  "CommandAlias / Input Command": {
+    "message": "入力コマンド",
+    "description": "[CommandAlias] Command Alias - Input Command"
+  },
+  "CommandAlias / Instruction": {
+    "message": "コマンドショートカットのリストを追加します。頭の\"/\"は含めないでください。これらのショートカットは仕様上、マクロでは動作しません。",
+    "description": "[CommandAlias] Command Alias - Add list of command alias. Do not start command with the '/'\nThese aliases, by design, do not work with macros."
+  },
+  "CommandAlias / MacroHelp": {
+    "message": "コマンドショートカットはサーバー上にバックアップした際にサーバーに送信されるのを防ぐため、マクロではサポートされていません。マクロでは元のコマンドを使用してください。",
+    "description": "[CommandAlias] Macro Help Tooltip"
+  },
+  "CommandAlias / Name": {
+    "message": "コマンドショートカット",
+    "description": "[CommandAlias] Tweak Name"
+  },
+  "CommandAlias / New Label": {
+    "message": "新規：",
+    "description": "[CommandAlias] Command Alias - New:"
+  },
+  "CommandAlias / Output Command": {
+    "message": "出力コマンド",
+    "description": "[CommandAlias] Command Alias - Output Command"
+  },
+  "CommandAlias / ProtectedCommandError": {
+    "message": "'/{0}' は保護されたコマンドです。",
+    "description": "[CommandAlias] Command Alias - '/{0}' is a protected command."
+  },
+  "DisableClickTargeting / AddButton": {
+    "message": "追加",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Add"
+  },
+  "DisableClickTargeting / CombatHeader": {
+    "message": "戦闘中のみ",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Only in\nCombat"
+  },
+  "DisableClickTargeting / DefaultNameText": {
+    "message": "デフォルト (名前のマッチなし)",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Default (Unmatched Names)"
+  },
+  "DisableClickTargeting / Description": {
+    "message": "左右のマウスクリックによるターゲットを無効化します。",
+    "description": "[DisableClickTargeting] Tweak Description"
+  },
+  "DisableClickTargeting / EverythingDisabled": {
+    "message": "すべてが無効化されている場合は何も行われません。",
+    "description": "[DisableClickTargeting] Disable Click Targeting - It is doing nothing if everything is disabled..."
+  },
+  "DisableClickTargeting / LeftHeader": {
+    "message": "左クリックターゲティング無効",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable\nLeft"
+  },
+  "DisableClickTargeting / Name": {
+    "message": "クリックターゲティングを無効にする",
+    "description": "[DisableClickTargeting] Tweak Name"
+  },
+  "DisableClickTargeting / NameFiltering": {
+    "message": "名前によるフィルターを有効にする",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Enable Name Filtering"
+  },
+  "DisableClickTargeting / NameFiltersHelp": {
+    "message": "名前ごとのオプション ",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Per actor options for "
+  },
+  "DisableClickTargeting / NameFiltersLabel": {
+    "message": "名前によるフィルター：",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Name Filters:"
+  },
+  "DisableClickTargeting / NameHeader": {
+    "message": "\n名前",
+    "description": "[DisableClickTargeting] Disable Click Targeting - \nName"
+  },
+  "DisableClickTargeting / NamePlaceholder": {
+    "message": "名前",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Name"
+  },
+  "DisableClickTargeting / RemoveTooltip": {
+    "message": "{0} を削除する",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Remove {0}"
+  },
+  "DisableClickTargeting / RightHeader": {
+    "message": "右クリックターゲティング無効",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable\nRight"
+  },
+  "DisableClickTargeting / SimpleCombatOnly": {
+    "message": "戦闘中のみ無効にする",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Only disable in combat"
+  },
+  "DisableClickTargeting / SimpleDisableLeftClick": {
+    "message": "左クリックターゲティングを無効にする",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable Left Click Targeting"
+  },
+  "DisableClickTargeting / SimpleDisableRightClick": {
+    "message": "右クリックターゲティングを無効にする",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable Right Click Targeting"
+  },
+  "DisableTitleScreenMovie / Description": {
+    "message": "タイトル画面で60秒後に再生されるムービーを無効化します。",
+    "description": "[DisableTitleScreenMovie] Tweak Description"
+  },
+  "DisableTitleScreenMovie / Name": {
+    "message": "タイトル画面のムービーを無効化",
+    "description": "[DisableTitleScreenMovie] Tweak Name"
+  },
+  "FixedShadowDistance / Description": {
+    "message": "影がレンダリングされる距離を固定し、飛行中でも変更されないようにします。",
+    "description": "[FixedShadowDistance] Tweak Description"
+  },
+  "FixedShadowDistance / Name": {
+    "message": "影の表示距離を固定",
+    "description": "[FixedShadowDistance] Tweak Name"
+  },
+  "FixedShadowDistance / Shadow Distance": {
+    "message": "影の表示距離",
+    "description": "[FixedShadowDistance] Fixed Shadow Distance - Shadow Distance"
+  },
+  "FixTarget / Description": {
+    "message": "プレイヤーやNPCを名前でターゲットするためのデフォルトの '/target' コマンドを使用できます。",
+    "description": "[FixTarget] Tweak Description"
+  },
+  "FixTarget / Name": {
+    "message": "'/target' コマンドの修正",
+    "description": "[FixTarget] Tweak Name"
+  },
+  "General Options / Hide KoFi": {
+    "message": "Ko-Fiリンクを非表示",
+    "description": "General Options / Hide KoFi - Hide Ko-fi link."
+  },
+  "General Options / Language": {
+    "message": "言語",
+    "description": "General Options / Language - Language"
+  },
+  "General Options / Show Experimental Tweaks": {
+    "message": "実験的な拡張機能を表示",
+    "description": "General Options / Show Experimental Tweaks - Show Experimental Tweaks."
+  },
+  "General Options / Show Tweak Descriptions": {
+    "message": "拡張機能の説明を表示",
+    "description": "General Options / Show Tweak Descriptions - Show tweak descriptions."
+  },
+  "General Options / Show Tweak IDs": {
+    "message": "拡張機能のIDを表示する",
+    "description": "General Options / Show Tweak IDs - Show tweak IDs."
+  },
+  "General Options / TabHeader": {
+    "message": "設定",
+    "description": "General Options / TabHeader - General Options"
+  },
+  "General Tweaks": {
+    "message": "一般",
+    "description": "General Tweaks Tab Header"
+  },
+  "Hide Tweak": {
+    "message": "拡張機能を非表示にする",
+    "description": "Hide Tweak - Hide Tweak"
+  },
+  "LegacyCameraLock / Description": {
+    "message": "レガシームーブメントの使用時にカメラの回転を防止します。",
+    "description": "[LegacyCameraLock] Tweak Description"
+  },
+  "LegacyCameraLock / Name": {
+    "message": "レガシーカメラロック",
+    "description": "[LegacyCameraLock] Tweak Name"
+  },
+  "LongVeil / Description": {
+    "message": "ウェディングベールを、通常は十二神大聖堂でしか見られない長いタイプのものに置き換えます。",
+    "description": "[LongVeil] Tweak Description"
+  },
+  "LongVeil / Name": {
+    "message": "長いヴェール",
+    "description": "[LongVeil] Tweak Name"
+  },
+  "MainCommandCommand / Description": {
+    "message": "チャットやマクロから任意のメインコマンドを使用できるようにコマンド '/maincommand [name]' を追加します。",
+    "description": "[MainCommandCommand] Tweak Description"
+  },
+  "MainCommandCommand / Name": {
+    "message": "メインコマンド",
+    "description": "[MainCommandCommand] Tweak Name"
+  },
+  "MoreGearSets / Description": {
+    "message": "ギアセットの最大数を100に増やします。",
+    "description": "[MoreGearSets] Tweak Description"
+  },
+  "MoreGearSets / Name": {
+    "message": "その他のギアセット",
+    "description": "[MoreGearSets] Tweak Name"
+  },
+  "SetOptionCommand / alias": {
+    "message": "通称",
+    "description": "[SetOptionCommand] Set Option Command - alias"
+  },
+  "SetOptionCommand / Available Options": {
+    "message": "使用可能なオプション",
+    "description": "[SetOptionCommand] Set Option Command - Available Options"
+  },
+  "SetOptionCommand / Description": {
+    "message": "様々な設定を変更するコマンドを追加します。",
+    "description": "[SetOptionCommand] Tweak Description"
+  },
+  "SetOptionCommand / Name": {
+    "message": "オプションコマンドの設定",
+    "description": "[SetOptionCommand] Tweak Name"
+  },
+  "SetOptionCommand / option": {
+    "message": "オプション",
+    "description": "[SetOptionCommand] Set Option Command - option"
+  },
+  "SetOptionCommand / values": {
+    "message": "値",
+    "description": "[SetOptionCommand] Set Option Command - values"
+  },
+  "TooltipTweaks / Name": {
+    "message": "ツールチップ関連",
+    "description": "[TooltipTweaks] Tweak Name"
+  },
+  "TooltipTweaks@CopyHotkey / Browser Only": {
+    "message": "ブラウザのみ",
+    "description": "[CopyHotkey] Item Hotkeys - Browser Only"
+  },
+  "TooltipTweaks@CopyHotkey / Cancel": {
+    "message": "キャンセル",
+    "description": "[CopyHotkey] Item Hotkeys - Cancel"
+  },
+  "TooltipTweaks@CopyHotkey / Confirm": {
+    "message": "確認",
+    "description": "[CopyHotkey] Item Hotkeys - Confirm"
+  },
+  "TooltipTweaks@CopyHotkey / Copy Item Name": {
+    "message": "アイテム名をコピー",
+    "description": "[CopyHotkey] Item Hotkeys - Copy Item Name"
+  },
+  "TooltipTweaks@CopyHotkey / Description": {
+    "message": "アイテム詳細ウィンドウが表示されているときに、さまざまなアクションのホットキーを追加します。",
+    "description": "[CopyHotkey] Tweak Description"
+  },
+  "TooltipTweaks@CopyHotkey / Name": {
+    "message": "アイテムのホットキー",
+    "description": "[CopyHotkey] Tweak Name"
+  },
+  "TooltipTweaks@CopyHotkey / NoHelpText": {
+    "message": "ツールチップにホットキーのヘルプを表示しない",
+    "description": "[CopyHotkey] Item Hotkeys - Don't show hotkey help on Tooltip"
+  },
+  "TooltipTweaks@CopyHotkey / Set Keybind": {
+    "message": "キーバインドの設定",
+    "description": "[CopyHotkey] Item Hotkeys - Set Keybind"
+  },
+  "TooltipTweaks@CopyHotkey / View on Eriones (JP)": {
+    "message": "Eriones (JP) で表示",
+    "description": "[CopyHotkey] Item Hotkeys - View on Eriones (JP)"
+  },
+  "TooltipTweaks@CopyHotkey / View on Gamer Escape": {
+    "message": "Gamer Escape で表示",
+    "description": "[CopyHotkey] Item Hotkeys - View on Gamer Escape"
+  },
+  "TooltipTweaks@CopyHotkey / View on Garland Tools": {
+    "message": "Garland Tools で表示",
+    "description": "[CopyHotkey] Item Hotkeys - View on Garland Tools"
+  },
+  "TooltipTweaks@CopyHotkey / View on Teamcraft": {
+    "message": "Teamcraft で表示",
+    "description": "[CopyHotkey] Item Hotkeys - View on Teamcraft"
+  },
+  "TooltipTweaks@DesynthesisSkill / Description": {
+    "message": "分解可能なアイテムを閲覧中に現在の分解レベルを表示する。",
+    "description": "[DesynthesisSkill] Tweak Description"
+  },
+  "TooltipTweaks@DesynthesisSkill / Name": {
+    "message": "アイテム分解スキルを表示",
+    "description": "[DesynthesisSkill] Tweak Name"
+  },
+  "TooltipTweaks@FoodStats / Description": {
+    "message": "アイテムの消費によるステータスへの影響を算出、表示する。",
+    "description": "[FoodStats] Tweak Description"
+  },
+  "TooltipTweaks@FoodStats / Highlight Active": {
+    "message": "アクティブを強調表示する",
+    "description": "[FoodStats] Show expected food and potion stats - Highlight Active"
+  },
+  "TooltipTweaks@FoodStats / Name": {
+    "message": "予測される食事と薬の統計を表示する",
+    "description": "[FoodStats] Tweak Name"
+  },
+  "TooltipTweaks@MateriaStats / Colour Value": {
+    "message": "色の値",
+    "description": "[MateriaStats] Materia Stats - Colour Value"
+  },
+  "TooltipTweaks@MateriaStats / Description": {
+    "message": "統計を表示するときにアイテムにセットされているマテリア分が含まれます。",
+    "description": "[MateriaStats] Tweak Description"
+  },
+  "TooltipTweaks@MateriaStats / Name": {
+    "message": "マテリアスロット",
+    "description": "[MateriaStats] Tweak Name"
+  },
+  "TooltipTweaks@MateriaStats / Show Delta": {
+    "message": "差分を表示",
+    "description": "[MateriaStats] Materia Stats - Show Delta"
+  },
+  "TooltipTweaks@MateriaStats / Show Total": {
+    "message": "合計を表示",
+    "description": "[MateriaStats] Materia Stats - Show Total"
+  },
+  "TooltipTweaks@MateriaStats / Simplified Combined Display": {
+    "message": "簡易複合表示",
+    "description": "[MateriaStats] Materia Stats - Simplified Combined Display"
+  },
+  "TooltipTweaks@PrecisionDurability / Description": {
+    "message": "耐久度のパーセンテージを表示します。",
+    "description": "[PrecisionDurability] Tweak Description"
+  },
+  "TooltipTweaks@PrecisionDurability / Name": {
+    "message": "正確な耐久度",
+    "description": "[PrecisionDurability] Tweak Name"
+  },
+  "TooltipTweaks@PrecisionDurability / Trailing Zeros": {
+    "message": "小数点以下数",
+    "description": "[PrecisionDurability] Precise Durability - Trailing Zeros"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Description": {
+    "message": "耐久度のパーセンテージを表示します。",
+    "description": "[PrecisionSpiritbond] Tweak Description"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Name": {
+    "message": "詳細な練成度",
+    "description": "[PrecisionSpiritbond] Tweak Name"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Trailing Zeros": {
+    "message": "小数点以下数",
+    "description": "[PrecisionSpiritbond] Precise Spiritbond - Trailing Zeros"
+  },
+  "TooltipTweaks@ShowItemID / Description": {
+    "message": "ツールチップにアクションとアイテムのIDを表示します。",
+    "description": "[ShowItemID] Tweak Description"
+  },
+  "TooltipTweaks@ShowItemID / Name": {
+    "message": "IDを表示",
+    "description": "[ShowItemID] Tweak Name"
+  },
+  "UiAdjustments / Name": {
+    "message": "UI関連",
+    "description": "[UiAdjustments] Tweak Name"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Description": {
+    "message": "戦闘中に表示されるセリフのダイアログの位置を変更します。",
+    "description": "[BattleTalkAdjustments] Tweak Description"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Name": {
+    "message": "戦闘中のセリフダイアログ調整",
+    "description": "[BattleTalkAdjustments] Tweak Name"
+  },
+  "UiAdjustments@BattleTalkAdjustments / PositionPreviewText": {
+    "message": "新しいセリフダイアログボックスの位置",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - NEW BATTLE TALK DIALOGUE BOX POSITION"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Scale": {
+    "message": "サイズ倍率",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - Scale"
+  },
+  "UiAdjustments@BattleTalkAdjustments / X Offset": {
+    "message": "X 座標のオフセット",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - X Offset"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Y Offset": {
+    "message": "Y 座標のオフセット",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - Y Offset"
+  },
+  "UiAdjustments@CastBarAdjustments / Align Ability Name": {
+    "message": "アビリティ名を均一に並べる",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Align Ability Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Align Countdown Text": {
+    "message": "カウントダウンを均一に並べる",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Align Countdown Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Description": {
+    "message": "キャストバーの特定のパーツを非表示または移動できます。",
+    "description": "[CastBarAdjustments] Tweak Description"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Ability Name": {
+    "message": "アビリティの名前を隠す",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Ability Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Casting": {
+    "message": "「CAST」 テキストを隠す",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide 'Casting' Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Countdown Text": {
+    "message": "カウントダウンテキストを隠す",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Countdown Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Icon": {
+    "message": "アイコンを隠す",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Icon"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Interrupted Text": {
+    "message": "「INTERRUPTED」テキストを隠す",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Interrupted Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Name": {
+    "message": "キャストバー調整",
+    "description": "[CastBarAdjustments] Tweak Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Offset": {
+    "message": "オフセット",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Offset"
+  },
+  "UiAdjustments@CastBarAdjustments / Show SlideCast Marker": {
+    "message": "滑り撃ちマーカーを表示",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Show SlideCast Marker"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Marker Colour": {
+    "message": "滑り撃ちマーカーの色",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Marker Colour"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Offset Time": {
+    "message": "滑り撃ち可能になる時間",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Offset Time"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Ready Colour": {
+    "message": "滑り撃ち可能時の色",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Ready Colour"
+  },
+  "UiAdjustments@ComboTimer / Always Visible": {
+    "message": "常に表示",
+    "description": "[ComboTimer] [Config] Always Visible"
+  },
+  "UiAdjustments@ComboTimer / Description": {
+    "message": "コンボアクションの残り秒数を表示します。",
+    "description": "[ComboTimer] Tweak Description"
+  },
+  "UiAdjustments@ComboTimer / Font Size": {
+    "message": "フォントサイズ",
+    "description": "[ComboTimer] [Config] Font Size"
+  },
+  "UiAdjustments@ComboTimer / Hide 'COMBO' Text": {
+    "message": "「COMBO」テキストを隠す",
+    "description": "[ComboTimer] [Config] Hide 'COMBO' Text"
+  },
+  "UiAdjustments@ComboTimer / Name": {
+    "message": "コンボタイマー",
+    "description": "[ComboTimer] Tweak Name"
+  },
+  "UiAdjustments@ComboTimer / Text Color": {
+    "message": "文字の色",
+    "description": "[ComboTimer] [Config] Text Color"
+  },
+  "UiAdjustments@ComboTimer / Text Outline Color": {
+    "message": "文字の輪郭の色",
+    "description": "[ComboTimer] [Config] Text Outline Color"
+  },
+  "UiAdjustments@ComboTimer / X Position Offset": {
+    "message": "X座標のオフセット",
+    "description": "[ComboTimer] [Config] X Position Offset"
+  },
+  "UiAdjustments@ComboTimer / Y Position Offset": {
+    "message": "Y座標のオフセット",
+    "description": "[ComboTimer] [Config] Y Position Offset"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / AddButton": {
+    "message": "追加",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Add"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Description": {
+    "message": "フリーカンパニーとWandererタグの非表示やカスタマイズを可能にします。",
+    "description": "[CustomFreeCompanyTags] Tweak Description"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / DuplicateNameError": {
+    "message": "この名前は既に追加されています。",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - This name is already added."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / FC Tag": {
+    "message": "FCタグ",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - FC Tag"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / FCAlreadyAddedError": {
+    "message": "FCは既にリストにあります。",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - FC is already on list."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Name": {
+    "message": "フリーカンパニーのカスタムタグ",
+    "description": "[CustomFreeCompanyTags] Tweak Name"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / NoFCNote": {
+    "message": "リストに追加するFC名を入力してください。",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Enter name to add FC to list."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Replace": {
+    "message": "変更",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Replace"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Replacement": {
+    "message": "変更後のテキスト",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Replacement"
+  },
+  "UiAdjustments@CustomTimeFormat / Description": {
+    "message": "ゲーム内の時計にカスタム時間フォーマットを設定できます。C#フォーマット文字列を使用します。",
+    "description": "[CustomTimeFormat] Tweak Description"
+  },
+  "UiAdjustments@CustomTimeFormat / Eorzea Time": {
+    "message": "エオルゼア時間",
+    "description": "[CustomTimeFormat] Custom Time Formats - Eorzea Time"
+  },
+  "UiAdjustments@CustomTimeFormat / Local Time": {
+    "message": "ローカル時間",
+    "description": "[CustomTimeFormat] Custom Time Formats - Local Time"
+  },
+  "UiAdjustments@CustomTimeFormat / Name": {
+    "message": "時間形式のカスタム",
+    "description": "[CustomTimeFormat] Tweak Name"
+  },
+  "UiAdjustments@CustomTimeFormat / Server Time": {
+    "message": "サーバー時間",
+    "description": "[CustomTimeFormat] Custom Time Formats - Server Time"
+  },
+  "UiAdjustments@ExamineItemLevel / Description": {
+    "message": "他のプレイヤーのアイテムレベルを計算します。\n赤の値はそのプレイヤーが自分のレベルに合わせた装備の最大レベルを表示しています。",
+    "description": "[ExamineItemLevel] Tweak Description"
+  },
+  "UiAdjustments@ExamineItemLevel / ItemLevelIcon": {
+    "message": "アイテムレベルアイコンを表示",
+    "description": "[ExamineItemLevel] Item Level in Examine - Show Item Level Icon"
+  },
+  "UiAdjustments@ExamineItemLevel / Name": {
+    "message": "アイテムレベル計測中",
+    "description": "[ExamineItemLevel] Tweak Name"
+  },
+  "UiAdjustments@ExpPercentage / Decimals": {
+    "message": "小数",
+    "description": "[ExpPercentage] [Config] Decimals"
+  },
+  "UiAdjustments@ExpPercentage / Description": {
+    "message": "EXPバーに現在の経験値パーセンテージを表示します。",
+    "description": "[ExpPercentage] Tweak Description"
+  },
+  "UiAdjustments@ExpPercentage / Name": {
+    "message": "経験値の獲得率を表示",
+    "description": "[ExpPercentage] Tweak Name"
+  },
+  "UiAdjustments@ExpPercentage / Only show percentage": {
+    "message": "獲得率のみを表示",
+    "description": "[ExpPercentage] [Config] Only show percentage"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / BlockClickOnGearset": {
+    "message": "ギアセットアイテムをクリックしてブロックします。",
+    "description": "[ExtendedDesynthesisWindow] Extended Desynthesis Window - Block clicking on gearset items."
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / Description": {
+    "message": "分解ウィンドウにて現在の分解レベルとそのアイテムの分解適正レベルを表示します。\nまた、そのアイテムがギアセットに登録済みか表示、オプションでギアセット登録中のアイテムを選択できなくします。",
+    "description": "[ExtendedDesynthesisWindow] Tweak Description"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / Name": {
+    "message": "拡張されたアイテム分解ウィンドウ",
+    "description": "[ExtendedDesynthesisWindow] Tweak Name"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / YellowForSkillGain": {
+    "message": "予想獲得分解スキルを強調表示(黄色)",
+    "description": "[ExtendedDesynthesisWindow] Extended Desynthesis Window - Highlight potential skill gains (Yellow)"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / Name": {
+    "message": "テレポートの追加",
+    "description": "[ExtraEstateTeleportation] Tweak Name"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / PartyList": {
+    "message": "パーティーリスト",
+    "description": "[ExtraEstateTeleportation] Extra Estate Teleportation - Party List"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / PartyMemberList": {
+    "message": "パーティーメンバーリスト(ソーシャルウィンドウ)",
+    "description": "[ExtraEstateTeleportation] Extra Estate Teleportation - Party Member List (Social window)"
+  },
+  "UiAdjustments@HideAchievementsNotifications / Description": {
+    "message": "ログイン時/ゾーン切替時の達成間近/達成可能なアチーブメントの通知を完全に非表示にする",
+    "description": "[HideAchievementsNotifications] Tweak Description"
+  },
+  "UiAdjustments@HideAchievementsNotifications / HideLogIn": {
+    "message": "ログイン通知を非表示",
+    "description": "[HideAchievementsNotifications] Hide Achievements Nearing Completion Notifications - Hide the login notification."
+  },
+  "UiAdjustments@HideAchievementsNotifications / HideZoneIn": {
+    "message": "ゾーン進入通知を非表示にする。",
+    "description": "[HideAchievementsNotifications] Hide Achievements Nearing Completion Notifications - Hide the zone-in notification."
+  },
+  "UiAdjustments@HideAchievementsNotifications / Name": {
+    "message": "「達成間近のアチーブメント」通知を非表示",
+    "description": "[HideAchievementsNotifications] Tweak Name"
+  },
+  "UiAdjustments@HideExperienceBar / Description": {
+    "message": "レベルが最大の時、経験値バーを非表示にします",
+    "description": "[HideExperienceBar] Tweak Description"
+  },
+  "UiAdjustments@HideExperienceBar / Name": {
+    "message": "レベルが最大の時に経験値バーを非表示",
+    "description": "[HideExperienceBar] Tweak Name"
+  },
+  "UiAdjustments@HideJobGauge / Description": {
+    "message": "非戦闘中やIDなどにいない場合、ジョブゲージを非表示にすることを許可します。",
+    "description": "[HideJobGauge] Tweak Description"
+  },
+  "UiAdjustments@HideJobGauge / Name": {
+    "message": "ジョブゲージを隠す",
+    "description": "[HideJobGauge] Tweak Name"
+  },
+  "UiAdjustments@HideJobGauge / Show In Combat": {
+    "message": "戦闘中に表示",
+    "description": "[HideJobGauge] [Config] Show In Combat"
+  },
+  "UiAdjustments@HideJobGauge / Show In Duty": {
+    "message": "コンテンツ中に表示",
+    "description": "[HideJobGauge] [Config] Show In Duty"
+  },
+  "UiAdjustments@ImprovedWorldVisit / Description": {
+    "message": "ワールド間テレポメニューをシンプルにし、現在地をリストに表示します。",
+    "description": "[ImprovedWorldVisit] Tweak Description"
+  },
+  "UiAdjustments@ImprovedWorldVisit / Name": {
+    "message": "見やすいワールド間テレポメニュー",
+    "description": "[ImprovedWorldVisit] Tweak Name"
+  },
+  "UiAdjustments@LargeCooldownCounter / Description": {
+    "message": "ホットバーのクールダウンタイマーを拡大する。",
+    "description": "[LargeCooldownCounter] Tweak Description"
+  },
+  "UiAdjustments@LargeCooldownCounter / Edge Colour": {
+    "message": "エッジの色",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Edge Colour"
+  },
+  "UiAdjustments@LargeCooldownCounter / Font": {
+    "message": "フォント",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Font"
+  },
+  "UiAdjustments@LargeCooldownCounter / Font Size Adjust": {
+    "message": "フォントサイズの調整",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Font Size Adjust"
+  },
+  "UiAdjustments@LargeCooldownCounter / Name": {
+    "message": "大きなクールタイムカウンター",
+    "description": "[LargeCooldownCounter] Tweak Name"
+  },
+  "UiAdjustments@LargeCooldownCounter / Simple Mode": {
+    "message": "シンプルモード",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Simple Mode"
+  },
+  "UiAdjustments@LargeCooldownCounter / Text Colour": {
+    "message": "文字の色",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Text Colour"
+  },
+  "UiAdjustments@LockWindowPosition / Description": {
+    "message": "ほぼすべてのUIウィンドウの位置を固定できるようにします。",
+    "description": "[LockWindowPosition] Tweak Description"
+  },
+  "UiAdjustments@LockWindowPosition / HelpMessage": {
+    "message": "ウィンドウのコンテキストメニューからウィンドウ位置を固定・解除できます（ウィンドウを右クリック）。",
+    "description": "[LockWindowPosition] Lock Window Positions - You can lock or unlock windows from their context menu (right click the window)."
+  },
+  "UiAdjustments@LockWindowPosition / Lock Window Position": {
+    "message": "ウィンドウの位置を固定",
+    "description": "[LockWindowPosition] Lock Window Positions - Lock Window Position"
+  },
+  "UiAdjustments@LockWindowPosition / Name": {
+    "message": "ウィンドウ位置の固定",
+    "description": "[LockWindowPosition] Tweak Name"
+  },
+  "UiAdjustments@LockWindowPosition / Unlock": {
+    "message": "解除",
+    "description": "[LockWindowPosition] Lock Window Positions - Unlock"
+  },
+  "UiAdjustments@LockWindowPosition / Unlock Window Position": {
+    "message": "ウィンドウ位置の固定を解除",
+    "description": "[LockWindowPosition] Lock Window Positions - Unlock Window Position"
+  },
+  "UiAdjustments@MarketEnhancements / Description": {
+    "message": "マーケットボードのUIを拡張し、表示価格に税を含めたり店売り価格よりも高い出品をハイライト表示したりすることができます。",
+    "description": "[MarketEnhancements] Tweak Description"
+  },
+  "UiAdjustments@MarketEnhancements / Highlight items that can be purchased from an NPC for cheaper. (Red)": {
+    "message": "NPCからより安く購入できるアイテムを強調表示します。(赤)",
+    "description": "[MarketEnhancements] [Config] Highlight items that can be purchased from an NPC for cheaper. (Red)"
+  },
+  "UiAdjustments@MarketEnhancements / Highlight items that can be sold to NPC for more. (Green)": {
+    "message": "NPCにより高い価格で売ることが出来るアイテムを強調表示します。(緑)",
+    "description": "[MarketEnhancements] [Config] Highlight items that can be sold to NPC for more. (Green)"
+  },
+  "UiAdjustments@MarketEnhancements / Include tax in single price.": {
+    "message": "単体価格に税を含める",
+    "description": "[MarketEnhancements] [Config] Include tax in single price."
+  },
+  "UiAdjustments@MarketEnhancements / Include tax in total price.": {
+    "message": "合計価格に税を含める",
+    "description": "[MarketEnhancements] [Config] Include tax in total price."
+  },
+  "UiAdjustments@MarketEnhancements / Name": {
+    "message": "マーケットの機能強化",
+    "description": "[MarketEnhancements] Tweak Name"
+  },
+  "UiAdjustments@OldNameplatesTweak / Name": {
+    "message": "旧ネームプレート表示",
+    "description": "[OldNameplatesTweak] Tweak Name"
+  },
+  "UiAdjustments@ParameterBarAdjustments / CP Bar Color": {
+    "message": "CPバーの色",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - CP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / GP Bar Color": {
+    "message": "GP バーの色",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - GP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide 'HP' Text": {
+    "message": "「HP」テキストを非表示",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide 'HP' Text"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide 'MP' Text": {
+    "message": "「MP」テキストを非表示",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide 'MP' Text"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide HP Bar": {
+    "message": "HP バーを非表示",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide HP Bar"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide HP Value": {
+    "message": "HPの値を非表示",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide HP Value"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide MP Bar": {
+    "message": "MP バーを非表示",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Bar"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide MP Value": {
+    "message": "MP の値を非表示",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Value"
+  },
+  "UiAdjustments@ParameterBarAdjustments / HP Bar Color": {
+    "message": "HP バーの色",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - HP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / MP Bar Color": {
+    "message": "MPバーの色",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - MP Bar Color"
+  },
+  "UiAdjustments@ReducedDeepDungeonInfo / Description": {
+    "message": "ディープダンジョン内の情報ウィンドウから冗長な情報を削除します。",
+    "description": "[ReducedDeepDungeonInfo] Tweak Description"
+  },
+  "UiAdjustments@RemoveCommunityFinder / Name": {
+    "message": "コミュニティを探すボタンを削除",
+    "description": "[RemoveCommunityFinder] Tweak Name"
+  },
+  "UiAdjustments@ShiftTargetCastBarText / Name": {
+    "message": "ターゲット詠唱バーのテキストを移動",
+    "description": "[ShiftTargetCastBarText] Tweak Name"
+  },
+  "UiAdjustments@ShowShieldOnHPBar / Description": {
+    "message": "HP バーにおおよそのバリア量を表示します。",
+    "description": "[ShowShieldOnHPBar] Tweak Description"
+  },
+  "UiAdjustments@ShowShieldOnHPBar / Name": {
+    "message": "HP バーにバリアを表示",
+    "description": "[ShowShieldOnHPBar] Tweak Name"
+  },
+  "UiAdjustments@SmartNameplates / Description": {
+    "message": "特定の条件下で、戦闘中に他のプレイヤーのネームプレートを非表示にします。",
+    "description": "[SmartNameplates] Tweak Description"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Alliance Members": {
+    "message": "アライアンスメンバーを無視",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Alliance Members"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Dead Players": {
+    "message": "戦闘不能になったプレイヤーを無視",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Dead Players"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Friends": {
+    "message": "フレンドを無視",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Friends"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Party Members": {
+    "message": "パーティーメンバーを無視",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Party Members"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Targeted Players": {
+    "message": "ターゲット中のプレイヤーを無視",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Targeted Players"
+  },
+  "UiAdjustments@SmartNameplates / IgnorePlayersNote": {
+    "message": "次のオプションは特定のプレーヤーの拡張機能を無効にします。",
+    "description": "[SmartNameplates] Smart Nameplates - The following options will disable the tweak for certain players."
+  },
+  "UiAdjustments@SmartNameplates / Name": {
+    "message": "スマートネームプレート",
+    "description": "[SmartNameplates] Tweak Name"
+  },
+  "UiAdjustments@SmartNameplates / Show HP": {
+    "message": "HPを表示",
+    "description": "[SmartNameplates] Smart Nameplates - Show HP"
+  },
+  "UiAdjustments@TargetHP / Description": {
+    "message": "ターゲットのHPの正確な (または丸められた) 値を表示します。",
+    "description": "[TargetHP] Tweak Description"
+  },
+  "UiAdjustments@TargetHP / Name": {
+    "message": "ターゲットのHP",
+    "description": "[TargetHP] Tweak Name"
+  },
+  "UiAdjustments@TimeUntilGpMax / Description": {
+    "message": "ギャザラーの時、GPが最大になるまでの推定時間を表示します。",
+    "description": "[TimeUntilGpMax] Tweak Description"
+  },
+  "UiAdjustments@TimeUntilGpMax / Name": {
+    "message": "GPが最大になるまでの時間",
+    "description": "[TimeUntilGpMax] Tweak Name"
+  },
+  "Unhide Tweak": {
+    "message": "拡張機能を再表示する",
+    "description": "Unhide Tweak - Unhide Tweak"
+  }
+}

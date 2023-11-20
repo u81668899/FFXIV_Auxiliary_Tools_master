@@ -1,0 +1,72 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Browsingway/1.5.4.0": {
+        "dependencies": {
+          "Browsingway.Common": "1.5.4",
+          "DalamudPackager": "2.1.11",
+          "SharedMemory": "2.3.2"
+        },
+        "runtime": {
+          "Browsingway.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.11": {},
+      "SharedMemory/2.3.2": {
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/SharedMemory.dll": {
+            "assemblyVersion": "2.3.2.0",
+            "fileVersion": "2.3.2.0"
+          }
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {},
+      "Browsingway.Common/1.5.4": {
+        "runtime": {
+          "Browsingway.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Browsingway/1.5.4.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9qlAWoRRTiL/geAvuwR/g6Bcbrd/bJJgVnB/RurBiyKs6srsP0bvpoo8IK+Eg8EA6jWeM6/YJWs66w4FIAzqPw==",
+      "path": "dalamudpackager/2.1.11",
+      "hashPath": "dalamudpackager.2.1.11.nupkg.sha512"
+    },
+    "SharedMemory/2.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hH34Y9xzvdJpgf/vwyWE/zYlY4BdQS3Zolfdg+8hV9A+UQRsBWyBS62kcLO55mF4etmMoL0PswEbT3lVXJSlFw==",
+      "path": "sharedmemory/2.3.2",
+      "hashPath": "sharedmemory.2.3.2.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+    },
+    "Browsingway.Common/1.5.4": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

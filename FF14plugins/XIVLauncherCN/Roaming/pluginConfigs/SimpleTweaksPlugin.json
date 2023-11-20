@@ -1,0 +1,99 @@
+{
+  "$type": "SimpleTweaksPlugin.SimpleTweaksPluginConfig, SimpleTweaksPlugin",
+  "Debugging": {
+    "$type": "SimpleTweaksPlugin.Debugging.DebugConfig, SimpleTweaksPlugin",
+    "SelectedPage": "",
+    "SavedValues": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+    },
+    "SelectedAtkUnitBase": 0,
+    "AtkUnitBaseSearch": ""
+  },
+  "EnabledTweaks": [
+    "DisableTitleScreenMovie",
+    "UiAdjustments@ExamineItemLevel",
+    "TooltipTweaks@CopyHotkey",
+    "CommandAlias",
+    "UiAdjustments@MarketEnhancements",
+    "ChatTweaks@DisableChatAutoscroll",
+    "UiAdjustments@ExtendedDesynthesisWindow",
+    "UiAdjustments@SellMaxTripleTriadCards",
+    "AutoOpenCommendWindow",
+    "AutoOpenLootWindow",
+    "ChatTweaks@DisableChatMovement"
+  ],
+  "HiddenTweaks": [],
+  "CustomProviders": [],
+  "BlacklistedTweaks": [
+    "StopCraftingButton",
+    "FixedShadowDistance",
+    "RefreshMarketPrices",
+    "TooltipTweaks",
+    "UiAdjustments@DutyListBackground",
+    "UiAdjustments@LootWindowDuplicateUniqueItemIndicator"
+  ],
+  "CustomizedCommands": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "DisabledCommandAlias": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "HideKofi": true,
+  "ShowExperimentalTweaks": false,
+  "DisableAutoOpen": false,
+  "ShowInDevMenu": false,
+  "NoFools": false,
+  "NotBaby": false,
+  "AnalyticsOptOut": false,
+  "ShowTweakDescriptions": true,
+  "ShowTweakIDs": false,
+  "CustomCulture": "",
+  "Language": "zh-CN",
+  "LastSeenChangelog": "",
+  "AutoOpenChangelog": false,
+  "DisableChangelogNotification": false,
+  "ChatTweaks": {
+    "$type": "SimpleTweaksPlugin.ChatTweaksConfig, SimpleTweaksPlugin",
+    "DisableChatAutoscroll": {
+      "$type": "SimpleTweaksPlugin.Tweaks.Chat.DisableChatAutoscroll+Configs, SimpleTweaksPlugin",
+      "DisablePanel0": false,
+      "DisablePanel1": false,
+      "DisablePanel2": false,
+      "DisablePanel3": false,
+      "Version": 1
+    },
+    "RenameChatTabs": {
+      "$type": "SimpleTweaksPlugin.Tweaks.Chat.RenameChatTabs+Config, SimpleTweaksPlugin",
+      "DoRenameTab0": false,
+      "DoRenameTab1": false,
+      "ChatTab0Name": "",
+      "ChatTab1Name": "",
+      "Version": 1
+    }
+  },
+  "FixedShadowDistance": {
+    "$type": "SimpleTweaksPlugin.Tweaks.FixedShadowDistance+Configs, SimpleTweaksPlugin",
+    "ShadowDistance": 1800.0,
+    "Version": 1
+  },
+  "UiAdjustments": {
+    "$type": "SimpleTweaksPlugin.UiAdjustmentsConfig, SimpleTweaksPlugin",
+    "NotificationToastAdjustments": {
+      "$type": "SimpleTweaksPlugin.Tweaks.UiAdjustment.NotificationToastAdjustments+Configs, SimpleTweaksPlugin",
+      "Hide": false,
+      "ShowInCombat": false,
+      "OffsetXPosition": 0,
+      "OffsetYPosition": 0,
+      "Scale": 1.0,
+      "Exceptions": [],
+      "Version": 1
+    },
+    "PartyUiAdjustments": {
+      "$type": "SimpleTweaksPlugin.Tweaks.UiAdjustment.PartyUiAdjustments+Configs, SimpleTweaksPlugin",
+      "HpPercent": false,
+      "ShieldShift": false,
+      "MpShield": true
+    }
+  },
+  "Version": 3
+}

@@ -1,0 +1,240 @@
+{
+  "Version": 6,
+  "Payload": {
+    "BossMod.AutorotationConfig": {
+      "ActionManagerExHookEnabled": false,
+      "Enabled": false,
+      "Logging": false,
+      "ShowUI": false,
+      "EnableMovement": true,
+      "SmartCooldownQueueing": true,
+      "PreventMovingWhileCasting": false,
+      "RemoveAnimationLockDelay": false,
+      "PotionUse": "手动",
+      "StickyAutoActions": false,
+      "RestoreRotation": false,
+      "GTMode": "AtCursor"
+    },
+    "BossMod.BLMConfig": {
+      "FullRotation": true,
+      "MouseoverFriendly": true
+    },
+    "BossMod.BRDConfig": {
+      "FullRotation": true
+    },
+    "BossMod.DRGConfig": {
+      "FullRotation": true
+    },
+    "BossMod.MNKConfig": {
+      "FullRotation": true,
+      "AOECombos": true
+    },
+    "BossMod.PLDConfig": {
+      "FullRotation": true,
+      "STCombos": true,
+      "AOECombos": true,
+      "SmartShirkTarget": true,
+      "ProvokeMouseover": true
+    },
+    "BossMod.SCHConfig": {
+      "MouseoverFriendly": true,
+      "PreferSelene": false
+    },
+    "BossMod.SMNConfig": {
+      "FullRotation": true,
+      "MouseoverFriendly": true
+    },
+    "BossMod.WARConfig": {
+      "FullRotation": true,
+      "STCombos": true,
+      "AOECombos": true,
+      "SmartNascentFlashShirkTarget": true,
+      "ProvokeMouseover": true,
+      "HolmgangSelf": true,
+      "ForbidEarlyTomahawk": true
+    },
+    "BossMod.WHMConfig": {
+      "FullRotation": true,
+      "SwiftFreeRaise": true,
+      "MouseoverFriendly": true,
+      "SmartCure3Target": true,
+      "NeverOvercapBloodLilies": false
+    },
+    "BossMod.BossModuleConfig": {
+      "ArenaScale": 1.0,
+      "Enable": true,
+      "Lock": false,
+      "RotateArena": true,
+      "ShowBorder": true,
+      "ShowBorderRisk": true,
+      "ShowCardinals": false,
+      "ShowWaymarks": false,
+      "ShowMechanicTimers": true,
+      "ShowGlobalHints": true,
+      "ShowPlayerHints": true,
+      "TrishaMode": false,
+      "OpaqueArenaBackground": false,
+      "ShowWorldArrows": false,
+      "ShowDemo": false,
+      "EnableTimerWindow": false,
+      "ShowIrrelevantPlayers": false
+    },
+    "BossMod.GeneralConfig": {
+      "DumpWorldStateEvents": false,
+      "DumpServerPackets": false,
+      "DumpClientPackets": false
+    },
+    "BossMod.PartyRolesConfig": {
+      "Assignments": {}
+    },
+    "BossMod.Stormblood.Ultimate.UWU.UWUConfig": {
+      "P3GaolPriorities": {
+        "Assignments": [
+          0,
+          2,
+          5,
+          7,
+          1,
+          3,
+          4,
+          6
+        ]
+      },
+      "CooldownPlans": {}
+    },
+    "BossMod.Shadowbringers.Ultimate.TEA.TEAConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.RealmReborn.Raid.T02MultiADS.T02ADSConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.RealmReborn.Raid.T01Caduceus.T01CaduceusConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.RealmReborn.Extreme.Ex3Titan.Ex3TitanConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Ultimate.DSW2.DSW2Config": {
+      "P2SanctityGroups": {
+        "Assignments": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "P2SanctityRelative": false,
+      "P2SanctitySwapRole": "None",
+      "P2Sanctity2Pairs": {
+        "Assignments": [
+          0,
+          2,
+          1,
+          3,
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      "P2Sanctity2PreferEWPrey": false,
+      "P2Sanctity2SwapBothNE": false,
+      "P2Sanctity2NonPreyTowerCW": false,
+      "P3DarkdragonDiveCounterGroups": {
+        "Assignments": [
+          0,
+          2,
+          5,
+          7,
+          1,
+          3,
+          4,
+          6
+        ]
+      },
+      "P3DarkdragonDiveCounterPreferCCWFlex": false,
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Ultimate.DSW1.DSW1Config": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P8S2.P8S2Config": {
+      "LimitlessDesolationTHRight": false,
+      "HC1LongGoS": true,
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P8S1Hephaistos.P8S1Config": {
+      "Snake1Assignments": {
+        "Assignments": [
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "Snake2Assignments": {
+        "Assignments": [
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "Snake2CardinalPriorities": true,
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P7SAgdistis.P7SConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P6SHegemone.P6SConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P5SProtoCarbuncle.P5SConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P4S2Hesperos.P4S2Config": {
+      "Act4DarkSoakCCW": false,
+      "Act4WaterBreakCCW": false,
+      "CurtainCallDDFirst": false,
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P4S1Hesperos.P4S1Config": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P3SPhoinix.P3SConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P2SHippokampos.P2SConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Savage.P1SErichthonios.P1SConfig": {
+      "IntemperanceAsymmetricalSwapCorner": "NW",
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Extreme.Ex3Endsigner.Ex3EndsingerConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Extreme.Ex2Hydaelyn.Ex2HydaelynConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.Endwalker.Extreme.Ex1Zodiark.Ex1ZodiarkConfig": {
+      "CooldownPlans": {}
+    },
+    "BossMod.AI.AIConfig": {
+      "Enabled": true,
+      "BroadcastToSlaves": false
+    }
+  }
+}

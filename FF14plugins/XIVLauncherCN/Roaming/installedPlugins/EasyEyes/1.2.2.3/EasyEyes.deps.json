@@ -1,0 +1,61 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "EasyEyes/1.0.0": {
+        "dependencies": {
+          "DalamudPackager": "2.1.7",
+          "Penumbra.String": "1.0.3",
+          "mgholam.fastCSV": "2.0.9"
+        },
+        "runtime": {
+          "EasyEyes.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.7": {},
+      "mgholam.fastCSV/2.0.9": {
+        "runtime": {
+          "lib/netstandard2.0/fastCSV.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.9.0"
+          }
+        }
+      },
+      "Penumbra.String/1.0.3": {
+        "runtime": {
+          "Penumbra.String.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasyEyes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jnZ/sdInyn07ycuWI+pPOtP/xE3v+c4+jYJfDt36FWnBF9NKqkpzfviJtPl/jGLgbaCmFIXu+Yid0N8GvdKefg==",
+      "path": "dalamudpackager/2.1.7",
+      "hashPath": "dalamudpackager.2.1.7.nupkg.sha512"
+    },
+    "mgholam.fastCSV/2.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AOFqanoVebasDk/X1qm7X9/q/UwTz6/fpNFfqsEh6K1euTV9CxknPIhlLpo6CHlhiyMUs1/vv+g+KE8C8VYGcg==",
+      "path": "mgholam.fastcsv/2.0.9",
+      "hashPath": "mgholam.fastcsv.2.0.9.nupkg.sha512"
+    },
+    "Penumbra.String/1.0.3": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

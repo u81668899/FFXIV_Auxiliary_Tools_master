@@ -1,0 +1,2131 @@
+{
+  "CharacterData": {
+    "Name": "十六五夜",
+    "LocalContentID": 19014409516066930,
+    "World": "摩杜纳"
+  },
+  "HideDisabledModulesInSelectWindow": false,
+  "TodoOverlay": {
+    "ShowDailyTasks": {
+      "Value": true
+    },
+    "ShowWeeklyTasks": {
+      "Value": true
+    },
+    "HideWhenAllTasksComplete": {
+      "Value": true
+    },
+    "HideCompletedTasks": {
+      "Value": true
+    },
+    "HideUnavailableTasks": {
+      "Value": true
+    },
+    "ShowCategoryAsComplete": {
+      "Value": false
+    },
+    "HideWhileInDuty": {
+      "Value": true
+    },
+    "LockWindowPosition": {
+      "Value": false
+    },
+    "Opacity": {
+      "Value": 1.0
+    },
+    "AnchorCorner": {
+      "Value": 0
+    },
+    "AutoResize": {
+      "Value": true
+    },
+    "Enabled": {
+      "Value": false
+    },
+    "TaskColors": {
+      "HeaderColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "IncompleteColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "CompleteColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "UnavailableColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 0.64705884,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      }
+    }
+  },
+  "TimersOverlay": {
+    "Enabled": {
+      "Value": false
+    },
+    "HideWhileInDuty": {
+      "Value": true
+    },
+    "LockWindowPosition": {
+      "Value": false
+    },
+    "AutoResize": {
+      "Value": true
+    },
+    "HideCompleted": {
+      "Value": false
+    },
+    "Opacity": {
+      "Value": 1.0
+    },
+    "Ordering": {
+      "Value": 0
+    }
+  },
+  "BeastTribe": {
+    "NotificationThreshold": {
+      "Value": 12
+    },
+    "ComparisonMode": {
+      "Value": 0
+    },
+    "NextReset": "2023-05-09T15:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "CustomDelivery": {
+    "NotificationThreshold": {
+      "Value": 12
+    },
+    "ComparisonMode": {
+      "Value": 0
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "DomanEnclave": {
+    "DonatedThisWeek": 0,
+    "WeeklyAllowance": 40000,
+    "EnableClickableLink": {
+      "Value": false
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "DutyRoulette": {
+    "EnableClickableLink": {
+      "Value": false
+    },
+    "HideExpertWhenCapped": {
+      "Value": false
+    },
+    "CompleteWhenCapped": {
+      "Value": false
+    },
+    "OverlayEnabled": {
+      "Value": true
+    },
+    "CompleteColor": {
+      "Value": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0,
+        "W": 1.0
+      }
+    },
+    "IncompleteColor": {
+      "Value": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "W": 1.0
+      }
+    },
+    "OverrideColor": {
+      "Value": {
+        "X": 1.0,
+        "Y": 0.64705884,
+        "Z": 0.0,
+        "W": 1.0
+      }
+    },
+    "TrackedRoulettes": [
+      {
+        "Roulette": 5,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 8,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 2,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 1,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 6,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 3,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 4,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 15,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 17,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 7,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "Roulette": 9,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      }
+    ],
+    "NextReset": "2023-05-09T15:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "FashionReport": {
+    "AllowancesRemaining": 4,
+    "HighestWeeklyScore": 0,
+    "Mode": {
+      "Value": 0
+    },
+    "EnableClickableLink": {
+      "Value": false
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "HuntMarksDaily": {
+    "TrackedHunts": [
+      {
+        "HuntType": 0,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 1,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 2,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 3,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 6,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 7,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 8,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 10,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 11,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 12,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 14,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 15,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 16,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      }
+    ],
+    "NextReset": "2023-05-09T15:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "HuntMarksWeekly": {
+    "TrackedHunts": [
+      {
+        "HuntType": 4,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 5,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 9,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 1
+      },
+      {
+        "HuntType": 13,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      },
+      {
+        "HuntType": 17,
+        "Tracked": {
+          "Value": false
+        },
+        "State": 0
+      }
+    ],
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "JumboCactpot": {
+    "Tickets": [],
+    "EnableClickableLink": {
+      "Value": false
+    },
+    "NextReset": "2023-05-13T13:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "Levequest": {
+    "NotificationThreshold": {
+      "Value": 95
+    },
+    "ComparisonMode": {
+      "Value": 0
+    },
+    "NextReset": "2023-05-09T12:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "MiniCactpot": {
+    "TicketsRemaining": 3,
+    "EnableClickableLink": {
+      "Value": false
+    },
+    "NextReset": "2023-05-09T15:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "TreasureMap": {
+    "LastMapGathered": "2022-10-26T01:13:00Z",
+    "NextReset": "2023-05-09T15:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "WondrousTails": {
+    "InstanceNotifications": {
+      "Value": false
+    },
+    "EnableClickableLink": {
+      "Value": true
+    },
+    "UnclaimedBookWarning": {
+      "Value": true
+    },
+    "OverlayEnabled": {
+      "Value": true
+    },
+    "ResendOnCompletion": {
+      "Value": false
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": true
+    },
+    "NotifyOnLogin": {
+      "Value": false
+    },
+    "NotifyOnZoneChange": {
+      "Value": false
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "ChallengeLog": {
+    "Commendations": 0,
+    "RouletteDungeons": 0,
+    "DungeonMaster": 1,
+    "CommendationWarning": {
+      "Value": true
+    },
+    "RouletteDungeonWarning": {
+      "Value": true
+    },
+    "DungeonWarning": {
+      "Value": true
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "RaidsNormal": {
+    "TrackedRaids": [
+      {
+        "Duty": {
+          "TerritoryType": 1087,
+          "ContentFinderCondition": 883,
+          "Name": "万魔殿 炼净之狱4"
+        },
+        "Tracked": {
+          "Value": false
+        },
+        "NumItems": {
+          "Value": 1
+        },
+        "CurrentDropCount": 0
+      },
+      {
+        "Duty": {
+          "TerritoryType": 1085,
+          "ContentFinderCondition": 876,
+          "Name": "万魔殿 炼净之狱3"
+        },
+        "Tracked": {
+          "Value": false
+        },
+        "NumItems": {
+          "Value": 1
+        },
+        "CurrentDropCount": 0
+      },
+      {
+        "Duty": {
+          "TerritoryType": 1083,
+          "ContentFinderCondition": 880,
+          "Name": "万魔殿 炼净之狱2"
+        },
+        "Tracked": {
+          "Value": false
+        },
+        "NumItems": {
+          "Value": 1
+        },
+        "CurrentDropCount": 0
+      },
+      {
+        "Duty": {
+          "TerritoryType": 1081,
+          "ContentFinderCondition": 872,
+          "Name": "万魔殿 炼净之狱1"
+        },
+        "Tracked": {
+          "Value": false
+        },
+        "NumItems": {
+          "Value": 1
+        },
+        "CurrentDropCount": 0
+      }
+    ],
+    "EnableClickableLink": {
+      "Value": true
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "RaidsAlliance": {
+    "TrackedRaids": [
+      {
+        "Duty": {
+          "TerritoryType": 1054,
+          "ContentFinderCondition": 866,
+          "Name": "灿烂神域阿格莱亚"
+        },
+        "Tracked": {
+          "Value": false
+        },
+        "NumItems": {
+          "Value": 1
+        },
+        "CurrentDropCount": 0
+      }
+    ],
+    "EnableClickableLink": {
+      "Value": true
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "FauxHollows": {
+    "EnableClickableLink": {
+      "Value": true
+    },
+    "IncludeRetelling": {
+      "Value": true
+    },
+    "FauxHollowsCompleted": 0,
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "GrandCompanySupply": {
+    "TrackedSupply": [
+      {
+        "ClassJobID": 8,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 9,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 10,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 11,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 12,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 13,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 14,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 15,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      }
+    ],
+    "NextReset": "2023-05-09T20:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "GrandCompanyProvision": {
+    "TrackedProvision": [
+      {
+        "ClassJobID": 16,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 17,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "ClassJobID": 18,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      }
+    ],
+    "NextReset": "2023-05-09T20:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "MaskedCarnivale": {
+    "TrackedTasks": [
+      {
+        "Task": 0,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "Task": 1,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      },
+      {
+        "Task": 2,
+        "Tracked": {
+          "Value": true
+        },
+        "State": false
+      }
+    ],
+    "EnableClickableLink": {
+      "Value": true
+    },
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "GrandCompanySquadron": {
+    "MissionCompleted": false,
+    "NextReset": "2023-05-09T08:00:00Z",
+    "Enabled": {
+      "Value": false
+    },
+    "NotifyOnLogin": {
+      "Value": true
+    },
+    "NotifyOnZoneChange": {
+      "Value": true
+    },
+    "TodoTaskEnabled": {
+      "Value": true
+    },
+    "TodoUseLongLabel": {
+      "Value": false
+    },
+    "TimerTaskEnabled": {
+      "Value": false
+    },
+    "TimerSettings": {
+      "TimerStyle": {
+        "Value": 31
+      },
+      "BackgroundColor": {
+        "Value": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      },
+      "ForegroundColor": {
+        "Value": {
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        }
+      },
+      "TextColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "TimeColor": {
+        "Value": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        }
+      },
+      "Size": {
+        "Value": 200
+      },
+      "StretchToFit": {
+        "Value": true
+      },
+      "UseCustomName": {
+        "Value": false
+      },
+      "CustomName": {
+        "Value": ""
+      },
+      "HideLabel": {
+        "Value": false
+      },
+      "HideTime": {
+        "Value": false
+      }
+    }
+  },
+  "Version": 2
+}

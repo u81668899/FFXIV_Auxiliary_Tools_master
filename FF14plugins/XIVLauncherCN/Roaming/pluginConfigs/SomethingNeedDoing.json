@@ -1,0 +1,406 @@
+{
+  "$type": "SomethingNeedDoing.SomethingNeedDoingConfiguration, SomethingNeedDoing",
+  "Version": 1,
+  "RootFolder": {
+    "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+    "Name": "/",
+    "Children": [
+      {
+        "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+        "Name": "练级",
+        "Children": [
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "80-82",
+            "Contents": "/ac 闲静 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 长期俭约 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 崇敬 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料制作 <wait.2.5>",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "83-89",
+            "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"俭约\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"模范制作\" <wait.2.5>",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "练级560",
+            "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"模范制作\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "召唤一键宏",
+            "Contents": "/ac 以太蓄能\n/ac 以太蓄能\n/ac 以太蓄能\n/ac 星极超流\n/ac 宝石耀\n/ac 宝石耀\n/ac 风神召唤\n/ac 土神召唤\n/ac 火神召唤\n/ac 毁灭\n/ac 能量吸收\n/ac 龙神迸发\n/ac 溃烂爆发\n/ac 醒梦\n/loop <wait.0.13>",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "召唤一键宏aoe",
+            "Contents": "/ac 以太蓄能\n/ac 以太蓄能\n/ac 以太蓄能\n/ac 星极超流\n/ac 宝石辉\n/ac 宝石辉\n/ac 风神召唤\n/ac 土神召唤\n/ac 火神召唤\n/ac 迸裂\n/ac 能量抽取\n/ac 龙神迸发\n/ac 痛苦核爆\n/ac 醒梦\n/loop <wait.0.13>",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "黑魔一键循环",
+            "Contents": "/ac 冰封 <wait.2.45>\n/ac 火炎 <wait.1.00>\n/ac 激情咏唱 <wait.1.45>\n/ac 冰澈 <wait.2.55>\n/ac 暴雷 <wait.2.45>\n/ac 爆炎 <wait.2.45>\n/ac 炽炎 <wait.2.85>\n/ac 炽炎 <wait.2.85>\n/ac 炽炎 <wait.2.85>\n/ac 炽炎 <wait.2.85>\n/ac 火炎 <wait.2.55>\n/ac 炽炎 <wait.2.85>\n/ac 炽炎 <wait.2.85>\n/ac 异言 <wait.2.55>\n/ac 绝望 <wait.3.03>\n/statusoff 火苗\n/loop",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "战士一键宏aoe",
+            "Contents": "/ac 地毁人亡\n/ac 超压斧\n/ac 秘银暴风 <wait.1.35>\n/ac 战嚎\n/ac 原初的解放\n/ac 原初的直觉 <wait.1.00>\n/loop",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          }
+        ]
+      },
+      {
+        "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+        "Name": "P8S减伤",
+        "Contents": "/p ----------MT血仇---------- <se.5>\n/p 0:07 开场永恒之火\n/p 1:19 冰/火第二次+一运前永恒之火\n/p 2:46 一运后永恒之火\n/p 4:21 分摊分散\n/p 5:23 二运概念支配\n/p 6:57 软狂暴第一次永恒之苦\n/p 8:00 软狂暴第三次永恒之苦\n/p ----------ST血仇----------\n/p 0:55 分摊分散\n/p 1:55 一运概念支配\n/p 3:28 万象后永恒之火\n/p 4:56 二运前永恒之火\n/p 7:26 软狂暴第二次永恒之苦\n/p ----------MT90s减伤/D4昏乱---------- <se.5>\n/p 0:07 开场永恒之火\n/p 1:50 一运概念支配\n/p 3:28 万象后永恒之火\n/p 5:23 二运概念支配\n/p 6:57 软狂暴第三/一次永恒之苦\n/p (能压掉就放第一次)\n/p ----------ST90s减伤----------\n/p 1:14 冰/火+一运前永恒之火\n/p 2:46 一运后永恒之火\n/p 4:40 第二次冰火\n/p 7:26 软狂暴第二次永恒之苦\n/p ----------远敏减伤---------- <se.5>\n/p 1:14 冰/火+一运前永恒之火\n/p 2:46 一运后永恒之火\n/p 4:56 二运前永恒之火\n/p 7:32 软狂暴第二次永恒之苦\n/p 第二次支配者的一击\n/p ----------D1牵制---------- <se.5>\n/p 0:07 开场永恒之火\n/p 1:50 一运概念支配\n/p 3:28 万象后永恒之火\n/p 5:23 二运概念支配\n/p 7:08 第一次支配者的一击\n/p ----------D2牵制/病毒----------\n/p 1:19 冰/火第二次+一运前永恒之火\n/p 2:50 一运后永恒之火\n/p 4:40 第二次冰火\n/p 7:37 第二次支配者的一击",
+        "CraftingLoop": false,
+        "CraftLoopCount": 0,
+        "IsLua": false
+      },
+      {
+        "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+        "Name": "青魔",
+        "Children": [
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "水力",
+            "Contents": "/青魔法技能 水力吸引 <wait.2.5>\n/loop",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          },
+          {
+            "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+            "Name": "陆行鸟",
+            "Contents": "/青魔法技能 陆行鸟陨石 <wait.2.5>\n/loop",
+            "CraftingLoop": false,
+            "CraftLoopCount": 0,
+            "IsLua": false
+          }
+        ]
+      },
+      {
+        "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+        "Name": "制作",
+        "Children": [
+          {
+            "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+            "Name": "3664 3784",
+            "Children": [
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 610半成品 622",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精修\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 610成品 655",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"上级加工\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"模范制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 610成品 538",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 83幻水宏",
+                "Contents": "/ac \"掌握\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 620半成品 628",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"观察\" <wait.2.5>\n/ac \"注视制作\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 620成品 618",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"观察\" <wait.2.5>\n/ac \"注视加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"观察\" <wait.2.5>\n/ac \"注视制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3664 3784 620成品 668",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"观察\" <wait.2.5>\n/ac \"注视加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"工匠的神技\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"观察\" <wait.2.5>\n/ac \"注视制作\" <wait.2.5>\n\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "3981 3825 620成品 657",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"最终确认\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"改革\" <wait.1.5>\n/ac \"观察\" <wait.2.5>\n/ac \"注视加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"工匠的神技\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"制作\" <wait.2.5>\n\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "巨匠药酒",
+                "Contents": "/ac 坚信 <wait.2.7>\n/ac 长期俭约 <wait.1.7>\n/ac 坯料制作 <wait.2.7>\n/ac 坯料加工 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 坯料加工 <wait.2.7>\n/ac 坯料加工 <wait.2.7>\n/ac 坯料加工 <wait.2.7>\n/ac 比尔格的祝福 <wait.2.7>\n/ac 坯料制作 <wait.2.7>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "坚信憧憬制作制作",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 长期俭约 <wait.1.5>\n/ac 崇敬 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料制作 <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "临时制作",
+                "Contents": "/ac 坚信 <wait.2.7>\n/ac 坯料制作",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "名匠药酒",
+                "Contents": "/ac 闲静 <wait.2.7>\n/ac 长期俭约 <wait.1.7>\n/ac 改革 <wait.1.7>\n/ac 坯料加工 <wait.2.7>\n/ac 坯料加工 <wait.2.7>\n/ac 坯料加工 <wait.2.7>\n/ac 精密制作 <wait.2.7>\n/ac 比尔格的祝福 <wait.2.7>\n/ac 崇敬 <wait.1.7>\n/ac 坯料制作 <wait.2.7>\n/ac 坯料制作 <wait.2.7>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 999,
+                "IsLua": false
+              }
+            ]
+          },
+          {
+            "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+            "Name": "590",
+            "Children": [
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 590 成品",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 崇敬 <wait.1.5>\n/ac 掌握 <wait.1.5>\n/ac 长期俭约 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 加工 <wait.2.5>\n/ac 中级加工 <wait.2.5>\n/ac 上级加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 加工 <wait.2.5>\n/ac 中级加工 <wait.2.5>\n/ac 上级加工 <wait.2.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 模范制作 <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 580 半成品",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"上级加工\" <wait.2.5>\n/ac \"精修\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "88 半成品",
+                "Contents": "/ac \"掌握\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 580 成品",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 崇敬 <wait.1.5>\n/ac 长期俭约 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 模范制作 <wait.2.5>\n/ac 精密制作 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 俭约加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 制作 <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90收藏品",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 长期俭约 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 精密制作 <wait.2.5>\n/ac 精密制作 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 模范制作 <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "辉煌12",
+                "Contents": "/ac 坚信 <wait.2.7>\n/ac 专心致志 <wait.2.7>\n/ac 掌握 <wait.1.7>\n/ac 崇敬 <wait.1.7>\n/ac 集中制作 <wait.2.7>\n/ac 最终确认 <wait.1.7>\n/ac 俭约制作 <wait.2.7>\n/ac 最终确认 <wait.1.7>\n/ac 模范制作 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 掌握 <wait.1.7>\n/ac 改革 <wait.1.7>\n/ac 俭约加工 <wait.2.7>\n/ac 加工 <wait.2.7>\n/ac 中级加工 <wait.2.7>\n/ac 上级加工 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 加工 <wait.2.7>\n/ac 中级加工 <wait.2.7>\n/ac 上级加工 <wait.2.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 阔步 <wait.1.7>\n/ac 比尔格的祝福 <wait.2.7>\n/ac 制作 <wait.2.7>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "辉煌3",
+                "Contents": "/ac 坚信 <wait.2.7>\n/ac 掌握 <wait.1.7>\n/ac 专心致志 <wait.2.7>\n/ac 崇敬 <wait.1.7>\n/ac 集中制作 <wait.2.7>\n/ac 最终确认 <wait.1.7>\n/ac 俭约制作 <wait.2.7>\n/ac 最终确认 <wait.1.7>\n/ac 俭约制作 <wait.2.7>\n/ac 最终确认 <wait.1.7>\n/ac 制作 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 俭约加工 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 掌握 <wait.1.7>\n/ac 改革 <wait.1.7>\n/ac 俭约加工 <wait.2.7>\n/ac 加工 <wait.2.7>\n/ac 中级加工 <wait.2.7>\n/ac 上级加工 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 加工 <wait.2.7>\n/ac 中级加工 <wait.2.7>\n/ac 上级加工 <wait.2.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 阔步 <wait.1.7>\n/ac 比尔格的祝福 <wait.2.7>\n/ac 制作 <wait.2.7>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              }
+            ]
+          },
+          {
+            "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+            "Name": "3232 3307",
+            "Children": [
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 2X 半成品",
+                "Contents": "/ac 坚信 <wait.2.7>\n/ac 崇敬 <wait.1.7>\n/ac 坯料制作 <wait.2.7>\n/ac 模范制作",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 2X 580HQ 3180 3311 665",
+                "Contents": "/ac 坚信 <wait.2.7>\n/ac 俭约加工 <wait.2.7>\n/ac 掌握 <wait.1.7>\n/ac 崇敬 <wait.1.7>\n/ac 长期俭约 <wait.1.7>\n/ac 坯料制作 <wait.2.7>\n/ac 坯料制作 <wait.2.7>\n/ac 精密制作 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 坯料加工 <wait.2.7>\n/ac 加工 <wait.2.7>\n/ac 中级加工 <wait.2.7>\n/ac 上级加工 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 加工 <wait.2.7>\n/ac 中级加工 <wait.2.7>\n/ac 上级加工 <wait.2.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 改革 <wait.1.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 工匠的神技 <wait.2.7>\n/ac 阔步 <wait.1.7>\n/ac 比尔格的祝福 <wait.2.7>\n/ac 制作",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 590 半成品 开荒",
+                "Contents": "/ac \"坚信\" <wait.2.7>\n/ac \"掌握\" <wait.1.7>\n/ac \"崇敬\" <wait.1.7>\n/ac \"坯料制作\" <wait.2.7>\n/ac \"精密制作\" <wait.2.7>\n/ac \"改革\" <wait.1.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"掌握\" <wait.1.7>\n/ac \"改革\" <wait.1.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"俭约加工\" <wait.2.7>\n/ac \"改革\" <wait.1.7>\n/ac \"坯料加工\" <wait.2.7>\n/ac \"阔步\" <wait.1.7>\n/ac \"比尔格的祝福\" <wait.2.7>\n/ac \"模范制作\" <wait.2.7>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "90 590 成品 开荒",
+                "Contents": "/ac \"坚信\" <wait.2.7>\n/ac \"掌握\" <wait.1.7>\n/ac \"崇敬\" <wait.1.7>\n/ac \"长期俭约\" <wait.1.7>\n/ac \"坯料制作\" <wait.2.7>\n/ac \"坯料制作\" <wait.2.7>\n/ac \"改革\" <wait.1.7>\n/ac \"坯料加工\" <wait.2.7>\n/ac \"坯料加工\" <wait.2.7>\n/ac \"坯料加工\" <wait.2.7>\n/ac \"坯料加工\" <wait.2.7>\n/ac \"阔步\" <wait.1.7>\n/ac \"改革\" <wait.1.7>\n/ac \"坯料加工\" <wait.2.7>\n/ac \"工匠的神技\" <wait.2.7>\n/ac \"阔步\" <wait.1.7>\n/ac \"比尔格的祝福\" <wait.2.7>\n/ac \"模范制作\" <wait.2.7>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              }
+            ]
+          },
+          {
+            "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
+            "Name": "4237 3831 596",
+            "Children": [
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 620成品 702",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 崇敬 <wait.1.5>\n/ac 俭约 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料制作 <wait.2.5>\n/ac 模范制作 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 俭约加工 <wait.2.5>\n/ac 加工 <wait.2.5>\n/ac 中级加工 <wait.2.5>\n/ac 上级加工 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 俭约加工 <wait.2.5>\n/ac 加工 <wait.2.5>\n/ac 中级加工 <wait.2.5>\n/ac 上级加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 模范制作 <wait.2.5>\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 620半成品 636",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精修\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"上级加工\" <wait.2.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 610成品 672",
+                "Contents": "/ac \"坚信\" <wait.2.5>\n/ac \"掌握\" <wait.1.5>\n/ac \"俭约加工\" <wait.2.5>\n/ac \"崇敬\" <wait.1.5>\n/ac \"长期俭约\" <wait.1.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"坯料制作\" <wait.2.5>\n/ac \"精密制作\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"坯料加工\" <wait.2.5>\n/ac \"加工\" <wait.2.5>\n/ac \"中级加工\" <wait.2.5>\n/ac \"上级加工\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"加工\" <wait.2.5>\n/ac \"中级加工\" <wait.2.5>\n/ac \"上级加工\" <wait.2.5>\n/ac \"工匠的神技\" <wait.2.5>\n/ac \"改革\" <wait.1.5>\n/ac \"工匠的神技\" <wait.2.5>\n/ac \"工匠的神技\" <wait.2.5>\n/ac \"阔步\" <wait.1.5>\n/ac \"比尔格的祝福\" <wait.2.5>\n/ac \"模范制作\" <wait.2.5>\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 88成品",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 长期俭约 <wait.1.5>\n/ac 模范制作 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 坯料制作 <wait.2.5>\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 专家 翼龙 高山茶 680",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 崇敬 <wait.1.5>\n/ac 掌握 <wait.1.5>\n/ac 长期俭约 <wait.1.5>\n/ac 专心致志 <wait.2.5>\n/ac 集中制作 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 工匠的神技 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 坯料制作 <wait.2.5>\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "临时搓",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 崇敬 <wait.1.5>\n/ac 俭约 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料制作 <wait.2.5>\n/ac 模范制作 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 加工 <wait.2.5>\n/ac 中级加工 <wait.2.5>\n/ac 上级加工 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 加工 <wait.2.5>\n/ac 中级加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 阔步 <wait.1.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 制作 <wait.2.5>\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 89成品",
+                "Contents": "/ac 闲静 <wait.2.5>\n/ac 长期俭约 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 崇敬 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料制作 <wait.2.5>\n",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 90成品",
+                "Contents": "/ac 坚信 <wait.2.5>\n/ac 长期俭约 <wait.1.5>\n/ac 坯料制作 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 模范制作 <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              },
+              {
+                "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+                "Name": "4237 3831 83半成品",
+                "Contents": "/ac 精密制作 <wait.2.5>\n/ac 掌握 <wait.1.5>\n/ac 长期俭约 <wait.1.5>\n/ac 改革 <wait.1.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 坯料加工 <wait.2.5>\n/ac 比尔格的祝福 <wait.2.5>\n/ac 坯料制作 <wait.2.5>",
+                "CraftingLoop": false,
+                "CraftLoopCount": 0,
+                "IsLua": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "CraftSkip": true,
+  "SmartWait": true,
+  "QualitySkip": true,
+  "LoopTotal": false,
+  "LoopEcho": false,
+  "DisableMonospaced": false,
+  "UseCraftLoopTemplate": false,
+  "CraftLoopTemplate": "/craft {{count}}\n/waitaddon \"RecipeNote\" <maxwait.5>/click \"synthesize\"/waitaddon \"Synthesis\" <maxwait.5>{{macro}}/loop",
+  "CraftLoopFromRecipeNote": true,
+  "CraftLoopMaxWait": 5,
+  "CraftLoopEcho": false,
+  "MaxTimeoutRetries": 0,
+  "NoisyErrors": false,
+  "BeepFrequency": 900,
+  "BeepDuration": 250,
+  "BeepCount": 3,
+  "ChatType": 57,
+  "ErrorChatType": 2
+}

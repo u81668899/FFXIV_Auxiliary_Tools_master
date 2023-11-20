@@ -1,0 +1,116 @@
+{
+  "$type": "ActionTimeline.Settings, ActionTimeline",
+  "ShowTimeline": true,
+  "TimelineLocked": false,
+  "OutOfCombatClearTime": 10,
+  "ShowTimelineOnlyInDuty": false,
+  "ShowTimelineOnlyInCombat": false,
+  "TimelineTime": 5,
+  "TimelineLockedBackgroundColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.5
+  },
+  "TimelineUnlockedBackgroundColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.75
+  },
+  "TimelineIconSize": 40,
+  "TimelineOffGCDIconSize": 30,
+  "TimelineOffGCDOffset": -5,
+  "TimelineShowAutoAttacks": false,
+  "TimelineAutoAttackSize": 20,
+  "TimelineAutoAttackOffset": 10,
+  "CastInProgressColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.5,
+    "Y": 0.5,
+    "Z": 0.5,
+    "W": 1.0
+  },
+  "CastFinishedColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.2,
+    "Y": 0.8,
+    "Z": 0.2,
+    "W": 1.0
+  },
+  "CastCanceledColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.8,
+    "Y": 0.2,
+    "Z": 0.2,
+    "W": 1.0
+  },
+  "ShowGrid": true,
+  "ShowGridCenterLine": false,
+  "GridDivideBySeconds": true,
+  "GridShowSecondsText": true,
+  "GridSubdivideSeconds": true,
+  "GridSubdivisionCount": 2,
+  "GridLineWidth": 1,
+  "GridSubdivisionLineWidth": 1,
+  "GridLineColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.3,
+    "Y": 0.3,
+    "Z": 0.3,
+    "W": 1.0
+  },
+  "GridSubdivisionLineColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.3,
+    "Y": 0.3,
+    "Z": 0.3,
+    "W": 0.2
+  },
+  "ShowGCDClipping": true,
+  "GCDClippingThreshold": 0.1,
+  "GCDClippingCastsThreshold": 0.6,
+  "GCDClippingMaxTime": 5,
+  "GCDClippingColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.2,
+    "Z": 0.2,
+    "W": 0.3
+  },
+  "ShowRotation": true,
+  "RotationLocked": false,
+  "ShowRotationOnlyInDuty": false,
+  "ShowRotationOnlyInCombat": false,
+  "RotationGCDSpacing": 20,
+  "RotationOffGCDSpacing": 5,
+  "RotationSeparatorEnabled": true,
+  "RotationSeparatorTime": 10,
+  "RotationSeparatorWidth": 3,
+  "RotationSeparatorColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.3,
+    "Y": 0.3,
+    "Z": 0.3,
+    "W": 1.0
+  },
+  "RotationLockedBackgroundColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.5
+  },
+  "RotationUnlockedBackgroundColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.75
+  },
+  "RotationIconSize": 40,
+  "RotationOffGCDIconSize": 30,
+  "RotationOffGCDOffset": -5
+}

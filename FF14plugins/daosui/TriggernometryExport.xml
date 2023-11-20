@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilter="274575654912" Id="d36a4abb-93ea-4aa9-89d5-8a90cfda5093" Name="导随记录" Enabled="true">
+    <Folders>
+      <Folder Id="d9ec3329-aa0f-48d7-aae1-556fd1dbb77d" Name="setting" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="9查询导随数据" Id="79ef2b6e-dc68-4d82-89ab-13c255adebfc" RegularExpression="^.{14} ChatLog 00:0038::查询导随数据$">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="当前数据${var:battlenum}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="导随成功+1(用不到)" Id="4cc138f0-9208-4736-bace-724b9cd9ffe1" RegularExpression="导随成功+1">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="+1成功，当前数据${var:battlenum}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="导随上把备注" Id="a4e47531-6af2-483c-9168-81a173086632" RegularExpression="^.{14} ChatLog 00:0038::导随上把备注\s*(?&lt;detail&gt;.*)$">
+            <Actions>
+              <Action OrderNumber="1" NamedCallbackName="editCsv" NamedCallbackParam="${var:file},last,8,${detail}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="8设置导随数据(初次使用设置)" Id="c7257ff0-a3e8-4dba-8968-7601f1e7e7b5" RegularExpression="^.{14} ChatLog 00:0038::设置导随数据\s*(?&lt;battlenum&gt;\d*)$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${battlenum}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="设置成功，当前数据${var:battlenum}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="1读取记录" Id="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="PopLast" ListVariableName="logs" ListVariableTarget="lastLine" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${var:lastLine}}):${var:lastLine}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" UseTTSTextExpression="导随数据为空，请手工设置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" UseTTSTextExpression="导随数据读取成功，当前数据${var:battlenum}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:battlenum}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="PopLast" ListVariableName="logs" ListVariableTarget="lastLine" UseTTSTextExpression="导随数据读取成功，当前数据${var:battlenum}" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${var:lastLine}}):${var:lastLine}}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:battlenum}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="0加载文件（24小时执行一次）" Id="7f55bf3c-c3a6-4ffb-8b2b-cd8854936510" RegularExpression="^.*" PeriodRefire="Deny" RefirePeriodExpression="86400000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="55" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="10000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="file" VariableExpression="C:\Users\zhao.000\Desktop\导随记录.csv" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="file" VariableExpression="${_env[_DEFAULTCSVPATH_]}\导随记录.csv" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" DiskFileOp="ReadIntoListVariable" DiskFileOpName="${var:file}" DiskFileOpVar="logs" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="导随失败-1(用不到)" Id="4dccb4b2-8417-4924-bed5-56380fe98877" RegularExpression="导随失败-1\s*(?&lt;detail&gt;.*)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="减一成功，当前数据${var:battlenum}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="editCsv" NamedCallbackParam="${var:file},last,1,-1,6,${detail}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Sequential="True" Name="2导随排到" Id="25274be5-8723-4994-a90d-dbaccf0e4963" RegularExpression="^.{14} ChatLog 00:0:Matcha#.*#chs-MatchAlert#{&quot;roulette&quot;:9,&quot;instance&quot;:0}$">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="导随排到了" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="中途" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Name="1开始拍本" Id="c1c96dd0-7a59-4d15-b713-83971cac6c0b" RegularExpression="^.{14} 00:0039:成功发送了参加申请。$">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="中途" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="3任务开始" Id="3f58fbbe-1e46-4fb6-90ea-3c2e814eb046" RegularExpression="^.{14} ChatLog 00:0839::“(?&lt;zone&gt;.*)”任务开始。$">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="无" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="battlename" VariableExpression="${zone}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" UseTTSTextExpression="${zone}开始" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="5任务结束" Id="775996f8-e6b5-46cb-b093-bac2fad4eb98" RegularExpression="^.{14} ChatLog 00:0839::“(?&lt;zone&gt;.*)”任务结束了。$|^.{14} ChatLog 00:0839::结束行会令并返回。$">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="end" VariableExpression="${_systemtime}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battletime" VariableExpression="round((${var:end}-${var:start})/60)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file},-1,${var:battlename},${var:battletime},${var:job},${var:isHalfJoin},_DATE(${var:start})(&quot;yyyy/MM/dd HH:mm:ss&quot;),_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" UseTTSTextExpression="导随失败了,用时${var:battletime}分钟" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetString" VariableName="battlename" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="4战斗胜利" Id="613d349d-5f56-43fc-a6da-1c2c7544ebab" RegularExpression="^.{14} Director 21:.{8}:(40000003|40000002)">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="end" VariableExpression="${_systemtime}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battletime" VariableExpression="round((${var:end}-${var:start})/60)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file},${var:battlenum},${var:battlename},${var:battletime},${var:job},${var:isHalfJoin},_DATE(${var:start})(&quot;yyyy/MM/dd HH:mm:ss&quot;),_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" UseTTSTextExpression="导随+1,用时${var:battletime}分钟" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetString" VariableName="battlename" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="3区域变更" Id="ed71289b-acac-4f72-847b-4ffa77e0cd3e" RegularExpression="^.{14} Territory 01:.*:(?&lt;zone&gt;.*)$">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Description="正常看动画的情况下，血亏堡动画城会有多次changed zone日志&#xD;&#xA;以第一次时间为准">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:battlename}" ExpressionTypeL="String" ExpressionR="${zone}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="battlename" VariableExpression="${zone}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Name="9取消任务" Id="76419e95-948f-4ff1-8e0a-d991e0626697" RegularExpression="^.{14} ChatLog 00:003C::参加申请已取消。$">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="aa抹茶功能测试，解限排18级溶洞本" Id="81aacd63-1f40-4c68-8a05-3978f408455b" RegularExpression="^.{14} ChatLog 00:0:Matcha#.*#chs-MatchAlert#{&quot;roulette&quot;:0,&quot;instance&quot;:4}$">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="抹茶功能正常" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>

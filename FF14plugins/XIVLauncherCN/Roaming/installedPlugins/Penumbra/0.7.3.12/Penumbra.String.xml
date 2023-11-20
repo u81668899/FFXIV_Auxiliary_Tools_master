@@ -1,0 +1,672 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penumbra.String</name>
+    </assembly>
+    <members>
+        <member name="T:Penumbra.String.ByteString">
+            <summary>
+            A wrapper around unsafe byte strings that can either be owned or allocated in unmanaged space.
+            </summary>
+            <remarks>
+            Unowned strings may change their value and thus become corrupt, so they should not be stored without cloning. <br/>
+            The string keeps track of whether it is owned or not, being pure ASCII, ASCII-lowercase, or null-terminated.<br/>
+            Owned strings are always null-terminated.<br/>
+            Any constructed string will compute its own CRC32-value (as long as the string itself is not changed).
+            </remarks>
+        </member>
+        <member name="P:Penumbra.String.ByteString.IsNullTerminated">
+            <summary> Returns whether the current string is known to be null-terminated. </summary>
+        </member>
+        <member name="P:Penumbra.String.ByteString.IsOwned">
+            <summary> Returns whether the current string is owned, i.e. allocated in unmanaged space. </summary>
+        </member>
+        <member name="P:Penumbra.String.ByteString.IsAscii">
+            <summary> Returns whether the current string consists purely of ASCII characters. </summary>
+            <remarks> This information is cached. </remarks>
+        </member>
+        <member name="P:Penumbra.String.ByteString.IsAsciiLowerCase">
+            <summary> Returns whether the current string contains only ASCII lower-case or non-ASCII characters. </summary>
+            <remarks> This information is cached. </remarks>
+        </member>
+        <member name="P:Penumbra.String.ByteString.Path">
+            <summary> Returns the pointer to the actual memory of the string. </summary>
+        </member>
+        <member name="P:Penumbra.String.ByteString.Crc32">
+            <summary> Returns the CRC32 value of the string. </summary>
+            <remarks> This value is computed on construction and stored. </remarks>
+        </member>
+        <member name="P:Penumbra.String.ByteString.Length">
+            <summary> Returns the length of the string. </summary>
+        </member>
+        <member name="P:Penumbra.String.ByteString.IsEmpty">
+            <summary> Returns whether the string is empty. </summary>
+        </member>
+        <member name="P:Penumbra.String.ByteString.Span">
+            <summary> Returns a ReadOnlySpan to the actual memory of the string using its length, without null-terminator. </summary>
+        </member>
+        <member name="P:Penumbra.String.ByteString.Item(System.Int32)">
+            <summary> Access a specific byte in the string by index. </summary>
+            <param name="idx">The index of the requested byte.</param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if <paramref name="idx"/> is less than 0 or larger than the string. </exception>
+        </member>
+        <member name="M:Penumbra.String.ByteString.GetEnumerator">
+            <returns>An iterator over all the bytes of the string.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc cref="M:Penumbra.String.ByteString.GetEnumerator"/>
+        </member>
+        <member name="M:Penumbra.String.ByteString.GetHashCode">
+            <returns>The CRC32 hash of the string.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Equals(Penumbra.String.ByteString)">
+            <param name="other">The string to compare with.</param>
+            <returns>Whether this string and <paramref name="other"/> are equal.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Equals(System.Object)">
+            <returns>Whether this string and the object <paramref name="obj"/> are equal. </returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.EqualsCi(Penumbra.String.ByteString)">
+            <param name="other">The string to compare with.</param>
+            <returns>Whether this string and <paramref name="other"/> are equal ignoring (ASCII) case.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.CompareTo(Penumbra.String.ByteString)">
+            <param name="other">The string to compare with.</param>
+            <returns>Whether this string is lexicographically smaller (less than 0), bigger (greater than 0) or equal (0) to <paramref name="other"/>.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.CompareToCi(Penumbra.String.ByteString)">
+            <param name="other">The string to compare with.</param>
+            <returns>Whether this string is lexicographically smaller (less than 0), bigger (greater than 0) or equal (0) to <paramref name="other"/> ignoring (ASCII) case.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.StartsWith(Penumbra.String.ByteString)">
+            <param name="other">The prefix to check for.</param>
+            <returns>Whether this string has <paramref name="other"/> as a prefix.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.EndsWith(Penumbra.String.ByteString)">
+            <param name="other">The suffix to check for.</param>
+            <returns>Whether this string has <paramref name="other"/> as a suffix.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.StartsWith(System.ReadOnlySpan{System.Byte})">
+            <inheritdoc cref="M:Penumbra.String.ByteString.StartsWith(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.ByteString.EndsWith(System.ReadOnlySpan{System.Byte})">
+            <inheritdoc cref="M:Penumbra.String.ByteString.StartsWith(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.ByteString.IndexOf(System.Byte,System.Int32)">
+            <summary>
+            Find the first occurrence of <paramref name="b"/> in this string.
+            </summary>
+            <param name="b">The needle.</param>
+            <param name="from">An optional starting index in this string.</param>
+            <returns>The index of the first occurrence of <paramref name="b"/> after <paramref name="from"/> or -1 if it is not found.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.LastIndexOf(System.Byte,System.Int32)">
+            <summary>
+            Find the last occurrence of <paramref name="b"/> in this string.
+            </summary>
+            <param name="b">The needle.</param>
+            <param name="to">An optional stopping index in this string.</param>
+            <returns>The index of the last occurrence of <paramref name="b"/> before <paramref name="to"/> or -1 if it is not found.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.op_Equality(Penumbra.String.ByteString,Penumbra.String.ByteString)">
+            <returns>Whether two strings are equal.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.op_Inequality(Penumbra.String.ByteString,Penumbra.String.ByteString)">
+            <returns>Whether two strings are different.</returns>
+        </member>
+        <member name="F:Penumbra.String.ByteString.MaxLength">
+            <summary> 67108863 </summary>
+            <returns> 67108863 </returns>
+        </member>
+        <member name="F:Penumbra.String.ByteString.Null">
+            <summary> Statically allocated null-terminator for empty strings to point to. </summary>
+        </member>
+        <member name="F:Penumbra.String.ByteString.Empty">
+            <summary> An empty string of length 0 that is null-terminated. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.#ctor">
+            <summary>
+            Create a new empty string.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.#ctor(System.Byte*)">
+            <summary> Create a temporary ByteString from a byte pointer. </summary>
+            <param name="path">A pointer to an existing string.</param>
+            <remarks> This computes CRC, checks for ASCII and AsciiLower and assumes Null-Termination. </remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.FromByteStringUnsafe(System.Byte*,System.Int32,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            Construct a temporary ByteString from a given byte string of known size. 
+            </summary>
+            <param name="path">A pointer to an existing string.</param>
+            <param name="length">The known length of the string.</param>
+            <param name="isNullTerminated">Whether the string is known to be null-terminated or not.</param>
+            <param name="isLower">Optionally, whether the string is known to only contain (ASCII) lower-case characters.</param>
+            <param name="isAscii">Optionally, whether the string is known to only contain ASCII characters.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">If length is larger than <inheritdoc cref="F:Penumbra.String.ByteString.MaxLength"/>.</exception>
+            <remarks>Always computes the CRC32 for the path.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.FromSpanUnsafe(System.ReadOnlySpan{System.Byte},System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <inheritdoc cref="M:Penumbra.String.ByteString.FromByteStringUnsafe(System.Byte*,System.Int32,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean})"/>
+        </member>
+        <member name="M:Penumbra.String.ByteString.FromString(System.String,Penumbra.String.ByteString@,System.Boolean)">
+            <summary>
+            Construct an ByteString from a given unicode string, possibly converted to ascii lowercase.
+            </summary>
+            <param name="path">The existing UTF16 string.</param>
+            <param name="ret">The converted, owned ByteString on success, an empty string on failure.</param>
+            <param name="toAsciiLower">Optionally, whether to convert the string to lower-case.</param>
+            <returns>False if the resulting length is larger than <inheritdoc cref="F:Penumbra.String.ByteString.MaxLength"/>.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.FromStringUnsafe(System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Construct an ByteString from a given unicode string without checking for length, and assuming <paramref name="isLower"/> from the argument.
+            </summary>
+            <param name="path">The existing UTF16 string.</param>
+            <param name="isLower">Whether the string is known to be (ASCII) lower-case.</param>
+            <returns>The converted, owned string.</returns>
+        </member>
+        <member name="M:Penumbra.String.ByteString.ReleaseUnmanagedResources">
+            <summary> Free memory if the string is owned. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Dispose">
+            <summary> Manually free memory. Sets the string to an empty string, also updates CRC32. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Finalize">
+            <summary> Automatic release of memory if not disposed before. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Setup(System.Byte*,System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary> Setup from all given values. </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Penumbra.String.ByteString.CheckAscii">
+            <summary>
+            Check if the string is known to be or not be ASCII, otherwise test for it and store it in the cache.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.CheckAsciiLower">
+            <summary>
+            Check if the string is known to be or not be (ASCII) lower-case, otherwise test for it and store it in the cache.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.ToString">
+            <summary>
+            Create a C# UTF16 string from this string.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.AsciiToLower">
+            <summary> Convert the ASCII portion of the string to lowercase. </summary>
+            <remarks>Only creates a new string and copy if the string is not already known to be lower case.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.AsciiToMixed">
+            <summary>
+            Convert the ascii portion of the string to mixed case (i.e. capitalize every first letter in a word)
+            </summary>
+            <remarks>Always creates an owned copy of the string.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.AsciiToLowerClone">
+            <summary> Convert the ASCII portion of the string to lowercase. </summary>
+            <remarks>Guaranteed to create an owned copy.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Clone">
+            <summary> Create an owned copy of the given string. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Substring(System.Int32)">
+            <summary> Create a non-owning substring from the given position. </summary>
+            <param name="from">The starting position.</param>
+            <remarks>If from is negative or too large, the returned string will be the empty string.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Substring(System.Int32,System.Int32)">
+            <summary>
+            Create a non-owning substring from the given position of the given length.
+            </summary>
+            <param name="from">The starting position.</param>
+            <param name="length">The total length.</param>
+            <remarks> If from is negative or too large, the returned string will be the empty string. <br/>
+            If from + length is too large, it will be the same as if length was not specified.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.TrimFront">
+            <summary> Trim all ascii whitespace characters from the front. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.TrimEnd">
+            <summary> Trim all ascii whitespace characters at the end. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Trim">
+            <summary> Trim all ascii whitespace characters from the beginning or end of the string. </summary>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Replace(System.Byte,System.Byte)">
+            <summary>
+            Create a owned copy of the string and replace all occurrences of from with to in it.
+            </summary>
+            <param name="from">The byte to replace.</param>
+            <param name="to">The byte <paramref name="from"/> is to be replaced with.</param>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Join(System.Byte,Penumbra.String.ByteString[])">
+            <summary>
+            Join a number of strings with a given byte between them.
+            </summary>
+            <param name="splitter">The byte to insert between all strings.</param>
+            <param name="strings">The list of strings to join.</param>
+            <remarks>No <paramref name="splitter"/> is inserted before the first or after the last string.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Join(Penumbra.String.ByteString[])">
+            <summary>
+            Join a number of strings with a given byte between them.
+            </summary>
+            <param name="strings">The list of strings to join.</param>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Split(System.Byte,System.Int32,System.Boolean)">
+            <summary>
+            Split a string and return a list of the substrings delimited by b.
+            </summary>
+            <param name="b"></param>
+            <param name="maxSplits">An optional maximum number of splits - if the maximum is reached, the last substring may contain delimiters.</param>
+            <param name="removeEmpty">Remove all empty substrings between delimiters, they are also not counted for <paramref name="maxSplits"/>.</param>
+            <remarks>The returned substrings are not owned.</remarks>
+        </member>
+        <member name="M:Penumbra.String.ByteString.Combine(System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            Combine two optional bools into a new optional bool.
+        </member>
+        <member name="T:Penumbra.String.Classes.FullPath">
+            <summary>
+            A combination of a C#-string for filesystem interactions
+            and a lower-case ByteString for FFXIV interactions.
+            Also stores the FFXIV-CRC64 value.
+            </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.FullPath.FullName">
+            <summary> The Unicode string containing the full name of the path with backward-slashes. </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.FullPath.InternalName">
+            <summary> The UTF8 string containing the full name of the path with forward-slashes. </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.FullPath.Crc64">
+            <summary> The FFXIV specific Crc64 value, i.e. a CRC32 of the file name combined with a CRC32 of the file path. </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.FullPath.Empty">
+            <summary> An empty string. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.#ctor(System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8RelPath)">
+            <summary>
+            Combine a relative path with a base directory for a full path.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.#ctor(System.IO.FileInfo)">
+            <summary> Create a full path from a given file path. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.#ctor(System.String)">
+            <summary> Create a full path from a given string. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.#ctor(Penumbra.String.Classes.Utf8GamePath)">
+            <summary> Create a full path from a given game path.  </summary>
+        </member>
+        <member name="P:Penumbra.String.Classes.FullPath.Exists">
+            <summary> Check whether the file exists on your file system. </summary>
+        </member>
+        <member name="P:Penumbra.String.Classes.FullPath.Extension">
+            <summary> Get the file extension of the file. </summary>
+        </member>
+        <member name="P:Penumbra.String.Classes.FullPath.Name">
+            <summary> Get only the file name of the file. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.ToGamePath(System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8GamePath@)">
+            <summary> Use the given directory path to obtain a game path. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.ToRelPath(System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8RelPath@)">
+            <summary> Use the given directory path to obtain path relative to it. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.CompareTo(System.Object)">
+            <summary> Compare lexicographically against another FullPath, FileInfo, ByteString or string. </summary>
+            <remarks> Comparison against FileInfo and string ignore case, comparisons against FullPath and ByteString do not, but use the InternalName. </remarks>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.Equals(Penumbra.String.Classes.FullPath)">
+            <summary> Check if two FullPaths are equal. </summary>
+        </member>
+        <member name="P:Penumbra.String.Classes.FullPath.IsRooted">
+            <summary> Returns whether the path is rooted. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.GetHashCode">
+            <summary> Return the CRC32 of the InternalName. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.ToString">
+            <summary> Return the FullName. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.FullPath.ToPath">
+            <summary> Return the path with back slashes if it is rooted and with forward-slashes if not. </summary>
+        </member>
+        <member name="T:Penumbra.String.Classes.FullPath.FullPathConverter">
+            <summary>
+            Convert from and to string.
+            </summary>
+        </member>
+        <member name="T:Penumbra.String.Classes.Utf8GamePath">
+            <summary>
+            A GamePath that verifies some invariants based on a ByteString.
+            The Invariants are being smaller than <see cref="F:Penumbra.String.Classes.Utf8GamePath.MaxGamePathLength"/>,
+            and containing forward-slashes as separators.
+            </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.Utf8GamePath.MaxGamePathLength">
+            <summary>
+            The maximum length Penumbra accepts.
+            </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.Utf8GamePath.Path">
+            <summary>
+            Return the original path.
+            </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.Utf8GamePath.Empty">
+            <summary> An empty path. </summary>
+        </member>
+        <member name="P:Penumbra.String.Classes.Utf8GamePath.Length">
+            <inheritdoc cref="P:Penumbra.String.ByteString.Length"/>
+        </member>
+        <member name="P:Penumbra.String.Classes.Utf8GamePath.IsEmpty">
+            <inheritdoc cref="P:Penumbra.String.ByteString.IsEmpty"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.ToLower">
+            <summary>
+            Return a path that consists only of lower-case ASCII characters. Non-ASCII characters are left untouched.
+            </summary>
+            <remarks>The new string is not guaranteed to be a copy. If the original string was lower-case, no copy is created.</remarks>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.FromPointer(System.Byte*,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)">
+            <summary>
+            Create a new Utf8GamePath from a pointer.
+            </summary>
+            <param name="ptr">The data.</param>
+            <param name="path">The resulting game path if successful, an empty path otherwise.</param>
+            <param name="lower">Whether to turn the path into lower-case ASCII.</param>
+            <returns>Whether the given pointer is a valid Utf8GamePath.</returns>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.FromSpan(System.ReadOnlySpan{System.Byte},Penumbra.String.Classes.Utf8GamePath@,System.Boolean)">
+            <summary>
+            Same as <see cref="M:Penumbra.String.Classes.Utf8GamePath.FromPointer(System.Byte*,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)"/> just with known length.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.ReturnChecked(Penumbra.String.ByteString,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)">
+            <summary>
+            Does not check for Forward/Backslashes due to assuming that SE-strings use the correct one.
+            Does not check for initial slashes either, since they are assumed to be by choice.
+            Checks for maxlength and lowercase.
+            </summary>
+            <param name="utf"></param>
+            <param name="path"></param>
+            <param name="lower"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.Clone">
+            <inheritdoc cref="M:Penumbra.String.ByteString.Clone"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.FromString(System.String,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)">
+            <summary>
+            Create a new path from a string.
+            </summary>
+            <param name="s">The given string.</param>
+            <param name="path">The converted path or an empty path on failure.</param>
+            <param name="toLower">Whether the string should be (ASCII) lower-cased.</param>
+            <returns>False if the string is too long, or can not be converted to UTF8.</returns>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.FromByteString(Penumbra.String.ByteString,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)">
+            <summary>
+            Create a new path from a string and check its length.
+            </summary>
+            <param name="s">The given string.</param>
+            <param name="path">The string as UTF8GamePath, empty string on failure or null input.</param>
+            <param name="toLower">Whether the string should be (ASCII) lower-cased.</param>
+            <returns>False if the string is too long.</returns>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.FromFile(System.IO.FileInfo,System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)">
+            <summary>
+            Create a new path from a file and a base directory.
+            </summary>
+            <param name="file">The file path to convert.</param>
+            <param name="baseDir">The directory to which the file path should be seen as relative. </param>
+            <param name="path">The converted path or an empty path on failure.</param>
+            <param name="toLower">Whether the string should be (ASCII) lower-cased.</param>
+            <returns>False if the file does not lie inside the base directory or the string conversion fails.</returns>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.Filename">
+            <summary>
+            Get the non-owned substring of the file name of the path.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.Extension">
+            <summary>
+            Get the non-owned substring of the extension of the path.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.Equals(Penumbra.String.Classes.Utf8GamePath)">
+            <inheritdoc cref="M:Penumbra.String.ByteString.Equals(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.GetHashCode">
+            <inheritdoc cref="M:Penumbra.String.ByteString.GetHashCode"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.CompareTo(Penumbra.String.Classes.Utf8GamePath)">
+            <inheritdoc cref="M:Penumbra.String.ByteString.CompareTo(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.ToString">
+            <inheritdoc cref="M:Penumbra.String.ByteString.ToString"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.Dispose">
+            <inheritdoc cref="M:Penumbra.String.ByteString.Dispose"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.IsRooted">
+            <inheritdoc cref="M:Penumbra.String.Classes.Utf8GamePath.IsRooted(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8GamePath.IsRooted(Penumbra.String.ByteString)">
+            <summary>
+            Return whether the path is rooted.
+            </summary>
+        </member>
+        <member name="T:Penumbra.String.Classes.Utf8GamePath.Utf8GamePathConverter">
+            <summary>
+            Conversion from and to string.
+            </summary>
+        </member>
+        <member name="T:Penumbra.String.Classes.Utf8RelPath">
+            <summary>
+            A relative path that verifies some invariants based on an UTF8 string.
+            Similar to Utf8GamePath just kept for filesystem interaction instead of FFXIV interaction.
+            </summary>
+        </member>
+        <member name="F:Penumbra.String.Classes.Utf8RelPath.MaxRelPathLength">
+            <inheritdoc cref="F:Penumbra.String.Classes.Utf8GamePath.MaxGamePathLength"/>
+        </member>
+        <member name="F:Penumbra.String.Classes.Utf8RelPath.Path">
+            <inheritdoc cref="F:Penumbra.String.Classes.Utf8GamePath.Path"/>
+        </member>
+        <member name="F:Penumbra.String.Classes.Utf8RelPath.Empty">
+            <inheritdoc cref="F:Penumbra.String.Classes.Utf8GamePath.Empty"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.op_Explicit(System.String)~Penumbra.String.Classes.Utf8RelPath">
+            <summary> Explicit conversion from string to Utf8RelPath for migrating old dictionaries. </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.FromString(System.String,Penumbra.String.Classes.Utf8RelPath@)">
+            <inheritdoc cref="M:Penumbra.String.Classes.Utf8GamePath.FromString(System.String,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.FromFile(System.IO.FileInfo,System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8RelPath@)">
+            <inheritdoc cref="M:Penumbra.String.Classes.Utf8GamePath.FromFile(System.IO.FileInfo,System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.FromFile(Penumbra.String.Classes.FullPath,System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8RelPath@)">
+            <inheritdoc cref="M:Penumbra.String.Classes.Utf8GamePath.FromFile(System.IO.FileInfo,System.IO.DirectoryInfo,Penumbra.String.Classes.Utf8GamePath@,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.#ctor(Penumbra.String.Classes.Utf8GamePath)">
+            <summary>
+            Create a new RelPath from a GamePath by replacing all forward slashes with backward slashes.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.ToGamePath(System.Int32)">
+            <summary>
+            Convert to Utf8GamePath by replacing all backward slashes with forward slashes, and turning to lower case.
+            </summary>
+            <param name="skipFolders">Optionally skip the first few folders in the conversion.</param>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.CompareTo(Penumbra.String.Classes.Utf8RelPath)">
+            <inheritdoc cref="M:Penumbra.String.ByteString.CompareTo(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.Equals(Penumbra.String.Classes.Utf8RelPath)">
+            <inheritdoc cref="M:Penumbra.String.ByteString.Equals(Penumbra.String.ByteString)"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.ToString">
+            <inheritdoc cref="M:Penumbra.String.ByteString.ToString"/>
+        </member>
+        <member name="M:Penumbra.String.Classes.Utf8RelPath.Dispose">
+            <inheritdoc cref="M:Penumbra.String.ByteString.Dispose"/>
+        </member>
+        <member name="T:Penumbra.String.Classes.Utf8RelPath.Utf8RelPathConverter">
+            <inheritdoc cref="T:Penumbra.String.Classes.Utf8GamePath.Utf8GamePathConverter"/>
+        </member>
+        <member name="T:Penumbra.String.Functions.ByteStringFunctions">
+            <summary> Wrapper class for all utility functions. </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiToLower(System.Byte)">
+            <summary>
+            Convert a byte to its ASCII-lowercase version.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiIsLower(System.Byte)">
+            <summary>
+            Check if a byte is ASCII-lowercase.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiToUpper(System.Byte)">
+            <summary>
+            Convert a byte to its ASCII-uppercase version.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiIsUpper(System.Byte)">
+            <summary>
+            Check if a byte is ASCII-uppercase.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.IsAsciiLowerCase(System.Byte*,System.Int32)">
+            <summary>
+            Check if a byte array of given length is ASCII-lowercase.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiCaselessCompare(System.Byte*,System.Int32,System.Byte*,System.Int32)">
+            <summary>
+            Compare two byte arrays of given lengths ASCII-case-insensitive.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiCaselessEquals(System.Byte*,System.Int32,System.Byte*,System.Int32)">
+            <summary>
+            Check two byte arrays of given lengths for ASCII-case-insensitive equality.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.IsAscii(System.Byte*,System.Int32)">
+            <summary>
+            Check if a byte array of given length consists purely of ASCII characters.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Compare(System.Byte*,System.Int32,System.Byte*,System.Int32)">
+            <summary>
+            Lexicographically compare two byte arrays of given length.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Compare(System.Byte*,System.Int32,System.Byte*)">
+            <summary>
+            Lexicographically compare one byte array of given length with a null-terminated byte array of unknown length.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Compare(System.Byte*,System.Byte*,System.Int32)">
+            <summary>
+            Lexicographically compare two null-terminated byte arrays of unknown length not larger than maxLength.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Equals(System.Byte*,System.Int32,System.Byte*,System.Int32)">
+            <summary>
+            Check two byte arrays of given length for equality.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Equal(System.Byte*,System.Int32,System.Byte*)">
+            <summary>
+            Check one byte array of given length for equality against a null-terminated byte array of unknown length.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Equal(System.Byte*,System.Byte*,System.Int32)">
+            <summary>
+            Check two null-terminated byte arrays of unknown length not larger than maxLength for equality.
+            </summary>
+        </member>
+        <member name="T:Penumbra.String.Functions.ByteStringFunctions.NullTerminator">
+            <summary> Used for static null-terminators. </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Utf8FromString(System.String,System.Int32@,System.Int32)">
+            <summary>
+            Convert a C# unicode-string to an unmanaged UTF8-byte array and return the pointer.
+            If the length would exceed the given maxLength, return a nullpointer instead.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.CopyString(System.Byte*,System.Int32)">
+            <summary>
+            Create a copy of a given string and return the pointer.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.CheckLength(System.Byte*,System.Int32)">
+            <summary>
+            Check the length of a null-terminated byte array no longer than the given maxLength.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.ComputeCrc64(System.String)">
+            <summary> Compute the FFXIV-CRC64 value of a UTF16 string. </summary>
+            <remarks>
+            The FFXIV-CRC64 consists of the CRC32 of the string up to the last '/' in the lower bytes,
+            and the CRC32 of the string from the last '/' in the upper bytes.
+            </remarks>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.ComputeCrc64(System.ReadOnlySpan{System.Byte})">
+            <summary> Compute the FFXIV-CRC64 value of a UTF8 string. </summary>
+            <remarks><inheritdoc cref="M:Penumbra.String.Functions.ByteStringFunctions.ComputeCrc64(System.String)" /></remarks>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.ComputeCrc64LowerAndSize(System.Byte*,System.UInt64@,System.Int32@,System.Boolean@,System.Boolean@)">
+            <summary>
+            Compute the FFXIV-CRC64 value, the CRC32 value, the ASCII state and the Lowercase state while iterating only once.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.ComputeCrc32AsciiLowerAndSize(System.Byte*,System.Int32@,System.Boolean@,System.Boolean@)">
+            <summary>
+            Compute the CRC32 value, the ASCII state and the Lowercase state while iterating only once.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.Replace(System.Byte*,System.Int32,System.Byte,System.Byte)">
+            <summary>
+            Replace all occurrences of from in a byte array of known length with to.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiToLowerInPlace(System.Byte*,System.Int32)">
+            <summary>
+            Convert a byte array of given length to ASCII-lowercase.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.ByteStringFunctions.AsciiToLower(System.Byte*,System.Int32)">
+            <summary>
+            Copy a byte array and convert the copy to ASCII-lowercase.
+            </summary>
+        </member>
+        <member name="T:Penumbra.String.Functions.MemoryUtility">
+            <summary>
+            Import some standard functions for memory handling.
+            </summary>
+        </member>
+        <member name="M:Penumbra.String.Functions.MemoryUtility.MemCpyUnchecked(System.Void*,System.Void*,System.Int32)">
+            <summary> Copies <paramref name="count"/> bytes from <paramref name="src"/> to <paramref name="dest"/>. </summary>
+            <remarks>Call memcpy from msvcrt.dll.</remarks>
+        </member>
+        <member name="M:Penumbra.String.Functions.MemoryUtility.MemCmpUnchecked(System.Void*,System.Void*,System.Int32)">
+            <summary> Compares <paramref name="count"/> bytes from <paramref name="ptr1"/> with <paramref name="ptr2"/> lexicographically. </summary>
+            <remarks>Call memcmp from msvcrt.dll.</remarks>
+        </member>
+        <member name="M:Penumbra.String.Functions.MemoryUtility.MemCmpCaseInsensitiveUnchecked(System.Void*,System.Void*,System.Int32)">
+            <summary> Compares <paramref name="count"/> bytes from <paramref name="ptr1"/> with <paramref name="ptr2"/> lexicographically and disregarding ascii-case. </summary>
+            <remarks>Call memicmp from msvcrt.dll.</remarks>
+        </member>
+        <member name="M:Penumbra.String.Functions.MemoryUtility.MemSet(System.Void*,System.Byte,System.Int32)">
+            <summary> Sets <paramref name="count"/> bytes from <paramref name="dest"/> on to <paramref name="value"/>. </summary>
+            <remarks>Call memset from msvcrt.dll.</remarks>
+        </member>
+    </members>
+</doc>

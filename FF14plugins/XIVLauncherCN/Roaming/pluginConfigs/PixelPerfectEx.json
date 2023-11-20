@@ -1,0 +1,119 @@
+{
+  "$type": "PixelPerfectEx.Configuration, PixelPerfectEx",
+  "ConfigVisible": false,
+  "OwnerHitboxVisible": false,
+  "OwnerHitboxSize": 2.0,
+  "OwnerHitboxOuterRingVisible": false,
+  "OwnerHitboxCombatOnly": false,
+  "OwnerHitboxInstanceOnly": false,
+  "OwnerRingVisible": false,
+  "OwnerRingSize": 6.0,
+  "OwnerRingThickness": 7.0,
+  "OwnerRingColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "OwnerHitboxColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "OwnerHitboxOuterRingColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TargetHitboxVisible": false,
+  "TargetHitboxSize": 2.0,
+  "TargetHitboxOuterRingVisible": false,
+  "TargetHitboxCombatOnly": false,
+  "TargetHitboxInstanceOnly": false,
+  "TargetRingVisible": false,
+  "TargetRingSize": 15.0,
+  "TargetRingThickness": 6.0,
+  "TargetRingColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TargetBodyPosVisible": false,
+  "TargetBodyPosSize": 2.0,
+  "TargetBodyPosThickness": 2.0,
+  "TargetBodyPosOffset": 0.0,
+  "TargetBodyPosColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TargetHitboxColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TargetHitboxOuterRingColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TargetPlayerLineVisible": false,
+  "TargetPlayerLineColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "RelativePositionLineVisible": false,
+  "RelativePositionLineLength": 6.0,
+  "RelativePositionLineColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "DistanceShowVisible": false,
+  "DistanceShowFollowPlayer": false,
+  "DistanceShowCombatOnly": false,
+  "DistanceShowInstanceOnly": false,
+  "DistanceShowFormat": "00.00",
+  "DistanceShowLarge": 5.0,
+  "DistanceBgAlpha": 0.0,
+  "DistanceShowOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "DistanceShowColour": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "DrawDebug": false,
+  "DrawAoeAssist": false,
+  "ShowReceive": false,
+  "Segment": 20,
+  "HttpPort": 9588,
+  "DrawSize": 4,
+  "Strock": false,
+  "StrockWidth": 1.0,
+  "DefaultThickness": 10.0,
+  "Version": 0
+}

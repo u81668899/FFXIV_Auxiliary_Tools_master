@@ -1,0 +1,64 @@
+{
+  "$type": "NoSoliciting.PluginConfiguration, NoSoliciting",
+  "Version": 2,
+  "AdvancedMode": true,
+  "CustomChatFilter": false,
+  "ChatSubstrings": [],
+  "ChatRegexes": [],
+  "CompiledChatRegexes": [],
+  "CustomPFFilter": false,
+  "PFSubstrings": [],
+  "PFRegexes": [],
+  "CompiledPfRegexes": [],
+  "FilterHugeItemLevelPFs": false,
+  "FollowGameLanguage": false,
+  "BasicMlFilters": [
+    5,
+    4,
+    3
+  ],
+  "MlFilters": {
+    "$type": "System.Collections.Generic.Dictionary`2[[NoSoliciting.Ml.MessageCategory, NoSoliciting],[System.Collections.Generic.HashSet`1[[NoSoliciting.ChatType, NoSoliciting]], System.Private.CoreLib]], System.Private.CoreLib",
+    "RmtGil": [
+      10,
+      11
+    ],
+    "RmtContent": [
+      0
+    ],
+    "Phishing": [
+      13
+    ],
+    "Roleplaying": [
+      0,
+      11,
+      30
+    ],
+    "FreeCompany": [
+      0,
+      11,
+      30,
+      13
+    ],
+    "Static": [
+      0
+    ],
+    "StaticSub": [
+      0
+    ],
+    "Trade": [
+      0
+    ],
+    "Community": [
+      0
+    ],
+    "Fluff": [
+      0
+    ]
+  },
+  "LogFilteredPfs": true,
+  "LogFilteredChat": true,
+  "ConsiderPrivatePfs": false,
+  "ValidChatSubstrings": [],
+  "ValidPfSubstrings": []
+}

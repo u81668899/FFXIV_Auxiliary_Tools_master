@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "autoSweep/1.0.0": {
+        "dependencies": {
+          "DalamudPackager": "2.1.10",
+          "DebounceThrottle": "1.0.0",
+          "WebSocketSharp.Standard": "1.0.3"
+        },
+        "runtime": {
+          "autoSweep.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.10": {},
+      "DebounceThrottle/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/DebounceThrottle.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WebSocketSharp.Standard/1.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/websocket-sharp-standard.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "autoSweep/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S6NrvvOnLgT4GDdgwuKVJjbFo+8ZEj+JsEYk9ojjOR/MMfv1dIFpT8aRJQfI24rtDcw1uF+GnSSMN4WW1yt7fw==",
+      "path": "dalamudpackager/2.1.10",
+      "hashPath": "dalamudpackager.2.1.10.nupkg.sha512"
+    },
+    "DebounceThrottle/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IBKEJ00Or/xsblu03U6YrXIYHZnD469L3rSknm6yok7eBMZWmodSmHUsnI/QAsVu+UAdFfDsPOrKlmoaqYZVRw==",
+      "path": "debouncethrottle/1.0.0",
+      "hashPath": "debouncethrottle.1.0.0.nupkg.sha512"
+    },
+    "WebSocketSharp.Standard/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ITDck8Gv/1yv+aolSM/37YH6QBGksa9yNp3p91E1jZY2gI9IYs2WjiX22SW0Yt0Y8ovrPp/OiuQAqAZBYC7Y5Q==",
+      "path": "websocketsharp.standard/1.0.3",
+      "hashPath": "websocketsharp.standard.1.0.3.nupkg.sha512"
+    }
+  }
+}

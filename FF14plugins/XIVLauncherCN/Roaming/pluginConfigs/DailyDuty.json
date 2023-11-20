@@ -1,0 +1,630 @@
+{
+  "$type": "DailyDuty.Data.SystemConfiguration, DailyDuty",
+  "DeveloperMode": false,
+  "System": {
+    "$type": "DailyDuty.Data.Components.SystemSettings, DailyDuty",
+    "MinutesBetweenThrottledMessages": 20,
+    "MessageDelay": false,
+    "DelayDay": 2,
+    "SelectedLanguage": "zh"
+  },
+  "Timers": {
+    "$type": "DailyDuty.Data.Components.TimersSettings, DailyDuty",
+    "Daily": {
+      "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+      "Enabled": false,
+      "TimerStyle": {
+        "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+        "Options": {
+          "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+          "UseShortName": false,
+          "ShowSeconds": true,
+          "CondensedDisplay": false
+        },
+        "BackgroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ForegroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        },
+        "TextColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "TimeColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "Padding": 5,
+        "Size": 200,
+        "StretchToFit": false
+      }
+    },
+    "Weekly": {
+      "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+      "Enabled": false,
+      "TimerStyle": {
+        "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+        "Options": {
+          "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+          "UseShortName": false,
+          "ShowSeconds": true,
+          "CondensedDisplay": false
+        },
+        "BackgroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ForegroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        },
+        "TextColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "TimeColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "Padding": 5,
+        "Size": 200,
+        "StretchToFit": false
+      }
+    },
+    "FashionReport": {
+      "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+      "Enabled": false,
+      "TimerStyle": {
+        "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+        "Options": {
+          "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+          "UseShortName": false,
+          "ShowSeconds": true,
+          "CondensedDisplay": false
+        },
+        "BackgroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ForegroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        },
+        "TextColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "TimeColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "Padding": 5,
+        "Size": 200,
+        "StretchToFit": false
+      }
+    },
+    "TreasureMap": {
+      "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+      "Enabled": false,
+      "TimerStyle": {
+        "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+        "Options": {
+          "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+          "UseShortName": false,
+          "ShowSeconds": true,
+          "CondensedDisplay": false
+        },
+        "BackgroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ForegroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        },
+        "TextColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "TimeColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "Padding": 5,
+        "Size": 200,
+        "StretchToFit": false
+      }
+    },
+    "JumboCactpot": {
+      "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+      "Enabled": false,
+      "TimerStyle": {
+        "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+        "Options": {
+          "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+          "UseShortName": false,
+          "ShowSeconds": true,
+          "CondensedDisplay": false
+        },
+        "BackgroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ForegroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        },
+        "TextColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "TimeColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "Padding": 5,
+        "Size": 200,
+        "StretchToFit": false
+      }
+    },
+    "LeveAllowance": {
+      "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+      "Enabled": false,
+      "TimerStyle": {
+        "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+        "Options": {
+          "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+          "UseShortName": false,
+          "ShowSeconds": true,
+          "CondensedDisplay": false
+        },
+        "BackgroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ForegroundColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.6901961,
+          "Y": 0.14901961,
+          "Z": 0.9254902,
+          "W": 1.0
+        },
+        "TextColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "TimeColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "Padding": 5,
+        "Size": 200,
+        "StretchToFit": false
+      }
+    }
+  },
+  "Windows": {
+    "$type": "DailyDuty.Data.Components.WindowsSettings, DailyDuty",
+    "Todo": {
+      "$type": "DailyDuty.Data.Components.TodoWindowSettings, DailyDuty",
+      "ShowDaily": true,
+      "ShowWeekly": true,
+      "HideWhenTasksComplete": false,
+      "ShowTasksWhenComplete": false,
+      "Anchor": 0,
+      "Style": 0,
+      "Enabled": false,
+      "HideInDuty": true,
+      "Opacity": 1.0,
+      "ClickThrough": false,
+      "Colors": {
+        "$type": "DailyDuty.Data.Components.TaskColors, DailyDuty",
+        "HeaderColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "IncompleteColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "CompleteColor": {
+          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        }
+      }
+    },
+    "MainWindow": {
+      "$type": "DailyDuty.Data.Components.MainWindowSettings, DailyDuty",
+      "TimerProgressBarColor": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.133,
+        "Y": 0.545,
+        "Z": 0.1333,
+        "W": 1.0
+      },
+      "HideSeconds": false,
+      "Opacity": 1.0
+    },
+    "Timers": {
+      "$type": "DailyDuty.Data.Components.TimersWindowSettings, DailyDuty",
+      "TimersSettings": {
+        "$type": "DailyDuty.Data.Components.TimersSettings, DailyDuty",
+        "Daily": {
+          "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+          "Enabled": false,
+          "TimerStyle": {
+            "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+            "Options": {
+              "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+              "UseShortName": false,
+              "ShowSeconds": true,
+              "CondensedDisplay": false
+            },
+            "BackgroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0
+            },
+            "ForegroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.6901961,
+              "Y": 0.14901961,
+              "Z": 0.9254902,
+              "W": 1.0
+            },
+            "TextColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "TimeColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Padding": 5,
+            "Size": 200,
+            "StretchToFit": false
+          }
+        },
+        "Weekly": {
+          "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+          "Enabled": false,
+          "TimerStyle": {
+            "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+            "Options": {
+              "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+              "UseShortName": false,
+              "ShowSeconds": true,
+              "CondensedDisplay": false
+            },
+            "BackgroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0
+            },
+            "ForegroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.6901961,
+              "Y": 0.14901961,
+              "Z": 0.9254902,
+              "W": 1.0
+            },
+            "TextColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "TimeColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Padding": 5,
+            "Size": 200,
+            "StretchToFit": false
+          }
+        },
+        "FashionReport": {
+          "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+          "Enabled": false,
+          "TimerStyle": {
+            "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+            "Options": {
+              "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+              "UseShortName": false,
+              "ShowSeconds": true,
+              "CondensedDisplay": false
+            },
+            "BackgroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0
+            },
+            "ForegroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.6901961,
+              "Y": 0.14901961,
+              "Z": 0.9254902,
+              "W": 1.0
+            },
+            "TextColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "TimeColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Padding": 5,
+            "Size": 200,
+            "StretchToFit": false
+          }
+        },
+        "TreasureMap": {
+          "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+          "Enabled": false,
+          "TimerStyle": {
+            "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+            "Options": {
+              "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+              "UseShortName": false,
+              "ShowSeconds": true,
+              "CondensedDisplay": false
+            },
+            "BackgroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0
+            },
+            "ForegroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.6901961,
+              "Y": 0.14901961,
+              "Z": 0.9254902,
+              "W": 1.0
+            },
+            "TextColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "TimeColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Padding": 5,
+            "Size": 200,
+            "StretchToFit": false
+          }
+        },
+        "JumboCactpot": {
+          "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+          "Enabled": false,
+          "TimerStyle": {
+            "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+            "Options": {
+              "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+              "UseShortName": false,
+              "ShowSeconds": true,
+              "CondensedDisplay": false
+            },
+            "BackgroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0
+            },
+            "ForegroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.6901961,
+              "Y": 0.14901961,
+              "Z": 0.9254902,
+              "W": 1.0
+            },
+            "TextColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "TimeColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Padding": 5,
+            "Size": 200,
+            "StretchToFit": false
+          }
+        },
+        "LeveAllowance": {
+          "$type": "DailyDuty.Data.Components.TimerSettings, DailyDuty",
+          "Enabled": false,
+          "TimerStyle": {
+            "$type": "DailyDuty.Data.Components.TimerStyle, DailyDuty",
+            "Options": {
+              "$type": "DailyDuty.Data.Components.TimerOptions, DailyDuty",
+              "UseShortName": false,
+              "ShowSeconds": true,
+              "CondensedDisplay": false
+            },
+            "BackgroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0
+            },
+            "ForegroundColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 0.6901961,
+              "Y": 0.14901961,
+              "Z": 0.9254902,
+              "W": 1.0
+            },
+            "TextColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "TimeColor": {
+              "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Padding": 5,
+            "Size": 200,
+            "StretchToFit": false
+          }
+        }
+      },
+      "Enabled": false,
+      "HideInDuty": true,
+      "Opacity": 1.0,
+      "ClickThrough": false
+    }
+  },
+  "Addons": {
+    "$type": "DailyDuty.Data.Components.AddonSettings, DailyDuty",
+    "WondrousTailsOverlaySettings": {
+      "$type": "DailyDuty.Data.ModuleSettings.WondrousTailsDutyFinderOverlaySettings, DailyDuty",
+      "Enabled": false
+    },
+    "DutyRouletteOverlaySettings": {
+      "$type": "DailyDuty.Data.ModuleSettings.DutyRouletteDutyFinderOverlaySettings, DailyDuty",
+      "Enabled": false,
+      "CompleteColor": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0,
+        "W": 1.0
+      },
+      "IncompleteColor": {
+        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "W": 1.0
+      }
+    }
+  },
+  "Version": 1
+}

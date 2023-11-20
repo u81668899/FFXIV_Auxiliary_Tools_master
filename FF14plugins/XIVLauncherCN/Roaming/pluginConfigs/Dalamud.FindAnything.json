@@ -1,0 +1,73 @@
+{
+  "$type": "Dalamud.FindAnything.Configuration, Dalamud.FindAnything",
+  "Version": 0,
+  "ToSearchV3": 2147483647,
+  "Open": 1,
+  "ShiftShiftDelay": 40,
+  "ComboModifier": 17,
+  "ComboModifier2": 0,
+  "ComboKey": 84,
+  "PreventPassthrough": true,
+  "WikiComboKey": 0,
+  "ShiftShiftKey": 189,
+  "QuickSelectKey": 17,
+  "WikiModeNoSpoilers": true,
+  "TeamCraftForceBrowser": false,
+  "MacroLinks": [],
+  "DoAetheryteGilCost": false,
+  "DoMarketBoardShortcut": false,
+  "DoStrikingDummyShortcut": false,
+  "EmoteMode": 0,
+  "ShowEmoteCommand": false,
+  "HintLevel": 6,
+  "MathConstants": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "PositionOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "OnlyWikiMode": false,
+  "Order": [
+    2048,
+    64,
+    2,
+    1,
+    512,
+    1024,
+    4,
+    8,
+    32,
+    16,
+    4096,
+    128,
+    256
+  ],
+  "NotInCombat": false,
+  "HistoryEnabled": true,
+  "Speed": 1,
+  "MatchMode": 0,
+  "MatchSigilSimple": "'",
+  "MatchSigilFuzzy": "`",
+  "MatchSigilFuzzyParts": "~",
+  "SimulationState": {
+    "$type": "Dalamud.FindAnything.Game.GameWindow+SimulationState, Dalamud.FindAnything",
+    "LastSaved": "0001-01-01T00:00:00+00:00",
+    "TotalSteps": 0,
+    "CurrentDn": 15.0,
+    "TotalEarned": 0.0,
+    "NumNoses": {
+      "$type": "System.Collections.Generic.Dictionary`2[[Dalamud.FindAnything.Game.GameWindow+NoseKind, Dalamud.FindAnything],[System.UInt64, System.Private.CoreLib]], System.Private.CoreLib"
+    },
+    "RewardsGained": [],
+    "BonusesGained": [],
+    "FarmUpgrade": 0,
+    "UpgradePurchased": false,
+    "UpgradeFinishesAt": "0001-01-01T00:00:00+00:00",
+    "FarmCap": 100,
+    "DogCount": 0,
+    "GameComplete": false
+  },
+  "GoldenTicketNumber": null
+}

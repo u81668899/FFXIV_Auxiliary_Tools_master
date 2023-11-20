@@ -1,0 +1,52 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "HuntTrainAssistant/1.0.0.2": {
+        "dependencies": {
+          "Dalamud.ContextMenu": "1.2.3",
+          "ECommons": "2.0.0.7"
+        },
+        "runtime": {
+          "HuntTrainAssistant.dll": {}
+        }
+      },
+      "Dalamud.ContextMenu/1.2.3": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.ContextMenu.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
+      },
+      "ECommons/2.0.0.7": {
+        "runtime": {
+          "ECommons.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HuntTrainAssistant/1.0.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dalamud.ContextMenu/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ydemplF7DNcA/LLeongDVzWUD/JV0Fw3EwA2+P0jYq3Le2ZYSt4U8qyJq4FyoChqt0lFG8BxYCAzfeWp4Jmnqw==",
+      "path": "dalamud.contextmenu/1.2.3",
+      "hashPath": "dalamud.contextmenu.1.2.3.nupkg.sha512"
+    },
+    "ECommons/2.0.0.7": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

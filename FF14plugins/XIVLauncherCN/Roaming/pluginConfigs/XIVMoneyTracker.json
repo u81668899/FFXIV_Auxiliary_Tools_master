@@ -1,0 +1,14 @@
+{
+  "$type": "FFXIVMoneyTracker.Configuration, XIVMoneyTracker",
+  "Version": 0,
+  "ClusterSizeInHours": 24,
+  "Characters": [
+    {
+      "$type": "FFXIVMoneyTracker.Models.CharacterModel, XIVMoneyTracker",
+      "Name": "十六五夜",
+      "World": "摩杜纳",
+      "CurrentAmount": 340907926
+    }
+  ],
+  "InverseSort": true
+}

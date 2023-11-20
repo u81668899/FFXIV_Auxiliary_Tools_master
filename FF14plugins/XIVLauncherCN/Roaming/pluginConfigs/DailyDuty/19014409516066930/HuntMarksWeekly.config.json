@@ -1,0 +1,58 @@
+{
+  "TaskConfig": [
+    {
+      "RowId": 4,
+      "Enabled": false,
+      "TargetCount": 0
+    },
+    {
+      "RowId": 5,
+      "Enabled": false,
+      "TargetCount": 0
+    },
+    {
+      "RowId": 9,
+      "Enabled": false,
+      "TargetCount": 0
+    },
+    {
+      "RowId": 13,
+      "Enabled": false,
+      "TargetCount": 0
+    },
+    {
+      "RowId": 17,
+      "Enabled": false,
+      "TargetCount": 0
+    }
+  ],
+  "ModuleEnabled": false,
+  "MessageChatChannel": 1,
+  "UseCustomChannel": false,
+  "OnLoginMessage": true,
+  "OnZoneChangeMessage": true,
+  "ResetMessage": false,
+  "UseCustomStatusMessage": false,
+  "CustomStatusMessage": "",
+  "UseCustomResetMessage": false,
+  "CustomResetMessage": "",
+  "TodoOptions": {
+    "Enabled": true,
+    "UseCustomTodoLabel": false,
+    "CustomTodoLabel": "",
+    "OverrideTextColor": false,
+    "TextColor": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0,
+      "W": 1.0
+    },
+    "TextOutline": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0,
+      "W": 1.0
+    }
+  },
+  "Suppressed": false
+}

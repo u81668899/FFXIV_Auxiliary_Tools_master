@@ -1,0 +1,84 @@
+{
+  "$type": "AdventurerInNeed.AdventurerInNeedConfig, AdventurerInNeed",
+  "Roulettes": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[AdventurerInNeed.RouletteConfig, AdventurerInNeed]], System.Private.CoreLib",
+    "1": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "2": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "3": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "4": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "5": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": true,
+      "Tank": false,
+      "Healer": true,
+      "DPS": false
+    },
+    "6": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "8": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "9": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "15": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    },
+    "17": {
+      "$type": "AdventurerInNeed.RouletteConfig, AdventurerInNeed",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false
+    }
+  },
+  "Version": 0,
+  "InGameAlert": true,
+  "WebhookAlert": false,
+  "Webhooks": [
+    "",
+    ""
+  ],
+  "ChatType": 56
+}

@@ -1,0 +1,94 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "YesAlready/1.3.0.2": {
+        "dependencies": {
+          "ClickLib": "1.2.0.1",
+          "DalamudPackager": "2.1.10",
+          "ILRepack": "2.0.18",
+          "StyleCop.Analyzers": "1.2.0-beta.333"
+        },
+        "runtime": {
+          "YesAlready.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.10": {},
+      "ILRepack/2.0.18": {},
+      "Reloaded.Memory/7.1.0": {
+        "runtime": {
+          "lib/net6.0/Reloaded.Memory.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
+      "StyleCop.Analyzers/1.2.0-beta.333": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.333"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.333": {},
+      "ClickLib/1.2.0.1": {
+        "dependencies": {
+          "ILRepack": "2.0.18",
+          "Reloaded.Memory": "7.1.0"
+        },
+        "runtime": {
+          "ClickLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "YesAlready/1.3.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S6NrvvOnLgT4GDdgwuKVJjbFo+8ZEj+JsEYk9ojjOR/MMfv1dIFpT8aRJQfI24rtDcw1uF+GnSSMN4WW1yt7fw==",
+      "path": "dalamudpackager/2.1.10",
+      "hashPath": "dalamudpackager.2.1.10.nupkg.sha512"
+    },
+    "ILRepack/2.0.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sR5Aj3JLDbA8JwESfWYfigSz5k1oNSHPN434W1LX8sboWJYEOSQP/KkvZGmJKPgajzSUKkl2jDar3LPZiMFU4Q==",
+      "path": "ilrepack/2.0.18",
+      "hashPath": "ilrepack.2.0.18.nupkg.sha512"
+    },
+    "Reloaded.Memory/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4Y5tCsRWdW/shj9W7RqJq37LStuW1VVtjxsBp4LKZilPcjudeQg9k+u+6fnDgacCEJiG3S2EtcaiNtVMTdaSnQ==",
+      "path": "reloaded.memory/7.1.0",
+      "hashPath": "reloaded.memory.7.1.0.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.2.0-beta.333": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o2r6o6TVTb6VdTtWEYT88/SgixcujjZ3gXMktvI/aNkA3y0CxUSVZEL23OjFe4/sDiTvldkdhKEyAQP9Z8r5wA==",
+      "path": "stylecop.analyzers/1.2.0-beta.333",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.333.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.333": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7mwxcwa3xZnyU71OTqSgntCDpsZ5gkc4saXhuJeyg5Xc+3xiQxzyhy26uG8rVF8Z7GKpXCsHCL3rd5ZomA+a/A==",
+      "path": "stylecop.analyzers.unstable/1.2.0.333",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.333.nupkg.sha512"
+    },
+    "ClickLib/1.2.0.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

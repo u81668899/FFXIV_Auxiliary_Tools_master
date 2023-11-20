@@ -1,0 +1,33 @@
+{
+  "$type": "ZodiacBuddy.PluginConfiguration, ZodiacBuddy",
+  "Version": 1,
+  "BraveEchoChannel": 56,
+  "BraveEchoTarget": true,
+  "BonusLight": {
+    "$type": "ZodiacBuddy.BonusLight.BonusLightConfiguration, ZodiacBuddy",
+    "DisplayBonusDuty": true,
+    "NotifyLightBonusOnlyWhenEquipped": true,
+    "PlaySoundOnLightBonusNotification": true,
+    "LightBonusNotificationSound": 9
+  },
+  "Novus": {
+    "$type": "ZodiacBuddy.Stages.Novus.NovusConfiguration, ZodiacBuddy",
+    "DisplayRelicInfo": true,
+    "ShowNumbersInRelicGlass": true,
+    "DontPlayRelicGlassAnimation": true
+  },
+  "Brave": {
+    "$type": "ZodiacBuddy.Stages.Brave.BraveConfiguration, ZodiacBuddy",
+    "DisplayRelicInfo": true,
+    "ShowNumbersInRelicMagicite": true,
+    "DontPlayRelicMagiciteAnimation": true
+  },
+  "InformationWindow": {
+    "$type": "ZodiacBuddy.InformationWindow.InformationWindowConfiguration, ZodiacBuddy",
+    "ManualSize": false,
+    "ClickThrough": false,
+    "ProgressColor": 4287902819,
+    "ProgressAutoSize": true,
+    "ProgressSize": 130
+  }
+}

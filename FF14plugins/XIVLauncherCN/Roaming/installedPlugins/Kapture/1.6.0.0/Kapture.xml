@@ -1,0 +1,1743 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kapture</name>
+    </assembly>
+    <members>
+        <member name="T:Kapture.DiscordBridgeConsumer">
+            <summary>
+            IPC with DiscordBridge Plugin.
+            </summary>
+        </member>
+        <member name="M:Kapture.DiscordBridgeConsumer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.DiscordBridgeConsumer"/> class.
+            </summary>
+        </member>
+        <member name="M:Kapture.DiscordBridgeConsumer.Subscribe">
+            <summary>
+            Subscribe to DiscordBridge plugin methods.
+            </summary>
+        </member>
+        <member name="M:Kapture.DiscordBridgeConsumer.IsAvailable">
+            <summary>
+            Check if DiscordBridge is available.
+            </summary>
+            <returns>Gets indicator whether DiscordBridge is available.</returns>
+        </member>
+        <member name="M:Kapture.DiscordBridgeConsumer.SendMessage(System.String,System.String,System.String)">
+            <summary>
+            Send discord message.
+            </summary>
+            <param name="pluginName">plugin / assembly name.</param>
+            <param name="avatarUrl">avatar url.</param>
+            <param name="message">message to send.</param>
+        </member>
+        <member name="T:Kapture.DisplayMode">
+            <summary>
+            Overlay display mode.
+            </summary>
+        </member>
+        <member name="F:Kapture.DisplayMode.DisplayModes">
+            <summary>
+            Display modes.
+            </summary>
+        </member>
+        <member name="F:Kapture.DisplayMode.DisplayModeNames">
+            <summary>
+            Display mode names.
+            </summary>
+        </member>
+        <member name="F:Kapture.DisplayMode.AlwaysOn">
+            <summary>
+            Display Mode: always.
+            </summary>
+        </member>
+        <member name="F:Kapture.DisplayMode.ContentOnly">
+            <summary>
+            Display Mode: content only.
+            </summary>
+        </member>
+        <member name="F:Kapture.DisplayMode.DuringRollsOnly">
+            <summary>
+            Display Mode: rolls only.
+            </summary>
+        </member>
+        <member name="M:Kapture.DisplayMode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.DisplayMode"/> class.
+            </summary>
+        </member>
+        <member name="P:Kapture.DisplayMode.Code">
+            <summary>
+            Gets display mode code.
+            </summary>
+        </member>
+        <member name="P:Kapture.DisplayMode.Name">
+            <summary>
+            Gets display mode name.
+            </summary>
+        </member>
+        <member name="M:Kapture.DisplayMode.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.ItemList">
+            <summary>
+            Item list.
+            </summary>
+        </member>
+        <member name="P:Kapture.ItemList.ItemIds">
+            <summary>
+            Gets item ids.
+            </summary>
+        </member>
+        <member name="P:Kapture.ItemList.ItemNames">
+            <summary>
+            Gets item names.
+            </summary>
+        </member>
+        <member name="T:Kapture.LogFormat">
+            <summary>
+            Log format.
+            </summary>
+        </member>
+        <member name="F:Kapture.LogFormat.LogFormats">
+            <summary>
+            Log formats.
+            </summary>
+        </member>
+        <member name="F:Kapture.LogFormat.LogFormatNames">
+            <summary>
+            Log format names.
+            </summary>
+        </member>
+        <member name="F:Kapture.LogFormat.CSV">
+            <summary>
+            Log format: CSV.
+            </summary>
+        </member>
+        <member name="F:Kapture.LogFormat.JSON">
+            <summary>
+            Log Format: JSON.
+            </summary>
+        </member>
+        <member name="F:Kapture.LogFormat.ChatLog">
+            <summary>
+            Log Format: Chat Log.
+            </summary>
+        </member>
+        <member name="M:Kapture.LogFormat.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.LogFormat"/> class.
+            </summary>
+        </member>
+        <member name="P:Kapture.LogFormat.Code">
+            <summary>
+            Gets log format code.
+            </summary>
+        </member>
+        <member name="P:Kapture.LogFormat.Name">
+            <summary>
+            Gets log format name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LogFormat.Extension">
+            <summary>
+            Gets log format extension.
+            </summary>
+        </member>
+        <member name="P:Kapture.LogFormat.SchemaVersion">
+            <summary>
+            Gets log format schema version.
+            </summary>
+        </member>
+        <member name="M:Kapture.LogFormat.GetFileName(Kapture.LogFormat)">
+            <summary>
+            Get log file name based on format.
+            </summary>
+            <param name="logFormat">format.</param>
+            <returns>file name.</returns>
+        </member>
+        <member name="M:Kapture.LogFormat.GetLogFormatByCode(System.Int32)">
+            <summary>
+            Get Log format by code.
+            </summary>
+            <param name="code">log code.</param>
+            <returns>log format.</returns>
+        </member>
+        <member name="M:Kapture.LogFormat.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Kapture.LogKind">
+            <summary>
+            LogKind.
+            </summary>
+        </member>
+        <member name="T:Kapture.LootEvent">
+            <summary>
+            Loot Event parsed from chat messages.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.Timestamp">
+            <summary>
+            Gets or sets unix timestamp of event.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.LootMessage">
+            <summary>
+            Gets or sets loot message.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.LootEventType">
+            <summary>
+            Gets or sets loot event type.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.LootEventTypeName">
+            <summary>
+            Gets or sets loot event type name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.IsLocalPlayer">
+            <summary>
+            Gets or sets a value indicating whether event is for local player.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.PlayerName">
+            <summary>
+            Gets or sets player name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.World">
+            <summary>
+            Gets or sets player home world name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.Roll">
+            <summary>
+            Gets or sets roll.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.TerritoryTypeId">
+            <summary>
+            Gets or sets territory type id.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.ContentId">
+            <summary>
+            Gets or sets content id.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.LootEventId">
+            <summary>
+            Gets or sets loot event id.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.ItemName">
+            <summary>
+            Gets or sets item name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootEvent.ItemNameAbbreviated">
+            <summary>
+            Gets or sets item name abbreviated.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootEvent.GetCsvHeadings">
+            <summary>
+            Get CSV Headings.
+            </summary>
+            <returns>string of csv headings.</returns>
+        </member>
+        <member name="M:Kapture.LootEvent.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.LootEvent.ToCsv">
+            <summary>
+            Convert object to csv as string.
+            </summary>
+            <returns>csv as string.</returns>
+        </member>
+        <member name="T:Kapture.LootEventType">
+            <summary>
+            LootEventType.
+            </summary>
+        </member>
+        <member name="T:Kapture.LootMessage">
+            <summary>
+            Loot message.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.XivChatType">
+            <summary>
+            Gets or sets chat type.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.LogKind">
+            <summary>
+            Gets or sets log kind.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.LogKindName">
+            <summary>
+            Gets or sets log kind name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.LootMessageType">
+            <summary>
+            Gets or sets loot message type.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.LootMessageTypeName">
+            <summary>
+            Gets or sets loot message type name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.Message">
+            <summary>
+            Gets or sets message as string.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.MessageParts">
+            <summary>
+            Gets or sets message parts from payload.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.ItemId">
+            <summary>
+            Gets or sets itemId.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.ItemName">
+            <summary>
+            Gets or sets item name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.Item">
+            <summary>
+            Gets or sets item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.Player">
+            <summary>
+            Gets or sets playerPayload.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootMessage.IsHq">
+            <summary>
+            Gets or sets a value indicating whether hq.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootMessage.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.LootMessageType">
+            <summary>
+            Loot message type.
+            </summary>
+        </member>
+        <member name="T:Kapture.LootRoll">
+            <summary>
+            Loot roll.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.Timestamp">
+            <summary>
+            Gets or sets time stamp.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.ItemId">
+            <summary>
+            Gets item Id.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.ItemName">
+            <summary>
+            Gets item name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.ItemNameAbbreviated">
+            <summary>
+            Gets item name abbreviated.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.Rollers">
+            <summary>
+            Gets list of rollers.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.RollerCount">
+            <summary>
+            Gets or sets roller count.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.Winner">
+            <summary>
+            Gets or sets winner.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoll.IsWon">
+            <summary>
+            Gets or sets a value indicating whether gets or sets winner status.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootRoll.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Kapture.LootRoller">
+            <summary>
+            Loot roller.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.PlayerName">
+            <summary>
+            Gets or sets player name.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.RollColor">
+            <summary>
+            Gets or sets roll color.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.Roll">
+            <summary>
+            Gets or sets roll.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.HasRolled">
+            <summary>
+            Gets or sets a value indicating whether they've casted lot yet.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.IsWinner">
+            <summary>
+            Gets or sets a value indicating whether is winner.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.IsReminderSent">
+            <summary>
+            Gets or sets a value indicating whether alert roll has been made.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootRoller.IsLocalPlayer">
+            <summary>
+            Gets a value indicating whether is local player.
+            </summary>
+        </member>
+        <member name="T:Kapture.NameFormat">
+            <summary>
+            Name format.
+            </summary>
+        </member>
+        <member name="F:Kapture.NameFormat.NameFormats">
+            <summary>
+            Name formats.
+            </summary>
+        </member>
+        <member name="F:Kapture.NameFormat.NameFormatNames">
+            <summary>
+            Name format names.
+            </summary>
+        </member>
+        <member name="F:Kapture.NameFormat.FullName">
+            <summary>
+            Name format: full name.
+            </summary>
+        </member>
+        <member name="F:Kapture.NameFormat.SurnameAbbreviated">
+            <summary>
+            Name format: surname abbreviated.
+            </summary>
+        </member>
+        <member name="F:Kapture.NameFormat.ForenameAbbreviated">
+            <summary>
+            Name format: forename abbreviated.
+            </summary>
+        </member>
+        <member name="F:Kapture.NameFormat.Initials">
+            <summary>
+            Name format: initials.
+            </summary>
+        </member>
+        <member name="M:Kapture.NameFormat.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.NameFormat"/> class.
+            </summary>
+        </member>
+        <member name="P:Kapture.NameFormat.Code">
+            <summary>
+            Gets name format code.
+            </summary>
+        </member>
+        <member name="P:Kapture.NameFormat.Name">
+            <summary>
+            Gets name format name.
+            </summary>
+        </member>
+        <member name="M:Kapture.NameFormat.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.KaptureConfig">
+            <summary>
+            Kapture config.
+            </summary>
+        </member>
+        <member name="F:Kapture.KaptureConfig.RollMonitorAddedTimeout">
+            <summary>
+            Timeout for added items.
+            </summary>
+        </member>
+        <member name="F:Kapture.KaptureConfig.RollMonitorObtainedTimeout">
+            <summary>
+            Timeout for obtained items.
+            </summary>
+        </member>
+        <member name="F:Kapture.KaptureConfig.RollMonitorProcessFrequency">
+            <summary>
+            Frequency to process queued loot messages.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.FreshInstall">
+            <summary>
+            Gets or sets a value indicating whether fresh install.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.Enabled">
+            <summary>
+            Gets or sets a value indicating whether enabled.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.PluginLanguage">
+            <summary>
+            Gets or sets plugin language.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.ShowLootOverlay">
+            <summary>
+            Gets or sets a value indicating whether to show loot overlay.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.ShowRollMonitorOverlay">
+            <summary>
+            Gets or sets a value indicating whether to show roll monitor.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.AddEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable add loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.CastEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable cast loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.CraftEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable craft loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.DesynthEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable desynth loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.DiscardEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable discard loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.GatherEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable gather loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.GreedEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable greed loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.LostEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable lost loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.NeedEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable need loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.ObtainEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable obtain loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.PurchaseEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable purchase loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SearchEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable search loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SellEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable sell loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.UseEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable use loot event.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RestrictInCombat">
+            <summary>
+            Gets or sets a value indicating whether to restrict in combat.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RestrictToContent">
+            <summary>
+            Gets or sets a value indicating whether to restrict in content.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RestrictToCustomContent">
+            <summary>
+            Gets or sets a value indicating whether to restrict to specific list of content.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RestrictToHighEndDuty">
+            <summary>
+            Gets or sets a value indicating whether to restrict to high end duty content.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.PermittedContent">
+            <summary>
+            Gets or sets list of permitted content.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.PermittedItems">
+            <summary>
+            Gets or sets list of permitted items.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.WatchListItems">
+            <summary>
+            Gets or sets list of watch list items.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RestrictToCustomItems">
+            <summary>
+            Gets or sets a value indicating whether to restrict to list of items.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.WriteToLogFrequency">
+            <summary>
+            Gets or sets frequency to write to log.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.LoggingEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable logging.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SendHTTPEnabled">
+            <summary>
+            Gets or sets a value indicating whether to send loot to HTTP.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SendHTTPFrequency">
+            <summary>
+            Gets or sets frequency to send http messages.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.HTTPCustomJSON">
+            <summary>
+            Gets or sets custom json to send.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.HTTPEndpoint">
+            <summary>
+            Gets or sets endpoint.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SendHTTPRequestTimeout">
+            <summary>
+            Gets or sets timeout for sending HTTP messages.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SendDiscordEnabled">
+            <summary>
+            Gets or sets a value indicating whether to send loot to discord.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SendDiscordFrequency">
+            <summary>
+            Gets or sets frequency to send discord messages.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.SelfOnly">
+            <summary>
+            Gets or sets a value indicating whether to restrict to local player events.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.ChatNameFormat">
+            <summary>
+            Gets or sets chat name format.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.LogFormat">
+            <summary>
+            Gets or sets log format.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RollDisplayMode">
+            <summary>
+            Gets or sets roll display mode.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.LootDisplayMode">
+            <summary>
+             Gets or sets loot display mode.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.DebugLoggingEnabled">
+            <summary>
+            Gets or sets a value indicating whether to enable debug logging to build regex.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.Version">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KaptureConfig.SendRollReminder">
+            <summary>
+            Gets or sets a value indicating whether gets or sets a value indicating to send alert.
+            </summary>
+        </member>
+        <member name="P:Kapture.KaptureConfig.RollReminderTime">
+            <summary>
+            Gets or sets the time in ms for alert warning.
+            </summary>
+        </member>
+        <member name="T:Kapture.IKapturePlugin">
+            <summary>
+            Kapture plugin.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.Configuration">
+            <summary>
+            Gets kapture plugin configuration.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.IsInitializing">
+            <summary>
+            Gets a value indicating whether plugin is initializing.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.LootEvents">
+            <summary>
+            Gets list of loot events.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.PluginDataManager">
+            <summary>
+            Gets data manager.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.LootRolls">
+            <summary>
+            Gets loot rolls.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.LootRollsDisplay">
+            <summary>
+            Gets or sets loot rolls for display.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.CurrentPartyList">
+            <summary>
+            Gets or sets current party list.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.InContent">
+            <summary>
+            Gets a value indicating whether in content.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.IsRolling">
+            <summary>
+            Gets or sets a value indicating whether is rolling.
+            </summary>
+        </member>
+        <member name="P:Kapture.IKapturePlugin.RollMonitor">
+            <summary>
+            Gets roll monitor.
+            </summary>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.GetSeIcon(Dalamud.Game.Text.SeIconChar)">
+            <summary>
+            Get SE Icon.
+            </summary>
+            <param name="seIconChar">char.</param>
+            <returns>icon.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.GetLocalPlayerName">
+            <summary>
+            Get local player name.
+            </summary>
+            <returns>local player name.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.GetLocalPlayerWorld">
+            <summary>
+            Get local player home world name.
+            </summary>
+            <returns>local player home world name.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.ClientLanguage">
+            <summary>
+            Client language.
+            </summary>
+            <returns>client language.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.FormatPlayerName(System.Int32,System.String)">
+            <summary>
+            Format player name.
+            </summary>
+            <param name="nameFormatCode">format to use.</param>
+            <param name="playerName">unformatted player name.</param>
+            <returns>formatted player name.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.IsLoggedIn">
+            <summary>
+            Gets indicator if is logged in.
+            </summary>
+            <returns>indicator if logged in.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.InCombat">
+            <summary>
+            Gets indicator if in combat.
+            </summary>
+            <returns>indicator if in combat.</returns>
+        </member>
+        <member name="M:Kapture.IKapturePlugin.GetPartyMembers">
+            <summary>
+            Get party members.
+            </summary>
+            <returns>list of party members.</returns>
+        </member>
+        <member name="T:Kapture.KapturePlugin">
+            <inheritdoc cref="T:Kapture.IKapturePlugin" />
+        </member>
+        <member name="M:Kapture.KapturePlugin.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.KapturePlugin"/> class.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.PluginInterface">
+            <summary>
+            Gets pluginInterface.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.DataManager">
+            <summary>
+            Gets data manager.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.CommandManager">
+            <summary>
+            Gets command manager.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ClientState">
+            <summary>
+            Gets client state.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.Chat">
+            <summary>
+            Gets chat gui.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.Condition">
+            <summary>
+            Gets condition.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.PartyList">
+            <summary>
+            Gets party list.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.Framework">
+            <summary>
+            Gets framework.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.CurrentPartyList">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.RollMonitor">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootProcessor">
+            <summary>
+            Gets loot processor.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootLogger">
+            <summary>
+            Gets or sets loot Logger.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootHTTP">
+            <summary>
+            Gets or sets HTTP service.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootDiscord">
+            <summary>
+            Gets or sets discord service.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ItemCategoryNames">
+            <summary>
+            Gets or sets list of item category names.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ItemLists">
+            <summary>
+            Gets or sets list of items for settings.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.IsInitializing">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootEvents">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootRolls">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.LootRollsDisplay">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.PluginDataManager">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.Configuration">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.WindowManager">
+            <summary>
+            Gets or sets window manager.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ContentIds">
+            <summary>
+            Gets or sets list of content ids.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ContentNames">
+            <summary>
+            Gets or sets list of content names.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ItemIds">
+            <summary>
+            Gets or sets list of item ids.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ItemNames">
+            <summary>
+            Gets or sets list of item names.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.ItemCategoryIds">
+            <summary>
+            Gets or sets list of item category ids.
+            </summary>
+        </member>
+        <member name="P:Kapture.KapturePlugin.InContent">
+            <inheritdoc />
+        </member>
+        <member name="P:Kapture.KapturePlugin.IsRolling">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.SaveConfig">
+            <summary>
+            Save configuration.
+            </summary>
+        </member>
+        <member name="M:Kapture.KapturePlugin.GetSeIcon(Dalamud.Game.Text.SeIconChar)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.GetLocalPlayerName">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.GetLocalPlayerWorld">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.ClientLanguage">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.FormatPlayerName(System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.IsLoggedIn">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.LoadTestData">
+            <summary>
+            Load test data.
+            </summary>
+        </member>
+        <member name="M:Kapture.KapturePlugin.ClearData">
+            <summary>
+            Clear current data.
+            </summary>
+        </member>
+        <member name="M:Kapture.KapturePlugin.InCombat">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.KapturePlugin.Dispose">
+            <summary>
+            Dispose plugin.
+            </summary>
+        </member>
+        <member name="M:Kapture.KapturePlugin.GetPartyMembers">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.LootDiscord">
+            <summary>
+            Send loot messages to discord via plugin.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootDiscord.#ctor(Kapture.KapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.LootDiscord"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.LootDiscord.SendToDiscordQueue(Kapture.LootEvent)">
+            <summary>
+            Send Loot to Discord Endpoint queue.
+            </summary>
+            <param name="lootEvent">loot event to send.</param>
+        </member>
+        <member name="M:Kapture.LootDiscord.Dispose">
+            <summary>
+            Dispose service.
+            </summary>
+        </member>
+        <member name="T:Kapture.LootHTTP">
+            <summary>
+            Send loot messages to http endpoint.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootHTTP.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.LootHTTP"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.LootHTTP.SendToHTTPQueue(Kapture.LootEvent)">
+            <summary>
+            Send Loot to HTTP Endpoint queue.
+            </summary>
+            <param name="lootEvent">loot event to send.</param>
+        </member>
+        <member name="M:Kapture.LootHTTP.Dispose">
+            <summary>
+            Dispose service.
+            </summary>
+        </member>
+        <member name="T:Kapture.LootLogger">
+            <summary>
+            Send loot messages to log file.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootLogger.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.LootLogger"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.LootLogger.SetLogFormat">
+            <summary>
+            Define log format.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootLogger.LogLoot(Kapture.LootEvent)">
+            <summary>
+            Log loot message to file.
+            </summary>
+            <param name="lootEvent">loot event to log.</param>
+        </member>
+        <member name="M:Kapture.LootLogger.Dispose">
+            <summary>
+            Dispose service.
+            </summary>
+        </member>
+        <member name="T:Kapture.DELootProcessor">
+            <summary>
+            Process german loot messages.
+            </summary>
+        </member>
+        <member name="M:Kapture.DELootProcessor.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.DELootProcessor"/> class.
+            </summary>
+            <param name="kapturePlugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.DELootProcessor.CompileRegex">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessSystem(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessLocalPlayerObtainLoot(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessLocalPlayerRoll(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessOtherPlayerObtainLoot(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessOtherPlayerRoll(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessAddDesynthSell(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessLocalPlayerUse(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessLocalPlayerSpecialObtain(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessOtherPlayerUse(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessFastCraft(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessGather(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessLocalPlayerSynthesize(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.DELootProcessor.ProcessOtherPlayerSynthesize(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.ENLootProcessor">
+            <summary>
+            English loot processor.
+            </summary>
+        </member>
+        <member name="M:Kapture.ENLootProcessor.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.ENLootProcessor"/> class.
+            </summary>
+            <param name="kapturePlugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.ENLootProcessor.CompileRegex">
+            <inheritdoc/>
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessSystem(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessLocalPlayerObtainLoot(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessLocalPlayerRoll(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessOtherPlayerObtainLoot(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessOtherPlayerRoll(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessAddDesynthSell(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessLocalPlayerUse(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessLocalPlayerSpecialObtain(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessOtherPlayerUse(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessFastCraft(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessGather(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessLocalPlayerSynthesize(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ENLootProcessor.ProcessOtherPlayerSynthesize(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.LootProcessor">
+            <summary>
+            Process loot events.
+            </summary>
+        </member>
+        <member name="F:Kapture.LootProcessor.Plugin">
+            <summary>
+            Kapture plugin.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootProcessor.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.LootProcessor"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemSearchRegex">
+            <summary>
+            Gets or sets regex to search for item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemAddedRegex">
+            <summary>
+            Gets or sets regex to add item to loot table.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemLostRegex">
+            <summary>
+            Gets or sets regex to lost item in loot table.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemPurchasedRegex">
+            <summary>
+            Gets or sets regex for purchase item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemDiscardedRegex">
+            <summary>
+            Gets or sets regex to discard item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemObtainedFromDesynthRegex">
+            <summary>
+            Gets or sets regex to obtain item from desynth.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemObtainedFromMateriaRegex">
+            <summary>
+            Gets or sets regex to obtain item from materia.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessSystemLostMateriaRegex">
+            <summary>
+            Gets or sets regex for lost materia.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessLocalPlayerRollCastRegex">
+            <summary>
+            Gets or sets regex for local player casting lot.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessLocalPlayerRollNeedRegex">
+            <summary>
+            Gets or sets regex for local player rolling need.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessLocalPlayerRollGreedRegex">
+            <summary>
+            Gets or sets regex for local player rolling greed.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessOtherPlayerRollCastRegex">
+            <summary>
+            Gets or sets regex for non-local player casting lot.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessOtherPlayerRollNeedRegex">
+            <summary>
+            Gets or sets regex for non-local player rolling need.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessOtherPlayerRollGreedRegex">
+            <summary>
+            Gets or sets regex for non-local player rolling greed.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessAddDesynthSellDesynthRegex">
+            <summary>
+            Gets or sets regex for desynth and a few other scenarios.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessAddDesynthSellOrchestrationRegex">
+            <summary>
+            Gets or sets regex for desynth and a few other scenarios for orchestration rolls.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessAddDesynthSellSellRegex">
+            <summary>
+            Gets or sets regex for desynth and a few other scenarios.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessLocalPlayerUseRegex">
+            <summary>
+            Gets or sets regex for local player using an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessOtherPlayerUseRegex">
+            <summary>
+            Gets or sets regex for non-local player using an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessFastCraftUseMateriaRegex">
+            <summary>
+            Gets or sets regex for fast craft or using materia.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessFastCraftExtractMateriaRegex">
+            <summary>
+            Gets or sets regex for fast craft or extracting materia.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessFastCraftCraftRegex">
+            <summary>
+            Gets or sets regex for fast crafting an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessGatherMinBtnRegex">
+            <summary>
+            Gets or sets regex for gathering an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessGatherFshRegex">
+            <summary>
+            Gets or sets regex for fishing for an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessLocalPlayerSynthesizeRegex">
+            <summary>
+            Gets or sets regex for local player synthesizing an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.ProcessOtherPlayerSynthesizeRegex">
+            <summary>
+            Gets or sets regex for non-local player synthesizing an item.
+            </summary>
+        </member>
+        <member name="P:Kapture.LootProcessor.RollRegex">
+            <summary>
+            Gets or sets regex for a player roll.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessLoot(Kapture.LootMessage)">
+            <summary>
+            Process loot message.
+            </summary>
+            <param name="message">message from chat.</param>
+            <returns>loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.IsEnabledEvent(Kapture.LootEvent)">
+            <summary>
+            Check if event is enabled in configuration.
+            </summary>
+            <param name="lootEvent">loot event.</param>
+            <returns>indicator if event is enabled.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.BuildRegex(System.String)">
+            <summary>
+            Build regex expression.
+            </summary>
+            <param name="pattern">regex pattern.</param>
+            <returns>Precompiled regex.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.CompileRegex">
+            <summary>
+            Compile regex.
+            </summary>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessSystem(Kapture.LootMessage)">
+            <summary>
+            Process system message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessLocalPlayerObtainLoot(Kapture.LootMessage)">
+            <summary>
+            Process local player obtain loot message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessLocalPlayerRoll(Kapture.LootMessage)">
+            <summary>
+            Process local player roll message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessOtherPlayerObtainLoot(Kapture.LootMessage)">
+            <summary>
+            Process non-local player obtain loot message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessOtherPlayerRoll(Kapture.LootMessage)">
+            <summary>
+            Process non-local player roll message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessAddDesynthSell(Kapture.LootMessage)">
+            <summary>
+            Process add/desynth/sell message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessLocalPlayerUse(Kapture.LootMessage)">
+            <summary>
+            Process local player use message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessLocalPlayerSpecialObtain(Kapture.LootMessage)">
+            <summary>
+            Process local player special obtain message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessOtherPlayerUse(Kapture.LootMessage)">
+            <summary>
+            Process non-local player use message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessFastCraft(Kapture.LootMessage)">
+            <summary>
+            Process fast craft message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessGather(Kapture.LootMessage)">
+            <summary>
+            Process gather message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessLocalPlayerSynthesize(Kapture.LootMessage)">
+            <summary>
+            Process non-local player synthesis message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="M:Kapture.LootProcessor.ProcessOtherPlayerSynthesize(Kapture.LootMessage)">
+            <summary>
+            Process other player synthesis message.
+            </summary>
+            <param name="message">chat message.</param>
+            <returns>parsed loot event.</returns>
+        </member>
+        <member name="T:Kapture.ZHLootProcessor">
+            <summary>
+            Process chinese loot messages.
+            </summary>
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.ZHLootProcessor"/> class.
+            </summary>
+            <param name="kapturePlugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.CompileRegex">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessSystem(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessLocalPlayerObtainLoot(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessLocalPlayerRoll(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessOtherPlayerObtainLoot(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessOtherPlayerRoll(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessAddDesynthSell(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessLocalPlayerUse(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessLocalPlayerSpecialObtain(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessOtherPlayerUse(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessFastCraft(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessGather(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessLocalPlayerSynthesize(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.ZHLootProcessor.ProcessOtherPlayerSynthesize(Kapture.LootMessage)">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.PluginDataManager">
+            <summary>
+            Data manager.
+            </summary>
+        </member>
+        <member name="F:Kapture.PluginDataManager.Plugin">
+            <summary>
+            Kapture plugin.
+            </summary>
+        </member>
+        <member name="M:Kapture.PluginDataManager.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.PluginDataManager"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="P:Kapture.PluginDataManager.DataPath">
+            <summary>
+            Gets or sets data path.
+            </summary>
+        </member>
+        <member name="M:Kapture.PluginDataManager.CreateDataFile(System.String)">
+            <summary>
+            Create data file.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+        </member>
+        <member name="M:Kapture.PluginDataManager.DoesDataFileExist(System.String)">
+            <summary>
+            Check if data file exists.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+            <returns>indicator if exists.</returns>
+        </member>
+        <member name="M:Kapture.PluginDataManager.AppendDataStr(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Append data string.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+            <param name="data">list of strings to append.</param>
+        </member>
+        <member name="M:Kapture.PluginDataManager.CreateDataDirectory">
+            <summary>
+            Create data directory.
+            </summary>
+        </member>
+        <member name="M:Kapture.PluginDataManager.InitDataFiles(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Init data files.
+            </summary>
+            <param name="fileNames">list of file names.</param>
+            <param name="force">indicator to overwrite files.</param>
+        </member>
+        <member name="M:Kapture.PluginDataManager.SaveDataList(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Save data list.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+            <param name="data">list of strings to append.</param>
+        </member>
+        <member name="M:Kapture.PluginDataManager.SaveDataStr(System.String,System.String)">
+            <summary>
+            Save data string.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+            <param name="data">list of strings to append.</param>
+        </member>
+        <member name="M:Kapture.PluginDataManager.ReadDataStr(System.String)">
+            <summary>
+            Read data string.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+            <returns>data read.</returns>
+        </member>
+        <member name="M:Kapture.PluginDataManager.ReadDataList(System.String)">
+            <summary>
+            Read data list.
+            </summary>
+            <param name="fileName">filename of data file.</param>
+            <returns>data read.</returns>
+        </member>
+        <member name="T:Kapture.RollMonitor">
+            <summary>
+            Roll monitor service.
+            </summary>
+        </member>
+        <member name="F:Kapture.RollMonitor.LootEvents">
+            <summary>
+            Queue of loot events.
+            </summary>
+        </member>
+        <member name="M:Kapture.RollMonitor.#ctor(Kapture.IKapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.RollMonitor"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.RollMonitor.Dispose">
+            <summary>
+            Dispose service.
+            </summary>
+        </member>
+        <member name="M:Kapture.RollMonitor.UpdateRolls">
+            <summary>
+            Update queued rolls.
+            </summary>
+        </member>
+        <member name="M:Kapture.RollMonitor.ProcessRoll(Kapture.LootEvent)">
+            <summary>
+            Process new roll.
+            </summary>
+            <param name="lootEvent">loot event.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">unrecognized loot event type.</exception>
+        </member>
+        <member name="T:Kapture.TestData">
+            <summary>
+            Test data for demo purposes.
+            </summary>
+        </member>
+        <member name="M:Kapture.TestData.LoadTestData(Kapture.IKapturePlugin)">
+            <summary>
+            Load test data.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="T:Kapture.LootWindow">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.LootWindow.#ctor(Kapture.KapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.LootWindow"/> class.
+            </summary>
+            <param name="plugin">plugin.</param>
+        </member>
+        <member name="M:Kapture.LootWindow.Draw">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.LootWindow.ShowLootWindow">
+            <summary>
+            Checks whether should display loot window.
+            </summary>
+            <returns>indicator whether to show loot window.</returns>
+        </member>
+        <member name="T:Kapture.PluginWindow">
+            <summary>
+            Plugin window which extends window with Kapture.
+            </summary>
+        </member>
+        <member name="M:Kapture.PluginWindow.#ctor(Kapture.KapturePlugin,System.String,ImGuiNET.ImGuiWindowFlags)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.PluginWindow"/> class.
+            </summary>
+            <param name="plugin">Kapture plugin.</param>
+            <param name="windowName">Name of the window.</param>
+            <param name="flags">ImGui flags.</param>
+        </member>
+        <member name="P:Kapture.PluginWindow.Plugin">
+            <summary>
+            Gets Kapture for window.
+            </summary>
+        </member>
+        <member name="M:Kapture.PluginWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="T:Kapture.RollWindow">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.RollWindow.#ctor(Kapture.KapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.RollWindow"/> class.
+            </summary>
+            <param name="plugin">plugin.</param>
+        </member>
+        <member name="M:Kapture.RollWindow.Draw">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.RollWindow.ShowRollWindow">
+            <summary>
+            Checks whether should display roll window.
+            </summary>
+            <returns>indicator whether to show roll window.</returns>
+        </member>
+        <member name="T:Kapture.SettingsWindow">
+            <inheritdoc />
+        </member>
+        <member name="M:Kapture.SettingsWindow.#ctor(Kapture.KapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.SettingsWindow"/> class.
+            </summary>
+            <param name="plugin">kapture plugin.</param>
+        </member>
+        <member name="M:Kapture.SettingsWindow.Draw">
+            <inheritdoc />
+        </member>
+        <member name="T:Kapture.WindowManager">
+            <summary>
+            Window manager to hold plugin windows and window system.
+            </summary>
+        </member>
+        <member name="M:Kapture.WindowManager.#ctor(Kapture.KapturePlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Kapture.WindowManager"/> class.
+            </summary>
+            <param name="kapturePlugin">Kapture plugin.</param>
+        </member>
+        <member name="P:Kapture.WindowManager.LootWindow">
+            <summary>
+            Gets loot Kapture window.
+            </summary>
+        </member>
+        <member name="P:Kapture.WindowManager.RollWindow">
+            <summary>
+            Gets roll Kapture window.
+            </summary>
+        </member>
+        <member name="P:Kapture.WindowManager.SettingsWindow">
+            <summary>
+            Gets config Kapture window.
+            </summary>
+        </member>
+        <member name="M:Kapture.WindowManager.AddWindows">
+            <summary>
+            Add windows after plugin start.
+            </summary>
+        </member>
+        <member name="M:Kapture.WindowManager.Dispose">
+            <summary>
+            Dispose plugin windows and commands.
+            </summary>
+        </member>
+    </members>
+</doc>

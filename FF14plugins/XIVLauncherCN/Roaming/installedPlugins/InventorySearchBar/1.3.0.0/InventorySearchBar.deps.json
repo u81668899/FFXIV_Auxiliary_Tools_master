@@ -1,0 +1,156 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "InventorySearchBar/1.0.0": {
+        "dependencies": {
+          "CriticalCommonLib": "1.0.0",
+          "DalamudPackager": "2.1.10"
+        },
+        "runtime": {
+          "InventorySearchBar.dll": {}
+        }
+      },
+      "CSVFile/3.1.0": {
+        "runtime": {
+          "lib/net5.0/CSVFile.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CsvHelper/30.0.1": {
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "assemblyVersion": "30.0.0.0",
+            "fileVersion": "30.0.1.0"
+          }
+        }
+      },
+      "Dalamud.ContextMenu/1.2.2": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.ContextMenu.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.0"
+          }
+        }
+      },
+      "DalamudPackager/2.1.10": {},
+      "NaturalSort.Extension/3.2.0": {
+        "runtime": {
+          "lib/net6.0/NaturalSort.Extension.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "SerialQueue/2.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/SerialQueue.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "System.Reactive/5.0.0": {
+        "runtime": {
+          "lib/net5.0/System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
+      "CriticalCommonLib/1.0.0": {
+        "dependencies": {
+          "Dalamud.ContextMenu": "1.2.2",
+          "LuminaSupplemental.Excel": "6.0.2",
+          "NaturalSort.Extension": "3.2.0",
+          "SerialQueue": "2.1.0",
+          "System.Reactive": "5.0.0"
+        },
+        "runtime": {
+          "CriticalCommonLib.dll": {}
+        }
+      },
+      "LuminaSupplemental.Excel/6.0.2": {
+        "dependencies": {
+          "CSVFile": "3.1.0",
+          "CsvHelper": "30.0.1"
+        },
+        "runtime": {
+          "LuminaSupplemental.Excel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InventorySearchBar/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CSVFile/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yz/FptkwDL0bxhaxoyrFPI5SyxUUfuZtbH1E2yLiHHFZFFrSXNnWJHfXSt5Anvy1gWpHCLpC520Bxy6G/Opp1g==",
+      "path": "csvfile/3.1.0",
+      "hashPath": "csvfile.3.1.0.nupkg.sha512"
+    },
+    "CsvHelper/30.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
+      "path": "csvhelper/30.0.1",
+      "hashPath": "csvhelper.30.0.1.nupkg.sha512"
+    },
+    "Dalamud.ContextMenu/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k+bCV7Xyxx/MCWFIEucSkQxQ9w+Zzz/FwIFOkSAh+13/F8IngivbRuL5NpDz9eAhlqnkifcPIycIKSauxNWHUg==",
+      "path": "dalamud.contextmenu/1.2.2",
+      "hashPath": "dalamud.contextmenu.1.2.2.nupkg.sha512"
+    },
+    "DalamudPackager/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S6NrvvOnLgT4GDdgwuKVJjbFo+8ZEj+JsEYk9ojjOR/MMfv1dIFpT8aRJQfI24rtDcw1uF+GnSSMN4WW1yt7fw==",
+      "path": "dalamudpackager/2.1.10",
+      "hashPath": "dalamudpackager.2.1.10.nupkg.sha512"
+    },
+    "NaturalSort.Extension/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E6DE1xnwGYIwvxMeqW/TwJ882q+NL+TBJtW1x+u5u77HMCupL9qBQUkQikFcZYH0oSBr47qLpC/UYx4atTLdQA==",
+      "path": "naturalsort.extension/3.2.0",
+      "hashPath": "naturalsort.extension.3.2.0.nupkg.sha512"
+    },
+    "SerialQueue/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rmQcrFXgcrqT9M6+xdxAK/JWx1vFuCRT8fTdce4ALdze2/8N5yMRW9Vmkresw+JpL+JC8zuC1HfDkrfVgBUIqA==",
+      "path": "serialqueue/2.1.0",
+      "hashPath": "serialqueue.2.1.0.nupkg.sha512"
+    },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
+    },
+    "CriticalCommonLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LuminaSupplemental.Excel/6.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

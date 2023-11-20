@@ -1,0 +1,39 @@
+{
+  "$type": "Browsingway.Configuration, Browsingway",
+  "FrameTransportMode": 1,
+  "Inlays": [
+    {
+      "$type": "Browsingway.InlayConfiguration, Browsingway",
+      "ClickThrough": false,
+      "Framerate": 60,
+      "Guid": "d1c8f990-a979-40cb-a95f-f9653a9cfad6",
+      "Hidden": false,
+      "Locked": true,
+      "Name": "新的嵌入式窗口",
+      "Opacity": 100.0,
+      "TypeThrough": false,
+      "Url": "http://cninact.diemoe.net/cactbot/ui/config/config.html?OVERLAY_WS=wss://127.0.0.1:10501/ws",
+      "Zoom": 100.0,
+      "Disabled": false,
+      "Muted": false,
+      "ActOptimizations": true
+    },
+    {
+      "$type": "Browsingway.InlayConfiguration, Browsingway",
+      "ClickThrough": false,
+      "Framerate": 60,
+      "Guid": "e4ce7891-a2e1-470e-81e8-e5b8b89ebb15",
+      "Hidden": false,
+      "Locked": false,
+      "Name": "New inlay",
+      "Opacity": 100.0,
+      "TypeThrough": false,
+      "Url": "http://cninact.diemoe.net/cactbot/ui/raidboss/raidboss.html?OVERLAY_WS=wss://127.0.0.1:10501/ws",
+      "Zoom": 100.0,
+      "Disabled": false,
+      "Muted": false,
+      "ActOptimizations": false
+    }
+  ],
+  "Version": 0
+}

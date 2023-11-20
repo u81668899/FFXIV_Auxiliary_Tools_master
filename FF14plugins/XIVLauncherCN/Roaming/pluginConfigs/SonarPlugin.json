@@ -1,0 +1,226 @@
+{
+  "$type": "SonarPlugin.Config.SonarConfiguration, SonarPlugin",
+  "SonarConfig": {
+    "$type": "Sonar.Config.SonarConfig, Sonar",
+    "Version": 1,
+    "LogLevel": 2,
+    "HuntConfig": {
+      "$type": "Sonar.Config.HuntConfig, Sonar",
+      "Jurisdiction": {
+        "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.ExpansionPack, Sonar],[System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib]], System.Private.CoreLib",
+        "Unknown": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 4,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        },
+        "ARealmReborn": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 2,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        },
+        "Heavensward": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 2,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        },
+        "Stormblood": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 1,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        },
+        "Shadowbringers": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 1,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        },
+        "Endwalker": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 4,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        }
+      },
+      "JurisdictionOverride": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib"
+      },
+      "Contribute": true,
+      "TrackAll": false
+    },
+    "FateConfig": {
+      "$type": "Sonar.Config.FateConfig, Sonar",
+      "DefaultJurisdiction": 1,
+      "Jurisdiction": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+        "1763": 5,
+        "1855": 5,
+        "1464": 5,
+        "1432": 5
+      },
+      "Contribute": true,
+      "TrackAll": false
+    },
+    "ReceiveJurisdiction": 5
+  },
+  "Colors": {
+    "$type": "SonarPlugin.Config.SonarConfigurationColors, SonarPlugin",
+    "HuntHealthy": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.0,
+      "Y": 1.0,
+      "Z": 0.0,
+      "W": 1.0
+    },
+    "HuntPulled": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.6,
+      "Z": 0.0,
+      "W": 1.0
+    },
+    "HuntDead": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.0,
+      "Z": 0.0,
+      "W": 1.0
+    },
+    "FateRunning": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.0,
+      "Y": 0.6,
+      "Z": 1.0,
+      "W": 1.0
+    },
+    "FateProgress": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.0,
+      "Y": 0.8,
+      "Z": 1.0,
+      "W": 1.0
+    },
+    "FateComplete": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.0,
+      "Y": 1.0,
+      "Z": 1.0,
+      "W": 1.0
+    },
+    "FateFailed": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 0.0,
+      "Z": 0.0,
+      "W": 1.0
+    },
+    "FatePreparation": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0,
+      "W": 1.0
+    },
+    "FateUnknown": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.467,
+      "Y": 0.467,
+      "Z": 0.467,
+      "W": 1.0
+    }
+  },
+  "OverlayVisibleByDefault": false,
+  "EnableLockedOverlays": false,
+  "HideTitlebar": true,
+  "WindowClickThrough": false,
+  "TabBarClickThrough": true,
+  "ListClickThrough": true,
+  "EnableGameChatReports": true,
+  "EnableGameChatReportsDeaths": true,
+  "EnableGameChatItalicFont": false,
+  "EnableGameChatCrossworldIcon": true,
+  "HuntOutputChannel": 16,
+  "Opacity": 0.75,
+  "SoundVolume": 0.5,
+  "Language": 0,
+  "DisableChatInDuty": false,
+  "DisableSoundInDuty": false,
+  "AllSRankSettings": false,
+  "AdvancedHuntReportSettings": true,
+  "DisplayHuntDeadTimer": 300,
+  "DisplayHuntUpdateTimer": 72000,
+  "DisplayHuntUpdateTimerOther": 180,
+  "HuntsDisplayLimit": 100,
+  "DisplayFateUpdateTimer": 1800,
+  "DisplayFateDeadTimer": 300,
+  "FatesDisplayLimit": 100,
+  "PlaySoundSRanks": true,
+  "SoundFileSRanks": "Linkshell Transmission",
+  "PlaySoundARanks": false,
+  "SoundFileARanks": "Notification",
+  "SendFateToChat": [
+    1763,
+    1855,
+    1432,
+    1464,
+    1103,
+    1104,
+    1105,
+    905,
+    1106,
+    1107,
+    1108,
+    906,
+    907,
+    838,
+    793,
+    506,
+    507,
+    335,
+    646,
+    503,
+    504,
+    453,
+    855,
+    1129,
+    1194,
+    1277,
+    1172,
+    1267,
+    1320,
+    1504,
+    1518,
+    1487
+  ],
+  "SendFateToSound": [],
+  "PlaySoundFates": false,
+  "SoundFileFates": "",
+  "EnableFateChatReports": false,
+  "EnableFateChatItalicFont": false,
+  "EnableFateChatCrossworldIcon": true,
+  "FateOutputChannel": 56,
+  "Version": 2,
+  "SortingMode": 1,
+  "SSMinionReportingMode": 1
+}

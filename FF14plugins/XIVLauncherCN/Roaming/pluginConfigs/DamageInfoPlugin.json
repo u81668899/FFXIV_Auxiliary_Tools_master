@@ -1,0 +1,89 @@
+{
+  "$type": "DamageInfoPlugin.Configuration, DamageInfoPlugin",
+  "MainTargetCastBarColorEnabled": false,
+  "FocusTargetCastBarColorEnabled": false,
+  "Version": 2,
+  "PhysicalColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "MagicColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.015673762,
+    "Y": 0.57856977,
+    "Z": 0.9717742,
+    "W": 1.0
+  },
+  "DarknessColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "PhysicalCastColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "MagicCastColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.015686275,
+    "Y": 0.5803922,
+    "Z": 0.972549,
+    "W": 1.0
+  },
+  "DarknessCastColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "PhysicalBgColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 1.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "MagicBgColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 1.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "DarknessBgColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 1.0,
+    "Z": 1.0,
+    "W": 1.0
+  },
+  "PositionalColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 1.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "DebugLogEnabled": false,
+  "IncomingColorEnabled": true,
+  "OutgoingColorEnabled": true,
+  "PetColorEnabled": true,
+  "PositionalColorEnabled": false,
+  "PositionalColorInvert": false,
+  "SourceTextEnabled": false,
+  "PetSourceTextEnabled": false,
+  "HealSourceTextEnabled": false,
+  "IncomingAttackTextEnabled": true,
+  "OutgoingAttackTextEnabled": true,
+  "PetAttackTextEnabled": true,
+  "HealAttackTextEnabled": true
+}

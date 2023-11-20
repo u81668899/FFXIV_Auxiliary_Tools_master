@@ -1,0 +1,131 @@
+{
+  "$type": "Neko.Configuration, Neko",
+  "Sources": {
+    "$type": "Neko.Configuration+SourceConfig, Neko",
+    "Catboys": {
+      "$type": "Neko.Sources.APIS.Catboys+Config, Neko",
+      "enabled": false
+    },
+    "DogCEO": {
+      "$type": "Neko.Sources.APIS.DogCEO+Config, Neko",
+      "enabled": false,
+      "breed": 0,
+      "selected": 0
+    },
+    "NekosBest": {
+      "$type": "Neko.Sources.APIS.NekosBest+Config, Neko",
+      "enabled": true,
+      "categories": 2
+    },
+    "NekosLife": {
+      "$type": "Neko.Sources.APIS.NekosLife+Config, Neko",
+      "enabled": true,
+      "categories": 4865
+    },
+    "PicRe": {
+      "$type": "Neko.Sources.APIS.PicRe+Config, Neko",
+      "enabled": false
+    },
+    "ShibeOnline": {
+      "$type": "Neko.Sources.APIS.ShibeOnline+Config, Neko",
+      "enabled": false
+    },
+    "TheCatAPI": {
+      "$type": "Neko.Sources.APIS.TheCatAPI+Config, Neko",
+      "enabled": false,
+      "breed": 0,
+      "selected": 0
+    },
+    "Twitter": {
+      "$type": "Neko.Sources.APIS.Twitter+Config, Neko",
+      "enabled": false,
+      "queries": [
+        {
+          "$type": "Neko.Sources.APIS.Twitter+Config+Query, Neko",
+          "searchText": "@FF_XIV_EN",
+          "enabled": false
+        },
+        {
+          "$type": "Neko.Sources.APIS.Twitter+Config+Query, Neko",
+          "searchText": "#gposers",
+          "enabled": true
+        },
+        {
+          "$type": "Neko.Sources.APIS.Twitter+Config+Query, Neko",
+          "searchText": "#FFXIV OR #FF14",
+          "enabled": true
+        }
+      ]
+    },
+    "Waifuim": {
+      "$type": "Neko.Sources.APIS.Waifuim+Config, Neko",
+      "enabled": false,
+      "categories": 3
+    },
+    "WaifuPics": {
+      "$type": "Neko.Sources.APIS.WaifuPics+Config, Neko",
+      "enabled": true,
+      "sfwCategories": 2,
+      "nsfwCategories": 1
+    }
+  },
+  "GuiMainOpacity": 0.0,
+  "GuiMainShowResize": false,
+  "GuiMainShowTitleBar": true,
+  "GuiMainAllowResize": true,
+  "GuiMainVisible": false,
+  "GuiMainLocked": false,
+  "SlideshowEnabled": false,
+  "SlideshowIntervalSeconds": 300.0,
+  "GIFSpeed": 100.0,
+  "QueueDownloadCount": 5,
+  "QueuePreloadCount": 2,
+  "EnableTelemetry": true,
+  "LocalDownloadCount": 79,
+  "ShowHeaders": true,
+  "Alignment": 5,
+  "Hotkeys": {
+    "$type": "Neko.Configuration+HotkeyConfig, Neko",
+    "NextImage": {
+      "$type": "Neko.Hotkey, Neko",
+      "Condition": 2,
+      "Key": 32,
+      "Name": "Next Image",
+      "KeyName": "Space",
+      "ConditionName": "On Mouse Over"
+    },
+    "ToggleWindow": {
+      "$type": "Neko.Hotkey, Neko",
+      "Condition": 2,
+      "Key": 4,
+      "Name": "Toggle Visibility",
+      "KeyName": "Middle Mouse Button",
+      "ConditionName": "On Mouse Over"
+    },
+    "MoveWindow": {
+      "$type": "Neko.Hotkey, Neko",
+      "Condition": 2,
+      "Key": 2,
+      "Name": "Move Window",
+      "KeyName": "Right Mouse Button",
+      "ConditionName": "On Mouse Over"
+    },
+    "OpenInBrowser": {
+      "$type": "Neko.Hotkey, Neko",
+      "Condition": 2,
+      "Key": 66,
+      "Name": "Open in Browser",
+      "KeyName": "B",
+      "ConditionName": "On Mouse Over"
+    },
+    "CopyToClipboard": {
+      "$type": "Neko.Hotkey, Neko",
+      "Condition": 2,
+      "Key": 67,
+      "Name": "Copy to Clipboard",
+      "KeyName": "C",
+      "ConditionName": "On Mouse Over"
+    }
+  },
+  "Version": 1
+}

@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZodiacBuddy</name>
+    </assembly>
+    <members>
+        <member name="T:ZodiacBuddy.BonusLight.BonusLightConfiguration">
+            <summary>
+            Configuration class for Nexus relic.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightConfiguration.ActiveBonus">
+            <summary>
+            Gets the list of Territory Id of duty with bonus of light.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightConfiguration.DisplayBonusDuty">
+            <summary>
+            Gets or sets a value indicating whether to display the current duty with light bonus on the Novus information window.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightConfiguration.NotifyLightBonusOnlyWhenEquipped">
+            <summary>
+            Gets or sets a value indicating whether to notify the user of new duty with bonus light when the relic is not equipped.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightConfiguration.PlaySoundOnLightBonusNotification">
+            <summary>
+            Gets or sets a value indicating whether play sound when notifying about the bonus of light.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightConfiguration.LightBonusNotificationSound">
+            <summary>
+            Gets or sets the sound to play when notifying about the bonus of light.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.BonusLight.BonusLightDuty">
+            <summary>
+            Define a duty susceptible to have the light bonus.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightDuty.DutyName">
+            <summary>
+            Gets the name of the duty.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightDuty.DefaultLightIntensity">
+            <summary>
+            Gets the default light intensity of the duty.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightDuty.GetValue(System.UInt32)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="territoryID">Territory ID.</param>
+            <returns>Novus duty data.</returns>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightDuty.TryGetValue(System.UInt32,ZodiacBuddy.BonusLight.BonusLightDuty@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="territoryID">Territory ID.</param>
+            <param name="duty">Novus duty data.</param>
+            <returns>True if the duty was found, otherwise false.</returns>
+        </member>
+        <member name="T:ZodiacBuddy.BonusLight.BonusLightLevel">
+            <summary>
+            Define the quantity of light gain and it's log message.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightLevel.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.BonusLight.BonusLightLevel"/> class.
+            </summary>
+            <param name="intensity">Light intensity.</param>
+            <param name="rowId">Log messageID.</param>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightLevel.Intensity">
+            <summary>
+            Gets the intensity of light.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightLevel.Message">
+            <summary>
+            Gets the toast message.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.BonusLight.BonusLightManager">
+            <summary>
+            Manager for tracking bonus light.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.BonusLight.BonusLightManager"/> class.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.BonusLightManager.LastRequestIsSuccess">
+            <summary>
+            Gets a value indicating whether if the last request was successful.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightManager.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightManager.AddLightBonus(System.UInt32,System.Nullable{System.DateTime},System.Boolean,System.String)">
+            <summary>
+            Update the bonus light configuration and play any notifications required.
+            </summary>
+            <param name="territoryId">Territory ID.</param>
+            <param name="detectionTime">DateTime of the detection.</param>
+            <param name="onDutyFromBeginning">Define if the player has join an ongoing duty or has reconnected.</param>
+            <param name="message">Message to display.</param>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightManager.SendReport(System.UInt32,System.DateTime)">
+            <summary>
+            Send a new bonus light event to the server.
+            </summary>
+            <param name="territoryId">Id of the duty with the light bonus.</param>
+            <param name="detectionTime">DateTime of the detection.</param>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightManager.NotifyLightBonus(System.String[])">
+            <summary>
+            Play any notifications required.
+            </summary>
+            <param name="message">Message to display.</param>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.BonusLightManager.RetrieveLastReport">
+            <summary>
+            Retrieve the last report about light bonus for the current datacenter.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.BonusLight.Report">
+            <summary>
+            Report struct to communicate with the server.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.BonusLight.Report.#ctor(System.UInt32,System.UInt32,System.UInt32,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.BonusLight.Report"/> struct.
+            </summary>
+            <param name="datacenterId">Datacenter id.</param>
+            <param name="worldId">World id.</param>
+            <param name="territoryId">Territory id.</param>
+            <param name="date">Date of the report.</param>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.Report.DatacenterId">
+            <summary>
+            Gets or sets datacenter id.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.Report.WorldId">
+            <summary>
+            Gets or sets world id.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.Report.TerritoryId">
+            <summary>
+            Gets or sets territory id.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.BonusLight.Report.Date">
+            <summary>
+            Gets or sets report date.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.ConfigWindow">
+            <summary>
+            Plugin configuration window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.ConfigWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.ConfigWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.ConfigWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.InformationWindow.InformationWindow">
+            <summary>
+            Default information window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.InformationWindow.InformationWindow.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.InformationWindow.InformationWindow"/> class.
+            </summary>
+            <param name="name">Name of the window.</param>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindow.ShowWindow">
+            <summary>
+            Gets or sets a value indicating whether to show this window.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindow.MainhandItem">
+            <summary>
+            Gets or sets the mainhand item.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindow.OffhandItem">
+            <summary>
+            Gets or sets the offhand item.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindow.Name">
+            <summary>
+            Gets name of the information window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.InformationWindow.InformationWindow.Draw">
+            <summary>
+            Draw information window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.InformationWindow.InformationWindow.DisplayRelicInfo(FFXIVClientStructs.FFXIV.Client.Game.InventoryItem)">
+            <summary>
+            Display information about the specified relic.
+            </summary>
+            <param name="item">Relic to display.</param>
+        </member>
+        <member name="M:ZodiacBuddy.InformationWindow.InformationWindow.DetermineProgressSize(System.String)">
+            <summary>
+            Determine the size of the progress bar.
+            </summary>
+            <param name="relicName">Name of the relic.</param>
+            <returns>Vector2 of the determined size.</returns>
+        </member>
+        <member name="T:ZodiacBuddy.InformationWindow.InformationWindowConfiguration">
+            <summary>
+            Configuration class for weapons information window.
+            </summary>
+        </member>
+        <member name="F:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.DefaultProgressColor">
+            <summary>
+            Default color for the bonus light information progress bar.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.ManualSize">
+            <summary>
+            Gets or sets a value indicating whether to enable manual resizing of the weapons information window.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.ClickThrough">
+            <summary>
+            Gets or sets a value indicating whether to enable click through the weapons information window.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.ProgressColor">
+            <summary>
+            Gets or sets the color of the progress bar on weapons information.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.ProgressAutoSize">
+            <summary>
+            Gets or sets a value indicating whether to resize automatically the progress bar.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.ProgressSize">
+            <summary>
+            Gets or sets a value indicating the size of the progress bar.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.InformationWindow.InformationWindowConfiguration.ResetProgressColor">
+            <summary>
+            Reset ProgressColor to it's default value.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.PluginConfiguration">
+            <summary>
+            Plugin configuration.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.Version">
+            <summary>
+            Gets or sets the configuration version.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.ChatType">
+            <summary>
+            Gets or sets the chat channel.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.BraveEchoTarget">
+            <summary>
+            Gets or sets a value indicating whether to echo the target before teleporting to a Brave target.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.BonusLight">
+            <summary>
+            Gets the configuration for bonus light options.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.Novus">
+            <summary>
+            Gets the configuration for Novus relics.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.Brave">
+            <summary>
+            Gets configuration for Zodiac Brave relics.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.PluginConfiguration.InformationWindow">
+            <summary>
+            Gets configuration for the information window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.PluginConfiguration.Save">
+            <summary>
+            Save the configuration to disk.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Service">
+            <summary>
+            Dalamud and plugin services.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.Plugin">
+            <summary>
+            Gets or sets the plugin.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.Configuration">
+            <summary>
+            Gets or sets the plugin configuration.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.BonusLightManager">
+            <summary>
+            Gets or sets the plugin bonus light manager.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.Interface">
+            <summary>
+            Gets the Dalamud plugin interface.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.ChatGui">
+            <summary>
+            Gets the Dalamud chat gui.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.ClientState">
+            <summary>
+            Gets the Dalamud client state.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.DutyState">
+            <summary>
+            Gets the Dalamud duty state.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.CommandManager">
+            <summary>
+            Gets the Dalamud command manager.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.Condition">
+            <summary>
+            Gets the Dalamud condition.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.DataManager">
+            <summary>
+            Gets the Dalamud data manager.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.Framework">
+            <summary>
+            Gets the Dalamud framework manager.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.GameGui">
+            <summary>
+            Gets the Dalamud game gui.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.JobGauges">
+            <summary>
+            Gets the Dalamud job gauges.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.TargetManager">
+            <summary>
+            Gets the Dalamud target manager.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Service.Toasts">
+            <summary>
+            Gets the Dalamud toast manager.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Atma.AtmaManager">
+            <summary>
+            Your buddy for the Atma enhancement stage.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Atma.AtmaManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.Stages.Atma.AtmaManager"/> class.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Atma.AtmaManager.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Atma.Data.BraveBook">
+            <summary>
+            A collection of targets for a single Trial of the Braves book.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveBook.Name">
+            <summary>
+            Gets the display name.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveBook.Enemies">
+            <summary>
+            Gets the target enemies.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveBook.Dungeons">
+            <summary>
+            Gets the target dungeons.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveBook.Fates">
+            <summary>
+            Gets the target fates.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveBook.Leves">
+            <summary>
+            Gets the target leves.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Atma.Data.BraveBook.GetValue(System.UInt32)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="bookID">RelicNote ID.</param>
+            <returns>Brave book data.</returns>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Atma.Data.BraveBook.PopulateDataset">
+            <summary>
+            Populate all the available data about the Trial of the Braves.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Atma.Data.BraveTarget">
+            <summary>
+            A single target for a Trial of the Braves book.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.Name">
+            <summary>
+            Gets the display name.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.Issuer">
+            <summary>
+            Gets the issuer name for leves.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.ZoneName">
+            <summary>
+            Gets the zone name.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.ZoneID">
+            <summary>
+            Gets the zone ID.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.ContentsFinderConditionID">
+            <summary>
+            Gets the contents finder condition ID.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.LocationName">
+            <summary>
+            Gets the location name.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Atma.Data.BraveTarget.Position">
+            <summary>
+            Gets the position that this target is roughly at.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Atma.Excel.RelicNote.PopulateData(Lumina.Excel.RowParser,Lumina.GameData,Lumina.Data.Language)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Brave.BraveConfiguration">
+            <summary>
+            Configuration class for Zodiac Brave relic.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Brave.BraveConfiguration.DisplayRelicInfo">
+            <summary>
+            Gets or sets a value indicating whether to display the information about the equipped relic.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Brave.BraveConfiguration.ShowNumbersInRelicMagicite">
+            <summary>
+            Gets or sets a value indicating whether to show the actual numbers in the RelicMagicite addon.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Brave.BraveConfiguration.DontPlayRelicMagiciteAnimation">
+            <summary>
+            Gets or sets a value indicating whether to not display the first message on the RelicMagicite addon.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Brave.BraveManager">
+            <summary>
+            Your buddy for the Zodiac Brave stage.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Brave.BraveManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.Stages.Brave.BraveManager"/> class.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Brave.BraveManager.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Brave.BraveRelic">
+            <summary>
+            Define the relic item Id and their names.
+            </summary>
+        </member>
+        <member name="F:ZodiacBuddy.Stages.Brave.BraveRelic.Items">
+            <summary>
+            List of Zodiac Brave weapons.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Brave.BraveWindow">
+            <summary>
+            Brave information window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Brave.BraveWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.Stages.Brave.BraveWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Brave.BraveWindow.DisplayRelicInfo(FFXIVClientStructs.FFXIV.Client.Game.InventoryItem)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Novus.NovusConfiguration">
+            <summary>
+            Configuration class for Nexus relic.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Novus.NovusConfiguration.DisplayRelicInfo">
+            <summary>
+            Gets or sets a value indicating whether to display the information about equipped relics.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Novus.NovusConfiguration.ShowNumbersInRelicGlass">
+            <summary>
+            Gets or sets a value indicating whether to show the actual numbers in the RelicGlass addon.
+            </summary>
+        </member>
+        <member name="P:ZodiacBuddy.Stages.Novus.NovusConfiguration.DontPlayRelicGlassAnimation">
+            <summary>
+            Gets or sets a value indicating whether to not display the first message on the RelicGlass addon.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Novus.NovusManager">
+            <summary>
+            Your buddy for the Novus stage.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Novus.NovusManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.Stages.Novus.NovusManager"/> class.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Novus.NovusManager.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Novus.NovusRelic">
+            <summary>
+            Define the relic item Id and their names.
+            </summary>
+        </member>
+        <member name="F:ZodiacBuddy.Stages.Novus.NovusRelic.Items">
+            <summary>
+            List of Novus Zodiac weapons.
+            </summary>
+        </member>
+        <member name="T:ZodiacBuddy.Stages.Novus.NovusWindow">
+            <summary>
+            Novus information window.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Novus.NovusWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.Stages.Novus.NovusWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Stages.Novus.NovusWindow.DisplayRelicInfo(FFXIVClientStructs.FFXIV.Client.Game.InventoryItem)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ZodiacBuddy.Util">
+            <summary>
+            Utility methods.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.Util.GetEquippedItem(System.Int32)">
+            <summary>
+            Return the item equipped on the slot id.
+            </summary>
+            <param name="index">Slot index of the desired item.</param>
+            <returns>Equipped item on the slot or the default item 0.</returns>
+        </member>
+        <member name="T:ZodiacBuddy.ZodiacBuddyPlugin">
+            <summary>
+            Main plugin implementation.
+            </summary>
+        </member>
+        <member name="M:ZodiacBuddy.ZodiacBuddyPlugin.#ctor(Dalamud.Plugin.DalamudPluginInterface)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZodiacBuddy.ZodiacBuddyPlugin"/> class.
+            </summary>
+            <param name="pluginInterface">Dalamud plugin interface.</param>
+        </member>
+        <member name="P:ZodiacBuddy.ZodiacBuddyPlugin.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:ZodiacBuddy.ZodiacBuddyPlugin.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ZodiacBuddy.ZodiacBuddyPlugin.PrintMessage(Dalamud.Game.Text.SeStringHandling.SeString)">
+            <summary>
+            Print a message.
+            </summary>
+            <param name="message">Message to send.</param>
+        </member>
+        <member name="M:ZodiacBuddy.ZodiacBuddyPlugin.PrintError(System.String)">
+            <summary>
+            Print an error message.
+            </summary>
+            <param name="message">Message to send.</param>
+        </member>
+    </members>
+</doc>

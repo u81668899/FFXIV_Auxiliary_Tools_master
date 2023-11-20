@@ -1,0 +1,22 @@
+{
+  "$type": "Dalamud.DiscordBridge.Configuration, Dalamud.DiscordBridge",
+  "DefaultAvatarURL": "https://raw.githubusercontent.com/goatcorp/DalamudAssets/master/UIRes/logo.png",
+  "Version": 0,
+  "DuplicateCheckMS": 5000,
+  "DiscordToken": "",
+  "DiscordOwnerName": "",
+  "DiscordBotPrefix": "xl!",
+  "ChatTypeAvatarURL": {
+    "$type": "System.Collections.Generic.Dictionary`2[[Dalamud.Game.Text.XivChatType, Dalamud],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "ChannelConfigs": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[Dalamud.DiscordBridge.Model.DiscordChannelConfig, Dalamud.DiscordBridge]], System.Private.CoreLib"
+  },
+  "PrefixConfigs": {
+    "$type": "System.Collections.Generic.Dictionary`2[[Dalamud.Game.Text.XivChatType, Dalamud],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "CustomSlugsConfigs": {
+    "$type": "System.Collections.Generic.Dictionary`2[[Dalamud.Game.Text.XivChatType, Dalamud],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+  },
+  "CFPrefixConfig": ""
+}

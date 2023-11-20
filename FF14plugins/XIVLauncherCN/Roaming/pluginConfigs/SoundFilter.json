@@ -1,0 +1,22 @@
+{
+  "$type": "SoundFilter.Config.Configuration, SoundFilter",
+  "Enabled": true,
+  "ShowLog": false,
+  "LogEnabled": false,
+  "LogFiltered": false,
+  "LogEntries": 20,
+  "Version": 2,
+  "Filters": [
+    {
+      "$type": "SoundFilter.Config.CustomFilter, SoundFilter",
+      "Name": "屏蔽",
+      "Enabled": true,
+      "Globs": [
+        "sound/system/se_ui.scd/49",
+        "sound/system/se_ui.scd/116",
+        "sound/system/se_ui.scd/99",
+        "sound/system/se_ui.scd/111"
+      ]
+    }
+  ]
+}

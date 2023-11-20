@@ -1,0 +1,37 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "KamiLib/1.0.0": {
+        "runtime": {
+          "KamiLib.dll": {}
+        },
+        "resources": {
+          "de/KamiLib.resources.dll": {
+            "locale": "de"
+          },
+          "es/KamiLib.resources.dll": {
+            "locale": "es"
+          },
+          "fr/KamiLib.resources.dll": {
+            "locale": "fr"
+          },
+          "ja/KamiLib.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KamiLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

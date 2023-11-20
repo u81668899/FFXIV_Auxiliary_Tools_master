@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dalamud.ContextMenu</name>
+    </assembly>
+    <members>
+        <member name="T:Dalamud.ContextMenu.BaseContextMenuArgs">
+            <summary>
+            The base class for context menu arguments
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.Addon">
+            <summary>
+            Pointer to the context menu addon.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.Agent">
+            <summary>
+            Pointer to the context menu agent.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.ParentAddonName">
+            <summary>
+            The name of the addon containing this context menu, if any.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.ObjectId">
+            <summary>
+            The object ID for this context menu. May be invalid (0xE0000000).
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.ContentIdLower">
+            <summary>
+            The lower half of the content ID of the object for this context menu. May be zero.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.Text">
+            <summary>
+            The text related to this context menu, usually an object name.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuArgs.ObjectWorld">
+            <summary>
+            The world of the object this context menu is for, if any.
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.BaseContextMenuItem">
+            <summary>
+            A base context menu item
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuItem.Enabled">
+            <summary>
+            If this item should be enabled in the menu.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseContextMenuItem.IsSubMenu">
+            <summary>
+            If this item should have the submenu arrow in the menu.
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.BaseInventoryContextMenuArgs">
+            <summary>
+            The base class for inventory context menu arguments
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseInventoryContextMenuArgs.Addon">
+            <summary>
+            Pointer to the context menu addon.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseInventoryContextMenuArgs.Agent">
+            <summary>
+            Pointer to the context menu agent.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseInventoryContextMenuArgs.ParentAddonName">
+            <summary>
+            The name of the addon containing this context menu, if any.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseInventoryContextMenuArgs.ItemId">
+            <summary>
+            The ID of the item this context menu is for.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseInventoryContextMenuArgs.ItemAmount">
+            <summary>
+            The amount of the item this context menu is for.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.BaseInventoryContextMenuArgs.ItemHq">
+            <summary>
+            If the item this context menu is for is high-quality.
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.CustomContextMenuItem`1">
+            <summary>
+            A custom context menu item
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.CustomContextMenuItem`1.NameEnglish">
+            <summary>
+            The name of the context item to be shown for English clients.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.CustomContextMenuItem`1.NameJapanese">
+            <summary>
+            The name of the context item to be shown for Japanese clients.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.CustomContextMenuItem`1.NameFrench">
+            <summary>
+            The name of the context item to be shown for French clients.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.CustomContextMenuItem`1.NameGerman">
+            <summary>
+            The name of the context item to be shown for German clients.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.CustomContextMenuItem`1.Action">
+            <summary>
+            The action to perform when this item is clicked.
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.CustomContextMenuItem`1.#ctor(Dalamud.Game.Text.SeStringHandling.SeString,`0,System.Boolean)">
+            <summary>
+            Create a new context menu item.
+            </summary>
+            <param name="name">the English name of the item, copied to other languages</param>
+            <param name="action">the action to perform on click</param>
+            <param name="useDalamudIndicator">append the dalamud indicator (red D) to the name.</param>
+        </member>
+        <member name="T:Dalamud.ContextMenu.GameObjectContextMenuItem">
+            <summary>
+            A custom normal context menu item
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.GameObjectContextMenuItem.#ctor(Dalamud.Game.Text.SeStringHandling.SeString,Dalamud.ContextMenu.DalamudContextMenu.GameObjectContextMenuItemSelectedDelegate,System.Boolean)">
+            <summary>
+            Create a new custom context menu item.
+            </summary>
+            <param name="name">the English name of the item, copied to other languages</param>
+            <param name="action">the action to perform on click</param>
+            <param name="useDalamudIndicator">append the dalamud indicator (red D) to the name.</param>
+        </member>
+        <member name="T:Dalamud.ContextMenu.GameObjectContextMenuItemSelectedArgs">
+            <summary>
+            Arguments for the context menu item selected delegate.
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.GameObjectContextMenuOpenArgs">
+            <summary>
+            Arguments for the context menu event.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.GameObjectContextMenuOpenArgs.Items">
+            <summary>
+            Gets context menu items in this menu.
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.GameObjectContextMenuOpenArgs.AddCustomItem(Dalamud.ContextMenu.GameObjectContextMenuItem)">
+            <summary>
+            Add custom item to context menu items.
+            </summary>
+            <param name="item">context menu item.</param>
+        </member>
+        <member name="T:Dalamud.ContextMenu.InventoryContextMenuItem">
+            <summary>
+            A custom context menu item for inventory items.
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.InventoryContextMenuItem.#ctor(Dalamud.Game.Text.SeStringHandling.SeString,Dalamud.ContextMenu.DalamudContextMenu.InventoryContextMenuItemSelectedDelegate,System.Boolean)">
+            <summary>
+            Create a new context menu item for inventory items.
+            </summary>
+            <param name="name">the English name of the item, copied to other languages</param>
+            <param name="action">the action to perform on click</param>
+            <param name="useDalamudIndicator">append the dalamud indicator (red D) to the name.</param>
+        </member>
+        <member name="T:Dalamud.ContextMenu.InventoryContextMenuItemSelectedArgs">
+            <summary>
+            The arguments for when an inventory context menu item is selected
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.InventoryContextMenuOpenArgs">
+            <summary>
+            The arguments for when an inventory context menu is opened
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.InventoryContextMenuOpenArgs.Items">
+            <summary>
+            Gets context menu items in this menu.
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.InventoryContextMenuOpenArgs.AddCustomItem(Dalamud.ContextMenu.InventoryContextMenuItem)">
+            <summary>
+            Add custom item to context menu items.
+            </summary>
+            <param name="item">context menu item.</param>
+        </member>
+        <member name="T:Dalamud.ContextMenu.NativeContextMenuItem">
+            <summary>
+            A native context menu item
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.NativeContextMenuItem.InternalAction">
+            <summary>
+            The action code to be used in the context menu agent for this item.
+            </summary>
+        </member>
+        <member name="P:Dalamud.ContextMenu.NativeContextMenuItem.Name">
+            <summary>
+            The name of the context item.
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.DalamudContextMenu">
+            <summary>
+            A base class for accessing DalamudContextMenu functionality.
+            </summary>
+        </member>
+        <member name="F:Dalamud.ContextMenu.DalamudContextMenu.ParentAddonIdOffset">
+            <summary>
+            Offset from addon to menu type
+            </summary>
+        </member>
+        <member name="F:Dalamud.ContextMenu.DalamudContextMenu.MenuActionsPointerOffset">
+            <summary>
+            Offset from agent to actions byte array pointer (have to add the actions offset after)
+            </summary>
+        </member>
+        <member name="F:Dalamud.ContextMenu.DalamudContextMenu.BooleanOffsetCheck">
+            <summary>
+            SetUpContextSubMenu checks this
+            </summary>
+        </member>
+        <member name="F:Dalamud.ContextMenu.DalamudContextMenu.MenuActionsOffset">
+            <summary>
+            Offset from [MenuActionsPointer] to actions byte array
+            </summary>
+        </member>
+        <member name="F:Dalamud.ContextMenu.DalamudContextMenu.InventoryMenuActionsOffset">
+            <summary>
+            Offset from inventory context agent to actions byte array
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.DalamudContextMenu.GameObjectContextMenuOpenEventDelegate">
+            <summary>
+            The delegate for context menu events.
+            </summary>
+        </member>
+        <member name="E:Dalamud.ContextMenu.DalamudContextMenu.OnOpenGameObjectContextMenu">
+            <summary>
+            <para>
+            The event that is fired when a context menu is being prepared for opening.
+            </para>
+            <para>
+            </para>
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.DalamudContextMenu.InventoryContextMenuOpenEventDelegate">
+            <summary>
+            The delegate for inventory context menu events.
+            </summary>
+        </member>
+        <member name="E:Dalamud.ContextMenu.DalamudContextMenu.OnOpenInventoryContextMenu">
+            <summary>
+            <para>
+            The event that is fired when an inventory context menu is being prepared for opening.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.DalamudContextMenu.GameObjectContextMenuItemSelectedDelegate">
+            <summary>
+            The delegate that is run when a context menu item is selected.
+            </summary>
+        </member>
+        <member name="T:Dalamud.ContextMenu.DalamudContextMenu.InventoryContextMenuItemSelectedDelegate">
+            <summary>
+            The delegate that is run when an inventory context menu item is selected.
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.DalamudContextMenu.#ctor">
+            <summary>
+            <para>
+            Construct a new Dalamud.ContextMenu base.
+            </para>
+            <para>
+            This will automatically enable hooks based on the hooks parameter.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Dalamud.ContextMenu.DalamudContextMenu.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalamud.ContextMenu.DalamudContextMenu.PopulateItems(System.IntPtr,System.IntPtr,Dalamud.ContextMenu.DalamudContextMenu.GameObjectContextMenuOpenEventDelegate,Dalamud.ContextMenu.DalamudContextMenu.InventoryContextMenuOpenEventDelegate,System.Collections.Generic.IReadOnlyCollection{Dalamud.ContextMenu.NativeContextMenuItem})">
+            <returns>true on error</returns>
+        </member>
+        <member name="M:Dalamud.ContextMenu.DalamudContextMenu.SubMenuInner(System.IntPtr)">
+            <returns>false if original should be called</returns>
+        </member>
+        <member name="M:Dalamud.ContextMenu.SigScannerExt.TryScanText(Dalamud.Game.SigScanner,System.String,System.IntPtr@,System.String)">
+            <summary>
+            Scan for a signature in memory.
+            </summary>
+            <param name="scanner">SigScanner to use for scanning</param>
+            <param name="sig">signature to search for</param>
+            <param name="result">pointer where signature was found or <see cref="F:System.IntPtr.Zero"/> if not found</param>
+            <param name="name">name of this signature - if specified, a warning will be printed if the signature could not be found</param>
+            <returns>true if signature was found</returns>
+        </member>
+    </members>
+</doc>

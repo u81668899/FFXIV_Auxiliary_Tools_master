@@ -1,0 +1,134 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {},
+    ".NETCoreApp,Version=v7.0/win-x64": {
+      "SomethingNeedDoing/1.4.1.0": {
+        "dependencies": {
+          "ClickLib": "1.2.0.1",
+          "DalamudPackager": "2.1.10",
+          "ILRepack": "2.1.0-beta1",
+          "NLua": "1.6.0",
+          "StyleCop.Analyzers": "1.2.0-beta.435"
+        },
+        "runtime": {
+          "SomethingNeedDoing.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.10": {},
+      "ILRepack/2.1.0-beta1": {},
+      "KeraLua/1.3.1": {
+        "runtime": {
+          "lib/net6.0/KeraLua.dll": {
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
+          }
+        },
+        "native": {
+          "runtimes/win-x64/native/lua54.dll": {
+            "fileVersion": "5.4.3.0"
+          }
+        }
+      },
+      "NLua/1.6.0": {
+        "dependencies": {
+          "KeraLua": "1.3.1"
+        },
+        "runtime": {
+          "lib/net6.0/NLua.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      },
+      "Reloaded.Memory/7.1.0": {
+        "runtime": {
+          "lib/net6.0/Reloaded.Memory.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
+      "StyleCop.Analyzers/1.2.0-beta.435": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.435"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.435": {},
+      "ClickLib/1.2.0.1": {
+        "dependencies": {
+          "ILRepack": "2.1.0-beta1",
+          "Reloaded.Memory": "7.1.0"
+        },
+        "runtime": {
+          "ClickLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SomethingNeedDoing/1.4.1.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S6NrvvOnLgT4GDdgwuKVJjbFo+8ZEj+JsEYk9ojjOR/MMfv1dIFpT8aRJQfI24rtDcw1uF+GnSSMN4WW1yt7fw==",
+      "path": "dalamudpackager/2.1.10",
+      "hashPath": "dalamudpackager.2.1.10.nupkg.sha512"
+    },
+    "ILRepack/2.1.0-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CUmDepugxfNKVMAsd1PzS8NSoyDfELsufDzwJ1+7D08bMAQbtHEQ9UVdjWjR3GBE0iPc0GvOhSJi0+xfFXwiRA==",
+      "path": "ilrepack/2.1.0-beta1",
+      "hashPath": "ilrepack.2.1.0-beta1.nupkg.sha512"
+    },
+    "KeraLua/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DSZkJx3+9YmJONylrJY2xvjmBBT6oPZO1Iv+MBZh4Ta8KsYewKmpp5n+yW2J5vkIxkJ1yxiQuHE+iKw25Kw6GA==",
+      "path": "keralua/1.3.1",
+      "hashPath": "keralua.1.3.1.nupkg.sha512"
+    },
+    "NLua/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0+p4yrJoAGfsMuoZpcdSpp8jNHrZs9nyGPoYLbHaxzqbPZIS8RhBO1fnQLYsECrTMiQVledR3bDkEfRybjBdpw==",
+      "path": "nlua/1.6.0",
+      "hashPath": "nlua.1.6.0.nupkg.sha512"
+    },
+    "Reloaded.Memory/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4Y5tCsRWdW/shj9W7RqJq37LStuW1VVtjxsBp4LKZilPcjudeQg9k+u+6fnDgacCEJiG3S2EtcaiNtVMTdaSnQ==",
+      "path": "reloaded.memory/7.1.0",
+      "hashPath": "reloaded.memory.7.1.0.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.2.0-beta.435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TADk7vdGXtfTnYCV7GyleaaRTQjfoSfZXprQrVMm7cSJtJbFc1QIbWPyLvrgrfGdfHbGmUPvaN4ODKNxg2jgPQ==",
+      "path": "stylecop.analyzers/1.2.0-beta.435",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.435.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ouwPWZxbOV3SmCZxIRqHvljkSzkCyi1tDoMzQtDb/bRP8ctASV/iRJr+A2Gdj0QLaLmWnqTWDrH82/iP+X80Lg==",
+      "path": "stylecop.analyzers.unstable/1.2.0.435",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
+    },
+    "ClickLib/1.2.0.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

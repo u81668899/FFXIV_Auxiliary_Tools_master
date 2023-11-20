@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "GatherBuddy.GameData/1.0.0": {
+        "dependencies": {
+          "GatherBuddy.Levenshtein": "1.0.0",
+          "OtterGui": "1.0.0"
+        },
+        "runtime": {
+          "GatherBuddy.GameData.dll": {}
+        }
+      },
+      "GatherBuddy.Levenshtein/1.0.0": {
+        "runtime": {
+          "GatherBuddy.Levenshtein.dll": {}
+        }
+      },
+      "OtterGui/1.0.0": {
+        "runtime": {
+          "OtterGui.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GatherBuddy.GameData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GatherBuddy.Levenshtein/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OtterGui/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

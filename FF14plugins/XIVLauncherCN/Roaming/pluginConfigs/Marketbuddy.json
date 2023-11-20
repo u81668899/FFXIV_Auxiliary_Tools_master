@@ -1,0 +1,23 @@
+{
+  "$type": "Marketbuddy.Configuration, Marketbuddy",
+  "HoldShiftToStop": true,
+  "AutoOpenComparePrices": false,
+  "AutoOpenHistory": false,
+  "SaveToClipboard": true,
+  "AutoInputNewPrice": true,
+  "AutoConfirmNewPrice": true,
+  "HoldCtrlToPaste": true,
+  "HoldAltHistoryHandling": true,
+  "AdjustMaxStackSizeInSellList": false,
+  "AdjustMaxStackSizeInSellListOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 100.0,
+    "Y": 10.0
+  },
+  "UseMaxStackSize": false,
+  "MaximumStackSize": 999,
+  "UndercutPrice": 1,
+  "UndercutUsePercent": false,
+  "UndercutPercent": 1,
+  "Version": 0
+}

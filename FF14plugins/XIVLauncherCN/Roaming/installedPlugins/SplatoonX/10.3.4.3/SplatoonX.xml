@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Splatoon</name>
+    </assembly>
+    <members>
+        <member name="F:Splatoon.Element.type">
+            <summary>
+            0: Object at fixed coordinates |
+            1: Object relative to actor position | 
+            2: Line between two fixed coordinates | 
+            3: Line relative to object pos | 
+            4: Cone relative to object position |
+            5: Cone at fixed coordinates
+            </summary>
+        </member>
+        <member name="M:Splatoon.Element.#ctor(System.Int32)">
+            <summary>
+            0: Object at fixed coordinates |
+            1: Object relative to actor position | 
+            2: Line between two fixed coordinates | 
+            3: Line relative to object pos | 
+            4: Cone relative to object position |
+            5: Cone at fixed coordinates
+            </summary>
+        </member>
+        <member name="F:Splatoon.Element.refActorComparisonType">
+            <summary>
+            0: Name |
+            1: Model ID |
+            2: Object ID |
+            3: Data ID | 
+            4: NPC ID |
+            5: Placeholder |
+            6: Name ID | 
+            7: VFX Path |
+            8: Object Effect
+            </summary>
+        </member>
+        <member name="F:Splatoon.Element.refActorType">
+            <summary>
+            0: Game object with specific name |
+            1: Self |
+            2: Targeted enemy
+            </summary>
+        </member>
+        <member name="F:Splatoon.Layout.DCond">
+            <summary>
+            0: Always shown |
+            1: Only in combat |
+            2: Only in instance |
+            3: Only in combat AND instance |
+            4: Only in combat OR instance |
+            5: Never
+            </summary>
+        </member>
+        <member name="F:Splatoon.Layout.TriggerCondition">
+            <summary>
+            0: Unchanged |
+            -1: Hidden |
+            1: Shown
+            </summary>
+        </member>
+        <member name="F:Splatoon.Layout.DistanceLimitType">
+            <summary>
+            0: To target | 1: To object
+            </summary>
+        </member>
+        <member name="F:Splatoon.Trigger.Type">
+            <summary>
+            0: Show at time |
+            1: Hide at time |
+            2: Show at text |
+            3: Hide at text
+            </summary>
+        </member>
+        <member name="F:Splatoon.Trigger.FiredState">
+            <summary>
+            0: not fired |
+            1: fired but not ended |
+            2: fired and ended
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Controller.InCombat">
+            <summary>
+            Indicates whether player is in combat.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Controller.Phase">
+            <summary>
+            Indicates phase of a battle.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Controller.CombatSeconds">
+            <summary>
+            Amount of seconds that have passed since combat start. Returns -1 if not in combat.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Controller.CombatMiliseconds">
+            <summary>
+            Amount of miliseconds that have passed since combat start. Returns -1 if not in combat.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.GetConfig``1">
+            <summary>
+            Loads if unloaded and returns script configuration file.
+            </summary>
+            <typeparam name="T">Configuration class, implementing IEzConfig</typeparam>
+            <returns>Loaded configuration</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.SaveConfig">
+            <summary>
+            Saves script's configuration, if present.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryRegisterLayoutFromCode(System.String,System.String,Splatoon.Layout@,System.Boolean)">
+            <summary>
+            Attempts to register previously exported from plugin layout for further usage. End user will be able to edit this layout as they wish and results of the edit will be saved. Enabled layouts are subject for immediate processing when the script is enabled.
+            </summary>
+            <param name="UniqueName">Internal unique (within current script) name of the layout.</param>
+            <param name="ExportString">An exported layout string.</param>
+            <param name="layout">Decoded layout object.</param>
+            <param name="overwrite">Whether to overwrite existing layout with same name if it's present.</param>
+            <returns>Whether layout was successfully registered.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryRegisterLayout(System.String,Splatoon.Layout,System.Boolean)">
+            <summary>
+            Attempts to register previously constructed layout for further usage. End user will be able to edit this layout as they wish and results of the edit will be saved. Enabled layouts are subject for immediate processing when the script is enabled.
+            </summary>
+            <param name="UniqueName">Internal unique (within current script) name of the layout.</param>
+            <param name="layout">Layout object.</param>
+            <param name="overwrite">Whether to overwrite existing layout with same name if it's present.</param>
+            <returns>Whether layout was successfully registered.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryRegisterElement(System.String,Splatoon.Element,System.Boolean)">
+            <summary>
+            Attempts to register previously constructed element for further usage. End user will be able to edit this element as they wish and results of the edit will be saved. Enabled elements are subject for immediate processing when the script is enabled.
+            </summary>
+            <param name="UniqueName">Internal unique (within current script) name of the element.</param>
+            <param name="element">Element object.</param>
+            <param name="overwrite">Whether to overwrite existing element with same name if it's present.</param>
+            <returns>Whether element was successfully registered.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryRegisterElementFromCode(System.String,System.String,Splatoon.Element@,System.Boolean)">
+            <summary>
+            Attempts to register previously exported from plugin element for further usage. End user will be able to edit this element as they wish and results of the edit will be saved. Enabled elements are subject for immediate processing when the script is enabled.
+            </summary>
+            <param name="UniqueName">Internal unique (within current script) name of the element</param>
+            <param name="ExportString">An exported element string.</param>
+            <param name="element">Decoded element object.</param>
+            <param name="overwrite">Whether to overwrite existing element with same name if it's present.</param>
+            <returns>Whether element was successfully registered.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryGetLayoutByName(System.String,Splatoon.Layout@)">
+            <summary>
+            Tries to get previously registered layout by name.
+            </summary>
+            <param name="name">Layout's internal name.</param>
+            <param name="layout">Result.</param>
+            <returns>Whether operation succeeded.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryGetElementByName(System.String,Splatoon.Element@)">
+            <summary>
+            Tries to get previously registered element by name.
+            </summary>
+            <param name="name">Element's internal name.</param>
+            <param name="element">Result.</param>
+            <returns>Whether operation succeeded.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryUnregisterLayout(System.String)">
+            <summary>
+            Unregisters previously registered layout.
+            </summary>
+            <param name="name">Layout name.</param>
+            <returns>Whether operation succeeded.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.TryUnregisterElement(System.String)">
+            <summary>
+            Unregisters previously registered element.
+            </summary>
+            <param name="name">Element name.</param>
+            <returns>Whether operation succeeded.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.GetRegisteredLayouts">
+            <summary>
+            Returns a dictionary of currently registered layouts.
+            </summary>
+            <returns>Read only dictionary of currently registered layouts.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.GetRegisteredElements">
+            <summary>
+            Returns a dictionary of currently registered elements.
+            </summary>
+            <returns>Read only dictionary of currently registered elements.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.ClearRegisteredLayouts">
+            <summary>
+            Removes all layouts.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.ClearRegisteredElements">
+            <summary>
+            Removes all elements
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.Clear">
+            <summary>
+            Removes all elements and layouts
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Controller.GetPartyMembers">
+            <summary>
+            Retrieve valid and visible party members. Non cross-world parties only. Duty recorder supported.
+            </summary>
+            <returns>Enumberator of PlayerCharacter objects.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Extensions.GetObject(System.UInt32)">
+            <summary>
+            Gets object by it's object ID.
+            </summary>
+            <param name="objectID">Object ID to search.</param>
+            <returns>GameObject if found; null otherwise.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Extensions.TryGetObject(System.UInt32,Dalamud.Game.ClientState.Objects.Types.GameObject@)">
+            <summary>
+            Attempts to get object by it's object ID.
+            </summary>
+            <param name="objectID">Object ID to search.</param>
+            <param name="obj">Resulting GameObject if found; null otherwise.</param>
+            <returns>Whether object was found.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Extensions.GetStatusVFXId(Dalamud.Game.ClientState.Objects.Types.Character)">
+            <summary>
+            Gets Status VFX ID.
+            </summary>
+            <param name="chara"></param>
+            <returns>Status VFX ID</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Extensions.SetRefPosition(Splatoon.Element,System.Numerics.Vector3)">
+            <summary>
+            Sets reference position for Element from Vector3, accounting for Y and Z swap.
+            </summary>
+            <param name="e">Element to set position of</param>
+            <param name="Position">Position</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.Extensions.SetOffPosition(Splatoon.Element,System.Numerics.Vector3)">
+            <summary>
+            Sets offset position for Element from Vector3, accounting for Y and Z swap.
+            </summary>
+            <param name="e">Element to set position of</param>
+            <param name="Position">Position</param>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Metadata.Version">
+            <summary>
+            Optional single digit version of a script, will be displayed in the list of scripts.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Metadata.Author">
+            <summary>
+            Optional author of a script, will be displayed in the list of scripts.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Metadata.Description">
+            <summary>
+            Optional description of a script, will be displayed in the list of scripts.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Metadata.Website">
+            <summary>
+            Optional website of script's origin.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Metadata.UpdateURL">
+            <summary>
+            URL that contains information for auto-update in CSV format (FullName,Version,URL). If there is a higher version available, script will be automatically updated if it comes from trusted URL, otherwise user will be prompted to install an update.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.Metadata.BlacklistURL">
+            <summary>
+            Blacklist will be checked before script is loaded; if script's name and it's version are present in it, script will be automatically disabled. An user can still choose to manually reenable it, however. 
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.ScriptingEngine.TryDecodeLayout(System.String,Splatoon.Layout@)">
+            <summary>
+            Attempts to decode layout from string.
+            </summary>
+            <param name="s">Input string.</param>
+            <param name="l">Resulting layout.</param>
+            <returns>Whether operation succeeded.</returns>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.ScriptingEngine.TryDecodeElement(System.String,Splatoon.Element@)">
+            <summary>
+            Attempts to decode element from string.
+            </summary>
+            <param name="s">Input string.</param>
+            <param name="element">Resulting element.</param>
+            <returns>Whether operation succeeded.</returns>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.SplatoonScript.Controller">
+            <summary>
+            Controller provides easy access to various helper functions that may be helpful for your script.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.SplatoonScript.Metadata">
+            <summary>
+            Metadata of a script that optionally contains author, description, version and script's origin website. This data will be displayed in Splatoon's interface.
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.SplatoonScript.Safe">
+            <summary>
+            Indicates whether your script operates strictly within Splatoon, ECommons and Dalamud APIs. 
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.SplatoonScript.ValidTerritories">
+            <summary>
+            Valid territories where script will be executed. Specify an empty array if you want it to work in all territories. 
+            </summary>
+        </member>
+        <member name="P:Splatoon.SplatoonScripting.SplatoonScript.IsEnabled">
+            <summary>
+            Indicates whether script is currently enabled and should be executed or not.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnSetup">
+            <summary>
+            Executed once after script is compiled and loaded into memory. Setup your layouts, elements and other static data that is not supposed to change within a game session. You should not setup any hooks or direct Dalamud events here, as method to cleanup is not provided (by design). Such things are to be done in OnEnable method.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnEnable">
+            <summary>
+            Executed when player enters whitelisted territory. Will not trigger when player moves from one whitelisted territory to another.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnDisable">
+            <summary>
+            Executed when player leaves whitelisted territory. Will not trigger when player moves from one non-whitelisted territory to another.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnCombatStart">
+            <summary>
+            Will be called on combat start. This method will only be called if a script is enabled.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnCombatEnd">
+            <summary>
+            Will be called on combat end. This method will only be called if a script is enabled.
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnPhaseChange(System.Int32)">
+            <summary>
+            Will be called on phase change. This method will only be called if a script is enabled. This method will be called if user manually changes phase as well.
+            </summary>
+            <param name="newPhase">New phase</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnMapEffect(System.UInt32,System.UInt16,System.UInt16)">
+            <summary>
+            Will be called on receiving map effect. This method will only be called if a script is enabled.
+            </summary>
+            <param name="position">Positional data of map effect. It is not related to actual map coordinates.</param>
+            <param name="data1">First parameter of map effect.</param>
+            <param name="data2">Second parameter of map effect.</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnObjectEffect(System.UInt32,System.UInt16,System.UInt16)">
+            <summary>
+            Will be called on receiving object effect. This method will only be called if a script is enabled.
+            </summary>
+            <param name="target">Targeted object's ID</param>
+            <param name="data1">First parameter of object effect.</param>
+            <param name="data2">Second parameter of object effect.</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnTetherCreate(System.UInt32,System.UInt32,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Will be called when a tether created between two game objects. This method will only be called if a script is enabled.
+            </summary>
+            <param name="source">Source object ID of pair.</param>
+            <param name="target">Target object ID of pair.</param>
+            <param name="data2">Second argument of hooked method.</param>
+            <param name="data3">Third argument of hooked method.</param>
+            <param name="data5">Fifth argument of hooked method.</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnTetherRemoval(System.UInt32,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Will be called when a previously created tether between two game objects removed. This method will only be called if a script is enabled.
+            </summary>
+            <param name="source">Source object ID of pair.</param>
+            <param name="data2">Second argument of hooked method.</param>
+            <param name="data3">Third argument of hooked method.</param>
+            <param name="data5">Fifth argument of hooked method.</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnVFXSpawn(System.UInt32,System.String)">
+            <summary>
+            Will be called when a VFX spawns on a certain game object. This method will only be called if a script is enabled.
+            </summary>
+            <param name="target">Object ID that is targeted by VFX.</param>
+            <param name="vfxPath">VFX game path</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnMessage(System.String)">
+            <summary>
+            Will be called whenever plugin processes a message. These are the same messages which layout trigger system receives. This method will only be called if a script is enabled.
+            </summary>
+            <param name="Message"></param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnDirectorUpdate(ECommons.Hooks.DirectorUpdateCategory)">
+            <summary>
+            Will be called when a duty director update is happening, for example, joining, restarting, or wiping in duty. 
+            </summary>
+            <param name="category">Director update category</param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnActionEffectEvent(ECommons.Hooks.ActionEffectTypes.ActionEffectSet)">
+            <summary>
+            Called when an ActionEffect Event is received
+            </summary>
+            <param name="set"></param>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnUpdate">
+            <summary>
+            Will be called every framework update. You can execute general logic of your script here. 
+            </summary>
+        </member>
+        <member name="M:Splatoon.SplatoonScripting.SplatoonScript.OnSettingsDraw">
+            <summary>
+            If you override this method, settings section will be added to your script. You can call ImGui methods in this function to draw configuration UI. Keep it simple.
+            </summary>
+        </member>
+        <member name="M:Splatoon.Utils.Static.PerpOffset(System.Numerics.Vector2,System.Numerics.Vector2,System.Single,System.Single,System.Numerics.Vector2@,System.Numerics.Vector2@)">
+            <summary>
+            Create a perpendicular offset point at a position located along a line segment.
+            </summary>
+            <param name="a">Input. PointD(x,y) of p1.</param>
+            <param name="b">Input. PointD(x,y) of p2.</param>
+            <param name="position">Distance between p1(0.0) and p2 (1.0) in a percentage.</param>
+            <param name="offset">Distance from position at 90degrees to p1 and p2- non-percetange based.</param>
+            <param name="c">Output of the calculated point along p1 and p2. might not be necessary for the ultimate output.</param>
+            <param name="d">Output of the calculated offset point.</param>
+        </member>
+    </members>
+</doc>

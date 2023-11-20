@@ -1,0 +1,16 @@
+{
+  "$type": "HuntTrainAssistant.Config, HuntTrainAssistant",
+  "Enabled": true,
+  "AutoTeleport": true,
+  "AutoTeleportAetheryteDistanceDiff": 3.0,
+  "SuppressChatOtherPlayers": false,
+  "Conductors": [],
+  "CurrentConductor": {
+    "$type": "ECommons.ChatMethods.Sender, ECommons",
+    "Name": "",
+    "HomeWorld": 0
+  },
+  "Debug": false,
+  "AutoOpenMap": true,
+  "Version": 1
+}

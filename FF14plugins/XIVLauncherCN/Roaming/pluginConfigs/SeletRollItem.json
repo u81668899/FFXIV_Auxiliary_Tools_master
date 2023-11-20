@@ -1,0 +1,96 @@
+{
+  "$type": "SeletRollItem.Configuration, SeletRollItem",
+  "k": 192,
+  "l": 0,
+  "m": 0,
+  "n": 1,
+  "ConfigUiVisible": false,
+  "Visable": false,
+  "autoKey": false,
+  "Version": 0,
+  "InGameAlert": true,
+  "ChatType": 56,
+  "Roulettes": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[SeletRollItem.RouletteConfig, SeletRollItem]], System.Private.CoreLib",
+    "1": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "2": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "3": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "4": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "5": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": true,
+      "DPS": false,
+      "排本": false
+    },
+    "6": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "8": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "9": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "15": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    },
+    "17": {
+      "$type": "SeletRollItem.RouletteConfig, SeletRollItem",
+      "Enabled": false,
+      "Tank": false,
+      "Healer": false,
+      "DPS": false,
+      "排本": false
+    }
+  }
+}

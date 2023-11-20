@@ -1,0 +1,48 @@
+{
+  "$type": "TextAdvance.Config, TextAdvance",
+  "AutoEnableNames": [
+    "十六五夜@摩杜纳"
+  ],
+  "TempEnableButton": 0,
+  "TempDisableButton": 0,
+  "MainConfig": {
+    "$type": "TextAdvance.TerritoryConfig, TextAdvance",
+    "EnableQuestAccept": true,
+    "EnableQuestComplete": true,
+    "EnableRequestHandin": true,
+    "EnableCutsceneEsc": false,
+    "EnableCutsceneSkipConfirm": true,
+    "EnableTalkSkip": true
+  },
+  "TerritoryConditions": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[TextAdvance.TerritoryConfig, TextAdvance]], System.Private.CoreLib",
+    "984": {
+      "$type": "TextAdvance.TerritoryConfig, TextAdvance",
+      "EnableQuestAccept": false,
+      "EnableQuestComplete": false,
+      "EnableRequestHandin": false,
+      "EnableCutsceneEsc": true,
+      "EnableCutsceneSkipConfirm": true,
+      "EnableTalkSkip": false
+    },
+    "962": {
+      "$type": "TextAdvance.TerritoryConfig, TextAdvance",
+      "EnableQuestAccept": true,
+      "EnableQuestComplete": true,
+      "EnableRequestHandin": true,
+      "EnableCutsceneEsc": true,
+      "EnableCutsceneSkipConfirm": false,
+      "EnableTalkSkip": false
+    }
+  },
+  "GlobalOverridesLocal": false,
+  "EnableOverlay": false,
+  "OverlayOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": -10.0
+  },
+  "NotifyDisableManualState": false,
+  "NotifyDisableOnLogin": false,
+  "Version": 2
+}

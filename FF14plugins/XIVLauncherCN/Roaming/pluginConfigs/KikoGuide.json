@@ -1,0 +1,20 @@
+{
+  "$type": "KikoGuide.Base.Configuration, KikoGuide",
+  "Version": 0,
+  "Accessiblity": {
+    "$type": "KikoGuide.Base.Configuration+AccessiblityConfiguration, KikoGuide",
+    "ShortenGuideText": false
+  },
+  "Display": {
+    "$type": "KikoGuide.Base.Configuration+DisplayConfiguration, KikoGuide",
+    "DonateButtonShown": true,
+    "AutoToggleGuideForDuty": false,
+    "LockGuideViewerWindow": false,
+    "HiddenMechanics": [],
+    "HideLockedGuides": true
+  },
+  "IPC": {
+    "$type": "KikoGuide.Base.Configuration+IPCConfiguration, KikoGuide",
+    "EnabledIntegrations": []
+  }
+}

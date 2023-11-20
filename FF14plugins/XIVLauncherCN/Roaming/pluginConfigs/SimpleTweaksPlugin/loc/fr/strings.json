@@ -1,0 +1,1050 @@
+{
+  "AutoOpenLootWindow / Description": {
+    "message": "Ouvrir la fenêtre de jet de dés pour le butin lorsque de nouveaux objets y sont ajoutés.",
+    "description": "[AutoOpenLootWindow] Tweak Description"
+  },
+  "AutoOpenLootWindow / Name": {
+    "message": "Ouvre la fenêtre de butin quand de nouveaux butins sont ajoutés.",
+    "description": "[AutoOpenLootWindow] Tweak Name"
+  },
+  "CharaViewIncreasedZoom / Description": {
+    "message": "Permet de zoomer presque infiniment sur les vues d'aperçu des personnages, telles que « Essayer » et « Examiner ».",
+    "description": "[CharaViewIncreasedZoom] Tweak Description"
+  },
+  "CharaViewIncreasedZoom / Name": {
+    "message": "Zoom augmenté sur les prévisualisations de personnages.",
+    "description": "[CharaViewIncreasedZoom] Tweak Name"
+  },
+  "ChatTweaks / Name": {
+    "message": "Tweaks de Chat",
+    "description": "[ChatTweaks] Tweak Name"
+  },
+  "ChatTweaks@ChatNameColours / Description": {
+    "message": "Assigne aux joueurs une couleur aléatoire dans le Chat, ou définissez manuellement des noms.",
+    "description": "[ChatNameColours] Tweak Description"
+  },
+  "ChatTweaks@ChatNameColours / Name": {
+    "message": "Couleurs des noms dans le Chat",
+    "description": "[ChatNameColours] Tweak Name"
+  },
+  "ChatTweaks@ChatNameColours / NameAlreadyAddedError": {
+    "message": "Le nom est déjà dans la liste.",
+    "description": "[ChatNameColours] Chat Name Colours - Name is already in list."
+  },
+  "ChatTweaks@ChatNameColours / Player Name": {
+    "message": "Nom de joueur",
+    "description": "[ChatNameColours] Chat Name Colours - Player Name"
+  },
+  "ChatTweaks@ChatNameColours / RandomColours": {
+    "message": "Utiliser des couleurs aléatoires pour les joueurs non listés",
+    "description": "[ChatNameColours] Chat Name Colours - Use random colours for unlisted players"
+  },
+  "ChatTweaks@ChatNameColours / Server": {
+    "message": "Serveur",
+    "description": "[ChatNameColours] Chat Name Colours - Server"
+  },
+  "ChatTweaks@ClickableLinks / Description": {
+    "message": "Analyse les liens postés dans le chat et leur permet d'être cliqués.",
+    "description": "[ClickableLinks] Tweak Description"
+  },
+  "ChatTweaks@ClickableLinks / Name": {
+    "message": "Liens cliquables dans le Chat",
+    "description": "[ClickableLinks] Tweak Name"
+  },
+  "ChatTweaks@DisableChatAutoscroll / AllowAutoscrollLabel": {
+    "message": "Toujours autoriser le défilement automatique dans :",
+    "description": "[DisableChatAutoscroll] Smart AutoScroll - Always allow autoscrolling in:"
+  },
+  "ChatTweaks@DisableChatAutoscroll / Description": {
+    "message": "Tente de prévenir le défilement automatique lors de la réception de nouveaux messages tant que le Chat est remonté.",
+    "description": "[DisableChatAutoscroll] Tweak Description"
+  },
+  "ChatTweaks@DisableChatAutoscroll / Name": {
+    "message": "Défilement Automatique Intelligent",
+    "description": "[DisableChatAutoscroll] Tweak Name"
+  },
+  "ChatTweaks@DisableChatAutoscroll / TabLabel": {
+    "message": "Onglet {0}",
+    "description": "[DisableChatAutoscroll] Smart AutoScroll - Tab {0}"
+  },
+  "ChatTweaks@DisableChatMovement / Description": {
+    "message": "Empêche la fenêtre de discussion d'être déplacée.",
+    "description": "[DisableChatMovement] Tweak Description"
+  },
+  "ChatTweaks@DisableChatMovement / Name": {
+    "message": "Désactiver le déplacement du Chat",
+    "description": "[DisableChatMovement] Tweak Name"
+  },
+  "ChatTweaks@DisableChatResize / Description": {
+    "message": "Empêche la fenêtre de discussion d'être redimensionnée.",
+    "description": "[DisableChatResize] Tweak Description"
+  },
+  "ChatTweaks@DisableChatResize / Name": {
+    "message": "Désactiver le redimensionnement du Chat",
+    "description": "[DisableChatResize] Tweak Name"
+  },
+  "ChatTweaks@RenameChatTabs / Description": {
+    "message": "Permet de renommer les onglets Général et Combat dans la fenêtre de discussion.",
+    "description": "[RenameChatTabs] Tweak Description"
+  },
+  "ChatTweaks@RenameChatTabs / Name": {
+    "message": "Renommer les onglets de la fenêtre de discussion",
+    "description": "[RenameChatTabs] Tweak Name"
+  },
+  "ChatTweaks@RenameChatTabs / TabLabel": {
+    "message": "Onglet {0}",
+    "description": "[RenameChatTabs] Rename Chat Tabs - Tab {0}"
+  },
+  "ChrDirCommand / Description": {
+    "message": "Ajoute une commande pour ouvrir le répertoire dans lequel les données client du personnage sont stockées.",
+    "description": "[ChrDirCommand] Tweak Description"
+  },
+  "ChrDirCommand / Name": {
+    "message": "Commande Répertoire du Personnage",
+    "description": "[ChrDirCommand] Tweak Name"
+  },
+  "CommandAlias / Description": {
+    "message": "Permet de remplacer les commandes tapées dans la fenêtre de discussion par d'autres commandes.",
+    "description": "[CommandAlias] Tweak Description"
+  },
+  "CommandAlias / EmptyInputError": {
+    "message": "La valeur entrée ne doit pas être vide.",
+    "description": "[CommandAlias] Command Alias - Input must not be empty."
+  },
+  "CommandAlias / EmptyOutputError": {
+    "message": "La valeur de sortie ne doit pas être vide.",
+    "description": "[CommandAlias] Command Alias - Output must not be empty."
+  },
+  "CommandAlias / Enabled": {
+    "message": "Actif",
+    "description": "[CommandAlias] Command Alias - Enabled"
+  },
+  "CommandAlias / Input Command": {
+    "message": "Commande d'Entrée",
+    "description": "[CommandAlias] Command Alias - Input Command"
+  },
+  "CommandAlias / Instruction": {
+    "message": "Ajoutez une liste d'alias de commandes. Ne démarrez pas la commande avec '/'.\nCes alias, par conception, ne fonctionnent pas dans les macros.",
+    "description": "[CommandAlias] Command Alias - Add list of command alias. Do not start command with the '/'\nThese aliases, by design, do not work with macros."
+  },
+  "CommandAlias / MacroHelp": {
+    "message": "Les alias ne sont pas pris en charge dans les macros pour les empêcher d'être envoyés au serveur dans le cas où vous les sauvegardez sur le serveur.\nVeuillez utiliser la commande originale dans vos macros.",
+    "description": "[CommandAlias] Macro Help Tooltip"
+  },
+  "CommandAlias / Name": {
+    "message": "Alias de Commandes",
+    "description": "[CommandAlias] Tweak Name"
+  },
+  "CommandAlias / New Label": {
+    "message": "Nouveau :",
+    "description": "[CommandAlias] Command Alias - New:"
+  },
+  "CommandAlias / Output Command": {
+    "message": "Commande en sortie",
+    "description": "[CommandAlias] Command Alias - Output Command"
+  },
+  "CommandAlias / ProtectedCommandError": {
+    "message": "'/{0}' est une commande protégée.",
+    "description": "[CommandAlias] Command Alias - '/{0}' is a protected command."
+  },
+  "DisableClickTargeting / AddButton": {
+    "message": "Ajouter",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Add"
+  },
+  "DisableClickTargeting / CombatHeader": {
+    "message": "Uniquement en\nCombat",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Only in\nCombat"
+  },
+  "DisableClickTargeting / DefaultNameText": {
+    "message": "Par défaut (noms sans correspondance)",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Default (Unmatched Names)"
+  },
+  "DisableClickTargeting / Description": {
+    "message": "Permet de désactiver la fonction de ciblage sur les clics gauche et/ou droit de la souris.",
+    "description": "[DisableClickTargeting] Tweak Description"
+  },
+  "DisableClickTargeting / EverythingDisabled": {
+    "message": "DisableClickTargeting n'a aucun effet si tout est désactivé...",
+    "description": "[DisableClickTargeting] Disable Click Targeting - It is doing nothing if everything is disabled..."
+  },
+  "DisableClickTargeting / LeftHeader": {
+    "message": "Désactiver\ngauche",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable\nLeft"
+  },
+  "DisableClickTargeting / Name": {
+    "message": "Désactiver le Ciblage par Clic",
+    "description": "[DisableClickTargeting] Tweak Name"
+  },
+  "DisableClickTargeting / NameFiltering": {
+    "message": "Activer le filtrage des noms",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Enable Name Filtering"
+  },
+  "DisableClickTargeting / NameFiltersHelp": {
+    "message": "Options par acteur ",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Per actor options for "
+  },
+  "DisableClickTargeting / NameFiltersLabel": {
+    "message": "Filtres de nom:",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Name Filters:"
+  },
+  "DisableClickTargeting / NameHeader": {
+    "message": "\nNom",
+    "description": "[DisableClickTargeting] Disable Click Targeting - \nName"
+  },
+  "DisableClickTargeting / NamePlaceholder": {
+    "message": "Nom",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Name"
+  },
+  "DisableClickTargeting / RemoveTooltip": {
+    "message": "Retirer {0}",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Remove {0}"
+  },
+  "DisableClickTargeting / RightHeader": {
+    "message": "Désactiver\nDroite",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable\nRight"
+  },
+  "DisableClickTargeting / SimpleCombatOnly": {
+    "message": "Désactiver uniquement en combat",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Only disable in combat"
+  },
+  "DisableClickTargeting / SimpleDisableLeftClick": {
+    "message": "Désactiver le ciblage avec le clic gauche",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable Left Click Targeting"
+  },
+  "DisableClickTargeting / SimpleDisableRightClick": {
+    "message": "Désactiver le ciblage avec le clic droit",
+    "description": "[DisableClickTargeting] Disable Click Targeting - Disable Right Click Targeting"
+  },
+  "DisableTitleScreenMovie / Description": {
+    "message": "Empêche l'écran de titre de jouer la cinématique de l'extension au bout de 60 secondes.",
+    "description": "[DisableTitleScreenMovie] Tweak Description"
+  },
+  "DisableTitleScreenMovie / Name": {
+    "message": "Désactiver la Cinématique de l'Écran-Titre",
+    "description": "[DisableTitleScreenMovie] Tweak Name"
+  },
+  "FixedShadowDistance / Description": {
+    "message": "Définit une valeur fixe pour le rendu des ombres, l'empêchant de changer pendant que vous volez sur une monture.",
+    "description": "[FixedShadowDistance] Tweak Description"
+  },
+  "FixedShadowDistance / Name": {
+    "message": "Distance Fixe du Rendu des Ombres",
+    "description": "[FixedShadowDistance] Tweak Name"
+  },
+  "FixedShadowDistance / Shadow Distance": {
+    "message": "Distance des ombres",
+    "description": "[FixedShadowDistance] Fixed Shadow Distance - Shadow Distance"
+  },
+  "FixTarget / Description": {
+    "message": "Permet d'utiliser la commande par défaut \"/cibler\" pour cibler les joueurs ou PNJ par leur nom.",
+    "description": "[FixTarget] Tweak Description"
+  },
+  "FixTarget / Name": {
+    "message": "Corriger la commande /cibler",
+    "description": "[FixTarget] Tweak Name"
+  },
+  "General Options / Formatting Culture": {
+    "message": "Formatage Culturel",
+    "description": "General Options / Formatting Culture - Formatting Culture"
+  },
+  "General Options / Hide KoFi": {
+    "message": "Cacher le lien Ko-fi.",
+    "description": "General Options / Hide KoFi - Hide Ko-fi link."
+  },
+  "General Options / Language": {
+    "message": "Langue",
+    "description": "General Options / Language - Language"
+  },
+  "General Options / Show Experimental Tweaks": {
+    "message": "Afficher les Tweaks Expérimentaux.",
+    "description": "General Options / Show Experimental Tweaks - Show Experimental Tweaks."
+  },
+  "General Options / Show Tweak Descriptions": {
+    "message": "Afficher les descriptions des tweaks.",
+    "description": "General Options / Show Tweak Descriptions - Show tweak descriptions."
+  },
+  "General Options / Show Tweak IDs": {
+    "message": "Afficher les ID des tweaks.",
+    "description": "General Options / Show Tweak IDs - Show tweak IDs."
+  },
+  "General Options / TabHeader": {
+    "message": "Options Générales",
+    "description": "General Options / TabHeader - General Options"
+  },
+  "General Tweaks": {
+    "message": "Tweaks Généraux",
+    "description": "General Tweaks Tab Header"
+  },
+  "Hide Tweak": {
+    "message": "Cacher tweak",
+    "description": "Hide Tweak - Hide Tweak"
+  },
+  "LegacyCameraLock / Description": {
+    "message": "Empêche la rotation de la caméra lorsque vous utilisez le type de déplacement Legacy.",
+    "description": "[LegacyCameraLock] Tweak Description"
+  },
+  "LegacyCameraLock / Name": {
+    "message": "Verrouillage de la Caméra Legacy",
+    "description": "[LegacyCameraLock] Tweak Name"
+  },
+  "LongVeil / Description": {
+    "message": "Remplace les voiles de mariage par leurs variantes longues qui ne sont habituellement montrées que dans le Sanctuaire des Douze.",
+    "description": "[LongVeil] Tweak Description"
+  },
+  "LongVeil / Name": {
+    "message": "Long Voile",
+    "description": "[LongVeil] Tweak Name"
+  },
+  "MainCommandCommand / Description": {
+    "message": "Ajoute la commande \"/maincommand [name]\" pour permettre l'utilisation de n'importe quelle Commande Principale depuis le Chat ou une macro.",
+    "description": "[MainCommandCommand] Tweak Description"
+  },
+  "MainCommandCommand / Name": {
+    "message": "Commande Principale de Commande",
+    "description": "[MainCommandCommand] Tweak Name"
+  },
+  "MoreGearSets / Description": {
+    "message": "Augmente le nombre maximum de Tenues à 100.",
+    "description": "[MoreGearSets] Tweak Description"
+  },
+  "MoreGearSets / Name": {
+    "message": "Davantage de Tenues",
+    "description": "[MoreGearSets] Tweak Name"
+  },
+  "SetOptionCommand / alias": {
+    "message": "alias",
+    "description": "[SetOptionCommand] Set Option Command - alias"
+  },
+  "SetOptionCommand / Available Options": {
+    "message": "Options disponibles",
+    "description": "[SetOptionCommand] Set Option Command - Available Options"
+  },
+  "SetOptionCommand / Description": {
+    "message": "Ajoute des commandes pour modifier différents paramètres.",
+    "description": "[SetOptionCommand] Tweak Description"
+  },
+  "SetOptionCommand / Name": {
+    "message": "Activer la Commande d'Options",
+    "description": "[SetOptionCommand] Tweak Name"
+  },
+  "SetOptionCommand / option": {
+    "message": "option",
+    "description": "[SetOptionCommand] Set Option Command - option"
+  },
+  "SetOptionCommand / values": {
+    "message": "valeurs",
+    "description": "[SetOptionCommand] Set Option Command - values"
+  },
+  "TooltipTweaks / Name": {
+    "message": "Tweaks des Infobulles",
+    "description": "[TooltipTweaks] Tweak Name"
+  },
+  "TooltipTweaks@CopyHotkey / Browser Only": {
+    "message": "Navigateur uniquement",
+    "description": "[CopyHotkey] Item Hotkeys - Browser Only"
+  },
+  "TooltipTweaks@CopyHotkey / Cancel": {
+    "message": "Annuler",
+    "description": "[CopyHotkey] Item Hotkeys - Cancel"
+  },
+  "TooltipTweaks@CopyHotkey / Confirm": {
+    "message": "Confirmer",
+    "description": "[CopyHotkey] Item Hotkeys - Confirm"
+  },
+  "TooltipTweaks@CopyHotkey / Copy Item Name": {
+    "message": "Copier le nom de l'objet",
+    "description": "[CopyHotkey] Item Hotkeys - Copy Item Name"
+  },
+  "TooltipTweaks@CopyHotkey / Description": {
+    "message": "Ajoute des raccourcis pour diverses actions lorsque la fenêtre de détail de l'objet est visible.",
+    "description": "[CopyHotkey] Tweak Description"
+  },
+  "TooltipTweaks@CopyHotkey / Name": {
+    "message": "Raccourcis d'Objet",
+    "description": "[CopyHotkey] Tweak Name"
+  },
+  "TooltipTweaks@CopyHotkey / NoHelpText": {
+    "message": "Ne pas afficher l'aide des raccourcis sur l'info-bulle",
+    "description": "[CopyHotkey] Item Hotkeys - Don't show hotkey help on Tooltip"
+  },
+  "TooltipTweaks@CopyHotkey / Set Keybind": {
+    "message": "Définir le raccourci clavier",
+    "description": "[CopyHotkey] Item Hotkeys - Set Keybind"
+  },
+  "TooltipTweaks@CopyHotkey / View on Eriones (JP)": {
+    "message": "Voir sur Eriones (japonais)",
+    "description": "[CopyHotkey] Item Hotkeys - View on Eriones (JP)"
+  },
+  "TooltipTweaks@CopyHotkey / View on Gamer Escape": {
+    "message": "Voir sur Gamer Escape",
+    "description": "[CopyHotkey] Item Hotkeys - View on Gamer Escape"
+  },
+  "TooltipTweaks@CopyHotkey / View on Garland Tools": {
+    "message": "Voir sur Garland Tools",
+    "description": "[CopyHotkey] Item Hotkeys - View on Garland Tools"
+  },
+  "TooltipTweaks@CopyHotkey / View on Teamcraft": {
+    "message": "Voir sur Teamcraft",
+    "description": "[CopyHotkey] Item Hotkeys - View on Teamcraft"
+  },
+  "TooltipTweaks@DesynthesisSkill / Description": {
+    "message": "Affiche votre niveau de recyclage actuel lorsque vous visualisez un objet recyclable.",
+    "description": "[DesynthesisSkill] Tweak Description"
+  },
+  "TooltipTweaks@DesynthesisSkill / Desynthesis Delta": {
+    "message": "Delta du Recyclage",
+    "description": "[DesynthesisSkill] Show Desynthesis Skill - Desynthesis Delta"
+  },
+  "TooltipTweaks@DesynthesisSkill / Name": {
+    "message": "Afficher la Compétence de Recyclage",
+    "description": "[DesynthesisSkill] Tweak Name"
+  },
+  "TooltipTweaks@FoodStats / Description": {
+    "message": "Calcule une estimation des stats obtenues par l'utilisation d'un consommable en se basant sur vos stats actuelles.",
+    "description": "[FoodStats] Tweak Description"
+  },
+  "TooltipTweaks@FoodStats / Highlight Active": {
+    "message": "Mettre en surbrillance les stats actuelles",
+    "description": "[FoodStats] Show expected food and potion stats - Highlight Active"
+  },
+  "TooltipTweaks@FoodStats / Name": {
+    "message": "Affiche la valeur estimée des stats octroyées par les potions et la nourriture",
+    "description": "[FoodStats] Tweak Name"
+  },
+  "TooltipTweaks@MateriaStats / Colour Value": {
+    "message": "Colorer la valeur",
+    "description": "[MateriaStats] Materia Stats - Colour Value"
+  },
+  "TooltipTweaks@MateriaStats / Description": {
+    "message": "Inclure dans l'affichage des stats d'un item la valeur des stats des matérias.",
+    "description": "[MateriaStats] Tweak Description"
+  },
+  "TooltipTweaks@MateriaStats / Name": {
+    "message": "Stats des Matérias",
+    "description": "[MateriaStats] Tweak Name"
+  },
+  "TooltipTweaks@MateriaStats / Show Delta": {
+    "message": "Montrer le delta",
+    "description": "[MateriaStats] Materia Stats - Show Delta"
+  },
+  "TooltipTweaks@MateriaStats / Show Total": {
+    "message": "Afficher le total",
+    "description": "[MateriaStats] Materia Stats - Show Total"
+  },
+  "TooltipTweaks@MateriaStats / Simplified Combined Display": {
+    "message": "Affichage combiné simplifié",
+    "description": "[MateriaStats] Materia Stats - Simplified Combined Display"
+  },
+  "TooltipTweaks@PrecisionDurability / Description": {
+    "message": "Afficher des valeurs précises au centième près pour la Condition d'un équipement.",
+    "description": "[PrecisionDurability] Tweak Description"
+  },
+  "TooltipTweaks@PrecisionDurability / Name": {
+    "message": "Précision sur la Condition",
+    "description": "[PrecisionDurability] Tweak Name"
+  },
+  "TooltipTweaks@PrecisionDurability / Trailing Zeros": {
+    "message": "Zéros à droite",
+    "description": "[PrecisionDurability] Precise Durability - Trailing Zeros"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Description": {
+    "message": "Afficher des valeurs précises au centième près pour la Matérialisation d'un équipement.",
+    "description": "[PrecisionSpiritbond] Tweak Description"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Name": {
+    "message": "Précision sur la Matérialisation",
+    "description": "[PrecisionSpiritbond] Tweak Name"
+  },
+  "TooltipTweaks@PrecisionSpiritbond / Trailing Zeros": {
+    "message": "Zéros à droite",
+    "description": "[PrecisionSpiritbond] Precise Spiritbond - Trailing Zeros"
+  },
+  "TooltipTweaks@ShowItemID / Description": {
+    "message": "Afficher l'ID des actions et des objets dans leurs infobulles.",
+    "description": "[ShowItemID] Tweak Description"
+  },
+  "TooltipTweaks@ShowItemID / Name": {
+    "message": "Afficher l'ID",
+    "description": "[ShowItemID] Tweak Name"
+  },
+  "UiAdjustments / Name": {
+    "message": "Tweaks d'Interface",
+    "description": "[UiAdjustments] Tweak Name"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Description": {
+    "message": "Permettre le déplacement de la boîte de dialogue qui apparaît au milieu des batailles.",
+    "description": "[BattleTalkAdjustments] Tweak Description"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Name": {
+    "message": "Ajustements des Discussions de Combat",
+    "description": "[BattleTalkAdjustments] Tweak Name"
+  },
+  "UiAdjustments@BattleTalkAdjustments / PositionPreviewText": {
+    "message": "NOUVELLE POSITION DE LA BOÎTE DE DIALOGUE EN COMBAT",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - NEW BATTLE TALK DIALOGUE BOX POSITION"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Scale": {
+    "message": "Échelle",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - Scale"
+  },
+  "UiAdjustments@BattleTalkAdjustments / X Offset": {
+    "message": "Décalage horizontal",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - X Offset"
+  },
+  "UiAdjustments@BattleTalkAdjustments / Y Offset": {
+    "message": "Décalage vertical",
+    "description": "[BattleTalkAdjustments] Battle Talk Adjustments - Y Offset"
+  },
+  "UiAdjustments@CastBarAdjustments / Align Ability Name": {
+    "message": "Aligner le nom de l'action",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Align Ability Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Align Countdown Text": {
+    "message": "Aligner le compte à rebours",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Align Countdown Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Description": {
+    "message": "Permet de cacher ou de déplacer des parties spécifiques de la barre d'incantation.",
+    "description": "[CastBarAdjustments] Tweak Description"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Ability Name": {
+    "message": "Cacher le nom de l'action",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Ability Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Casting": {
+    "message": "Cacher le texte 'Casting'",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide 'Casting' Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Countdown Text": {
+    "message": "Cacher le compte à rebours",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Countdown Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Icon": {
+    "message": "Cacher l'icône",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Icon"
+  },
+  "UiAdjustments@CastBarAdjustments / Hide Interrupted Text": {
+    "message": "Cacher le texte \"Interruption\"",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Hide Interrupted Text"
+  },
+  "UiAdjustments@CastBarAdjustments / Name": {
+    "message": "Ajustements de la jauge de progression",
+    "description": "[CastBarAdjustments] Tweak Name"
+  },
+  "UiAdjustments@CastBarAdjustments / Offset": {
+    "message": "Décalage",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Offset"
+  },
+  "UiAdjustments@CastBarAdjustments / Show SlideCast Marker": {
+    "message": "Afficher l'aide au slidecast",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - Show SlideCast Marker"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Marker Colour": {
+    "message": "Couleur de l'aide au slidecast",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Marker Colour"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Offset Time": {
+    "message": "Décalage en temps du slidecast",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Offset Time"
+  },
+  "UiAdjustments@CastBarAdjustments / SlideCast Ready Colour": {
+    "message": "Couleur de l'aide au slidecast quand il est possible",
+    "description": "[CastBarAdjustments] Cast Bar Adjustments - SlideCast Ready Colour"
+  },
+  "UiAdjustments@ComboTimer / Always Visible": {
+    "message": "Toujours visible",
+    "description": "[ComboTimer] [Config] Always Visible"
+  },
+  "UiAdjustments@ComboTimer / Description": {
+    "message": "Affiche le délai restant pour poursuivre un combo.",
+    "description": "[ComboTimer] Tweak Description"
+  },
+  "UiAdjustments@ComboTimer / Font Size": {
+    "message": "Taille de police",
+    "description": "[ComboTimer] [Config] Font Size"
+  },
+  "UiAdjustments@ComboTimer / Hide 'COMBO' Text": {
+    "message": "Cacher le texte 'COMBO'",
+    "description": "[ComboTimer] [Config] Hide 'COMBO' Text"
+  },
+  "UiAdjustments@ComboTimer / Name": {
+    "message": "Délai de Combo",
+    "description": "[ComboTimer] Tweak Name"
+  },
+  "UiAdjustments@ComboTimer / Text Color": {
+    "message": "Couleur du texte",
+    "description": "[ComboTimer] [Config] Text Color"
+  },
+  "UiAdjustments@ComboTimer / Text Outline Color": {
+    "message": "Couleur du contour du texte",
+    "description": "[ComboTimer] [Config] Text Outline Color"
+  },
+  "UiAdjustments@ComboTimer / X Position Offset": {
+    "message": "Décalage horizontal",
+    "description": "[ComboTimer] [Config] X Position Offset"
+  },
+  "UiAdjustments@ComboTimer / Y Position Offset": {
+    "message": "Décalage vertical",
+    "description": "[ComboTimer] [Config] Y Position Offset"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / AddButton": {
+    "message": "Ajouter",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Add"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Description": {
+    "message": "Permet de masquer ou de personnaliser les tags de Compagnie Libre et de Baroudeur·se·s.",
+    "description": "[CustomFreeCompanyTags] Tweak Description"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / DuplicateNameError": {
+    "message": "Ce nom est déjà ajouté.",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - This name is already added."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / FC Tag": {
+    "message": "Tag de compagnie libre",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - FC Tag"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / FCAlreadyAddedError": {
+    "message": "La compagnie libre est déjà dans la liste.",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - FC is already on list."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Name": {
+    "message": "Tags de Compagnies Libres Personnalisés",
+    "description": "[CustomFreeCompanyTags] Tweak Name"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / NoFCNote": {
+    "message": "Entrez un nom pour ajouter la compagnie libre à la liste.",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Enter name to add FC to list."
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Replace": {
+    "message": "Remplacer",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Replace"
+  },
+  "UiAdjustments@CustomFreeCompanyTags / Replacement": {
+    "message": "Remplacement",
+    "description": "[CustomFreeCompanyTags] Custom Free Company Tags - Replacement"
+  },
+  "UiAdjustments@CustomTimeFormat / Description": {
+    "message": "Permettre l'ajout d'un format personnalisé pour l'horloge en jeu. Utilise les strings de formatage du C#.",
+    "description": "[CustomTimeFormat] Tweak Description"
+  },
+  "UiAdjustments@CustomTimeFormat / Eorzea Time": {
+    "message": "Heure éorzéenne",
+    "description": "[CustomTimeFormat] Custom Time Formats - Eorzea Time"
+  },
+  "UiAdjustments@CustomTimeFormat / Local Time": {
+    "message": "Heure locale",
+    "description": "[CustomTimeFormat] Custom Time Formats - Local Time"
+  },
+  "UiAdjustments@CustomTimeFormat / Name": {
+    "message": "Formats de Date & Heure Personnalisés",
+    "description": "[CustomTimeFormat] Tweak Name"
+  },
+  "UiAdjustments@CustomTimeFormat / Server Time": {
+    "message": "Heure du serveur",
+    "description": "[CustomTimeFormat] Custom Time Formats - Server Time"
+  },
+  "UiAdjustments@ExamineItemLevel / Description": {
+    "message": "Calcule le niveau d'objet moyen des autres joueurs lorsque vous les examiner.\nUne valeur rouge indique que le joueur porte un objet qui se synchronise à leur niveau et que le calcul se fait avec le niveau maximal de l'objet en question.",
+    "description": "[ExamineItemLevel] Tweak Description"
+  },
+  "UiAdjustments@ExamineItemLevel / ItemLevelIcon": {
+    "message": "Afficher l'icône du niveau d'objet",
+    "description": "[ExamineItemLevel] Item Level in Examine - Show Item Level Icon"
+  },
+  "UiAdjustments@ExamineItemLevel / Name": {
+    "message": "Niveau d'Objet Moyen dans la fenêtre Examiner",
+    "description": "[ExamineItemLevel] Tweak Name"
+  },
+  "UiAdjustments@ExpPercentage / Decimals": {
+    "message": "Décimales",
+    "description": "[ExpPercentage] [Config] Decimals"
+  },
+  "UiAdjustments@ExpPercentage / Description": {
+    "message": "Calcule et affiche le pourcentage d'expérience actuelle sur la barre d'expérience.",
+    "description": "[ExpPercentage] Tweak Description"
+  },
+  "UiAdjustments@ExpPercentage / Name": {
+    "message": "Montrer le Pourcentage d'Expérience",
+    "description": "[ExpPercentage] Tweak Name"
+  },
+  "UiAdjustments@ExpPercentage / Only show percentage": {
+    "message": "Afficher seulement le pourcentage",
+    "description": "[ExpPercentage] [Config] Only show percentage"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / BlockClickOnGearset": {
+    "message": "Empêcher les clics sur des objets de tenue",
+    "description": "[ExtendedDesynthesisWindow] Extended Desynthesis Window - Block clicking on gearset items."
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / Description": {
+    "message": "Affiche votre compétence actuelle de recyclage et le niveau optimal de l'objet dans la fenêtre de sélection du recyclage d'objet.\nIndique également si un objet fait partie d'une Tenue, empêchant éventuellement la sélection d'objets enregistrés dans une Tenue.",
+    "description": "[ExtendedDesynthesisWindow] Tweak Description"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / Name": {
+    "message": "Fenêtre de Recyclage Étendue",
+    "description": "[ExtendedDesynthesisWindow] Tweak Name"
+  },
+  "UiAdjustments@ExtendedDesynthesisWindow / YellowForSkillGain": {
+    "message": "Surligner en jaune les gains potentiels de compétences",
+    "description": "[ExtendedDesynthesisWindow] Extended Desynthesis Window - Highlight potential skill gains (Yellow)"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / Description": {
+    "message": "Ajoute une option dans davantage de menus contextuels pour se téléporter vers des Logements.",
+    "description": "[ExtraEstateTeleportation] Tweak Description"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / Name": {
+    "message": "Extra Téléportation vers les Logements",
+    "description": "[ExtraEstateTeleportation] Tweak Name"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / PartyList": {
+    "message": "Liste d'équipe",
+    "description": "[ExtraEstateTeleportation] Extra Estate Teleportation - Party List"
+  },
+  "UiAdjustments@ExtraEstateTeleportation / PartyMemberList": {
+    "message": "Liste des membres de l'équipe",
+    "description": "[ExtraEstateTeleportation] Extra Estate Teleportation - Party Member List (Social window)"
+  },
+  "UiAdjustments@HideAchievementsNotifications / Description": {
+    "message": "Masque complètement la notification de connexion/téléportation pour les Haut faits sur le point d'être terminés.",
+    "description": "[HideAchievementsNotifications] Tweak Description"
+  },
+  "UiAdjustments@HideAchievementsNotifications / HideLogIn": {
+    "message": "Cacher la notification à la connexion.",
+    "description": "[HideAchievementsNotifications] Hide Achievements Nearing Completion Notifications - Hide the login notification."
+  },
+  "UiAdjustments@HideAchievementsNotifications / HideZoneIn": {
+    "message": "Cacher la notification à l'entrée d'une zone.",
+    "description": "[HideAchievementsNotifications] Hide Achievements Nearing Completion Notifications - Hide the zone-in notification."
+  },
+  "UiAdjustments@HideAchievementsNotifications / Name": {
+    "message": "Masquer les Notifications de Haut faits bientôt terminés",
+    "description": "[HideAchievementsNotifications] Tweak Name"
+  },
+  "UiAdjustments@HideExperienceBar / Description": {
+    "message": "Cache la barre d'expérience au niveau maximum.",
+    "description": "[HideExperienceBar] Tweak Description"
+  },
+  "UiAdjustments@HideExperienceBar / Name": {
+    "message": "Cacher la barre d'expérience au niveau maximum",
+    "description": "[HideExperienceBar] Tweak Name"
+  },
+  "UiAdjustments@HideJobGauge / Description": {
+    "message": "Cache les jauges de Job lorsque vous n'êtes ni en combat, ni en donjon.",
+    "description": "[HideJobGauge] Tweak Description"
+  },
+  "UiAdjustments@HideJobGauge / Name": {
+    "message": "Cacher l'Interface de Job",
+    "description": "[HideJobGauge] Tweak Name"
+  },
+  "UiAdjustments@HideJobGauge / Show In Combat": {
+    "message": "Montrer en combat",
+    "description": "[HideJobGauge] [Config] Show In Combat"
+  },
+  "UiAdjustments@HideJobGauge / Show In Duty": {
+    "message": "Montrer pendant une mission",
+    "description": "[HideJobGauge] [Config] Show In Duty"
+  },
+  "UiAdjustments@ImprovedWorldVisit / Description": {
+    "message": "Simplifie le menu de Voyage vers un autre Monde et montre votre localisation actuelle dans l'ordre sur la liste.",
+    "description": "[ImprovedWorldVisit] Tweak Description"
+  },
+  "UiAdjustments@ImprovedWorldVisit / Name": {
+    "message": "Menu de Voyage Inter-Monde simplifié",
+    "description": "[ImprovedWorldVisit] Tweak Name"
+  },
+  "UiAdjustments@LargeCooldownCounter / Description": {
+    "message": "Augmente la taille des compteurs des cooldowns dans les barres de raccourci.",
+    "description": "[LargeCooldownCounter] Tweak Description"
+  },
+  "UiAdjustments@LargeCooldownCounter / Edge Colour": {
+    "message": "Couleur du contour",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Edge Colour"
+  },
+  "UiAdjustments@LargeCooldownCounter / Font": {
+    "message": "Police de caractères",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Font"
+  },
+  "UiAdjustments@LargeCooldownCounter / Font Size Adjust": {
+    "message": "Taille de police",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Font Size Adjust"
+  },
+  "UiAdjustments@LargeCooldownCounter / Name": {
+    "message": "Agrandir le Compteur de Délai de Recharge",
+    "description": "[LargeCooldownCounter] Tweak Name"
+  },
+  "UiAdjustments@LargeCooldownCounter / Simple Mode": {
+    "message": "Mode simple",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Simple Mode"
+  },
+  "UiAdjustments@LargeCooldownCounter / SimpleModeDescription": {
+    "message": "Utilise l'ancienne méthode de vérification des cooldowns.\nCorrige des problèmes avec XIVCombo.\nCause quelques problèmes hors de portée.\nImpossible de changer la couleur du texte quand le mode simple est activé.",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Reverts to old cooldown checking.\nFixes issues with XIVCombo.\nHas some issues when out of range.\nCannot change colour of text with Simple Mode enabled."
+  },
+  "UiAdjustments@LargeCooldownCounter / Text Colour": {
+    "message": "Couleur du texte",
+    "description": "[LargeCooldownCounter] Large Cooldown Counter - Text Colour"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / Description": {
+    "message": "Définit une limite sur le nombre d'effets de statut affichés sur votre cible.",
+    "description": "[LimitTargetStatusEffects] Tweak Description"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / LimitOnlyInCombat": {
+    "message": "Limiter seulement en combat",
+    "description": "[LimitTargetStatusEffects] Limit Target Status Effects - Only limit in combat##LimitOnlyInCombat"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / Name": {
+    "message": "Limiter les Effets d'États de la Cible",
+    "description": "[LimitTargetStatusEffects] Tweak Name"
+  },
+  "UiAdjustments@LimitTargetStatusEffects / NbStatusEffects": {
+    "message": "Nombre d'altérations d'état affichées",
+    "description": "[LimitTargetStatusEffects] Limit Target Status Effects - Number of status effects displayed##nbStatusEffectsDisplayed"
+  },
+  "UiAdjustments@LockWindowPosition / Description": {
+    "message": "Permet de verrouiller la position de presque toutes les fenêtres de l'interface utilisateur.",
+    "description": "[LockWindowPosition] Tweak Description"
+  },
+  "UiAdjustments@LockWindowPosition / HelpMessage": {
+    "message": "Vous pouvez verrouiller ou déverrouiller les fenêtres à partir de leur menu contextuel (clic droit sur la fenêtre).",
+    "description": "[LockWindowPosition] Lock Window Positions - You can lock or unlock windows from their context menu (right click the window)."
+  },
+  "UiAdjustments@LockWindowPosition / Lock Window Position": {
+    "message": "Verrouiller la position de la fenêtre",
+    "description": "[LockWindowPosition] Lock Window Positions - Lock Window Position"
+  },
+  "UiAdjustments@LockWindowPosition / Name": {
+    "message": "Verrouiller les positions des fenêtres",
+    "description": "[LockWindowPosition] Tweak Name"
+  },
+  "UiAdjustments@LockWindowPosition / Unlock": {
+    "message": "Déverrouiller",
+    "description": "[LockWindowPosition] Lock Window Positions - Unlock"
+  },
+  "UiAdjustments@LockWindowPosition / Unlock Window Position": {
+    "message": "Déverrouiller la position de la fenêtre",
+    "description": "[LockWindowPosition] Lock Window Positions - Unlock Window Position"
+  },
+  "UiAdjustments@MarketEnhancements / Description": {
+    "message": "Améliorations de l'interface utilisateur pour le tableau de ventes du marché, telles que la taxe et la mise en évidence de la \"taxe de la flemme\".",
+    "description": "[MarketEnhancements] Tweak Description"
+  },
+  "UiAdjustments@MarketEnhancements / Highlight items that can be purchased from an NPC for cheaper. (Red)": {
+    "message": "Mettre en surbrillance rouge les objets pouvant être achetés à des PNJ pour moins cher.",
+    "description": "[MarketEnhancements] [Config] Highlight items that can be purchased from an NPC for cheaper. (Red)"
+  },
+  "UiAdjustments@MarketEnhancements / Highlight items that can be sold to NPC for more. (Green)": {
+    "message": "Mettre en surbrillance verte les objets pouvant être vendus à des PNJ pour plus cher.",
+    "description": "[MarketEnhancements] [Config] Highlight items that can be sold to NPC for more. (Green)"
+  },
+  "UiAdjustments@MarketEnhancements / Include tax in single price.": {
+    "message": "Inclure la taxe dans le prix individuel.",
+    "description": "[MarketEnhancements] [Config] Include tax in single price."
+  },
+  "UiAdjustments@MarketEnhancements / Include tax in total price.": {
+    "message": "Inclure la taxe dans le prix total.",
+    "description": "[MarketEnhancements] [Config] Include tax in total price."
+  },
+  "UiAdjustments@MarketEnhancements / Name": {
+    "message": "Améliorations du Marché",
+    "description": "[MarketEnhancements] Tweak Name"
+  },
+  "UiAdjustments@MinimapAdjustments / Description": {
+    "message": "Permet de masquer certains éléments de la mini-carte.",
+    "description": "[MinimapAdjustments] Tweak Description"
+  },
+  "UiAdjustments@MinimapAdjustments / Name": {
+    "message": "Ajustements de la Mini-Carte",
+    "description": "[MinimapAdjustments] Tweak Name"
+  },
+  "UiAdjustments@NotificationToastAdjustments / Description": {
+    "message": "Permettre le déplacement ou de masquer les notifications qui apparaissent au milieu de l'écran à certains moments.",
+    "description": "[NotificationToastAdjustments] Tweak Description"
+  },
+  "UiAdjustments@NotificationToastAdjustments / Name": {
+    "message": "Ajustements des notifications Toast",
+    "description": "[NotificationToastAdjustments] Tweak Name"
+  },
+  "UiAdjustments@OldNameplatesTweak / Description": {
+    "message": "Annule le changement de l'apparence des plaques de noms.",
+    "description": "[OldNameplatesTweak] Tweak Description"
+  },
+  "UiAdjustments@OldNameplatesTweak / Name": {
+    "message": "Remettre les anciennes Plaques de Noms",
+    "description": "[OldNameplatesTweak] Tweak Name"
+  },
+  "UiAdjustments@ParameterBarAdjustments / AutoHideMp": {
+    "message": "Cacher la barre de PM sur les jobs qui n'utilisent pas de PM",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Bar on jobs that don't use MP"
+  },
+  "UiAdjustments@ParameterBarAdjustments / CP Bar Color": {
+    "message": "Couleur de la barre de PS",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - CP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Description": {
+    "message": "Permet de masquer ou de déplacer des parties spécifiques de la barre de paramètres (barres de PV et de PM).",
+    "description": "[ParameterBarAdjustments] Tweak Description"
+  },
+  "UiAdjustments@ParameterBarAdjustments / GP Bar Color": {
+    "message": "Couleur de la barre de PR",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - GP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide 'HP' Text": {
+    "message": "Cacher le texte \"PV\"",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide 'HP' Text"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide 'MP' Text": {
+    "message": "Cacher le texte \"PM\"",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide 'MP' Text"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide HP Bar": {
+    "message": "Masquer la barre de PV",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide HP Bar"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide HP Value": {
+    "message": "Masquer le montant de PV",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide HP Value"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide MP Bar": {
+    "message": "Masquer la barre de PM",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Bar"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide MP Value": {
+    "message": "Masquer le montant de PM",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide MP Value"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Hide Target Cycling": {
+    "message": "Cacher le défilement des cibles",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - Hide Target Cycling"
+  },
+  "UiAdjustments@ParameterBarAdjustments / HP Bar Color": {
+    "message": "Couleur de la barre de PV",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - HP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / MP Bar Color": {
+    "message": "Couleur de la barre de PM",
+    "description": "[ParameterBarAdjustments] Parameter Bar Adjustments - MP Bar Color"
+  },
+  "UiAdjustments@ParameterBarAdjustments / Name": {
+    "message": "Ajustements de la Barre de Paramètres",
+    "description": "[ParameterBarAdjustments] Tweak Name"
+  },
+  "UiAdjustments@PartyListStatusTimers / Description": {
+    "message": "Affiche les durées des effets de statut dans la liste d'équipe.",
+    "description": "[PartyListStatusTimers] Tweak Description"
+  },
+  "UiAdjustments@PartyListStatusTimers / Name": {
+    "message": "Durée des Effets dans la Liste d'Équipe",
+    "description": "[PartyListStatusTimers] Tweak Name"
+  },
+  "UiAdjustments@ReducedDeepDungeonInfo / Description": {
+    "message": "Cache les informations redondantes des détails du personnage dans les donjons sans fond.",
+    "description": "[ReducedDeepDungeonInfo] Tweak Description"
+  },
+  "UiAdjustments@ReducedDeepDungeonInfo / Name": {
+    "message": "Informations Réduites dans les Donjons sans Fond",
+    "description": "[ReducedDeepDungeonInfo] Tweak Name"
+  },
+  "UiAdjustments@RememberTitleSorting / Description": {
+    "message": "Se souvenir de l'option de tri sélectionnée dans le menu de sélection des Titres.",
+    "description": "[RememberTitleSorting] Tweak Description"
+  },
+  "UiAdjustments@RememberTitleSorting / Name": {
+    "message": "Mémoriser le filtre de tri de la liste des Titres",
+    "description": "[RememberTitleSorting] Tweak Name"
+  },
+  "UiAdjustments@RemoveCommunityFinder / Description": {
+    "message": "Masque les boutons de recherche de communauté dans les fenêtres sociales.",
+    "description": "[RemoveCommunityFinder] Tweak Description"
+  },
+  "UiAdjustments@RemoveCommunityFinder / Name": {
+    "message": "Retirer la Recherche de Communautés",
+    "description": "[RemoveCommunityFinder] Tweak Name"
+  },
+  "UiAdjustments@SellMaxTripleTriadCards / Description": {
+    "message": "Définir le nombre par défaut de cartes à vendre auprès du vendeur de Cartes Triple Triad au nombre de cartes que vous possédez.",
+    "description": "[SellMaxTripleTriadCards] Tweak Description"
+  },
+  "UiAdjustments@SellMaxTripleTriadCards / Name": {
+    "message": "Valeur maximale par défaut lors de la vente de Cartes Triple Triad",
+    "description": "[SellMaxTripleTriadCards] Tweak Name"
+  },
+  "UiAdjustments@ShiftTargetCastBarText / Description": {
+    "message": "Déplace le texte sur la jauge d'incantation de la cible afin d'en faciliter la lecture",
+    "description": "[ShiftTargetCastBarText] Tweak Description"
+  },
+  "UiAdjustments@ShiftTargetCastBarText / Name": {
+    "message": "Repositionner le Texte de la Jauge d'Incantation de la Cible",
+    "description": "[ShiftTargetCastBarText] Tweak Name"
+  },
+  "UiAdjustments@ShowShieldOnHPBar / Description": {
+    "message": "Affiche une approximation du bouclier sur la Jauge de PV.",
+    "description": "[ShowShieldOnHPBar] Tweak Description"
+  },
+  "UiAdjustments@ShowShieldOnHPBar / Name": {
+    "message": "Bouclier sur la Jauge de PV",
+    "description": "[ShowShieldOnHPBar] Tweak Name"
+  },
+  "UiAdjustments@SmartNameplates / Description": {
+    "message": "Fournit des options pour cacher les plaques de nom des autres personnags en combat dans certaines conditions.",
+    "description": "[SmartNameplates] Tweak Description"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Alliance Members": {
+    "message": "Ignorer les Membres de votre Alliance",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Alliance Members"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Dead Players": {
+    "message": "Ignorer les joueurs inconscients",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Dead Players"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Friends": {
+    "message": "Ignorer les amis",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Friends"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Party Members": {
+    "message": "Ignorer les Membres de votre Équipe",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Party Members"
+  },
+  "UiAdjustments@SmartNameplates / Ignore Targeted Players": {
+    "message": "Ignorer les personnages ciblés",
+    "description": "[SmartNameplates] Smart Nameplates - Ignore Targeted Players"
+  },
+  "UiAdjustments@SmartNameplates / IgnorePlayersNote": {
+    "message": "Les options suivantes désactiveront le tweak pour certains joueurs.",
+    "description": "[SmartNameplates] Smart Nameplates - The following options will disable the tweak for certain players."
+  },
+  "UiAdjustments@SmartNameplates / Name": {
+    "message": "Plaques de Noms Intelligentes",
+    "description": "[SmartNameplates] Tweak Name"
+  },
+  "UiAdjustments@SmartNameplates / Show HP": {
+    "message": "Afficher les PV",
+    "description": "[SmartNameplates] Smart Nameplates - Show HP"
+  },
+  "UiAdjustments@TargetHP / Description": {
+    "message": "Affiche la quantité exacte (ou optionnellement arrondie) de points de vie de la cible.",
+    "description": "[TargetHP] Tweak Description"
+  },
+  "UiAdjustments@TargetHP / Name": {
+    "message": "PVs de la Cible",
+    "description": "[TargetHP] Tweak Name"
+  },
+  "UiAdjustments@TimerOnDutyWaiting / Description": {
+    "message": "Affiche le compte à rebours de 45 secondes après avoir confirmé être prêt pour une mission.",
+    "description": "[TimerOnDutyWaiting] Tweak Description"
+  },
+  "UiAdjustments@TimerOnDutyWaiting / Name": {
+    "message": "Timer d'Attente de Confirmation de Mission",
+    "description": "[TimerOnDutyWaiting] Tweak Name"
+  },
+  "UiAdjustments@TimeUntilGpMax / Description": {
+    "message": "Montre un compte à rebours quand vous jouez une classe de Récolteur pour estimer le temps restant avant que les PRs ne soient plafonnés.",
+    "description": "[TimeUntilGpMax] Tweak Description"
+  },
+  "UiAdjustments@TimeUntilGpMax / Name": {
+    "message": "Temps avant que les PR soient au max",
+    "description": "[TimeUntilGpMax] Tweak Name"
+  },
+  "Unhide Tweak": {
+    "message": "Afficher tweak",
+    "description": "Unhide Tweak - Unhide Tweak"
+  }
+}

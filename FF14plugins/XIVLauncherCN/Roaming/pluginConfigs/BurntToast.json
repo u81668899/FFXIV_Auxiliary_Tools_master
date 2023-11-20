@@ -1,0 +1,56 @@
+{
+  "$type": "BurntToast.Configuration, BurntToast",
+  "Version": 1,
+  "Patterns": [
+    {
+      "Pattern": "距离战斗开始还有.+?秒！.+?",
+      "Options": 8
+    },
+    {
+      "Pattern": "取消了战斗开始倒计时。",
+      "Options": 8
+    },
+    {
+      "Pattern": "雇员.+?成功完成了探险！",
+      "Options": 8
+    },
+    {
+      "Pattern": "（.+?）",
+      "Options": 8
+    },
+    {
+      "Pattern": "为了避免设定的金额低于下限，已自动对价格进行了调整。",
+      "Options": 8
+    },
+    {
+      "Pattern": "开始跟随",
+      "Options": 8
+    },
+    {
+      "Pattern": "在.+?开始捕鱼。",
+      "Options": 8
+    },
+    {
+      "Pattern": "十六五夜",
+      "Options": 8
+    },
+    {
+      "Pattern": "离开了小队",
+      "Options": 8
+    },
+    {
+      "Pattern": "加入了小队",
+      "Options": 8
+    }
+  ],
+  "BattleTalkPatterns": [
+    {
+      "$type": "BurntToast.BattleTalkPattern, BurntToast",
+      "Pattern": {
+        "Pattern": "十六五夜",
+        "Options": 8
+      },
+      "ShowMessage": true
+    }
+  ]
+}

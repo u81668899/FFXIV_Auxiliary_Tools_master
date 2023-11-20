@@ -1,0 +1,99 @@
+{
+  "$type": "CoinPouch.Config.Configuration, CoinPouch",
+  "loginAlerts": true,
+  "zoningAlerts": true,
+  "zoningAlertsTimeout": 5,
+  "liveAlerts": true,
+  "alertSound": true,
+  "sound": 38,
+  "pinVendor": true,
+  "Version": 1,
+  "alerts": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[CoinPouch.Config.AlertConfig, CoinPouch]], System.Private.CoreLib",
+    "28": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 1400
+    },
+    "43": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 1700
+    },
+    "44": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 1700
+    },
+    "20": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 75000
+    },
+    "21": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 75000
+    },
+    "22": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 75000
+    },
+    "25": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 18000
+    },
+    "36656": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 18000
+    },
+    "27": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "10307": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "26533": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "26807": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 800
+    },
+    "25199": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "33913": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "25200": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "33914": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 3500
+    },
+    "28063": {
+      "$type": "CoinPouch.Config.AlertConfig, CoinPouch",
+      "enabled": true,
+      "threshold": 7500
+    }
+  }
+}
