@@ -10,15 +10,6 @@
               <Action OrderNumber="1" LogMessageText="挖宝重置" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/e 挖宝重置" ActionType="LogMessage" ExecutionDelayExpression="10">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" FolderId="6a996431-666e-433b-98f2-d04f1063155e" Enabled="False" ActionType="Folder">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="3" FolderId="81a7d385-e0b8-4f3e-902a-b692282921cd" Enabled="False" ActionType="Folder">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/e 已重置" Enabled="False" ActionType="NamedCallback">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
@@ -173,6 +164,9 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="33" VariableOp="SetNumeric" VariableName="轻柔棉布" VariableExpression="0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="34" NamedCallbackName="command" NamedCallbackParam="/e 已重置" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
