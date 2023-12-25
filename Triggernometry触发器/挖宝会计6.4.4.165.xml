@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.4.3.165" Enabled="true">
+  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.4.4.165" Enabled="true">
     <Folders>
       <Folder Id="e02cb1de-582c-4d03-b04f-7c1be31c8d13" Name="基础功能 请全部勾选" Enabled="true">
         <Folders />
@@ -235,7 +235,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Name="门发光了！" Id="107a0465-a3ee-487e-9871-0c3663543f62" RegularExpression="::(.+?)的门发光了">
+          <Trigger Enabled="true" Name="门发光了！" Id="107a0465-a3ee-487e-9871-0c3663543f62" RegularExpression="::(.+?)的门发光了">
             <Actions>
               <Action OrderNumber="1" LogMessageText="${_event}" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
@@ -610,7 +610,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="6.0统计发送" Id="21c3034d-66a3-405c-8f48-0d1b04564573" RegularExpression="^统计发送$">
+          <Trigger Enabled="false" Sequential="True" Name="6.0统计发送 分散版《选一个打钩》" Id="21c3034d-66a3-405c-8f48-0d1b04564573" RegularExpression="^统计发送$">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_money" VariableExpression="${var:tb_money}+0" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -822,6 +822,193 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="6.0统计发送 整合版《选一个打钩》" Id="1621e45f-7bc5-4560-97c1-d9aba86ba680" RegularExpression="^统计发送$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_money" VariableExpression="${var:tb_money}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_mapnum" VariableExpression="${var:tb_mapnum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="mw_num" VariableExpression="${var:mw_num}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tb_zuinum" VariableExpression="${var:tb_zuinum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_shendian" VariableExpression="${var:tb_shendian}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="tb_tenum" VariableExpression="${var:tb_tenum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="tb_biannum" VariableExpression="${var:tb_biannum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="tb_shangnum" VariableExpression="${var:tb_shangnum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="tb_zhongnum" VariableExpression="${var:tb_zhongnum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="tb_xianum" VariableExpression="${var:tb_xianum}+0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${var:tb_money}}　图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 神殿：${var:tb_shendian}　特殊：${var:tb_tenum}　变动：${var:tb_biannum}　上级：${var:tb_shangnum}　中级：${var:tb_zhongnum}　下级：${var:tb_xianum}" ActionType="NamedCallback" ExecutionDelayExpression="10">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:tb_shendian}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="13" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 招募信息：《 ${var:tb_zhaomu}》" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:tb_zhaomu}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="14" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}单人绿×${var:鞣革制的隐藏地图}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:鞣革制的隐藏地图}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="15" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}纳夏薄绢×${var:纳夏薄绢}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:纳夏薄绢}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="16" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}深层绿×${var:深层传送魔纹的地图}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:深层传送魔纹的地图}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="17" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}附魔木×${var:附魔榆木木材}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:附魔榆木木材}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="18" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}后臀×${var:后臀革}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:后臀革}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="19" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}顺柔×${var:顺柔剂}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:顺柔剂}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="20" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}南洋×${var:南洋织物}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:南洋织物}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="21" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}小牛皮×${var:小牛皮}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:小牛皮}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="22" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}前沿×${var:前沿布料}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:前沿布料}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="23" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}古菩灯×${var:古菩台灯}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:古菩台灯}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="24" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}河狸×${var:黄金大河狸}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:黄金大河狸}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="25" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}金鲶×${var:金鲶}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:金鲶}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="26" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}开心布×${var:开心布}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:开心布}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="27" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}大天使×${var:大天使之翼}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:大天使之翼}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="28" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}仙子族×${var:仙子族之翼}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:仙子族之翼}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="29" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}白伞×${var:白色花边阳伞}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:白色花边阳伞}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="30" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}羽毛×${var:绚烂华丽的羽毛}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:绚烂华丽的羽毛}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="31" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}惊奇纤维×${var:惊奇纤维}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:惊奇纤维}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="32" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}惊奇革×${var:惊奇革}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:惊奇革}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="33" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}净洁布×${var:净洁布}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:净洁布}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="34" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}火角×${var:灼热的火角}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:灼热的火角}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="35" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}补剂×${var:惊奇补剂}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:惊奇补剂}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="36" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}迷艾×${var:迷你艾多纽斯}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:迷你艾多纽斯}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="37" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}迷友×${var:迷你好友}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:迷你好友}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="38" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}轻柔×${var:轻柔棉布}　" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:轻柔棉布}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="39" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 本次掉落内容：${var:统计发送}" ActionType="NamedCallback" ExecutionDelayExpression="10">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:统计发送}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="40" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 似乎还没有值钱的掉落物…" ActionType="NamedCallback" ExecutionDelayExpression="10">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:统计发送}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="41" VariableName="统计发送" ActionType="Variable" ExecutionDelayExpression="50">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
