@@ -213,7 +213,7 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="34359738368" Id="e66e1adc-4c58-4adf-8c54-384a5c455c21" Name="可选功能 请选择勾选" Enabled="true">
+      <Folder FFXIVJobFilter="34359738368" Id="e66e1adc-4c58-4adf-8c54-384a5c455c21" Name="可选功能 请选择勾选" Enabled="true">
         <Folders />
         <Triggers>
           <Trigger Enabled="false" Name="7.0提示转盘roll点" Id="101fdadf-9927-41fa-a8ad-965f798a6f27" RegularExpression="^.{14} ChatLog 00:0839::好像还有没拿走的财宝……$" PeriodRefire="Deny" RefirePeriodExpression="5000">
@@ -1008,11 +1008,10 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="false">
+      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="true">
         <Folders />
         <Triggers>
           <Trigger Enabled="true" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
@@ -1031,12 +1030,15 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
+          <Trigger Enabled="true" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback" ExecutionDelayExpression="1500">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="900">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="900">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
