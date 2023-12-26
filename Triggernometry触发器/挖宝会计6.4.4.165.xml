@@ -1032,7 +1032,7 @@
           </Trigger>
           <Trigger Enabled="true" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
             <Actions>
-              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback" ExecutionDelayExpression="1500">
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback" ExecutionDelayExpression="0">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="900">
