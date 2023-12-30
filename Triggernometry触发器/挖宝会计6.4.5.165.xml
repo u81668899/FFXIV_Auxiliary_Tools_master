@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.4.4.165" Enabled="true">
+  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.4.5.165" Enabled="true">
     <Folders>
       <Folder Id="e02cb1de-582c-4d03-b04f-7c1be31c8d13" Name="基础功能 请全部勾选" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="1.0手动重置" Id="ce9680b0-ad17-4804-a4d7-b28354550951" RegularExpression="^.{14} ChatLog 00:0038::(挖宝|手动)重置$">
+          <Trigger Enabled="true" Name="1.0手动重置" Id="ce9680b0-ad17-4804-a4d7-b28354550951" RegularExpression="^.{14} ChatLog 00:0038::(挖宝|手动|金币)重置$">
             <Actions>
               <Action OrderNumber="1" LogMessageText="挖宝重置" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/e 挖宝重置" ActionType="LogMessage" ExecutionDelayExpression="10">
                 <Condition Enabled="false" Grouping="Or" />
@@ -582,12 +582,12 @@
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="上级召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tb_shangnum" VariableExpression="${var:tb_biannum}+1" ActionType="Variable">
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tb_biannum" VariableExpression="${var:tb_biannum}+1" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="召唤式变动" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_shangnum" VariableExpression="${var:tb_tenum}+1" ActionType="Variable">
+                  <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_tenum" VariableExpression="${var:tb_tenum}+1" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="特殊召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
@@ -1011,7 +1011,7 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="true">
+      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="false">
         <Folders />
         <Triggers>
           <Trigger Enabled="true" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
@@ -1032,13 +1032,10 @@
           </Trigger>
           <Trigger Enabled="true" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
             <Actions>
-              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback" ExecutionDelayExpression="0">
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback" ExecutionDelayExpression="1500">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="900">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="900">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
