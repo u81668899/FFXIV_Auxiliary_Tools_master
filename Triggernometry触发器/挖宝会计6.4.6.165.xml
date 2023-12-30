@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.4.5.165" Enabled="true">
+  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.4.6.165" Enabled="true">
     <Folders>
       <Folder Id="e02cb1de-582c-4d03-b04f-7c1be31c8d13" Name="基础功能 请全部勾选" Enabled="true">
         <Folders />
@@ -316,7 +316,7 @@
           <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(61[2-4]|62[0-2]|712|794)$" Id="e52bfcdc-96c2-4c3b-9026-5691c9fb96ce" Name="G10掉落统计内核" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="G10_掉落" Id="8ca7cc06-4bdc-4e5b-a4a5-7f7327424a9d" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品(?&lt;item&gt;.+?)×?(?&lt;count&gt;\d{1,4})?。$">
+              <Trigger Enabled="true" Name="G10_掉落" Id="8ca7cc06-4bdc-4e5b-a4a5-7f7327424a9d" RegularExpression="^.{14} ChatLog 00:083E::(?&lt;name&gt;[^:]*?)获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
@@ -325,6 +325,18 @@
                   </Action>
                   <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + 1" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + ${count}" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + 1" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
@@ -359,30 +371,6 @@
           <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(81[3-8]|879|924)$" Id="49fa0799-245a-4de8-a3f0-5933c7bf9b35" Name="G12掉落统计内核" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="G12_掉落" Id="9f65e885-ee19-436e-b32d-513788adba2e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品(?&lt;item&gt;.+?)×?(?&lt;count&gt;\d{1,4})?。$">
-                <Actions>
-                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + 1" ActionType="Variable">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                  </Action>
-                </Actions>
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="古菩台灯" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="黄金大河狸" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="后臀革" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="小牛皮" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="前沿布料" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="附魔榆木木材" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="顺柔剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="南洋织物" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                </Condition>
-              </Trigger>
               <Trigger Enabled="false" Name="G12神殿计算" Id="ab5b37cb-4e58-4e06-8750-a97aa04fef53" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?(.+?)出现了！">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_xianum" VariableExpression="${var:tb_xianum}+1" ActionType="Variable">
@@ -403,12 +391,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-            </Triggers>
-          </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(95[6-9]|960|1000)$" Id="1675dbd2-0209-4a79-b4c2-4857075a0690" Name="G14掉落统计内核" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Name="G14_掉落" Id="0fcba66e-5fd0-494a-917d-3d24285cac9e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品(?&lt;item&gt;.+?)×?(?&lt;count&gt;\d{1,4})?。$">
+              <Trigger Enabled="true" Name="G12_掉落" Id="55365358-5d96-49dd-88d9-83676e0fa8dd" RegularExpression="^.{14} ChatLog 00:083E::(?&lt;name&gt;[^:]*?)获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
@@ -420,54 +403,80 @@
                       <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
+                  <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + ${count}" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + 1" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="开心布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="仙子族之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="大天使之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="附魔榆木木材" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="古菩台灯" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="后臀革" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="黄金大河狸" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="南洋织物" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="前沿布料" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="顺柔剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="小牛皮" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(95[6-9]|960|1000)$" Id="1675dbd2-0209-4a79-b4c2-4857075a0690" Name="G14掉落统计内核" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="G14_掉落" Id="d120d21b-4184-4080-b3d8-1e91a8ab53de" RegularExpression="^.{14} ChatLog 00:083E::(?&lt;name&gt;[^:]*?)获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + 1" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + ${count}" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + 1" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="白色花边阳伞" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="绚烂华丽的羽毛" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇纤维" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="大天使之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇补剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                   <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇革" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                   <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="净洁布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇补剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇纤维" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                   <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="轻柔棉布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="仙子族之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="开心布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="绚烂华丽的羽毛" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
           <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(961|1123)$" Id="b93718aa-13f9-4ae8-8a31-fa46bef80cad" Name="G15掉落统计内核" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="G15_掉落" Id="90c245dd-fc89-4add-b93a-c72fd96d4241" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品(?&lt;item&gt;.+?)×?(?&lt;count&gt;\d{1,4})?。$">
-                <Actions>
-                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + 1" ActionType="Variable">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                  </Action>
-                </Actions>
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="开心布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="仙子族之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="大天使之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="白色花边阳伞" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="绚烂华丽的羽毛" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇纤维" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇革" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="净洁布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="灼热的火角" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇补剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="迷你艾多纽斯" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="迷你好友" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="轻柔棉布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                </Condition>
-              </Trigger>
               <Trigger Enabled="false" Name="G15神殿计算" Id="d73b88ce-80d8-4434-a856-351fa7e95ec0" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?(.+?)出现了！">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_xianum" VariableExpression="${var:tb_xianum}+1" ActionType="Variable">
@@ -488,12 +497,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-            </Triggers>
-          </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(725)$" Id="c181e952-ff84-4ea8-9265-2b414aa4e01c" Name="深层绿掉落统计内核" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Name="绿图_掉落" Id="8d83378c-bbbe-4e4b-8020-b1d905723295" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品(?&lt;item&gt;.+?)×?(?&lt;count&gt;\d{1,4})?。$">
+              <Trigger Enabled="true" Name="G15_掉落" Id="6db07dcf-b307-4b08-8902-6ec951da8aef" RegularExpression="^.{14} ChatLog 00:083E::(?&lt;name&gt;[^:]*?)获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
@@ -505,17 +509,77 @@
                       <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
+                  <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + ${count}" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + 1" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="白色花边阳伞" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="大天使之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇补剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇革" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="惊奇纤维" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="净洁布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="开心布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="迷你艾多纽斯" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="迷你好友" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="轻柔棉布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="仙子族之翼" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="绚烂华丽的羽毛" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="灼热的火角" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(725)$" Id="c181e952-ff84-4ea8-9265-2b414aa4e01c" Name="深层绿掉落统计内核" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="绿图_掉落" Id="e436e8dc-004a-48f1-88c0-c31792a2ff4c" RegularExpression="^.{14} ChatLog 00:083E::(?&lt;name&gt;[^:]*?)获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + 1" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + ${count}" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="${name}${item}" VariableExpression="${var:${item}} + 1" Enabled="False" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="金鲶" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="05a33f85-cabc-4b8a-a1d3-daaba5575842" Name="外图掉落统计内核" Enabled="true">
+          <Folder Id="05a33f85-cabc-4b8a-a1d3-daaba5575842" Name="G1-G8掉落统计内核" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="外图_掉落" Id="9c41bc8c-69b0-4301-919a-b4abb2ab3f0e" RegularExpression="^.{14} ChatLog 00:083E::[^:]*?获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
+              <Trigger Enabled="true" Name="G1-G8_掉落" Id="9c41bc8c-69b0-4301-919a-b4abb2ab3f0e" RegularExpression="^.{14} ChatLog 00:083E::[^:]*?获得了“(?&lt;item&gt;.+?)”×?(?&lt;count&gt;\d{1,4})?。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${item}" VariableExpression="${var:${item}} + ${count}" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
@@ -530,12 +594,11 @@
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="鞣革制的隐藏地图" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="深层传送魔纹的地图" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(961|1123|81[3-8]|879|924|61[2-4]|62[0-2]|712|794)$" Id="28ec8049-c070-48b4-815c-17c5663e2506" Name="转盘计算" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123)$" Id="28ec8049-c070-48b4-815c-17c5663e2506" Name="转盘计算" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="g15下底" Id="3a8995be-ca17-4b89-970c-2cae47d5378f" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?(纳西索斯|法厄同|希波墨涅斯)出现了！">
