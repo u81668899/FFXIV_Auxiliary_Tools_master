@@ -7,18 +7,24 @@
           <Folder FFXIVJobFilter="4437573664" Id="18d22ee1-a883-423b-ab13-4f77c58b8d77" Name="行尸走肉" Enabled="false">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="死而不僵" Id="a8dd485b-d5e8-49ee-bb13-5dd20af075aa" RegularExpression="^.{14} StatusAdd 1A:32B:(?&lt;AbilityName&gt;死而不僵|Walking Dead|ウォーキングデッド):[^:]*:.{8}:(?&lt;CasterName&gt;[^:]+?):" PrevActions="Interrupt">
+              <Trigger Enabled="true" Sequential="True" Name="死而不僵" Id="a8dd485b-d5e8-49ee-bb13-5dd20af075aa" RegularExpression="1A:32B:[^:]*:(?&lt;second&gt;[^:]*):.{8}:(?&lt;CasterName&gt;[^:]+?):" PrevActions="Interrupt">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="死而不僵" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                  <Action OrderNumber="1" LogMessageText="${_event}" Enabled="False" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="WalkingDeadText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+                  <Action OrderNumber="2" UseTTSTextExpression="死而不僵" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="WalkingDead" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003077.png" AuraXIniExpression="905" AuraYIniExpression="81" AuraWIniExpression="111" AuraHIniExpression="108" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+                  <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="WalkingDeadText" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="WalkingDeadText" TextAuraExpression="${numeric:+10-${_since}}" TextAuraXIniExpression="921" TextAuraYIniExpression="127" TextAuraWIniExpression="79" TextAuraHIniExpression="59" TextAuraOIniExpression="100" TextAuraTTLTickExpression="10-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+                  <Action OrderNumber="4" TriggerOp="CancelTrigger" TriggerId="2f056bcc-8f60-4180-9be7-69febfd68576" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" AuraImageMode="Zoom" AuraName="WalkingDead" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003077.png" AuraXIniExpression="905" AuraYIniExpression="81" AuraWIniExpression="111" AuraHIniExpression="108" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="WalkingDeadText" TextAuraExpression="${numeric:+10-${_since}}" TextAuraXIniExpression="921" TextAuraYIniExpression="127" TextAuraWIniExpression="79" TextAuraHIniExpression="59" TextAuraOIniExpression="100" TextAuraTTLTickExpression="10-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -26,15 +32,40 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Name="死而不僵解除" Id="8d4163ce-dfe2-4be1-80e7-5a9f1b34767e" RegularExpression="^.{14} StatusRemove 1E:32B:(?&lt;AbilityName&gt;死而不僵|Walking Dead|ウォーキングデッド):[^:]*:.{8}:(?&lt;CasterName&gt;[^:]+?):">
+              <Trigger Enabled="true" Name="死而不僵解除" Id="8d4163ce-dfe2-4be1-80e7-5a9f1b34767e" RegularExpression="1A:CB7:[^:]*:(?&lt;second&gt;[^:]*):.{8}:(?&lt;CasterName&gt;[^:]+?):">
                 <Actions>
-                  <Action OrderNumber="1" AuraOp="DeactivateAura" AuraName="WalkingDead" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                  <Action OrderNumber="1" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="WalkingDeadText" TextAuraExpression="${numeric:${second}-${_since}}" TextAuraXIniExpression="921" TextAuraYIniExpression="127" TextAuraWIniExpression="79" TextAuraHIniExpression="59" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${numeric:${second}}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False" RefireInterrupt="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="WalkingDeadText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+                  <Action OrderNumber="2" FolderOp="DisableFolder" FolderId="18d22ee1-a883-423b-ab13-4f77c58b8d77" ActionType="Folder" ExecutionDelayExpression="${numeric:${second}}">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" FolderOp="DisableFolder" FolderId="18d22ee1-a883-423b-ab13-4f77c58b8d77" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Folder">
+                  <Action OrderNumber="3" AuraOp="DeactivateAura" AuraName="WalkingDead" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="WalkingDeadText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="false" Sequential="True" Name="出死入生" Id="c34a413d-feeb-4c4a-a609-4299aff6bb0d" RegularExpression="^.{14} StatusAdd 1A:CB7:[^:]*:(?&lt;second&gt;[^:]*):.{8}:(?&lt;CasterName&gt;[^:]+?):" PrevActions="Interrupt">
+                <Actions>
+                  <Action OrderNumber="1" LogMessageText="${_event}" Enabled="False" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="出死入生" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="WalkingDeadText" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" AuraImageMode="Zoom" AuraName="WalkingDead" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003077.png" AuraXIniExpression="905" AuraYIniExpression="81" AuraWIniExpression="111" AuraHIniExpression="108" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="WalkingDeadText" TextAuraExpression="${numeric:${second}-${_since}}" TextAuraXIniExpression="921" TextAuraYIniExpression="127" TextAuraWIniExpression="79" TextAuraHIniExpression="59" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${second}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -47,9 +78,9 @@
           <Folder FFXIVJobFilter="75305844736" Id="64c916b3-a171-4431-b657-7d6069326e3f" Name="挑退" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="挑衅" Id="0b906f7d-3f50-44be-a01c-6c7af61580a8" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):1D6D:">
+              <Trigger Enabled="true" Name="挑衅" Id="0b906f7d-3f50-44be-a01c-6c7af61580a8" RegularExpression="15:.{8}:(?&lt;CasterName&gt;[^:]+?):1D6D:">
                 <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="ProvokeCallOutAura" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000803.png" AuraXIniExpression="860" AuraYIniExpression="280" AuraWIniExpression="100" AuraHIniExpression="100" AuraOIniExpression="100" AuraTTLTickExpression="5-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="ProvokeCallOutAura" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000803.png" AuraXIniExpression="860" AuraYIniExpression="280" AuraWIniExpression="100" AuraHIniExpression="100" AuraOIniExpression="100" AuraTTLTickExpression="5-${_since}" ActionType="Aura">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="2" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraName="ProvokeCalloutText" TextAuraExpression="${CasterName}" TextAuraXIniExpression="884" TextAuraYIniExpression="243" TextAuraWIniExpression="151" TextAuraHIniExpression="42" TextAuraOIniExpression="100" TextAuraTTLTickExpression="5-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
@@ -60,9 +91,9 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Name="退避" Id="1bd93a56-be71-4a07-beaf-0479b0a1f3e7" RegularExpression="^.{14} ActionEffect 15:.{8}:([^:]+?):1D71:">
+              <Trigger Enabled="true" Name="退避" Id="1bd93a56-be71-4a07-beaf-0479b0a1f3e7" RegularExpression="15:.{8}:([^:]+?):1D71:">
                 <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="ShirkCallOutAura" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000810.png" AuraXIniExpression="960" AuraYIniExpression="280" AuraWIniExpression="100" AuraHIniExpression="100" AuraOIniExpression="100" AuraTTLTickExpression="5-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="ShirkCallOutAura" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000810.png" AuraXIniExpression="960" AuraYIniExpression="280" AuraWIniExpression="100" AuraHIniExpression="100" AuraOIniExpression="100" AuraTTLTickExpression="5-${_since}" ActionType="Aura">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="2" TextAuraAlignment="MiddleLeft" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraName="ShirkCalloutText" TextAuraExpression="$1" TextAuraXIniExpression="884" TextAuraYIniExpression="243" TextAuraWIniExpression="151" TextAuraHIniExpression="42" TextAuraOIniExpression="100" TextAuraTTLTickExpression="5-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
@@ -75,12 +106,12 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="60d5247c-677b-4f21-995d-014975ec5170" Name="关键技能" Enabled="false">
+          <Folder Id="60d5247c-677b-4f21-995d-014975ec5170" Name="关键技能" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="false" Sequential="True" Name="勇猛" Id="46d5d794-21da-45d4-91a0-f957756a9682" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):4050:" PrevActions="Interrupt">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="勇猛" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                  <Action OrderNumber="1" UseTTSTextExpression="勇猛" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -88,9 +119,19 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="深厚" Id="ca134139-d9f2-4b47-b51e-2b3a77a8f462" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):DD5:" RefirePeriodExpression="10">
+              <Trigger Enabled="true" Sequential="True" Name="秘策" Id="ca134139-d9f2-4b47-b51e-2b3a77a8f462" RegularExpression="15:.{8}:(?&lt;CasterName&gt;[^:]+?):409E:" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="深仁" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                  <Action OrderNumber="1" UseTTSTextExpression="秘策" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="false" Sequential="True" Name="深厚" Id="51306961-ee46-4947-a20d-32a18adeee29" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):DD5:" RefirePeriodExpression="10">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="深仁" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And" />
                   </Action>
                 </Actions>
@@ -107,13 +148,13 @@
               <Action OrderNumber="1" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="BenedictionTeamCDText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraName="BenedictionTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002627.png" AuraXIniExpression="${var:TeamCDX}" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="2" AuraName="BenedictionTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002627.png" AuraXIniExpression="${var:TeamCDX}" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="BenedictionTeamCDText" TextAuraExpression="${numeric:+180-${_since}}" TextAuraXIniExpression="${var:TeamCDX}-9" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="180-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="天赐" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="天赐" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -123,19 +164,19 @@
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="神圣领域" Id="1ac6a1cc-6815-40c1-93ab-e907915c7c83" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):1E:" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="无敌" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="无敌" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="HallowedGroundTeamCDText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraName="HallowedGroundTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002502.png" AuraXIniExpression="${var:TeamCDX}+160" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="3" AuraName="HallowedGroundTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002502.png" AuraXIniExpression="${var:TeamCDX}+160" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="4" TextAuraFontSize="15.75" TextAuraName="HallowedGroundTeamCDText" TextAuraExpression="${numeric:+420-${_since}}" TextAuraXIniExpression="${var:TeamCDX}+152" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="HallowedGroundTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+160" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="HallowedGroundTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+160" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -143,21 +184,24 @@
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="行尸走肉" Id="2f056bcc-8f60-4180-9be7-69febfd68576" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):E36:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="行尸走肉" Id="2f056bcc-8f60-4180-9be7-69febfd68576" RegularExpression="15:.{8}:(?&lt;CasterName&gt;[^:]+?):E36:" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="行尸走肉" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="行尸走肉" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="LivingDeadTeamCDText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" FolderId="18d22ee1-a883-423b-ab13-4f77c58b8d77" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Folder">
+              <Action OrderNumber="3" FolderId="18d22ee1-a883-423b-ab13-4f77c58b8d77" ActionType="Folder">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraName="LivingDeadTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003077.png" AuraXIniExpression="${var:TeamCDX}+80" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="4" AuraName="LivingDeadTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003077.png" AuraXIniExpression="${var:TeamCDX}+80" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" Enabled="False" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" TextAuraFontSize="15.75" TextAuraName="LivingDeadTeamCDText" TextAuraExpression="${numeric:+300-${_since}}" TextAuraXIniExpression="${var:TeamCDX}+72" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="300-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="5" TextAuraFontSize="15.75" TextAuraName="LivingDeadTeamCDText" TextAuraExpression="${numeric:+300-${_since}}" TextAuraXIniExpression="${var:TeamCDX}+72" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="300-${_since}" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" FolderOp="DisableFolder" FolderId="18d22ee1-a883-423b-ab13-4f77c58b8d77" ActionType="Folder" ExecutionDelayExpression="10000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -167,7 +211,7 @@
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="复活点掉" Id="959ffcfb-c95c-4caf-82ae-bedabcefb083" RegularExpression="(?i)^.{14} (?:\w+ |)1A:.{8}:(?&lt;CasterName&gt;.+?) gains the effect">
             <Actions>
-              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/statusoff 复活" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/statusoff 复活" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -177,19 +221,19 @@
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="超火流星" Id="49bdab0b-1797-4b35-a61d-8d58a12429d6" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):3F18:" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="超火流星" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="超火流星" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="SuperbolideTeamCDText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraName="SuperbolideTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003416.png" AuraXIniExpression="${var:TeamCDX}+120" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="3" AuraName="SuperbolideTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003416.png" AuraXIniExpression="${var:TeamCDX}+120" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="4" TextAuraFontSize="15.75" TextAuraName="SuperbbolideTeamCDText" TextAuraExpression="${numeric:+360-${_since}}" TextAuraXIniExpression="${var:TeamCDX}+112" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="360-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="SuperbolideTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+120" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="8-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="SuperbolideTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+120" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="8-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -199,19 +243,19 @@
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="圣光幕帘" Id="09a37503-437a-4ecb-9a6d-4668b8f4cd62" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):DD4:" RefirePeriodExpression="10">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="幕帘" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="幕帘" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="And" />
               </Action>
-              <Action OrderNumber="2" AuraName="DivineVeilTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002508.png" AuraXIniExpression="${var:TeamCDX}+200" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="90-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="2" AuraName="DivineVeilTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002508.png" AuraXIniExpression="${var:TeamCDX}+200" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="90-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="true" Grouping="And" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="DivineVeilTeamCDText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:TeamCDX}+180+12" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="DivineVeilTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+200" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="30-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="DivineVeilTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+200" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="30-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="true" Grouping="And" />
               </Action>
-              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="DivineVeilTeamCD" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura">
+              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="DivineVeilTeamCD" Enabled="False" ActionType="Aura">
                 <Condition Enabled="true" Grouping="And" />
               </Action>
               <Action OrderNumber="6" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="DivineVeilTeamCDText" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura">
@@ -224,19 +268,19 @@
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="死斗" Id="d7dcc851-1a69-4a6b-969e-e0f1a4df1c41" RegularExpression="^.{14} ActionEffect 15:.{8}:(?&lt;CasterName&gt;[^:]+?):2B:">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="死斗" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="死斗" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="HolmgangTeamCDText" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraName="HolmgangTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000266.png" AuraXIniExpression="${var:TeamCDX}+40" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="3" AuraName="HolmgangTeamCD" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000266.png" AuraXIniExpression="${var:TeamCDX}+40" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="4" TextAuraFontSize="15.75" TextAuraName="HolmgangTeamCDText" TextAuraExpression="${numeric:+240-${_since}}" TextAuraXIniExpression="${var:TeamCDX}+32" TextAuraYIniExpression="${var:TeamCDY}+12" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="240-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="HolmgangTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+40" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="8-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
+              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="HolmgangTeamCDBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:TeamCDX}+40" AuraYIniExpression="${var:TeamCDY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="8-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -244,17 +288,18 @@
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="false" Sequential="True" Name="复活提醒" Id="f1278856-d026-4413-943f-cfcfdbac111a" RegularExpression="(?i)^.{14} (?:\w+ |)15:.{8}:(?&lt;CasterName&gt;[^:]+?):(AD|7D|E13|1D63):([^:]+?):.{8}:(?&lt;CasterName2&gt;[^:]+?):">
+          <Trigger Enabled="true" Sequential="True" Name="复活提醒" Id="f1278856-d026-4413-943f-cfcfdbac111a" RegularExpression="15:.{8}:(?&lt;CasterName&gt;[^:]+?):(AD|7D|E13|1D63|5EDF|478D):([^:]+?):.{8}:(?&lt;CasterName2&gt;[^:]+?):">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="复活" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="复活" Enabled="False" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/p ${CasterName2} 获得了复活机会， ${CasterName} 好像做了什么" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/p  ${CasterName2} 获得了复活的机会， 好像是 ${CasterName} 做了什么的样子 &lt;se.5&gt;" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${CasterName}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${CasterName}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
         </Triggers>
@@ -264,16 +309,16 @@
         <Triggers>
           <Trigger Enabled="true" Sequential="True" Name="攻其不备" Id="8c68f4ec-bf49-4505-a00c-83688a35e43e" RegularExpression="(?i)^.{14} (?:\w+ |)15:.{8}:(?&lt;CasterName&gt;[^:]+?):8D2:" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" AuraName="TrickAttack" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000618.png" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="TrickAttack" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000618.png" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="TrickAttackText" TextAuraExpression="${numeric:+60-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+271+80" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="60-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="TrickAttackBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="TrickAttackBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="And" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="背刺" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="背刺" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -283,16 +328,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="鼓励" Id="0d34fda1-25d5-4a05-84d7-885a13c0ffc1" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D60:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" AuraName="Embolden" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003218.png" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="Embolden" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003218.png" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="EmboldenText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+191+40" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="EmboldenBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="EmboldenBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="鼓励" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="鼓励" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -302,16 +347,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="技巧舞步" Id="b302e5b1-b0b8-4fbf-93f7-3eb92f9ff689" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):3F4(2|3|4):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="3000">
             <Actions>
-              <Action OrderNumber="1" AuraName="TechnicalStepImage" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003473.png" AuraXIniExpression="${var:RaidAuraX}+280" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="TechnicalStepImage" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003473.png" AuraXIniExpression="${var:RaidAuraX}+280" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="TechnicalStepText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+231+40" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="TechnicalStepBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+240+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="TechnicalStepBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+240+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="技巧舞" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="技巧舞" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -321,16 +366,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="连环计" Id="f72481bb-6009-40ab-9c1e-ad50544480cf" RegularExpression="(?i)^.{14} (?:\w+ |)15:.{8}:(?&lt;CasterName&gt;[^:]+?):1D0C:" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" AuraName="ChainStratagem" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002815.png" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="ChainStratagem" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002815.png" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="ChainStratagemText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+111+40" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="ChainStratagemBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="ChainStratagemBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="连环计" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="连环计" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -340,16 +385,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="灵护" Id="6b626cd6-eba3-48c5-9049-1a9d2a15d964" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1CFF:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" AuraName="Devotion" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002688.png" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="Devotion" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002688.png" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="DevotionText" TextAuraExpression="${numeric:+180-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+151+40" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="180-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="DevotionBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="DevotionBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="灵护" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="灵护" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -359,16 +404,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="义结金兰" Id="38c5ccff-1a93-4fce-a4ee-abbbdc3c2c22" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1CE4:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" AuraName="Brotherhood" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002542.png" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="Brotherhood" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002542.png" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="BrotherhoodText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+71+40" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="BrotherhoodBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="BrotherhoodBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="义结金兰" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="义结金兰" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -378,21 +423,21 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="占卜" Id="5cf01d1d-69ac-4d91-ada8-f95d9648aec7" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):40A8:(Divination|占卜|ディヴィネーション):.{8}:[^:]+?:(?&lt;power&gt;.)..:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" AuraName="Divination" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003553.png" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="Divination" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003553.png" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="Divination" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+311+80" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="DivinationBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="DivinationBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="占卜${power}%" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="占卜${power}%" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${power}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="StringNotEqualCase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="5" UseTTSTextExpression="占卜" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="5" UseTTSTextExpression="占卜" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${power}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="StringEqualCase" />
                 </Condition>
@@ -404,42 +449,42 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="占星卡牌" Id="b725ea68-9313-48c7-9237-30f6d11d4592" RegularExpression="(?i)^.{14} (?:\w+ |)15:.{8}:(?&lt;cardcaster&gt;[^:]+?):(?&lt;cardID&gt;1\w{3}):(?&lt;card&gt;[^:]+?):\w{8}:(?&lt;cardtarget&gt;[^:]+?):(?&lt;cardpower&gt;\d)0.:">
             <Actions>
-              <Action OrderNumber="1" AuraName="TheBalance" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003110.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="TheBalance" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003110.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)The Balance|太阳神之衡|アーゼマの均衡" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" AuraName="TheBole" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003111.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="2" AuraName="TheBole" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003111.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)The Bole|世界树之干|世界樹の幹" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" AuraName="TheArrow" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003112.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="3" AuraName="TheArrow" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003112.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)The Arrow|放浪神之箭|オシュオンの矢" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" AuraName="TheSpear" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003113.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="4" AuraName="TheSpear" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003113.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)The Spear|战争神之枪|ハルオーネの槍" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="5" AuraName="TheEwer" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003114.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="5" AuraName="TheEwer" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003114.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)The Ewer|河流神之瓶|サリャクの水瓶" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" AuraName="TheSpire" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003115.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="6" AuraName="TheSpire" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003115.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)The Spire|建筑神之塔|ビエルゴの塔" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" AuraName="LadyOfCrowns" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003146.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="7" AuraName="LadyOfCrowns" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003146.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)Lady Of Crowns|王冠之贵妇|クラウンレディ" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" AuraName="LordOfCrowns" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003147.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="8" AuraName="LordOfCrowns" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003147.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="(?i)Lord Of Crowns|王冠之领主|クラウンロード" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
@@ -478,16 +523,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="战斗连祷" Id="873adefd-dd0f-4de8-8b60-c3c88b298933" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):DE5:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" AuraName="BattleLitany" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002585.png" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="BattleLitany" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002585.png" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="BattleLitanyText" TextAuraExpression="${numeric:+180-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}-9" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="180-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="BattleLitanyBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="BattleLitanyBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="连祷" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="连祷" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -497,16 +542,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="战斗之声" Id="fffd2eff-be25-42de-8dda-3f965a978a82" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):76:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" AuraName="BattleVoice" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002601.png" AuraXIniExpression="${var:RaidAuraX}+40+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="BattleVoice" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002601.png" AuraXIniExpression="${var:RaidAuraX}+40+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="15.75" TextAuraName="BattleVoiceText" TextAuraExpression="${numeric:+180-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+31+40" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="180-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="BattleVoiceBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+40+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="BattleVoiceBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+40+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" UseTTSTextExpression="战歌" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="4" UseTTSTextExpression="战歌" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -516,18 +561,18 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="巨龙视线" Id="cb61578d-3d64-43f3-b625-ee5de400ef96" RegularExpression="(?i)^.{14} (?:\w+ |)1A:.{8}:(?&lt;name&gt;[^:]+?) gains the effect of (巨龙左眼|竜の左眼|Left Eye|巨龙右眼|巨龙左眼|Right Eye) from" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="龙肠" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="龙肠" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" AuraName="LeftRightEye" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002587.png" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="2" AuraName="LeftRightEye" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002587.png" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="LeftRightEye" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+31" TextAuraYIniExpression="${var:RaidAuraY}+11" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="LeftRightEyeBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="LeftRightEyeBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" ExecutionDelayExpression="1" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -537,12 +582,12 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="进攻之探戈" Id="361ac755-3e3d-4e5c-8cce-54a8d1631e6d" RegularExpression="(?i)^.{27}(?&lt;name&gt;[^:]+?) gains the effect of (攻めのタンゴ|进攻之探戈|Devilment) from.*?for 20\.00 Seconds\." Scheduling="FromLastAction">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="探戈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
+              <Action OrderNumber="1" UseTTSTextExpression="探戈" UseTTSRateExpression="2" ActionType="UseTTS" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" AuraName="Devilment" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003471.png" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraName="Devilment" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003471.png" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="false" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                 </Condition>
@@ -552,7 +597,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="DevilmentBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="DevilmentBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                 </Condition>
@@ -569,67 +614,67 @@
         <Triggers>
           <Trigger Enabled="true" Name="坐标" Id="2c4c81e7-8ce9-4d1a-a39e-1f79a7777d60" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000" EditAutofire="True">
             <Actions>
-              <Action OrderNumber="1" AuraName="团辅位置" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/团辅位置.jpg" AuraXIniExpression="5" AuraYIniExpression="40+750" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="1" AuraName="团辅位置" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/团辅位置.jpg" AuraXIniExpression="5" AuraYIniExpression="40+750" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraName="大技能位置" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/大技能位置.jpg" AuraXIniExpression="5" AuraYIniExpression="40+790" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraName="大技能位置" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/大技能位置.jpg" AuraXIniExpression="5" AuraYIniExpression="40+790" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="4" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="5" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="6" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="7" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="8" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="9" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="10" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="11" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="12" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="12" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="13" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="13" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="14" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
+              <Action OrderNumber="15" Enabled="False" ActionType="SystemBeep" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="RaidAuraX" VariableExpression="${_imageaura[团辅位置].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="1000" Asynchronous="False">
+              <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="RaidAuraX" VariableExpression="${_imageaura[团辅位置].x}" ActionType="Variable" ExecutionDelayExpression="1000" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="RaidAuraY" VariableExpression="${_imageaura[团辅位置].y}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="RaidAuraY" VariableExpression="${_imageaura[团辅位置].y}" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="18" VariableOp="SetNumeric" VariableName="TeamCDX" VariableExpression="${_imageaura[大技能位置].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="18" VariableOp="SetNumeric" VariableName="TeamCDX" VariableExpression="${_imageaura[大技能位置].x}" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="19" VariableOp="SetNumeric" VariableName="TeamCDY" VariableExpression="${_imageaura[大技能位置].y}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="19" VariableOp="SetNumeric" VariableName="TeamCDY" VariableExpression="${_imageaura[大技能位置].y}" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="20" AuraOp="DeactivateAura" AuraName="团辅位置" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="1000" Asynchronous="False">
+              <Action OrderNumber="20" AuraOp="DeactivateAura" AuraName="团辅位置" ActionType="Aura" ExecutionDelayExpression="1000" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="21" AuraOp="DeactivateAura" AuraName="大技能位置" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="21" AuraOp="DeactivateAura" AuraName="大技能位置" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -642,16 +687,16 @@
         <Triggers>
           <Trigger Enabled="true" Sequential="True" Name="光之心" Id="21300d74-d2b8-4234-933d-bd2b0be85cf9" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):3F20:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="光之心" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="光之心" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="HeartofLight" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003424.png" AuraXIniExpression="${var:RaidAuraX}+80" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="HeartofLight" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003424.png" AuraXIniExpression="${var:RaidAuraX}+80" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="HeartofLightText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+71" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="HeartofLightBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+80" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="HeartofLightBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+80" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -661,16 +706,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="黑暗布道" Id="0ec58ec6-7ad3-471d-8031-f291ad96353f" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):4057:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="布道" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="布道" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="DarkMissionary" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003087.png" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="DarkMissionary" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003087.png" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="DarkMissionaryText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+111" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="DarkMissionaryBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="DarkMissionaryBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+120" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -680,16 +725,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="昏乱" Id="2f76cb63-55bf-4940-b612-e757527508f3" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D88:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="病毒" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="病毒" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Addle" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000861.png" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Addle" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000861.png" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="AddleText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+151" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="AddleBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="AddleBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+160" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -699,16 +744,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="武装戍卫" Id="e000d56d-b93a-45b8-9c73-5076174b8395" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1CD9:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="大翅膀" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="大翅膀" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="PassageofArms" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002515.png" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="PassageofArms" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002515.png" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="PassageofArmsText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+311" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="PassageofArmsBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="5-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="PassageofArmsBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+320" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="5-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -718,16 +763,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="摆脱" Id="531fb2bb-98ca-437c-abea-95c013f114a0" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1CDC:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="摆脱" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="摆脱" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Shake" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002563.png" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Shake" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002563.png" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="ShakeText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}-9" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="ShakeBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="ShakeBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -737,16 +782,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="雪仇" Id="62456e14-5685-4238-8f9d-4fe855862d05" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D6F:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="雪愁" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="雪愁" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Reprisal" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000806.png" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Reprisal" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000806.png" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="ReprisalText" TextAuraExpression="${numeric:+60-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+351" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="60-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="ReprisalBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="ReprisalBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+360" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -756,16 +801,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="异想的幻光" Id="ebc07b6e-b06f-4cf4-a91c-60fcdd13db88" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):409A:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="幻光" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="幻光" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="FeyIllumination" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002853.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="FeyIllumination" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002853.png" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="FeyIlluminationText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+431" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="FeyIlluminationBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="FeyIlluminationBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+440" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -775,16 +820,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="命运之轮" Id="0d2043a5-1388-4ca3-b5b6-f8150853c32b" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):E1D:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="轮轮" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="轮轮" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="CollectiveUnconscious" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003140.png" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="CollectiveUnconscious" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003140.png" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="CollectiveUnconsciousText" TextAuraExpression="${numeric:+60-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+231" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="60-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="CollectiveUnconsciousBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="18-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="CollectiveUnconsciousBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+240" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="18-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -794,16 +839,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="野战治疗阵" Id="4482a17e-2a26-48ce-90e8-a746fbef0872" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):BC:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="治疗阵" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="治疗阵" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="SacredSoil" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002804.png" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="SacredSoil" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002804.png" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="SacredSoilText" TextAuraExpression="${numeric:+30-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+391" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="30-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="SacredSoilBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="18-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="SacredSoilBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+400" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="18-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -813,16 +858,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="节制" Id="00b15e03-79d1-419e-b90d-12c9d0b23a9f" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):4098:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="翅膀" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="翅膀" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Temperance" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002645.png" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Temperance" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/002645.png" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="TemperanceText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+191" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="TemperanceBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="TemperanceBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+200" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -832,16 +877,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="策动、行吟、桑巴" Id="4e239956-1f22-4d3d-b96b-e7c6f7540d89" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):(41F9|3E8C|1CED):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="策动" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="策动" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Tactician" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003040.png" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Tactician" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/003040.png" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="TacticianText" TextAuraExpression="${numeric:+120-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+31" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="TacticianBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="TacticianBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+40" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -851,16 +896,16 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="牵制" Id="68677fe0-a0a1-4ccc-8041-a4999a2bf475" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D7D:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="牵制" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="牵制" UseTTSRateExpression="2" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Feint" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000828.png" AuraXIniExpression="${var:RaidAuraX}+280" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="Feint" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/000828.png" AuraXIniExpression="${var:RaidAuraX}+280" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="15.75" TextAuraName="FeintText" TextAuraExpression="${numeric:+90-${_since}}" TextAuraXIniExpression="${var:RaidAuraX}+271" TextAuraYIniExpression="${var:RaidAuraY}+91" TextAuraWIniExpression="59" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="FeintBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+280" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+              <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="FeintBorder" AuraImage="https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools-master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/Aho%E5%9B%A2%E8%BE%85%E7%9B%91%E6%8E%A7/ComboGIF.gif" AuraXIniExpression="${var:RaidAuraX}+280" AuraYIniExpression="${var:RaidAuraY}+80" AuraWIniExpression="40" AuraHIniExpression="40" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -881,10 +926,10 @@
                     <Triggers>
                       <Trigger Enabled="true" Name="昏乱" Id="69cace14-c950-4e7a-a2b8-14b42df2af9b" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D88:(?&lt;AbilityName&gt;[^:]+?):.{8}:(?&lt;TargetName&gt;[^:]+?):">
                         <Actions>
-                          <Action OrderNumber="-1" VariableOp="SetString" VariableName="减伤_昏乱_${TargetName}" VariableExpression="昏乱(${func:substring(0,1):${CasterName}}) " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="-1" VariableOp="SetString" VariableName="减伤_昏乱_${TargetName}" VariableExpression="昏乱(${func:substring(0,1):${CasterName}}) " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableName="减伤_昏乱_${TargetName}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="10*1000-${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableName="减伤_昏乱_${TargetName}" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="10*1000-${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -894,10 +939,10 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="雪仇" Id="62d179db-0ba1-47c2-8dd5-d09fd6982585" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D6F:.+?:.{8}:(?&lt;TargetName&gt;[^:]+?):">
                         <Actions>
-                          <Action OrderNumber="-1" VariableOp="SetString" VariableName="减伤_雪仇_${TargetName}" VariableExpression="雪仇(${func:substring(0,1):${CasterName}}) " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="-1" VariableOp="SetString" VariableName="减伤_雪仇_${TargetName}" VariableExpression="雪仇(${func:substring(0,1):${CasterName}}) " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableName="减伤_雪仇_${TargetName}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="10*1000-${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableName="减伤_雪仇_${TargetName}" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="10*1000-${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -907,10 +952,10 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="命运之轮" Id="85176f5d-a3b7-4ba6-9ba9-b7af8f5d63f3" RegularExpression="(?i)^.{14} (?:\w+ |)1A:.{8}:(?&lt;name&gt;.+?) gains the effect of (命运之轮|Collective Unconscious|運命の輪：効果) from .+? for (?&lt;time&gt;(?:4|5|19|20)\.[0-9]{2}) Seconds\.$" PrevActions="Interrupt">
                         <Actions>
-                          <Action OrderNumber="1" VariableOp="SetString" VariableName="减伤_命运之轮" VariableExpression="命运之轮 " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="减伤_命运之轮" VariableExpression="命运之轮 " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableName="减伤_命运之轮" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${time}*1000-${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableName="减伤_命运之轮" ActionType="Variable" ExecutionDelayExpression="${time}*1000-${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -920,10 +965,10 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="野战治疗阵" Id="db5a0137-d9a7-4b0f-8ea0-8d397d6a0290" RegularExpression="(?i)^.{14} (?:\w+ |)1A:.{8}:(?&lt;name&gt;.+?) gains the effect of (野战治疗阵|Sacred Soil|野戦治療の陣：効果) from .+? for (?&lt;time&gt;[45]\.[0-9]{2}) Seconds\." PrevActions="Interrupt">
                         <Actions>
-                          <Action OrderNumber="1" VariableOp="SetString" VariableName="减伤_野战治疗阵" VariableExpression="野战 " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="减伤_野战治疗阵" VariableExpression="野战 " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableName="减伤_野战治疗阵" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${time}*1000-${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableName="减伤_野战治疗阵" ActionType="Variable" ExecutionDelayExpression="${time}*1000-${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -933,10 +978,10 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="牵制" Id="3358bc19-5afa-485f-9d45-281880768386" RegularExpression="(?i)^.{14} (?:\w+ |)1[56]:.{8}:(?&lt;CasterName&gt;[^:]+?):1D7D:(?&lt;AbilityName&gt;[^:]+?):.{8}:(?&lt;TargetName&gt;[^:]+?):">
                         <Actions>
-                          <Action OrderNumber="-1" VariableOp="SetString" VariableName="减伤_牵制_${TargetName}" VariableExpression="牵制(${func:substring(0,1):${CasterName}}) " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="-1" VariableOp="SetString" VariableName="减伤_牵制_${TargetName}" VariableExpression="牵制(${func:substring(0,1):${CasterName}}) " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableName="减伤_牵制_${TargetName}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="10*1000-${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableName="减伤_牵制_${TargetName}" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="10*1000-${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -946,7 +991,7 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="Reset" Id="11e1af81-a8c3-4d6b-899f-ae1d4241f0f0" RegularExpression="^.{14} (?:\w+ |)21:.{8}:400000(03|1[026]):00:00::?00::?00">
                         <Actions>
-                          <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^减伤_.+" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                          <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^减伤_.+" ActionType="Variable">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -954,10 +999,10 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="异想的幻光" Id="a776040a-9d2d-4ff2-8772-cd614b90168d" RegularExpression="(?i)^.{14} (?::?\w+ |)1A:.{8}:(?&lt;name&gt;.+?) gains the effect of (..的幻光|Fey Illumination|フェイイルミネーション|Seraphic Illumination|セラフィックイルミネーション) from .+? for (?&lt;time&gt;[\d\.]+) Seconds\." PrevActions="Interrupt">
                         <Actions>
-                          <Action OrderNumber="1" VariableOp="SetString" VariableName="减伤_异想的幻光" VariableExpression="幻光 " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="减伤_异想的幻光" VariableExpression="幻光 " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableName="减伤_异想的幻光" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${time}*1000-${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableName="减伤_异想的幻光" ActionType="Variable" ExecutionDelayExpression="${time}*1000-${var:_AT_Delay}">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -967,12 +1012,12 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="buff" Id="b8730a44-70cb-49c4-b2e9-f97653ca6028" RegularExpression="^.{14} StatusAdd 1[AE]:.+?:(?&lt;skill&gt;摆脱|炽天的幕帘|鼓舞|黑夜领域|圣光幕帘|天星冲日（夜）|暗黑布道|策动|防守之桑巴|光之心|行吟|节制|武装):(?&lt;time&gt;.+?)\.\d\d:.{8}::.{8}:(?&lt;Name&gt;[^:]+):">
                         <Actions>
-                          <Action OrderNumber="1" VariableName="减伤_${skill}" VariableExpression="${skill} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                          <Action OrderNumber="1" VariableName="减伤_${skill}" VariableExpression="${skill} " ActionType="Variable">
                             <Condition Enabled="true" Grouping="Or">
                               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="loses" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </Condition>
                           </Action>
-                          <Action OrderNumber="2" VariableOp="SetString" VariableName="减伤_${skill}" VariableExpression="${skill} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
+                          <Action OrderNumber="2" VariableOp="SetString" VariableName="减伤_${skill}" VariableExpression="${skill} " ActionType="Variable" ExecutionDelayExpression="${var:_AT_Delay}">
                             <Condition Enabled="true" Grouping="Or">
                               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="gains" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </Condition>
@@ -988,7 +1033,7 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="AOE" Id="d30f61d6-153b-4854-bea0-0ac5de805c75" RegularExpression="(?i)^.{14} (?:\w+ |)16:4.{7}:(?&lt;CasterName&gt;[^:]+?):(?&lt;AbilityID&gt;[^:]+?):(?&lt;AbilityName&gt;[^:]+?):[^:]+?:(?&lt;TargetName&gt;[^:]+?):(?&lt;Flag&gt;[^:]{0,3}(?&lt;Mask&gt;[12356])[^:]{3}[356]):(?&lt;Damage&gt;[^:]+?):(?&lt;S1&gt;[^:]+?):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
-                      <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(物理${numeric:round(hex2dec(${func:substring(0,4):${func:padleft(48,8):${Damage}}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_牵制_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="物理(打击，斩击，突刺)1" DescriptionOverride="True">
+                      <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(物理${numeric:round(hex2dec(${func:substring(0,4):${func:padleft(48,8):${Damage}}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_牵制_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" ActionType="NamedCallback" Asynchronous="False" Description="物理(打击，斩击，突刺)1" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionGroup Enabled="true" Grouping="Or">
                             <ConditionSingle Enabled="true" ExpressionL="${Mask}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1005,7 +1050,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="2" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(物理${numeric:round(hex2dec(${func:substring(6,2):${Damage}}${func:substring(0,2):${Damage}}${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${func:substring(2,2):${Damage}})-hex2dec(${func:substring(6,2):${Damage}})}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_牵制_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="物理(打击，斩击，突刺)2" DescriptionOverride="True">
+                      <Action OrderNumber="2" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(物理${numeric:round(hex2dec(${func:substring(6,2):${Damage}}${func:substring(0,2):${Damage}}${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${func:substring(2,2):${Damage}})-hex2dec(${func:substring(6,2):${Damage}})}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_牵制_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" ActionType="NamedCallback" Asynchronous="False" Description="物理(打击，斩击，突刺)2" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionGroup Enabled="true" Grouping="Or">
                             <ConditionSingle Enabled="true" ExpressionL="${Mask}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1022,7 +1067,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(魔法${numeric:round(hex2dec(${func:substring(0,4):${func:padleft(48,8):${Damage}}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_昏乱_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_异想的幻光}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_光之心}${var:减伤_摆脱}${var:减伤_暗黑布道}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="魔法(多属性)1" DescriptionOverride="True">
+                      <Action OrderNumber="3" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(魔法${numeric:round(hex2dec(${func:substring(0,4):${func:padleft(48,8):${Damage}}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_昏乱_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_异想的幻光}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_光之心}${var:减伤_摆脱}${var:减伤_暗黑布道}" ActionType="NamedCallback" Asynchronous="False" Description="魔法(多属性)1" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="hex2dec(${func:substring(4,1):${func:padleft(48,4):${Damage}}})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${Mask}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1035,7 +1080,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(魔法${numeric:round(hex2dec(${func:substring(6,2):${Damage}}${func:substring(0,2):${Damage}}${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${func:substring(2,2):${Damage}})-hex2dec(${func:substring(6,2):${Damage}})}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_昏乱_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_异想的幻光}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_光之心}${var:减伤_摆脱}${var:减伤_暗黑布道}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="魔法(多属性)2" DescriptionOverride="True">
+                      <Action OrderNumber="4" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(魔法${numeric:round(hex2dec(${func:substring(6,2):${Damage}}${func:substring(0,2):${Damage}}${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${func:substring(2,2):${Damage}})-hex2dec(${func:substring(6,2):${Damage}})}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_昏乱_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_异想的幻光}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_光之心}${var:减伤_摆脱}${var:减伤_暗黑布道}" ActionType="NamedCallback" Asynchronous="False" Description="魔法(多属性)2" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="hex2dec(${func:substring(4,1):${func:padleft(48,4):${Damage}}})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${Mask}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1048,7 +1093,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="5" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(暗黑${numeric:round(hex2dec(${func:substring(0,4):${func:padleft(48,8):${Damage}}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="暗黑1" DescriptionOverride="True">
+                      <Action OrderNumber="5" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(暗黑${numeric:round(hex2dec(${func:substring(0,4):${func:padleft(48,8):${Damage}}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" ActionType="NamedCallback" Asynchronous="False" Description="暗黑1" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="hex2dec(${func:substring(4,1):${func:padleft(48,4):${Damage}}})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${Mask}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1061,7 +1106,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(暗黑${numeric:round(hex2dec(${func:substring(6,2):${Damage}}${func:substring(0,2):${Damage}}${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${func:substring(2,2):${Damage}})-hex2dec(${func:substring(6,2):${Damage}})}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False" Description="暗黑2" DescriptionOverride="True">
+                      <Action OrderNumber="6" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ${AbilityName}(暗黑${numeric:round(hex2dec(${func:substring(6,2):${Damage}}${func:substring(0,2):${Damage}}${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${func:substring(2,2):${Damage}})-hex2dec(${func:substring(6,2):${Damage}})}})/1000,2)}K)：${var:减伤_鼓舞}${var:减伤_黑夜领域}${var:减伤_天星冲日（夜）}${var:减伤_炽天的幕帘}${var:减伤_雪仇_${CasterName}}${var:减伤_策动}${var:减伤_防守之桑巴}${var:减伤_行吟}${var:减伤_节制}${var:减伤_命运之轮}${var:减伤_野战治疗阵}${var:减伤_圣光幕帘}${var:减伤_武装}${var:减伤_摆脱}" ActionType="NamedCallback" Asynchronous="False" Description="暗黑2" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="hex2dec(${func:substring(4,1):${func:padleft(48,4):${Damage}}})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${Mask}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1094,7 +1139,7 @@
             <Triggers>
               <Trigger Enabled="true" Name="团灭分割" Id="b5721315-d66f-4dce-a802-bf8b65930a3f" RegularExpression="(?i)^.{14} (?:\w+ |)21:.{8}:400000(03|1[026]):00:00::?00::?00" PeriodRefire="Deny" RefirePeriodExpression="5000" EditAutofire="True">
                 <Actions>
-                  <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ————————————————" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+                  <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_技能判定_发送频道}} ————————————————" ActionType="NamedCallback" Asynchronous="False">
                     <Condition Enabled="false" Grouping="And" />
                   </Action>
                 </Actions>
@@ -1107,22 +1152,22 @@
             <Triggers>
               <Trigger Enabled="true" Name="(Don't touch)" Id="8ced9a7f-0b44-4524-b4b6-024dffd9cb69" RegularExpression="(?i)^.{14} (?:\w+ |)1A:.{8}:([^:]+?) gains the effect of (即刻咏唱|Swiftcast|迅速魔) ">
                 <Actions>
-                  <Action OrderNumber="1" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="1" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="1" ActionType="TableVariable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[$1].job}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="2" ActionType="TableVariable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[$1].job}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="3" ActionType="TableVariable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[$1].job}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="${_systemtimems}" TableVariableX="2" TableVariableY="4" ActionType="TableVariable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[$1].job}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
@@ -1134,34 +1179,34 @@
               </Trigger>
               <Trigger Enabled="true" Name="(Don't touch)" Id="0caa2d29-6cbf-4acd-b6f4-07e82f1e328e" RegularExpression="(?i)^.{14} (?:\w+ |)21:.{8}:400000(0[1356]|1[026]):" PeriodRefire="Deny" RefirePeriodExpression="3000">
                 <Actions>
-                  <Action OrderNumber="1" TableVariableName="队伍监控_即刻" TableVariableX="3" TableVariableY="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False">
+                  <Action OrderNumber="1" TableVariableName="队伍监控_即刻" TableVariableX="3" TableVariableY="4" ActionType="TableVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TableVariableOp="Resize" TableVariableName="队伍监控_即刻" TableVariableX="3" TableVariableY="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False">
+                  <Action OrderNumber="2" TableVariableOp="Resize" TableVariableName="队伍监控_即刻" TableVariableX="3" TableVariableY="4" ActionType="TableVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="WHM" TableVariableX="1" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="WHM" TableVariableX="1" TableVariableY="1" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="AST" TableVariableX="1" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="AST" TableVariableX="1" TableVariableY="2" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="SCH" TableVariableX="1" TableVariableY="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="SCH" TableVariableX="1" TableVariableY="3" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="6" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="SMN" TableVariableX="1" TableVariableY="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="6" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="SMN" TableVariableX="1" TableVariableY="4" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="7" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="7" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="1" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="8" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="2" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="9" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="3" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                  <Action OrderNumber="10" TableVariableOp="Set" TableVariableName="队伍监控_即刻" TableVariableExpression="0" TableVariableX="2" TableVariableY="4" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -1169,10 +1214,10 @@
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="(Don't touch)" Id="66518d85-5589-433e-a25d-1898d05c3e6e" RegularExpression="(?i)^.{14} (?:\w+ |)19:(.+?) was" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
-                  <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^队伍监控_即刻temp." TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                  <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^队伍监控_即刻temp." ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" VariableOp="SetString" VariableName="队伍监控_即刻temp1" VariableExpression="白:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][1]})/1000),60),0)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="白魔" DescriptionOverride="True">
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="队伍监控_即刻temp1" VariableExpression="白:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][1]})/1000),60),0)} " ActionType="Variable" Asynchronous="False" Description="白魔" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionGroup Enabled="true" Grouping="And">
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].job}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1208,7 +1253,7 @@
                       </ConditionGroup>
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" VariableOp="SetString" VariableName="队伍监控_即刻temp2" VariableExpression="占:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][2]})/1000),60),0)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="占星" DescriptionOverride="True">
+                  <Action OrderNumber="3" VariableOp="SetString" VariableName="队伍监控_即刻temp2" VariableExpression="占:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][2]})/1000),60),0)} " ActionType="Variable" Asynchronous="False" Description="占星" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionGroup Enabled="true" Grouping="And">
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].job}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1244,7 +1289,7 @@
                       </ConditionGroup>
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" VariableOp="SetString" VariableName="队伍监控_即刻temp3" VariableExpression="学:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][3]})/1000),60),0)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="学者" DescriptionOverride="True">
+                  <Action OrderNumber="4" VariableOp="SetString" VariableName="队伍监控_即刻temp3" VariableExpression="学:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][3]})/1000),60),0)} " ActionType="Variable" Asynchronous="False" Description="学者" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionGroup Enabled="true" Grouping="And">
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].job}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1280,7 +1325,7 @@
                       </ConditionGroup>
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" VariableOp="SetString" VariableName="队伍监控_即刻temp4" VariableExpression="召:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][4]})/1000),60),0)}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="召唤" DescriptionOverride="True">
+                  <Action OrderNumber="5" VariableOp="SetString" VariableName="队伍监控_即刻temp4" VariableExpression="召:${numeric:60-max(min(round((${_systemtimems}-${tvar:队伍监控_即刻[2][4]})/1000),60),0)}" ActionType="Variable" Asynchronous="False" Description="召唤" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionGroup Enabled="true" Grouping="And">
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].job}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1316,7 +1361,7 @@
                       </ConditionGroup>
                     </Condition>
                   </Action>
-                  <Action OrderNumber="6" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_即刻_发送频道}} 即刻CD：${var:队伍监控_即刻temp1}${var:队伍监控_即刻temp2}${var:队伍监控_即刻temp3}${var:队伍监控_即刻temp4}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+                  <Action OrderNumber="6" NamedCallbackName="DoTextCommand" NamedCallbackParam="/${func:tolower:${var:_AT_即刻_发送频道}} 即刻CD：${var:队伍监控_即刻temp1}${var:队伍监控_即刻temp2}${var:队伍监控_即刻temp3}${var:队伍监控_即刻temp4}" ActionType="NamedCallback" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:队伍监控_即刻temp3}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:队伍监控_即刻temp1}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -1331,16 +1376,16 @@
               </Trigger>
               <Trigger Enabled="true" Name="手动触发（发到小队）" Id="47f69ed3-1efc-4dd3-80bf-46dc4f003f12" RegularExpression="^.{14} ChatLog 00:0038::发送即刻$" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
-                  <Action OrderNumber="1" VariableOp="SetString" VariableName="_AT_即刻_发送频道bak" VariableExpression="${var:_AT_即刻_发送频道}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="保存用户设置" DescriptionOverride="True">
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="_AT_即刻_发送频道bak" VariableExpression="${var:_AT_即刻_发送频道}" ActionType="Variable" Asynchronous="False" Description="保存用户设置" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" VariableOp="SetString" VariableName="_AT_即刻_发送频道" VariableExpression="p" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="临时改为p频道" DescriptionOverride="True">
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="_AT_即刻_发送频道" VariableExpression="p" ActionType="Variable" Asynchronous="False" Description="临时改为p频道" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="66518d85-5589-433e-a25d-1898d05c3e6e" TriggerText="[00:00::?00.000] (?::?\w+ |)19:${_ffxivplayer} was" TriggerForce="refire,parent,active" ActionType="Trigger" Description="call" DescriptionOverride="True">
+                  <Action OrderNumber="3" TriggerId="66518d85-5589-433e-a25d-1898d05c3e6e" TriggerText="[00:00::?00.000] (?::?\w+ |)19:${_ffxivplayer} was" TriggerForce="refire,parent,active" ActionType="Trigger" Description="call" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" VariableOp="SetString" VariableName="_AT_即刻_发送频道" VariableExpression="${var:_AT_即刻_发送频道bak}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="300" Asynchronous="False" Description="复原用户设置" DescriptionOverride="True">
+                  <Action OrderNumber="4" VariableOp="SetString" VariableName="_AT_即刻_发送频道" VariableExpression="${var:_AT_即刻_发送频道bak}" ActionType="Variable" ExecutionDelayExpression="300" Asynchronous="False" Description="复原用户设置" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -1356,16 +1401,16 @@
           </Trigger>
           <Trigger Enabled="true" Name="*设置" Id="96d5046f-9d32-4e72-ad30-1fb6da42190d" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000" EditAutofire="True">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="_AT_Delay" VariableExpression="1000" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Description="常用聊天频道：e=默语, p=小队, l1=本地通讯贝1, cwl1=跨服贝1" DescriptionOverride="True">
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="_AT_Delay" VariableExpression="1000" ActionType="Variable" Description="常用聊天频道：e=默语, p=小队, l1=本地通讯贝1, cwl1=跨服贝1" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" VariableOp="SetString" VariableName="_AT_技能判定_发送频道" VariableExpression="e" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Description="减伤判定发送到哪个聊天频道中" DescriptionOverride="True">
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="_AT_技能判定_发送频道" VariableExpression="e" ActionType="Variable" Description="减伤判定发送到哪个聊天频道中" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" VariableOp="SetString" VariableName="_AT_即刻_发送频道" VariableExpression="e" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Description="即刻CD发送到哪个聊天频道中" DescriptionOverride="True">
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="_AT_即刻_发送频道" VariableExpression="e" ActionType="Variable" Description="即刻CD发送到哪个聊天频道中" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="_AT_NoActionWhenReduction" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Description="无有效减伤时不触发（1=是，0=否）" DescriptionOverride="True">
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="_AT_NoActionWhenReduction" VariableExpression="0" ActionType="Variable" Description="无有效减伤时不触发（1=是，0=否）" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -1377,13 +1422,13 @@
     <Triggers>
       <Trigger Enabled="true" Name="Clear" Id="7b7afcd6-1ebe-4eda-865e-789e57ba9f85" RegularExpression="^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$|(?i)^.{14} (?:\w+ |)21:.{8}:400000(03|1[026])" EditAutofire="True">
         <Actions>
-          <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="(TrickAttack|Embolden|TechnicalStep|Devilment|LeftRightEye|ChainStratagem|Devotion|Brotherhood|Divination|BattleLitany|BattleVoice|The|Shake|Tactician|HeartofLight|DarkMissionary|Addle|Temperance|CollectiveUnconscious|Feint|PassageofArms|Reprisal|SacredSoil|FeyIllumination).*|.*(OfCrowns|TeamCD)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+          <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="(TrickAttack|Embolden|TechnicalStep|Devilment|LeftRightEye|ChainStratagem|Devotion|Brotherhood|Divination|BattleLitany|BattleVoice|The|Shake|Tactician|HeartofLight|DarkMissionary|Addle|Temperance|CollectiveUnconscious|Feint|PassageofArms|Reprisal|SacredSoil|FeyIllumination).*|.*(OfCrowns|TeamCD)" ActionType="Aura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="2" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="(TrickAttack|Embolden|TechnicalStep|Devilment|LeftRightEye|ChainStratagem|Devotion|Brotherhood|Divination|BattleLitany|BattleVoice|The|Shake|Tactician|HeartofLight|DarkMissionary|Addle|Temperance|CollectiveUnconscious|Feint|PassageofArms|Reprisal|SacredSoil|FeyIllumination).*|.*(OfCrowns|TeamCD)" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="2c4c81e7-8ce9-4d1a-a39e-1f79a7777d60" TriggerForce="regexp,conditions" ActionType="Trigger">
+          <Action OrderNumber="3" TriggerId="2c4c81e7-8ce9-4d1a-a39e-1f79a7777d60" TriggerForce="regexp,conditions" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
