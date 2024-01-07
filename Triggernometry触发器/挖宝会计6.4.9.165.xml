@@ -191,13 +191,13 @@
                   <ConditionSingle Enabled="true" ExpressionL="${tb_zhaomu}" ExpressionTypeL="String" ExpressionR="■自由留言" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" VariableOp="SetString" VariableName="tb_zhaomu" VariableExpression="${tb_zhaomu}" ActionType="Variable" ExecutionDelayExpression="100">
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="tb_zhaomu" VariableExpression="${tb_zhaomu}" ActionType="Variable" ExecutionDelayExpression="200">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_zhaomu1}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="true" ExpressionL="${tb_zhaomu}" ExpressionTypeL="String" ExpressionR="^(■目的|■自由留言|无|加入了.+?组建的.+?队伍。|加入了跨服小队。.*)$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tb_zhaomu1" VariableExpression="0" ActionType="Variable" ExecutionDelayExpression="100">
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tb_zhaomu1" VariableExpression="0" ActionType="Variable" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -352,7 +352,7 @@
               <Action OrderNumber="2" NamedCallbackName="mark" NamedCallbackParam="{&quot;ActorID&quot;:0x${pid},&quot;MarkType&quot;:&quot;attack${numeric:${var:tb_盗宝团id}-${numeric:hex2dec(${pid})}+1}&quot;,&quot;LocalOnly&quot;:true}" ActionType="NamedCallback" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="And" />
               </Action>
-              <Action OrderNumber="3" VariableName="tb_盗宝团id" VariableExpression="${var:tb_盗宝团i}+1" ActionType="Variable" ExecutionDelayExpression="200" RefireInterrupt="True">
+              <Action OrderNumber="3" VariableName="tb_盗宝团id" VariableExpression="${var:tb_盗宝团i}+1" ActionType="Variable" ExecutionDelayExpression="500" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -1177,7 +1177,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="8.4下底退出" Id="7fa2cdf3-f2d9-417a-a000-06c431cb5556" RegularExpression=" ChatLog 00:0839::最终区的封锁解除了……| Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|奥尔特罗斯|提丰|艾奇德娜|法厄同|纳西索斯|希波墨涅斯):">
+          <Trigger Enabled="false" Name="8.4下底退出(不稳定，需要鼠标静止或最小化游戏并保持帧数）" Id="7fa2cdf3-f2d9-417a-a000-06c431cb5556" RegularExpression=" ChatLog 00:0839::最终区的封锁解除了……| Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|奥尔特罗斯|提丰|艾奇德娜|法厄同|纳西索斯|希波墨涅斯):">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="1000">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1228,6 +1228,90 @@
         <Condition Enabled="true" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="^(水城宝物库|运河宝物库|运河宝物库神殿|运河宝物库深层|梦羽宝境|梦羽宝殿|惊奇百宝城|厄尔庇斯育体宝殿)$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
         </Condition>
+      </Trigger>
+      <Trigger Enabled="false" Name="维护用日志" Id="727a11cd-343e-4ac0-bcd2-546ef50648c5" RegularExpression="" Description="版本号意义为 游戏版本+会计版本+后缀by&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;6.4.9.165、新增8.2曼德拉标记与8.3盗宝团标记与8.4下底退出，并新增维护日志用于与后人对接&#xD;&#xA;6.4.8.165、新增8.1神殿本地标点&#xD;&#xA;6.4.7.165、修改掉落统计 战利品→获得了，统计会变迟，但会使得单人也可以获得统计&#xD;&#xA;6.4.6.165、新增统计发送整合版，用于避免各种材料×0的现象&#xD;&#xA;6.4.5.165、新增神殿计算中，特殊召唤与变动召唤&#xD;&#xA;6.4.4.165、新增神殿的统计&#xD;&#xA;6.4.3.165、新增招募内容的记录，记录方式较为卡时间差&#xD;&#xA;6.4.2.165、修改统计发送的臃肿方式，整合为一便于维护&#xD;&#xA;6.4.1.165、就是把群里全部的会计全合一起进行魔改了，并新增了G12的部分老材料与单人绿图，并增加clear用于与标点触发器进行联动&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;该触发器仅为个人兴趣维护，有大量个人魔改在内，如若不喜请选择他人版本……&#xD;&#xA;">
+        <Actions>
+          <Action OrderNumber="1" Enabled="False" ActionType="Placeholder" Description="下面为维护用新增功能的说明书，右侧描述为版本更新日志，此文件不是使用说明书，也没有说明书！" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" Enabled="False" ActionType="Placeholder" Description="↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" Enabled="False" ActionType="Placeholder" Description="↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" Enabled="False" ActionType="Placeholder" Description="↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" Enabled="False" ActionType="Placeholder" Description="↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" Enabled="False" ActionType="Placeholder" Description="↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" Enabled="False" ActionType="Placeholder" Description="↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述↗描述" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" Enabled="False" ActionType="Placeholder" Description="0、此处为新版本需要修改的《地图文件》《材料文件》《怪物文件》的介绍" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" Enabled="False" ActionType="Placeholder" Description="　　地图文件有[GXX掉落统计内核][转盘下底-神殿数量][4.1][4.3][8.1]" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" Enabled="False" ActionType="Placeholder" Description="　　材料文件有[GXX掉落统计内核-GXX掉落统计][6.2][1.1]" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" Enabled="False" ActionType="Placeholder" Description="　　怪物文件有[转盘下底-gxx下底][8.2][8.3][8.4]" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" Enabled="False" ActionType="Placeholder" Description="1、掉落统计需要更新内容为" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" Enabled="False" ActionType="Placeholder" Description="　　GXX掉落统计内核 需要创建新的文件夹，并限制好版本地图与宝物库地图来获得，并在新的触发器里写入新材料名称" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" Enabled="False" ActionType="Placeholder" Description="　　转盘计算需要增加新的 神殿底层boss名称来判定下底" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" Enabled="False" ActionType="Placeholder" Description="　　转盘计算内的神殿计算，需要加入新的神殿名称" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" Enabled="False" ActionType="Placeholder" Description="　　6.1统计发送与6.2统计发送 需要增加新的材料+0内容来发送统计" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="17" Enabled="False" ActionType="Placeholder" Description="2、基础功能需要更新内容为" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="18" Enabled="False" ActionType="Placeholder" Description="　　1.1挖宝重置 内需要增加新的材料归零" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="19" Enabled="False" ActionType="Placeholder" Description="　　4.1绿图地图数 需要更新可能存在的新绿图" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="20" Enabled="False" ActionType="Placeholder" Description="3、可选功能需要更新内容为" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="21" Enabled="False" ActionType="Placeholder" Description="　　4.3出洞计数显示 需要更新新的宝物库名称" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="22" Enabled="False" ActionType="Placeholder" Description="　　8.1神殿本地标点 需要更新新的神殿名称" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="23" Enabled="False" ActionType="Placeholder" Description="　　8.2曼德拉标记 需要更新新的曼德拉名字" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="24" Enabled="False" ActionType="Placeholder" Description="　　8.3盗宝团标记 需要更新新的盗宝团名字" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="25" Enabled="False" ActionType="Placeholder" Description="4、青魔挂件需要更新内容为" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="26" Enabled="False" ActionType="Placeholder" Description="　　8.4下底退出 需要更新新的转盘底层boss名称" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
