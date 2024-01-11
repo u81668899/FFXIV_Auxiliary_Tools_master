@@ -519,7 +519,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="鞣革制的隐藏地图" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="True" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
+                  <Trigger Enabled="true" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mw_num" VariableExpression="${var:mw_num}+${var:tb_dongnum}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
