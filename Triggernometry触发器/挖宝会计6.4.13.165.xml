@@ -35,6 +35,9 @@
               <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
+              <Action OrderNumber="4" TriggerOp="DisableTrigger" TriggerId="4b5f2b26-691f-45e1-af2a-70ed13e3be77" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
@@ -51,10 +54,13 @@
           </Trigger>
           <Trigger Enabled="true" Name="5.0魔纹" Id="7d938996-59c8-4bba-b633-6afe895217ef" RegularExpression="^.{14} ChatLog 00:0839::通往宝物库的传送魔纹出现了！$">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mw_num" VariableExpression="${var:mw_num}+1" ActionType="Variable">
+              <Action OrderNumber="1" VariableName="tb_已下底" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 当前出洞数: ${var:mw_num}" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="mw_num" VariableExpression="${var:mw_num}+1" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 当前出洞数: ${var:mw_num}" ActionType="NamedCallback" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -62,10 +68,13 @@
           </Trigger>
           <Trigger Enabled="true" Name="4.4最终区" Id="d5d6a26b-6df4-425c-97b7-88c276db9b2e" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_zuinum" VariableExpression="${var:tb_zuinum}+1" ActionType="Variable" ExecutionDelayExpression="10">
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_已下底" VariableExpression="1" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="20">
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_zuinum" VariableExpression="${var:tb_zuinum}+1" ActionType="Variable" ExecutionDelayExpression="10">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="20">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -222,7 +231,7 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionGroup Enabled="true" Grouping="And">
                     <ConditionSingle Enabled="true" ExpressionL="${zhaomuwei}" ExpressionTypeL="String" ExpressionR="^讨伐歼灭战：" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    <ConditionSingle Enabled="true" ExpressionL="${var:zhaomu}" ExpressionTypeL="String" ExpressionR="(G|g)+\d{1,2}.*[^0-9]+(\d{1,2}[^0-9]{0,2}图|挖)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:zhaomu}" ExpressionTypeL="String" ExpressionR="(G|g)+\d{1,2}.*[^0-9]+(\d{1,2}[^0-9]{0,2}(张|个|)图|挖)" ExpressionTypeR="String" ConditionType="RegexMatch" />
                   </ConditionGroup>
                   <ConditionGroup Enabled="true" Grouping="Or">
                     <ConditionSingle Enabled="true" ExpressionL="${zhaomuwei}" ExpressionTypeL="String" ExpressionR="讨伐歼灭战：那布里亚勒斯讨伐战" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -238,7 +247,7 @@
                   </ConditionGroup>
                   <ConditionGroup Enabled="true" Grouping="And">
                     <ConditionSingle Enabled="true" ExpressionL="${zhaomuwei}" ExpressionTypeL="String" ExpressionR="^讨伐歼灭战：" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    <ConditionSingle Enabled="true" ExpressionL="${var:zhaomu}" ExpressionTypeL="String" ExpressionR="(G|g)+\d{1,2}.*[^0-9]+(\d{1,2}[^0-9]{0,2}图|挖)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:zhaomu}" ExpressionTypeL="String" ExpressionR="(G|g)+\d{1,2}.*[^0-9]+(\d{1,2}[^0-9]{0,2}(张|个|)图|挖)" ExpressionTypeR="String" ConditionType="RegexMatch" />
                   </ConditionGroup>
                 </Condition>
               </Action>
@@ -246,7 +255,7 @@
                 <Condition Enabled="true" Grouping="Not">
                   <ConditionSingle Enabled="true" ExpressionL="${zhaomuwei}" ExpressionTypeL="String" ExpressionR="讨伐歼灭战：那布里亚勒斯讨伐战" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="true" ExpressionL="${zhaomuwei}" ExpressionTypeL="String" ExpressionR="^寻宝" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                  <ConditionSingle Enabled="true" ExpressionL="${var:zhaomu}" ExpressionTypeL="String" ExpressionR="(G|g)+\d{1,2}.*[^0-9]+(\d{1,2}[^0-9]{0,2}图|挖)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:zhaomu}" ExpressionTypeL="String" ExpressionR="(G|g)+\d{1,2}.*[^0-9]+(\d{1,2}[^0-9]{0,2}(张|个|)图|挖)" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
             </Actions>
@@ -375,6 +384,9 @@
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_zuinum" VariableExpression="${var:tb_zuinum}+1" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_已下底" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
@@ -383,12 +395,18 @@
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_zuinum" VariableExpression="${var:tb_zuinum}+1" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_已下底" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
               <Trigger Enabled="true" Name="g10下底" Id="afbd11cb-25bd-45da-ac4b-d379f41014c8" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?(神殿曼提克|神殿变种龙|神殿阿班达)出现了！" RefirePeriodExpression="10">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_zuinum" VariableExpression="${var:tb_zuinum}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_已下底" VariableExpression="1" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -419,6 +437,16 @@
                   <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_tenum" VariableExpression="${var:tb_tenum}+1" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="特殊召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="tb_当前变动" VariableExpression="${var:tb_当前变动}+1" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="召唤式变动" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" VariableName="tb_当前变动" VariableExpression="${var:tb_当前变动}+1" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="召唤式变动" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
                 </Actions>
@@ -537,7 +565,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="鞣革制的隐藏地图" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
+                  <Trigger Enabled="false" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mw_num" VariableExpression="${var:mw_num}+${var:tb_dongnum}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1055,7 +1083,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_获得灼热的火角}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="36" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}棉布×${var:tb_获得轻柔棉布}　" ActionType="Variable">
+              <Action OrderNumber="36" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}轻柔×${var:tb_获得轻柔棉布}　" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_获得轻柔棉布}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
@@ -1339,8 +1367,96 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="false">
-        <Folders />
+      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="true">
+        <Folders>
+          <Folder Id="1ea66a68-05dd-48cd-b483-f70ec86a27bf" Name="下底退出(不稳定，需要鼠标静止或最小化游戏并保持帧数）" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="8.4下底退出1" Id="7fa2cdf3-f2d9-417a-a000-06c431cb5556" RegularExpression=" ChatLog 00:0839::最终区的封锁解除了……| Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|视财如命 代恩·奥瑟|法厄同|纳西索斯|希波墨涅斯):">
+                <Actions>
+                  <Action OrderNumber="1" TriggerOp="EnableTrigger" TriggerId="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" TriggerForce="regexp" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TriggerOp="EnableTrigger" TriggerId="4b5f2b26-691f-45e1-af2a-70ed13e3be77" TriggerForce="regexp" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="false" Name="8.7下底退出3" Id="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" RegularExpression="^下底退出$">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="5000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="85" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="106" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" TriggerOp="DisableTrigger" TriggerId="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" ActionType="Trigger" ExecutionDelayExpression="200">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" TriggerOp="DisableTrigger" TriggerId="4b5f2b26-691f-45e1-af2a-70ed13e3be77" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" VariableName="tb_已下底" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" VariableName="tb_当前箱子" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" VariableName="tb_当前变动" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="false" Sequential="True" Name="8.5下底退出2" Id="4b5f2b26-691f-45e1-af2a-70ed13e3be77" RegularExpression="^.{14} ChatLog 00:003E::获得了(?&lt;gold0&gt;[\d,]+)金币。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_当前箱子" VariableExpression="${var:tb_当前箱子}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" LogMessageText="下底退出" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tb_当前箱子}" ExpressionTypeL="Numeric" ExpressionR="${var:tb_当前变动}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tb_当前变动}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${func:format(System.Double,&quot;g&quot;):${gold0}}" ExpressionTypeL="Numeric" ExpressionR="50000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:tb_已下底}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
         <Triggers>
           <Trigger Enabled="true" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
             <Actions>
@@ -1396,64 +1512,6 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="8.4下底退出主开关(不稳定，需要鼠标静止或最小化游戏并保持帧数）" Id="7fa2cdf3-f2d9-417a-a000-06c431cb5556" RegularExpression=" ChatLog 00:0839::最终区的封锁解除了……| Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|奥尔特罗斯|提丰|艾奇德娜|法厄同|纳西索斯|希波墨涅斯):">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_已下底" VariableExpression="1" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" TriggerOp="EnableTrigger" TriggerId="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" TriggerForce="regexp" ActionType="Trigger">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="8.5下底退出2(开关无效，由8.4进行控制，建议常态关闭不要管)" Id="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" RegularExpression="^.{14} ChatLog 00:003E::获得了(?&lt;gold0&gt;[\d,]+)金币。$">
-            <Actions>
-              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="5000">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="85" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="1000">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="106" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="12" TriggerOp="DisableTrigger" TriggerId="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" ActionType="Trigger" ExecutionDelayExpression="200">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="13" VariableName="tb_已下底" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${func:format(System.Double,&quot;g&quot;):${gold0}}" ExpressionTypeL="Numeric" ExpressionR="50000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-              <ConditionSingle Enabled="true" ExpressionL="${var:tb_已下底}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-          </Trigger>
           <Trigger Enabled="true" Name="8.6副本内防T" Id="ec0a011a-aa0f-4bda-a7c2-a18e2d3f8c7b" RegularExpression="^.{14} ChatLog 00:0039::已经.分钟没有进行任何操作，超过10分钟会被强制退出任务。" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="60000">
             <Actions>
               <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="${var:防击退快捷键}" KeyPressCode="32" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress">
@@ -1491,7 +1549,7 @@
           <ConditionSingle Enabled="false" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="^(水城宝物库|运河宝物库|运河宝物库神殿|运河宝物库深层|梦羽宝境|梦羽宝殿|惊奇百宝城|厄尔庇斯育体宝殿)$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="false" Name="维护用日志" Id="727a11cd-343e-4ac0-bcd2-546ef50648c5" RegularExpression="" Description="版本号意义为 游戏版本+会计版本+后缀by&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;6.4.13.165、增加招募显示开关，修改查询触发词&#xD;&#xA;6.4.12.165、修复运河记录的问题，延长统计发送的时间避免act卡顿，增加アスレーテースクロス用于6.5批量替换&#xD;&#xA;6.4.11.165、增加运河记录，增加防T，修改物品变量，重置触发将不需要新版本维护，并增加变量转移，便于旧版本临时转移新版本，修改神殿与运河的触发带有开关形式&#xD;&#xA;6.4.10.165、改进下底退本的方式，只在开了宝箱后才会退本，增加2.2加入小队重置，增加招募进组触发的小队提示条件，增加加入非挖宝小队时的招募提示，去除部分臃肿变量便于观察，新增4.6手动设置招募内容&#xD;&#xA;6.4.9.165、新增8.2曼德拉标记与8.3盗宝团标记与8.4下底退出，并新增维护日志用于与后人对接&#xD;&#xA;6.4.8.165、新增8.1神殿本地标点&#xD;&#xA;6.4.7.165、修改掉落统计 战利品→获得了，统计会变迟，但会使得单人也可以获得统计&#xD;&#xA;6.4.6.165、新增统计发送整合版，用于避免各种材料×0的现象&#xD;&#xA;6.4.5.165、新增神殿计算中，特殊召唤与变动召唤&#xD;&#xA;6.4.4.165、新增神殿的统计&#xD;&#xA;6.4.3.165、新增招募内容的记录，记录方式较为卡时间差&#xD;&#xA;6.4.2.165、修改统计发送的臃肿方式，整合为一便于维护&#xD;&#xA;6.4.1.165、就是把群里全部的会计全合一起进行魔改了，并新增了G12的部分老材料与单人绿图，并增加clear用于与标点触发器进行联动&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;该触发器仅为个人兴趣维护，有大量个人魔改在内，如若不喜请选择他人版本……&#xD;&#xA;">
+      <Trigger Enabled="false" Name="维护用日志" Id="727a11cd-343e-4ac0-bcd2-546ef50648c5" RegularExpression="" Description="版本号意义为 游戏版本+会计版本+后缀by&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;6.4.13.165、增加招募显示开关，修改查询触发词，优化下底退出考虑到变动下底&#xD;&#xA;6.4.12.165、修复运河记录的问题，延长统计发送的时间避免act卡顿，增加アスレーテースクロス用于6.5批量替换&#xD;&#xA;6.4.11.165、增加运河记录，增加防T，修改物品变量，重置触发将不需要新版本维护，并增加变量转移，便于旧版本临时转移新版本，修改神殿与运河的触发带有开关形式&#xD;&#xA;6.4.10.165、改进下底退本的方式，只在开了宝箱后才会退本，增加2.2加入小队重置，增加招募进组触发的小队提示条件，增加加入非挖宝小队时的招募提示，去除部分臃肿变量便于观察，新增4.6手动设置招募内容&#xD;&#xA;6.4.9.165、新增8.2曼德拉标记与8.3盗宝团标记与8.4下底退出，并新增维护日志用于与后人对接&#xD;&#xA;6.4.8.165、新增8.1神殿本地标点&#xD;&#xA;6.4.7.165、修改掉落统计 战利品→获得了，统计会变迟，但会使得单人也可以获得统计&#xD;&#xA;6.4.6.165、新增统计发送整合版，用于避免各种材料×0的现象&#xD;&#xA;6.4.5.165、新增神殿计算中，特殊召唤与变动召唤&#xD;&#xA;6.4.4.165、新增神殿的统计&#xD;&#xA;6.4.3.165、新增招募内容的记录，记录方式较为卡时间差&#xD;&#xA;6.4.2.165、修改统计发送的臃肿方式，整合为一便于维护&#xD;&#xA;6.4.1.165、就是把群里全部的会计全合一起进行魔改了，并新增了G12的部分老材料与单人绿图，并增加clear用于与标点触发器进行联动&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;该触发器仅为个人兴趣维护，有大量个人魔改在内，如若不喜请选择他人版本……&#xD;&#xA;">
         <Actions>
           <Action OrderNumber="1" Enabled="False" ActionType="Placeholder" Description="下面为维护用新增功能的说明书，右侧描述为版本更新日志，此文件不是使用说明书，也没有说明书！" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
