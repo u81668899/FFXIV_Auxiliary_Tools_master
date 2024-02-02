@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FfxivZoneFilterRegularExpression="^1044$" Id="b4fd4a1d-e916-4dd9-8325-2c823cdc3db9" Name="动画城软石" Enabled="true">
+    <Folders>
+      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1044$" Id="b2afeba3-b191-487f-87c0-b75a409ac0f1" Name="本内" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="2.0自爆" Id="ac831fe5-40dd-400f-a198-3f0e2ab9e5d5" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
+            <Actions>
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="600">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="9.1退本" Id="8b0502e1-37cc-4aab-ac76-cc22ab58c5c0" RegularExpression="^动画城退本$">
+            <Actions>
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" Enabled="False" ActionType="NamedCallback" ExecutionDelayExpression="10000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="85" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="106" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" TriggerId="8b0502e1-37cc-4aab-ac76-cc22ab58c5c0" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+          <Trigger Enabled="true" Name="9.0退本" Id="032b1e4e-25a8-4fcc-9702-c17eb0247b2b" RegularExpression="^.{14} Director 21:.{8}:400000(03|1[0126]):00:00:00:00">
+            <Actions>
+              <Action OrderNumber="1" LogMessageText="动画城退本" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="LogMessage" ExecutionDelayExpression="10000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Name="1.0进本" Id="65d6fde3-0ef6-4bf0-a95c-1943028e9168" RegularExpression="^.{14} ChatLog 00:0039::.*发送了参加申请。">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="${_event}" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="105" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="500">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="3000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
