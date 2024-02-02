@@ -164,10 +164,16 @@
               </ConditionGroup>
             </Condition>
           </Action>
-          <Action OrderNumber="4" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="中途参与" ActionType="Variable">
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" VariableName="battlename" ActionType="Variable">
+          <Action OrderNumber="5" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="中途参与" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetString" VariableName="battlename" VariableExpression="未知" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -189,7 +195,7 @@
           <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" Enabled="False" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="3" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" Enabled="False" ActionType="Variable">
@@ -285,7 +291,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:battlename}" ExpressionTypeL="String" ExpressionR="${zone}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" Enabled="False" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="3" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" Enabled="False" ActionType="Variable">
@@ -302,14 +308,58 @@
       </Trigger>
       <Trigger Enabled="true" Name="9取消任务" Id="76419e95-948f-4ff1-8e0a-d991e0626697" RegularExpression="^.{14} ChatLog 00:003C::参加申请已取消。$">
         <Actions>
-          <Action OrderNumber="1" VariableName="isMentor" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="取消任务" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" VariableName="isMentor2" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${var:battlenum2}+1" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file},${var:battlenum},${var:battlename},无,${var:job},${var:isHalfJoin},_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file2},${var:battlenum2},${var:battlename},无,${var:job},${var:isHalfJoin},_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" VariableName="battlename" VariableExpression="${_systemtime}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" VariableName="job" VariableExpression="${_systemtime}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" VariableName="battletime" VariableExpression="${_systemtime}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" VariableName="end" VariableExpression="${_systemtime}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" VariableName="isHalfJoin" VariableExpression="${_systemtime}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" VariableName="isMentor" VariableExpression="0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" VariableName="isMentor2" VariableExpression="0" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
-        <Condition Enabled="false" Grouping="Or" />
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
       </Trigger>
       <Trigger Enabled="false" Name="aa抹茶功能测试，解限排18级溶洞本" Id="81aacd63-1f40-4c68-8a05-3978f408455b" RegularExpression="^.{14} ChatLog 00:0:Matcha#.*#chs-MatchAlert#{&quot;roulette&quot;:0,&quot;instance&quot;:4}$">
         <Actions>
