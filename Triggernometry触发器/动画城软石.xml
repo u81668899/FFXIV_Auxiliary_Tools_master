@@ -103,19 +103,16 @@
         <Triggers>
           <Trigger Enabled="true" Name="1.0进本" Id="65d6fde3-0ef6-4bf0-a95c-1943028e9168" RegularExpression="^.{14} ChatLog 00:0039::.*发送了参加申请。">
             <Actions>
-              <Action OrderNumber="1" LogMessageText="${_event}" Enabled="False" ActionType="LogMessage">
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="105" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="400">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="105" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="500">
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="3000">
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -133,7 +130,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="5结束" Id="1b4c0c46-d737-4966-aa34-53ffff37b38b" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|^.{14} ChatLog 00:083E::.*获得了“(稀少外典)神典石”(×.+?)?。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -147,7 +143,6 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:副本名称}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
             </Condition>
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="0统计" Id="0658250d-ec10-42d7-8874-cd99832dc896" RegularExpression="^统计发送$">
             <Actions>
@@ -161,18 +156,19 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_副本万魔殿 边境之狱1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 已完成副本：${var:副本统计发送}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
-                <Condition Enabled="false" Grouping="Or" />
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/${var:副本发送频道} 已完成副本：${var:副本统计发送}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:副本统计发送}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
               </Action>
               <Action OrderNumber="4" VariableName="副本统计发送" ActionType="Variable" ExecutionDelayExpression="500">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" VariableName="挖宝发送频道" ActionType="Variable">
+              <Action OrderNumber="5" VariableName="副本发送频道" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="1重置" Id="213d9c76-4a99-4c5d-a69c-9bf871bb63a3" RegularExpression="^挖宝重置$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -180,6 +176,17 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 已重置" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="6默语查询" Id="27196263-c5af-44b4-a456-5f290d73bc8c" RegularExpression="^.{14} ChatLog 00:0038::((副本)(查询|统计)|(查询|统计)(副本))$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="副本发送频道" VariableExpression="e" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" LogMessageText="统计发送" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>

@@ -306,7 +306,7 @@
           <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="true" Name="9取消任务" Id="76419e95-948f-4ff1-8e0a-d991e0626697" RegularExpression="^.{14} ChatLog 00:003C::参加申请已取消。$">
+      <Trigger Enabled="true" Sequential="True" Name="9取消任务" Id="76419e95-948f-4ff1-8e0a-d991e0626697" RegularExpression="^.{14} ChatLog 00:003C::参加申请已取消。$">
         <Actions>
           <Action OrderNumber="1" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="取消任务" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
@@ -331,28 +331,38 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="6" VariableName="battlename" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}-1" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${var:battlenum2}-1" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" VariableName="battlename" VariableExpression="${_systemtime}" ActionType="Variable" ExecutionDelayExpression="2000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" VariableName="job" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="9" VariableName="job" VariableExpression="${_systemtime}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="8" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="10" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" VariableName="battletime" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="11" VariableName="battletime" VariableExpression="${_systemtime}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" VariableName="end" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="12" VariableName="end" VariableExpression="${_systemtime}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" VariableName="isHalfJoin" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="13" VariableName="isHalfJoin" VariableExpression="${_systemtime}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" VariableName="isMentor" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="14" VariableName="isMentor" VariableExpression="0" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" VariableName="isMentor2" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="15" VariableName="isMentor2" VariableExpression="0" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
