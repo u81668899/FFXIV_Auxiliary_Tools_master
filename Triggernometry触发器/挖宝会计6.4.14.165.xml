@@ -1470,7 +1470,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="false" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
+          <Trigger Enabled="true" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="跟随传送" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1478,7 +1478,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
+          <Trigger Enabled="true" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="出现投掷" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1486,7 +1486,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
+          <Trigger Enabled="true" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1506,25 +1506,25 @@
               <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="7" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="9" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="10" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Name="8.6副本内防T" Id="ec0a011a-aa0f-4bda-a7c2-a18e2d3f8c7b" RegularExpression="^.{14} ChatLog 00:0039::已经.分钟没有进行任何操作，超过10分钟会被强制退出任务。" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="60000">
+          <Trigger Enabled="true" Name="8.6副本内防T" Id="ec0a011a-aa0f-4bda-a7c2-a18e2d3f8c7b" RegularExpression="^.{14} ChatLog 00:0039::已经.分钟没有进行任何操作，超过10分钟会被强制退出任务。" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="60000">
             <Actions>
               <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="${var:防击退快捷键}" KeyPressCode="32" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress">
                 <Condition Enabled="false" Grouping="Or" />
