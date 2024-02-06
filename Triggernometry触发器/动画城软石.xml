@@ -52,7 +52,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="false" Sequential="True" Name="9重置" Id="213d9c76-4a99-4c5d-a69c-9bf871bb63a3" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="(86400000-(${_timestampms}+28800000-54000000)%86400000)">
+          <Trigger Enabled="false" Sequential="True" Name="9重置" Id="213d9c76-4a99-4c5d-a69c-9bf871bb63a3" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="(86400-(${_timestamp}+28800-54000)%86400)*1000">
             <Actions>
               <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^tb_副本" VariableExpression="0" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
@@ -283,7 +283,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} 123Director 21:.{8}:4000000[23]:00:00:00:00|魔导终端可以操作了。">
+          <Trigger Enabled="false" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|魔123导终端可以操作了。">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超硬化 关" ActionType="NamedCallback" ExecutionDelayExpression="7300">
                 <Condition Enabled="false" Grouping="Or" />
