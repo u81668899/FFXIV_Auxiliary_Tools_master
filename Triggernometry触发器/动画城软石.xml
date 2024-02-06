@@ -251,7 +251,7 @@
       <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1044$" Id="895b3b28-f351-4d18-b6a8-70a521e3e129" Name="单刷用换技能" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="十六五夜破坏了超硬陶瓷合金防爆墙。">
+          <Trigger Enabled="true" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="::(?&lt;name&gt;.+?)破坏了超硬陶瓷合金防爆墙。">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超振动 关" ActionType="NamedCallback" ExecutionDelayExpression="3000">
                 <Condition Enabled="false" Grouping="Or" />
@@ -278,7 +278,9 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
             <Conditions />
           </Trigger>
           <Trigger Enabled="false" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} 123Director 21:.{8}:4000000[23]:00:00:00:00|魔导终端可以操作了。">
