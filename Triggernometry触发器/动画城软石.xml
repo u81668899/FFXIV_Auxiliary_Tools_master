@@ -68,7 +68,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="6默语查询" Id="27196263-c5af-44b4-a456-5f290d73bc8c" RegularExpression="^.{14} ChatLog 00:0038::((副本)(查询|统计)|(查询|统计)(副本))$|^.{14} Director 21:.{8}:400000(03|1[0126]):00:00:00:00">
+          <Trigger Enabled="true" Sequential="True" Name="6默语查询" Id="27196263-c5af-44b4-a456-5f290d73bc8c" RegularExpression="^.{14} ChatLog 00:0038::((副本)(查询|统计)|(查询|统计)(副本))$|^.{14} Director 21:.{8}:40000003:00:00:00:00">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetString" VariableName="副本发送频道" VariableExpression="e" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -89,7 +89,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -100,7 +99,7 @@
             <Triggers>
               <Trigger Enabled="true" Name="2.1自爆2" Id="ac831fe5-40dd-400f-a198-3f0e2ab9e5d5" RegularExpression="^.{14} StartsCasting 14:.{8}:(?&lt;name&gt;.+?):2C90:[^:]*:" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
-                  <Action OrderNumber="1" TriggerOp="CancelTrigger" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerForce="regexp,conditions" ActionType="Trigger" ExecutionDelayExpression="1000">
+                  <Action OrderNumber="1" TriggerOp="CancelTrigger" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerForce="regexp,conditions" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -109,21 +108,25 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="^最终决战天魔魔导城$" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Name="2.0自爆" Id="3e046dec-6c4b-472e-8f63-9426cd9b7804" RegularExpression="^.{14} Territory 01:.*:(?&lt;zone&gt;.*)$">
+              <Trigger Enabled="true" Name="2.0自爆" Id="3e046dec-6c4b-472e-8f63-9426cd9b7804" RegularExpression="^.{14} Territory 01:.*:(?&lt;zone&gt;.*)$|^动画城自爆$">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="200">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="Trigger">
+                  <Action OrderNumber="2" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" LogMessageText="动画城自爆" LogProcess="True" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -173,7 +176,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="9.0退本" Id="2f3c8f91-e338-4bb7-a261-83a5fb1f87bf" RegularExpression="^.{14} Director 21:.{8}:400000(03|1[0126]):00:00:00:00">
                 <Actions>
@@ -218,7 +220,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -241,14 +242,13 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
         </Folders>
         <Triggers />
       </Folder>
-      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1044$" FFXIVJobFilterEnabled="True" FFXIVJobFilter="34359738368" Id="895b3b28-f351-4d18-b6a8-70a521e3e129" Name="单刷用换技能" Enabled="false">
+      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1044$" FFXIVJobFilterEnabled="True" FFXIVJobFilter="34359738368" Id="895b3b28-f351-4d18-b6a8-70a521e3e129" Name="单刷用换技能" Enabled="true">
         <Folders />
         <Triggers>
           <Trigger Enabled="true" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="::(?&lt;name&gt;.+?)破坏了超硬陶瓷合金防爆墙。">
@@ -281,7 +281,6 @@
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Trigger>
           <Trigger Enabled="false" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|魔123导终端可以操作了。">
             <Actions>
@@ -311,7 +310,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -326,19 +324,20 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Name="关" Id="64e53576-bf0c-4930-9e47-8298d5c4a261" RegularExpression="接受了(?&lt;name&gt;.+?)转让来的队长权限。|::(?&lt;name2&gt;.+?)成为了新的队长。">
         <Actions>
           <Action OrderNumber="1" FolderOp="DisableFolder" FolderId="361f7c67-ebee-46dd-988c-a77006abe52f" ActionType="Folder">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${name2}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${name2}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
         </Actions>
-        <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+          <ConditionSingle Enabled="true" ExpressionL="${name2}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
       </Trigger>
     </Triggers>
   </ExportedFolder>
