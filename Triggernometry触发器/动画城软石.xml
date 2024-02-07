@@ -105,7 +105,7 @@
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                  <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="^最终决战天魔魔导城$" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天魔魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Trigger>
               <Trigger Enabled="true" Name="2.0自爆" Id="3e046dec-6c4b-472e-8f63-9426cd9b7804" RegularExpression="^.{14} Territory 01:.*:(?&lt;zone&gt;.*)$|^动画城自爆$">
