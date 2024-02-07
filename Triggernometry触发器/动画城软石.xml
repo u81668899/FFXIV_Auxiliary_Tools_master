@@ -90,6 +90,25 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
+          <Trigger Enabled="true" Name="4手动设置动画城" Id="a44569df-a11e-46ad-85c6-d11ab29aeb63" RegularExpression="^.{14} ChatLog 00:0038::动画城(?&lt;suanshu&gt;\+|-|\*)(?&lt;map_manual&gt;\d{0,3})$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本最终决战天幕魔导城" VariableExpression="${var:tb_副本最终决战天幕魔导城}${suanshu}${map_manual}" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${suanshu}" ExpressionTypeL="String" ExpressionR="^\+|-$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_副本最终决战天幕魔导城" VariableExpression="${map_manual}" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${suanshu}" ExpressionTypeL="String" ExpressionR="^\*$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 当前动画城: ${var:tb_副本最终决战天幕魔导城}" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
         </Triggers>
       </Folder>
       <Folder Id="361f7c67-ebee-46dd-988c-a77006abe52f" Name="动画城软石" Enabled="true">
