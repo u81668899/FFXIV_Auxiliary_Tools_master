@@ -1,0 +1,232 @@
+{
+  "$type": "CurrencyTracker.Configuration, CurrencyTracker",
+  "Version": 0,
+  "FisrtOpen": false,
+  "CurrentActiveCharacter": [
+    {
+      "$type": "CurrencyTracker.Manager.Infos.CharacterInfo, CurrencyTracker",
+      "Name": "十六五夜",
+      "Server": "摩杜纳",
+      "ContentID": 19014409516066930
+    }
+  ],
+  "PresetCurrencies": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "1": "金币",
+    "44": "亚拉戈因果神典石",
+    "45": "亚拉戈神曲神典石"
+  },
+  "CustomCurrencies": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "20": "黑涡团军票",
+    "21": "双蛇党军票",
+    "22": "恒辉队军票",
+    "25": "狼印战绩",
+    "27": "同盟徽章",
+    "28": "亚拉戈诗学神典石",
+    "29": "金碟币",
+    "10307": "兵团徽章",
+    "25199": "巧手白票",
+    "25200": "大地白票",
+    "26807": "双色宝石",
+    "28063": "天穹街振兴票",
+    "33913": "巧手紫票",
+    "33914": "大地紫票",
+    "36656": "战利水晶",
+    "19770": "深层传送魔纹的地图"
+  },
+  "CurrencyRules": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker]], System.Private.CoreLib",
+    "1": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "44": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "45": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "20": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "21": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "22": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "25": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "27": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "28": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "29": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "10307": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "25199": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "25200": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "26807": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "28063": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "33913": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "33914": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "36656": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    },
+    "19770": {
+      "$type": "CurrencyTracker.Manager.Infos.CurrencyRule, CurrencyTracker",
+      "RegionRulesMode": false,
+      "RestrictedAreas": []
+    }
+  },
+  "OrderedOptions": [
+    1,
+    44,
+    45,
+    20,
+    21,
+    22,
+    25,
+    27,
+    28,
+    29,
+    10307,
+    25199,
+    25200,
+    26807,
+    28063,
+    33913,
+    33914,
+    36656,
+    19770
+  ],
+  "ReverseSort": false,
+  "SelectedLanguage": "",
+  "MaxBackupFilesCount": 10,
+  "AutoSaveMessage": false,
+  "AutoSaveMode": 0,
+  "AutoSaveInterval": 60,
+  "RecordsPerPage": 16,
+  "ChangeTextColoring": true,
+  "PositiveChangeColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 1.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "NegativeChangeColor": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "ChildWidthOffset": 0,
+  "ExportDataFileType": 0,
+  "CharacterRetainers": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib",
+    "19014409516066930": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+      "33777068205334646": "神山郁香",
+      "33777068205334633": "神山樱乃",
+      "33777068205653126": "神山星绘",
+      "33777068205403570": "神山须美",
+      "33777068205653136": "神山未来",
+      "33777068205653149": "神山结花",
+      "33777068205403620": "神山神乐",
+      "33777068205611305": "神山沙月",
+      "33777068205653140": "神山香织",
+      "33777068205412340": "神山姚玲"
+    }
+  },
+  "ColumnVisibility": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib",
+    "ShowTimeColumn": true,
+    "ShowAmountColumn": true,
+    "ShowChangeColumn": true,
+    "ShowLocationColumn": true,
+    "ShowNoteColumn": true,
+    "ShowOrderColumn": true,
+    "ShowCheckboxColumn": true
+  },
+  "ComponentEnabled": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib",
+    "AutoSave": false,
+    "DutyRewards": true,
+    "Exchange": true,
+    "FateRewards": true,
+    "GoldSaucer": true,
+    "IslandSanctuary": true,
+    "MobDrops": true,
+    "PremiumSaddleBag": true,
+    "QuestRewards": true,
+    "Retainer": true,
+    "SaddleBag": true,
+    "SpecialExchange": true,
+    "TeleportCosts": true,
+    "Trade": true,
+    "TripleTriad": true,
+    "WarpCosts": true
+  },
+  "ComponentProp": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib",
+    "RecordContentName": true,
+    "RecordDesAetheryteName": false,
+    "RecordDesAreaName": true
+  }
+}

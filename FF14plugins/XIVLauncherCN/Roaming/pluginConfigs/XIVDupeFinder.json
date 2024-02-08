@@ -1,0 +1,24 @@
+{
+  "$type": "XIVDupeFinder.Configuration, XIVDupeFinder",
+  "Version": 0,
+  "OnlyDuringKeyModifier": true,
+  "HighlightRandomColours": true,
+  "HighlightDuplicates": true,
+  "HightlightTabs": true,
+  "HighlightOnlyActiveWindow": false,
+  "TabHighlightColour": {
+    "$type": "System.Byte[], System.Private.CoreLib",
+    "$value": "UFBQ"
+  },
+  "ItemHighlightColour": {
+    "$type": "System.Byte[], System.Private.CoreLib",
+    "$value": "KFAo"
+  },
+  "NormalInventoryOffset": 20,
+  "LargeInventoryOffset": 0,
+  "LargestInventoryOffset": 0,
+  "ChocoboInventoryOffset": 0,
+  "RetainerInventoryOffset": 18,
+  "LargeRetainerInventoryOffset": 0,
+  "ArmouryInventoryOffset": 30
+}

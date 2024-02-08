@@ -1,0 +1,15 @@
+{
+  "$type": "TriadBuddyPlugin.Configuration, TriadBuddy",
+  "Version": 0,
+  "ShowSolverHintsInGame": true,
+  "ShowDeckEditHighlights": true,
+  "CanUseProfileReader": true,
+  "DeckOptimizerCPU": 1.0,
+  "CheckCardNpcMatchOnly": false,
+  "CheckCardNotOwnedOnly": true,
+  "CheckNpcHideBeaten": true,
+  "CheckNpcHideCompleted": true,
+  "NpcStats": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[TriadBuddyPlugin.Configuration+NpcStatInfo, TriadBuddy]], System.Private.CoreLib"
+  }
+}

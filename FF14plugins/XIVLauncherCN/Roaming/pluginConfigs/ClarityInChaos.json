@@ -1,0 +1,44 @@
+{
+  "$type": "ClarityInChaos.Configuration, ClarityInChaos",
+  "DebugMessages": false,
+  "DebugForcePartySize": false,
+  "DebugPartySize": 0,
+  "Version": 0,
+  "IsVisible": false,
+  "Enabled": true,
+  "Backup": {
+    "$type": "ClarityInChaos.ConfigForGroupingSize, ClarityInChaos",
+    "Size": 0,
+    "Self": 0,
+    "Party": 1,
+    "Other": 1
+  },
+  "Solo": {
+    "$type": "ClarityInChaos.ConfigForGroupingSize, ClarityInChaos",
+    "Size": 0,
+    "Self": 0,
+    "Party": 1,
+    "Other": 1
+  },
+  "LightParty": {
+    "$type": "ClarityInChaos.ConfigForGroupingSize, ClarityInChaos",
+    "Size": 1,
+    "Self": 0,
+    "Party": 1,
+    "Other": 1
+  },
+  "FullParty": {
+    "$type": "ClarityInChaos.ConfigForGroupingSize, ClarityInChaos",
+    "Size": 2,
+    "Self": 0,
+    "Party": 1,
+    "Other": 1
+  },
+  "Alliance": {
+    "$type": "ClarityInChaos.ConfigForGroupingSize, ClarityInChaos",
+    "Size": 3,
+    "Self": 0,
+    "Party": 1,
+    "Other": 1
+  }
+}

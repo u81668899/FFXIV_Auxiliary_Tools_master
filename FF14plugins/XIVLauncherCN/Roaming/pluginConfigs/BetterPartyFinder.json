@@ -2,10 +2,50 @@
   "$type": "BetterPartyFinder.Configuration, BetterPartyFinder",
   "Version": 1,
   "Presets": {
-    "$type": "System.Collections.Generic.Dictionary`2[[System.Guid, System.Private.CoreLib],[BetterPartyFinder.ConfigurationFilter, BetterPartyFinder]], System.Private.CoreLib"
+    "$type": "System.Collections.Generic.Dictionary`2[[System.Guid, System.Private.CoreLib],[BetterPartyFinder.ConfigurationFilter, BetterPartyFinder]], System.Private.CoreLib",
+    "adab092d-ee83-45df-94d7-89adb2a2d0c1": {
+      "$type": "BetterPartyFinder.ConfigurationFilter, BetterPartyFinder",
+      "Name": "<未命名预设>",
+      "DutiesMode": 0,
+      "Duties": [
+        943
+      ],
+      "Categories": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Jobs": [],
+      "JobsLimit": [
+        0
+      ],
+      "SearchArea": 4294967295,
+      "LootRule": 4294967295,
+      "DutyFinderSettings": 4294967295,
+      "Conditions": 4294967295,
+      "Objectives": 4294967295,
+      "AllowHugeItemLevel": true,
+      "MinItemLevel": null,
+      "MaxItemLevel": null,
+      "Players": [],
+      "Description": [],
+      "DescriptionLike": [],
+      "DescriptionExclude": []
+    }
   },
-  "SelectedPreset": "f8f7a6f4-494d-4292-8ad1-1ac38c8f893e",
-  "ShowWhenPfOpen": false,
-  "WindowSide": 0,
-  "ShowDescriptionOnJoin": true
+  "SelectedPreset": null,
+  "ShowWhenPfOpen": true,
+  "WindowSide": 0
 }

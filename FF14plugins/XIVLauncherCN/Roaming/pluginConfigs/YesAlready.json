@@ -10,12 +10,12 @@
     "Children": [
       {
         "$type": "YesAlready.TextFolderNode, YesAlready",
-        "Name": "Untitled folder",
+        "Name": "副本互动与NPC互动",
         "Children": [
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "确定要解散小队吗？",
+            "Text": "要使用钥匙吗？",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -23,7 +23,7 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "要使用魔导感光器吗",
+            "Text": "要使用钢铁制操纵杆修复大门吗？",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -31,7 +31,7 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "/要打开(隔离墙|关着的]海人门|避难地正门)/",
+            "Text": "要扳动排水机关的操作杆吗？",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -39,7 +39,7 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "要跳入流沙之中吗? ",
+            "Text": "要前往梅梅卢恩交易站吗？ 交通费为40金币。",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -47,7 +47,7 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "/要(进入|离开|前往)(.*军营|.*行会|(石|沙)之家|这间房屋|码头小屋|.*)吗？/",
+            "Text": "要前往你的小岛吗？",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -55,183 +55,7 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "/确定要花费.+?传送到“.+?”吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "要传送吗?",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "要返回到",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": false,
-            "Text": "确定要交易优质道具吗？",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/^确定要加入.* ?的小队吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/要骑上.*前往.*吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/^要.*?(魔导|电梯|密钥|内部|魔力的奔流)/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/.*?会带领周围的队员起进行移动。/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": false,
-            "Text": "要修理当前所有装备吗？",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/确定要中止正在倒数中的战斗开始倒计时吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/要(进入|离开)吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/确定要参加吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/要移动到(聚魔洞窟|脏兮兮的土洞|湿漉漉的水洞|热腾腾的火洞)吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/确定要以.*?金蝶币的价格购买.*?号仙人仙彩吗？",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/要不要再买一次？ /",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/确定要以.*金碟币的价格购买.*号仙人仙彩吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/以.*\\(含手续费.*\\)的价格购买“.*”.*。/",
-            "ZoneRestricted": false,
-            "ZoneText": "利姆萨·罗敏萨下层甲板",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/确定要将(萨维奈圆葱)种子种植在园艺土壤中吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "/确定要将(萨维奈圆葱|釉质坚果|旧世界无花果|皇家可可豆|黄杏)种子种植在3级萨纳兰土壤中吗？/",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "要启动斜行升降机吗？※会带领周围的队员一起进行移动。",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "要打开后营门入口吗？※会带领周围的队员一起进行移动。",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "确定要解散队伍吗？解散后会自动撤销已发布的队员招募。",
-            "ZoneRestricted": false,
-            "ZoneText": "",
-            "IsYes": true
-          },
-          {
-            "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
-            "Text": "要前往幻影群岛吗？ ",
+            "Text": "要转动排水阀门吗？",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -247,7 +71,171 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "要转动排水阀门吗？",
+            "Text": "要前往幻影群岛吗？ ",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要打开后营门入口吗？※会带领周围的队员一起进行移动。",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要启动斜行升降机吗？※会带领周围的队员一起进行移动。",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/要移动到(聚魔洞窟|脏兮兮的土洞|湿漉漉的水洞|热腾腾的火洞)吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/^要.*?(魔导|电梯|密钥|内部|魔力的奔流)/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/要骑上.*前往.*吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要返回到",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要跳入流沙之中吗? ",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/要打开(隔离墙|关着的]海人门|避难地正门)/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要使用魔导感光器吗",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          }
+        ]
+      },
+      {
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "NPC交易类",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要用亚拉戈诗学神典石.+?， 换取以下道具吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要交换吗？ 当前职业或等级无法穿戴该装备。",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要用怪物狩猎的战利品×25， 换取以下道具吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/“改良型圣堂.*”ｘ1 需要以下道具进行交换。/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/“.*”ｘ1 需要以下道具进行交换。  　　“怪物狩猎的战利品”ｘ.+?/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          }
+        ]
+      },
+      {
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "日常使用确认",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要将下列道具收为收藏品吗？ /",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要为合建设备提供.*吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要交易优质道具吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要继续进行交换吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要移动到“.*”吗？/",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -271,7 +259,15 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "要前往你的小岛吗？",
+            "Text": "/以.*(\\(含手续费.*\\)|)的价格购买“.*”.*。/",
+            "ZoneRestricted": false,
+            "ZoneText": "利姆萨·罗敏萨下层甲板",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要以.*金碟币的价格购买.*号仙人仙彩吗？/",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -279,7 +275,39 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
-            "Text": "要前往梅梅卢恩交易站吗？ 交通费为40金币。",
+            "Text": "/要不要再买一次？ /",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要以.*?金蝶币的价格购买.*?号仙人仙彩吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要参加吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/要(进入|离开)吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要中止正在倒数中的战斗开始倒计时吗？/",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -287,7 +315,39 @@
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": false,
-            "Text": "确定要退出任务吗？",
+            "Text": "要修理当前所有装备吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要传送吗?",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要花费.+?传送到“.+?”吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/要(进入|离开|前往)(.*军营|.*行会|(石|沙)之家|这间房屋|码头小屋|.*)吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": false,
+            "Text": "/即将返回“(厄尔庇斯育体宝殿|惊奇百宝城|梦羽宝殿|梦羽宝境|运河宝物库深层|运河宝物库神殿|运河宝物库|水城宝物库)”的回归点。/",
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -295,164 +355,146 @@
         ]
       },
       {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": false,
-        "Text": "/召唤/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "小队日常用",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要解散小队吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要解散队伍吗？解散后会自动撤销已发布的队员招募。",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/.*?会带领周围的队员起进行移动。/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          }
+        ]
       },
       {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": false,
-        "Text": "/确定要打开宝箱吗？/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "挖宝用",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要启动召唤魔法阵吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要对.+?进行解读吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要打开宝箱吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要打开宝箱吗？ 打开之后宝物地图便会消失。",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          }
+        ]
       },
       {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": false,
-        "Text": "金币搬迁（个人）吗？  ※搬迁时需要支付的购买土地金额为 　新土地的现售价减去30%的旧土地最低售价。",
-        "ZoneRestricted": false,
-        "ZoneText": "海雾村",
-        "IsYes": true
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "ULK用",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要进行强化吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要将优雷卡以太壶中积攒的混合以太进行结晶化吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          }
+        ]
       },
       {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/确定要移动到“.*”吗？/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "种地用",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要将(萨维奈圆葱|釉质坚果|旧世界无花果|皇家可可豆|黄杏)种子种植在3级萨纳兰土壤中吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/确定要将(萨维奈圆葱)种子种植在园艺土壤中吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          }
+        ]
       },
       {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "要继续进行交换吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "确定要交易优质道具吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/“.*”ｘ1 需要以下道具进行交换。  　　“怪物狩猎的战利品”ｘ.+?/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": false,
-        "Text": "/要接受前往“.+?”的传送邀请吗？/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "要将优雷卡以太壶中积攒的混合以太进行结晶化吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/“改良型圣堂.*”ｘ1 需要以下道具进行交换。/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/确定要为合建设备提供.*吗？/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "要扳动排水机关的操作杆吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/确定要将下列道具收为收藏品吗？ /",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "确定要用怪物狩猎的战利品×25， 换取以下道具吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "要启动召唤魔法阵吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "确定要打开宝箱吗？ 打开之后宝物地图便会消失。",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/确定要对.+?进行解读吗？/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "确定要交换吗？ 当前职业或等级无法穿戴该装备。",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "/确定要用亚拉戈诗学神典石.+?， 换取以下道具吗？/",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
-      },
-      {
-        "$type": "YesAlready.TextEntryNode, YesAlready",
-        "Enabled": true,
-        "Text": "确定要进行强化吗？",
-        "ZoneRestricted": false,
-        "ZoneText": "",
-        "IsYes": true
+        "$type": "YesAlready.TextFolderNode, YesAlready",
+        "Name": "关键开关",
+        "Children": [
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/要接受前往“.+?”的传送邀请吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "/^确定要加入.*?的小队吗？/",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要退出任务吗？",
+            "ZoneRestricted": true,
+            "ZoneText": "天幕魔导城",
+            "IsYes": true
+          }
+        ]
       }
     ]
   },
@@ -501,11 +543,6 @@
         "Text": "播种",
         "TargetRestricted": true,
         "TargetText": "园圃"
-      },
-      {
-        "$type": "YesAlready.TextFolderNode, YesAlready",
-        "Name": "Untitled folder",
-        "Children": []
       },
       {
         "$type": "YesAlready.ListEntryNode, YesAlready",
@@ -622,11 +659,6 @@
         "$type": "YesAlready.TalkEntryNode, YesAlready",
         "Enabled": true,
         "TargetText": ""
-      },
-      {
-        "$type": "YesAlready.TalkEntryNode, YesAlready",
-        "Enabled": true,
-        "TargetText": "巴尔丁"
       }
     ]
   },
@@ -636,14 +668,14 @@
   "MateriaRetrieveDialogEnabled": true,
   "ItemInspectionResultEnabled": true,
   "ItemInspectionResultRateLimiter": 0,
-  "RetainerTaskAskEnabled": true,
-  "RetainerTaskResultEnabled": true,
-  "GrandCompanySupplyReward": true,
+  "RetainerTaskAskEnabled": false,
+  "RetainerTaskResultEnabled": false,
+  "GrandCompanySupplyReward": false,
   "ShopCardDialog": true,
   "JournalResultCompleteEnabled": false,
-  "ContentsFinderConfirmEnabled": false,
+  "ContentsFinderConfirmEnabled": true,
   "ContentsFinderOneTimeConfirmEnabled": false,
   "InclusionShopRememberEnabled": false,
   "InclusionShopRememberCategory": 1,
-  "InclusionShopRememberSubcategory": 8
+  "InclusionShopRememberSubcategory": 9
 }
