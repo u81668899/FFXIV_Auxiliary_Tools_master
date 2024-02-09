@@ -10,6 +10,15 @@
               <Action OrderNumber="1" VariableOp="SetString" VariableName="副本名称" VariableExpression="${zone}" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
+              <Action OrderNumber="2" TriggerId="2d5f7fbc-ca4e-4ea8-94ff-4765eb151ab8" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="floor((${_timestamp}+28800-15*3600)/86400)" ExpressionTypeL="Numeric" ExpressionR="${var:15点日期}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:15点日期}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="15点日期" VariableExpression="floor((${_timestamp}+28800-15*3600)/86400)" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
@@ -18,7 +27,10 @@
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本${var:副本名称}" VariableExpression="${var:tb_副本${var:副本名称}}+1" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" VariableName="副本名称" ActionType="Variable" ExecutionDelayExpression="50">
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_副本本轮${var:副本名称}" VariableExpression="${var:tb_副本本轮${var:副本名称}}+1" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableName="副本名称" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -38,7 +50,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_副本万魔殿 边境之狱1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/${var:副本发送频道} 已完成副本：${var:副本统计发送}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/${var:副本发送频道} 已完成副本：${var:副本统计发送}&lt;se.1&gt;" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${var:副本统计发送}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                 </Condition>
@@ -68,12 +80,9 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="6默语查询" Id="27196263-c5af-44b4-a456-5f290d73bc8c" RegularExpression="^.{14} ChatLog 00:0038::((副本)(查询|统计)|(查询|统计)(副本))$|^.{14} Director 21:.{8}:40000003:00:00:00:00">
+          <Trigger Enabled="true" Name="6小队提示" Id="27196263-c5af-44b4-a456-5f290d73bc8c" RegularExpression="^.{14} Director 21:.{8}:40000003:00:00:00:00">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetString" VariableName="副本发送频道" VariableExpression="e" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" LogMessageText="副本统计发送" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10">
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/p 已完成动画城：${var:tb_副本本轮最终决战天幕魔导城}/${var:tb_副本最终决战天幕魔导城}&lt;se.1&gt;" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -107,7 +116,25 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="6默语查询" Id="412d6e37-6dd4-46a4-ab47-860660560c1b" RegularExpression="^.{14} ChatLog 00:0038::((副本)(查询|统计)|(查询|统计)(副本))$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="副本发送频道" VariableExpression="e" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" LogMessageText="副本统计发送" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="7小队重置" Id="9a1d2f80-bf99-49a4-be70-78e2b92f7632" RegularExpression="^.{14} ChatLog 00:0039::招募队员结束，队员已经集齐。$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^tb_副本本轮" VariableExpression="0" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
         </Triggers>
       </Folder>
@@ -146,7 +173,6 @@
                     <ConditionSingle Enabled="true" ExpressionL="${var:动画城自爆}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   </ConditionGroup>
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="2.1即刻" Id="21e551d9-d19a-4e7a-b1e5-98321e261294" RegularExpression="^动画城自爆$">
                 <Actions>
@@ -163,7 +189,6 @@
                     <ConditionSingle Enabled="true" ExpressionL="${var:动画城自爆}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   </ConditionGroup>
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="2.0自爆启动器" Id="3cff11c4-a57a-4133-9f1e-acb9455e60a9" RegularExpression="^.{14} Territory 01:.*:(?&lt;zone&gt;.*)$">
                 <Actions>
@@ -179,7 +204,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -276,7 +300,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="5459d186-dfc6-4f68-bdf9-bc93487bb8cc" Name="进本" Enabled="false">
+          <Folder Id="5459d186-dfc6-4f68-bdf9-bc93487bb8cc" Name="进本" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="1.0进本" Id="902030e6-68e6-4399-a30f-6e0749dbdbfd" RegularExpression="^.{14} ChatLog 00:0039::.*发送了参加申请。">
@@ -303,7 +327,7 @@
       </Folder>
       <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1044$" FFXIVJobFilterEnabled="True" FFXIVJobFilter="34359738368" Id="895b3b28-f351-4d18-b6a8-70a521e3e129" Name="单刷用换技能" Enabled="true">
         <Folders>
-          <Folder Id="48d84814-c371-49c8-bca6-c67b6ef66cf8" Name="老一" Enabled="false">
+          <Folder Id="48d84814-c371-49c8-bca6-c67b6ef66cf8" Name="老一" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="false" Sequential="True" Name="2.0老一计数器" Id="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" RegularExpression=" 1[56]:.{8}:(?&lt;name&gt;.+?):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="200">
@@ -345,7 +369,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="2.0老一启动器" Id="61247367-5da0-4697-89c5-7882732db3a8" RegularExpression=" AOEActionEffect 16:.{8}:(?&lt;name&gt;.+?):2CA[23]:[^:]*:.{8}:(魔导巨兵二型|木人):" PeriodRefire="Deny" RefirePeriodExpression="90000">
                 <Actions>
@@ -361,40 +384,40 @@
                   <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="口笛" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="昏乱" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="破防" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="醒梦" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="月之笛" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="月之笛" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="月下彼岸花" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="月下彼岸花" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="渔叉三段" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="渔叉三段" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="怒发冲冠" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="怒发冲冠" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="轰雷" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="轰雷" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="终有一死" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="终有一死" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="马特拉魔术" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="马特拉魔术" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="哥布林乱拳" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="哥布林乱拳" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="类星体" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="类星体" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="咕噜咕噜" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="16" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="咕噜咕噜" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="16" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="17" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
@@ -406,22 +429,19 @@
                   <Action OrderNumber="19" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="20" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="20" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="哥布林乱拳" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="21" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="哥布林乱拳" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="21" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="冰雪乱舞" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="22" ListVariableOp="Push" ListVariableName="动画城老一技能" ListVariableExpression="冰雪乱舞" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="22" ListVariableOp="PopFirst" ListVariableName="动画城老一技能" ListVariableTarget="动画城老一技能" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="23" ListVariableOp="PopFirst" ListVariableName="动画城老一技能" ListVariableTarget="动画城老一技能" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="23" LogMessageText="动画城老一" LogProcess="True" TriggerId="61247367-5da0-4697-89c5-7882732db3a8" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="24" LogMessageText="动画城老一" LogProcess="True" TriggerId="61247367-5da0-4697-89c5-7882732db3a8" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="25" TriggerOp="EnableTrigger" TriggerId="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" ActionType="Trigger" ExecutionDelayExpression="200">
+                  <Action OrderNumber="24" TriggerOp="EnableTrigger" TriggerId="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" ActionType="Trigger" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -429,24 +449,29 @@
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="false" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2.1技能" Id="772a891a-bf3b-4004-96db-f9e9af4f5574" RegularExpression="^动画城老一$">
+              <Trigger Enabled="true" Name="2.1技能（昏乱|醒梦|即刻咏唱）" Id="772a891a-bf3b-4004-96db-f9e9af4f5574" RegularExpression="^动画城老一$">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 ${var:动画城老一技能}" ActionType="NamedCallback" ExecutionDelayExpression="20">
-                    <Condition Enabled="false" Grouping="Or" />
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:动画城老一技能}" ExpressionTypeL="String" ExpressionR="^地火喷发|飞翎雨$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                    </Condition>
                   </Action>
                   <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/技能 ${var:动画城老一技能}" ActionType="NamedCallback">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:动画城老一技能}" ExpressionTypeL="String" ExpressionR="^昏乱|醒梦$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:动画城老一技能}" ExpressionTypeL="String" ExpressionR="^昏乱|醒梦|即刻咏唱$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" LogMessageText="动画城老一" LogProcess="True" TriggerId="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 ${var:动画城老一技能} &lt;t&gt;" ActionType="NamedCallback">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:动画城老一技能}" ExpressionTypeL="String" ExpressionR="^地火喷发|飞翎雨$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" LogMessageText="动画城老一" LogProcess="True" TriggerId="9b552c26-4aac-4e72-b79f-1c54c7bc7c77" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -458,7 +483,7 @@
                   <Action OrderNumber="1" ListVariableOp="PopFirst" ListVariableName="动画城老三技能" ListVariableTarget="动画城老三技能" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TriggerOp="CancelTrigger" TriggerId="a298bc5d-6117-489e-b4e5-17e13ca51fbe" ActionType="Trigger" ExecutionDelayExpression="1500">
+                  <Action OrderNumber="2" TriggerOp="CancelTrigger" TriggerId="a298bc5d-6117-489e-b4e5-17e13ca51fbe" ActionType="Trigger" ExecutionDelayExpression="1000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -487,7 +512,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="2.0老三启动器" Id="87b7449d-4854-4ebe-9a9c-001c38ae4645" RegularExpression=" AOEActionEffect 16:.{8}:(?&lt;name&gt;.+?):2CA[23]:[^:]*:.{8}:(盖乌斯·范·巴埃萨|木人):" PeriodRefire="Deny" RefirePeriodExpression="90000">
                 <Actions>
@@ -571,9 +595,8 @@
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="false" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2.1技能" Id="a298bc5d-6117-489e-b4e5-17e13ca51fbe" RegularExpression="^动画城老三$">
+              <Trigger Enabled="true" Name="2.1技能（昏乱|醒梦|即刻咏唱）" Id="a298bc5d-6117-489e-b4e5-17e13ca51fbe" RegularExpression="^动画城老三$">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 ${var:动画城老三技能}" ActionType="NamedCallback" ExecutionDelayExpression="20">
                     <Condition Enabled="true" Grouping="Or">
@@ -595,7 +618,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="超硬化" Id="35ade32b-5dbb-4713-9565-8a8a7bfa4114" RegularExpression=" StartsCasting 14:.{8}:[^:]*:6F4E:">
                 <Actions>
@@ -604,7 +626,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -650,7 +671,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="2.0老二启动器" Id="939be9b1-cdc7-4dc0-8370-fd8a4b793cdb" RegularExpression=" AOEActionEffect 16:.{8}:(?&lt;name&gt;.+?):2CA[23]:[^:]*:.{8}:(尼禄·托尔·斯卡艾瓦|木人):" PeriodRefire="Deny" RefirePeriodExpression="90000">
                 <Actions>
@@ -675,52 +695,70 @@
                   <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="马特拉魔术" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="类星体" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="咕噜咕噜" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="咕噜咕噜" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="超硬化" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="即刻咏唱" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="口笛" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="超硬化" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="昏乱" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="月之笛" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="即刻咏唱" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="沉稳咏唱" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="补水" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="类星体" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="16" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="16" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="冰雪乱舞" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="17" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="口笛" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="17" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="月之笛" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="18" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="飞翎雨" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="18" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="19" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="冰雪乱舞" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="19" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="20" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="终极针" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="20" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="21" ListVariableOp="PopFirst" ListVariableName="动画城老二技能" ListVariableTarget="动画城老二技能" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="21" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="穿甲散弹" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="22" LogMessageText="动画城老二" LogProcess="True" TriggerId="939be9b1-cdc7-4dc0-8370-fd8a4b793cdb" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
+                  <Action OrderNumber="22" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="飞翎雨" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="23" TriggerOp="EnableTrigger" TriggerId="e97a76f1-396c-4cf1-8bbe-95d41101920a" ActionType="Trigger" ExecutionDelayExpression="200">
+                  <Action OrderNumber="23" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="终极针" VariableOp="SetNumeric" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="24" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="冲刺" VariableOp="SetNumeric" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="25" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="即刻咏唱" VariableOp="SetNumeric" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="26" ListVariableOp="Push" ListVariableName="动画城老二技能" ListVariableExpression="斗争本能" VariableOp="SetNumeric" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="27" ListVariableOp="PopFirst" ListVariableName="动画城老二技能" ListVariableTarget="动画城老二技能" VariableOp="SetNumeric" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="28" LogMessageText="动画城老二" LogProcess="True" TriggerId="939be9b1-cdc7-4dc0-8370-fd8a4b793cdb" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="29" TriggerOp="EnableTrigger" TriggerId="e97a76f1-396c-4cf1-8bbe-95d41101920a" ActionType="Trigger" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -728,9 +766,8 @@
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="false" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2.1技能" Id="dc9f6ddc-009f-42ca-bd94-c6a49e6b659e" RegularExpression="^动画城老二$">
+              <Trigger Enabled="true" Name="2.1技能（沉稳咏唱|即刻咏唱|昏乱|冲刺）" Id="dc9f6ddc-009f-42ca-bd94-c6a49e6b659e" RegularExpression="^动画城老二$">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 ${var:动画城老二技能}" ActionType="NamedCallback" ExecutionDelayExpression="20">
                     <Condition Enabled="true" Grouping="Or">
@@ -739,7 +776,7 @@
                   </Action>
                   <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/技能 ${var:动画城老二技能}" ActionType="NamedCallback">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:动画城老二技能}" ExpressionTypeL="String" ExpressionR="^昏乱|醒梦|即刻咏唱$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:动画城老二技能}" ExpressionTypeL="String" ExpressionR="^沉稳咏唱|即刻咏唱|昏乱|冲刺$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 ${var:动画城老二技能} &lt;t&gt;" ActionType="NamedCallback">
@@ -752,7 +789,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -766,7 +802,7 @@
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 寒冰咆哮 关" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 自爆 关" ActionType="NamedCallback">
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 破防 关" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超硬化 开" ActionType="NamedCallback" ExecutionDelayExpression="500">
@@ -806,7 +842,7 @@
               <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 寒冰咆哮 开" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 自爆 开" ActionType="NamedCallback">
+              <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 破防 开" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="7" TriggerOp="EnableTrigger" TriggerId="8c62ca04-7595-488b-a404-d2c535120b2d" ActionType="Trigger">
@@ -840,7 +876,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -853,6 +888,12 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
           </Action>
+          <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 斗争本能 关" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 自爆 开" ActionType="NamedCallback" ExecutionDelayExpression="500">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
@@ -863,6 +904,12 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${name2}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+          </Action>
+          <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 自爆 关" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 斗争本能 开" ActionType="NamedCallback" ExecutionDelayExpression="500">
+            <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
