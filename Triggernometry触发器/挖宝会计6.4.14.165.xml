@@ -1111,12 +1111,12 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_获得惊奇补剂}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="39" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}迷艾×${var:tb_获得迷你艾多纽斯}　" ActionType="Variable">
+              <Action OrderNumber="39" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}迷你艾多×${var:tb_获得迷你艾多纽斯}　" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_获得迷你艾多纽斯}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="40" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}迷友×${var:tb_获得迷你好友}　" ActionType="Variable">
+              <Action OrderNumber="40" VariableOp="SetString" VariableName="统计发送" VariableExpression="${var:统计发送}迷你好友×${var:tb_获得迷你好友}　" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_获得迷你好友}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
@@ -1380,7 +1380,7 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="true">
+      <Folder Id="7eede213-a635-4fcb-99ef-6a5c6c8e71f5" Name="青魔挂件用" Enabled="false">
         <Folders>
           <Folder Id="1ea66a68-05dd-48cd-b483-f70ec86a27bf" Name="下底退出(不稳定，需要鼠标静止或最小化游戏并保持帧数）" Enabled="true">
             <Folders />
@@ -1470,7 +1470,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
+          <Trigger Enabled="false" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="跟随传送" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1478,7 +1478,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
+          <Trigger Enabled="false" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="出现投掷" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1543,6 +1543,343 @@
               </Action>
               <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="ff775a5c-1759-420e-93ab-d742bcc107e5" Name="表格记录(没用，半成品，最好别勾，谁写谁傻逼)" Enabled="true">
+        <Folders>
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123)$" Id="aa7f996a-811b-43d0-bd33-c8f72263b84f" Name="转盘" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="1.启动" Id="ec9b5c02-c437-4d9e-af61-b5252ae18b80" RegularExpression="^.{14} ChatLog 00:0839::“(?&lt;baowuku&gt;运河宝物库神殿|梦羽宝殿|厄尔庇斯育体宝殿)”任务开始。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_转盘层数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableName="tb_转盘层数" VariableExpression="1" TableVariableName="tb_Data" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="${baowuku}" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="9.最终记录2" Id="b133eb94-6e32-41a0-af38-6acc2b4a6e20" RegularExpression=" Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|视财如命 代恩·奥瑟|法厄同|纳西索斯|希波墨涅斯):">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_转盘层数" VariableExpression="${var:tb_转盘层数}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="下底" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" VariableName="tb_转盘层数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TableVariableOp="Append" TableVariableName="tb_Data" TableVariableTarget="转盘永久记录" TableTargetPersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" TableVariableName="tb_Data" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="0.初始化" Id="a1b44a15-fea5-446e-985a-924293da21ee" RegularExpression="^转盘初始化$">
+                <Actions>
+                  <Action OrderNumber="1" TableVariableOp="Set" TableVariableName="转盘永久记录" TableVariableExpression="转盘名字" TableVariableX="1" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="转盘永久记录" TableVariableExpression="第一召唤" TableVariableX="2" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="转盘永久记录" TableVariableExpression="第二召唤" TableVariableX="3" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="转盘永久记录" TableVariableExpression="第三召唤" TableVariableX="4" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="转盘永久记录" TableVariableExpression="第四召唤" TableVariableX="5" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" TableVariableOp="Set" TableVariableName="转盘永久记录" TableVariableExpression="最终召唤" TableVariableX="6" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${eptvar:转盘永久记录}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="2.层数记录" Id="fd6ccc0f-1bb9-4f40-8c6d-014ffae01e27" RegularExpression="^.{14} ChatLog 00:0839::.*?发动了(?&lt;yishi&gt;.+?)，[^:]*出现了！|^.{14} ChatLog 00:0839::(?&lt;yishi&gt;召唤失败)，[^:]*出现了！">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_转盘层数" VariableExpression="${var:tb_转盘层数}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="${var:tb_霹雷}下级" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable" ExecutionDelayExpression="50">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="下级召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="${var:tb_霹雷}中级" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="中级召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="${var:tb_霹雷}上级" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="上级召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="${var:tb_霹雷}特殊" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="特殊召唤" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="tb_当前变动2" VariableExpression="${var:tb_当前变动2}+1" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="召唤式变动" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="${var:tb_霹雷}变动${var:tb_当前变动2}" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="召唤式变动" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" VariableName="tb_当前变动2" VariableExpression="${var:tb_当前变动}+1" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="召唤式变动" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="tb_转盘层数" VariableExpression="${var:tb_转盘层数}-1" ActionType="Variable" ExecutionDelayExpression="50">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="召唤失败" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" VariableName="tb_霹雷" VariableExpression="P" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tb_霹雷}" ExpressionTypeL="String" ExpressionR="P" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="11" VariableOp="SetString" VariableName="tb_霹雷" VariableExpression="P" ActionType="Variable" ExecutionDelayExpression="50">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${yishi}" ExpressionTypeL="String" ExpressionR="召唤失败" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="9.最终记录" Id="db70c9a1-2a9c-46c1-82d1-212dc2751803" RegularExpression="“(.+?)”任务结束了。">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_转盘层数" VariableExpression="${var:tb_转盘层数}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="失败" TableVariableX="${var:tb_转盘层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" VariableName="tb_转盘层数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TableVariableOp="Append" TableVariableName="tb_Data" TableVariableTarget="转盘永久记录" TableTargetPersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" TableVariableName="tb_Data" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(558|712|879|960|725)$" Id="aac34eae-5464-4dd5-9cba-c88b443972cd" Name="运河" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="6.记录层数" Id="c8ca8821-9f09-4e86-8249-c33d8701969b" RegularExpression="^.{14} ChatLog 00:08B9::打开了通往.+?的大门！$" PeriodRefire="Deny" RefirePeriodExpression="2000">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="开门" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable" ExecutionDelayExpression="50">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" VariableName="tb_获得了" ActionType="Variable" ExecutionDelayExpression="50">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="1.启动" Id="f33d6452-4694-4353-9d32-f11a1545feec" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableName="tb_转盘层数" VariableExpression="1" TableVariableName="tb_Data" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="$1" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="9.最终记录2" Id="6a98d9d5-1b10-4593-8b1a-a9e2805d6afe" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="下底" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="tb_Data" TableVariableExpression="${var:tb_运河层数}-1" TableVariableX="9" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" VariableName="tb_运河层数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" VariableName="tb_获得了" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" TableVariableOp="Append" TableVariableName="tb_Data" TableVariableTarget="运河永久记录" TableTargetPersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" TableVariableName="tb_Data" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="2.记录小怪" Id="f9c80011-d13d-4904-82fa-750d81bb5860" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="4.记录强欲" Id="e48072a1-1b92-473a-96ad-e609e3ae9cbe" RegularExpression="挑战第(?&lt;cishu&gt;.+?)次的陷阱解除！">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="false" Name="2.记录物品" Id="a7b4d933-b9ea-4fbc-a1a0-051e587c274a" RegularExpression=" ChatLog 00:0039::获得了新的战利品(?&lt;name&gt;)。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="tb_获得了" VariableExpression="${name}" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="0.初始化" Id="398edbd7-ea59-4b7b-a9bc-1826ed764eb1" RegularExpression="^运河初始化$">
+                <Actions>
+                  <Action OrderNumber="1" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="运河名字" TableVariableX="1" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第一层" TableVariableX="2" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第二层" TableVariableX="3" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第三层" TableVariableX="4" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第四层" TableVariableX="5" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第五层" TableVariableX="6" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第六层" TableVariableX="7" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="第七层" TableVariableX="8" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" TableVariableOp="Set" TableVariableName="运河永久记录" TableVariableExpression="最终位" TableVariableX="9" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${eptvar:运河永久记录}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="5.记录门" Id="c5d84b75-8d16-419a-8835-e82ce91eeb30" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="9.最终记录" Id="5a2611d5-c92f-48c6-b4c8-e78678a7cba1" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务结束了。$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="失败" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="tb_Data" TableVariableExpression="${var:tb_运河层数}-1" TableVariableX="9" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" VariableName="tb_运河层数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" VariableName="tb_获得了" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" TableVariableOp="Append" TableVariableName="tb_Data" TableVariableTarget="运河永久记录" TableTargetPersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" TableVariableName="tb_Data" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="9c63343b-b920-44bc-863e-49b31f9d6ad3" Name="收益" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="0.初始化" Id="7d81f2b2-0b8f-47c1-81fd-039cc8d8f9f7" RegularExpression="^收益初始化$">
+                <Actions>
+                  <Action OrderNumber="1" TableVariableOp="Set" TableVariableName="收益永久记录" TableVariableExpression="日期" TableVariableX="1" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="收益永久记录" TableVariableExpression="金币" TableVariableX="2" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="收益永久记录" TableVariableExpression="图数" TableVariableX="3" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="收益永久记录" TableVariableExpression="洞数" TableVariableX="4" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="收益永久记录" TableVariableExpression="底数" TableVariableX="5" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" TableVariableOp="Set" TableVariableName="收益永久记录" TableVariableExpression="获得物品" TableVariableX="6" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${eptvar:收益永久记录}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Name="0.初始化" Id="63a99a84-f5be-4bfc-b72c-dd4f191e82f6" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="8640000">
+            <Actions>
+              <Action OrderNumber="1" LogMessageText="收益初始化" LogProcess="True" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${eptvar:收益永久记录}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" LogMessageText="运河初始化" LogProcess="True" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${eptvar:运河永久记录}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" LogMessageText="转盘初始化" LogProcess="True" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${eptvar:转盘永久记录}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
