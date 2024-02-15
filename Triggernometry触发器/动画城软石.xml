@@ -10,16 +10,22 @@
               <Action OrderNumber="1" VariableOp="SetString" VariableName="副本名称" VariableExpression="${zone}" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TriggerId="2d5f7fbc-ca4e-4ea8-94ff-4765eb151ab8" TriggerForce="regexp" ActionType="Trigger">
+              <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="^tb_副本(最终决战天幕魔导城|123)" VariableExpression="0" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="floor((${_timestamp}+28800-15*3600)/86400)" ExpressionTypeL="Numeric" ExpressionR="${pvar:15点日期}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                   <ConditionSingle Enabled="true" ExpressionL="${pvar:15点日期}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="floor((${_timestamp}+28800-15*3600)/86400)" ExpressionTypeL="Numeric" ExpressionR="${pvar:15点日期}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="15点日期" VariableExpression="floor((${_timestamp}+28800-15*3600)/86400)" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 已重置" ActionType="NamedCallback">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${pvar:15点日期}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="floor((${_timestamp}+28800-15*3600)/86400)" ExpressionTypeL="Numeric" ExpressionR="${pvar:15点日期}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="15点日期" VariableExpression="floor((${_timestamp}+28800-15*3600)/86400)" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tb_副本${var:副本名称}" VariableExpression="${pvar:tb_副本${var:副本名称}}+1" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_副本${var:副本名称}" VariableExpression="${pvar:tb_副本${var:副本名称}}+1" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -74,17 +80,6 @@
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-          </Trigger>
-          <Trigger Enabled="true" Name="1重置" Id="2d5f7fbc-ca4e-4ea8-94ff-4765eb151ab8" RegularExpression="^挖宝重置$" PeriodRefire="Deny" RefirePeriodExpression="2000">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^tb_副本" VariableExpression="0" VariablePersist="True" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 已重置" ActionType="NamedCallback">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
           <Trigger Enabled="true" Name="4手动设置动画城" Id="a44569df-a11e-46ad-85c6-d11ab29aeb63" RegularExpression="^.{14} ChatLog 00:0038::动画城(?&lt;suanshu&gt;\+|-|\*)(?&lt;map_manual&gt;\d{0,3})$">
             <Actions>
@@ -664,7 +659,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="de2a5e6e-eb0e-44a1-980d-2ecff7992c83" Name="老二" Enabled="true">
+          <Folder Id="de2a5e6e-eb0e-44a1-980d-2ecff7992c83" Name="老二" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="false" Sequential="True" Name="2.0老二计数器" Id="e97a76f1-396c-4cf1-8bbe-95d41101920a" RegularExpression=" 1[56]:.{8}:(?&lt;name&gt;.+?):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="200">
@@ -828,7 +823,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="false" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="::(?&lt;name&gt;.+?)破坏了超硬陶瓷合金防爆墙。">
+          <Trigger Enabled="true" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="::(?&lt;name&gt;.+?)破坏了超硬陶瓷合金防爆墙。">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超振动 关" ActionType="NamedCallback" ExecutionDelayExpression="3000">
                 <Condition Enabled="false" Grouping="Or" />
@@ -859,7 +854,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|魔123导终端可以操作了。">
+          <Trigger Enabled="false" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|魔123导终端可以操作了。">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超硬化 关" ActionType="NamedCallback" ExecutionDelayExpression="7150">
                 <Condition Enabled="false" Grouping="Or" />
