@@ -7,18 +7,7 @@
         <Triggers>
           <Trigger Enabled="true" Name="9查询导随数据" Id="79ef2b6e-dc68-4d82-89ab-13c255adebfc" RegularExpression="^.{14} ChatLog 00:0038::查询导随数据$">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="当前数据${var:battlenum}" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="导随成功+1(用不到)" Id="4cc138f0-9208-4736-bace-724b9cd9ffe1" RegularExpression="导随成功+1">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="+1成功，当前数据${var:battlenum}" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="当前数据${pvar:battlenum}" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -26,7 +15,7 @@
           </Trigger>
           <Trigger Enabled="true" Name="导随上把备注" Id="a4e47531-6af2-483c-9168-81a173086632" RegularExpression="^.{14} ChatLog 00:0038::导随上把备注\s*(?&lt;detail&gt;.*)$">
             <Actions>
-              <Action OrderNumber="1" NamedCallbackName="editCsv" NamedCallbackParam="${var:file},last,8,${detail}" ActionType="NamedCallback">
+              <Action OrderNumber="1" NamedCallbackName="editCsv" NamedCallbackParam="${pvar:file},last,8,${detail}" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -34,10 +23,10 @@
           </Trigger>
           <Trigger Enabled="true" Name="8设置导随数据(初次使用设置)" Id="c7257ff0-a3e8-4dba-8968-7601f1e7e7b5" RegularExpression="^.{14} ChatLog 00:0038::设置导随数据\s*(?&lt;battlenum&gt;\d*)$">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${battlenum}" ActionType="Variable">
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${battlenum}" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="设置成功，当前数据${var:battlenum}" ActionType="UseTTS">
+              <Action OrderNumber="2" UseTTSTextExpression="设置成功，当前数据${pvar:battlenum}" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -45,40 +34,52 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="1读取记录" Id="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" RegularExpression="">
             <Actions>
-              <Action OrderNumber="1" ListVariableOp="PopLast" ListVariableName="logs" ListVariableTarget="lastLine" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
+              <Action OrderNumber="1" ListVariableOp="PopLast" ListVariableName="logs" ListVariableTarget="lastLine" ListSourcePersist="True" ListTargetPersist="True" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" ListVariableOp="PopLast" ListVariableName="logs2" ListVariableTarget="lastLine2" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
+              <Action OrderNumber="2" ListVariableOp="PopLast" ListVariableName="logs2" ListVariableTarget="lastLine2" ListSourcePersist="True" ListTargetPersist="True" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${var:lastLine}}):${var:lastLine}}" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${pvar:lastLine}}):${pvar:lastLine}}" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${var:lastLine2}}):${var:lastLine2}}" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${pvar:lastLine2}}):${pvar:lastLine2}}" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="5" UseTTSTextExpression="导随数据为空，请手工设置" ActionType="UseTTS" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${evar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${epvar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" UseTTSTextExpression="导随数据读取成功，当前数据${var:battlenum}" ActionType="UseTTS" Asynchronous="False">
+              <Action OrderNumber="6" UseTTSTextExpression="导随数据读取成功，当前数据${pvar:battlenum}" ActionType="UseTTS" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${evar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                  <ConditionSingle Enabled="true" ExpressionL="${var:battlenum}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${epvar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${pvar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="0" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="0" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${var:battlenum}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${pvar:battlenum}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="0" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="0" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${var:battlenum2}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${pvar:battlenum2}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="9" ListVariableOp="PopLast" ListVariableName="logs" ListVariableTarget="lastLine" UseTTSTextExpression="导随数据读取成功，当前数据${var:battlenum}" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${var:lastLine}}):${var:lastLine}}" TriggerId="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Asynchronous="False">
+              <Action OrderNumber="9" ListVariableName="logs" ListSourcePersist="True" ListTargetPersist="True" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableName="logs2" ListSourcePersist="True" ListTargetPersist="True" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListSourcePersist="True" ListTargetPersist="True" VariableName="lastLine" VariablePersist="True" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListSourcePersist="True" ListTargetPersist="True" VariableName="lastLine2" VariablePersist="True" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ListVariableOp="PopLast" ListVariableName="logs" ListVariableTarget="lastLine" UseTTSTextExpression="导随数据读取成功，当前数据${var:battlenum}" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${func:substring(0,${func:indexof(&quot;,&quot;):${var:lastLine}}):${var:lastLine}}" TriggerId="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Asynchronous="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${evar:battlenum}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:battlenum}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -97,39 +98,25 @@
                   <ConditionSingle Enabled="true" ExpressionL="${eptvar:job_list}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" VariableOp="SetString" VariableName="file" VariableExpression="${_env[_DEFAULTCSVPATH_]}\导随记录.csv" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="file" VariableExpression="${_env[_DEFAULTCSVPATH_]}\导随记录.csv" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" VariableOp="SetString" VariableName="file2" VariableExpression="${_env[_DEFAULTCSVPATH_]}\其他记录.csv" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="file2" VariableExpression="${_env[_DEFAULTCSVPATH_]}\其他记录.csv" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" DiskFileOp="ReadIntoListVariable" ListVariableName="logs" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="5" DiskFileOp="ReadIntoListVariable" ListVariableName="logs" ListSourcePersist="True" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" DiskFileOp="ReadIntoListVariable" ListVariableName="logs2" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="6" DiskFileOp="ReadIntoListVariable" ListVariableName="logs2" ListSourcePersist="True" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" DiskFileOp="ReadIntoListVariable" DiskFileOpName="${var:file}" DiskFileOpVar="logs" ActionType="DiskFile" Asynchronous="False">
+              <Action OrderNumber="7" DiskFileOp="ReadIntoListVariable" DiskFileOpName="${pvar:file}" DiskFileOpVar="logs" DiskPersist="True" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" DiskFileOp="ReadIntoListVariable" DiskFileOpName="${var:file2}" DiskFileOpVar="logs2" ActionType="DiskFile" Asynchronous="False">
+              <Action OrderNumber="8" DiskFileOp="ReadIntoListVariable" DiskFileOpName="${pvar:file2}" DiskFileOpVar="logs2" DiskPersist="True" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="9" TriggerId="9e34d5ad-1d54-4e43-9cd8-fa12e28c3c68" TriggerForce="regexp" ActionType="Trigger">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="导随失败-1(用不到)" Id="4dccb4b2-8417-4924-bed5-56380fe98877" RegularExpression="导随失败-1\s*(?&lt;detail&gt;.*)">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}-1" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="减一成功，当前数据${var:battlenum}" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="3" NamedCallbackName="editCsv" NamedCallbackParam="${var:file},last,1,-1,6,${detail}" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -144,13 +131,13 @@
           <Action OrderNumber="1" UseTTSTextExpression="导随排到了" Enabled="False" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="1" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${rou}" ExpressionTypeL="Numeric" ExpressionR="9" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${ins}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="isMentor2" VariableExpression="1" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="isMentor" VariableExpression="2" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Not">
               <ConditionGroup Enabled="true" Grouping="And">
                 <ConditionSingle Enabled="true" ExpressionL="${ins}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
@@ -158,16 +145,13 @@
               </ConditionGroup>
             </Condition>
           </Action>
-          <Action OrderNumber="4" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" ActionType="Variable">
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" Enabled="False" ActionType="Variable">
+          <Action OrderNumber="5" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="中途参与" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="中途参与" ActionType="Variable">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="7" VariableOp="SetString" VariableName="battlename" VariableExpression="未知" ActionType="Variable">
+          <Action OrderNumber="6" VariableOp="SetString" VariableName="battlename" VariableExpression="未知" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -186,181 +170,174 @@
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="3任务开始" Id="3f58fbbe-1e46-4fb6-90ea-3c2e814eb046" RegularExpression="^.{14} ChatLog 00:0839::“(?&lt;zone&gt;.*)”任务开始。$">
         <Actions>
-          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" Enabled="False" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="从头参与" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="从头参与" ActionType="Variable">
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="battlename" VariableExpression="${zone}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" VariableOp="SetString" VariableName="battlename" VariableExpression="${zone}" ActionType="Variable">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="6" UseTTSTextExpression="${zone}开始" ActionType="UseTTS">
+          <Action OrderNumber="5" UseTTSTextExpression="${zone}开始" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
         </Condition>
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="4任务结束" Id="613d349d-5f56-43fc-a6da-1c2c7544ebab" RegularExpression="^.{14} Director 21:.{8}:(40000003|40000002)|^.{14} ChatLog 00:0839::“(?&lt;zone&gt;.*)”任务结束了。$|^.{14} ChatLog 00:0839::结束行会令并返回。$">
         <Actions>
-          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="end" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="end" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" VariableOp="SetString" VariableName="battletime" VariableExpression="${numeric:round((${var:end}-${var:start})/60,1)}分钟" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="battletime" VariableExpression="${numeric:floor((${pvar:end}-${pvar:start})/60)}分${numeric:(${pvar:end}-${pvar:start})%60}秒" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${pvar:battlenum}+1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${var:battlenum2}+1" ActionType="Variable">
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${pvar:battlenum2}+1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file},${var:battlenum},${var:battlename},${var:battletime},${var:job},${var:isHalfJoin},_DATE(${numeric:${var:start}+28800})(&quot;yyyy/MM/dd HH:mm:ss&quot;),_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
+          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${pvar:file},${pvar:battlenum},${pvar:battlename},${pvar:battletime},${pvar:job},${pvar:isHalfJoin},_DATE(${numeric:${pvar:start}+28800})(&quot;yyyy/MM/dd HH:mm:ss&quot;),_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="6" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file2},${var:battlenum2},${var:battlename},${var:battletime},${var:job},${var:isHalfJoin},_DATE(${numeric:${var:start}+28800})(&quot;yyyy/MM/dd HH:mm:ss&quot;),_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
+          <Action OrderNumber="6" NamedCallbackName="saveCsv" NamedCallbackParam="${pvar:file2},${pvar:battlenum2},${pvar:battlename},${pvar:battletime},${pvar:job},${pvar:isHalfJoin},_DATE(${numeric:${pvar:start}+28800})(&quot;yyyy/MM/dd HH:mm:ss&quot;),_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="7" UseTTSTextExpression="导随+1,用时${var:battletime}" ActionType="UseTTS" ExecutionDelayExpression="100">
+          <Action OrderNumber="7" UseTTSTextExpression="导随+1,用时${pvar:battletime}" ActionType="UseTTS" ExecutionDelayExpression="10">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="8" UseTTSTextExpression="用时${var:battletime}" ActionType="UseTTS" ExecutionDelayExpression="100">
+          <Action OrderNumber="8" UseTTSTextExpression="用时${pvar:battletime}" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="9" VariableName="isMentor" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="9" VariableName="isMentor" VariableExpression="0" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="2000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" VariableName="isMentor2" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="10" VariableName="battlename" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" VariableName="battlename" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="11" VariableName="job" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" VariableName="job" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="12" VariableName="start" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="13" VariableName="battletime" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="14" VariableName="battletime" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="14" VariableName="end" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="15" VariableName="end" VariableExpression="${_systemtime}" ActionType="Variable">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="16" VariableName="isHalfJoin" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="15" VariableName="isHalfJoin" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
         </Condition>
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="3区域变更" Id="ed71289b-acac-4f72-847b-4ffa77e0cd3e" RegularExpression="^.{14} Territory 01:.*:(?&lt;zone&gt;.*)$">
         <Actions>
-          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" ActionType="Variable" Description="正常看动画的情况下，血亏堡动画城会有多次changed zone日志&#xD;&#xA;以第一次时间为准">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="start" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable" Description="正常看动画的情况下，血亏堡动画城会有多次changed zone日志&#xD;&#xA;以第一次时间为准">
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:battlename}" ExpressionTypeL="String" ExpressionR="${zone}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:battlename}" ExpressionTypeL="String" ExpressionR="${zone}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="job" VariableExpression="${ptvarrl:job_list[${_ffxivparty[1].jobid}][7]}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" VariableOp="SetString" VariableName="job" VariableExpression="${_ffxivparty[1].job}" Enabled="False" ActionType="Variable">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="4" VariableOp="SetString" VariableName="battlename" VariableExpression="${zone}" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="battlename" VariableExpression="${zone}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
         </Condition>
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="9取消任务" Id="76419e95-948f-4ff1-8e0a-d991e0626697" RegularExpression="^.{14} ChatLog 00:003C::(?&lt;quxiao&gt;参加申请已取消。|参加申请已取消，超过了确认限制时间。)$">
         <Actions>
-          <Action OrderNumber="1" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="取消任务" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="取消任务" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${quxiao}" ExpressionTypeL="String" ExpressionR="参加申请已取消。" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="超时任务" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="isHalfJoin" VariableExpression="超时任务" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${quxiao}" ExpressionTypeL="String" ExpressionR="参加申请已取消，超过了确认限制时间。" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}+1" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${pvar:battlenum}+1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${var:battlenum2}+1" ActionType="Variable">
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${pvar:battlenum2}+1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file},${var:battlenum},${var:battlename},无,${var:job},${var:isHalfJoin},_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
+          <Action OrderNumber="5" NamedCallbackName="saveCsv" NamedCallbackParam="${pvar:file},${pvar:battlenum},${pvar:battlename},无,${pvar:job},${pvar:isHalfJoin},_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="6" NamedCallbackName="saveCsv" NamedCallbackParam="${var:file2},${var:battlenum2},${var:battlename},无,${var:job},${var:isHalfJoin},_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
+          <Action OrderNumber="6" NamedCallbackName="saveCsv" NamedCallbackParam="${pvar:file2},${pvar:battlenum2},${pvar:battlename},无,${pvar:job},${pvar:isHalfJoin},_NOW(&quot;yyyy/MM/dd HH:mm:ss&quot;)" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${var:battlenum}-1" ActionType="Variable">
+          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="battlenum" VariableExpression="${pvar:battlenum}-1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${var:battlenum2}-1" ActionType="Variable">
+          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="battlenum2" VariableExpression="${pvar:battlenum2}-1" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="9" VariableName="battlename" VariableExpression="${_systemtime}" ActionType="Variable" ExecutionDelayExpression="2000">
+          <Action OrderNumber="9" VariableName="battlename" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="2000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" VariableName="job" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="10" VariableName="isMentor" VariableExpression="0" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" VariableName="isHalfJoin" VariableExpression="${_systemtime}" ActionType="Variable">
+          <Action OrderNumber="11" VariableName="isMentor2" VariableExpression="0" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" VariableName="isMentor" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="12" VariableName="battlename" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" VariableName="isMentor2" VariableExpression="0" ActionType="Variable">
+          <Action OrderNumber="13" VariableName="job" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" VariableName="start" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" VariableName="isHalfJoin" VariableExpression="${_systemtime}" VariablePersist="True" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${pvar:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
         </Condition>
       </Trigger>
       <Trigger Enabled="false" Name="aa抹茶功能测试，解限排18级溶洞本" Id="81aacd63-1f40-4c68-8a05-3978f408455b" RegularExpression="^.{14} ChatLog 00:0:Matcha#.*#chs-MatchAlert#{&quot;roulette&quot;:0,&quot;instance&quot;:4}$">
