@@ -36,7 +36,10 @@
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本本轮${var:副本名称}" VariableExpression="${pvar:tb_副本本轮${var:副本名称}}+1" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" VariableName="副本名称" ActionType="Variable" ExecutionDelayExpression="50">
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="神典石剩余次数" VariableExpression="${pvar:神典石剩余次数}-1" VariablePersist="True" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableName="副本名称" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -73,7 +76,7 @@
           </Trigger>
           <Trigger Enabled="true" Name="6小队提示" Id="27196263-c5af-44b4-a456-5f290d73bc8c" RegularExpression="^.{14} Director 21:.{8}:40000003:00:00:00:00">
             <Actions>
-              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/p 已完成动画城：${pvar:tb_副本本轮最终决战天幕魔导城}/${pvar:tb_副本最终决战天幕魔导城}&lt;se.1&gt;" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="50">
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/p 已完成动画城：${pvar:tb_副本本轮最终决战天幕魔导城}/${pvar:tb_副本最终决战天幕魔导城}/${pvar:神典石剩余次数}&lt;se.1&gt;" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -81,19 +84,19 @@
               <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Name="4手动设置动画城" Id="a44569df-a11e-46ad-85c6-d11ab29aeb63" RegularExpression="^.{14} ChatLog 00:0038::动画城(?&lt;suanshu&gt;\+|-|\*)(?&lt;map_manual&gt;\d{0,3})$">
+          <Trigger Enabled="true" Name="4手动设置神典石" Id="a44569df-a11e-46ad-85c6-d11ab29aeb63" RegularExpression="^.{14} ChatLog 00:0038::神典石(?&lt;suanshu&gt;\+|-|\*)(?&lt;map_manual&gt;\d{0,3})$">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本最终决战天幕魔导城" VariableExpression="${pvar:tb_副本最终决战天幕魔导城}${suanshu}${map_manual}" VariablePersist="True" ActionType="Variable">
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="神典石剩余次数" VariableExpression="${pvar:神典石剩余次数}${suanshu}${map_manual}" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${suanshu}" ExpressionTypeL="String" ExpressionR="^\+|-$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_副本最终决战天幕魔导城" VariableExpression="${map_manual}" VariablePersist="True" ActionType="Variable">
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="神典石剩余次数" VariableExpression="${map_manual}" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${suanshu}" ExpressionTypeL="String" ExpressionR="^\*$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 当前动画城: ${pvar:tb_副本最终决战天幕魔导城}" ActionType="NamedCallback" ExecutionDelayExpression="100">
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 剩余动画城: ${pvar:神典石剩余次数}" ActionType="NamedCallback" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -117,6 +120,25 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="4手动设置动画城" Id="6a19f7e6-7568-45bc-aa76-f6196700ab59" RegularExpression="^.{14} ChatLog 00:0038::动画城(?&lt;suanshu&gt;\+|-|\*)(?&lt;map_manual&gt;\d{0,3})$">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本最终决战天幕魔导城" VariableExpression="${pvar:tb_副本最终决战天幕魔导城}${suanshu}${map_manual}" VariablePersist="True" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${suanshu}" ExpressionTypeL="String" ExpressionR="^\+|-$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="tb_副本最终决战天幕魔导城" VariableExpression="${map_manual}" VariablePersist="True" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${suanshu}" ExpressionTypeL="String" ExpressionR="^\*$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 当前动画城: ${pvar:tb_副本最终决战天幕魔导城}" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -358,7 +380,7 @@
       </Folder>
       <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1044$" FFXIVJobFilterEnabled="True" FFXIVJobFilter="34359738368" Id="895b3b28-f351-4d18-b6a8-70a521e3e129" Name="单刷用换技能" Enabled="true">
         <Folders>
-          <Folder Id="48d84814-c371-49c8-bca6-c67b6ef66cf8" Name="老一" Enabled="false">
+          <Folder Id="48d84814-c371-49c8-bca6-c67b6ef66cf8" Name="老一" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="false" Sequential="True" Name="2.0老一计数器" Id="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" RegularExpression=" 1[56]:.{8}:(?&lt;name&gt;.+?):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="200">
