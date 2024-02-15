@@ -115,7 +115,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="7小队重置" Id="9a1d2f80-bf99-49a4-be70-78e2b92f7632" RegularExpression="^.{14} ChatLog 00:0039::招募队员结束，队员已经集齐。$|^.{14} ChatLog 00:..39::加入了小队。">
+          <Trigger Enabled="true" Sequential="True" Name="7小队重置" Id="9a1d2f80-bf99-49a4-be70-78e2b92f7632" RegularExpression="^.{14} ChatLog 00:0039::招募队员结束，队员已经集齐。$|^.{14} ChatLog 00:..39::.*加入了小队。">
             <Actions>
               <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^tb_副本本轮" VariableExpression="0" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -354,10 +354,7 @@
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${var:isMentor}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                  <ConditionSingle Enabled="true" ExpressionL="${var:isMentor2}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="Or" />
               </Trigger>
             </Triggers>
           </Folder>
@@ -529,29 +526,29 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" ListVariableOp="PopFirst" ListVariableName="动画城老三技能" ListVariableTarget="动画城老三技能" VariableOp="SetNumeric" ActionType="ListVariable">
+                  <Action OrderNumber="2" TriggerOp="DisableTrigger" TriggerId="9b552c26-4aac-4e72-b79f-1c54c7bc7c77" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" FolderOp="DisableFolder" FolderId="4bdba0f1-fa31-4e42-b3ac-aa8113db1e7d" TriggerOp="DisableTrigger" TriggerId="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" ActionType="Folder">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableName="动画城老三技能" TriggerOp="CancelTrigger" TriggerId="a298bc5d-6117-489e-b4e5-17e13ca51fbe" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" ListVariableName="动画城老三技能" TriggerOp="CancelTrigger" TriggerId="a298bc5d-6117-489e-b4e5-17e13ca51fbe" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" ListVariableOp="PopFirst" ListVariableName="动画城老三技能" ListVariableTarget="动画城老三技能" VariableOp="SetNumeric" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="9b552c26-4aac-4e72-b79f-1c54c7bc7c77" ActionType="Trigger">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="4" FolderOp="DisableFolder" FolderId="4bdba0f1-fa31-4e42-b3ac-aa8113db1e7d" TriggerOp="DisableTrigger" TriggerId="b0a8f299-a9b4-4467-98f3-afe68d7c27e1" ActionType="Folder">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="5" VariableName="动画城老三技能" TriggerOp="CancelTrigger" TriggerId="a298bc5d-6117-489e-b4e5-17e13ca51fbe" ActionType="Variable">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="6" ListVariableName="动画城老三技能" TriggerOp="CancelTrigger" TriggerId="a298bc5d-6117-489e-b4e5-17e13ca51fbe" ActionType="ListVariable">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:动画城老三技能.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
                 </Actions>
@@ -831,7 +828,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="::(?&lt;name&gt;.+?)破坏了超硬陶瓷合金防爆墙。">
+          <Trigger Enabled="false" Name="技能换2" Id="8c62ca04-7595-488b-a404-d2c535120b2d" RegularExpression="::(?&lt;name&gt;.+?)破坏了超硬陶瓷合金防爆墙。">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超振动 关" ActionType="NamedCallback" ExecutionDelayExpression="3000">
                 <Condition Enabled="false" Grouping="Or" />
@@ -862,7 +859,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="false" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|魔123导终端可以操作了。">
+          <Trigger Enabled="true" Name="技能换1" Id="6dc199b2-b8e8-4c42-ae67-9fdf70c84e8c" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|魔123导终端可以操作了。">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法书 设置 超硬化 关" ActionType="NamedCallback" ExecutionDelayExpression="7150">
                 <Condition Enabled="false" Grouping="Or" />
