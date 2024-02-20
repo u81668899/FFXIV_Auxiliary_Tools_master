@@ -351,6 +351,14 @@
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要以11880的价格购买6级暗物质×99吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
           }
         ]
       },
@@ -490,6 +498,14 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要退出任务吗？",
+            "ZoneRestricted": true,
+            "ZoneText": "天幕魔导城",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": false,
+            "Text": "即将回到“最终决战天幕魔导城”的开始地点。  ※开战后进入封锁状态的区域， 　只有在战斗结束后才能解除封锁。",
             "ZoneRestricted": true,
             "ZoneText": "天幕魔导城",
             "IsYes": true

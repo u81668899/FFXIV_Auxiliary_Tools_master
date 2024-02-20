@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClickLib</name>
+    </assembly>
+    <members>
+        <member name="T:ClickLib.Attributes.ClickNameAttribute">
+            <summary>
+            The callable name of a click.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Attributes.ClickNameAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Attributes.ClickNameAttribute"/> class.
+            </summary>
+            <param name="name">Name of the click.</param>
+        </member>
+        <member name="P:ClickLib.Attributes.ClickNameAttribute.Name">
+            <summary>
+            Gets the name of the click.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Bases.ReceiveEventDelegate">
+            <summary>
+            AtkUnitBase receive event delegate.
+            </summary>
+            <param name="eventListener">Type receiving the event.</param>
+            <param name="evt">Event type.</param>
+            <param name="which">Internal routing number.</param>
+            <param name="eventData">Event data.</param>
+            <param name="inputData">Keyboard and mouse data.</param>
+            <returns>The addon address.</returns>
+        </member>
+        <member name="T:ClickLib.Bases.ClickBase`2">
+            <summary>
+            Click base class.
+            </summary>
+            <typeparam name="TImpl">The implementing type.</typeparam>
+            <typeparam name="TStruct">FFXIVClientStructs addon type.</typeparam>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.#ctor(System.String,System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Bases.ClickBase`2"/> class.
+            </summary>
+            <param name="name">Addon name.</param>
+            <param name="addon">Addon address.</param>
+        </member>
+        <member name="P:ClickLib.Bases.ClickBase`2.Addon">
+            <summary>
+            Gets a pointer to the type.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonButton(FFXIVClientStructs.FFXIV.Component.GUI.AtkComponentButton*,System.UInt32,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="target">Target node.</param>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonButtonIndex(System.Int32,System.UInt32,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="nodeIndex">Target node index.</param>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonRadioButton(FFXIVClientStructs.FFXIV.Component.GUI.AtkComponentRadioButton*,System.UInt32,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="target">Target node.</param>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonCheckBox(FFXIVClientStructs.FFXIV.Component.GUI.AtkComponentCheckBox*,System.UInt32,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="target">Target node.</param>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonDragDrop(FFXIVClientStructs.FFXIV.Component.GUI.AtkComponentDragDrop*,System.UInt32,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="target">Target node.</param>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonStage(System.UInt32,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonComponent(FFXIVClientStructs.FFXIV.Component.GUI.AtkComponentNode*,System.UInt32,ClickLib.Enums.EventType,ClickLib.Structures.EventData,ClickLib.Structures.InputData)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="target">Target node.</param>
+            <param name="which">Internal game click routing.</param>
+            <param name="type">Event type.</param>
+            <param name="eventData">Event data.</param>
+            <param name="inputData">Input data.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.ClickAddonList(FFXIVClientStructs.FFXIV.Client.UI.PopupMenu*,System.UInt16,ClickLib.Enums.EventType)">
+            <summary>
+            Send a click.
+            </summary>
+            <param name="popupMenu">PopupMenu event listener.</param>
+            <param name="index">List index.</param>
+            <param name="type">Event type.</param>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`2.InvokeReceiveEvent(FFXIVClientStructs.FFXIV.Component.GUI.AtkEventListener*,ClickLib.Enums.EventType,System.UInt32,ClickLib.Structures.EventData,ClickLib.Structures.InputData)">
+            <summary>
+            Invoke the receive event delegate.
+            </summary>
+            <param name="eventListener">Type receiving the event.</param>
+            <param name="type">Event type.</param>
+            <param name="which">Internal routing number.</param>
+            <param name="eventData">Event data.</param>
+            <param name="inputData">Keyboard and mouse data.</param>
+        </member>
+        <member name="T:ClickLib.Bases.ClickBase`1">
+            <summary>
+            Click base class.
+            </summary>
+            <typeparam name="TImpl">The implementing type.</typeparam>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`1.#ctor(System.String,System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Bases.ClickBase`1"/> class.
+            </summary>
+            <param name="name">Addon name.</param>
+            <param name="addon">Addon address.</param>
+        </member>
+        <member name="P:ClickLib.Bases.ClickBase`1.AddonName">
+            <summary>
+            Gets the associated addon name.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Bases.ClickBase`1.AddonAddress">
+            <summary>
+            Gets a pointer to the addon.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Bases.ClickBase`1.UnitBase">
+            <summary>
+            Gets a pointer to the underlying AtkUnitBase.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`1.FireCallback(System.Object[])">
+            <summary>
+            Fire an addon callback.
+            </summary>
+            <param name="values">AtkValue values.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`1.FireNullCallback(System.UInt64)">
+            <summary>
+            Fire an addon callback.
+            </summary>
+            <param name="a4">A parameter.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:ClickLib.Bases.ClickBase`1.HideAddon">
+            <summary>
+            Hide the addon.
+            </summary>
+            <returns>Itself.</returns>
+        </member>
+        <member name="T:ClickLib.Bases.IClickable">
+            <summary>
+            Searchable click base class.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Click">
+            <summary>
+            Main class for clicking by name.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Click.Initialize">
+            <summary>
+            Load the mapping of click names.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Click.GetClickNames">
+            <summary>
+            Get a list of available click strings that can be used with SendClick.
+            </summary>
+            <returns>A list of click names.</returns>
+        </member>
+        <member name="M:ClickLib.Click.SendClick(System.String,System.IntPtr)">
+            <summary>
+            Send a click by the name of the individual click.
+            </summary>
+            <param name="name">Click name.</param>
+            <param name="addon">Pointer to an existing addon.</param>
+        </member>
+        <member name="M:ClickLib.Click.TrySendClick(System.String,System.IntPtr)">
+            <summary>
+            Send a click by the name of the individual click.
+            </summary>
+            <param name="name">Click name.</param>
+            <param name="addon">Pointer to an existing addon.</param>
+            <returns>A value indicating whether the delegate was successfully called.</returns>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickContentsFinderConfirm">
+            <summary>
+            Addon ContentsFinderConfirm.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContentsFinderConfirm.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickContentsFinderConfirm"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContentsFinderConfirm.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContentsFinderConfirm.Commence">
+            <summary>
+            Click the commence button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContentsFinderConfirm.Withdraw">
+            <summary>
+            Click the commence button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContentsFinderConfirm.Wait">
+            <summary>
+            Click the commence button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickContextIconMenu">
+            <summary>
+            Addon ContextIconMenu.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContextIconMenu.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickContextIconMenu"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickContextIconMenu.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickGatheringMasterpiece">
+            <summary>
+            Addon GatheringMasterpiece.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGatheringMasterpiece.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickGatheringMasterpiece"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGatheringMasterpiece.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGatheringMasterpiece.Collect">
+            <summary>
+            Click the collect button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGatheringMasterpiece.UseAction(System.Int32)">
+            <summary>
+            Use an action within the Masterpiece UI.
+            </summary>
+            <param name="actionId">Action ID.</param>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickGoldSaucerReward">
+            <summary>
+            Addon GoldSaucerReward.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGoldSaucerReward.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickGoldSaucerReward"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGoldSaucerReward.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGoldSaucerReward.Quit">
+            <summary>
+            Click the quit button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickGrandCompanySupplyReward">
+            <summary>
+            Addon GrandCompanySupplyReward.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGrandCompanySupplyReward.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickGrandCompanySupplyReward"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGrandCompanySupplyReward.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGrandCompanySupplyReward.Deliver">
+            <summary>
+            Click the deliver button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGrandCompanySupplyReward.Cancel">
+            <summary>
+            Click the cancel button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickGuildLeve">
+            <summary>
+            Addon GuildLeve.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGuildLeve.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickGuildLeve"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGuildLeve.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGuildLeve.SwitchCategory(System.Int32)">
+            <summary>
+            Switch to a different job category.
+            </summary>
+            <param name="index">Job category index in the UI.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickGuildLeve.SwitchJob(System.Int32)">
+            <summary>
+            Switch to a different job leve tab.
+            </summary>
+            <param name="index">Job index in the UI.</param>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickItemInspectionResult">
+            <summary>
+            Addon ItemInspectionResult.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickItemInspectionResult.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickItemInspectionResult"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickItemInspectionResult.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickItemInspectionResult.Next">
+            <summary>
+            Click the next button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickItemInspectionResult.Close">
+            <summary>
+            Click the close button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickJournalDetail">
+            <summary>
+            Addon JournalDetail.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalDetail.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickJournalDetail"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalDetail.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalDetail.Accept">
+            <summary>
+            Click the accept button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalDetail.Decline">
+            <summary>
+            Click the decline button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickJournalResult">
+            <summary>
+            Addon JournalResult.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalResult.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickJournalResult"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalResult.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalResult.Complete">
+            <summary>
+            Click the complete button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickJournalResult.Decline">
+            <summary>
+            Click the decline button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickMaterializeDialog">
+            <summary>
+            Addon MaterializeDialog.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMaterializeDialog.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickMaterializeDialog"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMaterializeDialog.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMaterializeDialog.Materialize">
+            <summary>
+            Click the deliver button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickMateriaRetrieveDialog">
+            <summary>
+            Addon MateriaRetrieveDialog.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMateriaRetrieveDialog.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickMateriaRetrieveDialog"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMateriaRetrieveDialog.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMateriaRetrieveDialog.Begin">
+            <summary>
+            Click the begin button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickMateriaRetrieveDialog.Return">
+            <summary>
+            Click the return button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickRecipeNote">
+            <summary>
+            Addon RecipeNote.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRecipeNote.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickRecipeNote"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRecipeNote.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRecipeNote.Synthesize">
+            <summary>
+            Click the synthesize button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRecipeNote.QuickSynthesis">
+            <summary>
+            Click the quick synthesis button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRecipeNote.TrialSynthesis">
+            <summary>
+            Click the trial synthesis button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRecipeNote.Material(System.Int32,System.Boolean)">
+            <summary>
+            Click a material.
+            </summary>
+            <param name="index">Material row, 0 indexed.</param>
+            <param name="hq">The NQ or HQ button.</param>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickRepair">
+            <summary>
+            Addon Request.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRepair.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickRepair"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRepair.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRepair.RepairAll">
+            <summary>
+            Click the repair all button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickRequest">
+            <summary>
+            Addon Request.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRequest.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickRequest"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRequest.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRequest.HandOver">
+            <summary>
+            Click the hand over button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRequest.Cancel">
+            <summary>
+            Click the cancel button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickRetainerList">
+            <summary>
+            Addon RetainerTaskResult.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerList.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickRetainerList"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerList.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerList.Retainer(System.Int32)">
+            <summary>
+            Click a retainer.
+            </summary>
+            <param name="index">Retainer index.</param>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickRetainerTaskAsk">
+            <summary>
+            Addon RetainerTaskAsk.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskAsk.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickRetainerTaskAsk"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskAsk.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskAsk.Assign">
+            <summary>
+            Click the assign button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskAsk.Return">
+            <summary>
+            Click the return button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickRetainerTaskResult">
+            <summary>
+            Addon RetainerTaskResult.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskResult.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickRetainerTaskResult"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskResult.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskResult.Confirm">
+            <summary>
+            Click the confirm button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickRetainerTaskResult.Reassign">
+            <summary>
+            Click the reassign button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickSalvageDialog">
+            <summary>
+            Adddon SalvageDialog.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSalvageDialog.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickSalvageDialog"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSalvageDialog.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSalvageDialog.Desynthesize">
+            <summary>
+            Click the desynthesize button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSalvageDialog.CheckBox">
+            <summary>
+            Click the desynthesize checkbox button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickSelectIconString">
+            <summary>
+            Addon SelectString.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectIconString.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickSelectIconString"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectIconString.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectIconString.SelectItem(System.UInt16)">
+            <summary>
+            Select the item at the given index.
+            </summary>
+            <param name="index">Index to select.</param>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickSelectOk">
+            <summary>
+            Addon SelectOk.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectOk.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickSelectOk"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectOk.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectOk.Ok">
+            <summary>
+            Click the ok button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickSelectString">
+            <summary>
+            Addon SelectString.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectString.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickSelectString"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectString.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectString.SelectItem(System.UInt16)">
+            <summary>
+            Select the item at the given index.
+            </summary>
+            <param name="index">Index to select.</param>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickSelectYesNo">
+            <summary>
+            Addon SelectYesNo.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectYesNo.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickSelectYesNo"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectYesNo.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectYesNo.Yes">
+            <summary>
+            Click the yes button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectYesNo.No">
+            <summary>
+            Click the no button.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSelectYesNo.Confirm">
+            <summary>
+            Click the confirm checkbox.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickShopCardDialog">
+            <summary>
+            Addon ShopCardDialog.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickShopCardDialog.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickShopCardDialog"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickShopCardDialog.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickShopCardDialog.Sell">
+            <summary>
+            Click the sell button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickSynthesis">
+            <summary>
+            Addon RecipeNote.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSynthesis.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickSynthesis"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSynthesis.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickSynthesis.Quit">
+            <summary>
+            Click the quit button.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Clicks.ClickTalk">
+            <summary>
+            Addon Talk.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickTalk.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Clicks.ClickTalk"/> class.
+            </summary>
+            <param name="addon">Addon pointer.</param>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickTalk.Using(System.IntPtr)">
+            <summary>
+            Instantiate this click using the given addon.
+            </summary>
+            <param name="addon">Addon to reference.</param>
+            <returns>A click instance.</returns>
+        </member>
+        <member name="M:ClickLib.Clicks.ClickTalk.Click">
+            <summary>
+            Click the talk dialog.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Enums.EventType">
+            <summary>
+            Various event types.
+            </summary>
+        </member>
+        <member name="T:ClickLib.Exceptions.ClickNotFoundError">
+            <summary>
+            An exception thrown when a click cannot be found.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Exceptions.ClickNotFoundError.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Exceptions.ClickNotFoundError"/> class.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="T:ClickLib.Exceptions.InvalidClickException">
+            <summary>
+            Base exception for click errors.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Exceptions.InvalidClickException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Exceptions.InvalidClickException"/> class.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="M:ClickLib.Exceptions.InvalidClickException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Exceptions.InvalidClickException"/> class.
+            </summary>
+            <param name="message">Error message.</param>
+            <param name="innerException">Causing exception.</param>
+        </member>
+        <member name="T:ClickLib.Structures.AtkValueArray">
+            <summary>
+            A disposable AtkValue* object.
+            </summary>
+            <remarks>
+            https://github.com/Caraxi/SimpleTweaksPlugin/blob/main/Utility/Common.cs#L261.
+            </remarks>
+        </member>
+        <member name="M:ClickLib.Structures.AtkValueArray.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Structures.AtkValueArray"/> class.
+            </summary>
+            <param name="values">AtkValue parameters.</param>
+        </member>
+        <member name="P:ClickLib.Structures.AtkValueArray.Address">
+            <summary>
+            Gets the address of the array.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Structures.AtkValueArray.Pointer">
+            <summary>
+            Gets an unsafe pointer to the array.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Structures.AtkValueArray.Length">
+            <summary>
+            Gets the array length.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Structures.AtkValueArray.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ClickLib.Structures.EventData">
+            <summary>
+            Event data.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Structures.EventData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Structures.EventData"/> class.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Structures.EventData.Data">
+            <summary>
+            Gets the data pointer.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Structures.EventData.ForNormalTarget(System.Void*,System.Void*)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Structures.EventData"/> class.
+            </summary>
+            <param name="target">Target.</param>
+            <param name="listener">Event listener.</param>
+            <returns>Event data.</returns>
+        </member>
+        <member name="T:ClickLib.Structures.InputData">
+            <summary>
+            Input data.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Structures.InputData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Structures.InputData"/> class.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Structures.InputData.Data">
+            <summary>
+            Gets the data pointer.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Structures.InputData.Empty">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Structures.InputData"/> class.
+            </summary>
+            <returns>Input data.</returns>
+        </member>
+        <member name="M:ClickLib.Structures.InputData.ForPopupMenu(FFXIVClientStructs.FFXIV.Client.UI.PopupMenu*,System.UInt16)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickLib.Structures.InputData"/> class.
+            </summary>
+            <param name="popupMenu">List popup menu.</param>
+            <param name="index">Selected index.</param>
+            <returns>Input data.</returns>
+        </member>
+        <member name="T:ClickLib.Structures.SharedBuffer">
+            <summary>
+            A shared buffer for structures.
+            </summary>
+        </member>
+        <member name="P:ClickLib.Structures.SharedBuffer.Buffer">
+            <summary>
+            Gets the shared buffer.
+            </summary>
+        </member>
+        <member name="M:ClickLib.Structures.SharedBuffer.Dispose">
+            <summary>
+            Dispose.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -18,7 +18,7 @@
   "Verbose": false,
   "OfflineData": [
     {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "CID": 19014409516066930,
       "Name": "十六五夜",
       "World": "摩杜纳",
@@ -26,87 +26,87 @@
       "Enabled": false,
       "RetainerData": [
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山樱乃",
-          "VentureEndsAt": 1707409948,
+          "VentureEndsAt": 1708443776,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 28,
           "VentureID": 946,
-          "Gil": 0,
+          "Gil": 4296016,
           "DisplayOrder": 1,
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山郁香",
-          "VentureEndsAt": 1707409952,
+          "VentureEndsAt": 1708443780,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 27,
           "VentureID": 946,
-          "Gil": 0,
+          "Gil": 1975633,
           "DisplayOrder": 0,
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山须美",
-          "VentureEndsAt": 1707409956,
+          "VentureEndsAt": 1708442628,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 16,
-          "VentureID": 906,
-          "Gil": 0,
+          "VentureID": 797,
+          "Gil": 20446,
           "DisplayOrder": 3,
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山神乐",
-          "VentureEndsAt": 1707410269,
+          "VentureEndsAt": 1708441160,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 17,
           "VentureID": 576,
-          "Gil": 0,
+          "Gil": 1614,
           "DisplayOrder": 6,
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山姚玲",
-          "VentureEndsAt": 1707463721,
+          "VentureEndsAt": 1708462445,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 18,
           "VentureID": 964,
-          "Gil": 6228,
+          "Gil": 7574,
           "DisplayOrder": 9,
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山沙月",
-          "VentureEndsAt": 1707406984,
+          "VentureEndsAt": 1708441166,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 17,
-          "VentureID": 691,
-          "Gil": 8543,
+          "VentureID": 576,
+          "Gil": 16292,
           "DisplayOrder": 7,
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山星绘",
-          "VentureEndsAt": 1707409960,
+          "VentureEndsAt": 1708443784,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -117,9 +117,9 @@
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山未来",
-          "VentureEndsAt": 1707406990,
+          "VentureEndsAt": 1708441169,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -130,9 +130,9 @@
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山香织",
-          "VentureEndsAt": 1707406995,
+          "VentureEndsAt": 1708441176,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -143,22 +143,22 @@
           "ShouldSerializeCreationFrame": false
         },
         {
-          "CreationFrame": 16,
+          "CreationFrame": 1602679,
           "Name": "神山结花",
-          "VentureEndsAt": 1707408205,
+          "VentureEndsAt": 1708441182,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 17,
-          "VentureID": 836,
-          "Gil": 0,
+          "VentureID": 576,
+          "Gil": 244166,
           "DisplayOrder": 5,
           "ShouldSerializeCreationFrame": false
         }
       ],
       "Preferred": true,
-      "Ventures": 19538,
-      "InventorySpace": 92,
+      "Ventures": 20496,
+      "InventorySpace": 61,
       "VentureCoffers": 0,
       "ServiceAccount": 0,
       "ShowRetainersInDisplayOrder": false,
@@ -787,7 +787,9 @@
         90,
         90
       ],
-      "Gil": 559410703,
+      "Gil": 513757111,
+      "OfflineAirshipData": [],
+      "OfflineSubmarineData": [],
       "ShouldSerializeCreationFrame": false
     }
   ],
@@ -804,7 +806,7 @@
   "NoTheme": false,
   "AdditionalData": {
     "#00438D8134D1A872 神山樱乃": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -823,7 +825,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 580,
       "Gathering": 0,
@@ -831,7 +833,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山郁香": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -850,7 +852,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 581,
       "Gathering": 0,
@@ -858,7 +860,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山须美": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -882,7 +884,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 2,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -890,7 +892,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山神乐": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -917,7 +919,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山姚玲": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -936,7 +938,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 557,
       "Gathering": 2415,
@@ -944,7 +946,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山沙月": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -963,7 +965,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -971,7 +973,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山星绘": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -990,7 +992,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 580,
       "Gathering": 0,
@@ -998,7 +1000,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山未来": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1017,7 +1019,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -1025,7 +1027,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山香织": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1044,7 +1046,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -1052,7 +1054,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山结花": {
-      "CreationFrame": 16,
+      "CreationFrame": 1,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1076,7 +1078,7 @@
         ]
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 0,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -1084,10 +1086,10 @@
       "ShouldSerializeCreationFrame": false
     }
   },
-  "AutoDisable": false,
+  "AutoDisable": true,
   "Expert": true,
   "Blacklist": [],
-  "HideOverlayIcons": true,
+  "HideOverlayIcons": false,
   "UnsafeProtection": false,
   "CharEqualize": false,
   "TimerAllowNegative": false,
@@ -1096,16 +1098,16 @@
   "LoginOverlayBPadding": 1.35,
   "OpenBellBehaviorNoVentures": 1,
   "OpenBellBehaviorWithVentures": 1,
-  "TaskCompletedBehaviorAuto": 1,
-  "TaskCompletedBehaviorManual": 1,
+  "TaskCompletedBehaviorAuto": 0,
+  "TaskCompletedBehaviorManual": 0,
   "TaskCompletedBehaviorAccess": 3,
   "Stay5": false,
   "NoCurrentCharaOnTop": false,
-  "Delay": 100,
+  "Delay": 198,
   "_dontReassign": false,
   "OldRetainerSense": false,
   "RetainerSense": true,
-  "RetainerSenseThreshold": 10000,
+  "RetainerSenseThreshold": 29963,
   "MultiModeUIBar": false,
   "UIBar": true,
   "Suppress": 164,
@@ -1170,6 +1172,7 @@
   "ShowAdditionalInfo": true,
   "RetryItemSearch": false,
   "ArtisanIntegration": true,
+  "AutoResendSubs": false,
   "SellKey": 164,
   "EntrustKey": 0,
   "RetrieveKey": 0,
@@ -1183,5 +1186,7 @@
   "NotifyFlashTaskbar": false,
   "NotifyNoToastWhenRunning": true,
   "UnlockFPS": true,
-  "UnlockFPSUnlimited": false
+  "UnlockFPSUnlimited": false,
+  "UnlockFPSChillFrames": false,
+  "ManipulatePriority": false
 }

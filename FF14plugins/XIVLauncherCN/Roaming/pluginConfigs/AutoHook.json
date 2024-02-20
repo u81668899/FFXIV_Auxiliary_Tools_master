@@ -14,7 +14,7 @@
     "SelectedPatienceID": 4106,
     "AutoPatienceI": {
       "$type": "AutoHook.Classes.AutoPatienceI, AutoHook",
-      "Name": "Patience I",
+      "Name": "耐心",
       "Enabled": true,
       "ID": 4102,
       "GPThreshold": 220,
@@ -24,7 +24,7 @@
     },
     "AutoPatienceII": {
       "$type": "AutoHook.Classes.AutoPatienceII, AutoHook",
-      "Name": "Patience II",
+      "Name": "耐心II",
       "Enabled": true,
       "ID": 4106,
       "GPThreshold": 580,
@@ -35,7 +35,7 @@
     "AutoChum": {
       "$type": "AutoHook.Classes.AutoChum, AutoHook",
       "OnlyUseWithIntuition": false,
-      "Name": "Chum",
+      "Name": "撒饵",
       "Enabled": false,
       "ID": 4104,
       "GPThreshold": 9100,
@@ -45,7 +45,7 @@
     },
     "AutoFishEyes": {
       "$type": "AutoHook.Classes.AutoFishEyes, AutoHook",
-      "Name": "Fish Eyes",
+      "Name": "鱼眼",
       "Enabled": false,
       "ID": 4105,
       "GPThreshold": 550,
@@ -55,7 +55,7 @@
     },
     "AutoHICordial": {
       "$type": "AutoHook.Classes.AutoHICordial, AutoHook",
-      "Name": "Hi-Cordial",
+      "Name": "高级强心剂",
       "Enabled": true,
       "ID": 12669,
       "GPThreshold": 450,
@@ -65,7 +65,7 @@
     },
     "AutoHQCordial": {
       "$type": "AutoHook.Classes.AutoHQCordial, AutoHook",
-      "Name": "HQ Cordial",
+      "Name": "强心剂(高品质)",
       "Enabled": true,
       "ID": 1006141,
       "GPThreshold": 1,
@@ -75,7 +75,7 @@
     },
     "AutoCordial": {
       "$type": "AutoHook.Classes.AutoCordial, AutoHook",
-      "Name": "Cordial",
+      "Name": "强心剂",
       "Enabled": true,
       "ID": 6141,
       "GPThreshold": 1,
@@ -85,7 +85,7 @@
     },
     "AutoHQWateredCordial": {
       "$type": "AutoHook.Classes.AutoHQWateredCordial, AutoHook",
-      "Name": "HQ Watered Cordial",
+      "Name": "轻型强心剂(高品质)",
       "Enabled": false,
       "ID": 1016911,
       "GPThreshold": 1,
@@ -95,7 +95,7 @@
     },
     "AutoWateredCordial": {
       "$type": "AutoHook.Classes.AutoWateredCordial, AutoHook",
-      "Name": "Watered Cordial",
+      "Name": "轻型强心剂",
       "Enabled": false,
       "ID": 16911,
       "GPThreshold": 1,
@@ -107,7 +107,7 @@
       "$type": "AutoHook.Classes.AutoThaliaksFavor, AutoHook",
       "ThaliaksFavorStacks": 3,
       "ThaliaksFavorRecover": 150,
-      "Name": "Thaliak's Favor",
+      "Name": "沙利亚克的恩宠",
       "Enabled": true,
       "ID": 26804,
       "GPThreshold": 650,
@@ -118,7 +118,7 @@
     "AutoMakeShiftBait": {
       "$type": "AutoHook.Classes.AutoMakeShiftBait, AutoHook",
       "MakeshiftBaitStacks": 5,
-      "Name": "MakeShift Bait",
+      "Name": "熟练渔技",
       "Enabled": false,
       "ID": 26805,
       "GPThreshold": 5,
@@ -128,7 +128,7 @@
     },
     "AutoIdenticalCast": {
       "$type": "AutoHook.Classes.AutoIdenticalCast, AutoHook",
-      "Name": "Identical Cast",
+      "Name": "专一垂钓",
       "Enabled": true,
       "ID": 4596,
       "GPThreshold": 350,
@@ -138,7 +138,7 @@
     },
     "AutoSurfaceSlap": {
       "$type": "AutoHook.Classes.AutoSurfaceSlap, AutoHook",
-      "Name": "Surface Slap",
+      "Name": "拍击水面",
       "Enabled": true,
       "ID": 4595,
       "GPThreshold": 200,
@@ -150,7 +150,7 @@
       "$type": "AutoHook.Classes.AutoPrizeCatch, AutoHook",
       "UseWhenMoochIIOnCD": false,
       "UseOnlyWithIdenticalCast": false,
-      "Name": "Prize Catch",
+      "Name": "大鱼猎手",
       "Enabled": false,
       "ID": 26806,
       "GPThreshold": 200,
