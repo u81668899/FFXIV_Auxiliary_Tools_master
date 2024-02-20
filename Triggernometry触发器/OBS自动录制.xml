@@ -3,31 +3,32 @@
   <ExportedFolder Id="8a2e51ae-f3fd-4b5f-9121-e0dde2f06329" Name="OBS自动录制" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Name="结束录制" Id="0d62adaf-0854-41be-8d76-5aeb52e6429a" RegularExpression="^.{14} 21:.{8}:400000(03|1[026]):00:00:00:00|^.{15}00:(00b9|0139):.*取消了战斗开始倒计时。">
+      <Trigger Enabled="true" Name="结束录制" Id="0d62adaf-0854-41be-8d76-5aeb52e6429a" RegularExpression="^.{14} Director 21:.{8}:400000(03|1[0126]):00:00:00:00|^.{14} ChatLog 00:(00B9|0139)::.*取消了战斗开始倒计时。|^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$|00:0839::“.+?”任务结束了。">
         <Actions>
-          <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+          <Action OrderNumber="1" LogMessageText="${_event}" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" OBSControlType="StopRecording" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ObsControl" ExecutionDelayExpression="3000">
+          <Action OrderNumber="2" OBSControlType="StopRecording" OBSEndPoint="ws://127.0.0.1:4455" ActionType="ObsControl" ExecutionDelayExpression="3000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="0d62adaf-0854-41be-8d76-5aeb52e6429a" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="开始录制" Id="3fdda306-2dff-4276-9002-c2556f97776c" RegularExpression="^.{15}00:(0139|00b9):距离战斗开始还有.*秒！ （.*）$">
+      <Trigger Enabled="true" Name="开始录制" Id="3fdda306-2dff-4276-9002-c2556f97776c" RegularExpression="^.{14} ChatLog 00:(0239|0139|00B9)::距离战斗开始还有.*秒！ （.*）$|^.{14} ChatLog 00:0839::“(.*)”任务开始。$|00:0839::发现隐藏的宝箱！">
         <Actions>
-          <Action OrderNumber="1" OBSControlType="StartRecording" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ObsControl">
+          <Action OrderNumber="1" OBSControlType="StartRecording" OBSEndPoint="ws://127.0.0.1:4455" ActionType="ObsControl">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+          <Action OrderNumber="2" TriggerOp="EnableTrigger" TriggerId="0d62adaf-0854-41be-8d76-5aeb52e6429a" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-        </Actions>
-        <Condition Enabled="false" Grouping="Or" />
-      </Trigger>
-      <Trigger Enabled="false" Name="需要在OBS里安装&quot;OBS-WebSocket&quot;插件 内附地址" Id="8eda74e5-d49a-4406-a85a-ac3f036d4b39" RegularExpression="">
-        <Actions>
-          <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep" Description="https://obsproject.com/forum/resources/obs-websocket-remote-control-of-obs-studio-made-easy.466/" DescriptionOverride="True">
+          <Action OrderNumber="3" LogMessageText="${_event}" LogLevel="Info" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" OBSControlType="StartRecording" OBSEndPoint="ws://127.0.0.1:4455" ActionType="ObsControl" ExecutionDelayExpression="3500">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
