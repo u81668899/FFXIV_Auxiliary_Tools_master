@@ -10,7 +10,7 @@
               <Action OrderNumber="1" VariableName="tb_zhaomu" VariableExpression="${tb_zhaomu}" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" LogMessageText="挖宝重置" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/e 挖宝重置" ActionType="LogMessage" ExecutionDelayExpression="10">
+              <Action OrderNumber="2" LogMessageText="tb_挖宝重置" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -80,7 +80,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="1.1挖宝重置" Id="98586a5d-43ef-4157-ad8d-684e793d4fb7" RegularExpression="^挖宝重置$" PeriodRefire="Deny" RefirePeriodExpression="2000">
+          <Trigger Enabled="true" Name="1.1挖宝重置" Id="98586a5d-43ef-4157-ad8d-684e793d4fb7" RegularExpression="^tb_挖宝重置$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_money" VariableExpression="0" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -273,7 +273,7 @@
               <Action OrderNumber="1" VariableOp="SetString" VariableName="tb_临时招募放置" VariableExpression="${var:tb_zhaomu}" Enabled="False" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" LogMessageText="挖宝重置" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/e 挖宝重置" ActionType="LogMessage" ExecutionDelayExpression="10">
+              <Action OrderNumber="2" LogMessageText="tb_挖宝重置" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" VariableOp="SetString" VariableName="tb_zhaomu" VariableExpression="${var:tb_临时招募放置}" Enabled="False" ActionType="Variable" ExecutionDelayExpression="500">
@@ -290,7 +290,7 @@
               <Action OrderNumber="1" VariableName="tb_zhaomu" VariableExpression="${tb_zhaomu}" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" LogMessageText="挖宝重置" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/e 挖宝重置" ActionType="LogMessage" ExecutionDelayExpression="400">
+              <Action OrderNumber="2" LogMessageText="tb_挖宝重置" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="400">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionGroup Enabled="true" Grouping="And">
                     <ConditionSingle Enabled="true" ExpressionL="${zhaomuwei}" ExpressionTypeL="String" ExpressionR="^讨伐歼灭战：" ExpressionTypeR="String" ConditionType="RegexMatch" />
@@ -345,7 +345,7 @@
               <Action OrderNumber="1" VariableName="tb_zhaomu" VariableExpression="${tb_zhaomu}" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" LogMessageText="挖宝重置" LogProcess="True" NamedCallbackName="command" NamedCallbackParam="/e 挖宝重置" ActionType="LogMessage">
+              <Action OrderNumber="2" LogMessageText="tb_挖宝重置" LogProcess="True" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -967,7 +967,7 @@
               <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="tb_xianum" VariableExpression="${var:tb_xianum}+0" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${var:tb_money}}　图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${var:tb_money}}　图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 神殿：${var:tb_shendian}　特殊：${var:tb_tenum}　变动：${var:tb_biannum}　上级：${var:tb_shangnum}　中级：${var:tb_zhongnum}　下级：${var:tb_xianum}" ActionType="NamedCallback" ExecutionDelayExpression="10">
@@ -1181,7 +1181,7 @@
               <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="tb_xianum" VariableExpression="${var:tb_xianum}+0" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${var:tb_money}}　图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${var:tb_money}}　图数：${var:tb_mapnum}　洞数：${var:mw_num}　底数：${var:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 神殿：${var:tb_shendian}　特殊：${var:tb_tenum}　变动：${var:tb_biannum}　上级：${var:tb_shangnum}　中级：${var:tb_zhongnum}　下级：${var:tb_xianum}" ActionType="NamedCallback" ExecutionDelayExpression="10">

@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="45a7807b-e5b7-4de6-893e-e6f07494e39c" Name="潜艇统计" Enabled="true">
+    <Folders>
+      <Folder Id="1452897f-fd46-4c6b-81a4-546523fda4f5" Name="1 统计" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="1.1 上等沉船项链" Id="0791d0a2-55d9-4475-a6a8-55e1d6ffa1bb" RegularExpression="00:083E.*获得了“上等沉船项链”×(?&lt;xlp&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_xlp" VariableExpression="${var:total_xlp}+${func:format(System.Double,&quot;g&quot;):${xlp}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Axlp" TextAuraExpression="上等沉船项链 ${var:total_xlp}" TextAuraXIniExpression="100" TextAuraYIniExpression="100" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${xlp}}*3.45" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.2 沉船项链" Id="49b46998-ca35-4df4-a4a1-f8ab2eb5cb61" RegularExpression="00:083E.*获得了“沉船项链”×(?&lt;xl&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_xl" VariableExpression="${var:total_xl}+${func:format(System.Double,&quot;g&quot;):${xl}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Axl" TextAuraExpression="沉船项链 ${var:total_xl}" TextAuraXIniExpression="350" TextAuraYIniExpression="100" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${xl}}*1.3" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.3 上等沉船耳饰" Id="844c6d2d-7440-4111-8d93-2ea8c5d541fe" RegularExpression="00:083E.*获得了“上等沉船耳饰”×(?&lt;esp&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_esp" VariableExpression="${var:total_esp}+${func:format(System.Double,&quot;g&quot;):${esp}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Aesp" TextAuraExpression="上等沉船耳饰 ${var:total_esp}" TextAuraXIniExpression="100" TextAuraYIniExpression="150" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${esp}}*3" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.4 沉船耳饰" Id="38c84268-f821-4cfe-97af-8516ed5c3711" RegularExpression="00:083E.*获得了“沉船耳饰”×(?&lt;es&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_es" VariableExpression="${var:total_es}+${func:format(System.Double,&quot;g&quot;):${es}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Aes" TextAuraExpression="沉船耳饰 ${var:total_es}" TextAuraXIniExpression="350" TextAuraYIniExpression="150" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${es}}*1" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.5 上等沉船手镯" Id="e392a22f-fef6-4265-8c5f-0614199117b1" RegularExpression="00:083E.*获得了“上等沉船手镯”×(?&lt;szp&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_szp" VariableExpression="${var:total_szp}+${func:format(System.Double,&quot;g&quot;):${szp}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Aszp" TextAuraExpression="上等沉船手镯 ${var:total_szp}" TextAuraXIniExpression="100" TextAuraYIniExpression="200" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${szp}}*2.85" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.6 沉船手镯" Id="c296c8c4-c9b0-436c-96a4-6b9832fad51c" RegularExpression="00:083E.*获得了“沉船手镯”×(?&lt;sz&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_sz" VariableExpression="${var:total_sz}+${func:format(System.Double,&quot;g&quot;):${sz}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Asz" TextAuraExpression="沉船手镯 ${var:total_sz}" TextAuraXIniExpression="350" TextAuraYIniExpression="200" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${sz}}*0.9" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.7 上等沉船戒指" Id="a1df4c06-1a60-4e68-bbaf-21f33118ab66" RegularExpression="00:083E.*获得了“上等沉船戒指”×(?&lt;jzp&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_jzp" VariableExpression="${var:total_jzp}+${func:format(System.Double,&quot;g&quot;):${jzp}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Ajzp" TextAuraExpression="上等沉船戒指 ${var:total_jzp}" TextAuraXIniExpression="100" TextAuraYIniExpression="250" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${jzp}}*2.7" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.8 沉船戒指" Id="e981edb6-c423-4d6a-862f-a906c99a4e22" RegularExpression="00:083E.*获得了“沉船戒指”×(?&lt;jz&gt;[\d,]+)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_jz" VariableExpression="${var:total_jz}+${func:format(System.Double,&quot;g&quot;):${jz}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="Ajz" TextAuraExpression="沉船戒指 ${var:total_jz}" TextAuraXIniExpression="350" TextAuraYIniExpression="250" TextAuraWIniExpression="300" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Money" VariableExpression="${var:Money}+${func:format(System.Double,&quot;g&quot;):${jz}}*0.8" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="16" TextAuraForeground="#004080" TextAuraName="totalMoney" TextAuraExpression="今日合计收入 ${var:Money}W" TextAuraXIniExpression="100" TextAuraYIniExpression="300" TextAuraWIniExpression="400" TextAuraHIniExpression="100" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="1.0 初始化" Id="e1ec9825-d511-4079-94f4-1a0f218b95b3" RegularExpression="" Description="写个表头，不用也行">
+            <Actions>
+              <Action OrderNumber="1" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="上等沉船项链" TableVariableX="1" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="沉船项链" TableVariableX="2" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="上等沉船耳饰" TableVariableX="3" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="沉船耳饰" TableVariableX="4" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="上等沉船手镯" TableVariableX="5" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="沉船手镯" TableVariableX="6" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="上等沉船戒指" TableVariableX="7" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="沉船戒指" TableVariableX="8" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TableVariableOp="Set" TableVariableName="潜艇记录" TableVariableExpression="当日合计收益/W" TableVariableX="9" TableVariableY="1" TableSourcePersist="True" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Sequential="True" Name="Reset" Id="3b4521b3-0f8b-49bc-91e3-df13eb2c9300" RegularExpression="Reset" PeriodRefire="Deny">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="UnsetAll" ActionType="Variable" Asynchronous="False" DebugLevel="Info">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraOp="DeactivateAllAura" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" TableVariableOp="UnsetAll" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ActionType="SystemBeep" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="2 记录" Id="a3cd0314-ef33-44be-931b-fe363a92e433" RegularExpression="^.{14} ChatLog 00:0038::(收艇结束啦！|收艇完毕啦！|收艇完成啦！)" PeriodRefire="Deny" RefirePeriodExpression="100000">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_xlp}*3.45" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_xl}*1.3" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_esp}*3" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_es}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_szp}*2.85" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_sz}*0.9" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_jzp}*2.7" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="total_Money" VariableExpression="${var:total_Money}+${var:total_jz}*0.8" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="total_xlp" VariableExpression="${var:total_xlp}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="total_xl" VariableExpression="${var:total_xl}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" VariableOp="SetNumeric" VariableName="total_esp" VariableExpression="${var:total_esp}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" VariableOp="SetNumeric" VariableName="total_es" VariableExpression="${var:total_es}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" VariableOp="SetNumeric" VariableName="total_szp" VariableExpression="${var:total_szp}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" VariableOp="SetNumeric" VariableName="total_sz" VariableExpression="${var:total_sz}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" VariableOp="SetNumeric" VariableName="total_jzp" VariableExpression="${var:total_jzp}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="total_jz" VariableExpression="${var:total_jz}+0" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="day" VariableExpression="1" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="18" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_xlp}" TableVariableX="1" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="19" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_xl}" TableVariableX="2" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="20" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_esp}" TableVariableX="3" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="21" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_es}" TableVariableX="4" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="22" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_szp}" TableVariableX="5" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="23" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_sz}" TableVariableX="6" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="24" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_jzp}" TableVariableX="7" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="25" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_jz}" TableVariableX="8" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="26" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_Money}" TableVariableX="9" TableVariableY="${var:day}" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="27" NamedCallbackName="saveCsv" NamedCallbackParam="${_env[_DEFAULTCSVPATH_]}\潜艇记录.csv,${var:total_xlp},${var:total_xl},${var:total_esp},${var:total_es},${var:total_szp},${var:total_sz},${var:total_jzp},${var:total_jz},${var:total_Money},_NOW(&quot;yyyy/MM/dd&quot;)" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="28" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="^A(xlp|xl|esp|es|szp|sz|jzp|jz)$" TextAuraFontName="宋体" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="29" VariableName="Money" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="30" VariableName="total_xlp" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="31" VariableName="total_xl" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="32" VariableName="total_esp" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="33" VariableName="total_es" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="34" VariableName="total_szp" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="35" VariableName="total_sz" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="36" VariableName="total_jzp" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="37" VariableName="total_jz" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="38" VariableName="total_Money" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="39" VariableName="day" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="40" TableVariableOp="Append" TableVariableName="Data" TableVariableTarget="潜艇记录" TableTargetPersist="True" Enabled="False" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="41" TableVariableName="Data" ActionType="TableVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="42" ActionType="SystemBeep">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="3 关闭显示" Id="6ec5719e-5fdd-427b-ad18-5ada7cf632f6" RegularExpression="关闭显示">
+        <Actions>
+          <Action OrderNumber="1" TextAuraOp="DeactivateAllAura" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>

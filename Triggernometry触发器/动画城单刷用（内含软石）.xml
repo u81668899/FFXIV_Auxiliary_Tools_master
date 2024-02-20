@@ -7,10 +7,10 @@
         <Triggers>
           <Trigger Enabled="true" Name="2开始" Id="48ea673f-a1ea-4a07-bf3d-7c1b0e906509" RegularExpression="^.{14} ChatLog 00:0839::“(?&lt;zone&gt;.*)”任务开始。$">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetString" VariableName="副本名称" VariableExpression="${zone}" ActionType="Variable">
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="副本名称" VariableExpression="${zone}" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="^tb_副本(最终决战天幕魔导城|123)" VariableExpression="0" VariablePersist="True" ActionType="Variable">
+              <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="^tb_副本(最终决战天幕魔导城|123|)$" VariableExpression="0" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${pvar:15点日期}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="floor((${_timestamp}+28800-15*3600)/86400)" ExpressionTypeL="Numeric" ExpressionR="${pvar:15点日期}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
@@ -25,7 +25,7 @@
               <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="15点日期" VariableExpression="floor((${_timestamp}+28800-15*3600)/86400)" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_副本${var:副本名称}" VariableExpression="${pvar:tb_副本${var:副本名称}}+1" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="tb_副本${pvar:副本名称}" VariableExpression="${pvar:tb_副本${pvar:副本名称}}+1" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -33,7 +33,7 @@
           </Trigger>
           <Trigger Enabled="true" Name="5结束" Id="1b4c0c46-d737-4966-aa34-53ffff37b38b" RegularExpression="^.{14} Director 21:.{8}:4000000[23]:00:00:00:00|^.{14} ChatLog 00:083E::.*获得了“(稀少外典)神典石”(×.+?)?。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本本轮${var:副本名称}" VariableExpression="${pvar:tb_副本本轮${var:副本名称}}+1" VariablePersist="True" ActionType="Variable">
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_副本本轮${pvar:副本名称}" VariableExpression="${pvar:tb_副本本轮${pvar:副本名称}}+1" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="神典石剩余次数" VariableExpression="${pvar:神典石剩余次数}-1" VariablePersist="True" ActionType="Variable">
@@ -42,15 +42,15 @@
               <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="神典石完成次数" VariableExpression="${pvar:神典石完成次数}+1" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" VariableName="副本名称" ActionType="Variable" ExecutionDelayExpression="50">
+              <Action OrderNumber="4" VariableName="副本名称" VariablePersist="True" ActionType="Variable" ExecutionDelayExpression="50">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e 已完成动画城：${pvar:tb_副本本轮最终决战天幕魔导城}/${pvar:tb_副本最终决战天幕魔导城}/${pvar:神典石完成次数}|${numeric:100-${pvar:tb_副本最终决战天幕魔导城}}/${pvar:神典石剩余次数}" VariableOp="SetNumeric" ActionType="NamedCallback">
+              <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e 已完成：${pvar:tb_副本本轮最终决战天幕魔导城}/${pvar:tb_副本最终决战天幕魔导城}/${pvar:神典石完成次数}|${numeric:100-${pvar:tb_副本最终决战天幕魔导城}}/${pvar:神典石剩余次数}" VariableOp="SetNumeric" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:副本名称}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${pvar:副本名称}" ExpressionTypeL="String" ExpressionR="^$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
               <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="最终决战天幕魔导城" ExpressionTypeR="String" ConditionType="RegexMatch" />
             </Condition>
           </Trigger>
@@ -144,7 +144,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -173,7 +172,7 @@
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/青魔法技能 自爆" ActionType="NamedCallback" ExecutionDelayExpression="50">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" LogMessageText="动画城自爆" LogProcess="True" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
+                  <Action OrderNumber="2" LogMessageText="动画城自爆" LogProcess="True" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage" ExecutionDelayExpression="50">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -189,7 +188,7 @@
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/技能 即刻咏唱" ActionType="NamedCallback" ExecutionDelayExpression="50">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" LogMessageText="动画城自爆" LogProcess="True" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage">
+                  <Action OrderNumber="2" LogMessageText="动画城自爆" LogProcess="True" TriggerId="3e046dec-6c4b-472e-8f63-9426cd9b7804" TriggerText="12345678901234 Territory 01:123:123" TriggerZone="${_zone}" ActionType="LogMessage" ExecutionDelayExpression="50">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
