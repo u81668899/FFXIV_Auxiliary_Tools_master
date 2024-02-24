@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="8e836859-d147-4fa2-b7a6-7aaa2b5348dd" Name="游戏私聊QQ提醒" Enabled="true">
+    <Folders>
+      <Folder Id="ac94b03d-eb40-4fab-b477-e2266b9a7f3e" Name="设置区" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="QQ提醒" Id="c10c0c1d-5838-4246-b9c3-0ad10fb9451e" RegularExpression="" PrevActionsRefire="Deny" Scheduling="FromLastAction">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="PopFirst" ListVariableName="QQ内容" ListVariableTarget="neirong" VariableOp="SetNumeric" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:QQ内容.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" DiscordWebhookURL="https://${var:窝}/api/?tracker=qq&amp;bot_qq=${var:机器人qq}&amp;qq=${var:你的qq}&amp;token=${var:token}" DiscordWebhookMessage="${var:neirong}" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:qunhao}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" DiscordWebhookURL="https://${var:窝}/api/?tracker=qq&amp;bot_qq=${var:机器人qq}&amp;qq=${var:你的qq}&amp;token=${var:token}&amp;group=${var:qunhao}" DiscordWebhookMessage="${var:neirong}" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:qunhao}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" ListVariableName="QQ内容" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:QQ内容.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" TriggerId="c10c0c1d-5838-4246-b9c3-0ad10fb9451e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:QQ内容.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Name="设置" Id="26e459a8-f476-404c-82bc-e1bc51ade228" RegularExpression=".*" PeriodRefire="Deny" RefirePeriodExpression="8640000">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="你的qq" VariableExpression="976967074" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" ActionType="Placeholder" Description="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="机器人qq" VariableExpression="120213813" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="机器人qq" VariableExpression="490114744" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetString" VariableName="机器人qq" VariableExpression="1026152696" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" ActionType="Placeholder" Description="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetString" VariableName="窝" VariableExpression="xn--v9x.net" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" VariableOp="SetString" VariableName="窝" VariableExpression="bot.pencilss.top" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" VariableOp="SetString" VariableName="窝" VariableExpression="ffxiv-bot.yuyuko.com" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" ActionType="Placeholder" Description="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" VariableOp="SetString" VariableName="token" VariableExpression="a123456" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Sequential="True" Name="雇员" Id="67ded370-c296-4d4c-827b-a124ba9089de" RegularExpression="^.{14} ChatLog 00:0039::雇员(?&lt;name&gt;.*)成功完成了探险！" Scheduling="FromLastAction">
+        <Actions>
+          <Action OrderNumber="1" DiscordWebhookURL="https://${var:窝}/api/?tracker=qq&amp;bot_qq=${var:机器人qq}&amp;qq=${var:你的qq}&amp;token=${var:token}" DiscordWebhookMessage="${name}向你发送私聊：${test}" ListVariableOp="Push" ListVariableName="QQ内容" ListVariableExpression="${name}探险完毕" VariableOp="SetString" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TriggerId="c10c0c1d-5838-4246-b9c3-0ad10fb9451e" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="出售" Id="6595dfb6-909f-457a-b2b6-5537f569bf7e" RegularExpression="00:0047::在(?&lt;dizhi&gt;.*)以(?&lt;danjia&gt;.*)的价格出售的“(?&lt;wupin&gt;.+?)(?&lt;hq&gt;?)”(?&lt;shuliang&gt;.*?)成功售出，获得了(?&lt;jiage&gt;.*)金币。$" Scheduling="FromLastAction" RefirePeriodExpression="3000">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="hq2" VariableExpression=" " ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${hq}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="hq2" VariableExpression="hq" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${hq}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" DiscordWebhookURL="https://${var:窝}/api/?tracker=qq&amp;bot_qq=${var:机器人qq}&amp;qq=${var:你的qq}&amp;token=${var:token}" DiscordWebhookMessage="${dizhi}“${wupin}${var:hq2}”${jiage}" DiscordTts="True" ListVariableOp="Push" ListVariableName="QQ内容" ListVariableExpression="在${dizhi}以每个${danjia}的价格出售的“${wupin}${var:hq2}”${shuliang}成功售出，并获得了${jiage}金币。" VariableOp="SetString" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableName="hq2" VariableExpression="hq" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" TriggerId="c10c0c1d-5838-4246-b9c3-0ad10fb9451e" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="私聊" Id="10f3ddcc-5251-4b6e-a44f-6425bfbb41ff" RegularExpression="] (?:\w+ |)00:000D:(?&lt;name&gt;.*?):(?&lt;test&gt;.*)" Scheduling="FromLastAction">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="有人找你！" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" DiscordWebhookURL="https://${var:窝}/api/?tracker=qq&amp;bot_qq=${var:机器人qq}&amp;qq=${var:你的qq}&amp;token=${var:token}" DiscordWebhookMessage="${name}向你发送私聊：${test}" ListVariableOp="Push" ListVariableName="QQ内容" ListVariableExpression="${name}向你发送私聊：${test}" VariableOp="SetString" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" TriggerId="c10c0c1d-5838-4246-b9c3-0ad10fb9451e" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
