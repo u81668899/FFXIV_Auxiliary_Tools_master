@@ -275,7 +275,9 @@
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="27" NamedCallbackName="saveCsv" NamedCallbackParam="${_env[_DEFAULTCSVPATH_]}\潜艇记录.csv,${var:total_xlp},${var:total_xl},${var:total_esp},${var:total_es},${var:total_szp},${var:total_sz},${var:total_jzp},${var:total_jz},${var:total_Money},_NOW(&quot;yyyy/MM/dd&quot;)" ActionType="NamedCallback">
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_env[_DEFAULTCSVPATH_]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+            </Condition>
           </Action>
           <Action OrderNumber="28" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="^A(xlp|xl|esp|es|szp|sz|jzp|jz)$" TextAuraFontName="宋体" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
@@ -313,7 +315,7 @@
           <Action OrderNumber="39" VariableName="day" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="40" TableVariableOp="Append" TableVariableName="Data" TableVariableTarget="潜艇记录" TableTargetPersist="True" Enabled="False" ActionType="TableVariable">
+          <Action OrderNumber="40" TableVariableOp="Append" TableVariableName="Data" TableVariableTarget="潜艇记录" TableTargetPersist="True" ActionType="TableVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="41" TableVariableName="Data" ActionType="TableVariable">

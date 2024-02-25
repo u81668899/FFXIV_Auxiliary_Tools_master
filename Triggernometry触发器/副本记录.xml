@@ -67,10 +67,10 @@
                   <ConditionSingle Enabled="true" ExpressionL="${pvar:battlenum2}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="9" ListVariableName="logs" ListSourcePersist="True" ListTargetPersist="True" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
+              <Action OrderNumber="9" DiskFileOp="ReadIntoListVariable" ListVariableName="logs" ListSourcePersist="True" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" ListVariableName="logs2" ListSourcePersist="True" ListTargetPersist="True" VariableOp="SetNumeric" VariableName="logsSize" VariableExpression="${lvar:logs.size}" ActionType="ListVariable">
+              <Action OrderNumber="10" DiskFileOp="ReadIntoListVariable" ListVariableName="logs2" ListSourcePersist="True" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="11" ListSourcePersist="True" ListTargetPersist="True" VariableName="lastLine" VariablePersist="True" ActionType="Variable">

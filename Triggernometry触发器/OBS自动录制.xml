@@ -3,7 +3,7 @@
   <ExportedFolder Id="8a2e51ae-f3fd-4b5f-9121-e0dde2f06329" Name="OBS自动录制" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Name="结束录制" Id="0d62adaf-0854-41be-8d76-5aeb52e6429a" RegularExpression="^.{14} Director 21:.{8}:400000(03|1[0126]):00:00:00:00|^.{14} ChatLog 00:(00B9|0139)::.*取消了战斗开始倒计时。|^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$|00:0839::“.+?”任务结束了。">
+      <Trigger Enabled="false" Name="结束录制" Id="0d62adaf-0854-41be-8d76-5aeb52e6429a" RegularExpression="^.{14} Director 21:.{8}:400000(03|1[0126]):00:00:00:00|^.{14} ChatLog 00:(00B9|0139)::.*取消了战斗开始倒计时。|^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$|00:0839::“.+?”任务结束了。">
         <Actions>
           <Action OrderNumber="1" LogMessageText="${_event}" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
