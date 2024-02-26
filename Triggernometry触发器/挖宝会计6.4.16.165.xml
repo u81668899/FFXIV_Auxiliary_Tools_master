@@ -170,7 +170,7 @@
       </Folder>
       <Folder FFXIVJobFilter="34359738368" Id="e66e1adc-4c58-4adf-8c54-384a5c455c21" Name="可选功能 请选择勾选" Enabled="true">
         <Folders>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123|558|712|879|960|725)$" Id="da7e0771-6468-4bce-a315-028fa1766dc1" Name="标记类" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123|558|712|879|960|725)$" Id="da7e0771-6468-4bce-a315-028fa1766dc1" Name="标记类" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="8.1神殿本地标点" Id="ce6b33e4-b737-4d5b-b60c-b80959423fd8" RegularExpression="^.{14} ChatLog 00:0839::“(运河宝物库神殿|梦羽宝殿|厄尔庇斯育体宝殿)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
@@ -619,7 +619,7 @@
                     </Condition>
                     <Conditions />
                   </Trigger>
-                  <Trigger Enabled="false" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
+                  <Trigger Enabled="true" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_money" VariableExpression="${pvar:tb_money}+${var:tb_money}" VariablePersist="True" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
@@ -1509,7 +1509,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${pvar:tb_获得迷你好友}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Action>
-              <Action OrderNumber="37" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${var:tb_money}}　图数：${pvar:tb_mapnum}　洞数：${pvar:mw_num}　底数：${pvar:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
+              <Action OrderNumber="37" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 金币：${func:format(System.Double,&quot;n0&quot;):${pvar:tb_money}}　图数：${pvar:tb_mapnum}　洞数：${pvar:mw_num}　底数：${pvar:tb_zuinum}" VariableOp="SetNumeric" ActionType="NamedCallback" ExecutionDelayExpression="10">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="38" NamedCallbackName="command" NamedCallbackParam="/${var:挖宝发送频道} 神殿：${pvar:tb_shendian}　特殊：${pvar:tb_tenum}　变动：${pvar:tb_biannum}　上级：${pvar:tb_shangnum}　中级：${pvar:tb_zhongnum}　下级：${pvar:tb_xianum}" ActionType="NamedCallback" ExecutionDelayExpression="10">
@@ -1811,7 +1811,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="8.7下底退出4" Id="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" RegularExpression="^tb_下底退出$">
+              <Trigger Enabled="false" Name="8.7下底退出4" Id="1af3d2da-2bce-4fc4-8b1c-df70a3fd0138" RegularExpression="^tb_下底退出$">
                 <Actions>
                   <Action OrderNumber="1" ActionType="SystemBeep">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1899,7 +1899,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="false" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
+          <Trigger Enabled="true" Name="7.4传送提醒" Id="729f9a3b-22a3-4d12-b4bd-f50edcfb03d1" RegularExpression="^.{14} ChatLog 00:0039::收到了.+?去往“.+?”的传送邀请。$">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="跟随传送" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1908,7 +1908,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
+          <Trigger Enabled="true" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="出现投掷" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1917,7 +1917,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
+          <Trigger Enabled="true" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 即刻咏唱" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
