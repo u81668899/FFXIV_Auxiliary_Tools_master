@@ -1871,55 +1871,52 @@
               </Trigger>
               <Trigger Enabled="false" Name="8.7下底退出3" Id="cb028c49-bb31-4e92-9d11-c1c929200a71" RegularExpression="^tb_下底退出$">
                 <Actions>
-                  <Action OrderNumber="1" ActionType="SystemBeep">
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="5000">
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="85" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="1000">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="85" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="110" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                  <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="7" NamedCallbackName="command" NamedCallbackParam="/dutyfinder" OBSEndPoint="" ActionType="NamedCallback" ExecutionDelayExpression="200">
+                  <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="106" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="106" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="300">
+                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="200">
+                  <Action OrderNumber="12" TriggerOp="DisableTrigger" TriggerId="cb028c49-bb31-4e92-9d11-c1c929200a71" ActionType="Trigger" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="13" TriggerOp="DisableTrigger" TriggerId="cb028c49-bb31-4e92-9d11-c1c929200a71" ActionType="Trigger" ExecutionDelayExpression="200">
+                  <Action OrderNumber="13" TriggerOp="DisableTrigger" TriggerId="4b5f2b26-691f-45e1-af2a-70ed13e3be77" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="14" TriggerOp="DisableTrigger" TriggerId="4b5f2b26-691f-45e1-af2a-70ed13e3be77" ActionType="Trigger">
+                  <Action OrderNumber="14" VariableName="tb_已下底" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="15" VariableName="tb_已下底" ActionType="Variable">
+                  <Action OrderNumber="15" VariableName="tb_当前箱子" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="16" VariableName="tb_当前箱子" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="17" VariableName="tb_当前变动" ActionType="Variable">
+                  <Action OrderNumber="16" VariableName="tb_当前变动" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -2164,41 +2161,40 @@
             <Triggers>
               <Trigger Enabled="true" Sequential="True" Name="6.记录层数" Id="c8ca8821-9f09-4e86-8249-c33d8701969b" RegularExpression="^.{14} ChatLog 00:08(B|3)9::(打开了通往|距|)(第(?&lt;weizhi&gt;.+?)闸?区|(?&lt;weizhi&gt;(最终区|最终闸区)))(的大门！|被封锁还有..?秒。|的封锁解除了……)$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
-                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="2" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="3" ActionType="Variable">
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="3" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${weizhi}" ExpressionTypeL="String" ExpressionR="二" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="4" ActionType="Variable">
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="4" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${weizhi}" ExpressionTypeL="String" ExpressionR="三" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="5" ActionType="Variable">
+                  <Action OrderNumber="3" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="5" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${weizhi}" ExpressionTypeL="String" ExpressionR="四" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="6" ActionType="Variable">
+                  <Action OrderNumber="4" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="6" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${weizhi}" ExpressionTypeL="String" ExpressionR="五" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="6" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="7" ActionType="Variable">
+                  <Action OrderNumber="5" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="7" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${weizhi}" ExpressionTypeL="String" ExpressionR="六" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="7" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="8" ActionType="Variable">
+                  <Action OrderNumber="6" VariableOp="SetString" VariableName="tb_运河层数" VariableExpression="8" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${weizhi}" ExpressionTypeL="String" ExpressionR="^(最终区|最终闸区)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="8" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="开门" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable">
-                    <Condition Enabled="false" Grouping="Or" />
+                  <Action OrderNumber="7" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="开门" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${tvar:tb_Data[${var:tb_运河层数}][1]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -2224,7 +2220,7 @@
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="9.最终记录2" Id="6a98d9d5-1b10-4593-8b1a-a9e2805d6afe" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
                 <Actions>
-                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable">
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable" ExecutionDelayExpression="100">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="2" TableVariableOp="Set" TableVariableName="tb_Data" TableVariableExpression="下底" TableVariableX="${var:tb_运河层数}" TableVariableY="1" ActionType="TableVariable">
