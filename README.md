@@ -24,27 +24,37 @@
 ```仓库地址:
 副本自动标点：
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E6%A0%87%E7%82%B9.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E6%A0%87%E7%82%B9.xml
 
 挖宝会计（不推荐使用远程仓库，会改版本号导致失效）：
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%8C%96%E5%AE%9D%E4%BC%9A%E8%AE%A16.4.15.165.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%8C%96%E5%AE%9D%E4%BC%9A%E8%AE%A16.4.15.165.xml
 
 潜艇记录：
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%BD%9C%E8%89%87%E8%AE%B0%E5%BD%95.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%BD%9C%E8%89%87%E8%AE%B0%E5%BD%95.xml
 
 动画城软石（6.45莫古力特供版）：
 软石（单刷用）
-https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%8A%A8%E7%94%BB%E5%9F%8E%E5%8D%95%E5%88%B7%E7%94%A8%EF%BC%88%E5%86%85%E5%90%AB%E8%BD%AF%E7%9F%B3%EF%BC%89.xml)
+https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%8A%A8%E7%94%BB%E5%9F%8E%E5%8D%95%E5%88%B7%E7%94%A8%EF%BC%88%E5%86%85%E5%90%AB%E8%BD%AF%E7%9F%B3%EF%BC%89.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%8A%A8%E7%94%BB%E5%9F%8E%E5%8D%95%E5%88%B7%E7%94%A8%EF%BC%88%E5%86%85%E5%90%AB%E8%BD%AF%E7%9F%B3%EF%BC%89.xml
+
+
 软石（平躺用）
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%8A%A8%E7%94%BB%E5%9F%8E%E8%BD%AF%E7%9F%B3.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%8A%A8%E7%94%BB%E5%9F%8E%E8%BD%AF%E7%9F%B3.xml
 
 副本发宏工具 （导入时需勾选“允许触发器操作文件”）
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/%E5%8F%91%E9%80%81%E5%89%AF%E6%9C%AC%E5%AE%8F.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/%E5%8F%91%E9%80%81%E5%89%AF%E6%9C%AC%E5%AE%8F.xml
 
 FF14信用查询（导入时需勾选“允许触发器操作文件”）
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E4%BF%A1%E7%94%A8%E6%9F%A5%E8%AF%A2/FF14%E4%BF%A1%E7%94%A8%E6%9F%A5%E8%AF%A2.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E4%BF%A1%E7%94%A8%E6%9F%A5%E8%AF%A2/FF14%E4%BF%A1%E7%94%A8%E6%9F%A5%E8%AF%A2.xml
 
 OBS自动录制
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/OBS%E8%87%AA%E5%8A%A8%E5%BD%95%E5%88%B6.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/OBS%E8%87%AA%E5%8A%A8%E5%BD%95%E5%88%B6.xml
 
 ```
 
