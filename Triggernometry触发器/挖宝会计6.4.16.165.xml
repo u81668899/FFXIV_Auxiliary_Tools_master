@@ -313,7 +313,7 @@
           <Folder Id="9a9f66ac-f7f8-46c6-86a2-e3e98d595de3" Name="小队类" Enabled="false">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Name="7.0提示转盘roll点" Id="101fdadf-9927-41fa-a8ad-965f798a6f27" RegularExpression="^.{14} ChatLog 00:0839::好像还有没拿走的财宝……$" PeriodRefire="Deny" RefirePeriodExpression="5000">
+              <Trigger Enabled="true" Name="7.0提示转盘roll点" Id="101fdadf-9927-41fa-a8ad-965f798a6f27" RegularExpression="^.{14} ChatLog 00:0839::好像还有没拿走的财宝……$" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/p roll一下点/捡皮袋/宝箱! &lt;se.4&gt;" ActionType="NamedCallback">
                     <Condition Enabled="false" Grouping="Or" />
@@ -322,7 +322,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="7.1提示进洞之前roll点" Id="a4c91904-0dda-4887-9f30-a9012028ecb4" RegularExpression="^.{14} ChatLog 00:083C::无法执行，尚未完成分配。$" PeriodRefire="Deny" RefirePeriodExpression="5000">
+              <Trigger Enabled="true" Name="7.1提示进洞之前roll点" Id="a4c91904-0dda-4887-9f30-a9012028ecb4" RegularExpression="^.{14} ChatLog 00:083C::无法执行，尚未完成分配。$" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/p roll一下点/捡皮袋/宝箱! &lt;se.4&gt;" ActionType="NamedCallback">
                     <Condition Enabled="false" Grouping="Or" />
@@ -331,7 +331,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Sequential="True" Name="6.4小队统计查询" Id="f40d757b-b4c1-46e7-a792-5de50b5cfa87" RegularExpression="^.{14} ChatLog 00:000E:.*:((挖宝|掉落|寻宝)(查询|统计)|(查询|统计)(挖宝|掉落|寻宝))$" RefirePeriodExpression="5000">
+              <Trigger Enabled="true" Sequential="True" Name="6.4小队统计查询" Id="f40d757b-b4c1-46e7-a792-5de50b5cfa87" RegularExpression="^.{14} ChatLog 00:000E:.*:((挖宝|掉落|寻宝)(查询|统计)|(查询|统计)(挖宝|掉落|寻宝))$" RefirePeriodExpression="5000">
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="tb_查询发送" LogProcess="True" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
