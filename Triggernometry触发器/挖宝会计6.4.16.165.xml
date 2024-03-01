@@ -1988,7 +1988,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="9.最终记录2" Id="b133eb94-6e32-41a0-af38-6acc2b4a6e20" RegularExpression=" Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|视财如命 代恩·奥瑟|法厄同|纳西索斯|希波墨涅斯):">
+              <Trigger Enabled="true" Sequential="True" Name="9.成功记录" Id="b133eb94-6e32-41a0-af38-6acc2b4a6e20" RegularExpression=" Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|视财如命 代恩·奥瑟|法厄同|纳西索斯|希波墨涅斯):">
                 <Actions>
                   <Action OrderNumber="1" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="tb_Data" TableVariableExpression="${var:tb_转盘层数}-2" TableVariableX="8" TableVariableY="1" ActionType="TableVariable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -2078,7 +2078,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="9.最终记录" Id="db70c9a1-2a9c-46c1-82d1-212dc2751803" RegularExpression="“(.+?)”任务结束了。">
+              <Trigger Enabled="true" Sequential="True" Name="8.失败记录" Id="db70c9a1-2a9c-46c1-82d1-212dc2751803" RegularExpression="“(.+?)”任务结束了。">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_转盘层数" VariableExpression="${var:tb_转盘层数}+1" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -2171,7 +2171,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="9.最终记录2" Id="6a98d9d5-1b10-4593-8b1a-a9e2805d6afe" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
+              <Trigger Enabled="true" Sequential="True" Name="9.成功记录2" Id="6a98d9d5-1b10-4593-8b1a-a9e2805d6afe" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable" ExecutionDelayExpression="100">
                     <Condition Enabled="false" Grouping="Or" />
@@ -2199,7 +2199,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="9.最终记录" Id="5a2611d5-c92f-48c6-b4c8-e78678a7cba1" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务结束了。$">
+              <Trigger Enabled="true" Sequential="True" Name="8.失败记录" Id="5a2611d5-c92f-48c6-b4c8-e78678a7cba1" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务结束了。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_运河层数" VariableExpression="${var:tb_运河层数}+1" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -2430,6 +2430,9 @@
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="33" Enabled="False" ActionType="Placeholder" Description="　　需要在转盘与运河的分组里分别添加对应的地图ID" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="34" Enabled="False" ActionType="Placeholder" Description="　　在转盘里添加下底boss的名称" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
