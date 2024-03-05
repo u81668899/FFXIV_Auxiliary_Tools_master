@@ -260,7 +260,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${evar:雇员text}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="18" VariableName="收雇员" ActionType="Variable">
+          <Action OrderNumber="18" VariableName="收雇员" ActionType="Variable" ExecutionDelayExpression="1000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="19" VariableName="雇员yes" ActionType="Variable">
