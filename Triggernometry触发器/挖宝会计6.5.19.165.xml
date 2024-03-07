@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.5.18.165" Enabled="true">
+  <ExportedFolder Id="bafc2a0e-327a-41ca-aadb-527997abb91c" Name="挖宝会计6.5.19.165" Enabled="true">
     <Folders>
       <Folder Id="e02cb1de-582c-4d03-b04f-7c1be31c8d13" Name="基础功能 请全部勾选" Enabled="true">
         <Folders />
@@ -15,7 +15,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="1.4记录金币" Id="2d91d4af-761a-45a1-ad8f-0232db6182a5" RegularExpression="^.{14} ChatLog 00:003E::获得了(?&lt;gold0&gt;[\d,]+)金币。$">
             <Actions>
@@ -24,7 +23,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="4.0地图数" Id="d6a759c0-1e96-42c4-9997-e2d73ab61130" RegularExpression="^.{14} ChatLog 00:0839::将陷阱引来的魔物全部打倒了！$">
             <Actions>
@@ -42,7 +40,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="4.1绿图地图数" Id="08a8eabf-ad04-439e-abe3-c149593d65c6" RegularExpression="^.{14} 123ChatLog 00:0839::“运河宝物库深层”任务开始。$|^.{14} ChatLog 00:0839::发现传送魔纹！$">
             <Actions>
@@ -54,7 +51,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="5.0魔纹" Id="7d938996-59c8-4bba-b633-6afe895217ef" RegularExpression="^.{14} ChatLog 00:0839::通往宝物库的传送魔纹出现了！$">
             <Actions>
@@ -75,7 +71,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="4.4最终区" Id="d5d6a26b-6df4-425c-97b7-88c276db9b2e" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
             <Actions>
@@ -90,7 +85,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="1.1挖宝重置" Id="98586a5d-43ef-4157-ad8d-684e793d4fb7" RegularExpression="^tb_挖宝重置$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -138,7 +132,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="1.2提示招募设置" Id="67070e91-1297-4707-b6e9-445d48c9f161" RegularExpression="^.{14} ChatLog 00:00(39)::(?&lt;tb_zhaomu&gt;.*)">
             <Actions>
@@ -164,7 +157,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -180,7 +172,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="8.2曼德拉标记" Id="e941717b-a74e-4526-9b21-4afd3a7cdb56" RegularExpression="^.{14} AddCombatant 03:(?&lt;pid&gt;.{8}):(?&lt;name&gt;[^:]*):" Scheduling="FromLastAction" Description="原地 AC3&#xD;&#xA;正对boss AC4&#xD;&#xA;背对boss AC5">
                 <Actions>
@@ -211,7 +202,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="8.3盗宝团标记" Id="feea522d-ac7f-4839-87fc-59210d785743" RegularExpression="^.{14} AddCombatant 03:(?&lt;pid&gt;.{8}):(?&lt;name&gt;[^:]*):" RefirePeriodExpression="100" Description="原地 AC3&#xD;&#xA;正对boss AC4&#xD;&#xA;背对boss AC5">
                 <Actions>
@@ -231,7 +221,6 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(哥布林寻宝猎人|鲶鱼精盗贼|金鲶|水妖魔术师|黄金协助机|育体拉姆帕斯)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -276,7 +265,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="2.1自开招募重置" Id="6ff5db27-9478-4350-88a3-4faad5aca5f1" RegularExpression="^.{14} ChatLog 00:0039::开始招募队员。$">
                 <Actions>
@@ -288,7 +276,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="2.2加入小队重置" Id="e2d4e138-4bb5-4fc4-abad-3360beb2d293" RegularExpression="^.{14} ChatLog 00:..39::加入了.{1,10}的小队。$">
                 <Actions>
@@ -306,7 +293,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -320,7 +306,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="7.1提示进洞之前roll点" Id="a4c91904-0dda-4887-9f30-a9012028ecb4" RegularExpression="^.{14} ChatLog 00:083C::无法执行，尚未完成分配。$" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
@@ -329,7 +314,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="6.4小队统计查询" Id="f40d757b-b4c1-46e7-a792-5de50b5cfa87" RegularExpression="^.{14} ChatLog 00:000E:.*:((挖宝|掉落|寻宝)(查询|统计)|(查询|统计)(挖宝|掉落|寻宝))$" RefirePeriodExpression="5000">
                 <Actions>
@@ -344,7 +328,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -358,7 +341,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="6.6统计包含运河" Id="885004f0-6c39-43c4-8219-431741214ef7" RegularExpression="^tb_查询发送$">
                 <Actions>
@@ -367,7 +349,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="6.7统计包含招募" Id="cdec991d-daa4-4e02-88b5-97d09b3f582e" RegularExpression="^tb_查询发送$">
                 <Actions>
@@ -376,7 +357,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -394,7 +374,6 @@
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${zhaomu}" ExpressionTypeL="String" ExpressionR="^信息：《" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
             </Condition>
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="8.0门发光了！" Id="107a0465-a3ee-487e-9871-0c3663543f62" RegularExpression="::(.+?)的门发光了">
             <Actions>
@@ -403,7 +382,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="4.3出洞计图显示" Id="406410b5-1623-4b32-acd7-e200718fb92c" RegularExpression="^.{14} ChatLog 00:0839::“(运河宝物库神殿|水城宝物库|梦羽宝境|运河宝物库|运河宝物库深层|梦羽宝殿|惊奇百宝城|厄尔庇斯育体宝殿)”任务结束了。$">
             <Actions>
@@ -412,7 +390,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="4.5手动设置地图数" Id="b0a6c131-4950-4401-a7f4-9c639b8ede12" RegularExpression="^.{14} ChatLog 00:0038::地图(?&lt;suanshu&gt;\+|-|\*)(?&lt;map_manual&gt;\d{0,3})$">
             <Actions>
@@ -431,7 +408,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -479,7 +455,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="神殿数量" Id="6caabe6e-21de-4810-9c98-6872943aaaa4" RegularExpression="^.{14} ChatLog 00:0839::“(运河宝物库神殿|梦羽宝殿|厄尔庇斯育体宝殿)”任务开始。$">
                 <Actions>
@@ -488,7 +463,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="g15下底" Id="3a8995be-ca17-4b89-970c-2cae47d5378f" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?(纳西索斯|法厄同|希波墨涅斯)出现了！">
                 <Actions>
@@ -497,7 +471,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="g12下底" Id="89b7e846-5357-47ed-a068-c4af04839096" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?代恩·奥瑟出现了！">
                 <Actions>
@@ -506,7 +479,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="g10下底" Id="afbd11cb-25bd-45da-ac4b-d379f41014c8" RegularExpression="^.{14} ChatLog 00:0839::[^:]*?(神殿曼提克|神殿变种龙|神殿阿班达)出现了！" RefirePeriodExpression="10">
                 <Actions>
@@ -515,7 +487,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -552,9 +523,8 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="鞣革制的隐藏地图" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
+                  <Trigger Enabled="false" Sequential="True" Name="1.0变量转移" Id="9fbb540c-9637-4a2c-bf7d-d1e5a5d73f01" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="999999999">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tb_money" VariableExpression="${pvar:tb_money}+${var:tb_money}" VariablePersist="True" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
@@ -1097,7 +1067,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1133,7 +1102,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="深层传送魔纹的地图" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="纳夏薄绢" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1175,7 +1143,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="顺柔剂" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="小牛皮" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1223,7 +1190,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="灼热的火角" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="竞技布" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1258,14 +1224,13 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${item}" ExpressionTypeL="String" ExpressionR="金鲶" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers />
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(558|712|879|960|725)$" Id="fe1cf2df-04ca-4d36-a01d-bac4255b3f75" Name="运河计算" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(558|712|879|1000|725)$" Id="fe1cf2df-04ca-4d36-a01d-bac4255b3f75" Name="运河计算" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="运河位置记录2" Id="7d83809d-6643-4baa-944f-df845ba6825f" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务结束了。$|^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
@@ -1278,7 +1243,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="运河位置记录1" Id="7dba172a-91e3-4c8e-acd9-0d3c5e88b36d" RegularExpression="^.{14} ChatLog 00:08(B|3)9::((打开了通往|距|)(第(?&lt;weizhi&gt;.+?)闸?区|(?&lt;weizhi&gt;(最终区|最终闸区)))(的大门！|被封锁还有..?秒。|的封锁解除了……)|“.+?”任务开始。)$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
@@ -1332,7 +1296,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1351,7 +1314,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="6.1统计发送 分散版《选一个打钩》" Id="f4d8a9e9-a32b-4f0e-b8d1-0f5a65429e20" RegularExpression="^tb_统计发送$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -1594,7 +1556,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="6.2统计发送 整合版《选一个打钩》" Id="8e8831aa-b811-4866-892b-d17d9878ec0f" RegularExpression="^tb_统计发送$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -1821,7 +1782,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -1846,7 +1806,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Sequential="True" Name="8.5下底退出2" Id="4b5f2b26-691f-45e1-af2a-70ed13e3be77" RegularExpression="^.{14} ChatLog 00:003E::获得了(?&lt;gold0&gt;[\d,]+)金币。$">
                 <Actions>
@@ -1867,7 +1826,6 @@
                   <ConditionSingle Enabled="true" ExpressionL="${func:format(System.Double,&quot;g&quot;):${gold0}}" ExpressionTypeL="Numeric" ExpressionR="50000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:tb_已下底}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Name="8.7下底退出3" Id="cb028c49-bb31-4e92-9d11-c1c929200a71" RegularExpression="^tb_下底退出$">
                 <Actions>
@@ -1921,7 +1879,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1934,7 +1891,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="7.3投掷提醒" Id="bfbbe945-8203-4e54-8925-86c317b8e25e" RegularExpression="^.{14} ChatLog 00:0039::获得了新的战利品.+?。$" PeriodRefire="Deny" RefirePeriodExpression="500">
             <Actions>
@@ -1943,7 +1899,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="7.2青魔进本自动自爆" Id="fdba44ed-5f56-4522-a76b-c54555f8b5a3" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务开始。$">
             <Actions>
@@ -1982,7 +1937,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="8.6副本内防T" Id="ec0a011a-aa0f-4bda-a7c2-a18e2d3f8c7b" RegularExpression="^.{14} ChatLog 00:0039::已经.分钟没有进行任何操作，超过10分钟会被强制退出任务。" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="60000">
             <Actions>
@@ -2006,7 +1960,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -2034,7 +1987,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="9.成功记录" Id="b133eb94-6e32-41a0-af38-6acc2b4a6e20" RegularExpression=" Death 19:.{8}:(神殿阿班达|神殿曼提克|神殿变种龙|视财如命 代恩·奥瑟|法厄同|纳西索斯|希波墨涅斯):">
                 <Actions>
@@ -2063,7 +2015,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="2.层数记录" Id="fd6ccc0f-1bb9-4f40-8c6d-014ffae01e27" RegularExpression="^.{14} ChatLog 00:0839::.*?发动了(?&lt;yishi&gt;.+?)，[^:]*出现了！|^.{14} ChatLog 00:0839::(?&lt;yishi&gt;召唤失败)，[^:]*出现了！">
                 <Actions>
@@ -2142,7 +2093,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="8.失败记录" Id="db70c9a1-2a9c-46c1-82d1-212dc2751803" RegularExpression="“(.+?)”任务结束了。">
                 <Actions>
@@ -2177,11 +2127,10 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(558|712|879|960|725)$" Id="aac34eae-5464-4dd5-9cba-c88b443972cd" Name="运河" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(558|712|879|1000|725)$" Id="aac34eae-5464-4dd5-9cba-c88b443972cd" Name="运河" Enabled="true">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Sequential="True" Name="6.记录层数" Id="c8ca8821-9f09-4e86-8249-c33d8701969b" RegularExpression="^.{14} ChatLog 00:08(B|3)9::(打开了通往|距|)(第(?&lt;weizhi&gt;.+?)闸?区|(?&lt;weizhi&gt;(最终区|最终闸区)))(的大门！|被封锁还有..?秒。|的封锁解除了……)$" PeriodRefire="Deny" RefirePeriodExpression="2000">
@@ -2223,7 +2172,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="1.启动" Id="f33d6452-4694-4353-9d32-f11a1545feec" RegularExpression="^.{14} ChatLog 00:0839::“(?&lt;baowuku&gt;.+?)”任务开始。$">
                 <Actions>
@@ -2241,7 +2189,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="9.成功记录2" Id="6a98d9d5-1b10-4593-8b1a-a9e2805d6afe" RegularExpression="^.{14} ChatLog 00:0839::(最终区|最终闸区)的封锁解除了……$">
                 <Actions>
@@ -2270,7 +2217,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="8.失败记录" Id="5a2611d5-c92f-48c6-b4c8-e78678a7cba1" RegularExpression="^.{14} ChatLog 00:0839::“(.+?)”任务结束了。$">
                 <Actions>
@@ -2302,7 +2248,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -2337,7 +2282,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="0.运河初始化" Id="9ab32906-7d48-4454-89c3-48bddf6a7279" RegularExpression="^运河表格初始化$">
                 <Actions>
@@ -2373,7 +2317,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="0.初始化" Id="363c90ea-1c10-4ddf-b12f-d28f5594aa83" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000">
                 <Actions>
@@ -2389,7 +2332,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -2407,9 +2349,8 @@
         <Condition Enabled="false" Grouping="Or">
           <ConditionSingle Enabled="false" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="^(水城宝物库|运河宝物库|运河宝物库神殿|运河宝物库深层|梦羽宝境|梦羽宝殿|惊奇百宝城|厄尔庇斯育体宝殿)$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
         </Condition>
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="false" Name="维护用日志" Id="727a11cd-343e-4ac0-bcd2-546ef50648c5" RegularExpression="" Description="版本号意义为 游戏版本+会计版本+后缀by&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;6.5.18.165、アスレーテースクロス批量替换成了竞技布&#xD;&#xA;6.4.17.165、修复转盘的最终轮盘位导致的bug（需删除重铺），修复下底的条件错误问题，修改一些变量格式的获取方式&#xD;&#xA;6.4.16.165、修改一些常数变量为硬盘储存，临时关闭ACT可保留会计数据&#xD;&#xA;6.4.15.165、增加运河记录的正则，修复挂机无法记录的问题&#xD;&#xA;6.4.14.165、增加表格记录功能，大多都是空有名字不会启用的触发器，思考怎么完善&#xD;&#xA;6.4.13.165、增加招募显示开关，修改查询触发词，优化下底退出考虑到变动下底，再次优化招募词&#xD;&#xA;6.4.12.165、修复运河记录的问题，延长统计发送的时间避免act卡顿，增加アスレーテースクロス用于6.5批量替换&#xD;&#xA;6.4.11.165、增加运河记录，增加防T，修改物品变量，重置触发将不需要新版本维护，并增加变量转移，便于旧版本临时转移新版本，修改神殿与运河的触发带有开关形式&#xD;&#xA;6.4.10.165、改进下底退本的方式，只在开了宝箱后才会退本，增加2.2加入小队重置，增加招募进组触发的小队提示条件，增加加入非挖宝小队时的招募提示，去除部分臃肿变量便于观察，新增4.6手动设置招募内容&#xD;&#xA;6.4.9.165、新增8.2曼德拉标记与8.3盗宝团标记与8.4下底退出，并新增维护日志用于与后人对接&#xD;&#xA;6.4.8.165、新增8.1神殿本地标点&#xD;&#xA;6.4.7.165、修改掉落统计 战利品→获得了，统计会变迟，但会使得单人也可以获得统计&#xD;&#xA;6.4.6.165、新增统计发送整合版，用于避免各种材料×0的现象&#xD;&#xA;6.4.5.165、新增神殿计算中，特殊召唤与变动召唤&#xD;&#xA;6.4.4.165、新增神殿的统计&#xD;&#xA;6.4.3.165、新增招募内容的记录，记录方式较为卡时间差&#xD;&#xA;6.4.2.165、修改统计发送的臃肿方式，整合为一便于维护&#xD;&#xA;6.4.1.165、就是把群里全部的会计全合一起进行魔改了，并新增了G12的部分老材料与单人绿图，并增加clear用于与标点触发器进行联动&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;该触发器仅为个人兴趣维护，有大量个人魔改在内，如若不喜请选择他人版本……&#xD;&#xA;">
+      <Trigger Enabled="false" Name="维护用日志" Id="727a11cd-343e-4ac0-bcd2-546ef50648c5" RegularExpression="" Description="版本号意义为 游戏版本+会计版本+后缀by&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;6.5.19.165、运河忘记把G14写进去了，擦一擦修一修&#xD;&#xA;6.5.18.165、アスレーテースクロス批量替换成了竞技布&#xD;&#xA;6.4.17.165、修复转盘的最终轮盘位导致的bug（需删除重铺），修复下底的条件错误问题，修改一些变量格式的获取方式&#xD;&#xA;6.4.16.165、修改一些常数变量为硬盘储存，临时关闭ACT可保留会计数据&#xD;&#xA;6.4.15.165、增加运河记录的正则，修复挂机无法记录的问题&#xD;&#xA;6.4.14.165、增加表格记录功能，大多都是空有名字不会启用的触发器，思考怎么完善&#xD;&#xA;6.4.13.165、增加招募显示开关，修改查询触发词，优化下底退出考虑到变动下底，再次优化招募词&#xD;&#xA;6.4.12.165、修复运河记录的问题，延长统计发送的时间避免act卡顿，增加アスレーテースクロス用于6.5批量替换&#xD;&#xA;6.4.11.165、增加运河记录，增加防T，修改物品变量，重置触发将不需要新版本维护，并增加变量转移，便于旧版本临时转移新版本，修改神殿与运河的触发带有开关形式&#xD;&#xA;6.4.10.165、改进下底退本的方式，只在开了宝箱后才会退本，增加2.2加入小队重置，增加招募进组触发的小队提示条件，增加加入非挖宝小队时的招募提示，去除部分臃肿变量便于观察，新增4.6手动设置招募内容&#xD;&#xA;6.4.9.165、新增8.2曼德拉标记与8.3盗宝团标记与8.4下底退出，并新增维护日志用于与后人对接&#xD;&#xA;6.4.8.165、新增8.1神殿本地标点&#xD;&#xA;6.4.7.165、修改掉落统计 战利品→获得了，统计会变迟，但会使得单人也可以获得统计&#xD;&#xA;6.4.6.165、新增统计发送整合版，用于避免各种材料×0的现象&#xD;&#xA;6.4.5.165、新增神殿计算中，特殊召唤与变动召唤&#xD;&#xA;6.4.4.165、新增神殿的统计&#xD;&#xA;6.4.3.165、新增招募内容的记录，记录方式较为卡时间差&#xD;&#xA;6.4.2.165、修改统计发送的臃肿方式，整合为一便于维护&#xD;&#xA;6.4.1.165、就是把群里全部的会计全合一起进行魔改了，并新增了G12的部分老材料与单人绿图，并增加clear用于与标点触发器进行联动&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;该触发器仅为个人兴趣维护，有大量个人魔改在内，如若不喜请选择他人版本……&#xD;&#xA;">
         <Actions>
           <Action OrderNumber="1" Enabled="False" ActionType="Placeholder" Description="下面为维护用新增功能的说明书，右侧描述为版本更新日志，此文件不是使用说明书，也没有说明书！" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
@@ -2515,7 +2456,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
