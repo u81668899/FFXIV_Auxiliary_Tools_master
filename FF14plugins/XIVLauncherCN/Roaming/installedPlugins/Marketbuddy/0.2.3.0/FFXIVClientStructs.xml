@@ -1,0 +1,2699 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FFXIVClientStructs</name>
+    </assembly>
+    <members>
+        <member name="T:FFXIVClientStructs.Attributes.FixedArrayAttribute">
+            <summary>
+            Describes a Fixed Buffer to assist with automatic parsing.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Application.Network.WorkDefinitions.EnterContentInfo.ContentFinderConditionId">
+            <summary>
+            The ID of the ContentFinderCondition EXD that has popped.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.GetRecastTimeForGroup(System.Int32)">
+            <summary>
+            Gets the recast time (see <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.Total"/> for a specific recast group.
+            </summary>
+            <remarks>
+            Compared to reading the struct directly, this method will correct cases where multi-charge actions are still
+            locked to a single charge at the player's current level.
+            </remarks>
+            <param name="recastGroupId">The recast group ID to get the recast time for.</param>
+            <returns>Returns the time until this action is "fully charged."</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.GetAdditionalRecastGroup(FFXIVClientStructs.FFXIV.Client.Game.ActionType,System.UInt32)">
+            <summary>
+            Gets the additional recast group for a specific action.
+            </summary>
+            <remarks>
+            Appears to be used for actions that both have their own cooldown in addition to adhering to GCD.
+            </remarks>
+            <param name="actionType">The action type to look up.</param>
+            <param name="actionId">The action ID to look up.</param>
+            <returns>A cooldown group ID, or -1 if invalid.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.StartCooldown(FFXIVClientStructs.FFXIV.Client.Game.ActionType,System.UInt32)">
+            <summary>
+            Start a cooldown cycle for the specified action. Upon calling, the game will begin to track state in the
+            relevant <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail"/>, which can be retrieved separately. Consult that struct's documentation for
+            more information.
+            </summary>
+            <remarks>
+            This method should not be called by developers and is instead provided for hooking and API completeness.
+            </remarks>
+            <param name="actionType">The type of action (generally, Spell) to trigger a cooldown for.</param>
+            <param name="actionId">The ID of the action to trigger a cooldown for.</param>
+            <returns>Unknown.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.IsActionOffCooldown(FFXIVClientStructs.FFXIV.Client.Game.ActionType,System.UInt32)">
+            <summary>
+            Check if a specific action is "off cooldown" and can be used again. This method will account for the slidecast
+            window.
+            </summary>
+            <param name="actionType">The type of action to check.</param>
+            <param name="actionId">The ID of the action to check.</param>
+            <returns>Returns true if the action is off-cooldown or slidecastable.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.GetCurrentCharges(System.UInt32)">
+            <summary>
+            Gets the number of charges currently accessible to the player for the specified action. For actions that do not
+            use charges, this method will cap at 1.
+            </summary>
+            <param name="actionId">The Action ID to check against.</param>
+            <returns>Returns a uint.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.GetDutyActionId(System.UInt16)">
+            <summary>
+            Returns the ID of the action present at the specified Duty Action slot.
+            </summary>
+            <param name="dutyActionSlot">The Duty Action slot number (0 or 1) to look up.</param>
+            <returns>Returns an Action ID.</returns>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail">
+            <summary>
+            A struct representing information about recast timers/cooldowns for a specific RecastGroup. A recast group may be
+            shared between one (or more) actions, depending on the group in question.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.IsActive">
+            <summary>
+            A byte representing if this recast group is currently "active." When this is a non-zero value (true), this
+            recast group is actively in cooldown.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.ActionID">
+            <summary>
+            The last Action ID that triggered an update for this recast group. 
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.Elapsed">
+            <summary>
+            The current "elapsed" time of this action's recharge. For most actions, this value will be set to zero when the
+            action is used. For actions with multiple charges, this value will give "credit" for unspent actions.
+            </summary>  
+            <remarks>
+            For multi-charge actions, it helps to think of this field as representing the current value of a resource gauge.
+            This value represents the "current level" of the resource gauge, with each second adding 1 unit to the gauge up
+            until the maximum as defined in the <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.Total"/> field.
+            <para />
+            When a normal action is cast, this gauge is "depleted" to zero. When a multi-charge action is cast, however,
+            the appropriate value (defined by the action, but generally the recharge time) is subtracted from this value.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.Total">
+            <summary>
+            The total number of seconds this recast group takes to go from "fully exhausted" to "fully charged." For most
+            actions, this will simply be the adjusted recast time from <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.GetAdjustedRecastTime(FFXIVClientStructs.FFXIV.Client.Game.ActionType,System.UInt32,System.Byte)"/>
+            (which displays in the tooltip UI as the "recast time"). Multi-charge actions such as Ninja's Mudra will show
+            the total charge time (the Adjusted Recast Time multiplied by the number of charges this action has at max
+            level).
+            </summary>
+            <remarks>
+            Note that the total value shown here depends on the last action used. For example, if a specific action is
+            bound to the GCD but is faster/slower than the normal GCD, this value will be set accordingly.
+            <para />
+            Continuing the resource gauge analogy from <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.RecastDetail.Elapsed"/>, this field would represent the "cap" of the
+            resource gauge. For normal actions, the resource gauge must be completely filled before the action can be used
+            again. Multi-charge actions will instead allow the gauge to charge to the maximum number of actions allowed.
+            <para />
+            It is recommended to use <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.ActionManager.GetRecastTime(FFXIVClientStructs.FFXIV.Client.Game.ActionType,System.UInt32)"/> over this field, as it handles an edge case
+            in charge management.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.ActionTimelineManager.GetHeightAdjustActionTimelineRowId(FFXIVClientStructs.FFXIV.Client.Game.Object.GameObjectID,System.Int32)">
+            <summary> Computes height difference between the player the action timeline belongs to and target to height adjust emotes. </summary>
+            <param name="target"> The object id of the target of the emote. </param>
+            <param name="emoteId"> The row id of the executed emote. </param>
+            <returns> Returns 0 or one of the row ids for height adjustment for emotes (like kneeling to hug small objects). </returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.LookTargetId">
+            <summary>
+            The current target for this character's gaze. Can be set independently of soft or hard targets, and may be set
+            by NPCs or minions. For players, an action cast will generally target the LookTarget (which generally will be
+            the soft target if set, then the hard target).
+            </summary>
+            <remarks>
+            Unlike other GameObjectIDs, this one appears to be set to fully 0 if the player is not looking at anything.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.TargetId">
+            <summary>
+            The current (hard) target for this Character. This will not be set for the LocalPlayer.
+            </summary>
+            <remarks>
+            Developers should generally use <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.GetTargetId"/> over reading this field directly, as it will
+            properly handle resolving the target for the local player.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.SoftTargetId">
+            <summary>
+            The current soft target for this Character. This will not be set for the LocalPlayer.
+            </summary>
+            <remarks>
+            Developers should generally use <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.GetSoftTargetId"/> over reading this field directly, as it will
+            properly handle resolving the soft target for the local player.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.GetTargetId">
+            <summary>
+            Gets the (hard) target ID for this character. If this character is the LocalPlayer, this will instead read the
+            target ID from the <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.Control.TargetSystem"/>. Used for calculating ToT via /assist.
+            </summary>
+            <returns>Returns the object ID of this character's target.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.GetSoftTargetId">
+            <summary>
+            Gets the soft target ID for this character. If this character is the LocalPlayer, this will instead read the
+            soft target ID from the <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.Control.TargetSystem"/>.
+            </summary>
+            <returns>Returns the object ID of this character's target.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.GetParentCharacter">
+            <summary> Can only be used for Mounts, Minions, and Ornaments. Literally just checks if the game object at index - 1 is a character and returns that. </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.CalculateHeight">
+            <summary> Uses TransformationId, Clan, BodyType, Gender and Height as well as RSP scaling values to calculate current height.  </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.GetCastInfo">
+            <summary>
+            Gets the <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.CastInfo"/> struct for this Character.
+            May be null for certain Character subclasses, e.g. <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.Character.Character.Companion"/>.
+            </summary>
+            <returns>Returns a pointer to a CastInfo struct, or <c>null</c>.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterData.CombatTagType">
+            <summary>
+            The type of tagger, as represented in <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterData.CombatTaggerId"/>. Known values:
+            <list type="bullet">
+            <item>0 - Entity Not Tagged</item>
+            <item>1 - Character Tag (players, battle NPCs, etc.)</item>
+            <item>2 - Party Tag (PVP?)</item>
+            <item>4 - Observed, but unknown.</item>
+            </list>
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterData.CombatTaggerId">
+            <summary>
+            The GameObjectID of the entity that currently has the combat tag on this character. May be set to a party ID if
+            certain conditions are met (PVP?). See <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterData.CombatTagType"/> for information about the type of tagger.
+            </summary>
+            <remarks>
+            A tagger is generally the first entity to deal damage to this character, and will persist until that entity
+            has died, at which point it will reset.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.DrawDataContainer.HideWeapons(System.Boolean)">
+            <summary>
+            Called when Hide/Display Weapons when sheathed is toggled or /displayarms is used.
+            </summary>
+            <param name="hide">When false, weapons will be turned visible, when true, they will be hidden.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.DrawDataContainer.HideHeadgear(System.UInt32,System.Boolean)">
+            <summary>
+            Called when Hide/Display Headgear is toggled or /displayhead is used.
+            </summary>
+            <param name="unk">Almost always 0, but sometimes not?</param>
+            <param name="hide">When false, the headgear will be turned visible, when true it will be hidden.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Character.DrawDataContainer.SetVisor(System.Boolean)">
+            <summary>
+            Called when Manually Adjust Visor is toggled or /visor is used.
+            </summary>
+            <param name="state">When true, visor will be toggled on, when false it will be toggled off.</param>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsNormalConditions">
+            <summary>
+            Unable to execute command under normal conditions.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUnconscious">
+            <summary>
+            Unable to execute command while unconscious.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsEmoting">
+            <summary>
+            Unable to execute command during an emote.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsMounted">
+            <summary>
+            Unable to execute command while mounted.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCrafting">
+            <summary>
+            Unable to execute command while crafting.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsGathering">
+            <summary>
+            Unable to execute command while gathering.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsMeldingMateria">
+            <summary>
+            Unable to execute command while melding materia.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOperatingSiegeMachine">
+            <summary>
+            Unable to execute command while operating a siege machine.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCarryingObject">
+            <summary>
+            Unable to execute command while carrying an object.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsMounted2">
+            <summary>
+            Unable to execute command while mounted.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInThatPosition">
+            <summary>
+            Unable to execute command while in that position.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsChocoboRacing">
+            <summary>
+            Unable to execute command while chocobo racing.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsPlayingMiniGame">
+            <summary>
+            Unable to execute command while playing a mini-game.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsPlayingLordOfVerminion">
+            <summary>
+            Unable to execute command while playing Lord of Verminion.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsParticipatingInCustomMatch">
+            <summary>
+            Unable to execute command while participating in a custom match.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsPerforming">
+            <summary>
+            Unable to execute command while performing.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupied">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInCombat">
+            <summary>
+            Unable to execute command during combat.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCasting">
+            <summary>
+            Unable to execute command while casting.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSufferingStatusAffliction">
+            <summary>
+            Unable to execute command while suffering status affliction.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSufferingStatusAffliction2">
+            <summary>
+            Unable to execute command while suffering status affliction.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupied30">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupiedInEvent">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupiedInQuestEvent">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupied33">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsBoundByDuty">
+            <summary>
+            Unable to execute command while bound by duty.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupiedInCutSceneEvent">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInDuelingArea">
+            <summary>
+            Unable to execute command while in a dueling area.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsTradeOpen">
+            <summary>
+            Unable to execute command while a trade is open.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupied38">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupied39">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCrafting40">
+            <summary>
+            Unable to execute command while crafting.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsPreparingToCraft">
+            <summary>
+            Unable to execute command while preparing to craft.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsGathering42">
+            <summary>
+            Unable to execute command while gathering.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsFishing">
+            <summary>
+            Unable to execute command while fishing.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInBetweenAreas">
+            <summary>
+            Unable to execute command while between areas.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsStealthed">
+            <summary>
+            Unable to execute command while stealthed.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsJumping">
+            <summary>
+            Unable to execute command while jumping.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsAutorunActive">
+            <summary>
+            Unable to execute command while auto-run is active.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOccupiedSummoningBell">
+            <summary>
+            Unable to execute command while occupied.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInBetweenAreas51">
+            <summary>
+            Unable to execute command while between areas.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSystemError">
+            <summary>
+            Unable to execute command due to system error.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsLoggingOut">
+            <summary>
+            Unable to execute command while logging out.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsConditionLocation">
+            <summary>
+            Unable to execute command at this location.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWaitingForDuty">
+            <summary>
+            Unable to execute command while waiting for duty.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsBoundByDuty56">
+            <summary>
+            Unable to execute command while bound by duty.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUnknown57">
+            <summary>
+            Unable to execute command at this time.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWatchingCutscene">
+            <summary>
+            Unable to execute command while watching a cutscene.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWaitingForDutyFinder">
+            <summary>
+            Unable to execute command while waiting for Duty Finder.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCreatingCharacter">
+            <summary>
+            Unable to execute command while creating a character.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsJumping61">
+            <summary>
+            Unable to execute command while jumping.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsPvPDisplayActive">
+            <summary>
+            Unable to execute command while the PvP display is active.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSufferingStatusAffliction63">
+            <summary>
+            Unable to execute command while suffering status affliction.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsMounting">
+            <summary>
+            Unable to execute command while mounting.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCarryingItem">
+            <summary>
+            Unable to execute command while carrying an item.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUsingPartyFinder">
+            <summary>
+            Unable to execute command while using the Party Finder.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUsingHousingFunctions">
+            <summary>
+            Unable to execute command while using housing functions.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsTransformed">
+            <summary>
+            Unable to execute command while transformed.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsOnFreeTrial">
+            <summary>
+            Unable to execute command while on the free trial.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsBeingMoved">
+            <summary>
+            Unable to execute command while being moved.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsMounting71">
+            <summary>
+            Unable to execute command while mounting.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSufferingStatusAffliction72">
+            <summary>
+            Unable to execute command while suffering status affliction.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSufferingStatusAffliction73">
+            <summary>
+            Unable to execute command while suffering status affliction.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsRegisteringForRaceOrMatch">
+            <summary>
+            Unable to execute command while registering for a race or match.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWaitingForRaceOrMatch">
+            <summary>
+            Unable to execute command while waiting for a race or match.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWaitingForTripleTriadMatch">
+            <summary>
+            Unable to execute command while waiting for a Triple Triad match.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInFlight">
+            <summary>
+            Unable to execute command while in flight.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWatchingCutscene78">
+            <summary>
+            Unable to execute command while watching a cutscene.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInDeepDungeon">
+            <summary>
+            Unable to execute command while delving into a deep dungeon.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsSwimming">
+            <summary>
+            Unable to execute command while swimming.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsDiving">
+            <summary>
+            Unable to execute command while diving.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsRegisteringForTripleTriadMatch">
+            <summary>
+            Unable to execute command while registering for a Triple Triad match.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWaitingForTripleTriadMatch83">
+            <summary>
+            Unable to execute command while waiting for a Triple Triad match.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsParticipatingInCrossWorldPartyOrAlliance">
+            <summary>
+            Unable to execute command while participating in a cross-world party or alliance.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsDutyRecorderPlayback">
+            <summary>
+            Unable to execute command while playing duty record.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsCasting87">
+            <summary>
+            Unable to execute command while casting.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInThisState88">
+            <summary>
+            Unable to execute command in this state.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsInThisState89">
+            <summary>
+            Unable to execute command in this state.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsRolePlaying">
+            <summary>
+            Unable to execute command while role-playing.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsBoundToDuty97">
+            <summary>
+            Unable to execute command while bound by duty.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsReadyingVisitOtherWorld">
+            <summary>
+            Unable to execute command while readying to visit another World.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsWaitingToVisitOtherWorld">
+            <summary>
+            Unable to execute command while waiting to visit another World.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUsingParasol">
+            <summary>
+            Unable to execute command while using a parasol.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsBoundByDuty95">
+            <summary>
+            Unable to execute command while bound by duty.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUnknown96">
+            <summary>
+            Cannot execute at this time.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsDisguised">
+            <summary>
+            Unable to execute command while wearing a guise.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsRecruitingWorldOnly">
+            <summary>
+            Unable to execute command while recruiting for a non-cross-world party.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsUnknown99">
+            <summary>
+            Command unavailable in this location.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.Conditions.IsEditingPortrait">
+            <summary>
+            Unable to execute command while editing a portrait.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.GetAirshipVoyageTimeAndDistance(System.Byte,System.Byte,System.Int16,System.UInt32*,System.UInt32*)">
+            <summary>
+            Gets the airship voyage distance and time in pointers
+            <br/>
+            Starting point is at 127 and then goes from 0-24
+            <br/>
+            22 is not used as its the old Diadem
+            </summary>
+            <param name="pointA">The point to calculate from</param>
+            <param name="pointB">The point to calculate to</param>
+            <param name="speed">Speed of the airship to use</param>
+            <param name="time">The voyage time returned</param>
+            <param name="distance">The voyage distance returned</param>
+            <returns>Does not return anything use full at times</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.GetAirshipSurveyDuration(System.Byte,System.Int16)">
+            <summary>
+            Gets the airship survey duration
+            </summary>
+            <param name="point">The point to calculate 0-24. 22 is not used</param>
+            <param name="speed">Speed of the airship to use</param>
+            <returns>Survey duration</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.GetSubmarineVoyageTime(System.Byte,System.Byte,System.Int16)">
+            <summary>
+            Gets the submarine voyage time
+            <br/>
+            Each map uses 0 index as their starting point respectably.
+            <br/>
+            Example: Deep-sea Site starts at 0 where Sea of Ash starts at 31 and so on.
+            <br/>
+            This is related to that Deep-sea Site has 30 points and 1 starting location.
+            </summary>
+            <param name="pointA">The point to calculate from</param>
+            <param name="pointB">The point to calculate to</param>
+            <param name="speed">Speed of the submarine to use</param>
+            <returns>Voyage time</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.GetSubmarineVoyageDistance(System.Byte,System.Byte)">
+            <summary>
+            Gets the submarine voyage distance
+            </summary>
+            <param name="pointA">The point to calculate from</param>
+            <param name="pointB">The point to calculate to</param>
+            <returns>Voyage distance</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.GetSubmarineSurveyDuration(System.Byte,System.Int16)">
+            <summary>
+            Gets the submarine survey duration
+            </summary>
+            <param name="point">The point to calculate</param>
+            <param name="speed">Speed of the submarine to use</param>
+            <returns>Survey Duration</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.IsSubmarineExplorationUnlocked(System.Byte)">
+            <summary>
+            Gets if the point is unlocked
+            </summary>
+            <param name="point">The point to check is unlocked or not</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingManager.IsSubmarineExplorationExplored(System.Byte)">
+            <summary>
+            Gets if the point is unlocked
+            </summary>
+            <param name="point">The point to check is explored or not</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingOutdoorTerritory.GetPlotIcon(System.Byte)">
+            <summary>
+            Get the Icon ID used for map icons in housing areas.
+            </summary>
+            <param name="plot">Plot number, zero indexed. <value>127</value> for Apartment in main division, <value>128</value> for apartment in subdivision.</param>
+            <returns>IconID, or 0 if something went wrong</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingWorkshopAirshipSubData.Log">
+            <summary>
+            Points to <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingWorkshopAirshipData.AirshipLogList"/>
+            Max 82 in the array
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingWorkshopAirshipSubData.GetRegisterTime">
+            <summary>Gets the registered time as a <see cref="T:System.DateTime"/> object</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingWorkshopAirshipSubData.GetReturnTime">
+            <summary>Gets the return time as a <see cref="T:System.DateTime"/> object</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingWorkshopSubmersibleSubData.GetRegisterTime">
+            <summary>Gets the registered time as a <see cref="T:System.DateTime"/> object</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.Housing.HousingWorkshopSubmersibleSubData.GetReturnTime">
+            <summary>Gets the return time as a <see cref="T:System.DateTime"/> object</summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.InstanceContent.InstanceContentDirector.TimeRemaining">
+            <summary>
+            The remaining time in seconds for the instance.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.InventoryManager.GetPermittedGearsetCount">
+            <summary>
+            Get the number of gearsets the player is permitted to have/use.
+            </summary>
+            <returns>Returns the number of gearsets the player can use.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.CurrentRank">
+            <summary>
+            The current Sanctuary Rank of the player's island. Controls what buildings/items/recipes are or aren't
+            available to the player, and represented by MJIRank.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.CurrentXP">
+            <summary>
+            The XP earned towards the next Island Sanctuary rank. Resets to 0 upon leveling up the Sanctuary. 
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.CurrentProgress">
+            <summary>
+            The current progress of the player, as represented by MJIProgress. Appears to be bound to the island
+            sanctuary "tutorial" more than anything.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.VillageDevelopmentLevel">
+            <summary>
+            The current development level of the player's village on their island. Controls what building zones are
+            available.
+            </summary>
+            <remarks>
+            Allowed building locations are part of the MJIBuildingPlace (+0x10) and MJILandmarkPlace (+0x10) Lumina
+            sheets.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.PathsGlamourId">
+            <summary>
+            The glamour ID applied to paths around the Island Sanctuary.
+            Correlates to a subrow in MJIVillageAppearanceUI, row 0.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.GroundsGlamourId">
+            <summary>
+            The glamour ID applied to grounds around the Island Sanctuary.
+            Correlates to a subrow in MJIVillageAppearanceUI, row 2.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.SlopesGlamourId">
+            <summary>
+            The glamour ID applied to slopes around the Island Sanctuary.
+            Correlates to a subrow in MJIVillageAppeareanceUI, row 1.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.UnlockedKeyItems">
+            <summary>
+            A bitfield representing all unlocked key items (MJIKeyItem) for the player. Backing field for
+            <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsKeyItemUnlocked(System.UInt16)"/>, which should be used where possible.
+            </summary>
+            <remarks>
+            The index of this field will be (RowID - 1), so "Islekeep's Stone Hatchet" appears at position 0.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.UnlockedRecipes">
+            <summary>
+            A bitfield representing if a specific recipe (MJIRecipe) is unlocked. Backing field for
+            <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsRecipeUnlocked(System.UInt16)"/>, which should be used where possible.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LockedPouchItems">
+            <summary>
+            An array of booleans representing if a specific item is (un)locked. Locked/unavailable items are set to true,
+            while those that are unlocked are false. This array is indexed by RowID from the MJIItemPouch table.
+            An item appears to be unlocked upon being gathered or crafted for the first time.
+            <seealso cref="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsPouchItemLocked(System.UInt16)" />
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.Farm">
+            <summary>
+            A sub-struct representing the Farm's (Cropland's) current state
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.Pasture">
+            <summary>
+            A sub-struct representing the Pasture's current state.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.PastureUnderCare">
+            <summary>
+            Appears to be set if the pasture in it has any animal currently under care.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.PastureDailyCareFee">
+            <summary>
+            The current daily care fee paid to the Creature Comforter for the pasture.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.FarmDailyCareFee">
+            <summary>
+            The current daily care fee paid to the Produce Producer for the farm.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LandmarkHoursToCompletion">
+            <summary>
+            The current number of hours remaining until a specific Landmark has finished construction.
+            
+            This value may be zero when there is either no construction or if construction is finished and the landmark
+            needs to be "finalized" by the player.
+            
+            This array is indexed by the RowID of an MJILandmarkPlace.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LandmarkIds">
+            <summary>
+            The RowID of the MJILandmark present at a specific MJILandmarkPlace.
+            
+            This array is indexed by the RowID of an MJILandmarkPlace.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LandmarkUnderConstruction">
+            <summary>
+            The current construction status of a landmark at a specific MJILandmarkPlace.
+            
+            This array is indexed by the RowID of an MJILandmarkPlace.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.Workshops">
+             <summary>
+             A struct representing the current state of workshops present on the island. See the struct documentation
+             for more information on how to access this data.
+            
+             Note that this struct only provides mapping from a workshop ID to other data.
+             </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.Granaries">
+            <summary>
+            A struct representing the current state of granaries present on the island. See the struct documentation
+            for more information on how to access this data.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.CabinLevel">
+            <summary>
+            The current level of the Cozy Cabin for the Island Sanctuary.
+            </summary>
+            <remarks>
+            This field is offset by 1 compared to the level present in MJIBuildings. Cabin Level 3 will actually have
+            a value of 3 in this field. This is *probably* because Cabin Level 0 is "nonexistent"..?
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.CabinGlamour">
+            <summary>
+            The current glamour cast on the Cozy Cabin (if any). Relates to the appropriate sub-row in MJIBuilding.
+            </summary>
+            <remarks>
+            This field is *not* offset by one like CabinLevel; Cabin Level 3 will report here as 2.
+            </remarks>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops">
+            <summary>
+            A struct representing a list of workshops present in the Island Sanctuary.
+            
+            The struct provides a helper method to retrieve information about a single workshop (referenced by ID), but will
+            otherwise allow querying a specific field by ID directly.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.PlaceId">
+            <summary>
+            The MJIBuildingPlace in which this particular building resides.
+            
+            If this building is not built, this value will be zero.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.GlamourLevel">
+            <summary>
+            The glamour level of a particular building. This value refers to a specific sub-row of MJIBuilding.
+            </summary>
+            <remarks>
+            This level is one less than the building's level; Workshop III will report as 2.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.HoursToCompletion">
+            <summary>
+            Hours remaining in the construction/upgrade of a building.
+            
+            If the building is done or is not under construction, this value will be zero.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.BuildingLevel">
+            <summary>
+            The true level of a particular building. Like GlamourLevel, also refers to a specific sub-row of MJIBuilding.
+            </summary>
+            <remarks>
+            This level is one less than the building's level; Workshop III will report as 2.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.UnderConstruction">
+            <summary>
+            Report if a specific building is currently under construction.
+            
+            May report 1 while HoursToCompletion is 0 if the building needs to be "finalized" through user interaction.
+            </summary>
+            <remarks>
+            So far the only observed value for this field is 0 or 1, but more values may exist (?).
+            </remarks>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.Item(System.Int32)">
+            <summary>
+            Helper method to return all known information about a specific building at once.
+            </summary>
+            <param name="idx">The index of the building to retrieve</param>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIGranaries">
+            <summary>
+            A struct representing a list of granaries present in the Island Sanctuary.
+            
+            The struct provides a helper method to retrieve information about a single granary (referenced by ID), but will
+            otherwise allow querying a specific field by ID directly.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIGranaries.PlaceId">
+            <inheritdoc cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.PlaceId"/>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIGranaries.GlamourLevel">
+            <inheritdoc cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.GlamourLevel"/>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIGranaries.HoursToCompletion">
+            <inheritdoc cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.HoursToCompletion"/>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIGranaries.BuildingLevel">
+            <inheritdoc cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.BuildingLevel"/>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIGranaries.UnderConstruction">
+            <inheritdoc cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIWorkshops.UnderConstruction"/>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager">
+            <summary>
+            Manager struct (?) for Island Sanctuary (internally MJI).
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsPlayerInSanctuary">
+            <summary>
+            Reports if the player is currently on the Island Sanctuary.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.AllowedVisitors">
+            <summary>
+            Represents the currently allowed visitors to the Island Sanctuary.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CurrentMode">
+            <summary>
+            The current mode (as listed in MJIHudMode) that the player is in.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CurrentModeItem">
+            <summary>
+            The currently-selected item for the player's gathering mode. Will only have a value if the gathering mode
+            in question supports item usage.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.LandmarkPlacements">
+            <summary>
+            A struct representing landmark placements on the Island Sanctuary. Each index represents a specific landmark
+            slot directly. Refer to <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJILandmarkPlacement"/> for more information.
+            </summary>
+            <remarks>
+            This field's exact purpose is currently unknown, but seems to be related to either mapping or rendering
+            logic. To that end, this field doesn't actually seem authoritative for determining what's going on - see
+            <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LandmarkIds"/> et al for what seems to be used by system logic.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.BuildingPlacements">
+            <summary>
+            A struct representing building placements on the Island Sanctuary. Each index represents a specific building
+            slot directly. Refer to <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIBuildingPlacement"/> for more information.
+            </summary>
+            <remarks>
+            This field's exact purpose is currently unknown, but seems to be related to either mapping or rendering
+            logic. To that end, this field doesn't actually seem authoritative for determining what's going on - see
+            <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.Granaries"/> and <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.Workshops"/> for what seems to be
+            used by system logic.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CabinPlacement">
+            <summary>
+            A struct representing information about the cabin.
+            </summary>
+            <remarks>
+            Like <c>MJIBuildingPlacements</c>, the purpose of this field is unknown but it at least appears to behave
+            like any other building placement.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.FarmPlacements">
+            <summary>
+            A struct representing farm (garden/cropland) placements on the current Island Sanctuary.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.PasturePlacements">
+            <summary>
+            A struct representing pasture placements on the current Island Sanctuary. Identical in behavior (hopefully)
+            to that of <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.FarmPlacements"/>
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CurrentPopularity">
+            <summary>
+            A reference to the current set of popularity scores given to craftworks on the player's island. The actual
+            popularity scores can be pulled from the MJICraftworksPopularity sheet using this value as a Row ID.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.NextPopularity">
+            <summary>
+            A reference to the next cycle's popularity scores (called "predicted demand" in-game). Follows the same rules
+            as <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CurrentPopularity" />.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.SupplyAndDemandShifts">
+            <summary>
+            An array of bytes representing the current supply and demand shift for each craftwork that the player can
+            create. Information for a specific item can be retrieved by querying the RowID for the item under inspection.
+            <br /><br />
+            The current supply value is stored in the upper half of each byte, while the current demand shift is stored in
+            the lower half.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CurrentCycleDay">
+            <summary>
+            The current day in the Craftworks cycle, from 0 to 6.
+            </summary>
+            <remarks>
+            0 represents reset day (Tuesday).
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CraftworksRestDays">
+            <summary>
+            An array containing the currently-configured rest days for the Isleworks. Contains values 0 - 13, and is
+            always in order.
+            </summary>
+            <remarks>
+            Like CurrentCycleDay, 0 represents Reset Day. 7, likewise, represents the next reset. This field may not be
+            populated until the Craftworks have been opened at least once.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.CurrentGroove">
+            <summary>
+            The current groove level of the Isleworks.
+            </summary>
+            <remarks>
+            May not be present until the Isleworks is loaded at least once by the player.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.Instance">
+            <summary>
+            Retrieve an instance of IslandSanctuaryManager for consumption.
+            </summary>
+            <returns>Returns a pointer to the game's IslandSanctuaryManager instance.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsRecipeUnlocked(System.UInt16)">
+            <summary>
+            Check if a specific MJIRecipe is *unlocked*. Does not care if the item has been crafted.
+            </summary>
+            <param name="recipeId">The recipe ID to check for.</param>
+            <returns>Returns true if the recipe can be crafted, false otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsPouchItemLocked(System.UInt16)">
+            <summary>
+            Check if a specific item in the Island Pouch is (un)locked.
+            See <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LockedPouchItems" /> for more information. This method simply looks a value
+            up from that array.
+            </summary>
+            <param name="itemId">The MJIItemPouch row ID to look up.</param>
+            <returns>Returns true if the item is locked and/or hidden to the player.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsItemLocked(System.UInt32)">
+            <summary>
+            Check if an item (by EXD item ID) is locked in Island Sanctuary. This method performs *no validation* that
+            the Item passed to it is actually an Island Sanctuary item.
+            </summary>
+            <remarks>
+            This method performs an EXD lookup. If the Item is already known, it is better to query
+            <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.IslandState.LockedPouchItems" />  by the AdditionalData field of the Item to avoid the
+            unnecessary call.
+            </remarks>
+            <seealso cref="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsPouchItemLocked(System.UInt16)" />
+            <param name="itemId">The Item ID (from EXD) to look up.</param>
+            <returns>Returns <c>true</c> if the item is locked, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsFunctionUnlocked(System.Byte)">
+            <summary>
+            Checks if a specific MJIFunction is unlocked and able to be used
+            </summary>
+            <param name="functionId">The RowID of the MJIFunction to check</param>
+            <returns>Returns <c>true</c> if the function is unlocked, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.GetVisibleMinimapIcons">
+            <summary>
+            Get a bitfield representing the currently-displayed minimap icons.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.GetPastureSlotCount">
+            <summary>
+            Gets the total number of slots available in the Island Sanctuary pasture.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.GetFarmSlotCount">
+            <summary>
+            Gets the total number of slots available Island Sanctuary farm.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.IsKeyItemUnlocked(System.UInt16)">
+            <summary>
+            Check if a specific MJIKeyItem is unlocked by the player.
+            </summary>
+            <remarks>
+            This is manually implemented as the only place this key item check actually seems to exist in the code is
+            (frustratingly) not within MJIManager. See <code>E8 ?? ?? ?? ?? 84 C0 74 61 48 85 DB</code> for the
+            reference(-ish) implementation used here.
+            </remarks>
+            <param name="keyItemId">The RowID of the MJIKeyItem to check.</param>
+            <returns>Returns true if the key item is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.GetSupplyForCraftwork(System.UInt32)">
+            <summary>
+            Return the Supply value for a specified craftwork.
+            </summary>
+            <param name="itemId">The Craftwork ID to look up</param>
+            <returns>Returns an enum value.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIManager.GetDemandShiftForCraftwork(System.UInt32)">
+            <summary>
+            Return the Demand Shift value for a specified craftwork.
+            </summary>
+            <param name="itemId">The Craftwork ID to look up</param>
+            <returns>Returns an enum value.</returns>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIBuildingPlacement">
+            <summary>
+            A record of building population information at a specific Site ID. 
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIBuildingPlacement.PlaceId">
+            <summary>
+            At load, the location of this specific building. Will update if a building is changed, but the exact
+            mechanism of the update (and why it does such) is not currently known.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIBuildingPlacement.SgbId">
+             <summary>
+             The current SGB ID of this particular building.
+            
+             When a building is fully constructed, this will be the value present at offset +0x0C from MJIBuilding. While
+             a building is under construction, however, the appropriate model (as determined by progress) will be shown
+             from columns +0E, +10, +12, or +14.
+            
+             Can also be zero, if nothing is built in that location yet.
+             </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJILandmarkPlacement">
+            <summary>
+            A record of landmark population information at a specific Site ID. 
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJILandmarkPlacement.LandmarkId">
+            <summary>
+            The RowID of the landmark currently present at the specified location.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIFarmPasturePlacement">
+            <summary>
+            A record of landmark population information at a specific Site ID. 
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIFarmPasturePlacement.SgbId">
+            <summary>
+            The SGB ID of the model to use for this location
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIPastureHandler.MJIAnimals">
+            <summary>
+            An array representing all animals currently present in the pastures on the Island. 
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIPastureHandler.RoamingMinions">
+            <summary>
+            An array representing which minions are currently out roaming the Island. This array is indexed by row ID from
+            the Companion EXD sheet. See <see cref="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIPastureHandler.MinionSlots"/> if information about minion locations is required.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIPastureHandler.MinionSlots">
+            <summary>
+            An array containing information on all the minion slots present on the Island Sanctuary.
+            This array is indexed by an internal ID and does not appear to be grouped by location or similar.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIPastureHandler.GetCurrentRoamingMinionCount">
+            <summary>
+            Gets the current number of minions roaming the Island Sanctuary.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIMinionSlot.SlotId">
+            <summary>
+            An internal ID used to track minion slots.
+            </summary>
+            <remarks>
+            May be set to 40 if the slot is currently empty or uninitialized.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIMinionSlot.PopAreaId">
+            <summary>
+            The MJIMinionPopAreaId that this minion currently resides in.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.MJI.MJIMinionSlot.IsSlotPopulated">
+            <summary>
+            Check if this specific Minion Slot contains a minion or not.
+            </summary>
+            <returns>Returns <c>true</c> if a minion is present, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetQuestSequence(System.UInt16)">
+            Get the current step in a specific quest. Will return 0 if the quest is not active (even if the quest has been
+            completed prior).
+            <param name="questId">The quest ID to check.</param>
+            <returns>Returns a byte representing the current progression of the specified quest.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetQuestSequence(System.UInt32)">
+            <inheritdoc cref="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetQuestSequence(System.UInt16)"/>
+            <remarks>This is a helper method to handle trimming uints down to the game-requested ushort.</remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.IsQuestAccepted(System.UInt16)">
+            Checks if a specified quest has been accepted (and is active). This method does not check if the quest has been
+            completed or not.
+            <param name="questId">The quest ID to check.</param>
+            <returns>Returns <c>true</c> if the quest has been accepted, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.IsQuestAccepted(System.UInt32)">
+            <inheritdoc cref="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.IsQuestAccepted(System.UInt16)"/>
+            <remarks>This is a helper method to handle trimming uints down to the game-requested ushort.</remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.IsLevequestComplete(System.UInt16)">
+            <summary>
+            Check if a specific levequest has been completed.
+            </summary>
+            <param name="levequestId">The RowId of the Leve Sheet.</param>
+            <returns>Returns <c>true</c> if the levequest has been completed, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetNextLeveAllowancesTimestamp">
+            <summary>
+            Get the time when the player will receive new leve allowances.
+            </summary>
+            <remarks>
+            Has to be multiplied by 60 for a unix timestamp.<br/>
+            Use <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetNextLeveAllowancesUnixTimestamp"/> or <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetNextLeveAllowancesDateTime"/> instead.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetNextLeveAllowancesUnixTimestamp">
+            <summary>
+            Get the time when the player will receive new leve allowances.
+            </summary>
+            <returns>A unix timestamp as <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetNextLeveAllowancesDateTime">
+            <summary>
+            Get the time when the player will receive new leve allowances.
+            </summary>
+            <returns>A <see cref="T:System.DateTime"/> in the local time zone.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.RetainerManager.LastSelectedRetainerId">
+            <summary>
+            Contains the Retainer.RetainerId of the last retainer to be selected.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.RetainerManager.GetRetainerCount">
+            <summary>
+            Counts the number of Retainers that have an assigned ID.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.RetainerManager.GetActiveRetainer">
+            <summary>
+            Will return the Retainer referenced by LastSelectedRetainerId.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement">
+            <summary>
+            A struct representing the UIState Achievement
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement.RequestAchievementProgress(System.UInt32)">
+            <summary> Requests Achievement Progress from the server. </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement.ReceiveAchievementProgress(System.UInt32,System.UInt32,System.UInt32)">
+            <summary> Receives Achievement Progress requested with <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement.RequestAchievementProgress(System.UInt32)"/>. </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement.IsComplete(System.Int32)">
+            <summary> Check if an achievement is complete. </summary>
+            <param name="achievementId">Achievement ID to check against. This is the ID from the Achievement table. </param>
+            <returns> Returns true if the achievement is complete. </returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement.IsLoaded">
+            <summary> Check if the achievement data has been "loaded" from the server. </summary>
+            <remarks>
+            The achievement data will only load when requested (so, when a player goes into the achievements menu).
+            As such, before any check can take place, a developer must first validate that the achievement data is
+            loaded. Generally, this will be when State == AchievementState.Loaded
+            </remarks>
+            <returns> Returns true if the Achievement data has been retrieved. </returns>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.Achievement.AchievementState">
+            <summary> Represents the loaded state of Achievement </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.Cabinet">
+            <summary>
+            A struct representing the UIState Cabinet (otherwise known as the "Armoire" in-game) and the bitfield for stored
+            items.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Cabinet.IsItemInCabinet(System.Int32)">
+            <summary>
+            Check if an item is stored in the player's armoire.
+            </summary>
+            <param name="cabinetItemId">The armoire item entry ID to check against. This is not an item ID but a specific ID
+            from the Cabinet table.</param>
+            <returns>Returns true if the armoire contains the specified item.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Cabinet.IsCabinetLoaded">
+            <summary>
+            Check if the armoire is reporting as "loaded" from the server.
+            </summary>
+            <remarks>
+            The armoire will only load when requested (so, when a player goes to an inn room and chooses to add/remove an
+            item or performs certain glamour operations). As such, before any check can take place, a developer must first
+            validate that the armoire is loaded. Generally, this will be when State == CabinetState.Loaded
+            </remarks>
+            <returns>Returns true if the armoire has been retrieved.</returns>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.Cabinet.CabinetState">
+            <summary> Represents the loaded state of Cabinet </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.Inspect.ExtraInspectData">
+            <remarks>
+            1 = Eureka: Elemental Level<br/>
+            2 = Eureka: Is Elemental Level Synced<br/>
+            3 = Eureka: Time Remaining<br/>
+            4 = Bozja: Resistance Rank<br/>
+            5 = Bozja: Time Remaining
+            </remarks>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.SimpleMapMarkerContainer">
+            <summary>
+            This container uses a 2-dimensional array to contain Map Markers that contain basic information.
+            If you need more advanced information, use the MapMarkerContainer fields instead if applicable.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.MapMarkerContainer">
+            <summary>
+            This container uses a linked list internally to contain Map Markers that contain tooltip information.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.MobHunt">
+            <summary>
+            Note: The game does not clear the data when a mark is completed.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.MobHunt.GetKillCount(System.Byte,System.Byte)">
+            <param name="markIndex">Mark Bill Index 0-18</param>
+            <param name="mobIndex">Mob Index 0-4</param>
+            <returns>Current kill count</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.MobHunt.GetObtainedHuntOrderRowId(System.Byte)">
+            <param name="markIndex">Mark Bill Index 0-18</param>
+            <returns>MobHuntOrder Primary Row Id</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.MobHunt.GetMarkIndexFromItemId(System.Int32)">
+            <param name="itemId">Mark Bill ItemId</param>
+            <returns>18 Indicates Not Found</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.PenaltyTimestamps">
+            <remarks>
+            0 = Duty penalty<br/>
+            1 = Unknown<br/>
+            See also: <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.RouletteController.GetPenaltyRemainingInMinutes(System.Byte)" />
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.ContentRouletteCompletion">
+            <remarks>
+            Index is column 27 of ContentRoulette sheet.<br/>
+            See also: <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.RouletteController.IsRouletteComplete(System.Byte)" />
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.DeliveryLevel">
+            <summary>Carrier Level of Delivery Moogle Quests</summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.MeisterFlag">
+            <summary>
+            Flag containing information about which DoH job the player is specialized in.
+            </summary>
+            <remarks>
+            Use these instead:<br/>
+            <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMeisterFlag(System.UInt32)" /><br/>
+            <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMeisterFlagMaxCount" /><br/>
+            <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMeisterFlagAndHasSoulStoneEquipped(System.UInt32)" />
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoOrderData">
+            <summary>RowIds of WeeklyBingoOrderData sheet</summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoRewardData">
+            <summary>RowIds of WeeklyBingoRewardData sheet</summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState._weeklyBingoStickers">
+            <summary>Bitflags of placed stickers.</summary>
+            <remarks>Use IsWeeklyBingoStickerPlaced(index) and WeeklyBingoNumPlacedStickers instead.</remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState._weeklyBingoFlags">
+            <remarks>Use GetWeeklyBingoExpireUnixTimestamp(), WeeklyBingoNumSecondChancePoints and HasWeeklyBingoJournal instead</remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMeisterFlagMaxCount">
+            <summary>
+            Returns whether the player is possessing the maximum amount of specialized souls.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMeisterFlag(System.UInt32)">
+            <summary>
+            Returns whether the player is specialized in the given DoH ClassJob.
+            </summary>
+            <param name="classJobId">The ClassJob row id of the DoH job to check.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMeisterFlagAndHasSoulStoneEquipped(System.UInt32)">
+            <summary>
+            Returns whether the player is specialized in the given DoH ClassJob and has the specialization stone equipped.
+            </summary>
+            <param name="classJobId">The ClassJob row id of the DoH job to check.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.CurrentPose(FFXIVClientStructs.FFXIV.Client.Game.UI.PoseType)">
+            <summary> Get the current state of a specific type of pose. </summary>
+            <param name="pose"> The type of pose. </param>
+            <returns> The 0-based value of the pose. </returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.AvailablePoses(FFXIVClientStructs.FFXIV.Client.Game.UI.PoseType)">
+            <summary> Get the last valid value for a specific type of pose. </summary>
+            <param name="pose"> The type of pose. </param>
+            <remarks> The returned value represents the count of the type of pose - 1. </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMountUnlocked(System.UInt32)">
+            <summary>
+            Check if a specific mount has been unlocked by the player.
+            </summary>
+            <param name="mountId">The ID of the mount to look up.</param>
+            <returns>Returns true if the mount has been unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsOrnamentUnlocked(System.UInt32)">
+            <summary>
+            Check if a specific ornament (fashion accessory) has been unlocked by the player.
+            </summary>
+            <param name="ornamentId">The ID of the ornament to look up.</param>
+            <returns>Returns true if the ornament has been unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsOrchestrionRollUnlocked(System.UInt32)">
+            <summary>
+            Check if a specific orchestrion roll has been unlocked by the player.
+            </summary>
+            <param name="rollId">The ID of the roll to look up.</param>
+            <returns>Returns true if the roll has been unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsSecretRecipeBookUnlocked(System.UInt32)">
+            <summary>
+            Check if a Secret Recipe Book (DoH Master Tome) is unlocked and (indirectly) if the player can craft recipes
+            from that specific book.
+            </summary>
+            <param name="tomeId">The ID of the book to check for. Can be retrieved from the SecretRecipeBook sheet.</param>
+            <returns>Returns true if the book is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsFolkloreBookUnlocked(System.UInt32)">
+            <summary>
+            Check if a Folklore Book (DoL Master Tome) is unlocked and (indirectly) if the player can find legendary nodes
+            revealed by that book.
+            </summary>
+            <param name="tomeId">The ID of the book to check for. Can be retrieved from GatheringSubCategory.Division</param>
+            <returns>Returns true if the book is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMcGuffinUnlocked(System.UInt32)">
+            <summary>
+            Check if a specific McGuffin (Collectible/Curiosity) has been unlocked by the player.
+            </summary>
+            <param name="mcGuffinId">The ID of the McGuffin to look up, generally from the McGuffin sheet.</param>
+            <returns>Returns true if the McGuffin has been unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsFramersKitUnlocked(System.UInt32)">
+            <summary>
+            Check if a particular Framer's Kit is unlocked and can be used.
+            </summary>
+            <remarks>
+            How IDs are located is a bit weird and not necessarily fully understood at time of writing. They appear on Framer
+            Kit items in the AdditionalData field, and at +0 in BannerCondition EXDs when +0xE == 9.
+            </remarks>
+            <param name="kitId">The kit ID to check for.</param>
+            <returns>Returns true if the framer's kit is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsAetherCurrentZoneComplete(System.UInt32)">
+            <summary>
+            Returns whether all aether currents of a zone were discovered.
+            </summary>
+            <param name="territoryTypeColumn32">Column 32 of TerritoryType</param>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoTaskStatus.Open">
+            <summary>Incomplete task.</summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoTaskStatus.Claimable">
+            <summary>Completed task, but sticker not placed.</summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoTaskStatus.Claimed">
+            <summary>Completed task and sticker placed.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState._getWeeklyBingoFlagsValue(System.UInt32)">
+            <summary>Returns the value of the requested flag.</summary>
+            <param name="mode">
+            The following modes have been found:<br/>
+            3 = second chance points<br/>
+            5 = whether player is in possession of the journal
+            </param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsWeeklyBingoExpired">
+            <summary>Returns whether the Wondrous Tails Journal has expired or not.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.GetWeeklyBingoExpireUnixTimestamp">
+            <summary>Returns the expiration of the players Wondrous Tails Journal as a unix timestamp.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsWeeklyBingoStickerPlaced(System.Int32)">
+            <summary>Returns whether the task is complete or not.</summary>
+            <param name="index">Task index, starting at 1.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.GetWeeklyBingoTaskStatus(System.Int32)">
+            <summary>Returns the stored state of the indexed task.</summary>
+            <param name="index">Task index, starting at 0.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.GetWeeklyBingoExpMultiplier">
+            <summary>Returns the experience multiplier.</summary>
+            <remarks>The experience reward is being calculated as: Current Job Experience / 100 * WeeklyBingoExpMultiplier</remarks>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoExpireDateTime">
+            <summary>Returns the expiration of the players Wondrous Tails Journal as UTC DateTime.</summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoNumSecondChancePoints">
+            <summary>Returns the current number of second chance points.</summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.HasWeeklyBingoJournal">
+            <summary>Returns whether the player is in possession of the journal or not.</summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.WeeklyBingoNumPlacedStickers">
+            <summary>Returns the number of placed stickers.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsMentor">
+            <summary>
+            Returns whether the player is any kind of Mentor (Battle or Trade Mentor).
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsBattleMentor">
+            <summary>
+            Returns whether the player is a Battle Mentor.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsTradeMentor">
+            <summary>
+            Returns whether the player is a Trade Mentor.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsNovice">
+            <summary>
+            Returns whether the player is a novice (aka. Sprout or New Adventurer).<br/>
+            Can be false if /nastatus was used to deactivate it.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsReturner">
+            <summary>
+            Returns whether the player is a returner.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerState.IsPlayerStateFlagSet(FFXIVClientStructs.FFXIV.Client.Game.UI.PlayerStateFlag)">
+            <summary>
+            Returns whether the specified PlayerStateFlag is set.
+            </summary>
+            <param name="flag">The PlayerStateFlag to check.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetPvPRank">
+            <summary>Gets the current PvP rank for the active Grand Company.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetPvPTotalExperience">
+            <summary>Gets the total accumulated PvP experience for the active Grand Company.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetPvPCurrentRankExperience">
+            <summary>Gets the experience for the current PvP rank for the active Grand Company.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetPvPCurrentRankNeededExperience">
+            <summary>Gets the needed experience for the current PvP rank for the active Grand Company.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetSeriesCurrentRank">
+            <summary>Gets the current PvP Series rank.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetSeriesClaimedRank">
+            <summary>Gets the claimed PvP Series rank.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetSeriesExperience">
+            <summary>Gets the current PvP Series rank experience.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.HasPreviousSeriesRank">
+            <summary>Returns whether the player had a rank last PvP Series.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetPreviousSeriesRank">
+            <summary>Gets the previous PvP Series achieved rank.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.PvPProfile.GetPreviousSeriesClaimedRank">
+            <summary>Gets the previous PvP Series claimed rank.</summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.RouletteController.GetPenaltyRemainingInMinutes(System.Byte)">
+            <summary>
+            Provides the number of minutes remaining on the penalty.
+            </summary>
+            <param name="index">0 = Duty penalty<br/>1 = Unknown</param>
+            <returns>Number of minutes left</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.Telepo.GetTeleportCost(System.UInt16,System.UInt16,System.Boolean,System.Boolean,System.Boolean)">
+            Territories have aetherstream coordinates X and Y, an associated ExpansionValue and an associated Plane in TerritoryTypeTelepo.
+            Planes have relays described in the TelepoRelay sheet, every pair of planes has an associated entry territory, exit territory and cost organized in a 6x6 matrix.
+            If planes are the same, the cost function is
+                f(Entry, Exit) := `100 + AetherStreamDistance * Max(1000, EntryExpansionValue + ExitExpansionValue + 600) / 5000`.
+            If planes differ, the cost computes as
+                f(Entry, Exit) := f(Entry, EntryRelay(EntryPlane, ExitPlane)) + Cost(EntryPlane, ExitPlane) + f(ExitRelay(EntryPlane, ExitPlane), Exit).
+            Then, the growth is halved after 1000, i.e. if f(Entry, Exit) > 1000, then return (f(Entry, Exit) - 1000) / 2 + 1000 instead.
+            Additionally, if <paramref name="residentArea"/> is true, the cost is quartered, and if otherwise either <paramref name="unk"/> or <paramref name="favored"/> is true, the cost is halved.
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Game.UI.TerritoryInfo">
+            <summary>
+            Contains the PlaceName values of where the player is currently located.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsUnlockLinkUnlockedOrQuestCompleted(System.UInt32,System.Byte,System.Boolean)">
+            <summary>
+            Checks to see if an unlock link is unlocked, or if the passed value is greater than 0x10000, checks if the quest
+            is completed.
+            </summary>
+            <param name="unlockLinkOrQuestId">The unlock link or quest ID to check.</param>
+            <param name="minQuestProgression">If the quest is not complete, check for <em>at least</em> this level of
+            progress in the quest (using <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.QuestManager.GetQuestSequence(System.UInt16)"/>. If this parameter is <c>0</c>,
+            the quest must have been completed.</param>
+            <param name="a4">Exact purpose unknown, but appears to be a flag to respect Unlock Flag 245 (ignore quest
+            progression?) for quest-based checks. Virtually always <c>true</c> in game code.</param>
+            <returns>Returns true if the unlock link is unlocked or if the quest is completed.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsItemActionUnlocked(System.Void*)">
+            <summary>
+            Check an item (by EXD row) to see if the action associated with the item is unlocked or "obtained/registered."
+            </summary>
+            <remarks>
+            This method <b>will</b> call EXD, so the usual caveats there apply. Where possible, use a by-ID check as
+            they're generally faster and/or rely less on EXD.
+            </remarks>
+            <param name="itemExdPtr">A pointer to an EXD row for an item, generally retrieved from <see cref="M:FFXIVClientStructs.FFXIV.Component.Exd.ExdModule.GetItemRowById(System.UInt32)"/>.</param>
+            <returns>Returns a value denoting this item's unlock status from the below table:
+            <list type="table">
+            <listheader><term>Value</term><description>Meaning</description></listheader>
+            <item><term>1</term><description>The item is unlocked/registered.</description></item>
+            <item><term>2</term><description>The item is not unlocked/registered, but can be.</description></item>
+            <item><term>3</term><description>Unknown, possibly "information not loaded yet."</description></item>
+            <item><term>4</term><description>The item does not have an unlock status.</description></item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsTripleTriadCardUnlocked(System.UInt16)">
+            <summary>
+            Check if a Triple Triad card is obtained by the character.
+            </summary>
+            <param name="cardId">The ID of the card (technically, of TripleTriadCardResident) to check against.</param>
+            <returns>Returns true if the card is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsEmoteUnlocked(System.UInt16)">
+            <summary>
+            Check if an emote (by ID) is unlocked.
+            </summary>
+            <remarks>
+            This method *will* perform an EXD get. If the unlock link is known it is better to call
+            <see cref="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsUnlockLinkUnlockedOrQuestCompleted(System.UInt32,System.Byte,System.Boolean)"/> in order to prevent the extra call, as it performs
+            functionally the same checks.
+            </remarks>
+            <param name="emoteId">The ID of the emote to check for.</param>
+            <returns>Returns true if the emote is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsAetheryteUnlocked(System.UInt32)">
+            <summary>
+            Check if a aetheryte is unlocked for the current character.
+            </summary>
+            <param name="aetheryteId">The ID of the aetheryte to check for.</param>
+            <returns>Returns true if the specified aetheryte is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsHowToUnlocked(System.UInt32)">
+            <summary>
+            Check if a HowTo is unlocked for the current character.
+            </summary>
+            <param name="howtoId">The ID of the HowTo to check for.</param>
+            <returns>Returns true if the specified HowTo is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsCompanionUnlocked(System.UInt32)">
+            <summary>
+            Check if a companion (minion) is unlocked for the current character.
+            </summary>
+            <remarks>
+            WARNING: This method is NOT BOUNDED on IDs. While *one* function seems to set an upper bound on this, this
+            method is a pain in the neck to find *and*, frustratingly, cannot be sigged. 
+            </remarks>
+            <param name="companionId">The ID of the companion/minion to check for.</param>
+            <returns>Returns true if the specified minion is unlocked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Game.UI.UIState.IsCutsceneSeen(System.UInt32)">
+            <summary> Check if the player has seen the cutscene before. </summary>
+            <remarks>
+            Only tracks skippable cutscenes (for that, check if WorkIndex is not 0 in CutsceneWorkIndex sheet).
+            </remarks>
+            <param name="cutsceneId"> RowId of the Cutscene </param>
+            <returns> Returns <c>true</c> if the player has seen the cutscene before, otherwise <c>false</c>. </returns>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ConstantBuffer">
+            <summary>
+            A constant buffer (or cbuffer), which is used to send values to shaders. Usually contains 4*n floats.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ConstantBufferPointer`1">
+            <summary>
+            A helper to manipulate a constant buffer that holds contents of a known type.
+            </summary>
+            <typeparam name="TContents">Type of the cbuffer's contents. Usually a container of floats or vectors thereof.</typeparam>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.ConstantSamplerUnknown.Id">
+            <summary>
+            Cross-reference this with <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material.TextureEntry.Id"/>.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material">
+            <summary>
+            Represents a renderer material.
+            </summary>
+            <remarks>
+            This structure is the header of a memory block of size sizeof(Material) + sizeof(uint) * ShaderKeyCount + sizeof(Material.TextureEntry) * TextureCount.
+            On construction, ShaderKeyCount is determined by <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.MaterialKeyCount"/>, and TextureCount is the number of
+            <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.Samplers"/> with <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.ConstantSamplerUnknown.Slot"/> == <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.SamplerSlotMaterial"/>.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material.TextureEntry.Id">
+            <summary>
+            Cross-reference this with <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.ConstantSamplerUnknown.Id"/>.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material.MaterialResourceHandle">
+            <summary>
+            The resource handle this material was instantiated from. Its <see cref="F:FFXIVClientStructs.FFXIV.Client.System.Resource.Handle.MaterialResourceHandle.Material"/> will be the current structure.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material.ShaderKeyValues">
+            <summary>
+            Each of these values corresponds to a key in <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Kernel.ShaderPackage.MaterialKeys"/>, in the same order.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material.AdjustSamplerFlags(System.UInt32)">
+            <summary>
+            Adjusts sampler flags in the same way as the mtrl loader.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.System.Resource.Handle.MaterialResourceHandle.Material">
+            <summary>
+            The instantiated material. Its <see cref="F:FFXIVClientStructs.FFXIV.Client.Graphics.Render.Material.MaterialResourceHandle"/> will be the current structure.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.System.Scheduler.Resource.SchedulerResource.GetResourceData(System.UInt32*)">
+            <summary>
+            Returns the data from the contained resource handle or null.
+            </summary>
+            <param name="dataLength">The length of the returned data.</param>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionBarBase.CurrentPulsingSlots">
+            <summary>
+            Bitfield representing currently active pulses.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionBarBase.RaptureHotbarId">
+            <summary>
+            The ID of the hotbar in RaptureHotbarModule that this ActionBar is currently referencing.
+            </summary>
+            <remarks>
+            This field is ignored for WHXBs.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionBarBase.IsSharedHotbar">
+            <summary>
+            Whether the current hotbar is considered a "shared" hotbar or not.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.AddonActionBarBase.PulseActionBarSlot(System.Int32)">
+             <summary>
+             Trigger the "pulse" effect for the specified hotbar slot, similar to what happens on hotbar slot keypress.
+            
+             Note that this method *CAN* trigger pulses on hotbar slots that don't have an item in them!
+             </summary>
+             <param name="slotIndex">A zero-indexed value of which slot to pulse.</param>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionBarX.ActionBarLayout">
+            <summary>
+            The current layout (columns x rows) of this specific hotbar.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionDoubleCrossBase.ShowDPadSlots">
+            <summary>
+            Set to 1 when the WXHB is showing the directional pad inputs as well as the action button inputs.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionDoubleCrossBase.BarTarget">
+            <summary>
+            The ID of the hotbar in <see cref="T:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule"/> that this action bar is currently referencing.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionDoubleCrossBase.UseLeftSide">
+            <summary>
+            Use the left side (slots 0-7) of the hotbar specified in <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionDoubleCrossBase.BarTarget"/>.
+            </summary>
+            <remarks>
+            In effect, when this is false, it means any given HotBarSlot will be at index +8 from the index in the UI.
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonActionDoubleCrossBase.MergedPositioning">
+            <summary>
+            Set to 1 when the WXHB is in "merged positioning" mode with the normal cross hotbar.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonMacro.DefaultIcon">
+            <summary>
+            Used when creating a new macro from a blank state.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonMacro.MacroSetIcon">
+            <summary>
+            Array of default icons, used when no macro icon command is used.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonMacro.SelectedMacroIndex">
+            <summary>
+            Note: Value is only set when changing page.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.AddonRecipeNote.SelectedRecipeResultQuantityInInventoryNqAndHq">
+            <summary>
+            Inventory NQ/HQ Recipe Result Count [ex: "0\n\ue03c0", "\ue03c" being the HQ symbol]
+            The HQ value is not present on items that cannot be HQ [ex: "0"]
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Agent.AgentFieldMarker.IsFieldMarkerActive(System.Int32)">
+            <summary>
+            Check if a specific field marker (waymark) has been placed.
+            </summary>
+            <param name="index">The EXD row ID of the field marker to check.</param>
+            <returns>Returns true if the field marker is placed, false otherwise.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Agent.AgentMycItemBox.ItemBoxData">
+            <remarks>
+            Contains how many of each item the player has in both the cache and the holster
+            </remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Agent.AgentRetainerItemTransferData.DuplicateItemEntry.ItemId">
+            <summary>
+            Item ID for the duplicate item.
+            Note: Not always set, unsure why...
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Agent.AgentRetainerItemTransferData.DuplicateItemEntry.UiCategoryIconId">
+            <summary>.
+            ItemUiCategory Icon ID
+            Note: Not always set, unsure why...
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyCommonList.CharacterData.ExtraFlags">
+            <summary>
+            Extra flags for status:
+            0x10 = ? always set when accepted friend request
+            0x20 = WaitingForFriendListApproval
+            0x10000->0x70000 = DisplayGroup.Star -> DisplayGroup.Club
+            0x1000000 = OtherServer (FCTag not available)
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyFreeCompany.RankData.ChestAccess">
+            <summary>
+            Deposit Only is stored at a diferent location
+            The definition of using bit 4 is virtual and done for ease of use
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.SearchItemId">
+            <summary>
+            The ItemID that has been searched.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.Listings">
+            <summary>
+            All items currently available on the general marketboard for the last specified search term (found in <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.SearchItemId"/>.
+            Can be empty if no results were found.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.RetainerListings">
+            <summary>
+            All items currently available for sale from the last targeted retainer. Can be empty if no results were found.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.PlayerRetainers">
+            <summary>
+            All retainers currently registered to the player. Needs to be loaded by accessing any retainer's marketboard listings and appears
+            to be a cache of some sort.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.AddData(System.IntPtr,System.UInt32)">
+            <summary>
+            Loads received marketboard data into the <see cref="P:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.Listings"/> array. This method is directly responsible for translating the inbound
+            <c>MarketBoardOfferings</c> packet into <see cref="T:FFXIVClientStructs.FFXIV.Client.UI.Info.MarketBoardListing"/> structs.
+            </summary>
+            <param name="packetPtr">A pointer to the packet to load in.</param>
+            <param name="count">The number of entries to load. Always appears to be 10.</param>
+            <returns>Returns an nint, probably.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.ClearData">
+            <summary>
+            Sets the value of <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyInterface.EntryCount"/> to 0 for this proxy. Does not actually delete any data from any arrays. 
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.RequestData">
+            <summary>
+            Send a search request to the server based on the currently selected <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.SearchItemId"/> and other data. WILL generate a network request.
+            </summary>
+            <returns>Returns true if the packet was sent (?), false otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.EndRequest">
+            <summary>
+            (Currently) a nullsub that gets called by <see cref="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.AddPage(System.IntPtr)"/> after all data is received from the server.
+            </summary>
+            <remarks>
+            Technically returns <c>0</c>, but the return does not seem to be used at all.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.AddPage(System.IntPtr)">
+            <summary>
+            Handles the <c>MarketBoardOfferings</c> packet and calls <see cref="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.AddData(System.IntPtr,System.UInt32)"/> to load into the InfoProxy. Will also handle dispatching
+            packets to the server for pagination/fetch purposes. Calls <see cref="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.EndRequest"/> when all data is loaded.
+            </summary>
+            <param name="packetPtr">A pointer to the packet data to load in.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.ProcessPlayerRetainerInfo(System.IntPtr,System.UInt32)">
+            <summary>
+            Load player retainer information from a packet into the 
+            </summary>
+            <param name="packetData"></param>
+            <param name="retainerCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.SetLastPurchasedItem(FFXIVClientStructs.FFXIV.Client.UI.Info.MarketBoardListing*)">
+            <summary>
+            Copies the specified market board listing into the <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyItemSearch.LastPurchasedMarketboardItem"/> fields of the InfoProxy.
+            </summary>
+            <param name="listing">The listing to copy.</param>
+            <returns>Returns true if successful.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Info.MarketBoardListing.ContainerIndex">
+            <summary>
+            The index of the retainer's inventory slot in the RetainerMarket inventory.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Info.MarketBoardListing.Materia">
+            <summary>
+            List of materias associated with this item. Only valid up to the count specified in MateriaCount.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Info.MarketBoardListing.TownId">
+            <summary>
+            The Town (from EXD) that this marketboard entry is from.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerModule.CreateBanner">
+            <summary>
+            Create a new Banner entry.
+            </summary>
+            <returns>BannerModuleEntry* of the newly created Banner, or null if out of Ids.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerModule.DeleteBanner(System.Int32)">
+            <summary>
+            Delete a Banner by Id.
+            </summary>
+            <param name="bannerId">The BannerId of the Banner to delete.</param>
+            <returns>bool if the deletion was successful or not.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerModule.GetNextId">
+            <summary>
+            Get the next free BannerId.
+            </summary>
+            <returns>Data->NextId</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerModule.GetBannerById(System.Int32)">
+            <summary>
+            Get the Banner entry by Id.
+            </summary>
+            <param name="bannerId">The BannerId.</param>
+            <returns>BannerModuleEntry*, or null if not found.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerModule.GetBannerIdByBannerIndex(System.Int32)">
+            <summary>
+            Get the Id of a Banner via the index of the Data.Entries array.
+            </summary>
+            <param name="bannerIndex">Index in Entries array.</param>
+            <returns>BannerID, or -1 if not found.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerModuleEntry.GenerateChecksum(System.UInt32*,System.Byte*,FFXIVClientStructs.FFXIV.Client.UI.Misc.BannerGearVisibilityFlag)">
+            <param name="itemIds">A pointer to 14 Item Ids</param>
+            <param name="stainIds">A pointer to 14 Stain Ids</param>
+            <param name="gearVisibilityFlag">Gear Visibility Flags</param>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.UI.Misc.ConfigOption">
+            <summary>
+            ConfigOption indexes for use with ConfigModule.
+            This enum will be incorrect after any patch that adds or removes any config options.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.ItemFinderModule.SearchForItem(System.UInt32,System.Boolean)">
+            <summary>
+            Searches inventories for the specified item id and opens the Item Search List window to display the results.
+            </summary>
+            <param name="itemId">The Id of the item to search for.</param>
+            <param name="includeHQAndCollectibles">If <c>true</c>, it also searches for the item id as HQ and collectible versions.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GetGearset(System.Int32)">
+            <summary>
+            Return a pointer to a <see cref="T:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetEntry"/> by index/ID.
+            </summary>
+            <param name="gearsetId">The index of the gearset to look up.</param>
+            <returns>Returns a pointer to a GearsetEntry</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.FindGearsetIDByName(FFXIVClientStructs.FFXIV.Client.System.String.Utf8String*)">
+            <summary>
+            Find a <see cref="T:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetEntry"/> by name and return its ID.<br/>
+            </summary>
+            <remarks>
+            The search is case-sensitive and returns the first gearset with a name beginning with the specified gearsetName.
+            </remarks>
+            <param name="gearsetName">The name of the gearset to look up.</param>
+            <returns>Returns the index/ID of a GearsetEntry</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.IsValidGearset(System.Int32)">
+            <summary>
+            Check if a gearset at a specific index is valid.
+            </summary>
+            <remarks>
+            Will return <c>false</c> if the gearset index is higher than the player's max allowed gearset number.
+            </remarks>
+            <param name="gearsetId">The index of the gearset to look up.</param>
+            <returns>Returns <c>true</c> if the gearset is valid, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.EquipGearset(System.Int32,System.Byte)">
+            <summary>
+            Attempt to equip a gearset, with certain safety checks in place.
+            </summary>
+            <param name="gearsetId">The gearset ID to attempt to equip.</param>
+            <param name="glamourPlateId">The glamour plate to attempt to equip alongside this gearset. Passing 0 will use the
+            linked gearset (if any).</param>
+            <returns>Returns 0 if the equip succeeded, -1 otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.CreateGearset">
+            <summary>
+            Save the player's current inventory to a new gearset at the next possible ID.
+            </summary>
+            <returns>Returns the ID of the created gearset, or -1 if the creation attempt fails.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.DeleteGearset(System.Int32)">
+            <summary>
+            Delete the gearset at the specified ID.
+            </summary>
+            <param name="gearsetId">The gearset ID to delete.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.UpdateGearset(System.Int32)">
+            <summary>
+            Update the gearset at the specified ID with the currently equipped items.
+            </summary>
+            <param name="gearsetId">The gearset ID to delete.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.LinkGlamourPlate(System.Int32,System.Byte)">
+            <summary>
+            Link a glamour plate to a specific gearset.
+            </summary>
+            <param name="gearsetId">The gearset ID to link a glamour plate to </param>
+            <param name="glamourPlateId">The glamour plate ID to link. 0 resets the linked glamour plate.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.HasLinkedGlamourPlate(System.Int32)">
+            <summary>
+            Check if a specific gearset has a linked glamour plate.
+            </summary>
+            <param name="gearsetId">The ID of the gearset to check.</param>
+            <returns>Returns <c>false</c> if a gearset is invalid or does not have a linked plate, <c>true</c> otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GetBannerIndex(System.Byte)">
+            <summary>
+            Get the Banner index of a Gearset.
+            </summary>
+            <param name="gearsetId">The ID of the gearset.</param>
+            <returns>The Banner index, or -1 if it was not linked.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.SetBannerIndex(System.Byte,System.SByte)">
+            <summary>
+            Set the Banner index of a Gearset.
+            </summary>
+            <param name="gearsetId">The ID of the gearset.</param>
+            <param name="bannerIndex">The Banner index, or -1 to unlink the Banner.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.HasLinkedBanner(System.Byte)">
+            <summary>
+            Check if a specified gearset has a Banner linked to it.
+            </summary>
+            <param name="gearsetId">The ID of the gearset.</param>
+            <returns>Returns <c>true</c> if the gearset has a Banner linked to it, <c>false</c> otherwise.</returns>
+            <remarks>Equivalent to Flags.HasFlag(GearsetFlag.Exists) &amp;&amp; BannerIndex != 0.</remarks>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetFlag.Exists">
+            <summary>
+            Is set when this gearset entry has been created.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetFlag.MainHandMissing">
+            <summary>
+            Shows a red exclamation mark with message "The specified main arm was missing from your Armoury Chest."
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetFlag.HeadgearVisible">
+            <summary>
+            Is set when "Display Headgear" is ticked.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetFlag.WeaponsVisible">
+            <summary>
+            Is set when "Display Sheathed Arms" is ticked.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetFlag.VisorEnabled">
+            <summary>
+            Is set when "Manually adjust visor (select gear only)." is ticked.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetItemFlag.ItemMissing">
+            <summary>
+            Shows a yellow exclamation mark with message "One or more items were missing from your Armoury Chest."
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetItemFlag.ColorDiffers">
+            <summary>
+            Shows a gray exclamation mark with message "One or more items were not the specified color."
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetItemFlag.MateriaDiffers">
+            <summary>
+            Shows a gray exclamation mark with message "One or more items were not melded with the specified materia."
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetItemFlag.AppearanceDiffers">
+            <summary>
+            Shows a gray exclamation mark with message "One or more items did not have the specified appearance."
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetItemIndex">
+            <summary>
+            A helper enum for easier access of GearsetItems in the ItemsSpan.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetEntry.BannerIndex">
+            <remarks>This is the BannerIndex, but offset by 1. If it's 0, the gearset is not linked to a banner.</remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureGearsetModule.GearsetEntry.GetBanner">
+            <returns>Returns a pointer to the BannerModuleEntry* or null if the gearset is not linked to a banner.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.ActiveHotbarClassJobId">
+            <summary>
+            The ID of the ClassJob associated with the currently-active hotbars.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.HotbarShareStateBitmask">
+            <summary>
+            A bitfield representing whether a specific hotbar is to be considered "shared" or not.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.HotBars">
+            <summary>
+            An array of all active hotbars loaded and available to the player. This field tracks both normal hotbars
+            (indices 0 to 9) and cross hotbars (indices 10 to 17).
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.ScratchSlot">
+            <summary>
+            A scratch hotbar slot used for temporary operations such as saving and temporary rewrites.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.SavedHotBars">
+             <summary>
+             A field containing all saved hotbars, as persisted to disk. This field tracks both normal and cross hotbars, at
+             their appropriate sub-indices.
+             </summary>
+             <remarks>
+             Data in this field is stored in the following order: the common PvE hotbar (index 0), each class' PvE hotbar
+             based on their ClassJob ID (indices 1-40), the common PvP hotbar (index 41), and each job's PvP hotbar
+             (excluding Blue Mage) (indices 42-60).
+            
+             To calculate a PvP hotbar index, add the ClassJob's <c>JobIndex</c> to 41. If the JobIndex is at or above 16,
+             subtract 1 to handle Blue Mage's edge case.
+             </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.GetSlotById(System.UInt32,System.UInt32)">
+            <summary>
+            Retrieves a pointer to a specific hotbar slot via hotbar ID or slot ID. If the hotbar slot specified is out of
+            bounds, return the <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.ScratchSlot"/>. 
+            </summary>
+            <param name="hotbarId">The hotbar ID (0 to 17) to select.</param>
+            <param name="slotId">The slot ID (0 to 15) to select.</param>
+            <returns>Returns a pointer to the specified HotBarSlot.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.GetSlotAppearance(FFXIVClientStructs.FFXIV.Client.UI.Misc.HotbarSlotType*,System.UInt32*,System.UInt16*,FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule*,FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot*)">
+            <summary>
+            Retrieve's a hotbar slot's designated appearance (the slot type and slot ID) that will be used for icon display
+            purposes. This method will resolve adjusted action IDs as appropriate.
+            </summary>
+            <remarks>
+            The result of this method call will generally be written to IconTypeB/IconB, which is then used to
+            look up the exact icon ID to display on the hotbar. This method appears to be run every frame for every
+            visible hotbar slot in the game.
+            </remarks>
+            <param name="actionType">A pointer to where the slot's appearance action type will be written to.</param>
+            <param name="actionId">A pointer to where the slot's appearance action ID will be written to.</param>
+            <param name="UNK_0xC4">A pointer to where the slot's +C4 offset will be written to.</param>
+            <param name="hotbarModule">A reference to the RaptureHotbarModule of the game.</param>
+            <param name="slot">A reference to the hotbar slot to calculate the appearance for.</param>
+            <returns>Returns the same value present in the actionId param.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.IsHotbarShared(System.UInt32)">
+            <summary>
+            Helper method to check if a specific hotbar is to be shared between all classes or not.
+            </summary>
+            <remarks>
+            This method does not enforce bounding on the <c>hotbarId</c> field, consumers are responsible for this
+            themselves.
+            </remarks>
+            <param name="hotbarId">The hotbar ID (bounded between 0 and 17) to check.</param>
+            <returns>Returns true if the hotbar is shared, false otherwise.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.WriteSavedSlot(System.UInt32,System.UInt32,System.UInt32,FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot*,System.Boolean,System.Boolean)">
+            <summary>
+            Dumps a hotbar slot into a specific save slot within <see cref="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureHotbarModule.SavedHotBars"/> and prepares a file save. Used
+            to persist hotbar changes to disk. This method will attempt to resolve the proper index for saving depending on
+            shared hotbar configuration and specified PvP state.
+            </summary>
+            <param name="classJobId">The ID of the ClassJob to persist this hotbar slot to.</param>
+            <param name="hotbarId">The hotbar ID to modify.</param>
+            <param name="slotId">The slot ID to modify.</param>
+            <param name="slotSource">The source slot to dump to disk.</param>
+            <param name="ignoreSharedHotbars">Unclear use, default to false. </param>
+            <param name="isPvpSlot">If true, will save to the classJob's PvP SavedHotBars slots.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBar.GetHotbarSlot(System.UInt32)">
+            <summary>
+            Helper method to return a pointer to a specific HotBarSlot, as certain APIs are much happier with a
+            pointer rather than a fixed reference.
+            </summary>
+            <param name="id">A hotbar slot ID between 0 and 15.</param>
+            <returns>Returns a pointer to a HotBarSlot, or null if an invalid ID was passed.</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.PopUpHelp">
+             The string that appears when a hotbar slot is hovered over.
+            
+             Calculated by concatenating GetDisplayNameForSlot with PopUpKeybindHint (in most cases).
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.CostText">
+             The "cost text" to display when 0xCB is in mode 2 or 4.
+            
+             This is generally filled with a flexible MP cost (e.g. "All" for certain BLM spells) or "x 123" for items.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.PopUpKeybindHint">
+             A human-friendly display of the keybind used for this hotbar slot.
+            
+             This text will generally lead with a space and have wrapping brackets, e.g. " [Ctrl-3]".
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.KeybindHint">
+             A less-friendly version of the keybind used for this hotbar slot.
+            
+             The actual use of this field is unknown, but it appears to be related to the hint in the top-left of the hotbar
+             UI.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.CommandId">
+            The ID of the action that will be executed when this slot is triggered. Action type is determined by the
+            CommandType field.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.IconA">
+             UNKNOWN. Appears to be the original action ID associated with this hotbar slot before adjustment.
+            
+             Note that this is *not* a reference to an icon ID; it must be combined with IconTypeA.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.IconB">
+             Appears to be the action ID that will be used to generate this hotbar slot icon.
+            
+             This field exists to allow a hotbar slot to have the appearance of one action, but in reality trigger a
+             different action. For example, PvP combos will use this to track the "active" action.
+            
+             Note that this is *not* a reference to an icon directly.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.UNK_0xC4">
+             Unknown field with offset 0xC4 (196), possibly overloaded
+            
+             Appears to have relation to the following:
+             - Lost Finds Items appear to set this value to 1
+             - In PVP actions, the high byte controls combo icon and the low byte counts which action the combo is on
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.CommandType">
+            The HotbarSlotType of the action that will be executed when this hotbar slot is triggered.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.IconTypeA">
+            UNKNOWN. Appears to be the original action type associated with this hotbar slot before adjustment/loading.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.IconTypeB">
+             Appears to be the HotbarSlotType used to determine the icon to display on this hotbar slot.
+            
+             See notes on IconB for more information as to how this field is used.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.CostType">
+             Appears to be the "primary cost" of this action, mapping down to 0, 1, 2, 4, 5, 6, 7.
+            
+             Controls the color of the displayed cost when 0xCB is 1 or 2:
+             - 0: White
+             - 1: Green (HP)
+             - 2: Light Pink (MP)
+             - 3: Orange
+             - 4: Pink (DoH - CP)
+             - 5: Yellow (DoL - GP)
+             - 6: Blue (Job Gauge?)
+             - 7: Bright Yellow (Rival Wings - CE)
+             - All others: Grey
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.CostDisplayMode">
+             Appears to control display of the primary cost of the action (0xCA). 
+            
+             - 1: Displays action cost from 0xD0 in bottom left (e.g. for Actions or Craft Actions)
+             - 2: Mode 1, but display a custom string from CostText instead (generally "All" on Actions with PrimaryCost = 4)
+             - 3: Displays the value of 0xD0 in the bottom right (e.g. for Gearsets/UNK_0x17)
+             - 4: Mode 3, but display a custom string from CostText instead (generally "x {count}" for Items)
+             - 0/255: No display, all other cases
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.Icon">
+            The icon ID that is currently being displayed on this hotbar slot. 
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.CostValue">
+             UNKNOWN. Appears to be the "cost" of an action.
+            
+             For items, this field holds the number of items of that type currently present in inventory.
+            
+             For actions that have some cost (MP, job bar, etc.), this appears to be the relevant value shown in the bottom
+             left of the action.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.UNK_0xD4">
+            UNKNOWN. Appears to be Recipe specific. References the resulting Item ID of the recipe on the hotbar slot.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.UNK_0xD8">
+            UNKNOWN. Appears to be Recipe specific. References the CraftType for the recipe on the hotbar slot
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.UNK_0xDC">
+             UNKNOWN. Appears to be Recipe specific to check if a recipe is valid.
+            
+             Set to 1 when the recipe results in a nonzero number of items (???).
+            
+             If 0, the tooltip for this slot will display message noting the recipe is deleted.
+             If 1, the tooltip for this slot will display the name and crafting class for that recipe.
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.UNK_0xDD">
+             UNKNOWN. Appears to be Recipe specific.
+            
+             Always set to 1, apparently? 
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.UNK_0xDE">
+             UNKNOWN. Appears to control UI display mode (icon and displayed name) in some way
+            
+             Known values so far:
+             - 2: Appears to be set for adjusted actions (e.g. upgraded spells/weaponskills)
+             - 3: Appears to mark a PVP combo action
+             - 4: Set on Squadron Order - Disengage, maybe others
+             - 5: Set for Lost Finds Items (?)
+             - 0/255: "generic"
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.IsLoaded">
+            <summary>
+            A "boolean" representing if this specific hotbar slot has been fully loaded. False for empty slots and slots
+            that have yet to be loaded in the UI.
+            </summary>
+            <remarks>
+            This appears to initialize as 0 and is set to 1 when the hotbar slot appears on a visible hotbar. It will not
+            reset if the slot is hidden (and subsequently outdated).
+            </remarks>
+        </member>
+        <member name="P:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.IsEmpty">
+            <summary>
+            Check if this hotbar slot is considered "empty" or not.
+            </summary>
+            <remarks>
+            Borrows game logic of checking for a non-zero command ID. Kept as a byte for API compatibility though this
+            probably should be a bool instead.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.Set(FFXIVClientStructs.FFXIV.Client.UI.Misc.HotbarSlotType,System.UInt32)">
+            <summary>
+            Update the command of this hotbar slot to the specified value. This will not trigger a file save and will only
+            update the in-memory struct defined here.
+            </summary>
+            <param name="type">The <see cref="T:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotbarSlotType"/> that this slot should trigger.</param>
+            <param name="id">The ID of the command that this slot should trigger.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.LoadIconFromSlotB">
+            <summary>
+            Populates HotBarSlot.Icon with information from IconB/IconTypeB. 
+            </summary>
+            <returns>Returns true if no icon was loaded (??)</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.GetIconIdForSlot(FFXIVClientStructs.FFXIV.Client.UI.Misc.HotbarSlotType,System.UInt32)">
+             <summary>
+             Get an icon ID for a hotbar slot, with specified appearance slot type and action ID.
+            
+             This method appears to exist to allow certain action types (specifically macros it seems?) to have a different
+             appearance than the actual CommandType/CommandId called by this hotbar slot.
+             </summary>
+             <param name="slotType">The appearance slot type to use. Virtually almost always IconTypeB.</param>
+             <param name="actionId">The appearance action ID to use. Virtually almost always IconB.</param>
+             <returns>Returns an int of the icon that should be used for this hotbar slot.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.GetDisplayNameForSlot(FFXIVClientStructs.FFXIV.Client.UI.Misc.HotbarSlotType,System.UInt32)">
+             <summary>
+             Get the final name for a hotbar slot, taking into account the specified appearance slot type and action ID.
+            
+             This method is virtually almost always called using the parameters from IconTypeB and IconB.
+            
+             When slot field 0xDE is set to 3, this method will instead override the passed in slotType and actionId with
+             the values present in IconTypeA and IconA. 
+             </summary>
+             <param name="slotType">The appearance slot type to use. Virtually almost always IconTypeB.</param>
+             <param name="actionId">The appearance action ID to use. Virtually almost always IconB.</param>
+             <returns>Returns a string representation of the name to be displayed to the user for this hotbar slot.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.GetActionTypeForSlotType(FFXIVClientStructs.FFXIV.Client.UI.Misc.HotbarSlotType)">
+            <summary>
+            Retrieves a <see cref="T:FFXIVClientStructs.FFXIV.Client.Game.ActionType"/> for the specified hotbar slot type.
+            </summary>
+            <remarks>
+            This method doesn't actually read any data from the HotBarSlot it's a member of.
+            </remarks>
+            <param name="type">A HotbarSlotType to check against.</param>
+            <returns>Returns an ActionType if found, else 0xFFFFFFFF.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.HotBarSlot.GetRecastChargesFromSlotB">
+            <summary>
+            Gets the number of charges currently available for the specified hotbar slot (based on the icon present in
+            IconB). If this hotbar slot references an action that does not use charges, this will return either 0 or 1.
+            </summary>
+            <returns>Returns a uint.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.SavedHotBar.GetSavedHotBarSlot(System.UInt32)">
+            <summary>
+            Helper method to return a pointer to a specific HotBarSlot, as certain APIs are much happier with a
+            pointer rather than a fixed reference.
+            </summary>
+            <param name="id">A hotbar slot ID between 0 and 15.</param>
+            <returns>Returns a pointer to a HotBarSlot, or null if an invalid ID was passed.</returns>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureMacroModule.SetSavePendingFlag(System.Boolean,System.UInt32)">
+            <summary>
+            Sets a flag to mark the macro file as needing a save. Fires on any macro update, generally prior to saving.
+            </summary>
+            <param name="needsSave">A boolean denoting if the specified set needs to be saved.</param>
+            <param name="set">The macro page ID that needs saving.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Client.UI.Misc.RaptureTextModule.FormatTimeSpan(System.UInt32,System.Boolean)">
+            <summary>
+            Display a timespan as hours, minutes or seconds with only the largest non zero unit.
+            </summary>
+            <param name="seconds"></param>
+            <param name="alternativeMinutesGlyph">Use U+E028 for minutes</param>
+            <returns>string containing one of 23h, 59m, 59s</returns>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Component.GUI.AtkArrayData.UpdateState">
+            <remarks>
+            0 = No update pending<br/>
+            1 = Update subscribed addons (specific flags are checked in AtkUnitManager.UpdateAddonByID)<br/>
+            2 = Force update subscribed addons
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Component.GUI.AtkUnitBase.SubscribeAtkArrayData(System.Byte,System.Byte)">
+            <param name="arrayType">0 for StringArrayData or 1 for NumberArrayData</param>
+            <param name="arrayIndex">The index in AtkArrayDataHolder</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Component.GUI.AtkUnitBase.UnsubscribeAtkArrayData(System.Byte,System.Byte,System.Boolean)">
+            <param name="arrayType">0 for StringArrayData or 1 for NumberArrayData</param>
+            <param name="arrayIndex">The index in AtkArrayDataHolder</param>
+            <param name="clean">Resets all values to default, also frees managed strings</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Component.GUI.AtkUnitBase.Finalizer">
+            <remarks>
+            The name "Finalizer" is used instead of "Finalize" to avoid conflicts
+            with the <see cref="M:System.Object.Finalize"/> method.
+            </remarks>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Component.GUI.NumberArrayData.SetValue(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>Set a value at the specified index of the IntArray.</summary>
+            <param name="index">The index in the array.</param>
+            <param name="value">The integer value.</param>
+            <param name="force">If <c>true</c> it bypasses the check if the value is different from what is stored (read before write).</param>
+            <param name="silent">If <c>false</c> and the value was changed, UpdateState will be set to <c>1</c> to request an update on subscribed addons.</param>
+        </member>
+        <member name="M:FFXIVClientStructs.FFXIV.Component.GUI.StringArrayData.SetValue(System.Int32,System.Byte*,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>Set a value at the specified index of the StringArray.</summary>
+            <param name="index">The index in the array.</param>
+            <param name="value">
+            A pointer to a null terminated string.<br/>
+            <b>Note:</b> When passing a C# string (made possible by the generator overload), make sure managed is set to <c>true</c>.
+            </param>
+            <param name="readBeforeWrite">
+            If <c>true</c>, it compares the stored pointer with the passed pointer (not the text it points to) before setting it (read before write).<br/>
+            If <c>false</c>, the stored pointer will always be replaced with the passed pointer.<br/><br/>
+            In any way, it only has an effect if managed is <c>false</c>.
+            </param>
+            <param name="managed">
+            Recommended to be set to <c>true</c> when using a temporary pointer.<br/>
+            The game will allocate memory in the UI space and copy the text. The passed pointer can then be freed right after the SetValue call.<br/>
+            Internally, the pointer to the allocated memory is (also) stored in ManagedStringArray to allow SetValue to reuse or reallocate the space as needed.
+            </param>
+            <param name="silent">If <c>false</c> and the value was changed, UpdateState will be set to <c>1</c> to request an update on subscribed addons.</param>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.SkinColor">
+            <summary>
+            XYZ : Skin diffuse color, as squared RGB.
+            W : Muscle tone.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.SkinFresnelValue0">
+            <summary>
+            XYZ : Skin specular color, as squared RGB.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.LipColor">
+            <summary>
+            XYZ : Lip diffuse color, as squared RGB.
+            W : Lip opacity.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.MainColor">
+            <summary>
+            XYZ : Hair primary color, as squared RGB.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.HairFresnelValue0">
+            <summary>
+            XYZ : Hair specular color, as squared RGB.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.MeshColor">
+            <summary>
+            XYZ : Hair highlight color, as squared RGB.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.LeftColor">
+            <summary>
+            XYZ : Left eye color, as squared RGB.
+            W : Face paint (UV2) U multiplier.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.RightColor">
+            <summary>
+            XYZ : Right eye color, as squared RGB.
+            W : Face paint (UV2) U offset.
+            </summary>
+        </member>
+        <member name="F:FFXIVClientStructs.FFXIV.Shader.CustomizeParameter.OptionColor">
+            <summary>
+            XYZ : Race feature color, as squared RGB.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.String">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.Int64">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.ConcurrentDictionaryStringInt64">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.Default">
+            <summary>
+            The default <see cref="T:System.Text.Json.Serialization.JsonSerializerContext"/> associated with a default <see cref="T:System.Text.Json.JsonSerializerOptions"/> instance.
+            </summary>
+        </member>
+        <member name="P:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.GeneratedSerializerOptions">
+            <summary>
+            The source-generated options associated with this context.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.#ctor(System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FFXIVClientStructs.Interop.Resolver.ResolverJsonContext.GetTypeInfo(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:FFXIVClientStructs.Interop.SpanExtensions.GetPointer``1(System.Span{``0},System.Int32)">
+            <summary>
+            Gets a pointer to the span element at index.
+            </summary>
+        </member>
+        <member name="T:FFXIVClientStructs.Interop.SpanExtensions.SpanPointerEnumerator`1">
+            <summary>
+            Enumerates the elements of a Span{T} as pointers.
+            </summary>
+        </member>
+        <member name="M:FFXIVClientStructs.Interop.SpanExtensions.PointerEnumerator``1(System.Span{``0})">
+            <summary>
+            Gets a pointer enumerator for this span.
+            This allows enumeration over the span as a pointer type, T*, rather than T.
+            </summary>
+        </member>
+    </members>
+</doc>

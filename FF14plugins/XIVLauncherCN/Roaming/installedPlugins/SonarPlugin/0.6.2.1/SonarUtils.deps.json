@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "SonarUtils/1.0.0": {
+        "dependencies": {
+          "ConcurrencyLab.ParallelChecker": "2.7.0",
+          "Farmhash.Sharp": "0.9.0",
+          "XoshiroPRNG.Net": "1.6.0"
+        },
+        "runtime": {
+          "SonarUtils.dll": {}
+        }
+      },
+      "ConcurrencyLab.ParallelChecker/2.7.0": {},
+      "Farmhash.Sharp/0.9.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/Farmhash.Sharp.dll": {
+            "assemblyVersion": "0.9.0.0",
+            "fileVersion": "0.9.0.0"
+          }
+        }
+      },
+      "XoshiroPRNG.Net/1.6.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/XoshiroPRNG.Net.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SonarUtils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConcurrencyLab.ParallelChecker/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ydBfxgn7cMWywJNIFv4eIXWa08ze2+5o/GnEYLnpo4A+dC6nO0F+UxCbPyG1dYbVwsNO7EASKoo47hdb/0z+Vw==",
+      "path": "concurrencylab.parallelchecker/2.7.0",
+      "hashPath": "concurrencylab.parallelchecker.2.7.0.nupkg.sha512"
+    },
+    "Farmhash.Sharp/0.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6Ij80JrfPyiDRM4QqdlEIjev4Q97eqEakh7wFJZYmbUkWVoCJb1+YdSdoXpzvn+Fs2dXH8THRsn+uUvrhMNKpQ==",
+      "path": "farmhash.sharp/0.9.0",
+      "hashPath": "farmhash.sharp.0.9.0.nupkg.sha512"
+    },
+    "XoshiroPRNG.Net/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Agj7DDi1obbcZXzPJDGpx4ncwrlr0Q39xe/coNGJV2DU3AzhWiHF33sM2nkHlgIL1icLacx1hkqNz8No7pdWWg==",
+      "path": "xoshiroprng.net/1.6.0",
+      "hashPath": "xoshiroprng.net.1.6.0.nupkg.sha512"
+    }
+  }
+}

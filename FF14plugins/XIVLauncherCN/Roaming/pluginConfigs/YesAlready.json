@@ -147,6 +147,38 @@
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要传送吗？",
+            "ZoneRestricted": true,
+            "ZoneText": "岩燕庙",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要触动“审理之天平”吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要移动到第二修炼区吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要移动到第三修炼区吗？",
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
           }
         ]
       },
@@ -480,7 +512,7 @@
         "Children": [
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
+            "Enabled": false,
             "Text": "/要接受前往“.+?”的传送邀请吗？/",
             "ZoneRestricted": false,
             "ZoneText": "",
@@ -508,6 +540,14 @@
             "Text": "即将回到“最终决战天幕魔导城”的开始地点。  ※开战后进入封锁状态的区域， 　只有在战斗结束后才能解除封锁。",
             "ZoneRestricted": true,
             "ZoneText": "天幕魔导城",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": false,
+            "Text": "Your text goes here",
+            "ZoneRestricted": false,
+            "ZoneText": "",
             "IsYes": true
           }
         ]
@@ -689,7 +729,7 @@
   "GrandCompanySupplyReward": false,
   "ShopCardDialog": true,
   "JournalResultCompleteEnabled": false,
-  "ContentsFinderConfirmEnabled": true,
+  "ContentsFinderConfirmEnabled": false,
   "ContentsFinderOneTimeConfirmEnabled": false,
   "InclusionShopRememberEnabled": false,
   "InclusionShopRememberCategory": 1,

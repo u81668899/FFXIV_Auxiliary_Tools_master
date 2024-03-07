@@ -1,0 +1,159 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MarketBoardPlugin/1.3.4": {
+        "dependencies": {
+          "Dalamud.ContextMenu": "1.3.1",
+          "Dalamud.DrunkenToad": "1.8.15",
+          "DalamudPackager": "2.1.12",
+          "MSBuildGitHash": "2.0.2",
+          "OtterGui": "1.0.0",
+          "StyleCop.Analyzers": "1.2.0-beta.507"
+        },
+        "runtime": {
+          "MarketBoardPlugin.dll": {}
+        }
+      },
+      "Dalamud.ContextMenu/1.3.1": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.ContextMenu.dll": {
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
+          }
+        }
+      },
+      "Dalamud.DrunkenToad/1.8.15": {
+        "dependencies": {
+          "Dalamud.Loc": "1.1.2",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.DrunkenToad.dll": {
+            "assemblyVersion": "1.8.15.0",
+            "fileVersion": "1.8.15.0"
+          }
+        }
+      },
+      "Dalamud.Loc/1.1.2": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.Loc.dll": {
+            "assemblyVersion": "1.1.2.0",
+            "fileVersion": "1.1.2.0"
+          }
+        }
+      },
+      "DalamudPackager/2.1.12": {},
+      "Microsoft.Extensions.DependencyInjection/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "MSBuildGitHash/2.0.2": {},
+      "StyleCop.Analyzers/1.2.0-beta.507": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.507"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.507": {},
+      "OtterGui/1.0.0": {
+        "runtime": {
+          "OtterGui.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MarketBoardPlugin/1.3.4": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dalamud.ContextMenu/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptAxut5PiLnzZ4G/KQdHJVcyklC/BF3otHJ7zYVUPiKBjsOCoF0n/6h2jK7e+8ev2Y1yAY3Wtx2GuXLFQgt9Uw==",
+      "path": "dalamud.contextmenu/1.3.1",
+      "hashPath": "dalamud.contextmenu.1.3.1.nupkg.sha512"
+    },
+    "Dalamud.DrunkenToad/1.8.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-biuHkQR0qmIMWEsa14CcWtUH4f6G7sOTQMDZZKws2MhzTYl/3sw2lDS3z6bBOPd17I1UPtmkFBBn0QbQEpO4PA==",
+      "path": "dalamud.drunkentoad/1.8.15",
+      "hashPath": "dalamud.drunkentoad.1.8.15.nupkg.sha512"
+    },
+    "Dalamud.Loc/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sy7ooP1+mGtoCCPltgUNATz3UbnRFihVcDfg9wB2rdsfY5FDfCW/k3jpLZiJZc3xXHyttzwttJeVC3tE3JsEGw==",
+      "path": "dalamud.loc/1.1.2",
+      "hashPath": "dalamud.loc.1.1.2.nupkg.sha512"
+    },
+    "DalamudPackager/2.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sc0PVxvgg4NQjcI8n10/VfUQBAS4O+Fw2pZrAqBdRMbthYGeogzu5+xmIGCGmsEZ/ukMOBuAqiNiB5qA3MRalg==",
+      "path": "dalamudpackager/2.1.12",
+      "hashPath": "dalamudpackager.2.1.12.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-elNeOmkeX3eDVG6pYVeV82p29hr+UKDaBhrZyWvWLw/EVZSYEkZlQdkp0V39k/Xehs2Qa0mvoCvkVj3eQxNQ1Q==",
+      "path": "microsoft.extensions.dependencyinjection/7.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+    },
+    "MSBuildGitHash/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1gA7vw5Wc4w6/H2IDVFx69LGQndIyTSsBOTL1BO1lAjzyWl6LUi24gtST8Bh5yd/793patMZyO7Ym4Kg19p+VA==",
+      "path": "msbuildgithash/2.0.2",
+      "hashPath": "msbuildgithash.2.0.2.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.2.0-beta.507": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/FtugDT66cKJJ+GGH7rNpG6UDrT4iIWz45M6lrXXHobDUFDHw+q5VgkbiR+6ffTO564ge7w6fQh/eoQhVdJO8Q==",
+      "path": "stylecop.analyzers/1.2.0-beta.507",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.507.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.507": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gTY3IQdRqDJ4hbhSA3e/R48oE8b/OiKfvwkt1QdNVfrJK2gMHBV8ldaHJ885jxWZfllK66soa/sdcjh9bX49Tw==",
+      "path": "stylecop.analyzers.unstable/1.2.0.507",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.507.nupkg.sha512"
+    },
+    "OtterGui/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

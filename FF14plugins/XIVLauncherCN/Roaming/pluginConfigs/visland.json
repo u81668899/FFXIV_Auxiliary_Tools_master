@@ -1,0 +1,204 @@
+{
+  "Version": 2,
+  "Payload": {
+    "visland.Workshop.WorkshopConfig": {
+      "AutoOpenNextDay": false,
+      "AutoImport": false,
+      "UseFavorSolver": false
+    },
+    "visland.Granary.GranaryConfig": {
+      "Collect": "Manual",
+      "Reassign": "Manual"
+    },
+    "visland.Gathering.GatherRouteDB": {
+      "Routes": [
+        {
+          "Name": "1",
+          "Waypoints": [
+            [
+              715.2169,
+              -44.96214,
+              103.9036,
+              2.0,
+              "珊瑚礁",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              718.8102,
+              -42.77617,
+              134.3677,
+              2.0,
+              "茂密的海藻",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              726.7731,
+              -44.98251,
+              112.5299,
+              2.0,
+              "珊瑚礁",
+              1,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              733.1931,
+              -50.34861,
+              75.95065,
+              2.0,
+              "茂密的海藻",
+              1,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              732.8196,
+              -50.51878,
+              60.37308,
+              2.0,
+              "茂密的海藻",
+              2,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              726.9846,
+              -48.20302,
+              39.02945,
+              2.0,
+              "珊瑚礁",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              745.6878,
+              -50.86259,
+              13.06558,
+              2.0,
+              "珊瑚礁",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              758.725,
+              -53.82194,
+              -0.1441865,
+              2.0,
+              "茂密的海藻",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              724.6389,
+              -45.8835,
+              -24.94785,
+              2.0,
+              "珊瑚礁",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ],
+            [
+              711.5082,
+              -46.9691,
+              -3.746082,
+              2.0,
+              "茂密的海藻",
+              0,
+              2012985,
+              false,
+              1,
+              0,
+              0,
+              0,
+              false,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "DisableOnErrors": false
+    },
+    "visland.Windows.ExportsWindow+Config": {
+      "AutoSell": false,
+      "AutoSellAmount": 900
+    },
+    "visland.Pasture.PastureWindow+Config": {
+      "AutoCollect": false
+    },
+    "visland.Farm.FarmWindow+Config": {
+      "AutoCollect": false
+    }
+  }
+}

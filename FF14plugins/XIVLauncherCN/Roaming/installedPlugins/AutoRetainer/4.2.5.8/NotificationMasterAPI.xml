@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NotificationMasterAPI</name>
+    </assembly>
+    <members>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.#ctor(Dalamud.Plugin.DalamudPluginInterface)">
+            <summary>
+            Creates an instance of NotificationMaster API. You do not need to check if NotificationMaster plugin is installed.
+            </summary>
+            <param name="dalamudPluginInterface">Plugin interface reference</param>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.IsIPCReady">
+            <summary>
+            Checks if IPC is ready. You DO NOT need to call this method before invoking any of API functions unless you specifically want to check if plugin is installed and ready to accept requests.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.DisplayTrayNotification(System.String)">
+            <summary>
+            Displays tray notification. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+            </summary>
+            <param name="text">Text of tray notification</param>
+            <returns>Whether operation succeed.</returns>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.DisplayTrayNotification(System.String,System.String)">
+            <summary>
+            Displays tray notification. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+            </summary>
+            <param name="title">Title of tray notification</param>
+            <param name="text">Text of tray notification</param>
+            <returns>Whether operation succeed.</returns>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.FlashTaskbarIcon">
+            <summary>
+            Flashes game's taskbar icon. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+            </summary>
+            <returns>Whether operation succeeded</returns>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.TryBringGameForeground">
+            <summary>
+            Attempts to bring game's window foreground. Due to Windows inconsistencies, it's not guaranteed to work. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+            </summary>
+            <returns>Whether operation succeeded</returns>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.PlaySound(System.String,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Begins to play a sound file. If another sound file is already playing, stops previous file and begins playing specified. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+            </summary>
+            <param name="pathOnDisk">Path to local file. Can not be web URL. See <see cref="F:NotificationMasterAPI.Data.MFAudioFormats"/> for supported formats.</param>
+            <param name="volume">Volume between 0.0 and 1.0</param>
+            <param name="repeat">Whether to repeat sound file.</param>
+            <param name="stopOnGameFocus">Whether to stop file once game is focused. </param>
+            <returns>Whether operation succeeded</returns>
+        </member>
+        <member name="M:NotificationMasterAPI.NotificationMasterApi.StopSound">
+            <summary>
+            Stops playing sound. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+            </summary>
+            <returns>Whether operation succeeded</returns>
+        </member>
+    </members>
+</doc>

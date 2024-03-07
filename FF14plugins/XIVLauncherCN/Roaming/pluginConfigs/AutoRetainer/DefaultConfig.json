@@ -18,95 +18,95 @@
   "Verbose": false,
   "OfflineData": [
     {
-      "CreationFrame": 1,
+      "CreationFrame": 0,
       "CID": 19014409516066930,
       "Name": "十六五夜",
       "World": "摩杜纳",
       "WorldOverride": null,
       "Enabled": false,
+      "WorkshopEnabled": false,
       "RetainerData": [
         {
-          "CreationFrame": 1602679,
           "Name": "神山樱乃",
-          "VentureEndsAt": 1708443776,
+          "VentureEndsAt": 1709793380,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 28,
           "VentureID": 946,
-          "Gil": 4296016,
+          "Gil": 0,
           "DisplayOrder": 1,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205334633,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山郁香",
-          "VentureEndsAt": 1708443780,
+          "VentureEndsAt": 1709793386,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 27,
           "VentureID": 946,
-          "Gil": 1975633,
+          "Gil": 510219,
           "DisplayOrder": 0,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205334646,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山须美",
-          "VentureEndsAt": 1708442628,
+          "VentureEndsAt": 1709793391,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 16,
-          "VentureID": 797,
-          "Gil": 20446,
+          "VentureID": 906,
+          "Gil": 0,
           "DisplayOrder": 3,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205403570,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山神乐",
-          "VentureEndsAt": 1708441160,
+          "VentureEndsAt": 1709792207,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 17,
           "VentureID": 576,
-          "Gil": 1614,
+          "Gil": 0,
           "DisplayOrder": 6,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205403620,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山姚玲",
-          "VentureEndsAt": 1708462445,
+          "VentureEndsAt": 1709800505,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 18,
           "VentureID": 964,
-          "Gil": 7574,
+          "Gil": 0,
           "DisplayOrder": 9,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205412340,
+          "MBItems": 19
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山沙月",
-          "VentureEndsAt": 1708441166,
+          "VentureEndsAt": 1709792213,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 17,
           "VentureID": 576,
-          "Gil": 16292,
+          "Gil": 0,
           "DisplayOrder": 7,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205611305,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山星绘",
-          "VentureEndsAt": 1708443784,
+          "VentureEndsAt": 1709793408,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -114,25 +114,25 @@
           "VentureID": 946,
           "Gil": 0,
           "DisplayOrder": 2,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205653126,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山未来",
-          "VentureEndsAt": 1708441169,
+          "VentureEndsAt": 1709792226,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 16,
-          "VentureID": 72,
-          "Gil": 0,
+          "VentureID": 73,
+          "Gil": 53681,
           "DisplayOrder": 4,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205653136,
+          "MBItems": 19
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山香织",
-          "VentureEndsAt": 1708441176,
+          "VentureEndsAt": 1709792233,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -140,25 +140,26 @@
           "VentureID": 576,
           "Gil": 0,
           "DisplayOrder": 8,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205653140,
+          "MBItems": 20
         },
         {
-          "CreationFrame": 1602679,
           "Name": "神山结花",
-          "VentureEndsAt": 1708441182,
+          "VentureEndsAt": 1709792854,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 17,
-          "VentureID": 576,
-          "Gil": 244166,
+          "VentureID": 836,
+          "Gil": 0,
           "DisplayOrder": 5,
-          "ShouldSerializeCreationFrame": false
+          "RetainerID": 33777068205653149,
+          "MBItems": 20
         }
       ],
       "Preferred": true,
-      "Ventures": 20496,
-      "InventorySpace": 61,
+      "Ventures": 21679,
+      "InventorySpace": 90,
       "VentureCoffers": 0,
       "ServiceAccount": 0,
       "ShowRetainersInDisplayOrder": false,
@@ -787,27 +788,124 @@
         90,
         90
       ],
-      "Gil": 513757111,
+      "Gil": 571342744,
       "OfflineAirshipData": [],
-      "OfflineSubmarineData": [],
-      "ShouldSerializeCreationFrame": false
+      "OfflineSubmarineData": [
+        {
+          "Name": "红烧鱼",
+          "ReturnTime": 1709894403
+        },
+        {
+          "Name": "水煮鱼",
+          "ReturnTime": 1709907746
+        },
+        {
+          "Name": "酸菜鱼",
+          "ReturnTime": 1709904828
+        },
+        {
+          "Name": "剁椒鱼",
+          "ReturnTime": 1709904851
+        }
+      ],
+      "EnabledAirships": [],
+      "EnabledSubs": [],
+      "AdditionalAirshipData": {},
+      "AdditionalSubmarineData": {
+        "红烧鱼": {
+          "Level": 99,
+          "Part1": 21794,
+          "Part2": 21795,
+          "Part3": 21796,
+          "Part4": 22527,
+          "NextLevelExp": 30005186,
+          "CurrentExp": 17053460,
+          "VesselBehavior": 1,
+          "UnlockMode": 0,
+          "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
+          "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
+          "Points": "VVNUAAA=",
+          "IndexOverride": 0
+        },
+        "水煮鱼": {
+          "Level": 105,
+          "Part1": 24346,
+          "Part2": 21795,
+          "Part3": 23903,
+          "Part4": 21797,
+          "NextLevelExp": 17851658,
+          "CurrentExp": 16181599,
+          "VesselBehavior": 1,
+          "UnlockMode": 0,
+          "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
+          "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
+          "Points": "DRIPCho=",
+          "IndexOverride": 0
+        },
+        "酸菜鱼": {
+          "Level": 107,
+          "Part1": 24346,
+          "Part2": 21795,
+          "Part3": 23903,
+          "Part4": 21797,
+          "NextLevelExp": 18090643,
+          "CurrentExp": 1708891,
+          "VesselBehavior": 1,
+          "UnlockMode": 0,
+          "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
+          "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
+          "Points": "DRIPCho=",
+          "IndexOverride": 0
+        },
+        "剁椒鱼": {
+          "Level": 108,
+          "Part1": 24346,
+          "Part2": 21795,
+          "Part3": 23903,
+          "Part4": 21797,
+          "NextLevelExp": 18542909,
+          "CurrentExp": 17191056,
+          "VesselBehavior": 1,
+          "UnlockMode": 0,
+          "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
+          "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
+          "Points": "DRIPCho=",
+          "IndexOverride": 0
+        }
+      },
+      "Ceruleum": 162,
+      "RepairKits": 942,
+      "ExcludeRetainer": false,
+      "ExcludeWorkshop": false,
+      "ExcludeOverlay": false,
+      "TransferItemsBlacklist": [],
+      "NumSubSlots": 4,
+      "TeleportToFCHouse": false,
+      "TeleportToRetainerHouse": false,
+      "EnforceTeleportsOnLogin": false,
+      "HouseTeleportTarget": 1,
+      "FreeCompanyHouseEntrance": null,
+      "PrivateHouseEntrance": null,
+      "MultiWaitForAllDeployables": false,
+      "FCPoints": 0,
+      "FCPointsLastUpdate": 0,
+      "ShouldSerializeCreationFrame": false,
+      "CurrentWorld": "摩杜纳"
     }
   ],
-  "MultiWaitForAll": false,
   "NoNames": false,
   "UnsyncCompensation": -5,
-  "AdvanceTimer": 60,
   "StatsUnifyHQ": false,
   "RecordStats": true,
   "GCHandinNotify": false,
-  "MultiAllowHET": true,
+  "ExpertMultiAllowHET": true,
   "MultiHETOnEnable": true,
   "UseServerTime": true,
-  "NoTheme": false,
+  "NoTheme": true,
   "AdditionalData": {
     "#00438D8134D1A872 神山樱乃": {
-      "CreationFrame": 1,
-      "EntrustDuplicates": false,
+      "CreationFrame": 0,
+      "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
       "Deposit": false,
@@ -819,10 +917,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          946
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -833,7 +928,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山郁香": {
-      "CreationFrame": 1,
+      "CreationFrame": 0,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -846,10 +941,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          946
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -860,7 +952,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山须美": {
-      "CreationFrame": 1,
+      "CreationFrame": 0,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -871,20 +963,12 @@
           {
             "ID": 906,
             "Num": 1
-          },
-          {
-            "ID": 797,
-            "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          906,
-          797
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 2,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -892,8 +976,8 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山神乐": {
-      "CreationFrame": 1,
-      "EntrustDuplicates": false,
+      "CreationFrame": 0,
+      "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
       "Deposit": false,
@@ -905,10 +989,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          577
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -919,7 +1000,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山姚玲": {
-      "CreationFrame": 1,
+      "CreationFrame": 0,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -932,10 +1013,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          964
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -946,8 +1024,8 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山沙月": {
-      "CreationFrame": 1,
-      "EntrustDuplicates": false,
+      "CreationFrame": 0,
+      "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
       "Deposit": false,
@@ -959,10 +1037,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          577
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -973,8 +1048,8 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山星绘": {
-      "CreationFrame": 1,
-      "EntrustDuplicates": false,
+      "CreationFrame": 0,
+      "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
       "Deposit": false,
@@ -986,10 +1061,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          946
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -1000,8 +1072,8 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山未来": {
-      "CreationFrame": 1,
-      "EntrustDuplicates": false,
+      "CreationFrame": 0,
+      "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
       "Deposit": false,
@@ -1009,14 +1081,11 @@
         "Name": "",
         "List": [
           {
-            "ID": 72,
+            "ID": 73,
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          72
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -1027,7 +1096,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山香织": {
-      "CreationFrame": 1,
+      "CreationFrame": 0,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1040,10 +1109,7 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          577
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
       "VenturePlanIndex": 1,
@@ -1054,8 +1120,8 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山结花": {
-      "CreationFrame": 1,
-      "EntrustDuplicates": false,
+      "CreationFrame": 0,
+      "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
       "Deposit": false,
@@ -1071,14 +1137,10 @@
             "Num": 1
           }
         ],
-        "PlanCompleteBehavior": 0,
-        "ListUnwrapped": [
-          577,
-          836
-        ]
+        "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 1,
+      "VenturePlanIndex": 2,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -1093,6 +1155,7 @@
   "UnsafeProtection": false,
   "CharEqualize": false,
   "TimerAllowNegative": false,
+  "MarketCooldownOverlay": false,
   "LoginOverlay": false,
   "LoginOverlayScale": 1.0,
   "LoginOverlayBPadding": 1.35,
@@ -1103,11 +1166,13 @@
   "TaskCompletedBehaviorAccess": 3,
   "Stay5": false,
   "NoCurrentCharaOnTop": false,
-  "Delay": 198,
+  "UseFrameDelay": true,
+  "Delay": 298,
+  "FrameDelay": 8,
   "_dontReassign": false,
   "OldRetainerSense": false,
   "RetainerSense": true,
-  "RetainerSenseThreshold": 29963,
+  "RetainerSenseThreshold": 18378,
   "MultiModeUIBar": false,
   "UIBar": true,
   "Suppress": 164,
@@ -1122,10 +1187,7 @@
           "Num": 1
         }
       ],
-      "PlanCompleteBehavior": 3,
-      "ListUnwrapped": [
-        946
-      ]
+      "PlanCompleteBehavior": 3
     },
     {
       "Name": "彩蝶",
@@ -1135,10 +1197,7 @@
           "Num": 1
         }
       ],
-      "PlanCompleteBehavior": 0,
-      "ListUnwrapped": [
-        946
-      ]
+      "PlanCompleteBehavior": 0
     },
     {
       "Name": "暗物质",
@@ -1148,10 +1207,7 @@
           "Num": 1
         }
       ],
-      "PlanCompleteBehavior": 0,
-      "ListUnwrapped": [
-        577
-      ]
+      "PlanCompleteBehavior": 0
     },
     {
       "Name": "天水",
@@ -1161,10 +1217,7 @@
           "Num": 1
         }
       ],
-      "PlanCompleteBehavior": 0,
-      "ListUnwrapped": [
-        906
-      ]
+      "PlanCompleteBehavior": 0
     }
   ],
   "MultiWaitOnLoginScreen": true,
@@ -1172,7 +1225,44 @@
   "ShowAdditionalInfo": true,
   "RetryItemSearch": false,
   "ArtisanIntegration": true,
-  "AutoResendSubs": false,
+  "DisplayMMType": false,
+  "SubmarineUnlockPlans": [],
+  "HideAirships": false,
+  "DisableRetainerVesselReturn": 0,
+  "SubmarinePointPlans": [],
+  "MultiMinInventorySlots": 2,
+  "IgnoreEsc": true,
+  "UIWarningRetSlotNum": 20,
+  "UIWarningRetVentureNum": 50,
+  "UIWarningDepTanksNum": 300,
+  "UIWarningDepRepairNum": 100,
+  "UIWarningDepSlotNum": 20,
+  "TargetMSPTIdle": 0,
+  "TargetMSPTRunning": 0,
+  "NoFPSLockWhenActive": true,
+  "ExtraFPSLockRange": false,
+  "FpsLockOnlyShutdownTimer": false,
+  "ShutdownMakesNightMode": false,
+  "ShowDeployables": false,
+  "BailoutTimeout": 5,
+  "EnableBailout": true,
+  "EnableCharaSelectBailout": true,
+  "NightMode": false,
+  "NightModePersistent": false,
+  "ShowNightMode": false,
+  "NightModeRetainers": false,
+  "NightModeDeployables": true,
+  "OldStatusIcons": false,
+  "MinGilDisplay": 10000,
+  "GilOnlyChars": false,
+  "MultiAutoStart": false,
+  "MultiDisableOnRelog": false,
+  "MultiNoPreferredReset": false,
+  "MultiPreferredCharLast": true,
+  "VoyageDisableCalcParallel": false,
+  "VoyageDisableCalcMultithreading": false,
+  "LeastMBSFirst": false,
+  "DefaultSubmarineUnlockPlan": "",
   "SellKey": 164,
   "EntrustKey": 0,
   "RetrieveKey": 0,
@@ -1188,5 +1278,40 @@
   "UnlockFPS": true,
   "UnlockFPSUnlimited": false,
   "UnlockFPSChillFrames": false,
-  "ManipulatePriority": false
+  "ManipulatePriority": false,
+  "SubsAutoResend2": true,
+  "MultiModeType": 2,
+  "NoErrorCheckPlanner2": true,
+  "FailureNoFuel": 0,
+  "FailureNoRepair": 1,
+  "FailureNoInventory": 0,
+  "FailureGeneric": 2,
+  "FinalizeBeforeResend": false,
+  "AlertNotAllEnabled": true,
+  "AlertNotDeployed": true,
+  "UnoptimalVesselConfigurations": [],
+  "MultiModeRetainerConfiguration": {
+    "MultiWaitForAll": false,
+    "AdvanceTimer": 60,
+    "WaitForAllLoggedIn": false,
+    "MaxMinutesOfWaiting": 0
+  },
+  "MultiModeWorkshopConfiguration": {
+    "MultiWaitForAll": false,
+    "AdvanceTimer": 120,
+    "WaitForAllLoggedIn": false,
+    "MaxMinutesOfWaiting": 0
+  },
+  "StatusBarMSI": false,
+  "StatusBarIconWidth": 96,
+  "IMDisplayTab": false,
+  "IMEnableCofferAutoOpen": false,
+  "IMEnableAutoVendor": false,
+  "IMEnableContextMenu": false,
+  "IMAutoVendorHard": [],
+  "IMAutoVendorSoft": [],
+  "IMProtectList": [],
+  "IMAutoVendorHardStackLimit": 20,
+  "IMDry": false,
+  "TreatSoftAsHard": false
 }

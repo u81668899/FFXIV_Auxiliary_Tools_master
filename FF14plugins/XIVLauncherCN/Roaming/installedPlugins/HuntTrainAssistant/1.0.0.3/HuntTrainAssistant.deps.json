@@ -6,24 +6,26 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "HuntTrainAssistant/1.0.0.2": {
+      "HuntTrainAssistant/1.0.0.3": {
         "dependencies": {
-          "Dalamud.ContextMenu": "1.2.3",
-          "ECommons": "2.0.0.7"
+          "Dalamud.ContextMenu": "1.3.1",
+          "DalamudPackager": "2.1.12",
+          "ECommons": "2.1.0"
         },
         "runtime": {
           "HuntTrainAssistant.dll": {}
         }
       },
-      "Dalamud.ContextMenu/1.2.3": {
+      "Dalamud.ContextMenu/1.3.1": {
         "runtime": {
           "lib/net7.0-windows7.0/Dalamud.ContextMenu.dll": {
-            "assemblyVersion": "1.2.3.0",
-            "fileVersion": "1.2.3.0"
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
           }
         }
       },
-      "ECommons/2.0.0.7": {
+      "DalamudPackager/2.1.12": {},
+      "ECommons/2.1.0": {
         "runtime": {
           "ECommons.dll": {}
         }
@@ -31,19 +33,26 @@
     }
   },
   "libraries": {
-    "HuntTrainAssistant/1.0.0.2": {
+    "HuntTrainAssistant/1.0.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Dalamud.ContextMenu/1.2.3": {
+    "Dalamud.ContextMenu/1.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ydemplF7DNcA/LLeongDVzWUD/JV0Fw3EwA2+P0jYq3Le2ZYSt4U8qyJq4FyoChqt0lFG8BxYCAzfeWp4Jmnqw==",
-      "path": "dalamud.contextmenu/1.2.3",
-      "hashPath": "dalamud.contextmenu.1.2.3.nupkg.sha512"
+      "sha512": "sha512-ptAxut5PiLnzZ4G/KQdHJVcyklC/BF3otHJ7zYVUPiKBjsOCoF0n/6h2jK7e+8ev2Y1yAY3Wtx2GuXLFQgt9Uw==",
+      "path": "dalamud.contextmenu/1.3.1",
+      "hashPath": "dalamud.contextmenu.1.3.1.nupkg.sha512"
     },
-    "ECommons/2.0.0.7": {
+    "DalamudPackager/2.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sc0PVxvgg4NQjcI8n10/VfUQBAS4O+Fw2pZrAqBdRMbthYGeogzu5+xmIGCGmsEZ/ukMOBuAqiNiB5qA3MRalg==",
+      "path": "dalamudpackager/2.1.12",
+      "hashPath": "dalamudpackager.2.1.12.nupkg.sha512"
+    },
+    "ECommons/2.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

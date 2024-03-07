@@ -1,0 +1,86 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "GatherBuddy/3.3.1.2": {
+        "dependencies": {
+          "Dalamud.ContextMenu": "1.3.1",
+          "DalamudPackager": "2.1.12",
+          "GatherBuddy.GameData": "1.0.0",
+          "OtterGui": "1.0.0"
+        },
+        "runtime": {
+          "GatherBuddy.dll": {}
+        }
+      },
+      "Dalamud.ContextMenu/1.3.1": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Dalamud.ContextMenu.dll": {
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
+          }
+        }
+      },
+      "DalamudPackager/2.1.12": {},
+      "GatherBuddy.GameData/1.0.0": {
+        "dependencies": {
+          "GatherBuddy.Levenshtein": "1.0.0",
+          "OtterGui": "1.0.0"
+        },
+        "runtime": {
+          "GatherBuddy.GameData.dll": {}
+        }
+      },
+      "GatherBuddy.Levenshtein/1.0.0": {
+        "runtime": {
+          "GatherBuddy.Levenshtein.dll": {}
+        }
+      },
+      "OtterGui/1.0.0": {
+        "runtime": {
+          "OtterGui.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GatherBuddy/3.3.1.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dalamud.ContextMenu/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptAxut5PiLnzZ4G/KQdHJVcyklC/BF3otHJ7zYVUPiKBjsOCoF0n/6h2jK7e+8ev2Y1yAY3Wtx2GuXLFQgt9Uw==",
+      "path": "dalamud.contextmenu/1.3.1",
+      "hashPath": "dalamud.contextmenu.1.3.1.nupkg.sha512"
+    },
+    "DalamudPackager/2.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sc0PVxvgg4NQjcI8n10/VfUQBAS4O+Fw2pZrAqBdRMbthYGeogzu5+xmIGCGmsEZ/ukMOBuAqiNiB5qA3MRalg==",
+      "path": "dalamudpackager/2.1.12",
+      "hashPath": "dalamudpackager.2.1.12.nupkg.sha512"
+    },
+    "GatherBuddy.GameData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GatherBuddy.Levenshtein/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OtterGui/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

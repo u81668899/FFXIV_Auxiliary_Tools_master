@@ -1,5 +1,6 @@
 {
   "$type": "SubmarineTracker.Configuration, SubmarineTracker",
+  "NameOption": 0,
   "ShowExtendedPartsList": false,
   "ShowTimeInOverview": false,
   "UseDateTimeInstead": false,
@@ -7,7 +8,6 @@
   "ShowRouteInOverview": true,
   "ShowOnlyLowest": false,
   "ShowPrediction": true,
-  "UseCharacterName": false,
   "UserResize": false,
   "ShowAll": true,
   "ShowRouteInAll": false,
@@ -37,8 +37,6 @@
   "OverlayOpen": false,
   "OverlayStartUp": true,
   "OverlayAlwaysOpen": true,
-  "OverlayUnminimized": false,
-  "OverlayCharacterName": false,
   "OverlayFirstReturn": true,
   "OverlayShowDate": false,
   "OverlayOnlyReturned": false,
@@ -48,9 +46,35 @@
   "OverlayLockLocation": false,
   "OverlayShowRank": true,
   "OverlayShowBuild": true,
+  "OverlayHoldClosed": false,
+  "OverlayTitleTime": false,
+  "OverlayAllDone": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.12549,
+    "Y": 0.74902,
+    "Z": 0.33333,
+    "W": 0.6
+  },
+  "OverlayPartlyDone": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 0.81569,
+    "Z": 0.27451,
+    "W": 0.6
+  },
+  "OverlayNoneDone": {
+    "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+    "X": 0.85882,
+    "Y": 0.22745,
+    "Z": 0.20392,
+    "W": 0.6
+  },
   "ExcludeLegacy": false,
-  "CustomLootWithValue": {
-    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+  "CustomLootProfiles": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib",
+    "Default": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    }
   },
   "DateLimit": 0,
   "ExportExcludeDate": true,
@@ -59,8 +83,9 @@
   "UploadNotification": false,
   "UploadNotificationReceived": "2023-11-22T09:37:42.9470447+08:00",
   "UploadPermission": true,
-  "UploadCounter": 694,
-  "TriggerUpload": false,
+  "IgnoredCharacters": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+  },
   "SavedBuilds": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[SubmarineTracker.Data.Build+RouteBuild, SubmarineTracker]], System.Private.CoreLib"
   },

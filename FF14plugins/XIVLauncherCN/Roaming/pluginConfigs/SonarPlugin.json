@@ -12,7 +12,7 @@
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 4,
+          "A": 2,
           "S": 5,
           "SSMinion": 5,
           "SS": 5
@@ -39,7 +39,7 @@
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 1,
+          "A": 2,
           "S": 5,
           "SSMinion": 5,
           "SS": 5
@@ -48,7 +48,7 @@
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 1,
+          "A": 2,
           "S": 5,
           "SSMinion": 5,
           "SS": 5
@@ -57,7 +57,16 @@
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 4,
+          "A": 2,
+          "S": 5,
+          "SSMinion": 5,
+          "SS": 5
+        },
+        "Dawntrail": {
+          "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
+          "None": 5,
+          "B": 1,
+          "A": 2,
           "S": 5,
           "SSMinion": 5,
           "SS": 5
@@ -164,6 +173,9 @@
   "Opacity": 0.75,
   "SoundVolume": 0.5,
   "Language": 0,
+  "MiddleClick": 2,
+  "RightClick": 3,
+  "PreferredCityState": 0,
   "DisableChatInDuty": false,
   "DisableSoundInDuty": false,
   "AllSRankSettings": false,

@@ -1,0 +1,1474 @@
+{
+  "Webhook On Dispatch": {
+    "message": "返回时间 <t:{0}:R>",
+    "description": "Notify.SendDispatchWebhook"
+  },
+  "Webhook On Return": {
+    "message": "返回时间 <t:{0}:R>",
+    "description": "Notify.SendReturnWebhook"
+  },
+  "Notification Chat Return": {
+    "message": "{0} 已返回。",
+    "description": "Notify.GenerateMessage"
+  },
+  "Notification Chat Repair": {
+    "message": "{0} 已返回，并需要维修配件才能再次出发。",
+    "description": "Notify.RepairMessage"
+  },
+  "Notification Toast Repair": {
+    "message": "需要维修配件才能再次出发",
+    "description": "Notify.ShortRepairMessage"
+  },
+  "Terms - Important": {
+    "message": "重要",
+    "description": "Plugin.FrameworkUpdate"
+  },
+  "Notifications - Upload Opt Out": {
+    "message": "此插件将收集匿名的潜水艇特定数据。 有关收集的确切数据的更多信息，请参阅插件设置菜单中的上传选项卡。 你可以选择不接受任意或所有形式的数据收集。",
+    "description": "Plugin.FrameworkUpdate"
+  },
+  "Warnings - Ignored Character": {
+    "message": "已忽略角色",
+    "description": "Plugin.FrameworkUpdate"
+  },
+  "Window Name - Tracker": {
+    "message": "追踪器",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Tracker": {
+    "message": "打开追踪器窗口。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Builder": {
+    "message": "配置器",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Builder": {
+    "message": "打开配置器窗口。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Loot": {
+    "message": "战利品",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Loot": {
+    "message": "打开战利品窗口。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Helpy": {
+    "message": "助手",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Helpy": {
+    "message": "打开助手窗口。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Overlay": {
+    "message": "悬浮窗",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Overlay": {
+    "message": "打开返回悬浮窗。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Config": {
+    "message": "设置",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Config": {
+    "message": "打开设置窗口。",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Discord Thread": {
+    "message": "Discord 频道",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Discord Thread": {
+    "message": "打开 Discord 支持频道。",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Localization": {
+    "message": "本地化",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Localization": {
+    "message": "在浏览器中打开 crowdin 页面",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Issues": {
+    "message": "议题",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Issues": {
+    "message": "在浏览器中打开议题页面。",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - KoFi": {
+    "message": "Ko-Fi 赞助",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - KoFi": {
+    "message": "在浏览器中打开 kofi 页面。",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Sync": {
+    "message": "同步",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Sync": {
+    "message": "从硬盘重新加载所有存储数据并刷新缓存。",
+    "description": "Helper.Initialize"
+  },
+  "Error - No Data": {
+    "message": "没有找到此角色的部队\n请进入你的部队工坊并查看航行管制面板中的管理潜水艇页面。",
+    "description": "Helper.NoData"
+  },
+  "Terms - No Voyage": {
+    "message": "无航次",
+    "description": "Helper.GenerateVoyageText"
+  },
+  "Terms - Done": {
+    "message": "完成",
+    "description": "Helper.GenerateVoyageText"
+  },
+  "Terms - All": {
+    "message": "全部",
+    "description": "MainWindow.Draw"
+  },
+  "Terms - Rank": {
+    "message": "等级",
+    "description": "MainWindow.All"
+  },
+  "Return Overlay Tooltip - Repair Needed": {
+    "message": "此潜艇返回后需要维修配件。",
+    "description": "MainWindow.All"
+  },
+  "Terms - Route": {
+    "message": "航线",
+    "description": "MainWindow.All"
+  },
+  "Terms - EXP After": {
+    "message": "之后",
+    "description": "MainWindow.All"
+  },
+  "Terms - Repair": {
+    "message": "维修",
+    "description": "MainWindow.All"
+  },
+  "Main Window Tooltip - Repair": {
+    "message": "{1} 航次后需要 {0} 修理材料",
+    "description": "MainWindow.All"
+  },
+  "Main Window Tab - Overview": {
+    "message": "总览",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Main Window Entry - Resources": {
+    "message": "资源: ",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - Tanks": {
+    "message": "青磷水",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - Kits": {
+    "message": "修理材料",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - No Voyage Data": {
+    "message": "无航次数据",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Main Window Tab - Loot": {
+    "message": "战利品",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - Build": {
+    "message": "配置",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Main Window Overview - Breaks After": {
+    "message": "{0} 航次后损坏",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Exp": {
+    "message": "经验",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Predicted": {
+    "message": "预计",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - hours": {
+    "message": "小时",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Time": {
+    "message": "时间",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Date": {
+    "message": "日期",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Map": {
+    "message": "地图",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Next Overlay Tooltip - Low Rank": {
+    "message": "你的潜水艇低于探索该航路点所需的最低级别。",
+    "description": "NextOverlay.Draw"
+  },
+  "Next Overlay Text - Next Sector": {
+    "message": "下一航路点: ",
+    "description": "NextOverlay.Draw"
+  },
+  "Next Overlay Text - Visit": {
+    "message": "访问: ",
+    "description": "NextOverlay.Draw"
+  },
+  "Next Overlay Text - Next Map": {
+    "message": "下张地图: ",
+    "description": "NextOverlay.Draw"
+  },
+  "Terms - Submarines": {
+    "message": "潜水艇",
+    "description": "ReturnOverlay.PreDraw"
+  },
+  "Return Overlay Info - No Return": {
+    "message": "没有潜水艇已返回。",
+    "description": "ReturnOverlay.Draw"
+  },
+  "Route Overlay Tooltip - High Rank": {
+    "message": "潜水艇等级超过阈值且必须包含航路点为空\n请调整设置以获取更高级别的航线建议。",
+    "description": "RouteOverlay.Draw"
+  },
+  "Terms - Loading": {
+    "message": "加载中",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Calculation - Nothing Found": {
+    "message": "未找到航线，请检查速度和范围...",
+    "description": "RouteOverlay.Draw"
+  },
+  "Terms - Must Include": {
+    "message": "必须包含",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Entry - Duration Limit": {
+    "message": "时间限制",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Checkbox - Maximize Duration": {
+    "message": "最大时长",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Entry - Hours and Minutes": {
+    "message": "小时与分钟",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Checkbox - Auto Include": {
+    "message": "自动包含",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Tooltip - Auto Include": {
+    "message": "如果可行，自动包含下一个主要航路点",
+    "description": "RouteOverlay.Draw"
+  },
+  "Loot Tab - Analyse": {
+    "message": "分析",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Terms - WiP": {
+    "message": "- 正在进行中 -",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Button - Rebuild": {
+    "message": "重建缓存",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Text - Searched": {
+    "message": "已检索",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Warning - Nothing Found": {
+    "message": "未在此航路点找到任何内容。",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Entry - Percentages": {
+    "message": "百分比: ",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Terms - Item": {
+    "message": "道具",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Terms - Percentage": {
+    "message": "百分比",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab - Custom": {
+    "message": "自定义",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Profile Empty": {
+    "message": "此配置文件没有任何跟踪项目",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Profile Tip": {
+    "message": "你可以在设置中的战利品选项卡下添加物品",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - None 1": {
+    "message": "所有选中道具均未获得",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - None 2 Yet": {
+    "message": "从未",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - None 2 Timeframe": {
+    "message": "时限内",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Reward Amount": {
+    "message": "以上奖励已从总共 {1} 次航行 ({2} 艘潜水艇) 中获得 {0}。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Money Made": {
+    "message": "为你共赚取到 {0:N0} 金币。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Terms - Options": {
+    "message": "选项",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Entry - Fixed": {
+    "message": "筛选: ",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Tooltip - Fixed": {
+    "message": "不做选择时可选择特定时间范围。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Entry - FromTo Date Selection": {
+    "message": "时间范围: ",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab - Export": {
+    "message": "导出",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Checkbox - Export All": {
+    "message": "导出全部部队",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Checkbox - Exclude Date": {
+    "message": "排除日期",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Checkbox - Exclude Hash": {
+    "message": "排除哈希值",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Entry - Output Folder": {
+    "message": "输出文件夹: ",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Title - Pick Folder": {
+    "message": "选择一个文件夹",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Entry - Export": {
+    "message": "导出: ",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Button - File": {
+    "message": "文件",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Button - Clipboard": {
+    "message": "剪贴板",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Export Error - Nothing Found": {
+    "message": "在选定的时间范围内没有要导出的内容。",
+    "description": "LootWindow.CheckList"
+  },
+  "Loot Export Success - Clipboard": {
+    "message": "已成功导出到剪贴板。",
+    "description": "LootWindow.ExportToClipboard"
+  },
+  "Loot Export Success - File": {
+    "message": "导出完成。",
+    "description": "LootWindow.ExportToFile"
+  },
+  "Loot Export Success - Output Path": {
+    "message": "输出路径: {0}",
+    "description": "LootWindow.ExportToFile"
+  },
+  "Loot Export Error - Invalid Path": {
+    "message": "无效路径。",
+    "description": "LootWindow.ExportToFile"
+  },
+  "Loot Tab - History": {
+    "message": "历史",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Loot Tab History - Wrong": {
+    "message": "出错了。",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Loot Tab History - Not Tracked": {
+    "message": "当潜水艇再次出发时开始追踪。",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Loot Tab History - Legacy Data": {
+    "message": "-旧数据-",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Helpy Tab - Progression": {
+    "message": "进展",
+    "description": "HelpyWindow.ProgressionTab"
+  },
+  "Progression Tab - Submarine Path": {
+    "message": "4艘潜水艇",
+    "description": "HelpyWindow.AllSlotsTab"
+  },
+  "Progression Tab - Last Sector": {
+    "message": "最终航路点",
+    "description": "HelpyWindow.LastSectorTab"
+  },
+  "Helpy Tab - Info": {
+    "message": "信息",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Sector Unlock": {
+    "message": "如何解锁新航路点？",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Sector Unlock Text": {
+    "message": "解锁新航路点是完全随机的。\n通过提高巡航速度和出航频率，将有更多机会发现新航路点。",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Map Unlock": {
+    "message": "如何解锁新海底图/栏位？",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Map Unlock Text": {
+    "message": "你必须访问当前海底图的最后一个航路点至少一次。\n注: 你必须在已解锁的栏位中建造潜水艇才能解锁下一个栏位。\n例如: 如果栏位2是空的，你将无法解锁栏位3。",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Colors": {
+    "message": "颜色: ",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Colors - Green": {
+    "message": "绿色",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Green Text": {
+    "message": "已解锁并探索",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Colors - Violet": {
+    "message": "紫色",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Violet Text": {
+    "message": "已解锁但未探索",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Colors - Red": {
+    "message": "红色",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Red Text": {
+    "message": "未解锁",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab - Storage": {
+    "message": "仓库",
+    "description": "HelpyWindow.StorageTab"
+  },
+  "Helpy Tab Warning - AllaganTools": {
+    "message": "AllaganTools 不可用。",
+    "description": "HelpyWindow.StorageTab"
+  },
+  "Progression Tab Tooltip - Unlocks Map": {
+    "message": "解锁海底图",
+    "description": "<>c__DisplayClass10_0.<LastSectorTab>b__0"
+  },
+  "Progression Tab Tooltip - Unlocks Slot": {
+    "message": "解锁栏位",
+    "description": "<>c__DisplayClass10_0.<LastSectorTab>b__0"
+  },
+  "Config Tab - About": {
+    "message": "关于",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Author": {
+    "message": "作者: ",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Discord": {
+    "message": "Discord: ",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Version": {
+    "message": "版本: ",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Localization": {
+    "message": "本地化: ",
+    "description": "ConfigWindow.About"
+  },
+  "Config About Translation - Community": {
+    "message": "社区",
+    "description": "ConfigWindow.About"
+  },
+  "Config About Translation - Tooltip": {
+    "message": "所有本地化均由社区完成。\n如果你想帮助改善它们，请访问 Crowdin",
+    "description": "ConfigWindow.About"
+  },
+  "Builder Tab - Builder": {
+    "message": "配置器",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Entry - Options": {
+    "message": "选项: ",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Current FC": {
+    "message": "仅显示当前部队",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Auto Selection": {
+    "message": "自动选择当前潜水艇",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Auto Selection": {
+    "message": "自动选择在游戏航海界面中已选中的潜水艇。",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Next Overlay": {
+    "message": "显示 下一个 悬浮窗",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Next Overlay": {
+    "message": "附加到航程选择界面的悬浮窗\n\n建议下一个需要解锁或探索的航路点\n满足以下条件可见: \n  a) 海底图还有未解锁的航路点，或者\n  b) 必须探索某个航路点才能解锁下张海底图",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Unlock Overlay": {
+    "message": "显示 解锁 悬浮窗",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Unlock Overlay": {
+    "message": "附加到航程选择界面的悬浮窗\n\n显示所有待解锁的航路点\n满足以下条件可见: \n  a) 海底图还有未解锁的航路点",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Route Overlay": {
+    "message": "显示 航线 悬浮窗",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Route Overlay": {
+    "message": "附加到航程选择界面的悬浮窗\n\n建议最好的航线\n满足以下条件隐藏: \n  a) 超过最高等级阈值\n  b) 未指定必须包含",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Slider - Rank": {
+    "message": "最高等级",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Rank": {
+    "message": "此等级以上没有航线建议。",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Include Main": {
+    "message": "自动包含主要航路点",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Include Main": {
+    "message": "如果可行，自动包含下一个主要航线航路点.",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Entry - Saved Builds": {
+    "message": "已保存配置: ",
+    "description": "ConfigWindow.Builder"
+  },
+  "Menu - Discord Thread": {
+    "message": "Discord 频道",
+    "description": "ConfigWindow.Draw"
+  },
+  "Menu - Localization": {
+    "message": "本地化",
+    "description": "ConfigWindow.Draw"
+  },
+  "Menu - Issues": {
+    "message": "议题",
+    "description": "ConfigWindow.Draw"
+  },
+  "Menu - KoFi": {
+    "message": "Ko-Fi 赞助",
+    "description": "ConfigWindow.Draw"
+  },
+  "Config Tab - Loot": {
+    "message": "战利品",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab Checkbox - Legacy": {
+    "message": "排除旧版战利品",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab Header - Select Collection": {
+    "message": "选择集合:",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tooltip - Default Collection": {
+    "message": "无法删除默认集合",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Text Input - Collection Name": {
+    "message": "新集合名称",
+    "description": "ConfigWindow.Loot"
+  },
+  "Error - Collection Exists": {
+    "message": "已经存在同名集合",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab Entry - Add Items": {
+    "message": "添加道具: ",
+    "description": "ConfigWindow.Loot"
+  },
+  "Terms - Price": {
+    "message": "价格",
+    "description": "ConfigWindow.Loot"
+  },
+  "Terms - Delete": {
+    "message": "删除",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab - Manage": {
+    "message": "管理",
+    "description": "ConfigWindow.Manage"
+  },
+  "Terms - Saved FCs": {
+    "message": "保存的部队",
+    "description": "ConfigWindow.Manage"
+  },
+  "Config Tab Tooltip - Saved FCs Deletion": {
+    "message": "删除部队条目还将删除其所有战利品历史记录。\n按住 Ctrl 键删除",
+    "description": "ConfigWindow.Manage"
+  },
+  "Terms - Ignored Characters": {
+    "message": "已忽略角色",
+    "description": "ConfigWindow.Manage"
+  },
+  "Terms - Add Current Character": {
+    "message": "添加当前角色",
+    "description": "ConfigWindow.Manage"
+  },
+  "Config Tab - Notify": {
+    "message": "通知",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Notifications": {
+    "message": "通知: ",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Returning Sub": {
+    "message": "潜水艇返回",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Needed Repair": {
+    "message": "需要维修",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Repair Toast": {
+    "message": "显示维修提示",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Webhook": {
+    "message": "Webhook:",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Send Dispatch": {
+    "message": "发送出发",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Tooltip - Send Dispatch": {
+    "message": "出发时发送包含此潜水艇返回时间戳的 webhook 消息。",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Send Return": {
+    "message": "发送返回",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Tooltip - Send Return": {
+    "message": "返回时发送 webhook 消息。",
+    "description": "ConfigWindow.Notify"
+  },
+  "Terms - URL": {
+    "message": "URL",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Tooltip - Webhook": {
+    "message": "点击此处在浏览器中打开 Discord webhook 指南。",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Submarines": {
+    "message": "潜水艇:",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - All Returning": {
+    "message": "全部潜水艇已返回",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Specific Submarines": {
+    "message": "指定潜艇: ",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab - Overlay": {
+    "message": "悬浮窗",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - Open": {
+    "message": "打开: ",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - On Startup": {
+    "message": "游戏启动时",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - On Startup": {
+    "message": "当至少有一艘潜水艇返回，则在游戏启动时打开悬浮窗",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - On Return": {
+    "message": "返回时",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - On Return": {
+    "message": "当某一艘潜水艇返回时总是打开叠加层",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Automatically Close": {
+    "message": "自动关闭",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Automatically Close": {
+    "message": "假如所有潜水艇都已出航，则自动设置并保持悬浮窗关闭状态",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - General": {
+    "message": "通用: ",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Only FC Tag": {
+    "message": "仅显示部队简称",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Only FC Tag": {
+    "message": "仅显示不含 @服务器名 的部队简称。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Use Character Name": {
+    "message": "使用角色名",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Use Character Name": {
+    "message": "使用角色名称替代部队简称。\n请注意此选项可能导致截断文本。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Show Rank": {
+    "message": "显示等级",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Show Build": {
+    "message": "显示配置",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - As Date": {
+    "message": "显示为日期",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - First Return Time": {
+    "message": "显示首次返回时间",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - First Return Time": {
+    "message": "在悬浮窗内每个部队的标题中显示第一个返回的潜水艇。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Sort Time Lowest": {
+    "message": "按最短时间排序",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Sort Time Lowest": {
+    "message": "按返回时间对悬浮窗标题排序，将覆盖部队顺序。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Reverse Sort": {
+    "message": "反向排序",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Only Returned": {
+    "message": "仅显示已返回",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - Colors": {
+    "message": "颜色: ",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Colors - All Done": {
+    "message": "全部完成",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Colors - Partly Done": {
+    "message": "部分完成",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Colors - None Done": {
+    "message": "尚未完成",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - Window": {
+    "message": "窗口: ",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Lock Size": {
+    "message": "锁定大小",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Lock Position": {
+    "message": "锁定位置",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - FC Buttons": {
+    "message": "部队按钮: ",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Show All": {
+    "message": "显示\"全部\"按钮",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Show All": {
+    "message": "添加一个\"全部\"按钮以方便地查看所有部队。\n注意: 太多部队时会十分混乱。",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Anonymize Names": {
+    "message": "隐藏名称与标签",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Anonymize Names": {
+    "message": "截图时自动隐藏所有名称和标签\n注意: 可能会意外截断部分文本",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Let Me Resize": {
+    "message": "调整大小",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Let Me Resize": {
+    "message": "调整部队按钮的大小, \n但将无法自动调整大小。",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Entry - All Section": {
+    "message": "所有部分:",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Show Route": {
+    "message": "显示航线",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Show Route": {
+    "message": "如果窗口太小，此选项将恢复到每列一个部队。",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Show Date": {
+    "message": "显示日期",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Entry - Overview": {
+    "message": "总览: ",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Repair Status": {
+    "message": "显示维修状态",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Repair After Voyage": {
+    "message": "返回后显示维修状态",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Return Time": {
+    "message": "显示返回时间",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Return Date": {
+    "message": "显示返回日期",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Time&Date Show Both": {
+    "message": "全部显示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Entry - Detailed View": {
+    "message": "详情: ",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Extended Parts": {
+    "message": "显示扩展部件列表",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Upload - Information 1": {
+    "message": "匿名上传潜水艇相关数据。\n这些数据不会包含你的任何个人信息，但每个人都能从中受益！",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - What": {
+    "message": "什么数据？",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - Point 1": {
+    "message": "获得战利品",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - Point 2": {
+    "message": "航路点解锁",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - Point 3": {
+    "message": "探索过程",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Checkbox - Upload Permission": {
+    "message": "上传权限",
+    "description": "ConfigWindow.Upload"
+  },
+  "Builder Tab - Build": {
+    "message": "配置",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Terms - Custom": {
+    "message": "自定义",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Builder Build Tab - Automatic Selection": {
+    "message": "自动选择: {0} - 等级 {1}",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Builder Build Tooltip - Automatic Selection": {
+    "message": "可在设置、配置器选项卡中取消勾选\"自动选择\"选项禁用此行为",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Builder Tab - Best Exp": {
+    "message": "最佳经验",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Calculation - Manual Calculation": {
+    "message": "尚未计算...",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Calculation - Calculate": {
+    "message": "计算",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Checkbox - No Automatic": {
+    "message": "禁用自动计算",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Checkbox - Ignore Unlocks": {
+    "message": "忽略解锁",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Checkbox - Avg Bonus": {
+    "message": "使用平均经验加成",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Tooltip - Avg Bonus": {
+    "message": "此计算方法只考虑必然的经验加成。\n使用此选项将会使用可能的经验加成平均值。",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Builder Tab - Info": {
+    "message": "信息",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - How Calculated": {
+    "message": "这些断点是如何计算的？",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - How Calculated": {
+    "message": "距离和时长是固定的数值，但所有其他断点都是根据社区提供的数据计算得出的。\n特别感谢 Mystic Spirit 所做的工作。",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Best Exp": {
+    "message": "最佳经验?",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Best Exp": {
+    "message": "此工具可协助你计算当前配置的最佳升级航线。这些计算基于每分钟获得的经验和已解锁的航路点。",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Breakpoints": {
+    "message": "断点: ",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - T2": {
+    "message": "有机会获得 2 级战利品的所需探索性能",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - T3": {
+    "message": "有机会获得 3 级战利品的所需探索性能",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Terms - Normal": {
+    "message": "普通",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Normal": {
+    "message": "正常收集水平所需收集性能",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Terms - Optimal": {
+    "message": "最佳",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Optimal": {
+    "message": "最佳收集水平所需收集性能",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Terms - Favor": {
+    "message": "恩惠",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Favor": {
+    "message": "从一个航路点获得两个道具所需恩惠",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Colors - White": {
+    "message": "白色",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - White Text": {
+    "message": "没有选择或没有可用数据",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Colors - Gold": {
+    "message": "金色",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Gold Text": {
+    "message": "已超过要求",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Green Text": {
+    "message": "已达到 T3/最佳/恩惠 要求",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Colors - Pink": {
+    "message": "粉色",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Pink Text": {
+    "message": "已达到 T2/普通 要求，后附 T3/最佳 要求",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Red Text": {
+    "message": "要求均未达标，后附要求数值",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab - Leveling": {
+    "message": "升级",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Target Rank": {
+    "message": "目标等级",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Target": {
+    "message": "计算必须达到的等级，但可以超过。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Swap After": {
+    "message": "后切换",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Swap": {
+    "message": "最佳时在 X 次航程后切换部件。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Progress": {
+    "message": "进度",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Warning - Slow": {
+    "message": "警告: 需要很长时间，并且游戏可能会卡顿",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - At Rank": {
+    "message": "等级",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - Progress For": {
+    "message": "当前进度",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - Elapsed Total": {
+    "message": "用时",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - Elapsed Current": {
+    "message": "当前计算用时",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Button - Calculate": {
+    "message": "计算",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Button - Stop Calculate": {
+    "message": "停止计算",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Build": {
+    "message": "忽略配置",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Ignore Build": {
+    "message": "将计算每一个可能的配置\n警告: 需要很长时间，并且游戏可能会卡顿",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Unlocks": {
+    "message": "忽略解锁",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Avg Exp": {
+    "message": "使用平均经验加成",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Avg Exp": {
+    "message": "此计算通常只考虑必然的收集性能加成。\n使用此选项将会使用可能的加成平均值。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Experimental": {
+    "message": "-实验功能-",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Shark": {
+    "message": "忽略鲨鱼级部件",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Ignore Shark": {
+    "message": "升级时预计已拥有鲨鱼级部件，因此会优先考虑鲨鱼级部件，而不是性能更差的部件\n此选项将禁用此行为\n注意：你的潜水艇必须达到最高级别部件的等级，否则会无限循环。\n例如：SSUW 必须等于或高于25级\n重要：可能会导致错误",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Unmodified": {
+    "message": "忽略非改级部件",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Ignore Unmodified": {
+    "message": "升级时预计已拥有非改级部件，因此如果性能更好的话，会优先考虑非改级部件，而不是改级部件\n此选项将禁用此行为\n重要：可能会导致错误",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Allowed Sectors": {
+    "message": "允许的航路点",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Result - Last": {
+    "message": "最近计算: ",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Result - List": {
+    "message": "列表: ",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Window Button - Reset": {
+    "message": "重置",
+    "description": "BuilderWindow.Draw"
+  },
+  "Builder Window Button - Save": {
+    "message": "保存",
+    "description": "BuilderWindow.Draw"
+  },
+  "Builder Window Button - Load": {
+    "message": "加载",
+    "description": "BuilderWindow.Draw"
+  },
+  "Terms - Name": {
+    "message": "名称",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Button - Save Build": {
+    "message": "保存配置: ",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Error - Same Name": {
+    "message": "已存在同名配置。",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Tooltip - Overwrite": {
+    "message": "按住 Ctrl 键以覆盖",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Tip - Loading": {
+    "message": "点击加载",
+    "description": "BuilderWindow.LoadBuild"
+  },
+  "Builder Tab - Route": {
+    "message": "航线",
+    "description": "BuilderWindow.RouteTab"
+  },
+  "Terms - Sectors": {
+    "message": "航路点",
+    "description": "BuilderWindow.RouteTab"
+  },
+  "Builder Tab Route - Selection": {
+    "message": "单击选择航路点",
+    "description": "BuilderWindow.RouteTab"
+  },
+  "Terms - Unlocked By": {
+    "message": "解锁点",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Builder Window Tooltip - Unlocks Slot": {
+    "message": "#额外潜水艇栏位",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Builder Window Tooltip - Always Unlocked": {
+    "message": "始终解锁",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Terms - Unknown": {
+    "message": "未知",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Builder Tab - Ship": {
+    "message": "潜水艇",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Ignore Breakpoints": {
+    "message": "忽略断点",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Header - Route": {
+    "message": "选定航线: ",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Stats": {
+    "message": "统计",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Surveillance": {
+    "message": "探索性能",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Retrieval": {
+    "message": "收集性能",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Speed": {
+    "message": "巡航速度",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Breakpoints": {
+    "message": "断点",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - T2": {
+    "message": "使用 T2",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Normal": {
+    "message": "使用普通",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Favor": {
+    "message": "忽略恩惠",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Modded": {
+    "message": "不使用改级部件",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Calculation - Nothing Found": {
+    "message": "找不到配置。",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Cost": {
+    "message": "成本",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Hull": {
+    "message": "船体",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Stern": {
+    "message": "船尾",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Bow": {
+    "message": "船首",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Bridge": {
+    "message": "舰桥",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Range": {
+    "message": "航行距离",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Duration": {
+    "message": "时长",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Table - Select": {
+    "message": "选择此配置",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Stats Category - Build": {
+    "message": "选定配置: ",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Builder Stats Category - Route": {
+    "message": "最佳航线: ",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Terms - Fuel": {
+    "message": "青磷水",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Terms - ExpEachMin": {
+    "message": "经验/分钟",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Builder Stats Text - RepairAfter": {
+    "message": "{1} 航次后 {0} 个",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Builder Stats Route - No Selection": {
+    "message": "未选择",
+    "description": "BuilderWindow.SelectedRoute"
+  },
+  "Builder Leveling Result - Limit": {
+    "message": "限制: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Avg": {
+    "message": "平均加成: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Build": {
+    "message": "忽略配置: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Unlocks": {
+    "message": "忽略解锁: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Maximize": {
+    "message": "最大化上限: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Step - Build": {
+    "message": "配置: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Step - Voyage": {
+    "message": "航次 {0}: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Step - Gained": {
+    "message": "获得经验: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Step - Reached": {
+    "message": "达到等级: ",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Result - Start": {
+    "message": "开始等级: ",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Final": {
+    "message": "最终等级: ",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Voyages": {
+    "message": "航次: ",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Total": {
+    "message": "经验总计: ",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Leftover": {
+    "message": "剩余经验: ",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Duration Limit - No Limit": {
+    "message": "无限制",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - 24 Hours": {
+    "message": "24 小时",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - 36 Hours": {
+    "message": "36 小时",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - 48 Hours": {
+    "message": "48 小时",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - Custom": {
+    "message": "自定义",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Day": {
+    "message": "1 天",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 3 Days": {
+    "message": "3 天",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 5 Days": {
+    "message": "5 天",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Week": {
+    "message": "1 周",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 2 Weeks": {
+    "message": "2 周",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 3 Weeks": {
+    "message": "3 周",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 4 Weeks": {
+    "message": "4 周",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Month": {
+    "message": "1 月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 3 Months": {
+    "message": "3 月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 6 Months": {
+    "message": "6 月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 9 Months": {
+    "message": "9 月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Year": {
+    "message": "1 年",
+    "description": "DateUtil.GetName"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "YesAlready/1.4.0.3": {
+        "dependencies": {
+          "ClickLib": "1.2.0.1",
+          "DalamudPackager": "2.1.10",
+          "ECommons": "2.1.0.1",
+          "PunishLib": "2.0.0"
+        },
+        "runtime": {
+          "YesAlready.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.10": {},
+      "ILRepack/2.0.18": {},
+      "Reloaded.Memory/7.1.0": {
+        "runtime": {
+          "lib/net6.0/Reloaded.Memory.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
+      "ClickLib/1.2.0.1": {
+        "dependencies": {
+          "ILRepack": "2.0.18",
+          "Reloaded.Memory": "7.1.0"
+        },
+        "runtime": {
+          "ClickLib.dll": {}
+        }
+      },
+      "ECommons/2.1.0.1": {
+        "runtime": {
+          "ECommons.dll": {}
+        }
+      },
+      "PunishLib/2.0.0": {
+        "dependencies": {
+          "ECommons": "2.1.0.1"
+        },
+        "runtime": {
+          "PunishLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "YesAlready/1.4.0.3": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S6NrvvOnLgT4GDdgwuKVJjbFo+8ZEj+JsEYk9ojjOR/MMfv1dIFpT8aRJQfI24rtDcw1uF+GnSSMN4WW1yt7fw==",
+      "path": "dalamudpackager/2.1.10",
+      "hashPath": "dalamudpackager.2.1.10.nupkg.sha512"
+    },
+    "ILRepack/2.0.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sR5Aj3JLDbA8JwESfWYfigSz5k1oNSHPN434W1LX8sboWJYEOSQP/KkvZGmJKPgajzSUKkl2jDar3LPZiMFU4Q==",
+      "path": "ilrepack/2.0.18",
+      "hashPath": "ilrepack.2.0.18.nupkg.sha512"
+    },
+    "Reloaded.Memory/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4Y5tCsRWdW/shj9W7RqJq37LStuW1VVtjxsBp4LKZilPcjudeQg9k+u+6fnDgacCEJiG3S2EtcaiNtVMTdaSnQ==",
+      "path": "reloaded.memory/7.1.0",
+      "hashPath": "reloaded.memory.7.1.0.nupkg.sha512"
+    },
+    "ClickLib/1.2.0.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ECommons/2.1.0.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PunishLib/2.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

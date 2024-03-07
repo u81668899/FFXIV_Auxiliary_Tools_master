@@ -1,0 +1,93 @@
+﻿{
+  "AutoEnableNames": [
+    "十六五夜@摩杜纳"
+  ],
+  "TempEnableButton": 0,
+  "TempDisableButton": 0,
+  "MainConfig": {
+    "EnableQuestAccept": true,
+    "EnableQuestComplete": true,
+    "EnableRewardPick": true,
+    "EnableRequestHandin": true,
+    "EnableCutsceneEsc": false,
+    "EnableCutsceneSkipConfirm": true,
+    "EnableTalkSkip": true,
+    "EnableRequestFill": true,
+    "QTIQuestEnabled": true,
+    "QTIQuestColor": {
+      "X": 1.0,
+      "Y": 0.0,
+      "Z": 0.5176471,
+      "W": 1.0
+    },
+    "QTIQuestTether": true,
+    "QTIQuestThickness": 2.0,
+    "QTIQuestHideWhenTargeted": false,
+    "QTIAlwaysEnabled": false
+  },
+  "TerritoryConditions": {
+    "984": {
+      "EnableQuestAccept": false,
+      "EnableQuestComplete": false,
+      "EnableRewardPick": true,
+      "EnableRequestHandin": false,
+      "EnableCutsceneEsc": true,
+      "EnableCutsceneSkipConfirm": true,
+      "EnableTalkSkip": false,
+      "EnableRequestFill": true,
+      "QTIQuestEnabled": true,
+      "QTIQuestColor": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.5176471,
+        "W": 1.0
+      },
+      "QTIQuestTether": true,
+      "QTIQuestThickness": 2.0,
+      "QTIQuestHideWhenTargeted": false,
+      "QTIAlwaysEnabled": false
+    },
+    "962": {
+      "EnableQuestAccept": true,
+      "EnableQuestComplete": true,
+      "EnableRewardPick": true,
+      "EnableRequestHandin": true,
+      "EnableCutsceneEsc": true,
+      "EnableCutsceneSkipConfirm": false,
+      "EnableTalkSkip": false,
+      "EnableRequestFill": true,
+      "QTIQuestEnabled": true,
+      "QTIQuestColor": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.5176471,
+        "W": 1.0
+      },
+      "QTIQuestTether": true,
+      "QTIQuestThickness": 2.0,
+      "QTIQuestHideWhenTargeted": false,
+      "QTIAlwaysEnabled": false
+    }
+  },
+  "GlobalOverridesLocal": false,
+  "EnableOverlay": false,
+  "OverlayOffset": {
+    "X": 0.0,
+    "Y": -10.0
+  },
+  "NotifyDisableManualState": false,
+  "NotifyDisableOnLogin": false,
+  "QTIEnabled": false,
+  "PickRewardOrder": [
+    1,
+    4,
+    2,
+    0,
+    3
+  ],
+  "PickRewardSilent": false,
+  "ENpcFinder": false,
+  "EObjFinder": true,
+  "FinderKey": 162,
+  "Version": 2
+}

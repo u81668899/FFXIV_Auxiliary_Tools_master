@@ -1,0 +1,1474 @@
+{
+  "Webhook On Dispatch": {
+    "message": "<t:{0}:R> に帰還します。",
+    "description": "Notify.SendDispatchWebhook"
+  },
+  "Webhook On Return": {
+    "message": "<t:{0}:f> に帰還しました。",
+    "description": "Notify.SendReturnWebhook"
+  },
+  "Notification Chat Return": {
+    "message": "{0} が帰還しました。",
+    "description": "Notify.GenerateMessage"
+  },
+  "Notification Chat Repair": {
+    "message": "{0} が帰還しました。修理が必要です。",
+    "description": "Notify.RepairMessage"
+  },
+  "Notification Toast Repair": {
+    "message": "再出港には修理が必要です。",
+    "description": "Notify.ShortRepairMessage"
+  },
+  "Terms - Important": {
+    "message": "重要",
+    "description": "Plugin.FrameworkUpdate"
+  },
+  "Notifications - Upload Opt Out": {
+    "message": "このプラグインは匿名化された潜水艦固有のデータを収集します。 収集されるデータの詳細については、プラグイン設定メニューのアップロードタブを参照してください。 データ収集はすべてオプトアウトすることができます。",
+    "description": "Plugin.FrameworkUpdate"
+  },
+  "Warnings - Ignored Character": {
+    "message": "Ignored Character",
+    "description": "Plugin.FrameworkUpdate"
+  },
+  "Window Name - Tracker": {
+    "message": "トラッカー",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Tracker": {
+    "message": "トラッカーウィンドウを開きます。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Builder": {
+    "message": "ビルダー",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Builder": {
+    "message": "ビルダーウィンドウを開きます。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Loot": {
+    "message": "Loot",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Loot": {
+    "message": "戦利品ウィンドウを開きます。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Helpy": {
+    "message": "Helpy",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Helpy": {
+    "message": "ヘルパーウィンドウを開きます。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Overlay": {
+    "message": "Overlay",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Overlay": {
+    "message": "リターンオーバーレイを開きます。",
+    "description": "Helper.Initialize"
+  },
+  "Window Name - Config": {
+    "message": "設定",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Config": {
+    "message": "設定ウィンドウを開きます。",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Discord Thread": {
+    "message": "Discord スレッド",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Discord Thread": {
+    "message": "Discord サポートスレッドを開く",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Localization": {
+    "message": "翻訳",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Localization": {
+    "message": "ブラウザで Crowdin を開く",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Issues": {
+    "message": "Issues",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Issues": {
+    "message": "ブラウザで Issues ページを開く",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - KoFi": {
+    "message": "Ko-Fi Tip",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - KoFi": {
+    "message": "ブラウザで Ko-Fi ページを開く",
+    "description": "Helper.Initialize"
+  },
+  "Menu Entry - Sync": {
+    "message": "同期",
+    "description": "Helper.Initialize"
+  },
+  "Menu Tooltip - Sync": {
+    "message": "ハードドライブから保存されているすべてのデータを再読み込みし、キャッシュを更新します。",
+    "description": "Helper.Initialize"
+  },
+  "Error - No Data": {
+    "message": "このキャラクターのフリー・カンパニーに関するデータは見つかりませんでした\n会社のワークショップにアクセスし、Voyage Control PanelからSubmersible Managementにアクセスしてください。",
+    "description": "Helper.NoData"
+  },
+  "Terms - No Voyage": {
+    "message": "No Voyage",
+    "description": "Helper.GenerateVoyageText"
+  },
+  "Terms - Done": {
+    "message": "完了",
+    "description": "Helper.GenerateVoyageText"
+  },
+  "Terms - All": {
+    "message": "すべて",
+    "description": "MainWindow.Draw"
+  },
+  "Terms - Rank": {
+    "message": "ランク",
+    "description": "MainWindow.All"
+  },
+  "Return Overlay Tooltip - Repair Needed": {
+    "message": "この潜水艦は戻って修理が必要だ。",
+    "description": "MainWindow.All"
+  },
+  "Terms - Route": {
+    "message": "ルート",
+    "description": "MainWindow.All"
+  },
+  "Terms - EXP After": {
+    "message": "後",
+    "description": "MainWindow.All"
+  },
+  "Terms - Repair": {
+    "message": "修復",
+    "description": "MainWindow.All"
+  },
+  "Main Window Tooltip - Repair": {
+    "message": "{0} 航海後の {1} キット",
+    "description": "MainWindow.All"
+  },
+  "Main Window Tab - Overview": {
+    "message": "概要",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Main Window Entry - Resources": {
+    "message": "リソース:",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - Tanks": {
+    "message": "タンク",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - Kits": {
+    "message": "キット",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - No Voyage Data": {
+    "message": "航海データがありません",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Main Window Tab - Loot": {
+    "message": "Loot",
+    "description": "MainWindow.OverviewTab"
+  },
+  "Terms - Build": {
+    "message": "ビルド",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Main Window Overview - Breaks After": {
+    "message": "{0} 航海後に破壊",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Exp": {
+    "message": "Exp",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Predicted": {
+    "message": "予測",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - hours": {
+    "message": "時間",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Time": {
+    "message": "帰還まで",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Date": {
+    "message": "帰還予定日時",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Terms - Map": {
+    "message": "地図",
+    "description": "MainWindow.DetailedSub"
+  },
+  "Next Overlay Tooltip - Low Rank": {
+    "message": "この潜水艦は該当区域を探索するために必要なレベルに達していません。",
+    "description": "NextOverlay.Draw"
+  },
+  "Next Overlay Text - Next Sector": {
+    "message": "次の区域:",
+    "description": "NextOverlay.Draw"
+  },
+  "Next Overlay Text - Visit": {
+    "message": "探索先:",
+    "description": "NextOverlay.Draw"
+  },
+  "Next Overlay Text - Next Map": {
+    "message": "次のマップ:",
+    "description": "NextOverlay.Draw"
+  },
+  "Terms - Submarines": {
+    "message": "潜水艦",
+    "description": "ReturnOverlay.PreDraw"
+  },
+  "Return Overlay Info - No Return": {
+    "message": "潜水艦が帰還していません。",
+    "description": "ReturnOverlay.Draw"
+  },
+  "Route Overlay Tooltip - High Rank": {
+    "message": "潜水艦のレベルが閾値を超えている、または必須項目が空です。\nより高レベルでサジェストを表示するには、設定を確認してください。",
+    "description": "RouteOverlay.Draw"
+  },
+  "Terms - Loading": {
+    "message": "読み込み中",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Calculation - Nothing Found": {
+    "message": "ルートが見つかりません。速度と範囲を確認してください...",
+    "description": "RouteOverlay.Draw"
+  },
+  "Terms - Must Include": {
+    "message": "必須項目",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Entry - Duration Limit": {
+    "message": "時間制限",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Checkbox - Maximize Duration": {
+    "message": "最大化時間",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Entry - Hours and Minutes": {
+    "message": "時間と分",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Checkbox - Auto Include": {
+    "message": "自動含める",
+    "description": "RouteOverlay.Draw"
+  },
+  "Best EXP Tooltip - Auto Include": {
+    "message": "次のメインセクターがある場合は、自動的に含めます。",
+    "description": "RouteOverlay.Draw"
+  },
+  "Loot Tab - Analyse": {
+    "message": "分析",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Terms - WiP": {
+    "message": "- 作業中 -",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Button - Rebuild": {
+    "message": "キャッシュの再構築",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Text - Searched": {
+    "message": "検索対象:",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Warning - Nothing Found": {
+    "message": "このセクターは見つかりませんでした。",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab Entry - Percentages": {
+    "message": "パーセンテージ:",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Terms - Item": {
+    "message": "項目",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Terms - Percentage": {
+    "message": "パーセント",
+    "description": "LootWindow.AnalyseTab"
+  },
+  "Loot Tab - Custom": {
+    "message": "カスタム",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Profile Empty": {
+    "message": "このプロファイルには追跡されたアイテムがありません。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Profile Tip": {
+    "message": "下にある設定の戦利品タブからアイテムを追加することができます。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - None 1": {
+    "message": "選択されたアイテムのどれも略奪されていません",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - None 2 Yet": {
+    "message": "まだ",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - None 2 Timeframe": {
+    "message": "時間枠内で",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Reward Amount": {
+    "message": "合計 {1} 航海で上記の報酬 {0} を獲得しました (潜水艦{2})。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Custom - Money Made": {
+    "message": "これで合計 {0:N0} ギルが手に入りました。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Terms - Options": {
+    "message": "設定",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Entry - Fixed": {
+    "message": "修正済み:",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Tooltip - Fixed": {
+    "message": "未選択の場合、特定の期間で絞り込むことが可能です。",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab Entry - FromTo Date Selection": {
+    "message": "FromTo:",
+    "description": "LootWindow.CustomLootTab"
+  },
+  "Loot Tab - Export": {
+    "message": "エクスポート",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Checkbox - Export All": {
+    "message": "すべてのFCをエクスポート",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Checkbox - Exclude Date": {
+    "message": "除外する日付",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Checkbox - Exclude Hash": {
+    "message": "ハッシュを除外",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Entry - Output Folder": {
+    "message": "出力フォルダ:",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Title - Pick Folder": {
+    "message": "フォルダを選択",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Entry - Export": {
+    "message": "エクスポート:",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Button - File": {
+    "message": "ファイル",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Tab Button - Clipboard": {
+    "message": "Clipboard",
+    "description": "LootWindow.ExportTab"
+  },
+  "Loot Export Error - Nothing Found": {
+    "message": "選択した時間帯にエクスポートするものはありません。",
+    "description": "LootWindow.CheckList"
+  },
+  "Loot Export Success - Clipboard": {
+    "message": "クリップボードに正常にエクスポートされました。",
+    "description": "LootWindow.ExportToClipboard"
+  },
+  "Loot Export Success - File": {
+    "message": "エクスポート完了。",
+    "description": "LootWindow.ExportToFile"
+  },
+  "Loot Export Success - Output Path": {
+    "message": "出力パス: {0}",
+    "description": "LootWindow.ExportToFile"
+  },
+  "Loot Export Error - Invalid Path": {
+    "message": "無効なパスです。",
+    "description": "LootWindow.ExportToFile"
+  },
+  "Loot Tab - History": {
+    "message": "履歴",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Loot Tab History - Wrong": {
+    "message": "問題が発生しました。",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Loot Tab History - Not Tracked": {
+    "message": "潜水艦を再出港させると追跡が始まります。",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Loot Tab History - Legacy Data": {
+    "message": "-レガシーデータ",
+    "description": "LootWindow.VoyageTab"
+  },
+  "Helpy Tab - Progression": {
+    "message": "進行状況",
+    "description": "HelpyWindow.ProgressionTab"
+  },
+  "Progression Tab - Submarine Path": {
+    "message": "潜水艦4台",
+    "description": "HelpyWindow.AllSlotsTab"
+  },
+  "Progression Tab - Last Sector": {
+    "message": "最終区域",
+    "description": "HelpyWindow.LastSectorTab"
+  },
+  "Helpy Tab - Info": {
+    "message": "情報",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Sector Unlock": {
+    "message": "新しい区域のロックを解除するには？",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Sector Unlock Text": {
+    "message": "新しい区域が解放されるかどうかはランダムに決まっています。\n航海の速度と頻度を上げることで、新しい区域を発見する機会が増えます。",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Map Unlock": {
+    "message": "新しいマップ/スロットのロックを解除する方法は?",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Map Unlock Text": {
+    "message": "少なくとも一度はアンロックされた区域を探索しなければなりません。\n注：前のスロットが埋まっていない場合には次のスロットは表示されません。\n例：スロット2が空の場合、スロット3は表示されません",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Colors": {
+    "message": "色:",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Colors - Green": {
+    "message": "緑",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Green Text": {
+    "message": "開放されていて探索済み",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Colors - Violet": {
+    "message": "バイオレット",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Violet Text": {
+    "message": "開放されているが未探索",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Colors - Red": {
+    "message": "赤",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab Info - Red Text": {
+    "message": "未開放",
+    "description": "HelpyWindow.InfoTab"
+  },
+  "Helpy Tab - Storage": {
+    "message": "ストレージ",
+    "description": "HelpyWindow.StorageTab"
+  },
+  "Helpy Tab Warning - AllaganTools": {
+    "message": "AllaganToolsは利用できません。",
+    "description": "HelpyWindow.StorageTab"
+  },
+  "Progression Tab Tooltip - Unlocks Map": {
+    "message": "地図のロックを解除",
+    "description": "<>c__DisplayClass10_0.<LastSectorTab>b__0"
+  },
+  "Progression Tab Tooltip - Unlocks Slot": {
+    "message": "スロットをアンロックする",
+    "description": "<>c__DisplayClass10_0.<LastSectorTab>b__0"
+  },
+  "Config Tab - About": {
+    "message": "About",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Author": {
+    "message": "作成者:",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Discord": {
+    "message": "Discord:",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Version": {
+    "message": "バージョン:",
+    "description": "ConfigWindow.About"
+  },
+  "Config Tab Entry - Localization": {
+    "message": "翻訳者:",
+    "description": "ConfigWindow.About"
+  },
+  "Config About Translation - Community": {
+    "message": "コミュニティ",
+    "description": "ConfigWindow.About"
+  },
+  "Config About Translation - Tooltip": {
+    "message": "すべての翻訳はコミュニティによって行われています。\n改善・支援したい場合は、Crowdin をご覧ください。",
+    "description": "ConfigWindow.About"
+  },
+  "Builder Tab - Builder": {
+    "message": "ビルダー",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Entry - Options": {
+    "message": "オプション:",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Current FC": {
+    "message": "現在のFCのみ表示",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Auto Selection": {
+    "message": "現在の潜水艦を自動選択",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Auto Selection": {
+    "message": "ゲームの航海インターフェースで選択した現在の潜水艦を自動的に選択します。",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Next Overlay": {
+    "message": "次のオーバーレイを表示",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Next Overlay": {
+    "message": "航海選択インターフェースに付属するオーバーレイ\n\n次に開放・探索すべき区域を提案します\n次のどちらかの条件を満たした際に表示されます：\n  a) マップに未開放の区域が存在する\n  b) 次のマップのロックを解除する為に、その区域を探索しなければならない",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Unlock Overlay": {
+    "message": "ロック解除のオーバーレイを表示",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Unlock Overlay": {
+    "message": "航海選択インターフェースに付属するオーバーレイ\n\n未開放の区域をすべて表示します\n次の条件を満たした際に表示されます：\n  a) マップに未開放の区域が存在する",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Route Overlay": {
+    "message": "ルートのオーバーレイを表示",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Route Overlay": {
+    "message": "航海選択インターフェースに付属するオーバーレイ\n\n最善のルートを提案します\n何も表示されていない場合は次の条件を確認してください：\n  a) 最高ランクのしきい値を超えた\n  b) 必須項目が空",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Slider - Rank": {
+    "message": "最高ランク",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Rank": {
+    "message": "このランクを超えるとルート提案はされません。",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Checkbox - Include Main": {
+    "message": "メインセクターを自動的に含める",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Tooltip - Include Main": {
+    "message": "オートインクルードには、次のメインルートセクターが含まれます。",
+    "description": "ConfigWindow.Builder"
+  },
+  "Config Tab Entry - Saved Builds": {
+    "message": "保存されたビルド:",
+    "description": "ConfigWindow.Builder"
+  },
+  "Menu - Discord Thread": {
+    "message": "Discord スレッド",
+    "description": "ConfigWindow.Draw"
+  },
+  "Menu - Localization": {
+    "message": "翻訳",
+    "description": "ConfigWindow.Draw"
+  },
+  "Menu - Issues": {
+    "message": "課題",
+    "description": "ConfigWindow.Draw"
+  },
+  "Menu - KoFi": {
+    "message": "Ko-Fi Tip",
+    "description": "ConfigWindow.Draw"
+  },
+  "Config Tab - Loot": {
+    "message": "Loot",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab Checkbox - Legacy": {
+    "message": "レガシー戦利品を除外",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab Header - Select Collection": {
+    "message": "Select Collection:",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tooltip - Default Collection": {
+    "message": "Default collection can't be deleted",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Text Input - Collection Name": {
+    "message": "New Collection Name",
+    "description": "ConfigWindow.Loot"
+  },
+  "Error - Collection Exists": {
+    "message": "Collection with this name already exists",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab Entry - Add Items": {
+    "message": "アイテムを追加:",
+    "description": "ConfigWindow.Loot"
+  },
+  "Terms - Price": {
+    "message": "価格",
+    "description": "ConfigWindow.Loot"
+  },
+  "Terms - Delete": {
+    "message": "Del",
+    "description": "ConfigWindow.Loot"
+  },
+  "Config Tab - Manage": {
+    "message": "管理",
+    "description": "ConfigWindow.Manage"
+  },
+  "Terms - Saved FCs": {
+    "message": "保存された FC",
+    "description": "ConfigWindow.Manage"
+  },
+  "Config Tab Tooltip - Saved FCs Deletion": {
+    "message": "FCエントリーを削除すると、戦利品の履歴がすべて削除されます。\nホールドコントロールで削除します",
+    "description": "ConfigWindow.Manage"
+  },
+  "Terms - Ignored Characters": {
+    "message": "Ignored Characters",
+    "description": "ConfigWindow.Manage"
+  },
+  "Terms - Add Current Character": {
+    "message": "Add Current Character",
+    "description": "ConfigWindow.Manage"
+  },
+  "Config Tab - Notify": {
+    "message": "通知する",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Notifications": {
+    "message": "通知:",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Returning Sub": {
+    "message": "Returning Sub",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Needed Repair": {
+    "message": "修理が必要",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Repair Toast": {
+    "message": "修理トーストを表示",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Webhook": {
+    "message": "Webhook:",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Send Dispatch": {
+    "message": "送信する",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Tooltip - Send Dispatch": {
+    "message": "この潜水艦が返されるタイムスタンプを含む、派遣時にWebフックメッセージを送信します。",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - Send Return": {
+    "message": "返品を送信",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Tooltip - Send Return": {
+    "message": "返却時にWebhookメッセージを送信します。",
+    "description": "ConfigWindow.Notify"
+  },
+  "Terms - URL": {
+    "message": "URL",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Tooltip - Webhook": {
+    "message": "クリックしてブラウザでdiscordのWebフックガイドを開きます。",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Submarines": {
+    "message": "サブマリーヌ:",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Checkbox - All Returning": {
+    "message": "すべての返却されたSubs",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab Entry - Specific Submarines": {
+    "message": "特定のサブマリー:",
+    "description": "ConfigWindow.Notify"
+  },
+  "Config Tab - Overlay": {
+    "message": "Overlay",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - Open": {
+    "message": "開く:",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - On Startup": {
+    "message": "起動時",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - On Startup": {
+    "message": "少なくとも1つのサブが完了した場合、起動時にオーバーレイを開きます",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - On Return": {
+    "message": "返品時",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - On Return": {
+    "message": "1つの潜水艦が戻った場合は常にオーバーレイを開く",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Automatically Close": {
+    "message": "自動で閉じる",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Automatically Close": {
+    "message": "すべての潜水艦が航海中の場合に自動でオーバーレイを閉じます。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - General": {
+    "message": "全般:",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Only FC Tag": {
+    "message": "Only FC Tag",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Only FC Tag": {
+    "message": "Shows only the FC tag without @World.",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Use Character Name": {
+    "message": "キャラクター名を使用",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Use Character Name": {
+    "message": "FCタグの代わりに文字名を使用してください。\nこのオプションはテキストをカットオフする可能性があります。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Show Rank": {
+    "message": "ランクを表示",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Show Build": {
+    "message": "ビルドを表示",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - As Date": {
+    "message": "日付を表示",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - First Return Time": {
+    "message": "最初の返品時刻を表示",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - First Return Time": {
+    "message": "各FCのオーバーレイヘッダーに最初の戻り値のサブを表示します。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Sort Time Lowest": {
+    "message": "最低時間でソート",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Tooltip - Sort Time Lowest": {
+    "message": "返却時間でオーバーレイヘッダーを並べ替えます。FCオーダーは上書きされます。",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Reverse Sort": {
+    "message": "逆順",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Only Returned": {
+    "message": "返されたもののみ表示",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - Colors": {
+    "message": "Colors:",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Colors - All Done": {
+    "message": "All Done",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Colors - Partly Done": {
+    "message": "Partly Done",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Colors - None Done": {
+    "message": "None Done",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - Window": {
+    "message": "ウィンドウ:",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Lock Size": {
+    "message": "ロックサイズ",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Checkbox - Lock Position": {
+    "message": "位置をロック",
+    "description": "ConfigWindow.Overlay"
+  },
+  "Config Tab Entry - FC Buttons": {
+    "message": "FCボタン:",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Show All": {
+    "message": "「すべて」ボタンを表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Show All": {
+    "message": "すべてのFCを簡単に見るための「すべて」ボタンを追加します。\n注意: FCが多すぎるとメッシー。",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Anonymize Names": {
+    "message": "Anonymize Name & Tag",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Anonymize Names": {
+    "message": "Anonymize all names and tags for taking screenshots.\nBe aware this option can lead to cut-off text.",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Let Me Resize": {
+    "message": "サイズを変更する",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Let Me Resize": {
+    "message": "FCボタン\nのサイズを変更することができますが、サイズを自動的に調整することはできません。",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Entry - All Section": {
+    "message": "All Section:",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Show Route": {
+    "message": "ルートを表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Tooltip - Show Route": {
+    "message": "このオプションは、ウィンドウが小さすぎる場合、各列の 1 FC に戻ります。",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Show Date": {
+    "message": "日付を表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Entry - Overview": {
+    "message": "概要:",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Repair Status": {
+    "message": "修理ステータスを表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Repair After Voyage": {
+    "message": "航海後の修理ステータスを表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Return Time": {
+    "message": "返品時刻を表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Return Date": {
+    "message": "返品日時を表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Time&Date Show Both": {
+    "message": "両方のオプションを表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Entry - Detailed View": {
+    "message": "詳細表示:",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Checkbox - Extended Parts": {
+    "message": "拡張部品リストを表示",
+    "description": "ConfigWindow.Tracker"
+  },
+  "Config Tab Upload - Information 1": {
+    "message": "匿名で潜水艦に関するデータを提供します。\nこのデータはいかなる方法でもあなたと結び付くことはありません。また、誰もが恩恵を受けることができます！",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - What": {
+    "message": "どんなデータですか？",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - Point 1": {
+    "message": "Loot received",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - Point 2": {
+    "message": "セクターのロックを解除",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Upload - Point 3": {
+    "message": "Exploration procs",
+    "description": "ConfigWindow.Upload"
+  },
+  "Config Tab Checkbox - Upload Permission": {
+    "message": "アップロード権限",
+    "description": "ConfigWindow.Upload"
+  },
+  "Builder Tab - Build": {
+    "message": "ビルド",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Terms - Custom": {
+    "message": "カスタム",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Builder Build Tab - Automatic Selection": {
+    "message": "自動選択： {0} - ランク {1}",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Builder Build Tooltip - Automatic Selection": {
+    "message": "この挙動を無効にするには、構成、ビルダータブ、「自動選択」のチェックを外します。",
+    "description": "BuilderWindow.BuildTab"
+  },
+  "Builder Tab - Best Exp": {
+    "message": "Best Exp",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Calculation - Manual Calculation": {
+    "message": "未計算...",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Calculation - Calculate": {
+    "message": "計算",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Checkbox - No Automatic": {
+    "message": "自動計算を無効にする",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Checkbox - Ignore Unlocks": {
+    "message": "ロック解除を無視",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Checkbox - Avg Bonus": {
+    "message": "平均経験値ボーナスを使用する",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Best EXP Tooltip - Avg Bonus": {
+    "message": "この計算は保証されたボーナス経験値のみを考慮します。\nこのオプションを使用すると、代わりに可能な経験値ボーナスのavgが取られます。",
+    "description": "BuilderWindow.ExpTab"
+  },
+  "Builder Tab - Info": {
+    "message": "情報",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - How Calculated": {
+    "message": "これらのブレークポイントはどのように計算されますか？",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - How Calculated": {
+    "message": "距離と期間は固定計算値ですが、その他のブレークポイントはすべてコミュニティから計算されます。\nMystic Spirit for all there work.",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Best Exp": {
+    "message": "最高の支出?",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Best Exp": {
+    "message": "このツールは、現在のビルドをレベルするために取ることができる最適なルートを計算するのに役立ちます。 これらの計算は、1分間に得られた経験と解放されたセクターに基づいています。",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Breakpoints": {
+    "message": "ブレークポイント:",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - T2": {
+    "message": "レベル2から戦利品を獲得するには監視が必要です",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - T3": {
+    "message": "監視はレベル3から戦利品を獲得するために必要です",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Terms - Normal": {
+    "message": "標準",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Normal": {
+    "message": "正常な検索レベルには取得が必要です",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Terms - Optimal": {
+    "message": "最適な",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Optimal": {
+    "message": "最適な検索レベルには取得が必要です",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Terms - Favor": {
+    "message": "お気に入り",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Text - Favor": {
+    "message": "セクターから2つのアイテムを獲得するには、好感度が必要です",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Colors - White": {
+    "message": "白",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - White Text": {
+    "message": "何も選択されていないか、利用可能なデータがありません",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Colors - Gold": {
+    "message": "ゴールド",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Gold Text": {
+    "message": "条件を超えました",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Green Text": {
+    "message": "T3/Optimal/Favor に達しました",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Colors - Pink": {
+    "message": "ピンク",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Pink Text": {
+    "message": "T2/Normal に達し、T3/Optimal",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab Info - Red Text": {
+    "message": "条件が満たされていない、要件が続く",
+    "description": "BuilderWindow.InfoTab"
+  },
+  "Builder Tab - Leveling": {
+    "message": "レベル",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Target Rank": {
+    "message": "Target Rank",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Target": {
+    "message": "この計算に達する必要がありますが、オーバーショットすることができますランク。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Swap After": {
+    "message": "後に入れ替え",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Swap": {
+    "message": "X航海後に部品を交換します。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Progress": {
+    "message": "進捗状況",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Warning - Slow": {
+    "message": "警告：時間がかかり、ゲームのスローダウンが発生します。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - At Rank": {
+    "message": "ランク時",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - Progress For": {
+    "message": "現在の進捗状況",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - Elapsed Total": {
+    "message": "経過時間",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Info - Elapsed Current": {
+    "message": "経過時間電流計算",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Button - Calculate": {
+    "message": "計算",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Button - Stop Calculate": {
+    "message": "計算停止",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Build": {
+    "message": "ビルドを無視",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Ignore Build": {
+    "message": "これは、すべての可能なビルドを計算します。\n警告 時間がかかり、ゲームの進行が遅くなります。",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Unlocks": {
+    "message": "ロック解除を無視",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Avg Exp": {
+    "message": "平均経験値ボーナスを使用する",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Avg Exp": {
+    "message": "この計算は通常、保証された検索ボーナスのみを考慮します。\nこのオプションを使用すると、可能な平均ボーナスがかかります",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Experimental": {
+    "message": "- 実験 -",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Shark": {
+    "message": "サメの部位を無視",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Ignore Shark": {
+    "message": "レベリングは、サメのパーツが存在することを想定している。\nこのオプションは\n注意：あなたの潜水艦は最高ランクのパーツのランクでなければなりません。\n例：SSUWはランクが25以上でなければならない\n重要：これはエラーにつながる可能性があります",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Checkbox - Ignore Unmodified": {
+    "message": "変更されていない部分を無視",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Tooltip - Ignore Unmodified": {
+    "message": "レベリングは未改造のパーツが存在することを想定しているので、改造されたパーツよりもそちらを優先します。\nこのオプションは\n重要：これはエラーにつながる可能性があります",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Terms - Allowed Sectors": {
+    "message": "許可されたセクター",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Result - Last": {
+    "message": "前回の計算:",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Leveling Result - List": {
+    "message": "リスト:",
+    "description": "BuilderWindow.LevelingTab"
+  },
+  "Builder Window Button - Reset": {
+    "message": "Reset",
+    "description": "BuilderWindow.Draw"
+  },
+  "Builder Window Button - Save": {
+    "message": "保存",
+    "description": "BuilderWindow.Draw"
+  },
+  "Builder Window Button - Load": {
+    "message": "読み込み",
+    "description": "BuilderWindow.Draw"
+  },
+  "Terms - Name": {
+    "message": "名前",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Button - Save Build": {
+    "message": "ビルドを保存",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Error - Same Name": {
+    "message": "同じ名前のビルドは既に存在します。",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Tooltip - Overwrite": {
+    "message": "上書きするにはコントロールを長押ししてください",
+    "description": "BuilderWindow.SaveBuild"
+  },
+  "Builder Window Tip - Loading": {
+    "message": "クリックして読み込む",
+    "description": "BuilderWindow.LoadBuild"
+  },
+  "Builder Tab - Route": {
+    "message": "ルート",
+    "description": "BuilderWindow.RouteTab"
+  },
+  "Terms - Sectors": {
+    "message": "セクター",
+    "description": "BuilderWindow.RouteTab"
+  },
+  "Builder Tab Route - Selection": {
+    "message": "クリックしてセクターを選択",
+    "description": "BuilderWindow.RouteTab"
+  },
+  "Terms - Unlocked By": {
+    "message": "ロック解除者",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Builder Window Tooltip - Unlocks Slot": {
+    "message": "#Extra Sub Slot",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Builder Window Tooltip - Always Unlocked": {
+    "message": "常にロック解除",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Terms - Unknown": {
+    "message": "不明",
+    "description": "BuilderWindow.UnlockedTooltip"
+  },
+  "Builder Tab - Ship": {
+    "message": "配送",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Ignore Breakpoints": {
+    "message": "ブレークポイントを無視",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Header - Route": {
+    "message": "選択したルート:",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Stats": {
+    "message": "統計",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Surveillance": {
+    "message": "監視",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Retrieval": {
+    "message": "取得",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Speed": {
+    "message": "速度",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Breakpoints": {
+    "message": "ブレークポイント",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - T2": {
+    "message": "T2 を使用",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Normal": {
+    "message": "ノーマルを使用",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Favor": {
+    "message": "お気に入りを無視",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Checkbox - Modded": {
+    "message": "修正されたパーツはありません",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Calculation - Nothing Found": {
+    "message": "ビルドが見つかりません。",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Cost": {
+    "message": "コスト",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Hull": {
+    "message": "船体",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Stern": {
+    "message": "Stern",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Bow": {
+    "message": "弓",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Bridge": {
+    "message": "ブリッジ",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Range": {
+    "message": "Range",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Terms - Duration": {
+    "message": "期間",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Ship Table - Select": {
+    "message": "このビルドを選択",
+    "description": "BuilderWindow.ShipTab"
+  },
+  "Builder Stats Category - Build": {
+    "message": "選択したビルド:",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Builder Stats Category - Route": {
+    "message": "最適化されたルート:",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Terms - Fuel": {
+    "message": "燃料",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Terms - ExpEachMin": {
+    "message": "Exp/Min",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Builder Stats Text - RepairAfter": {
+    "message": "{0} 航海後の {1}",
+    "description": "BuilderWindow.BuildStats"
+  },
+  "Builder Stats Route - No Selection": {
+    "message": "選択なし",
+    "description": "BuilderWindow.SelectedRoute"
+  },
+  "Builder Leveling Result - Limit": {
+    "message": "制限:",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Avg": {
+    "message": "平均ボーナス:",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Build": {
+    "message": "ビルドを無視:",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Unlocks": {
+    "message": "ロック解除を無視:",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Result - Maximize": {
+    "message": "上限を最大化:",
+    "description": "BuilderWindow.<LevelingTab>b__43_6"
+  },
+  "Builder Leveling Step - Build": {
+    "message": "ビルド:",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Step - Voyage": {
+    "message": "Voyage {0}:",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Step - Gained": {
+    "message": "獲得した経験値:",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Step - Reached": {
+    "message": "Ranking reachado:",
+    "description": "BuilderWindow.<LevelingTab>b__43_7"
+  },
+  "Builder Leveling Result - Start": {
+    "message": "開始ランク:",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Final": {
+    "message": "最終ランク：",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Voyages": {
+    "message": "航海日程:",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Total": {
+    "message": "Exp 合計:",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Builder Leveling Result - Leftover": {
+    "message": "残り時間:",
+    "description": "<>c__DisplayClass43_0.<LevelingTab>b__5"
+  },
+  "Duration Limit - No Limit": {
+    "message": "無制限",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - 24 Hours": {
+    "message": "24時間",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - 36 Hours": {
+    "message": "36時間",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - 48 Hours": {
+    "message": "48時間",
+    "description": "DateUtil.GetName"
+  },
+  "Duration Limit - Custom": {
+    "message": "カスタム",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Day": {
+    "message": "1日",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 3 Days": {
+    "message": "3日",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 5 Days": {
+    "message": "5日",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Week": {
+    "message": "1週間",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 2 Weeks": {
+    "message": "2週間",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 3 Weeks": {
+    "message": "3週間",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 4 Weeks": {
+    "message": "4週間",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Month": {
+    "message": "1ヶ月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 3 Months": {
+    "message": "3ヶ月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 6 Months": {
+    "message": "6ヶ月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 9 Months": {
+    "message": "9ヶ月",
+    "description": "DateUtil.GetName"
+  },
+  "Date Limit - 1 Year": {
+    "message": "1年",
+    "description": "DateUtil.GetName"
+  }
+}

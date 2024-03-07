@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarketBoardPlugin</name>
+    </assembly>
+    <members>
+        <member name="T:MarketBoardPlugin.Extensions.ClassExtensions">
+            <summary>
+            <see cref="T:Lumina.Excel.GeneratedSheets.ClassJobCategory"/> and <see cref="T:Lumina.Excel.GeneratedSheets.ClassJob"/> extensions.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.Extensions.ClassExtensions.HasClass(Lumina.Excel.GeneratedSheets.ClassJobCategory,Lumina.Excel.GeneratedSheets.ClassJob)">
+            <summary>
+            Checks if <see cref="T:Lumina.Excel.GeneratedSheets.ClassJobCategory"/> contains <see cref="T:Lumina.Excel.GeneratedSheets.ClassJob"/>.
+            </summary>
+            <param name="classJobCategory">A <see cref="T:Lumina.Excel.GeneratedSheets.ClassJobCategory"/>.</param>
+            <param name="classJob">A <see cref="T:Lumina.Excel.GeneratedSheets.ClassJob"/>.</param>
+            <returns>
+            True if contained or classJob is null.
+            False if not contained or classJobCategory is null.
+            </returns>
+        </member>
+        <member name="T:MarketBoardPlugin.Extensions.SeIconCharExtensions">
+            <summary>
+            <see cref="T:Dalamud.Game.Text.SeIconChar"/> extensions.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.Extensions.SeIconCharExtensions.AsString(Dalamud.Game.Text.SeIconChar)">
+            <summary>
+            Converts a <see cref="T:Dalamud.Game.Text.SeIconChar"/> member to a string.
+            </summary>
+            <param name="iconChar">A <see cref="T:Dalamud.Game.Text.SeIconChar"/>.</param>
+            <returns>A string containing the icon.</returns>
+        </member>
+        <member name="M:MarketBoardPlugin.Extensions.SeIconCharExtensions.ToChar(Dalamud.Game.Text.SeIconChar)">
+            <summary>
+            Converts a <see cref="T:Dalamud.Game.Text.SeIconChar"/> member to its char value.
+            </summary>
+            <param name="iconChar">A <see cref="T:Dalamud.Game.Text.SeIconChar"/>.</param>
+            <returns>A char value.</returns>
+        </member>
+        <member name="T:MarketBoardPlugin.MarketBoardConfigWindow">
+            <summary>
+            The market board config window.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MarketBoardConfigWindow.#ctor(MarketBoardPlugin.MBPlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarketBoardPlugin.MarketBoardConfigWindow"/> class.
+            </summary>
+            <param name="plugin">The <see cref="T:MarketBoardPlugin.MBPlugin"/>.</param>
+        </member>
+        <member name="M:MarketBoardPlugin.MarketBoardConfigWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="T:MarketBoardPlugin.MarketBoardShoppingListWindow">
+            <summary>
+            The market board config window.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MarketBoardShoppingListWindow.#ctor(MarketBoardPlugin.MBPlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarketBoardPlugin.MarketBoardShoppingListWindow"/> class.
+            </summary>
+            <param name="plugin">The <see cref="T:MarketBoardPlugin.MBPlugin"/>.</param>
+        </member>
+        <member name="M:MarketBoardPlugin.MarketBoardShoppingListWindow.DrawConditions">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarketBoardPlugin.MarketBoardShoppingListWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="T:MarketBoardPlugin.GUI.MarketBoardWindow">
+            <summary>
+            The market board window.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.#ctor(MarketBoardPlugin.MBPlugin)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarketBoardPlugin.GUI.MarketBoardWindow"/> class.
+            </summary>
+            <param name="plugin">The <see cref="T:MarketBoardPlugin.MBPlugin"/>.</param>
+        </member>
+        <member name="P:MarketBoardPlugin.GUI.MarketBoardWindow.SearchString">
+            <summary>
+            Gets or sets the current search string.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.ResetMarketData">
+            <summary>
+            Reset the market data.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.Draw">
+            <summary>
+            Draws the window.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing">A value indicating whether we are disposing.</param>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.LogItemInfo(Lumina.Excel.GeneratedSheets.Item)">
+            <summary>
+             Function used for debug purposes : Log every attributes of an Item.
+            </summary>
+            <param name="itm"> Item class to show in logs.</param>
+        </member>
+        <member name="M:MarketBoardPlugin.GUI.MarketBoardWindow.UpdateCategoriesAndItems">
+            <summary>
+            Update Categories and Items Dictionary based on current searchString.
+            </summary>
+        </member>
+        <member name="T:MarketBoardPlugin.Helpers.ImGuiOverrides">
+            <summary>
+            ImGui.NET overrides.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.Helpers.ImGuiOverrides.InputTextWithHint(System.String,System.String,System.String@,System.UInt32)">
+            <summary>
+            Create an Input Text with Hint widget.
+            </summary>
+            <param name="label">The label.</param>
+            <param name="hint">The hint.</param>
+            <param name="input">The input.</param>
+            <param name="maxLength">The max length.</param>
+            <returns>A boolean value indicating if the input has been created or not.</returns>
+        </member>
+        <member name="M:MarketBoardPlugin.Helpers.ImGuiOverrides.InputTextWithHint(System.String,System.String,System.String@,System.UInt32,ImGuiNET.ImGuiInputTextFlags,ImGuiNET.ImGuiInputTextCallback,System.IntPtr)">
+            <summary>
+            Create an Input Text with Hint widget.
+            </summary>
+            <param name="label">The label.</param>
+            <param name="hint">The hint.</param>
+            <param name="input">The input.</param>
+            <param name="maxLength">The max length.</param>
+            <param name="flags">The flags.</param>
+            <param name="callback">The callback.</param>
+            <param name="userData">The user data.</param>
+            <returns>A boolean value indicating if the input has been created or not.</returns>
+        </member>
+        <member name="T:MarketBoardPlugin.Helpers.UniversalisClient">
+            <summary>
+            Universalis API Client.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.Helpers.UniversalisClient.GetMarketData(System.UInt32,System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Gets market data of an item for a specific world.
+            </summary>
+            <param name="itemId">The item ID.</param>
+            <param name="worldName">The world's name.</param>
+            <param name="historyCount">Number of entries to fetch from the history.</param>
+            <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>The market data.</returns>
+        </member>
+        <member name="T:MarketBoardPlugin.Helpers.Utilities">
+            <summary>
+            Utilities.
+            </summary>
+        </member>
+        <member name="T:MarketBoardPlugin.MBPlugin">
+            <summary>
+            The entry point of the plugin.
+            </summary>
+        </member>
+        <member name="F:MarketBoardPlugin.MBPlugin.windowSystem">
+            <summary>
+            Gets the window system.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MBPlugin.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarketBoardPlugin.MBPlugin"/> class.
+            This is the plugin's entry point.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPlugin.Name">
+            <summary>
+            Gets the plugin's name.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPlugin.Config">
+            <summary>
+            Gets the plugin's configuration.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPlugin.ShoppingList">
+            <summary>
+            Gets the shopping list.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPlugin.NumberFormatInfo">
+            <summary>
+            Gets the number format info.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MBPlugin.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarketBoardPlugin.MBPlugin.ResetMarketData">
+            <summary>
+            Reset the market data.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MBPlugin.OpenMainUi">
+            <summary>
+            Open the main UI.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MBPlugin.OpenConfigUi">
+            <summary>
+            Open the config UI.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.MBPlugin.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing">A value indicating whether we are disposing.</param>
+        </member>
+        <member name="T:MarketBoardPlugin.MBPluginConfig">
+            <summary>
+            Configuration for MBPlugin.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.Version">
+            <summary>
+            Gets or sets the version of the config file.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.CrossDataCenter">
+            <summary>
+            Gets or sets a value indicating whether cross data center was selected.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.CrossWorld">
+            <summary>
+            Gets or sets a value indicating whether cross world was selected.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.WatchForHovered">
+            <summary>
+            Gets or sets a value indicating whether 'Watch for hovered item' is enabled.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.History">
+            <summary>
+            Gets the list of previously viewed items.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.ContextMenuIntegration">
+            <summary>
+            Gets or sets a value indicating whether the 'Search with Market Board Plugin' is added to game context menus.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.PriceIconShown">
+            <summary>
+            Gets or sets a value indicating whether 'PriceIconShown' is enabled.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.NoGilSalesTax">
+            <summary>
+            Gets or sets a value indicating whether 'NoGilSalesTax' is enabled.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.KofiHidden">
+            <summary>
+            Gets or sets a value indicating whether the Ko-Fi button has been hidden.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.MarketBufferSize">
+            <summary>
+            Gets or sets a value indicating the maximum size of the Market item buffer.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.ItemRefreshTimeout">
+            <summary>
+             Gets or sets a value indicating the number of ms an item can be cached.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.MBPluginConfig.RecentHistoryDisabled">
+            <summary>
+             Gets or sets a value indicating whether the recent history menu is disabled or not.
+            </summary>
+        </member>
+        <member name="T:MarketBoardPlugin.Models.ShoppingList.SavedItem">
+            <summary>
+            A model representing an Item saved into the shopping list.
+            </summary>
+        </member>
+        <member name="M:MarketBoardPlugin.Models.ShoppingList.SavedItem.#ctor(Lumina.Excel.GeneratedSheets.Item,System.Double,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarketBoardPlugin.Models.ShoppingList.SavedItem"/> class.
+            </summary>
+            <param name="sourceItem"> Item class to save.</param>
+            <param name="price"> Current cheapest price.</param>
+            <param name="world"> Current world. </param>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.ShoppingList.SavedItem.SourceItem">
+            <summary>
+             Gets or sets original Item Class.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.ShoppingList.SavedItem.Price">
+            <summary>
+             Gets or sets Cheapest price of the item saved.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.ShoppingList.SavedItem.World">
+            <summary>
+             Gets or sets world from where the price attribute was fetched.
+            </summary>
+        </member>
+        <member name="T:MarketBoardPlugin.Models.Universalis.MarketDataListing">
+            <summary>
+            A model representing a market data listing from Universalis.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.CreatorId">
+            <summary>
+            Gets or sets the ID of the creator.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.CreatorName">
+            <summary>
+            Gets or sets the name of the creator.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.Hq">
+            <summary>
+            Gets or sets a value indicating whether the items are HQ.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.IsCrafted">
+            <summary>
+            Gets or sets a value indicating whether the items are crafted.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.LastReviewTime">
+            <summary>
+            Gets or sets the last review time.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.ListingId">
+            <summary>
+            Gets or sets the ID of the listing.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.Materia">
+            <summary>
+            Gets or sets the list of the materias.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.OnMannequin">
+            <summary>
+            Gets or sets a value indicating whether the item is on a mannequin.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.PricePerUnit">
+            <summary>
+            Gets or sets the price per unit.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.RetainerCity">
+            <summary>
+            Gets or sets the city of the retainer.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.RetainerId">
+            <summary>
+            Gets or sets the ID of the retainer.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.RetainerName">
+            <summary>
+            Gets or sets the retainer's name.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.SellerId">
+            <summary>
+            Gets or sets the ID of the seller.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.StainId">
+            <summary>
+            Gets or sets the ID of the stain.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.Tax">
+            <summary>
+            Gets or sets the Gil sales tax (GST) to be added to the total price during purchase.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataListing.WorldName">
+            <summary>
+            Gets or sets the name of the world.
+            </summary>
+        </member>
+        <member name="T:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory">
+            <summary>
+            A model representing a market data recent history from Universalis.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.BuyerName">
+            <summary>
+            Gets or sets the name of the buyer.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.Hq">
+            <summary>
+            Gets or sets a value indicating whether the items are HQ.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.PricePerUnit">
+            <summary>
+            Gets or sets the price per unit.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataRecentHistory.WorldName">
+            <summary>
+            Gets or sets the name of the world.
+            </summary>
+        </member>
+        <member name="T:MarketBoardPlugin.Models.Universalis.MarketDataResponse">
+            <summary>
+            A model representing a market data response from Universalis.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.DcName">
+            <summary>
+            Gets or sets the name of the datacenter.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.ItemId">
+            <summary>
+            Gets or sets the ID of the item.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.LastUploadTime">
+            <summary>
+            Gets or sets the last upload time.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.Listings">
+            <summary>
+            Gets or sets the listings.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.RecentHistory">
+            <summary>
+            Gets or sets the recent history.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.AveragePrice">
+            <summary>
+            Gets or sets the average price.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.AveragePriceNq">
+            <summary>
+            Gets or sets the average price of the NQ items.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.AveragePriceHq">
+            <summary>
+            Gets or sets the average price of the HQ items.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.SaleVelocity">
+            <summary>
+            Gets or sets the sale velocity.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.SaleVelocityNq">
+            <summary>
+            Gets or sets the sale velocity of the NQ items.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.SaleVelocityHq">
+            <summary>
+            Gets or sets the sale velocity of the HQ items.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.FetchTimestamp">
+            <summary>
+            Gets or sets the fetch timestamp.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.StackSizeHistogram">
+            <summary>
+            Gets the stack size histogram.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.StackSizeHistogramNq">
+            <summary>
+            Gets the stack size histogram of the NQ items.
+            </summary>
+        </member>
+        <member name="P:MarketBoardPlugin.Models.Universalis.MarketDataResponse.StackSizeHistogramHq">
+            <summary>
+            Gets the stack size histogram of the HQ items.
+            </summary>
+        </member>
+    </members>
+</doc>

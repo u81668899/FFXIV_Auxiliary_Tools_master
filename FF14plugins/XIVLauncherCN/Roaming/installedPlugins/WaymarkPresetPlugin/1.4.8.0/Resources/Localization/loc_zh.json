@@ -1,0 +1,626 @@
+{
+  "Text Command Description": {
+    "message": "执行waymark preset命令。使用 \"{0}\" 获取详细使用信息。",
+    "description": "Plugin.OnLanguageChanged"
+  },
+  "Text Command Response: Help - Subcommands": {
+    "message": "有效命令如下：{0}，{1}，{2}，{3}，{4}和{5}。如果没有提供命令，将打开预设库。输入 \"{6} <command>\" 以获取详细的子命令信息。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help - Config": {
+    "message": "打开设置窗口。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help - Slot Info": {
+    "message": "将在游戏栏位中保存的数据发送到聊天窗口。 用法：\"{0} <slot>\"。<slot>可以是任何有效的栏位号。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help - Place": {
+    "message": "使用指定的名称（如果可能）放置预设。名称前后必须带引号。也可以使用没有引号的预设索引代替。 用法：\"{0} <name>|<index>\"。名称必须完全匹配 （除了案例）。索引可以是任何有效的库预设序号。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help - Import": {
+    "message": "将游戏的五个预设栏位之一复制到库中。 用法：\"{0} <slot>\"。栏位号可以是任何有效的预设栏位。 由于游戏聊天框中的长度限制，不支持命令行导入格式化预设字符串。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help - Export": {
+    "message": "根据标记和参数从库中复制预设到指定的游戏栏位*或*剪贴板。 用法：\"{0} [{1}] [{2}] <slot|index> [slot]\"。栏位号可以是任何有效的游戏栏位，索引可以是任何有效的库预设序号。 使用 {3} 标记确定第一个数字是游戏栏位，而不是库索引。使用 {4} 标记令在剪贴板导出的数据包含最后修改时间。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help - Export All": {
+    "message": "将库中的所有预设复制到剪贴板，每行一个。如果你想要在导出中包含最后修改的时间戳，请添加 {0}。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Help": {
+    "message": "使用 \"{0}\" 打开GUI。使用 \"{1}\" 查看文本命令列表。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Text Command Response: Slot Info - Success 1": {
+    "message": "栏位 {0} 内容：\n{1}",
+    "description": "Plugin.ProcessTextCommand_SlotInfo"
+  },
+  "Text Command Response: Slot Info - Error 1": {
+    "message": "试图读取游戏标点数据时发生未知错误。",
+    "description": "Plugin.ProcessTextCommand_SlotInfo"
+  },
+  "Text Command Response: Slot Info - Error 2": {
+    "message": "无法读取游戏的标点数据。",
+    "description": "Plugin.ProcessTextCommand_SlotInfo"
+  },
+  "Text Command Response: Slot Info - Error 3": {
+    "message": "提供的游戏栏位序号无效。",
+    "description": "Plugin.ProcessTextCommand_SlotInfo"
+  },
+  "Text Command Response: Place - Error 1": {
+    "message": "找不到预设 \"{0}\"。",
+    "description": "Plugin.ProcessTextCommand_Place"
+  },
+  "Text Command Response: Place - Error 2": {
+    "message": "无效的预设序号 \"{0}\"。",
+    "description": "Plugin.ProcessTextCommand_Place"
+  },
+  "Text Command Response: Place - Error 3": {
+    "message": "放置预设 {0} 时发生未知错误。",
+    "description": "Plugin.ProcessTextCommand_Place"
+  },
+  "Text Command Response: Place - Error 4": {
+    "message": "无效的预设序号 \"{0}\"。",
+    "description": "Plugin.ProcessTextCommand_Place"
+  },
+  "Text Command Response: Place - Error 5": {
+    "message": "无法放置预设。这可能意味着插件需要更新才能在新版本的FFXIV中使用。",
+    "description": "Plugin.ProcessTextCommand_Place"
+  },
+  "Text Command Response: Import - Success 1": {
+    "message": "导入游戏预设 {0} 作为库预设 {1}。",
+    "description": "Plugin.ProcessTextCommand_Import"
+  },
+  "Text Command Response: Import - Error 1": {
+    "message": "试图读取游戏标点数据时发生未知错误。",
+    "description": "Plugin.ProcessTextCommand_Import"
+  },
+  "Text Command Response: Import - Error 2": {
+    "message": "无法读取游戏标点数据。这可能意味着插件需要更新才能在新版本的FFXIV中使用。",
+    "description": "Plugin.ProcessTextCommand_Import"
+  },
+  "Text Command Response: Import - Error 3": {
+    "message": "无效的游戏栏位序号：\"{0}\"。",
+    "description": "Plugin.ProcessTextCommand_Import"
+  },
+  "Text Command Response: Export - Error 1": {
+    "message": "没有提供栏位或索引序号。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 2": {
+    "message": "提供的游戏栏位序号（{0}）无效。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 3": {
+    "message": "提供的库索引（{0}）无效。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Success 1": {
+    "message": "已复制到剪贴板。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 4": {
+    "message": "提供的需导出的游戏栏位序号（{0}）无效。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 5": {
+    "message": "提供的库索引（{0}）无效。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Success 2": {
+    "message": "预设已导出到游戏栏位{0}。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 6": {
+    "message": "无法写入到游戏栏位{0}！",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 7": {
+    "message": "提供的作为目标的游戏栏位序号（{0}）无效。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export - Error 8": {
+    "message": "尝试导出预设时发生未知错误。",
+    "description": "Plugin.ProcessTextCommand_Export"
+  },
+  "Text Command Response: Export All - Success 1": {
+    "message": "标点库已复制到剪贴板。",
+    "description": "Plugin.ProcessTextCommand_ExportAll"
+  },
+  "Text Command Response: Export All - Error 1": {
+    "message": "尝试复制预设到剪贴板时发生未知错误。",
+    "description": "Plugin.ProcessTextCommand_ExportAll"
+  },
+  "Window Title: Debug Tools": {
+    "message": "调试工具",
+    "description": "Window_Debug.Draw"
+  },
+  "Window Title: Preset Editor": {
+    "message": "预设编辑器",
+    "description": "Window_Editor.Draw"
+  },
+  "Edit Window Text: OOB Warning Message": {
+    "message": "SE已封禁将标点放到边界外的玩家。请在手动编辑标点坐标时谨慎。",
+    "description": "Window_Editor.Draw"
+  },
+  "Edit Window Text: Name": {
+    "message": "名称：",
+    "description": "Window_Editor.Draw"
+  },
+  "Edit Window Text: Active Column Header": {
+    "message": "激活",
+    "description": "Window_Editor.Draw"
+  },
+  "Drag and Drop Preview: Edit Swap Waymark": {
+    "message": "交换标点{0}与...",
+    "description": "Window_Editor.Draw"
+  },
+  "Edit Window Text: Zone Dropdown Label": {
+    "message": "区域：",
+    "description": "Window_Editor.Draw"
+  },
+  "Edit Window Text: Zone Search Label": {
+    "message": "搜索：",
+    "description": "Window_Editor.Draw"
+  },
+  "Button: Save": {
+    "message": "保存",
+    "description": "Window_Editor.Draw"
+  },
+  "Button: Cancel": {
+    "message": "取消",
+    "description": "Window_Editor.Draw"
+  },
+  "Button: Map View": {
+    "message": "地图视图",
+    "description": "Window_Editor.Draw"
+  },
+  "Window Title: Waymark Help": {
+    "message": "标点帮助",
+    "description": "Window_Help.Draw"
+  },
+  "Help Window Text: General 1": {
+    "message": "此插件列表中的所有预设与游戏预设完全分离。 这将允许你存储无限数量的预设，以及轻松地备份和分享它们，或导入其他人与你共享的预设。",
+    "description": "Window_Help.DrawHelpWindow_General"
+  },
+  "Help Window Text: General 2": {
+    "message": "在库中选择一个预设将在旁边显示一个窗口，该窗口有预设的相关信息，例如标点标在哪里，以及你可以对该预设采取的操作。",
+    "description": "Window_Help.DrawHelpWindow_General"
+  },
+  "Help Window Text: General 3": {
+    "message": "如果你想要将库中的预设复制到游戏栏位，请在列表中选择预设，然后按下带有你想要复制到的栏位序号的按钮。如果你想要从游戏列表中导入预设到库里，向下滚动到“导入选项”，然后按下你想要从游戏中导入的栏位按钮。这也是你可以通过粘贴从游戏外导入预设的地方。",
+    "description": "Window_Help.DrawHelpWindow_General"
+  },
+  "Help Window Text: General 4": {
+    "message": "如果你想要与其他人分享预设，你可以在库中选择预设，然后点击“导出到剪贴板”按钮。",
+    "description": "Window_Help.DrawHelpWindow_General"
+  },
+  "Help Window Text: General 5": {
+    "message": "插件还允许你直接在场地中放置或保存标点。这些就是“放置”和“保存当前标点”按钮的功能。请注意，仅能在游戏系统允许的区域中保存和放置预设。 在这些任务之外保存预设会导致显示一个未知区域的预设。 试图在此之外放置预设仅会无事发生。",
+    "description": "Window_Help.DrawHelpWindow_General"
+  },
+  "Help Window Text: General 6": {
+    "message": "预设可以被拖动到想要的地方来重新排序。 默认情况下，库中的任务排序与游戏文件中的排序相同， 并且基本就是在游戏中添加任务的顺序。任务可以被拖放到想要的地方。如果您通过这样做创建自己的排序，新添加的任务将会出现在列表底部。",
+    "description": "Window_Help.DrawHelpWindow_General"
+  },
+  "Help Window Text: Editing Warning Message": {
+    "message": "SE已封禁将标点放到边界外的玩家。请在手动编辑标点坐标时谨慎。",
+    "description": "Window_Help.DrawHelpWindow_Editing"
+  },
+  "Help Window Text: Editing 1": {
+    "message": "点击预设信息窗格中的“编辑”按钮将会打开一个允许你编辑预设的窗口。你可以调整任何可用参数，你可以拖动标点到其他标点上来交换他们的位置。你还可以将帮助窗口中的圆形计算器选项卡中的点拖到编辑器窗口中的标点上，用该计算器中的坐标替换它的坐标。",
+    "description": "Window_Help.DrawHelpWindow_Editing"
+  },
+  "Help Window Text: Editing 2": {
+    "message": "编辑器窗口中的更改将在点击“保存”按钮后才被应用。",
+    "description": "Window_Help.DrawHelpWindow_Editing"
+  },
+  "Help Window Text: Maps 1": {
+    "message": "“地图视图”窗口显示所选预设的任务所相应的地图。所有放置的标点都会显示在地图上。如果一个区域有多个子地图，你可以在窗口右下角的下拉菜单切换。与你的光标在地图上的位置相对应的世界坐标显示在窗口的右下角。如果你想要理解游戏的内部坐标系，请阅读此帮助窗口的“坐标”选项卡，以及它们与游戏中呈现给玩家的内容之间的关系。",
+    "description": "Window_Help.DrawHelpWindow_Maps"
+  },
+  "Help Window Text: Maps 2": {
+    "message": "当编辑预设时，你可以在地图上拖动标点图标来调整他们的位置。当你这样做的时候，坐标读取将反映标点的位置，而不是鼠标的位置。请注意，在地势不平衡的地区不建议以这种方式编辑标点，因为它无法自动调整Y坐标以匹配地形。",
+    "description": "Window_Help.DrawHelpWindow_Maps"
+  },
+  "Help Window Text: Maps 3": {
+    "message": "还请注意插件目前无法确定存在哪个标点在哪个子地图，因此所有的标点都会在所有子地图上显示的它们的位置（只要它们在地图的范围内）。对于一些罕见的情况（如e12s），默认子地图不是你进入的区域，所以你需要手动选择正确的子地图。",
+    "description": "Window_Help.DrawHelpWindow_Maps"
+  },
+  "Help Window Text: Coordinates 1": {
+    "message": "坐标系：",
+    "description": "Window_Help.DrawHelpWindow_Coordinates"
+  },
+  "Help Window Text: Coordinates 2": {
+    "message": "游戏内部使用了右手3D坐标系，X由西向东递增，Y由下向上递增，Z由北向南递增。地图上的坐标系是XZ平面的2D投影，X由西向东递增，Y由北向南递增。请注意显示在聊天链接或地图窗体中显示的坐标已缩放到一个任意值，以及Y轴与Z轴被相互交换。此插件使用游戏的内部坐标系统如下所示：",
+    "description": "Window_Help.DrawHelpWindow_Coordinates"
+  },
+  "Help Window Text: Circle Computer Warning Message": {
+    "message": "SE已封禁将标点放到边界外的玩家。请在使用这个计算器创建或编辑预设时谨慎。",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Circle Computer Text: Instructions 1": {
+    "message": "这个计算器将用你提供的信息来计算径向对称点(“时钟点”)。然后你可以将这些拖动到预设编辑器中，以计算点替换任何标点，或者你可以使用此窗格底部的按钮。",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Circle Computer Text: Center Position": {
+    "message": "中心位置",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Circle Computer Text: Radius": {
+    "message": "半径(y)",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Circle Computer Text: Number of Points": {
+    "message": "点的数量",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Circle Computer Text: Angle Offset": {
+    "message": "角度偏移(deg)",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Drag and Drop Preview: Circle Computer Waymark": {
+    "message": "复制坐标到...",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Button: Copy Points from Circle Computer": {
+    "message": "将这些点复制到编辑器",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Button: Create Preset from Circle Computer": {
+    "message": "使用这些点创建一个新预设",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Default Preset Name - Circle Computer": {
+    "message": "从圆形计算器导入",
+    "description": "Window_Help.DrawHelpWindow_CircleCalculator"
+  },
+  "Header: Help Window Page - General": {
+    "message": "通用",
+    "description": "HelpWindowPageExtensions.GetTranslatedName"
+  },
+  "Header: Help Window Page - Editing": {
+    "message": "编辑",
+    "description": "HelpWindowPageExtensions.GetTranslatedName"
+  },
+  "Header: Help Window Page - Maps": {
+    "message": "地图",
+    "description": "HelpWindowPageExtensions.GetTranslatedName"
+  },
+  "Header: Help Window Page - Coordinates": {
+    "message": "坐标",
+    "description": "HelpWindowPageExtensions.GetTranslatedName"
+  },
+  "Header: Help Window Page - Circle Calculator": {
+    "message": "圆形计算器",
+    "description": "HelpWindowPageExtensions.GetTranslatedName"
+  },
+  "Window Title: Preset Info": {
+    "message": "预设信息",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Copy to Slot Label": {
+    "message": "复制到栏位：",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Button: Place": {
+    "message": "放置",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Preset Info Label": {
+    "message": "预设信息：",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Waymark Column Header": {
+    "message": "标点",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Unused Waymark": {
+    "message": "未使用的",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Zone Label": {
+    "message": "区域：{0}",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Last Modified Label": {
+    "message": "最后修改时间：{0}",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Button: Export to Clipboard": {
+    "message": "导出至剪贴板",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Button: Edit": {
+    "message": "编辑",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Button: Delete": {
+    "message": "删除",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: Confirm Delete Label": {
+    "message": "确认删除：",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Button: Yes": {
+    "message": "是",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Button: No": {
+    "message": "否",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Info Pane Text: No Preset Selected": {
+    "message": "未选择预设。",
+    "description": "Window_InfoPane.Draw"
+  },
+  "Window Title: Waymark Library": {
+    "message": "标点库",
+    "description": "Window_Library.Draw"
+  },
+  "Config Option: Filter on Current Zone": {
+    "message": "按当前区域筛选",
+    "description": "Window_Library.Draw"
+  },
+  "Button: Save Current Waymarks": {
+    "message": "保存当前标点",
+    "description": "Window_Library.Draw"
+  },
+  "Library Window Text: Zone Search Label": {
+    "message": "搜索区域",
+    "description": "Window_Library.Draw"
+  },
+  "Main Window Text: No Presets Found": {
+    "message": "没有预设匹配当前的筛选条件",
+    "description": "Window_Library.Draw"
+  },
+  "Header: Presets": {
+    "message": "预设",
+    "description": "Window_Library.Draw"
+  },
+  "Main Window Text: Library Empty": {
+    "message": "预设库为空 ！",
+    "description": "Window_Library.Draw"
+  },
+  "Header: Import Options": {
+    "message": "导入选项",
+    "description": "Window_Library.Draw"
+  },
+  "Header: Export and Backup Options": {
+    "message": "导出/备份选项",
+    "description": "Window_Library.Draw"
+  },
+  "Drag and Drop Preview: Moving Preset": {
+    "message": "移动中：",
+    "description": "Window_Library.DrawPresetsForZone"
+  },
+  "Drag and Drop Preview: Move to Bottom": {
+    "message": "<移至底部>",
+    "description": "Window_Library.DrawPresetsForZone"
+  },
+  "Drag and Drop Preview: Moving Zone": {
+    "message": "移动中：",
+    "description": "Window_Library.DoZoneDragAndDrop"
+  },
+  "Drag and Drop Preview: Move to Top": {
+    "message": "<移至顶部>",
+    "description": "Window_Library.DrawZoneDragDropTopOrBottomPlaceholder"
+  },
+  "Text Box Prompt: Import": {
+    "message": "在此处粘贴预设，然后点击“导入”。",
+    "description": "Window_Library.DrawImportSection"
+  },
+  "Button: Import": {
+    "message": "导入",
+    "description": "Window_Library.DrawImportSection"
+  },
+  "Main Window Text: Import from Game Slot Label": {
+    "message": "或从游戏栏位导入：",
+    "description": "Window_Library.DrawImportSection"
+  },
+  "Main Window Text: Preset Resources Link": {
+    "message": "从哪寻找可导入的预设",
+    "description": "Window_Library.DrawImportSection"
+  },
+  "Button: Export All Presets to Clipboard": {
+    "message": "导出所有预设到剪贴板",
+    "description": "Window_Library.DrawExportSection"
+  },
+  "Button: Backup Current Config": {
+    "message": "备份当前配置",
+    "description": "Window_Library.DrawExportSection"
+  },
+  "Help: Backup Current Config": {
+    "message": "将当前配置文件复制到 Dalamud \"pluginConfigs\" 目录的备份文件夹。",
+    "description": "Window_Library.DrawExportSection"
+  },
+  "Window Title: Map View": {
+    "message": "地图视图",
+    "description": "Window_Map.Draw"
+  },
+  "Window Title: Map View (Editing)": {
+    "message": "地图视图 - 编辑",
+    "description": "Window_Map.Draw"
+  },
+  "Map Window Text: No Maps Available": {
+    "message": "此区域没有可用的地图。",
+    "description": "Window_Map.Draw"
+  },
+  "Map Window Text: Unnamed Submap Placeholder": {
+    "message": "未命名子地图{0}",
+    "description": "Window_Map.Draw"
+  },
+  "Map Window Text: Loading Maps": {
+    "message": "正在加载区域地图。",
+    "description": "Window_Map.Draw"
+  },
+  "Map Window Text: Unknown Zone": {
+    "message": "未知区域：没有可用的地图。",
+    "description": "Window_Map.Draw"
+  },
+  "Map Window Text: No Preset Selected": {
+    "message": "未选择预设",
+    "description": "Window_Map.Draw"
+  },
+  "Window Title: Config": {
+    "message": "标点设置",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Always Show Info Pane": {
+    "message": "总是显示预设信息面板。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Clicking Preset Unselects": {
+    "message": "点击选中的预设取消选中。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Categorize Presets by Zone": {
+    "message": "按区域分类预设。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Open and Close with Game Window": {
+    "message": "随着游戏的标点窗口打开与关闭标点库。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Attach to Game Window": {
+    "message": "将库窗口连接到游戏的标点窗口。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Show ID in Zone Names": {
+    "message": "在区域名称旁显示ID号码。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Show ID in Zone Names": {
+    "message": "在某些地方显示区域/任务的内部内容查找器ID。通常只用于调试。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Show Preset Indices": {
+    "message": "在库内显示预设的索引。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Show Preset Indices": {
+    "message": "这个的主要用处是让你知道在文本命令中需要使用的预设索引。如果你只使用GUI，您可以一直禁用此选项。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Allow Preset Drag and Drop": {
+    "message": "允许拖放对预设排序。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Allow Zone Drag and Drop": {
+    "message": "允许拖放对区域排序。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Allow Zone Drag and Drop": {
+    "message": "如果启用此项，你可以改变按区域排序的预设文件夹顺序。新的区域将添加到列表底部。这个选项在“按区域分类预设”禁用时不会产生任何效果。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Sort Zones Descending": {
+    "message": "降序排列区域（最新的在顶部）。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Sort Zones Descending": {
+    "message": "当选中此项时，区域将被从最新到最旧大致排序（SE的排序不是完美的）。当与“允许拖放对区域排序”选项组合时，新区域将被添加到列表的顶部（其它所有区域都在下面且保持不变的顺序）。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Show Library Zone Filter Search Box": {
+    "message": "在库窗口中显示筛选区域的搜索框。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Show Library Zone Filter Search Box": {
+    "message": "选中此项时，搜索框将显示在库窗口顶部，以筛选你想要看到的区域。当“按区域分类预设”选项被禁用时不会产生任何效果。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Autoload Presets from Libarary": {
+    "message": "从库中自动加载预设。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Autoload presets from Library": {
+    "message": "当你载入区域时，自动加载库中存在的前五个预设。！！！这将没有任何提示地覆写游戏标点栏！！！所以，在确定你已保存了所有你想要保存的数据前，请不要打开它。可以考虑配合下面的自动保存选项使用来减少无意中丢失标点的风险。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Autosave Presets to Library": {
+    "message": "自动保存预设到库。",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Autosave Presets to Library": {
+    "message": "在退出任务时，自动将所有占有位置的游戏预设栏复制到库中。",
+    "description": "Window_Settings.Draw"
+  },
+  "Config Option: Suppress Text Command Responses": {
+    "message": "禁止对文本命令的回应（除了\"{0}\"）。",
+    "description": "Window_Settings.Draw"
+  },
+  "Button: Clear All Map View Data": {
+    "message": "清除所有地图视图数据",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Clear All Map View Data": {
+    "message": "这将删除所有地图视图的面板/缩放/子地图状态，将每个地图重置为默认状态。",
+    "description": "Window_Settings.Draw"
+  },
+  "Settings Window Text: Confirm Delete Label": {
+    "message": "确认删除：",
+    "description": "Window_Settings.Draw"
+  },
+  "Button: Clear All Zone Sort Data": {
+    "message": "清除所有区域排序数据",
+    "description": "Window_Settings.Draw"
+  },
+  "Help: Clear All Zone Sort Data": {
+    "message": "这将删除库窗口中所有自定义的区域排序，并将排序重置为默认。",
+    "description": "Window_Settings.Draw"
+  },
+  "Button: Save and Close": {
+    "message": "保存并关闭",
+    "description": "Window_Settings.Draw"
+  },
+  "Button: Show Library": {
+    "message": "显示库",
+    "description": "Window_Settings.Draw"
+  },
+  "Waymark Status: Unused": {
+    "message": "未使用的",
+    "description": "Waymark.GetWaymarkDataString"
+  },
+  "Preset Info Error: Zone Name 1": {
+    "message": "获取区域名称时发生错误！",
+    "description": "WaymarkPreset.GetPresetDataString"
+  },
+  "Preset Info Label: Zone": {
+    "message": "区域：",
+    "description": "WaymarkPreset.GetPresetDataString"
+  },
+  "Preset Info Label: Last Modified": {
+    "message": "最后修改时间：",
+    "description": "WaymarkPreset.GetPresetDataString"
+  },
+  "Default Preset Name": {
+    "message": "新预设",
+    "description": "WaymarkPreset.get_DefaultPresetName"
+  },
+  "Default Preset Name (Imported)": {
+    "message": "已导入",
+    "description": "WaymarkPresetLibrary.ImportPreset"
+  },
+  "Export Preset Fallback Error": {
+    "message": "导出预设请求的索引无效。索引{0}中没有预设。",
+    "description": "WaymarkPresetLibrary.ExportPreset"
+  },
+  "Terminology: Zone Sort Type - Basic": {
+    "message": "按ID排序",
+    "description": "ZoneSortTypeExtensions.GetTranslatedName"
+  },
+  "Terminology: Zone Sort Type - Alphabetical": {
+    "message": "按字母排序",
+    "description": "ZoneSortTypeExtensions.GetTranslatedName"
+  },
+  "Terminology: Zone Sort Type - Custom": {
+    "message": "自定义排序顺序",
+    "description": "ZoneSortTypeExtensions.GetTranslatedName"
+  }
+}

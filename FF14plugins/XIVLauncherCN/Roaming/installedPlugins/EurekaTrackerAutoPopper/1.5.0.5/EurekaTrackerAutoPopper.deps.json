@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "EurekaTrackerAutoPopper/1.5.0.5": {
+        "dependencies": {
+          "DalamudPackager": "2.1.12",
+          "XivCommon": "9.0.0"
+        },
+        "runtime": {
+          "EurekaTrackerAutoPopper.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.12": {},
+      "XivCommon/9.0.0": {
+        "runtime": {
+          "lib/net7.0-windows7.0/XivCommon.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EurekaTrackerAutoPopper/1.5.0.5": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sc0PVxvgg4NQjcI8n10/VfUQBAS4O+Fw2pZrAqBdRMbthYGeogzu5+xmIGCGmsEZ/ukMOBuAqiNiB5qA3MRalg==",
+      "path": "dalamudpackager/2.1.12",
+      "hashPath": "dalamudpackager.2.1.12.nupkg.sha512"
+    },
+    "XivCommon/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-avaBp3FmSCi/PiQhntCeBDYOHejdyTWmFtz4pRBVQQ8vHkmRx+YTk1la9dkYBMlXxRXKckEdH1iI1Fu61JlE7w==",
+      "path": "xivcommon/9.0.0",
+      "hashPath": "xivcommon.9.0.0.nupkg.sha512"
+    }
+  }
+}
