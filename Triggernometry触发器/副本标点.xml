@@ -397,6 +397,21 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="O1S" Id="7e6c5609-f531-41e5-acab-fc0181b19f6f" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 德尔塔幻境1”任务开始。|“欧米茄时空狭缝 德尔塔幻境1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-12.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:12.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:12.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-12.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:-8.485,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:8.485,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:8.485,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:-8.485,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
             </Triggers>
           </Folder>
           <Folder Id="b05a5229-3a90-4aa1-9107-c6d47b8a1a2a" Name="亚历山大" Enabled="true">
@@ -861,7 +876,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="禁地优雷卡.+?丰水之地" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" LogMessageText="${_zone}" ActionType="LogMessage">
+              <Action OrderNumber="3" LogMessageText="${_zone}" Enabled="False" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -1786,7 +1801,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="1.本地标点" Id="15e00c29-76dc-4940-a2a9-8894b983dca6" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="2000">
+      <Trigger Enabled="true" Sequential="True" Name="1.本地标点" Id="15e00c29-76dc-4940-a2a9-8894b983dca6" RegularExpression="^放置本地标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="{${var:副本标点临时记录}}" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
@@ -1796,9 +1811,8 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="1.小队标点" Id="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="2000">
+      <Trigger Enabled="true" Sequential="True" Name="1.小队标点" Id="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" RegularExpression="^放置小队标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="DoInsertPreset" NamedCallbackParam="{&quot;Name&quot;:&quot;Slot5&quot;,&quot;MapID&quot;:0,${var:副本标点临时记录}}" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
@@ -1811,7 +1825,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
