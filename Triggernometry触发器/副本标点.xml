@@ -1293,16 +1293,19 @@
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点3" Id="388f4f81-f909-4471-96dc-bc96a579cfc0" RegularExpression="^.{14} Death 19:.{8}:希拉狄哈剑斗士:">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:282.773,&quot;Y&quot;:533.0,&quot;Z&quot;:-123.748,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:282.699,&quot;Y&quot;:533.0,&quot;Z&quot;:-104.985,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:282.669,&quot;Y&quot;:533.0,&quot;Z&quot;:-86.283,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:282.742,&quot;Y&quot;:533.0,&quot;Z&quot;:-96.222,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:295.192,&quot;Y&quot;:533.0,&quot;Z&quot;:-123.832,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:295.324,&quot;Y&quot;:533.0,&quot;Z&quot;:-104.984,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:295.184,&quot;Y&quot;:533.0,&quot;Z&quot;:-86.201,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:295.212,&quot;Y&quot;:533.0,&quot;Z&quot;:-113.823,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="3" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:282.773,&quot;Y&quot;:533.0,&quot;Z&quot;:-123.748,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:282.699,&quot;Y&quot;:533.0,&quot;Z&quot;:-104.985,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:282.669,&quot;Y&quot;:533.0,&quot;Z&quot;:-86.283,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:282.742,&quot;Y&quot;:533.0,&quot;Z&quot;:-96.222,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:295.192,&quot;Y&quot;:533.0,&quot;Z&quot;:-123.832,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:295.324,&quot;Y&quot;:533.0,&quot;Z&quot;:-104.984,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:295.184,&quot;Y&quot;:533.0,&quot;Z&quot;:-86.201,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:295.212,&quot;Y&quot;:533.0,&quot;Z&quot;:-113.823,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" TriggerOp="DisableTrigger" TriggerId="388f4f81-f909-4471-96dc-bc96a579cfc0" ActionType="Trigger">
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="388f4f81-f909-4471-96dc-bc96a579cfc0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1327,19 +1330,22 @@
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点2" Id="0d505503-6423-4e86-986b-c5de909ded78" RegularExpression="^.{14} Death 19:.{8}:羽衣精:">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-34.974,&quot;Y&quot;:521.004,&quot;Z&quot;:-289.063,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-17.078,&quot;Y&quot;:521.004,&quot;Z&quot;:-270.978,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-35.01,&quot;Y&quot;:521.004,&quot;Z&quot;:-253.093,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-53.011,&quot;Y&quot;:521.004,&quot;Z&quot;:-271.008,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-29.679,&quot;Y&quot;:521.004,&quot;Z&quot;:-283.259,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-29.614,&quot;Y&quot;:521.004,&quot;Z&quot;:-258.713,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-40.314,&quot;Y&quot;:521.004,&quot;Z&quot;:-258.73,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-40.326,&quot;Y&quot;:521.004,&quot;Z&quot;:-283.179,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="2" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-34.974,&quot;Y&quot;:521.004,&quot;Z&quot;:-289.063,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-17.078,&quot;Y&quot;:521.004,&quot;Z&quot;:-270.978,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-35.01,&quot;Y&quot;:521.004,&quot;Z&quot;:-253.093,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-53.011,&quot;Y&quot;:521.004,&quot;Z&quot;:-271.008,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-29.679,&quot;Y&quot;:521.004,&quot;Z&quot;:-283.259,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-29.614,&quot;Y&quot;:521.004,&quot;Z&quot;:-258.713,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-40.314,&quot;Y&quot;:521.004,&quot;Z&quot;:-258.73,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-40.326,&quot;Y&quot;:521.004,&quot;Z&quot;:-283.179,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" TriggerOp="EnableTrigger" TriggerId="388f4f81-f909-4471-96dc-bc96a579cfc0" ActionType="Trigger">
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="0d505503-6423-4e86-986b-c5de909ded78" ActionType="Trigger">
+                      <Action OrderNumber="5" TriggerOp="EnableTrigger" TriggerId="388f4f81-f909-4471-96dc-bc96a579cfc0" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="DisableTrigger" TriggerId="0d505503-6423-4e86-986b-c5de909ded78" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1401,16 +1407,19 @@
                   </Trigger>
                   <Trigger Enabled="false" Name="标点5" Id="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" RegularExpression="^.{14} Death 19:.{8}:铁鼠豪雷:">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-200.0,&quot;Y&quot;:-195.0,&quot;Z&quot;:-12.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-187.5,&quot;Y&quot;:-195.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-200.0,&quot;Y&quot;:-195.0,&quot;Z&quot;:12.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-212.5,&quot;Y&quot;:-195.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-194.2,&quot;Y&quot;:-195.0,&quot;Z&quot;:3.9,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-205.8,&quot;Y&quot;:-195.0,&quot;Z&quot;:3.9,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-194.2,&quot;Y&quot;:-195.0,&quot;Z&quot;:-3.9,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-205.8,&quot;Y&quot;:-195.0,&quot;Z&quot;:-3.9,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="5" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-200.0,&quot;Y&quot;:-195.0,&quot;Z&quot;:-12.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-187.5,&quot;Y&quot;:-195.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-200.0,&quot;Y&quot;:-195.0,&quot;Z&quot;:12.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-212.5,&quot;Y&quot;:-195.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-194.2,&quot;Y&quot;:-195.0,&quot;Z&quot;:3.9,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-205.8,&quot;Y&quot;:-195.0,&quot;Z&quot;:3.9,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-194.2,&quot;Y&quot;:-195.0,&quot;Z&quot;:-3.9,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-205.8,&quot;Y&quot;:-195.0,&quot;Z&quot;:-3.9,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" TriggerOp="DisableTrigger" TriggerId="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" ActionType="Trigger">
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1444,19 +1453,22 @@
                   </Trigger>
                   <Trigger Enabled="false" Name="标点2" Id="1a4ac243-e9ab-4e5f-aea8-8e1d2ae8c54a" RegularExpression="^.{14} Death 19:.{8}:紫州幽鬼:">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-115.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:15.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-85.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-15.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-108.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-92.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-92.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-108.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="2" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-115.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:15.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-85.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-15.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-108.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-92.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-92.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-8.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-108.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" TriggerOp="EnableTrigger" TriggerId="79ad4895-c58f-4148-b408-05f68cacae99" ActionType="Trigger">
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="1a4ac243-e9ab-4e5f-aea8-8e1d2ae8c54a" ActionType="Trigger">
+                      <Action OrderNumber="5" TriggerOp="EnableTrigger" TriggerId="79ad4895-c58f-4148-b408-05f68cacae99" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="DisableTrigger" TriggerId="1a4ac243-e9ab-4e5f-aea8-8e1d2ae8c54a" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1493,28 +1505,31 @@
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点3" Id="79ad4895-c58f-4148-b408-05f68cacae99" RegularExpression="^.{14} Death 19:.{8}:狮子王:">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:282.0,&quot;Y&quot;:0.0,&quot;Z&quot;:38.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:292.0,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:285.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.3,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="MMW" DescriptionOverride="True">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="3" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:285.0,&quot;Y&quot;:0.0,&quot;Z&quot;:36.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:281.3,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:294.2,&quot;Y&quot;:0.0,&quot;Z&quot;:1.7,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.3,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="树歌" DescriptionOverride="True">
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:282.0,&quot;Y&quot;:0.0,&quot;Z&quot;:38.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:292.0,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:285.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.3,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="MMW" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:290.0,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:290.0,&quot;Y&quot;:0.0,&quot;Z&quot;:30.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:287.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:38.3,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:294.2,&quot;Y&quot;:0.0,&quot;Z&quot;:1.7,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.3,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="树歌2" DescriptionOverride="True">
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:285.0,&quot;Y&quot;:0.0,&quot;Z&quot;:36.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:281.3,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:294.2,&quot;Y&quot;:0.0,&quot;Z&quot;:1.7,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.3,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="树歌" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:6.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:289.0,&quot;Y&quot;:0.0,&quot;Z&quot;:6.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:38.299,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:294.2,&quot;Y&quot;:0.0,&quot;Z&quot;:1.7,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.299,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable" Description="树歌3" DescriptionOverride="True">
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:290.0,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:290.0,&quot;Y&quot;:0.0,&quot;Z&quot;:30.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:287.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:38.3,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:294.2,&quot;Y&quot;:0.0,&quot;Z&quot;:1.7,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.3,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="树歌2" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="5" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="5" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:6.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:289.0,&quot;Y&quot;:0.0,&quot;Z&quot;:6.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:38.299,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:281.7,&quot;Y&quot;:0.0,&quot;Z&quot;:20.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:294.2,&quot;Y&quot;:0.0,&quot;Z&quot;:1.7,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:310.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-31.299,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable" Description="树歌3" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="6" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
+                      <Action OrderNumber="6" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="7" TriggerOp="EnableTrigger" TriggerId="e1ced84b-da00-4207-9120-74b7eb41e8e2" ActionType="Trigger">
+                      <Action OrderNumber="7" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="8" TriggerOp="DisableTrigger" TriggerId="79ad4895-c58f-4148-b408-05f68cacae99" ActionType="Trigger">
+                      <Action OrderNumber="8" TriggerOp="EnableTrigger" TriggerId="e1ced84b-da00-4207-9120-74b7eb41e8e2" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="9" TriggerOp="DisableTrigger" TriggerId="79ad4895-c58f-4148-b408-05f68cacae99" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1522,45 +1537,48 @@
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点4" Id="e1ced84b-da00-4207-9120-74b7eb41e8e2" RegularExpression="^.{14} Death 19:.{8}:(紫州小天狗|紫州隐密头领):">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="六根山i" VariableExpression="${var:六根山i}+1" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="4" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-132.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:312.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-105.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:287.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:307.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:292.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:318.7,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:281.3,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="MMW式麻将" DescriptionOverride="True">
+                      <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="六根山i" VariableExpression="${var:六根山i}+1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-132.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:312.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-105.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:287.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:307.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:292.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:318.7,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:281.3,&quot;Y&quot;:7.0,&quot;Z&quot;:-108.5,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="MMW式麻将" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-132.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:312.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-107.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:287.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:318.8,&quot;Y&quot;:7.0,&quot;Z&quot;:-138.8,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:318.8,&quot;Y&quot;:7.0,&quot;Z&quot;:-101.2,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:281.2,&quot;Y&quot;:7.0,&quot;Z&quot;:-138.8,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:281.2,&quot;Y&quot;:7.0,&quot;Z&quot;:-101.2,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="四角式" DescriptionOverride="True">
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-132.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:312.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-107.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:287.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:318.8,&quot;Y&quot;:7.0,&quot;Z&quot;:-138.8,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:318.8,&quot;Y&quot;:7.0,&quot;Z&quot;:-101.2,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:281.2,&quot;Y&quot;:7.0,&quot;Z&quot;:-138.8,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:281.2,&quot;Y&quot;:7.0,&quot;Z&quot;:-101.2,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="四角式" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-135.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:315.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-104.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:284.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:307.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-127.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:307.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-112.5,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:292.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-127.5,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:292.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-112.5,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable" Description="四角式2" DescriptionOverride="True">
+                      <Action OrderNumber="5" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-135.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:315.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:300.0,&quot;Y&quot;:7.0,&quot;Z&quot;:-104.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:284.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-120.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:307.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-127.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:307.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-112.5,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:292.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-127.5,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:292.5,&quot;Y&quot;:7.0,&quot;Z&quot;:-112.5,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable" Description="四角式2" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="5" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="6" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="7" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="7" TriggerOp="EnableTrigger" TriggerId="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" ActionType="Trigger">
+                      <Action OrderNumber="8" TriggerOp="EnableTrigger" TriggerId="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="8" TriggerOp="DisableTrigger" TriggerId="e1ced84b-da00-4207-9120-74b7eb41e8e2" ActionType="Trigger">
+                      <Action OrderNumber="9" TriggerOp="DisableTrigger" TriggerId="e1ced84b-da00-4207-9120-74b7eb41e8e2" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="9" VariableName="六根山i" VariableExpression="${var:六根山i}+1" ActionType="Variable" ExecutionDelayExpression="100">
+                      <Action OrderNumber="10" VariableName="六根山i" VariableExpression="${var:六根山i}+1" ActionType="Variable" ExecutionDelayExpression="100">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
@@ -1801,7 +1819,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="1.本地标点" Id="15e00c29-76dc-4940-a2a9-8894b983dca6" RegularExpression="^放置本地标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
+      <Trigger Enabled="false" Sequential="True" Name="1.本地标点" Id="15e00c29-76dc-4940-a2a9-8894b983dca6" RegularExpression="^放置本地标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="{${var:副本标点临时记录}}" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
@@ -1814,13 +1832,21 @@
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="1.小队标点" Id="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" RegularExpression="^放置小队标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
         <Actions>
-          <Action OrderNumber="1" NamedCallbackName="DoInsertPreset" NamedCallbackParam="{&quot;Name&quot;:&quot;Slot5&quot;,&quot;MapID&quot;:0,${var:副本标点临时记录}}" ActionType="NamedCallback">
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="1" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:标点位}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" NamedCallbackName="DoInsertPreset" NamedCallbackParam="{&quot;Name&quot;:&quot;Slot${var:标点位}&quot;,&quot;MapID&quot;:0,${var:副本标点临时记录}}" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" NamedCallbackName="DoTextCommand" NamedCallbackParam="/waymark preset 5" ActionType="NamedCallback" ExecutionDelayExpression="500">
+          <Action OrderNumber="3" NamedCallbackName="DoTextCommand" NamedCallbackParam="/waymark preset ${var:标点位}" ActionType="NamedCallback" ExecutionDelayExpression="500">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" VariableName="副本标点临时记录" ActionType="Variable" ExecutionDelayExpression="2000">
+          <Action OrderNumber="4" VariableName="副本标点临时记录" ActionType="Variable" ExecutionDelayExpression="2000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableName="标点位" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
