@@ -27,8 +27,8 @@ https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Tr
 https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E6%A0%87%E7%82%B9.xml
 
 挖宝会计：
-https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%8C%96%E5%AE%9D%E4%BC%9A%E8%AE%A1by165
-https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%8C%96%E5%AE%9D%E4%BC%9A%E8%AE%A1by165
+https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%8C%96%E5%AE%9D%E4%BC%9A%E8%AE%A1by165.xml
+https://gitee.com/u81668899/FFXIV_Auxiliary_Tools_master/raw/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%8C%96%E5%AE%9D%E4%BC%9A%E8%AE%A1by165.xml
 
 潜艇记录：
 https://raw.githubusercontent.com/u81668899/FFXIV_Auxiliary_Tools_master/main/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E6%BD%9C%E8%89%87%E8%AE%B0%E5%BD%95.xml
