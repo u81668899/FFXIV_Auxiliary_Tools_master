@@ -7,7 +7,7 @@
           <Folder Id="3580050f-084b-4860-a220-418535edd157" Name="伊甸" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="e1s" Id="75abeedf-ea87-45e9-8057-33c0aadf7851" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 觉醒之章1”任务开始。|“伊甸希望乐园 觉醒之章1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e1s" Id="75abeedf-ea87-45e9-8057-33c0aadf7851" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 觉醒之章1|伊甸希望乐园 觉醒之章1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:95.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:105.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -26,8 +26,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e2s" Id="5a1885dc-456b-42a3-bea3-8bcc238f63a3" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 觉醒之章2”任务开始。|“伊甸希望乐园 觉醒之章2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e2s" Id="5a1885dc-456b-42a3-bea3-8bcc238f63a3" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 觉醒之章2|伊甸希望乐园 觉醒之章2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:114.148567,&quot;Y&quot;:0.0,&quot;Z&quot;:81.96628,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:113.723595,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:118.134171,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:86.06468,&quot;Y&quot;:1.90734863E-06,&quot;Z&quot;:118.489243,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:100.178589,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:97.5625458,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -46,8 +47,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e3s" Id="357d7300-dbaa-4a9a-9849-c4f7148202b3" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 觉醒之章3”任务开始。|“伊甸希望乐园 觉醒之章3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e3s" Id="357d7300-dbaa-4a9a-9849-c4f7148202b3" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 觉醒之章3|伊甸希望乐园 觉醒之章3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:93.83357,&quot;Y&quot;:0.0,&quot;Z&quot;:100.288551,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:105.052551,&quot;Y&quot;:0.0,&quot;Z&quot;:100.309563,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:81.06151,&quot;Y&quot;:0.0,&quot;Z&quot;:103.57856,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:119.394409,&quot;Y&quot;:0.0,&quot;Z&quot;:103.39711,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:91.2746658,&quot;Y&quot;:0.0,&quot;Z&quot;:81.9043,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:108.703125,&quot;Y&quot;:0.0,&quot;Z&quot;:81.4340057,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -66,8 +68,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e8s" Id="4b3c6218-8503-4f3f-a52b-3c75219dab4f" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 共鸣之章4”任务开始。|“伊甸希望乐园 共鸣之章4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e8s" Id="4b3c6218-8503-4f3f-a52b-3c75219dab4f" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 共鸣之章4|伊甸希望乐园 共鸣之章4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:99.982,&quot;Y&quot;:0.0,&quot;Z&quot;:83.858,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:116.107,&quot;Y&quot;:0.0,&quot;Z&quot;:100.05,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:99.849,&quot;Y&quot;:0.0,&quot;Z&quot;:115.99,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:83.868,&quot;Y&quot;:0.0,&quot;Z&quot;:100.243,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:94.216,&quot;Y&quot;:0.0,&quot;Z&quot;:105.596,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:105.674,&quot;Y&quot;:0.0,&quot;Z&quot;:105.697,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:94.392,&quot;Y&quot;:0.0,&quot;Z&quot;:94.402,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:105.68,&quot;Y&quot;:0.0,&quot;Z&quot;:94.413,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="内DD" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -89,8 +92,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e4s" Id="99d1e086-b93b-4553-8e27-e02276fdad08" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 觉醒之章4”任务开始。|“伊甸希望乐园 觉醒之章4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e4s" Id="99d1e086-b93b-4553-8e27-e02276fdad08" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 觉醒之章4|伊甸希望乐园 觉醒之章4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:89.43272,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:89.33858,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:110.794228,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:89.08669,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:89.2349854,&quot;Y&quot;:0.0,&quot;Z&quot;:111.01371,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:110.487587,&quot;Y&quot;:0.0,&quot;Z&quot;:111.239983,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:90.96692,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:92.78151,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:90.53671,&quot;Y&quot;:0.0,&quot;Z&quot;:107.569672,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -109,8 +113,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e5s" Id="0a37fa91-f230-4bf9-a2b3-a499966aac42" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 共鸣之章1”任务开始。|“伊甸希望乐园 共鸣之章1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e5s" Id="0a37fa91-f230-4bf9-a2b3-a499966aac42" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 共鸣之章1|伊甸希望乐园 共鸣之章1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:90.515,&quot;Y&quot;:0.0,&quot;Z&quot;:90.04,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:109.415,&quot;Y&quot;:0.0,&quot;Z&quot;:90.178,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:109.386,&quot;Y&quot;:0.0,&quot;Z&quot;:109.898,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:90.434,&quot;Y&quot;:0.0,&quot;Z&quot;:109.816,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:96.023,&quot;Y&quot;:0.0,&quot;Z&quot;:95.024,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:104.017,&quot;Y&quot;:0.0,&quot;Z&quot;:94.729,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:103.945,&quot;Y&quot;:0.0,&quot;Z&quot;:104.955,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:96.034,&quot;Y&quot;:0.0,&quot;Z&quot;:104.868,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -129,8 +134,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e6s" Id="da3a3ca4-56c5-4a59-b7bc-0b1a3e13f015" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 共鸣之章2”任务开始。|“伊甸希望乐园 共鸣之章2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e6s" Id="da3a3ca4-56c5-4a59-b7bc-0b1a3e13f015" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 共鸣之章2|伊甸希望乐园 共鸣之章2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:99.711,&quot;Y&quot;:0.0,&quot;Z&quot;:81.597,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:118.252,&quot;Y&quot;:0.0,&quot;Z&quot;:100.183,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:98.988,&quot;Y&quot;:0.0,&quot;Z&quot;:118.513,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81.647,&quot;Y&quot;:0.0,&quot;Z&quot;:100.101,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:94.633,&quot;Y&quot;:0.0,&quot;Z&quot;:94.706,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:105.418,&quot;Y&quot;:0.0,&quot;Z&quot;:94.872,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:105.269,&quot;Y&quot;:0.0,&quot;Z&quot;:106.257,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:94.359,&quot;Y&quot;:0.0,&quot;Z&quot;:106.031,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -149,8 +155,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e7s" Id="377bf37f-483e-4166-a4eb-b8e5bfb9572a" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 共鸣之章3”任务开始。|“伊甸希望乐园 共鸣之章3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e7s" Id="377bf37f-483e-4166-a4eb-b8e5bfb9572a" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 共鸣之章3|伊甸希望乐园 共鸣之章3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:94.539,&quot;Y&quot;:0.0,&quot;Z&quot;:81.786,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:117.484,&quot;Y&quot;:0.0,&quot;Z&quot;:94.101,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:104.622,&quot;Y&quot;:0.0,&quot;Z&quot;:118.582,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81.406,&quot;Y&quot;:0.0,&quot;Z&quot;:104.867,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:99.014,&quot;Y&quot;:0.0,&quot;Z&quot;:98.552,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:101.137,&quot;Y&quot;:0.0,&quot;Z&quot;:100.92,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:108.799,&quot;Y&quot;:0.0,&quot;Z&quot;:91.777,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -169,8 +176,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e12s" Id="2cbc65b1-9e4f-4e08-a009-a783c0c7bbec" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 再生之章4”任务开始。|“伊甸希望乐园 再生之章4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e12s" Id="2cbc65b1-9e4f-4e08-a009-a783c0c7bbec" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 再生之章4|伊甸希望乐园 再生之章4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0,&quot;Y&quot;:75.0,&quot;Z&quot;:-85,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:10,&quot;Y&quot;:75.0,&quot;Z&quot;:-75,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-0,&quot;Y&quot;:75.0,&quot;Z&quot;:-65,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-10,&quot;Y&quot;:75.0,&quot;Z&quot;:-75.00,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-7,&quot;Y&quot;:75.0,&quot;Z&quot;:-68,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:7,&quot;Y&quot;:75.0,&quot;Z&quot;:-68,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-7,&quot;Y&quot;:75.0,&quot;Z&quot;:-82,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:7,&quot;Y&quot;:75.0,&quot;Z&quot;:-82,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -189,8 +197,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e9s(十字)" Id="549e3089-24d3-4a68-b275-4fef7a6c3190" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 再生之章1”任务开始。|“伊甸希望乐园 再生之章1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e9s(十字)" Id="549e3089-24d3-4a68-b275-4fef7a6c3190" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 再生之章1|伊甸希望乐园 再生之章1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.198,&quot;Y&quot;:0.0,&quot;Z&quot;:82.363,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:118.073,&quot;Y&quot;:0.0,&quot;Z&quot;:100.039,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.031,&quot;Y&quot;:0.0,&quot;Z&quot;:118.19,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81.667,&quot;Y&quot;:0.0,&quot;Z&quot;:99.936,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:111.762,&quot;Y&quot;:0.0,&quot;Z&quot;:88.631,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:111.678,&quot;Y&quot;:0.0,&quot;Z&quot;:111.437,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:88.265,&quot;Y&quot;:0.0,&quot;Z&quot;:111.671,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:88.201,&quot;Y&quot;:0.0,&quot;Z&quot;:88.104,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -212,8 +221,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e10s" Id="436ca222-f916-4bb1-b486-e7f382078724" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 再生之章2”任务开始。|“伊甸希望乐园 再生之章2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e10s" Id="436ca222-f916-4bb1-b486-e7f382078724" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 再生之章2|伊甸希望乐园 再生之章2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.095,&quot;Y&quot;:0.0,&quot;Z&quot;:81.833,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:118.893,&quot;Y&quot;:0.0,&quot;Z&quot;:100.113,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.034,&quot;Y&quot;:0.0,&quot;Z&quot;:119.091,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81.02,&quot;Y&quot;:0.0,&quot;Z&quot;:100.146,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:111.318,&quot;Y&quot;:0.0,&quot;Z&quot;:89.011,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:111.492,&quot;Y&quot;:0.0,&quot;Z&quot;:111.619,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:88.57,&quot;Y&quot;:0.0,&quot;Z&quot;:111.361,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:88.44,&quot;Y&quot;:0.0,&quot;Z&quot;:88.846,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="油库里" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -238,8 +248,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="e11s" Id="2df12dc5-c188-4557-b741-e5c567c468d9" RegularExpression="^.{14} ChatLog 00:0839::(“伊甸零式希望乐园 再生之章3”任务开始。|“伊甸希望乐园 再生之章3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="e11s" Id="2df12dc5-c188-4557-b741-e5c567c468d9" RegularExpression="^.{14} ChatLog 00:0839::“(伊甸零式希望乐园 再生之章3|伊甸希望乐园 再生之章3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.075,&quot;Y&quot;:0.0,&quot;Z&quot;:89.449,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:109.327,&quot;Y&quot;:0.0,&quot;Z&quot;:100.237,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.082,&quot;Y&quot;:0.0,&quot;Z&quot;:109.734,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:90.421,&quot;Y&quot;:0.0,&quot;Z&quot;:99.78,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:106.925,&quot;Y&quot;:0.0,&quot;Z&quot;:93.06,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:106.851,&quot;Y&quot;:0.0,&quot;Z&quot;:106.843,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:92.617,&quot;Y&quot;:0.0,&quot;Z&quot;:107.169,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:92.904,&quot;Y&quot;:0.0,&quot;Z&quot;:92.562,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="油库里A1B2" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -261,6 +272,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -286,8 +298,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O12S门神" Id="85fe4416-33a2-4977-8a72-ef7b20420a92" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 阿尔法幻境4”任务开始。|“欧米茄时空狭缝 阿尔法幻境4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O12S门神" Id="85fe4416-33a2-4977-8a72-ef7b20420a92" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 阿尔法幻境4|欧米茄时空狭缝 阿尔法幻境4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:81,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:119,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:119,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:3,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -303,8 +316,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O11S" Id="956b9f90-2745-4c9e-a7a7-db9f4fe6a59c" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 阿尔法幻境3”任务开始。|“欧米茄时空狭缝 阿尔法幻境3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O11S" Id="956b9f90-2745-4c9e-a7a7-db9f4fe6a59c" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 阿尔法幻境3|欧米茄时空狭缝 阿尔法幻境3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:90.0306549,&quot;Y&quot;:0.0,&quot;Z&quot;:80.07129,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:119.689781,&quot;Y&quot;:0.0,&quot;Z&quot;:89.95763,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:109.997,&quot;Y&quot;:0.0,&quot;Z&quot;:119.707291,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:80.1643448,&quot;Y&quot;:0.0,&quot;Z&quot;:109.9063,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100.026291,&quot;Y&quot;:0.0,&quot;Z&quot;:100.218727,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:99.95635,&quot;Y&quot;:0.0,&quot;Z&quot;:109.840851,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -317,8 +331,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O10S" Id="f327788c-d4ee-4ff3-9274-f3aceef679c5" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 阿尔法幻境2”任务开始。|“欧米茄时空狭缝 阿尔法幻境2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O10S" Id="f327788c-d4ee-4ff3-9274-f3aceef679c5" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 阿尔法幻境2|欧米茄时空狭缝 阿尔法幻境2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.036873,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:80.13774,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:119.288452,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:99.52209,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:99.83287,&quot;Y&quot;:0.0,&quot;Z&quot;:119.035995,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:80.38637,&quot;Y&quot;:0.0,&quot;Z&quot;:99.80568,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100.236496,&quot;Y&quot;:0.0,&quot;Z&quot;:106.1256,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:104.780678,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:101.296326,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -331,6 +346,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Sequential="True" Name="O8S本体" Id="78e9f72d-9576-4b29-8e8d-91702334bde8" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
@@ -348,8 +364,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O9S X字" Id="ad864cce-9e54-4eb9-af59-d489b3099215" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 阿尔法幻境1”任务开始。|“欧米茄时空狭缝 阿尔法幻境1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O9S X字" Id="ad864cce-9e54-4eb9-af59-d489b3099215" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 阿尔法幻境1|欧米茄时空狭缝 阿尔法幻境1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:96,&quot;Y&quot;:0,&quot;Z&quot;:96,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:104,&quot;Y&quot;:0,&quot;Z&quot;:96,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:104,&quot;Y&quot;:0.0,&quot;Z&quot;:104,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:96,&quot;Y&quot;:0.0,&quot;Z&quot;:104,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:87.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -362,8 +379,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O8S门神" Id="2a5efe87-a33c-4ee9-be26-b663c89f5bac" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 西格玛幻境4”任务开始。|“欧米茄时空狭缝 西格玛幻境4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O8S门神" Id="2a5efe87-a33c-4ee9-be26-b663c89f5bac" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 西格玛幻境4|欧米茄时空狭缝 西格玛幻境4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0896936655,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:-4.80771637,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:4.37434959,&quot;Y&quot;:0.0,&quot;Z&quot;:0.428713232,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-0.00514018536,&quot;Y&quot;:0.0,&quot;Z&quot;:4.85788536,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-4.363811,&quot;Y&quot;:0.0,&quot;Z&quot;:0.404521555,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:1.05671811,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:-18.2012253,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-0.34018302,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:18.8458672,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" Enabled="False" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -382,8 +400,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O4S" Id="a6e9e02c-0a5d-443d-8dad-8d74ca1bf97b" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 德尔塔幻境4”任务开始。|“欧米茄时空狭缝 德尔塔幻境4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O4S" Id="a6e9e02c-0a5d-443d-8dad-8d74ca1bf97b" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 德尔塔幻境4|欧米茄时空狭缝 德尔塔幻境4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-0.191439867,&quot;Y&quot;:0.0,&quot;Z&quot;:-19.5519123,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:19.8772144,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:-0.1288662,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-0.017939806,&quot;Y&quot;:0.0,&quot;Z&quot;:19.6729469,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-19.79152,&quot;Y&quot;:-1.90734863E-06,&quot;Z&quot;:0.098944664,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.00287008286,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:0.0327014923,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:null,&quot;Four&quot;:null" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -396,8 +415,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="O1S" Id="7e6c5609-f531-41e5-acab-fc0181b19f6f" RegularExpression="^.{14} ChatLog 00:0839::(“欧米茄零式时空狭缝 德尔塔幻境1”任务开始。|“欧米茄时空狭缝 德尔塔幻境1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="O1S" Id="7e6c5609-f531-41e5-acab-fc0181b19f6f" RegularExpression="^.{14} ChatLog 00:0839::“(欧米茄零式时空狭缝 德尔塔幻境1|欧米茄时空狭缝 德尔塔幻境1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-12.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:12.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:12.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-12.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:-8.485,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:8.485,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:8.485,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-8.485,&quot;Y&quot;:0.0,&quot;Z&quot;:-8.485,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -417,7 +437,7 @@
           <Folder Id="b05a5229-3a90-4aa1-9107-c6d47b8a1a2a" Name="亚历山大" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="A8S" Id="31eb5dca-414a-4351-8e05-0de714ac4470" RegularExpression="^.{14} ChatLog 00:0839::(“亚历山大零式机神城 律动之章4”任务开始。|“亚历山大机神城 律动之章4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="A8S" Id="31eb5dca-414a-4351-8e05-0de714ac4470" RegularExpression="^.{14} ChatLog 00:0839::“(亚历山大零式机神城 律动之章4|亚历山大机神城 律动之章4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.236430019,&quot;Y&quot;:10.5000019,&quot;Z&quot;:-22.8561821,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:23.0866966,&quot;Y&quot;:10.5,&quot;Z&quot;:-0.236469269,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-0.0179607868,&quot;Y&quot;:10.5000019,&quot;Z&quot;:21.8828621,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-22.583107,&quot;Y&quot;:10.5,&quot;Z&quot;:-0.3021698,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:10.8583527,&quot;Y&quot;:10.4999981,&quot;Z&quot;:-0.397441864,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.111641228,&quot;Y&quot;:10.5000038,&quot;Z&quot;:9.996191,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -430,8 +450,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="A12S" Id="70147aee-6af1-44c8-a1a8-e8b8c3448038" RegularExpression="^.{14} ChatLog 00:0839::(“亚历山大零式机神城 天动之章4”任务开始。|“亚历山大机神城 天动之章4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="A12S" Id="70147aee-6af1-44c8-a1a8-e8b8c3448038" RegularExpression="^.{14} ChatLog 00:0839::“(亚历山大零式机神城 天动之章4|亚历山大机神城 天动之章4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:11.8757782,&quot;Y&quot;:400.0,&quot;Z&quot;:-20.3100662,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:21.2444363,&quot;Y&quot;:400.0,&quot;Z&quot;:11.8267078,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-12.1610489,&quot;Y&quot;:400.0,&quot;Z&quot;:21.08806,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-19.8631439,&quot;Y&quot;:400.0,&quot;Z&quot;:-11.9138031,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:false},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -444,6 +465,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -466,8 +488,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p1s" Id="d4df8f34-4cef-4f13-8565-d9b465fb2ac3" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 边境之狱1”任务开始。|“零式万魔殿 边境之狱1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p1s" Id="d4df8f34-4cef-4f13-8565-d9b465fb2ac3" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 边境之狱1|零式万魔殿 边境之狱1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:96.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:104.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:104.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:96.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -480,8 +503,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p2s" Id="fde45c6f-6510-49bb-a4ff-0fb716cd378b" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 边境之狱2”任务开始。|“零式万魔殿 边境之狱2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p2s" Id="fde45c6f-6510-49bb-a4ff-0fb716cd378b" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 边境之狱2|零式万魔殿 边境之狱2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:87.5,&quot;Y&quot;:0.5,&quot;Z&quot;:87.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:112.5,&quot;Y&quot;:0.5,&quot;Z&quot;:87.5,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:112.5,&quot;Y&quot;:0.5,&quot;Z&quot;:112.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:87.5,&quot;Y&quot;:0.5,&quot;Z&quot;:112.5,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:110,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:90,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -503,8 +527,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p3s" Id="f20832f2-30e4-4d3e-9a2e-c5651fb9731d" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 边境之狱3”任务开始。|“零式万魔殿 边境之狱3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p3s" Id="f20832f2-30e4-4d3e-9a2e-c5651fb9731d" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 边境之狱3|零式万魔殿 边境之狱3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:91.19,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:108.81,&quot;Y&quot;:0.0,&quot;Z&quot;:100.277,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:108.81,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:91.19,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:93.966,&quot;Y&quot;:0.007,&quot;Z&quot;:93.921,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:105.988,&quot;Y&quot;:0.007,&quot;Z&quot;:93.938,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:106.035,&quot;Y&quot;:0.008,&quot;Z&quot;:106.026,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:93.989,&quot;Y&quot;:0.008,&quot;Z&quot;:105.995,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="beiwo" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -526,8 +551,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p4s" Id="578046b2-ce5b-49b6-9533-75793516cb75" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 边境之狱4”任务开始。|“零式万魔殿 边境之狱4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p4s" Id="578046b2-ce5b-49b6-9533-75793516cb75" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 边境之狱4|零式万魔殿 边境之狱4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:85.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:115.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:115.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:85.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:102.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:107.5,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -546,6 +572,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Sequential="True" Name="p8s本体" Id="249f8482-3ff1-4bec-b3f2-5fa5f29f4086" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
@@ -563,8 +590,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p5s" Id="6bbfe614-ff2c-480f-849c-a8a5aef9d8b6" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 炼净之狱1”任务开始。|“零式万魔殿 炼净之狱1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p5s" Id="6bbfe614-ff2c-480f-849c-a8a5aef9d8b6" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 炼净之狱1|零式万魔殿 炼净之狱1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:88.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:112.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.009,&quot;Y&quot;:-300.0,&quot;Z&quot;:112.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:88.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:108.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:92.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:108.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:108.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:92.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:108.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:92.0,&quot;Y&quot;:-300.0,&quot;Z&quot;:92.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -577,8 +605,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p6s" Id="45d4653e-0fd4-4ce0-84be-f309dfffff61" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 炼净之狱2”任务开始。|“零式万魔殿 炼净之狱2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p6s" Id="45d4653e-0fd4-4ce0-84be-f309dfffff61" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 炼净之狱2|零式万魔殿 炼净之狱2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:81.3,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:91.3,&quot;Y&quot;:0.0,&quot;Z&quot;:108.7,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:118.7,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:108.7,&quot;Y&quot;:0.0,&quot;Z&quot;:91.3,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:98.7,&quot;Y&quot;:0.0,&quot;Z&quot;:98.7,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:101.3,&quot;Y&quot;:0.0,&quot;Z&quot;:98.7,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:92.9,&quot;Y&quot;:0.0,&quot;Z&quot;:92.9,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:107.1,&quot;Y&quot;:0.0,&quot;Z&quot;:107.1,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -591,8 +620,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p7s" Id="b3bbd6f0-2741-471c-9919-79d2d8f6fa4a" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 炼净之狱3”任务开始。|“零式万魔殿 炼净之狱3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p7s" Id="b3bbd6f0-2741-471c-9919-79d2d8f6fa4a" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 炼净之狱3|零式万魔殿 炼净之狱3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:114.29,&quot;Y&quot;:0.0,&quot;Z&quot;:83.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:121.87,&quot;Y&quot;:0.0,&quot;Z&quot;:87.38,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:121.87,&quot;Y&quot;:0.0,&quot;Z&quot;:96.13,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:114.29,&quot;Y&quot;:0.0,&quot;Z&quot;:100.5,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:85.71,&quot;Y&quot;:0.0,&quot;Z&quot;:83.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:78.13,&quot;Y&quot;:0.0,&quot;Z&quot;:87.38,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:78.13,&quot;Y&quot;:0.0,&quot;Z&quot;:96.13,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:85.71,&quot;Y&quot;:0.0,&quot;Z&quot;:100.5,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -605,8 +635,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p8s" Id="eec39af4-5037-4c6d-bc2d-67d7f06b983e" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 炼净之狱4”任务开始。|“零式万魔殿 炼净之狱4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p8s" Id="eec39af4-5037-4c6d-bc2d-67d7f06b983e" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 炼净之狱4|零式万魔殿 炼净之狱4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:91.2,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:108.8,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:108.8,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:91.2,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:91.2,&quot;Y&quot;:0.0,&quot;Z&quot;:91.2,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:108.8,&quot;Y&quot;:0.0,&quot;Z&quot;:91.2,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:108.8,&quot;Y&quot;:0.0,&quot;Z&quot;:108.8,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:91.2,&quot;Y&quot;:0.0,&quot;Z&quot;:108.8,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -619,6 +650,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Sequential="True" Name="p12s本体" Id="aeca36bf-6854-49b5-bad2-70bbfdd7df55" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
@@ -636,8 +668,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="p9s" Id="67be9f78-d371-468b-ae99-50afc67483d6" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 荒天之狱1”任务开始。|“零式万魔殿 荒天之狱1”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Name="p9s" Id="67be9f78-d371-468b-ae99-50afc67483d6" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 荒天之狱1|零式万魔殿 荒天之狱1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:86.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:114.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:114.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:86.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:86.0,&quot;Y&quot;:0.0,&quot;Z&quot;:86.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:112.0,&quot;Y&quot;:0.0,&quot;Z&quot;:88.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:109.899,&quot;Y&quot;:0.0,&quot;Z&quot;:109.899,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:90.1,&quot;Y&quot;:0.0,&quot;Z&quot;:109.899,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -650,8 +683,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p10s" Id="cb629e0f-654a-48da-9923-2c5ac9b59d03" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 荒天之狱2”任务开始。|“零式万魔殿 荒天之狱2”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p10s" Id="cb629e0f-654a-48da-9923-2c5ac9b59d03" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 荒天之狱2|零式万魔殿 荒天之狱2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:98.2,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:92,&quot;Y&quot;:0.0,&quot;Z&quot;:111.2,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0.0,&quot;Z&quot;:111.2,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:108,&quot;Y&quot;:0.0,&quot;Z&quot;:111.159,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:92,&quot;Y&quot;:0.0,&quot;Z&quot;:88.82,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:108,&quot;Y&quot;:0.0,&quot;Z&quot;:88.82,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:75.0,&quot;Y&quot;:0.0,&quot;Z&quot;:85.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:125.0,&quot;Y&quot;:0.0,&quot;Z&quot;:85.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -664,8 +698,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p11s" Id="149d5a71-7e22-4203-8585-f37553120392" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 荒天之狱3”任务开始。|“零式万魔殿 荒天之狱3”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p11s" Id="149d5a71-7e22-4203-8585-f37553120392" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 荒天之狱3|零式万魔殿 荒天之狱3)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:87.1,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:112.9,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:112.9,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:87.1,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:90.8,&quot;Y&quot;:0.0,&quot;Z&quot;:90.8,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:109.2,&quot;Y&quot;:0.0,&quot;Z&quot;:90.8,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:109.2,&quot;Y&quot;:0.0,&quot;Z&quot;:109.2,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:90.8,&quot;Y&quot;:0.0,&quot;Z&quot;:109.2,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -678,8 +713,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="p12s" Id="51890c6c-9fcb-4adb-a762-855102fd4a1b" RegularExpression="^.{14} ChatLog 00:0839::(“万魔殿 荒天之狱4”任务开始。|“零式万魔殿 荒天之狱4”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="p12s" Id="51890c6c-9fcb-4adb-a762-855102fd4a1b" RegularExpression="^.{14} ChatLog 00:0839::“(万魔殿 荒天之狱4|零式万魔殿 荒天之狱4)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -692,6 +728,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -720,6 +757,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="神兵" Id="86a12542-5493-4163-9fc0-261ea893a9ea" RegularExpression="^.{14} ChatLog 00:0839::“究极神兵绝境战”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -743,6 +781,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="巴哈" Id="949761f1-bcf5-436e-b665-a5558a2f5f84" RegularExpression="^.{14} ChatLog 00:0839::“巴哈姆特绝境战”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -760,6 +799,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="false" Sequential="True" Name="龙诗P2" Id="e65820cb-d70a-4bae-8758-6ca80611f6d6" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -780,6 +820,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="龙诗" Id="465220b7-9ca1-4781-b807-c98bf0d39a97" RegularExpression="^.{14} ChatLog 00:0839::“幻想龙诗绝境战”任务开始。$">
             <Actions>
@@ -800,6 +841,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="欧米茄" Id="9094ba71-3f4e-42ad-9be3-213289ce9e7b" RegularExpression="^.{14} ChatLog 00:0839::“欧米茄绝境验证战”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -823,6 +865,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -840,6 +883,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4号" Id="d1c06e1d-b505-4a78-ad60-9a994538e59c" RegularExpression="又有那个叫辅助机的机器了" PeriodRefire="Deny" RefirePeriodExpression="2000">
                     <Actions>
@@ -848,6 +892,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -856,13 +901,14 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="水晶塔 古代人迷宫" Id="071c2c6a-0ca3-4562-930a-6a8f9c4579a2" RegularExpression="^.{14} ChatLog 00:0839::“水晶塔 古代人迷宫”任务开始。" PeriodRefire="Deny" RefirePeriodExpression="1200000">
+          <Trigger Enabled="true" Name="水晶塔 古代人迷宫" Id="071c2c6a-0ca3-4562-930a-6a8f9c4579a2" RegularExpression="^.{14} ChatLog 00:0839::“水晶塔 古代人迷宫”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="1200000">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;Imported&quot;,&quot;MapID&quot;:92,&quot;A&quot;:{&quot;X&quot;:-148.718,&quot;Y&quot;:650.302,&quot;Z&quot;:192.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-110.304,&quot;Y&quot;:650.304,&quot;Z&quot;:221.946,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-71.298,&quot;Y&quot;:650.308,&quot;Z&quot;:192.051,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:-138.262,&quot;Y&quot;:44.168,&quot;Z&quot;:-152.853,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-110.015,&quot;Y&quot;:44.168,&quot;Z&quot;:-195.842,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-80.499,&quot;Y&quot;:44.168,&quot;Z&quot;:-153.423,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-110.094,&quot;Y&quot;:650.022,&quot;Z&quot;:215.023,&quot;ID&quot;:7,&quot;Active&quot;:true}}" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="ULK" Id="c55fe8ea-c522-4e35-95f5-c1fdb31f1526" RegularExpression="^.{14} Territory 01:33B:禁地优雷卡 丰水之地" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -881,6 +927,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="博兹雅" Id="ae0754d3-0d24-4dbb-9106-e83fe394442e" RegularExpression="^.{14} ChatLog 00:0839::装备品级已被同步至430级。 在品级同步状态下，所有装备的性能都会被调整至规定的品级。" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
@@ -911,6 +958,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -989,6 +1037,7 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -997,7 +1046,7 @@
           <Folder Id="8a08b5d1-7b41-4603-967d-8395dcc87e18" Name="4.0" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="白虎" Id="e9fe9886-7ba4-420a-a5d9-97e43aa03811" RegularExpression="^.{14} ChatLog 00:0839::(“白虎诗魂战”任务开始。|“白虎镇魂战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="白虎" Id="e9fe9886-7ba4-420a-a5d9-97e43aa03811" RegularExpression="^.{14} ChatLog 00:0839::“(白虎诗魂战|白虎镇魂战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;: {&quot;X&quot;: 0.198196337,&quot;Y&quot;: 2.76398578E-06,&quot;Z&quot;: -18.5032463,&quot;ID&quot;: 0,&quot;Active&quot;: true},&quot;B&quot;: {&quot;X&quot;: -17.3546638,&quot;Y&quot;: 1.4769779E-06,&quot;Z&quot;: 7.57308054,&quot;ID&quot;: 1,&quot;Active&quot;: true},&quot;C&quot;: {&quot;X&quot;: 15.98918,&quot;Y&quot;: -4.36020036E-06,&quot;Z&quot;: 9.729175,&quot;ID&quot;: 2,&quot;Active&quot;: true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1010,8 +1059,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="青龙" Id="aafbed0b-7938-49e8-a6a0-0ff6d9fac6e0" RegularExpression="^.{14} ChatLog 00:0839::(“青龙诗魂战”任务开始。|“青龙镇魂战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="青龙" Id="aafbed0b-7938-49e8-a6a0-0ff6d9fac6e0" RegularExpression="^.{14} ChatLog 00:0839::“(青龙诗魂战|青龙镇魂战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.356552,&quot;Y&quot;:-6.700576E-06,&quot;Z&quot;:81.95613,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:119.661438,&quot;Y&quot;:-9.25636868E-07,&quot;Z&quot;:100.777023,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.057991,&quot;Y&quot;:-8.440299E-06,&quot;Z&quot;:118.584145,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:80.47084,&quot;Y&quot;:-5.249853E-05,&quot;Z&quot;:100.648651,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:99.91794,&quot;Y&quot;:-7.4129357E-06,&quot;Z&quot;:94.52867,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:100.070107,&quot;Y&quot;:-8.775128E-06,&quot;Z&quot;:104.833641,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1024,8 +1074,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="月读" Id="691588a8-5209-4b04-b4fe-93080b6b5e90" RegularExpression="^.{14} ChatLog 00:0839::(“月读幽夜歼灭战”任务开始。|“月读歼灭战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="月读" Id="691588a8-5209-4b04-b4fe-93080b6b5e90" RegularExpression="^.{14} ChatLog 00:0839::“(月读幽夜歼灭战|月读歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:99.60663,&quot;Y&quot;:0.0,&quot;Z&quot;:82.8387451,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:117.821754,&quot;Y&quot;:0.0,&quot;Z&quot;:99.82191,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.040916,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:117.491928,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:82.4726257,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:99.78953,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:false},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1038,8 +1089,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="朱雀" Id="b546b93c-1179-49e3-9268-e8f5b4613990" RegularExpression="^.{14} ChatLog 00:0839::(“朱雀诗魂战”任务开始。|“朱雀镇魂战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="朱雀" Id="b546b93c-1179-49e3-9268-e8f5b4613990" RegularExpression="^.{14} ChatLog 00:0839::“(朱雀诗魂战|朱雀镇魂战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.426468,&quot;Y&quot;:0.0,&quot;Z&quot;:82.81605,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:118.567696,&quot;Y&quot;:1.90734863E-06,&quot;Z&quot;:99.98941,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:99.9193344,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:118.764473,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81.94909,&quot;Y&quot;:1.90734863E-06,&quot;Z&quot;:99.9024048,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:99.96159,&quot;Y&quot;:0.0,&quot;Z&quot;:106.399796,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1052,13 +1104,14 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
           <Folder Id="7d2af0d0-0141-41e4-b2f9-1dd48c8044ed" Name="5.0" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="老屁股" Id="9c556d40-061a-43cd-aa93-808b095dd069" RegularExpression="^.{14} ChatLog 00:0839::(“博兹雅堡垒追忆战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="老屁股" Id="9c556d40-061a-43cd-aa93-808b095dd069" RegularExpression="^.{14} ChatLog 00:0839::“(博兹雅堡垒追忆战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:35.072,&quot;Y&quot;:-24.0,&quot;Z&quot;:-698.876,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:52.053,&quot;Y&quot;:-24.0,&quot;Z&quot;:-683.403,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:35.109,&quot;Y&quot;:-24.0,&quot;Z&quot;:-666.027,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:17.023,&quot;Y&quot;:-24.0,&quot;Z&quot;:-683.534,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:22.791,&quot;Y&quot;:-24.0,&quot;Z&quot;:-695.321,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:47.691,&quot;Y&quot;:-24.0,&quot;Z&quot;:-695.768,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:22.594,&quot;Y&quot;:-24.0,&quot;Z&quot;:-670.525,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:47.245,&quot;Y&quot;:-24.0,&quot;Z&quot;:-670.409,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1074,8 +1127,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="哈迪斯" Id="8b966217-4140-4aab-aafb-f602d59219d5" RegularExpression="^.{14} ChatLog 00:0839::(“哈迪斯孤念歼灭战”任务开始。|“哈迪斯歼灭战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="哈迪斯" Id="8b966217-4140-4aab-aafb-f602d59219d5" RegularExpression="^.{14} ChatLog 00:0839::“(哈迪斯孤念歼灭战|哈迪斯歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:99.94908,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:95.445816,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:104.676582,&quot;Y&quot;:-1.90734863E-06,&quot;Z&quot;:100.000595,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.043724,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:104.729736,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:95.21652,&quot;Y&quot;:0.0,&quot;Z&quot;:99.8215,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:94.99999,&quot;Y&quot;:4.768372E-07,&quot;Z&quot;:96.0069,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:104.999992,&quot;Y&quot;:-3.574863E-07,&quot;Z&quot;:96.0069,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1091,6 +1145,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Sequential="True" Name="绿宝石(P2)" Id="4f349d8e-ca24-42ea-bfcf-0d00905c4c07" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
@@ -1108,8 +1163,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="缇坦妮雅&#xA;" Id="1ab4365f-570a-4759-a998-af35db01ffe7" RegularExpression="^.{14} ChatLog 00:0839::(“缇坦妮雅歼殛战”任务开始。|“缇坦妮雅歼灭战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="缇坦妮雅&#xA;" Id="1ab4365f-570a-4759-a998-af35db01ffe7" RegularExpression="^.{14} ChatLog 00:0839::“(缇坦妮雅歼殛战|缇坦妮雅歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.002243,&quot;Y&quot;:-1.96695328E-06,&quot;Z&quot;:81.3506546,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:118.654472,&quot;Y&quot;:-1.96695328E-06,&quot;Z&quot;:100.006805,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.023895,&quot;Y&quot;:-5.960464E-08,&quot;Z&quot;:118.626984,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:81.3446045,&quot;Y&quot;:-1.96695328E-06,&quot;Z&quot;:99.9919739,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:93.317215,&quot;Y&quot;:-5.960464E-08,&quot;Z&quot;:100.022911,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:106.674713,&quot;Y&quot;:1.847744E-06,&quot;Z&quot;:100.017967,&quot;ID&quot;:5,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1125,8 +1181,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="极光战" Id="d377ae5f-0f34-4430-b86d-59753a467385" RegularExpression="^.{14} ChatLog 00:0839::(“光之战士幻耀歼灭战”任务开始。|“光之战士歼灭战”任务开始。)">
+              <Trigger Enabled="true" Sequential="True" Name="极光战" Id="d377ae5f-0f34-4430-b86d-59753a467385" RegularExpression="^.{14} ChatLog 00:0839::“(光之战士幻耀歼灭战|光之战士歼灭战)”任务开始。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0.0,&quot;Z&quot;:92,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:108,&quot;Y&quot;:0.0,&quot;Z&quot;:100,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0.0,&quot;Z&quot;:108,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:92,&quot;Y&quot;:0.0,&quot;Z&quot;:100,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:81,&quot;Y&quot;:0.0,&quot;Z&quot;:119,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:119,&quot;Y&quot;:0.0,&quot;Z&quot;:119,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:81,&quot;Y&quot;:0.0,&quot;Z&quot;:81,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:119,&quot;Y&quot;:0.0,&quot;Z&quot;:81,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1145,8 +1202,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="无暇灵君&#xA;" Id="3a281b49-81c6-489c-9308-46f6b0c30f86" RegularExpression="^.{14} ChatLog 00:0839::(“无瑕灵君歼殛战”任务开始。|“无暇灵君歼灭战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="无暇灵君&#xA;" Id="3a281b49-81c6-489c-9308-46f6b0c30f86" RegularExpression="^.{14} ChatLog 00:0839::“(无瑕灵君歼殛战|无瑕灵君歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.700264,&quot;Y&quot;:0.005888939,&quot;Z&quot;:82.42697,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:118.721413,&quot;Y&quot;:0.004025936,&quot;Z&quot;:99.82356,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:99.71084,&quot;Y&quot;:0.003194809,&quot;Z&quot;:119.211182,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:80.85042,&quot;Y&quot;:0.00330352783,&quot;Z&quot;:99.7462158,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:false},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1162,8 +1220,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="红宝石" Id="97853cfb-46df-4e37-b516-43677a2f4744" RegularExpression="^.{14} ChatLog 00:0839::(“红宝石神兵狂想作战”任务开始。|“红宝石神兵破坏作战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="红宝石" Id="97853cfb-46df-4e37-b516-43677a2f4744" RegularExpression="^.{14} ChatLog 00:0839::“(红宝石神兵狂想作战|红宝石神兵破坏作战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:99.719,&quot;Y&quot;:0.0,&quot;Z&quot;:118.477,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:88.42,&quot;Y&quot;:0.0,&quot;Z&quot;:114.409,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:81.484,&quot;Y&quot;:0.0,&quot;Z&quot;:96.386,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:89.63,&quot;Y&quot;:0.0,&quot;Z&quot;:85.026,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:101.501,&quot;Y&quot;:0.0,&quot;Z&quot;:81.279,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:114.05,&quot;Y&quot;:0.0,&quot;Z&quot;:85.897,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:118.882,&quot;Y&quot;:0.0,&quot;Z&quot;:99.233,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:111.467,&quot;Y&quot;:0.0,&quot;Z&quot;:115.661,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1179,8 +1238,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="绿宝石(P1)" Id="14dfc351-e423-4f43-8a47-994f7032837d" RegularExpression="^.{14} ChatLog 00:0839::(“绿宝石神兵狂想作战”任务开始。|“绿宝石神兵破坏作战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="绿宝石(P1)" Id="14dfc351-e423-4f43-8a47-994f7032837d" RegularExpression="^.{14} ChatLog 00:0839::“(绿宝石神兵狂想作战|绿宝石神兵破坏作战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:90.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:110.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:90.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:85.0,&quot;Y&quot;:0.0,&quot;Z&quot;:85.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:115.0,&quot;Y&quot;:0.0,&quot;Z&quot;:85.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:115.0,&quot;Y&quot;:0.0,&quot;Z&quot;:115.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:85.0,&quot;Y&quot;:0.0,&quot;Z&quot;:115.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1196,8 +1256,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="钻石神兵" Id="0d085906-62c6-4c96-b203-375317dc57a5" RegularExpression="^.{14} ChatLog 00:0839::(“钻石神兵捕获作战”任务开始。|“钻石神兵狂想作战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="钻石神兵" Id="0d085906-62c6-4c96-b203-375317dc57a5" RegularExpression="^.{14} ChatLog 00:0839::“(钻石神兵捕获作战|钻石神兵狂想作战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:80,&quot;Y&quot;:0.0,&quot;Z&quot;:100,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:120,&quot;Y&quot;:0.0,&quot;Z&quot;:100,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:88.8,&quot;Y&quot;:0.0,&quot;Z&quot;:81.4,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:111.2,&quot;Y&quot;:0.0,&quot;Z&quot;:81.4,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:88.8,&quot;Y&quot;:0.0,&quot;Z&quot;:118.6,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:111.2,&quot;Y&quot;:0.0,&quot;Z&quot;:118.6,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1210,13 +1271,14 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
           <Folder Id="f400fb6b-d073-4ce3-908a-7a0ddb115ce8" Name="2.0" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="究极神兵" Id="f42c73aa-5203-408e-9703-58700a1a7be2" RegularExpression="^.{14} ChatLog 00:0839::(“究极神兵幻巧战”|“究极神兵破坏作战”|“究极神兵假想作战”)任务开始。" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="究极神兵" Id="f42c73aa-5203-408e-9703-58700a1a7be2" RegularExpression="^.{14} ChatLog 00:0839::“(究极神兵幻巧战|究极神兵破坏作战|究极神兵假想作战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-0.092,&quot;Y&quot;:-0.131,&quot;Z&quot;:-17.632,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:19.772,&quot;Y&quot;:-0.131,&quot;Z&quot;:-1.267,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.1,&quot;Y&quot;:-0.131,&quot;Z&quot;:17.49,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-17.751,&quot;Y&quot;:-0.131,&quot;Z&quot;:-0.124,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:false},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1229,8 +1291,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="希瓦" Id="76f8e499-d1c4-4d7d-a921-08d0362856b0" RegularExpression="^.{14} ChatLog 00:0839::(“希瓦幻巧战”|“希瓦歼殛战”|“希瓦歼灭战”)任务开始。" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="希瓦" Id="76f8e499-d1c4-4d7d-a921-08d0362856b0" RegularExpression="^.{14} ChatLog 00:0839::“(希瓦幻巧战|希瓦歼殛战|希瓦歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-18.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:18.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:18.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-18.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-13.0,&quot;Y&quot;:0.0,&quot;Z&quot;:13.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:13.0,&quot;Y&quot;:0.0,&quot;Z&quot;:13.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-13.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-13.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:13.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-13.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1246,8 +1309,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="泰坦" Id="c4d64141-7cd0-4871-b5fe-1822741d75d1" RegularExpression="^.{14} ChatLog 00:0839::(“泰坦幻巧战”|“泰坦歼殛战”|“泰坦歼灭战”|“泰坦讨伐战”)任务开始。" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="泰坦" Id="c4d64141-7cd0-4871-b5fe-1822741d75d1" RegularExpression="^.{14} ChatLog 00:0839::“(泰坦幻巧战|泰坦歼殛战|泰坦歼灭战|泰坦讨伐战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-11.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:11.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:11.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-11.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-7,&quot;Y&quot;:0.0,&quot;Z&quot;:-7,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1260,6 +1324,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1268,7 +1333,7 @@
               <Folder Id="397789d5-cce1-49f3-9078-71f49328fa80" Name="6.25 下水道" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Sequential="True" Name="标点1-起点" Id="7802445c-68e7-4227-9167-9ad4a9a0e560" RegularExpression="^.{14} ChatLog 00:0839::(“(异闻迷宫 异闻希拉狄哈水道|异闻迷宫 零式异闻希拉狄哈水道)”任务开始。)$">
+                  <Trigger Enabled="true" Sequential="True" Name="标点1-起点" Id="7802445c-68e7-4227-9167-9ad4a9a0e560" RegularExpression="^.{14} ChatLog 00:0839::“(异闻迷宫 异闻希拉狄哈水道|异闻迷宫 零式异闻希拉狄哈水道)”任务开始。$$">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-335,&quot;Y&quot;:471,&quot;Z&quot;:-172.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-317.5,&quot;Y&quot;:471,&quot;Z&quot;:-155,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-335,&quot;Y&quot;:471,&quot;Z&quot;:-137.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-352.5,&quot;Y&quot;:471,&quot;Z&quot;:-155.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-340,&quot;Y&quot;:471,&quot;Z&quot;:-165,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-330,&quot;Y&quot;:471,&quot;Z&quot;:-165,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1290,6 +1355,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点3" Id="388f4f81-f909-4471-96dc-bc96a579cfc0" RegularExpression="^.{14} Death 19:.{8}:希拉狄哈剑斗士:">
                     <Actions>
@@ -1310,6 +1376,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="Clear" Id="cf150452-d446-4b65-9dbb-6c304459967b" RegularExpression="^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$">
                     <Actions>
@@ -1327,6 +1394,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点2" Id="0d505503-6423-4e86-986b-c5de909ded78" RegularExpression="^.{14} Death 19:.{8}:羽衣精:">
                     <Actions>
@@ -1350,6 +1418,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="团灭初始化" Id="1cf243c6-f023-49d5-b7bb-47440150d09d" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
@@ -1370,13 +1439,14 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
               <Folder Id="aefba8f6-1f8b-475c-ba41-e49ef235ffbf" Name="6.45 六根山" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="标点1-起点" Id="c868b6f3-81bd-4cce-9ec7-1a014c3537ea" RegularExpression="^.{14} ChatLog 00:0839::(“(异闻迷宫 异闻六根山|异闻迷宫 零式异闻六根山)”任务开始。)$">
+                  <Trigger Enabled="true" Name="标点1-起点" Id="c868b6f3-81bd-4cce-9ec7-1a014c3537ea" RegularExpression="^.{14} ChatLog 00:0839::“(异闻迷宫 异闻六根山|异闻迷宫 零式异闻六根山)”任务开始。$$">
                     <Actions>
                       <Action OrderNumber="1" VariableName="六根山i" VariableExpression="${var:六根山i}+1" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1404,6 +1474,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="标点5" Id="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" RegularExpression="^.{14} Death 19:.{8}:铁鼠豪雷:">
                     <Actions>
@@ -1424,6 +1495,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="Clear" Id="ed048fdd-1122-47ba-96f0-b7ff147a378c" RegularExpression="^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$">
                     <Actions>
@@ -1450,6 +1522,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="标点2" Id="1a4ac243-e9ab-4e5f-aea8-8e1d2ae8c54a" RegularExpression="^.{14} Death 19:.{8}:紫州幽鬼:">
                     <Actions>
@@ -1473,6 +1546,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="团灭初始化" Id="74b4f808-ff0c-4db9-9ff8-309972414013" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
@@ -1502,6 +1576,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点3" Id="79ad4895-c58f-4148-b408-05f68cacae99" RegularExpression="^.{14} Death 19:.{8}:狮子王:">
                     <Actions>
@@ -1534,6 +1609,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Sequential="True" Name="标点4" Id="e1ced84b-da00-4207-9120-74b7eb41e8e2" RegularExpression="^.{14} Death 19:.{8}:(紫州小天狗|紫州隐密头领):">
                     <Actions>
@@ -1587,6 +1663,7 @@
                     <Condition Enabled="false" Grouping="Or">
                       <ConditionSingle Enabled="false" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="团灭初始化2" Id="7e48f75d-a567-4f8c-86af-bd4f640d39ee" RegularExpression="^.{14} ChatLog 00:0839::距智德狭路被封锁还有.+?秒。$" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
@@ -1595,12 +1672,13 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="海德林" Id="22e398ec-39a8-4b86-bc11-72ea9dc53da8" RegularExpression="^.{14} ChatLog 00:0839::(“海德林晖光歼灭战”任务开始。|“海德林歼灭战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="海德林" Id="22e398ec-39a8-4b86-bc11-72ea9dc53da8" RegularExpression="^.{14} ChatLog 00:0839::“(海德林晖光歼灭战|海德林歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.064,&quot;Y&quot;:0.0,&quot;Z&quot;:82.079,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:119.087,&quot;Y&quot;:0.0,&quot;Z&quot;:99.91,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:99.95,&quot;Y&quot;:0.0,&quot;Z&quot;:119.256,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:80.781,&quot;Y&quot;:0.0,&quot;Z&quot;:99.866,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:94.243,&quot;Y&quot;:0.0,&quot;Z&quot;:100.118,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:105.882,&quot;Y&quot;:0.0,&quot;Z&quot;:99.91,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1622,8 +1700,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="高贝扎" Id="f6ecff32-6816-4f77-a835-317fd5c8074a" RegularExpression="^.{14} ChatLog 00:0839::(“高贝扎歼灭战”任务开始。|“高贝扎歼殛战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="高贝扎" Id="f6ecff32-6816-4f77-a835-317fd5c8074a" RegularExpression="^.{14} ChatLog 00:0839::“(高贝扎歼灭战|高贝扎歼殛战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:87.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:113,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:113,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:87,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:96.2,&quot;Y&quot;:0.0,&quot;Z&quot;:96.2,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:103.8,&quot;Y&quot;:0.0,&quot;Z&quot;:96.2,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:103.8,&quot;Y&quot;:0.0,&quot;Z&quot;:103.8,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:96.2,&quot;Y&quot;:0.0,&quot;Z&quot;:103.8,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="1A2B" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1639,8 +1718,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="极火天王" Id="f117e618-15cb-4a03-9329-1ade4e54ac04" RegularExpression="^.{14} ChatLog 00:0839::(“卢比坎特歼灭战”任务开始。|“卢比坎特歼殛战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="极火天王" Id="f117e618-15cb-4a03-9329-1ade4e54ac04" RegularExpression="^.{14} ChatLog 00:0839::“(卢比坎特歼灭战|卢比坎特歼殛战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:86.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:114.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:114.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:86.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:93.0,&quot;Y&quot;:0.0,&quot;Z&quot;:93.0,&quot;ID&quot;:7,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:107.0,&quot;Y&quot;:0.0,&quot;Z&quot;:93.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:107.0,&quot;Y&quot;:0.0,&quot;Z&quot;:107.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:93.0,&quot;Y&quot;:0.0,&quot;Z&quot;:107.0,&quot;ID&quot;:6,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1653,8 +1733,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="极小鸟" Id="23db1b98-bb0e-4ef6-b50d-055d7c3e41b4" RegularExpression="^.{14} ChatLog 00:0839::(“终结之战”任务开始。|“终极之战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="极小鸟" Id="23db1b98-bb0e-4ef6-b50d-055d7c3e41b4" RegularExpression="^.{14} ChatLog 00:0839::“(终结之战|终极之战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:83.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:117.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:83.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:88.0,&quot;Y&quot;:0.0,&quot;Z&quot;:88.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:112.0,&quot;Y&quot;:0.0,&quot;Z&quot;:88.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:88.0,&quot;Y&quot;:0.0,&quot;Z&quot;:112.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:112.0,&quot;Y&quot;:0.0,&quot;Z&quot;:112.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1670,8 +1751,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="极风天王" Id="7e929808-0642-40bf-9028-1d911ab3467f" RegularExpression="^.{14} ChatLog 00:0839::(“巴尔巴莉希娅歼灭战”任务开始。|“巴尔巴莉希娅歼殛战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="极风天王" Id="7e929808-0642-40bf-9028-1d911ab3467f" RegularExpression="^.{14} ChatLog 00:0839::“(巴尔巴莉希娅歼灭战|巴尔巴莉希娅歼殛战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:92.5,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:107.5,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:107.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:92.5,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:107.5,&quot;Y&quot;:0.0,&quot;Z&quot;:92.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;X&quot;:92.5,&quot;Y&quot;:0.0,&quot;Z&quot;:107.5,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1684,8 +1766,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="佐迪亚克" Id="7367fee8-9fbd-47a3-9119-32ac5c652c77" RegularExpression="^.{14} ChatLog 00:0839::(“佐迪亚克暝暗歼灭战”任务开始。|“佐迪亚克歼灭战”任务开始。)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="佐迪亚克" Id="7367fee8-9fbd-47a3-9119-32ac5c652c77" RegularExpression="^.{14} ChatLog 00:0839::“(佐迪亚克暝暗歼灭战|佐迪亚克歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:92.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:110.5,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:110.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:89.5,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:89.5,&quot;Y&quot;:0.0,&quot;Z&quot;:89.5,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:110.5,&quot;Y&quot;:0.0,&quot;Z&quot;:89.5,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:89.5,&quot;Y&quot;:0.0,&quot;Z&quot;:110.5,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:110.5,&quot;Y&quot;:0.0,&quot;Z&quot;:110.5,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1707,13 +1790,14 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
           <Folder Id="74825af7-45b8-4e28-9534-6a97c02b4b6e" Name="3.0" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="鬼神-祖尔宛" Id="f11541f4-a1a1-45b4-8510-ab85c78119c2" RegularExpression="^.{14} ChatLog 00:0839::(“祖尔宛幻巧战”|“祖尔宛歼殛战”|“祖尔宛歼灭战”)任务开始。" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="鬼神-祖尔宛" Id="f11541f4-a1a1-45b4-8510-ab85c78119c2" RegularExpression="^.{14} ChatLog 00:0839::“(祖尔宛幻巧战|祖尔宛歼殛战|祖尔宛歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-18.8,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:18.5,&quot;Y&quot;:0.0,&quot;Z&quot;:3.255,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:18.8,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-18.5,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.255,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:false},&quot;Two&quot;:{&quot;X&quot;:6.5,&quot;Y&quot;:0.0,&quot;Z&quot;:-17.6,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:-6.5,&quot;Y&quot;:0.0,&quot;Z&quot;:17.6,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1726,8 +1810,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="魔神-萨菲洛特" Id="501db605-3c29-4d6a-8ae8-7d1da5af6ef0" RegularExpression="^.{14} ChatLog 00:0839::(“萨菲洛特幻巧战”|“萨菲洛特歼殛战”|“萨菲洛特歼灭战”)任务开始。" PeriodRefire="Deny" RefirePeriodExpression="2000">
+              <Trigger Enabled="true" Sequential="True" Name="魔神-萨菲洛特" Id="501db605-3c29-4d6a-8ae8-7d1da5af6ef0" RegularExpression="^.{14} ChatLog 00:0839::“(萨菲洛特幻巧战|萨菲洛特歼殛战|萨菲洛特歼灭战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.074,&quot;Z&quot;:-11.161,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:5.7,&quot;Y&quot;:0.082,&quot;Z&quot;:-18.5,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-5.7,&quot;Y&quot;:0.082,&quot;Z&quot;:-18.5,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:4.171,&quot;Y&quot;:0.07,&quot;Z&quot;:-6.632,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.08,&quot;Y&quot;:0.048,&quot;Z&quot;:-1.98,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:7.038,&quot;Y&quot;:0.074,&quot;Z&quot;:4.041,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}" Enabled="False" ActionType="Variable" Description="候鸟" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1749,6 +1834,7 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1807,6 +1893,7 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Name="狩猎\工匠 启动" Id="5d9e4106-74c0-43d4-bba7-93c098dafc6a" RegularExpression="^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$">
         <Actions>
@@ -1818,8 +1905,9 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="false" Sequential="True" Name="1.本地标点" Id="15e00c29-76dc-4940-a2a9-8894b983dca6" RegularExpression="^放置本地标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
+      <Trigger Enabled="true" Sequential="True" Name="1.本地标点" Id="15e00c29-76dc-4940-a2a9-8894b983dca6" RegularExpression="^放置本地标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="{${var:副本标点临时记录}}" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
@@ -1829,6 +1917,7 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="1.小队标点" Id="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" RegularExpression="^放置小队标点$" PeriodRefire="Deny" RefirePeriodExpression="2000">
         <Actions>
@@ -1851,6 +1940,7 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
