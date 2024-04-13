@@ -1164,7 +1164,7 @@
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="红宝石" Id="97853cfb-46df-4e37-b516-43677a2f4744" RegularExpression="^.{14} ChatLog 00:0839::“(红宝石神兵狂想作战|红宝石神兵破坏作战)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
-                  <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:99.719,&quot;Y&quot;:0.0,&quot;Z&quot;:118.477,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:88.42,&quot;Y&quot;:0.0,&quot;Z&quot;:114.409,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:81.484,&quot;Y&quot;:0.0,&quot;Z&quot;:96.386,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:89.63,&quot;Y&quot;:0.0,&quot;Z&quot;:85.026,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:101.501,&quot;Y&quot;:0.0,&quot;Z&quot;:81.279,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:114.05,&quot;Y&quot;:0.0,&quot;Z&quot;:85.897,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:118.882,&quot;Y&quot;:0.0,&quot;Z&quot;:99.233,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:111.467,&quot;Y&quot;:0.0,&quot;Z&quot;:115.661,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:118.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:87.272,&quot;Y&quot;:0.0,&quot;Z&quot;:112.7279,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:82.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:87.272,&quot;Y&quot;:0.0,&quot;Z&quot;:87.272,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:82.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:112.728,&quot;Y&quot;:0.0,&quot;Z&quot;:87.272,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:118.0,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:112.728,&quot;Y&quot;:0.0,&quot;Z&quot;:112.728,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
@@ -1559,27 +1559,27 @@
                       </Action>
                       <Action OrderNumber="6" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
                       <Action OrderNumber="7" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
                       <Action OrderNumber="8" TriggerOp="EnableTrigger" TriggerId="4ba5e82a-d85a-4fbf-974d-192dc1e2d81c" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
                       <Action OrderNumber="9" TriggerOp="DisableTrigger" TriggerId="e1ced84b-da00-4207-9120-74b7eb41e8e2" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="10" VariableName="六根山i" VariableExpression="${var:六根山i}+1" ActionType="Variable" ExecutionDelayExpression="100">
+                      <Action OrderNumber="10" VariableName="六根山i" ActionType="Variable" ExecutionDelayExpression="100">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
                     </Actions>
@@ -1594,6 +1594,238 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="ed76a075-c708-4f07-b5ff-d12e7c0bbff2" Name="6.55 阿罗岛" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="标点1-起点" Id="3339cb8e-1af4-46a1-b8fb-21940087b961" RegularExpression="^.{14} ChatLog 00:0839::“(异闻迷宫 异闻阿罗阿罗岛|异闻迷宫 零式异闻阿罗阿罗岛)”任务开始。$$">
+                    <Actions>
+                      <Action OrderNumber="1" VariableName="阿罗岛i" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:19.64,&quot;Y&quot;:-10,&quot;Z&quot;:99.38,&quot;ID&quot;:0,&quot;Active&quot;:true}" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="EnableTrigger" TriggerId="8cfb5f93-8700-436c-a047-7d07bb7502e9" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="EnableTrigger" TriggerId="d2091384-8229-4866-92b3-dc0341db4232" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="7" TriggerOp="EnableTrigger" TriggerId="6059251f-61f0-4ae3-bbed-ebc3b08a3c9d" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="8" TriggerOp="EnableTrigger" TriggerId="0416733b-3956-42bf-842c-ce00cd5fc56c" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Sequential="True" Name="标点5" Id="0a208d6a-2cda-4ae6-aa86-914614289e89" RegularExpression="^.{14} Death 19:.{8}:拉拉鲁:">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="5" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:-200,&quot;Y&quot;:-200.0,&quot;Z&quot;:-18.55,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-181.45,&quot;Y&quot;:-200.0,&quot;Z&quot;:0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-200,&quot;Y&quot;:-200.0,&quot;Z&quot;:18.55,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-218.55,&quot;Y&quot;:-200.0,&quot;Z&quot;:0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-186.883,&quot;Y&quot;:-200.0,&quot;Z&quot;:-13.117,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:-186.883,&quot;Y&quot;:-200.0,&quot;Z&quot;:13.117,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-213.117,&quot;Y&quot;:-200.0,&quot;Z&quot;:13.117,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-213.117,&quot;Y&quot;:-200.0,&quot;Z&quot;:-13.117,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="0a208d6a-2cda-4ae6-aa86-914614289e89" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Sequential="True" Name="Clear" Id="d2091384-8229-4866-92b3-dc0341db4232" RegularExpression="^.{14} ChatLog 00:0039::(进入了休息区。|You have entered a sanctuary\.|レストエリアに入った！)$">
+                    <Actions>
+                      <Action OrderNumber="1" TriggerOp="DisableTrigger" TriggerId="8cfb5f93-8700-436c-a047-7d07bb7502e9" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" TriggerOp="DisableTrigger" TriggerId="12270879-d60c-4b17-8fd4-82400d2c4d88" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="804f2fc8-37d0-4d35-92ca-6866053810bc" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TriggerOp="DisableTrigger" TriggerId="0a208d6a-2cda-4ae6-aa86-914614289e89" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="6059251f-61f0-4ae3-bbed-ebc3b08a3c9d" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="DisableTrigger" TriggerId="0416733b-3956-42bf-842c-ce00cd5fc56c" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="7" TriggerOp="DisableTrigger" TriggerId="d2091384-8229-4866-92b3-dc0341db4232" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Sequential="True" Name="标点2" Id="8cfb5f93-8700-436c-a047-7d07bb7502e9" RegularExpression="^.{14} Death 19:.{8}:阿罗阿罗(壳蟹|利螯陆蟹|奇瓦金|咬桨鱼|斑鳐|鬼鱼):">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="2" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="阿罗岛i" VariableExpression="${var:阿罗岛i}+1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:10.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-10.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:10.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:10.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-10.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:-10.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:阿罗岛i}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="EnableTrigger" TriggerId="12270879-d60c-4b17-8fd4-82400d2c4d88" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" TriggerOp="DisableTrigger" TriggerId="8cfb5f93-8700-436c-a047-7d07bb7502e9" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="8" VariableName="阿罗岛i" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Sequential="True" Name="团灭初始化" Id="6059251f-61f0-4ae3-bbed-ebc3b08a3c9d" RegularExpression="^.{14} Director 21:.{8}:40000006:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                    <Actions>
+                      <Action OrderNumber="1" VariableName="阿罗岛i" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" TriggerOp="EnableTrigger" TriggerId="8cfb5f93-8700-436c-a047-7d07bb7502e9" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="12270879-d60c-4b17-8fd4-82400d2c4d88" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TriggerOp="DisableTrigger" TriggerId="804f2fc8-37d0-4d35-92ca-6866053810bc" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="DisableTrigger" TriggerId="0a208d6a-2cda-4ae6-aa86-914614289e89" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:19.64,&quot;Y&quot;:-10,&quot;Z&quot;:99.38,&quot;ID&quot;:0,&quot;Active&quot;:true}" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="7" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="8" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Sequential="True" Name="标点3" Id="12270879-d60c-4b17-8fd4-82400d2c4d88" RegularExpression="^.{14} Death 19:.{8}:凯图嘟凯:">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="3" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" TriggerOp="EnableTrigger" TriggerId="804f2fc8-37d0-4d35-92ca-6866053810bc" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="DisableTrigger" TriggerId="12270879-d60c-4b17-8fd4-82400d2c4d88" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Sequential="True" Name="标点4" Id="804f2fc8-37d0-4d35-92ca-6866053810bc" RegularExpression="^.{14} Death 19:.{8}:阿罗阿罗(树木巨像|守卫):">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="标点位" VariableExpression="4" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="阿罗岛i" VariableExpression="${var:阿罗岛i}+1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:200,&quot;Y&quot;:-300.0,&quot;Z&quot;:-8,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:208,&quot;Y&quot;:-300.0,&quot;Z&quot;:0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:200,&quot;Y&quot;:-300.0,&quot;Z&quot;:8,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:192,&quot;Y&quot;:-300.0,&quot;Z&quot;:0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:212,&quot;Y&quot;:-300.0,&quot;Z&quot;:-12,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:212,&quot;Y&quot;:-300.0,&quot;Z&quot;:12,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:188,&quot;Y&quot;:-300.0,&quot;Z&quot;:12,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:188,&quot;Y&quot;:-300.0,&quot;Z&quot;:-12,&quot;ID&quot;:7,&quot;Active&quot;:true}" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:阿罗岛i}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" TriggerOp="EnableTrigger" TriggerId="0a208d6a-2cda-4ae6-aa86-914614289e89" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" TriggerOp="DisableTrigger" TriggerId="804f2fc8-37d0-4d35-92ca-6866053810bc" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="8" VariableName="阿罗岛i" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:副本标点临时记录}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or">
+                      <ConditionSingle Enabled="false" ExpressionL="${var:六根山i}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="false" Name="团灭初始化2" Id="0416733b-3956-42bf-842c-ce00cd5fc56c" RegularExpression="^.{14} ChatLog 00:0839::距(曙色狭路|暮色狭路)被封锁还有.+?秒。$" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                    <Actions>
+                      <Action OrderNumber="1" VariableName="阿罗岛i" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1720,7 +1952,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1777,7 +2008,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
