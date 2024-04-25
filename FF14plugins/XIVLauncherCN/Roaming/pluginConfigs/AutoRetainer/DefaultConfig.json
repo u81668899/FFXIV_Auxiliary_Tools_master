@@ -18,7 +18,7 @@
   "Verbose": false,
   "OfflineData": [
     {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "CID": 19014409516066930,
       "Name": "十六五夜",
       "World": "摩杜纳",
@@ -28,7 +28,7 @@
       "RetainerData": [
         {
           "Name": "神山樱乃",
-          "VentureEndsAt": 1709793380,
+          "VentureEndsAt": 1714090206,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -37,24 +37,24 @@
           "Gil": 0,
           "DisplayOrder": 1,
           "RetainerID": 33777068205334633,
-          "MBItems": 20
+          "MBItems": 1
         },
         {
           "Name": "神山郁香",
-          "VentureEndsAt": 1709793386,
+          "VentureEndsAt": 1714090202,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 27,
           "VentureID": 946,
-          "Gil": 510219,
+          "Gil": 0,
           "DisplayOrder": 0,
           "RetainerID": 33777068205334646,
-          "MBItems": 20
+          "MBItems": 0
         },
         {
           "Name": "神山须美",
-          "VentureEndsAt": 1709793391,
+          "VentureEndsAt": 1714090221,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -63,11 +63,11 @@
           "Gil": 0,
           "DisplayOrder": 3,
           "RetainerID": 33777068205403570,
-          "MBItems": 20
+          "MBItems": 0
         },
         {
           "Name": "神山神乐",
-          "VentureEndsAt": 1709792207,
+          "VentureEndsAt": 1714089048,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -76,11 +76,11 @@
           "Gil": 0,
           "DisplayOrder": 6,
           "RetainerID": 33777068205403620,
-          "MBItems": 20
+          "MBItems": 0
         },
         {
           "Name": "神山姚玲",
-          "VentureEndsAt": 1709800505,
+          "VentureEndsAt": 1714112409,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -89,11 +89,11 @@
           "Gil": 0,
           "DisplayOrder": 9,
           "RetainerID": 33777068205412340,
-          "MBItems": 19
+          "MBItems": 0
         },
         {
           "Name": "神山沙月",
-          "VentureEndsAt": 1709792213,
+          "VentureEndsAt": 1714089057,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -102,11 +102,11 @@
           "Gil": 0,
           "DisplayOrder": 7,
           "RetainerID": 33777068205611305,
-          "MBItems": 20
+          "MBItems": 4
         },
         {
           "Name": "神山星绘",
-          "VentureEndsAt": 1709793408,
+          "VentureEndsAt": 1714090212,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -115,24 +115,24 @@
           "Gil": 0,
           "DisplayOrder": 2,
           "RetainerID": 33777068205653126,
-          "MBItems": 20
+          "MBItems": 1
         },
         {
           "Name": "神山未来",
-          "VentureEndsAt": 1709792226,
+          "VentureEndsAt": 1714089036,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
           "Job": 16,
-          "VentureID": 73,
-          "Gil": 53681,
+          "VentureID": 74,
+          "Gil": 0,
           "DisplayOrder": 4,
           "RetainerID": 33777068205653136,
-          "MBItems": 19
+          "MBItems": 0
         },
         {
           "Name": "神山香织",
-          "VentureEndsAt": 1709792233,
+          "VentureEndsAt": 1714089062,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -141,11 +141,11 @@
           "Gil": 0,
           "DisplayOrder": 8,
           "RetainerID": 33777068205653140,
-          "MBItems": 20
+          "MBItems": 1
         },
         {
           "Name": "神山结花",
-          "VentureEndsAt": 1709792854,
+          "VentureEndsAt": 1714089654,
           "HasVenture": true,
           "Level": 90,
           "VentureBeginsAt": 0,
@@ -154,15 +154,15 @@
           "Gil": 0,
           "DisplayOrder": 5,
           "RetainerID": 33777068205653149,
-          "MBItems": 20
+          "MBItems": 0
         }
       ],
-      "Preferred": true,
-      "Ventures": 21679,
-      "InventorySpace": 90,
+      "Preferred": false,
+      "Ventures": 16008,
+      "InventorySpace": 65,
       "VentureCoffers": 0,
       "ServiceAccount": 0,
-      "ShowRetainersInDisplayOrder": false,
+      "ShowRetainersInDisplayOrder": true,
       "GCDeliveryType": 1,
       "UnlockedGatheringItems": [
         1,
@@ -788,53 +788,93 @@
         90,
         90
       ],
-      "Gil": 571342744,
-      "OfflineAirshipData": [],
+      "Gil": 155231297,
+      "OfflineAirshipData": [
+        {
+          "Name": "鱼霸天",
+          "ReturnTime": 0
+        },
+        {
+          "Name": "糖醋鱼",
+          "ReturnTime": 0
+        }
+      ],
       "OfflineSubmarineData": [
         {
           "Name": "红烧鱼",
-          "ReturnTime": 1709894403
+          "ReturnTime": 1714211889
         },
         {
           "Name": "水煮鱼",
-          "ReturnTime": 1709907746
+          "ReturnTime": 1714215448
         },
         {
           "Name": "酸菜鱼",
-          "ReturnTime": 1709904828
+          "ReturnTime": 1714215456
         },
         {
           "Name": "剁椒鱼",
-          "ReturnTime": 1709904851
+          "ReturnTime": 1714215465
         }
       ],
       "EnabledAirships": [],
       "EnabledSubs": [],
-      "AdditionalAirshipData": {},
-      "AdditionalSubmarineData": {
-        "红烧鱼": {
-          "Level": 99,
-          "Part1": 21794,
-          "Part2": 21795,
-          "Part3": 21796,
-          "Part4": 22527,
-          "NextLevelExp": 30005186,
-          "CurrentExp": 17053460,
+      "AdditionalAirshipData": {
+        "鱼霸天": {
+          "Level": 50,
+          "Part1": 0,
+          "Part2": 0,
+          "Part3": 0,
+          "Part4": 0,
+          "NextLevelExp": 0,
+          "CurrentExp": 0,
           "VesselBehavior": 1,
           "UnlockMode": 0,
           "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
           "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
-          "Points": "VVNUAAA=",
+          "Points": "AAAAAAA=",
           "IndexOverride": 0
         },
-        "水煮鱼": {
-          "Level": 105,
+        "糖醋鱼": {
+          "Level": 36,
+          "Part1": 0,
+          "Part2": 0,
+          "Part3": 0,
+          "Part4": 0,
+          "NextLevelExp": 0,
+          "CurrentExp": 0,
+          "VesselBehavior": 1,
+          "UnlockMode": 0,
+          "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
+          "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
+          "Points": "AAAAAAA=",
+          "IndexOverride": 0
+        }
+      },
+      "AdditionalSubmarineData": {
+        "红烧鱼": {
+          "Level": 115,
           "Part1": 24346,
           "Part2": 21795,
           "Part3": 23903,
           "Part4": 21797,
-          "NextLevelExp": 17851658,
-          "CurrentExp": 16181599,
+          "NextLevelExp": 0,
+          "CurrentExp": 0,
+          "VesselBehavior": 1,
+          "UnlockMode": 0,
+          "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
+          "SelectedPointPlan": "00000000-0000-0000-0000-000000000000",
+          "Points": "DRIPCho=",
+          "IndexOverride": 0
+        },
+        "水煮鱼": {
+          "Level": 109,
+          "Part1": 24346,
+          "Part2": 21795,
+          "Part3": 23903,
+          "Part4": 21797,
+          "NextLevelExp": 47516207,
+          "CurrentExp": 1771230,
           "VesselBehavior": 1,
           "UnlockMode": 0,
           "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
@@ -843,13 +883,13 @@
           "IndexOverride": 0
         },
         "酸菜鱼": {
-          "Level": 107,
+          "Level": 109,
           "Part1": 24346,
           "Part2": 21795,
           "Part3": 23903,
           "Part4": 21797,
-          "NextLevelExp": 18090643,
-          "CurrentExp": 1708891,
+          "NextLevelExp": 47516207,
+          "CurrentExp": 21691676,
           "VesselBehavior": 1,
           "UnlockMode": 0,
           "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
@@ -858,13 +898,13 @@
           "IndexOverride": 0
         },
         "剁椒鱼": {
-          "Level": 108,
+          "Level": 110,
           "Part1": 24346,
           "Part2": 21795,
           "Part3": 23903,
           "Part4": 21797,
-          "NextLevelExp": 18542909,
-          "CurrentExp": 17191056,
+          "NextLevelExp": 19481645,
+          "CurrentExp": 8504308,
           "VesselBehavior": 1,
           "UnlockMode": 0,
           "SelectedUnlockPlan": "00000000-0000-0000-0000-000000000000",
@@ -873,8 +913,8 @@
           "IndexOverride": 0
         }
       },
-      "Ceruleum": 162,
-      "RepairKits": 942,
+      "Ceruleum": 201,
+      "RepairKits": 148,
       "ExcludeRetainer": false,
       "ExcludeWorkshop": false,
       "ExcludeOverlay": false,
@@ -887,8 +927,8 @@
       "FreeCompanyHouseEntrance": null,
       "PrivateHouseEntrance": null,
       "MultiWaitForAllDeployables": false,
-      "FCPoints": 0,
-      "FCPointsLastUpdate": 0,
+      "FCPoints": 84540179,
+      "FCPointsLastUpdate": 1713997426232,
       "ShouldSerializeCreationFrame": false,
       "CurrentWorld": "摩杜纳"
     }
@@ -897,6 +937,7 @@
   "UnsyncCompensation": -5,
   "StatsUnifyHQ": false,
   "RecordStats": true,
+  "AutoGCContinuation": false,
   "GCHandinNotify": false,
   "ExpertMultiAllowHET": true,
   "MultiHETOnEnable": true,
@@ -904,7 +945,7 @@
   "NoTheme": true,
   "AdditionalData": {
     "#00438D8134D1A872 神山樱乃": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -928,7 +969,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山郁香": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -952,7 +993,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山须美": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -962,6 +1003,10 @@
         "List": [
           {
             "ID": 906,
+            "Num": 1
+          },
+          {
+            "ID": 577,
             "Num": 1
           }
         ],
@@ -976,7 +1021,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山神乐": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1000,7 +1045,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山姚玲": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1024,7 +1069,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山沙月": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1033,14 +1078,18 @@
         "Name": "暗物质",
         "List": [
           {
-            "ID": 577,
+            "ID": 691,
+            "Num": 1
+          },
+          {
+            "ID": 576,
             "Num": 1
           }
         ],
         "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 1,
+      "VenturePlanIndex": 2,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -1048,7 +1097,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山星绘": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1072,7 +1121,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山未来": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1081,7 +1130,7 @@
         "Name": "",
         "List": [
           {
-            "ID": 73,
+            "ID": 74,
             "Num": 1
           }
         ],
@@ -1096,7 +1145,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山香织": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": false,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1120,7 +1169,7 @@
       "ShouldSerializeCreationFrame": false
     },
     "#00438D8134D1A872 神山结花": {
-      "CreationFrame": 0,
+      "CreationFrame": 6,
       "EntrustDuplicates": true,
       "WithdrawGil": false,
       "WithdrawGilPercent": 100,
@@ -1129,10 +1178,6 @@
         "Name": "暗物质",
         "List": [
           {
-            "ID": 577,
-            "Num": 1
-          },
-          {
             "ID": 836,
             "Num": 1
           }
@@ -1140,7 +1185,7 @@
         "PlanCompleteBehavior": 0
       },
       "LinkedVenturePlan": "",
-      "VenturePlanIndex": 2,
+      "VenturePlanIndex": 1,
       "EnablePlanner": true,
       "Ilvl": 620,
       "Gathering": 3541,
@@ -1168,11 +1213,11 @@
   "NoCurrentCharaOnTop": false,
   "UseFrameDelay": true,
   "Delay": 298,
-  "FrameDelay": 8,
+  "FrameDelay": 2,
   "_dontReassign": false,
   "OldRetainerSense": false,
   "RetainerSense": true,
-  "RetainerSenseThreshold": 18378,
+  "RetainerSenseThreshold": 15393,
   "MultiModeUIBar": false,
   "UIBar": true,
   "Suppress": 164,
@@ -1263,7 +1308,7 @@
   "VoyageDisableCalcMultithreading": false,
   "LeastMBSFirst": false,
   "DefaultSubmarineUnlockPlan": "",
-  "SellKey": 164,
+  "SellKey": 160,
   "EntrustKey": 0,
   "RetrieveKey": 0,
   "SellMarketKey": 0,
@@ -1304,7 +1349,6 @@
   },
   "StatusBarMSI": false,
   "StatusBarIconWidth": 96,
-  "IMDisplayTab": false,
   "IMEnableCofferAutoOpen": false,
   "IMEnableAutoVendor": false,
   "IMEnableContextMenu": false,

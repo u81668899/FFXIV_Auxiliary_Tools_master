@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChangeFilterEnabled" xml:space="preserve">
+    <value>Filtre des recettes</value>
+  </data>
+  <data name="ChangeFilterLabel" xml:space="preserve">
+    <value>Afficher uniquement les transactions {0} {1} dans Variation</value>
+  </data>
+  <data name="ClusterByTime" xml:space="preserve">
+    <value>Grouper par leur Heure</value>
+  </data>
+  <data name="ClusterByTimeHelp1" xml:space="preserve">
+    <value>Afficher les transactions dans un intervalle de {0} heure(s)</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Heures</value>
+  </data>
+  <data name="Category-RecordOptions" xml:space="preserve">
+    <value>Options d'enregistrement</value>
+  </data>
+  <data name="Category-Others" xml:space="preserve">
+    <value>Autres</value>
+  </data>
+  <data name="Category-Help" xml:space="preserve">
+    <value>Cliquez pour développer/réduire</value>
+  </data>
+  <data name="CustomCurrencyHelp" xml:space="preserve">
+    <value>Note:
+1. Les 3 devises préséléctionnées ne peuvent être supprimées.
+2. Il n'est pas recommandé de suivre autre chose que des devises, d'autres plugins doivent s'en charger (mais si vous insistez, c'est ok)
+3. Supprimer les devises ne supprimera pas les fichiers existants, si besoin, vous devez les supprimer vous même.</value>
+  </data>
+  <data name="AddCustomCurrency" xml:space="preserve">
+    <value>Ajouter une devise personnalisée</value>
+  </data>
+  <data name="PleaseSelect" xml:space="preserve">
+    <value>Sélectionner...</value>
+  </data>
+  <data name="PleaseSearch" xml:space="preserve">
+    <value>Rechercher...</value>
+  </data>
+  <data name="CustomCurrencyHelp1" xml:space="preserve">
+    <value>Impossible d'ajouter : la devise que vous avez sélectionnée existe déjà</value>
+  </data>
+  <data name="CustomCurrencyHelp2" xml:space="preserve">
+    <value>Échec de la suppression : la devise que vous avez sélectionnée n'existe pas</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="ExportFileCSVHeader" xml:space="preserve">
+    <value>Heure, Montant, Monnaie, Lieu, Note</value>
+  </data>
+  <data name="ExportFileMessage" xml:space="preserve">
+    <value>Un fichier a été exporté vers:</value>
+  </data>
+  <data name="FileRenameHelp1" xml:space="preserve">
+    <value>Si laissée vide, le fichier sera nommé :</value>
+  </data>
+  <data name="FileRenameLabel" xml:space="preserve">
+    <value>Nom du fichier:</value>
+  </data>
+  <data name="FilterByTime" xml:space="preserve">
+    <value>Filtre Timer</value>
+  </data>
+  <data name="FirstPage" xml:space="preserve">
+    <value>Premier</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>Au-dessus</value>
+  </data>
+  <data name="LastPage" xml:space="preserve">
+    <value>Dernier</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>En dessous</value>
+  </data>
+  <data name="MergeTransactionsHelp1" xml:space="preserve">
+    <value>{0} transactions fusionnées.</value>
+  </data>
+  <data name="MergeTransactionsHelp3" xml:space="preserve">
+    <value>Fusionner les transactions adjacentes du même emplacement si la Fluctuation est en dessous du seuil. Si le seuil est 0, toutes ces transactions seront fusionnées.
+
+Fusion à sens unique : Calculez séparément les Fluctuations positives et négatives lors de la fusion.
+Fusion à deux voies : Calculez ensemble les Fluctuations positives et négatives lors de la fusion.</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>
+Seuil</value>
+  </data>
+  <data name="TwoWayMerge" xml:space="preserve">
+    <value>Fusion double</value>
+  </data>
+  <data name="OneWayMerge" xml:space="preserve">
+    <value>Fusion simple</value>
+  </data>
+  <data name="ManualMerge" xml:space="preserve">
+    <value>Fusion manuelle</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="OpenDataFolder" xml:space="preserve">
+    <value>Dossier</value>
+  </data>
+  <data name="PreviousPage" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
+  <data name="DutyRewards-RecordDutyRewards" xml:space="preserve">
+    <value>Enregistrer les récompenses des Missions</value>
+  </data>
+  <data name="TransactionsHelp" xml:space="preserve">
+    <value>Aucunes transactions correspondantes trouvées.</value>
+  </data>
+  <data name="TransactionsHelp1" xml:space="preserve">
+    <value>Aucune devise n'est actuellement sélectionnée.</value>
+  </data>
+  <data name="UnknownCurrency" xml:space="preserve">
+    <value>Devise inconnue</value>
+  </data>
+  <data name="UnknownLocation" xml:space="preserve">
+    <value>Emplacement inconnu</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Heure</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Monnaie</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Emplacement</value>
+  </data>
+  <data name="TransactionsPerPage" xml:space="preserve">
+    <value>Taille de la page</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="GraphLabel" xml:space="preserve">
+    <value>Montant des Transaction :</value>
+  </data>
+  <data name="AmountGraph" xml:space="preserve">
+    <value>Graphique du montant</value>
+  </data>
+  <data name="AmountGraph1" xml:space="preserve">
+    <value>[Heure - Montant]</value>
+  </data>
+  <data name="DividedUnitThou" xml:space="preserve">
+    <value>(Unité : Milliers)</value>
+  </data>
+  <data name="DividedUnitMil" xml:space="preserve">
+    <value>(Unité : Millions)</value>
+  </data>
+  <data name="DividedUnitBil" xml:space="preserve">
+    <value>(Unité : Milliards)</value>
+  </data>
+  <data name="ChangeGraph" xml:space="preserve">
+    <value>Graphique des Monnaies</value>
+  </data>
+  <data name="ChangeGraph1" xml:space="preserve">
+    <value>[Temps - Variation]</value>
+  </data>
+  <data name="LocationGraph" xml:space="preserve">
+    <value>Graphique de l'emplacement</value>
+  </data>
+  <data name="LocationGraph1" xml:space="preserve">
+    <value> [Emplacement - Fréquence]</value>
+  </data>
+  <data name="LocationAmountGraph" xml:space="preserve">
+    <value>Graphique de changement d'emplacement</value>
+  </data>
+  <data name="LocationAmountGraph1" xml:space="preserve">
+    <value>[Emplacement - Variation]</value>
+  </data>
+  <data name="Graphs" xml:space="preserve">
+    <value>Graphiques</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Gérer</value>
+  </data>
+  <data name="Transactions" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>Maintenant</value>
+  </data>
+  <data name="Unselect" xml:space="preserve">
+    <value>Désélectionner</value>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>Copié dans le presse-papier</value>
+  </data>
+  <data name="NoTransactionsSelected" xml:space="preserve">
+    <value>Aucunes transactions actuellement sélectionnées.</value>
+  </data>
+  <data name="CopyTransactionsHelp" xml:space="preserve">
+    <value>{0} transactions copiées dans le presse-papier.</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Éditer</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Exporter</value>
+  </data>
+  <data name="PressEnterToConfirm" xml:space="preserve">
+    <value>Appuyer sur Entrée pour valider</value>
+  </data>
+  <data name="EditHelp1" xml:space="preserve">
+    <value>{0} transactions {1} changées en</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copier</value>
+  </data>
+  <data name="ChangeTextColoring" xml:space="preserve">
+    <value>Changer la couleur du texte</value>
+  </data>
+  <data name="CurrentSettings" xml:space="preserve">
+    <value>Réglages actuels</value>
+  </data>
+  <data name="LocationFilter" xml:space="preserve">
+    <value>Filtre d'emplacements</value>
+  </data>
+  <data name="NegativeChange" xml:space="preserve">
+    <value>Négatif</value>
+  </data>
+  <data name="PositiveChange" xml:space="preserve">
+    <value>Positif</value>
+  </data>
+  <data name="InverseSelect" xml:space="preserve">
+    <value>Inverser la sélection</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Sélectionner tout</value>
+  </data>
+  <data name="Merge" xml:space="preserve">
+    <value>Fusionner</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Date de fin</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Date de début</value>
+  </data>
+  <data name="WeekDays" xml:space="preserve">
+    <value>Dim, Lun, Mardi, Mer, Jeu, Ven, Sam</value>
+  </data>
+  <data name="TeleportTo" xml:space="preserve">
+    <value>Se téléporter à {0}</value>
+  </data>
+  <data name="TeleportWithinArea" xml:space="preserve">
+    <value>Téléportation dans la zone</value>
+  </data>
+  <data name="MergedSpecificHelp" xml:space="preserve">
+    <value>Fusion depuis {0} transactions</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="ExportFileMDHeader" xml:space="preserve">
+    <value># Exportation des Transaction -</value>
+  </data>
+  <data name="ExportFileMDHeader1" xml:space="preserve">
+    <value>| Heure | Montant | Monnaie | Emplacement | Note |
+| --- | --- | --- | --- | --- | --- | --- | --- |</value>
+  </data>
+  <data name="ExportFileType" xml:space="preserve">
+    <value>Type de fichier d’exportation</value>
+  </data>
+  <data name="ColumnsDisplayed" xml:space="preserve">
+    <value>Colonnes affichées</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Ordre</value>
+  </data>
+  <data name="TableAppearance" xml:space="preserve">
+    <value>Apparence du Tableau</value>
+  </data>
+  <data name="UnknownContent" xml:space="preserve">
+    <value>Contenu inconnu</value>
+  </data>
+  <data name="TripleTriadWith" xml:space="preserve">
+    <value>[{0}]Triple Triad avec {1}</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Combat</value>
+  </data>
+  <data name="GoldSaucer" xml:space="preserve">
+    <value>Gold Saucer</value>
+  </data>
+  <data name="HelpTranslate" xml:space="preserve">
+    <value>Aider à traduire</value>
+  </data>
+  <data name="NeedHelp" xml:space="preserve">
+    <value>Besoin d'aide ?</value>
+  </data>
+  <data name="DutyRewards-RecordContentName" xml:space="preserve">
+    <value>Enregistrer le nom du contenu</value>
+  </data>
+  <data name="GoladSaucer-RecordMGPSource" xml:space="preserve">
+    <value>Enregistrer la source des récompenses MGP</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="TeleportCosts-RecordTPCosts" xml:space="preserve">
+    <value>Enregistrer les coûts de téléportation</value>
+  </data>
+  <data name="TripleTriad-RecordTTResult" xml:space="preserve">
+    <value>Enregistrer le résultat du Triple Triad</value>
+  </data>
+  <data name="SuggestOrReport" xml:space="preserve">
+    <value>Suggérer ou Signaler</value>
+  </data>
+  <data name="Exchange-RecordExchangeResult" xml:space="preserve">
+    <value>Enregistrer les résultats de l'échange</value>
+  </data>
+  <data name="CommandHelp" xml:space="preserve">
+    <value>Ouvrir la fenêtre principale du plugin</value>
+  </data>
+  <data name="CommandHelp1" xml:space="preserve">
+    <value>/ct &lt;currencyname&gt;&lt;currencyname&gt; → Ouvre la fenêtre principale avec une devise spécifique.</value>
+  </data>
+  <data name="EditFailed" xml:space="preserve">
+    <value>Echec de la modification</value>
+  </data>
+  <data name="UnknownLang" xml:space="preserve">
+    <value>Langue inconnue</value>
+  </data>
+  <data name="CommandHelp2" xml:space="preserve">
+    <value>Plusieurs devises trouvées</value>
+  </data>
+  <data name="CommandHelp3" xml:space="preserve">
+    <value>Aucune devise n’a été trouvée.</value>
+  </data>
+  <data name="ExchangeWith" xml:space="preserve">
+    <value>Échanger avec {0}</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="Quest" xml:space="preserve">
+    <value>Quête {0}</value>
+  </data>
+  <data name="QuestRewards-RecordQuestRewards" xml:space="preserve">
+    <value>Enregistrer les récompenses de quête</value>
+  </data>
+  <data name="Trade-RecordTradeTarget" xml:space="preserve">
+    <value>Enregistrer la cible de l'échange</value>
+  </data>
+  <data name="TradeWith" xml:space="preserve">
+    <value>Échanger avec {0}</value>
+  </data>
+  <data name="DoubleRightClick" xml:space="preserve">
+    <value>Double clic droit</value>
+  </data>
+  <data name="PageComponent" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmer</value>
+  </data>
+  <data name="CurrencyRenameHelp1" xml:space="preserve">
+    <value>Un fichier de devises/données portant le même nom existe déjà.</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Renommer</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="FateRewards-RecordFateRewards" xml:space="preserve">
+    <value>Enregistrer les récompenses d'ALÉA</value>
+  </data>
+  <data name="IslandFarm" xml:space="preserve">
+    <value>Ferme de l’île</value>
+  </data>
+  <data name="IslandPasture" xml:space="preserve">
+    <value>Pâturage de l'île</value>
+  </data>
+  <data name="IslandWorkshop" xml:space="preserve">
+    <value>Atelier de l'île</value>
+  </data>
+  <data name="IslandSanctuary-RecordISResult" xml:space="preserve">
+    <value>Enregistrer les résultats de l'île</value>
+  </data>
+  <data name="Fate" xml:space="preserve">
+    <value>ALÉA {0}</value>
+  </data>
+  <data name="SelectedTransactionsInfo" xml:space="preserve">
+    <value>Nombre : {0} Som: {1} Moy : {2} Max: {3} Min: {4} (Changer)</value>
+  </data>
+  <data name="Checkbox" xml:space="preserve">
+    <value>Case à cocher</value>
+  </data>
+  <data name="ChildframeWidthOffset" xml:space="preserve">
+    <value>Décalage largeur</value>
+  </data>
+  <data name="MobDrops-RecordMobDrops" xml:space="preserve">
+    <value>Enregistrer les drops des monstres</value>
+  </data>
+  <data name="SpecialExchange-RecordSpecialExchangeResult" xml:space="preserve">
+    <value>Enregistrer les résultats de l'échange spécial </value>
+  </data>
+  <data name="WarpCosts-RecordTPCosts" xml:space="preserve">
+    <value>Enregistrer les coûts de téléportation spéciaux</value>
+  </data>
+  <data name="MultiCharaStats" xml:space="preserve">
+    <value>Statistiques Multi-Personnages</value>
+  </data>
+  <data name="TeleportCosts-RecordAetheryteName" xml:space="preserve">
+    <value>Éthérite</value>
+  </data>
+  <data name="TeleportCosts-RecordAreaName" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="MobDrops-MobDropsNote" xml:space="preserve">
+    <value>Déposer depuis {0}</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventaire</value>
+  </data>
+  <data name="PSaddleBag" xml:space="preserve">
+    <value>Sacoche Premium</value>
+  </data>
+  <data name="SaddleBag" xml:space="preserve">
+    <value>Sacoche</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>Sauvegarde</value>
+  </data>
+  <data name="BackupAllCharacter" xml:space="preserve">
+    <value>Tout sauvegarder</value>
+  </data>
+  <data name="BackupCurrentCharacter" xml:space="preserve">
+    <value>Sauvegarder l'actuel</value>
+  </data>
+  <data name="BackupHelp1" xml:space="preserve">
+    <value>Sauvegarde réussie pour {0} personnages</value>
+  </data>
+  <data name="BackupHelp2" xml:space="preserve">
+    <value>, avec {0} personnages non sauvegardés</value>
+  </data>
+  <data name="BackupHelp3" xml:space="preserve">
+    <value>Personnages échoués:</value>
+  </data>
+  <data name="BackupHelp4" xml:space="preserve">
+    <value>Sauvegarde avec succès des données du personnage actuel vers {0}</value>
+  </data>
+  <data name="ManualBackup" xml:space="preserve">
+    <value>Sauvegarde manuelle</value>
+  </data>
+  <data name="AutoBackup" xml:space="preserve">
+    <value>Sauvegarde automatique</value>
+  </data>
+  <data name="Interval" xml:space="preserve">
+    <value>Intervalle</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="BackupHelp5" xml:space="preserve">
+    <value>Notification dans le chat</value>
+  </data>
+  <data name="Blacklist" xml:space="preserve">
+    <value>Liste noire</value>
+  </data>
+  <data name="Main-CS-AreaRestriction" xml:space="preserve">
+    <value>Restriction de zone</value>
+  </data>
+  <data name="Main-CS-RestrictedArea" xml:space="preserve">
+    <value>Zone restreinte</value>
+  </data>
+  <data name="Main-CS-SelectArea" xml:space="preserve">
+    <value>Sélectionner une zone</value>
+  </data>
+  <data name="Whitelist" xml:space="preserve">
+    <value>Liste blanche</value>
+  </data>
+  <data name="BackupHelp6" xml:space="preserve">
+    <value>Régler sur 0 pour désactiver</value>
+  </data>
+  <data name="BackupHelp7" xml:space="preserve">
+    <value>Cliquer pour activer/désactiver</value>
+  </data>
+  <data name="MaxBackupFiles" xml:space="preserve">
+    <value>Nombre de fichiers de sauvegarde maximum</value>
+  </data>
+  <data name="ParamEP-DestinationName" xml:space="preserve">
+    <value>Nom de la destination</value>
+  </data>
+  <data name="ParamEP-FateName" xml:space="preserve">
+    <value>Nom de l'ALÉA</value>
+  </data>
+  <data name="ParamEP-MobNames" xml:space="preserve">
+    <value>Noms des monstres</value>
+  </data>
+  <data name="ParamEP-QuestName" xml:space="preserve">
+    <value>Nom de la quête  </value>
+  </data>
+  <data name="ParamEP-TargetName" xml:space="preserve">
+    <value>Nom de la cible</value>
+  </data>
+  <data name="ParamEP-TTOutcome" xml:space="preserve">
+    <value>Victoire/Défaite/Nul</value>
+  </data>
+  <data name="ParamEP-TTRivalName" xml:space="preserve">
+    <value>Nom du Rival</value>
+  </data>
+  <data name="PremiumSaddleBag-RecordPremiumSaddleBag" xml:space="preserve">
+    <value>Enregistrer la sacoche premium</value>
+  </data>
+  <data name="Retainer-RecordRetainerInventory" xml:space="preserve">
+    <value>Enregistrer le Servant</value>
+  </data>
+  <data name="SaddleBag-RecordSaddleBag" xml:space="preserve">
+    <value>Enregistrer la sacoche</value>
+  </data>
+  <data name="TripleTriad-Draw" xml:space="preserve">
+    <value>Nul</value>
+  </data>
+  <data name="TripleTriad-Loss" xml:space="preserve">
+    <value>Défaite</value>
+  </data>
+  <data name="TripleTriad-Win" xml:space="preserve">
+    <value>Victoires</value>
+  </data>
+  <data name="CurrencyUIEdit-ShowTotalGilAmount" xml:space="preserve">
+    <value>Afficher Gil TOTAUX  dans l'interface Devise</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Fonctionnalités</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Plugin" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="LetterAttachments-LetterFrom" xml:space="preserve">
+    <value>Lettre de {0}</value>
+  </data>
+  <data name="LetterAttachments-RecordMailAttachments" xml:space="preserve">
+    <value>Enregistrer les pièces jointes</value>
+  </data>
+  <data name="ParamEP-SenderName" xml:space="preserve">
+    <value>Nom de l'éxpéditeur</value>
+  </data>
+  <data name="Trade" xml:space="preserve">
+    <value>Échanger</value>
+  </data>
+  <data name="AlertIntervalHelp" xml:space="preserve">
+    <value>Les intervalles de tous types auront un effet et une alerte, alors n'hésitez pas à créer et à combiner.</value>
+  </data>
+  <data name="AlertIntervalHelp1" xml:space="preserve">
+    <value>-1 sera équivalent à Infinité/Infinitesimal.</value>
+  </data>
+  <data name="AlertType" xml:space="preserve">
+    <value>Type d’alertes</value>
+  </data>
+  <data name="ContainerType" xml:space="preserve">
+    <value>Type d'inventaire</value>
+  </data>
+  <data name="IntervalInput" xml:space="preserve">
+    <value>Intervalle de saisie</value>
+  </data>
+  <data name="IntervalList" xml:space="preserve">
+    <value>Liste d'intervalle</value>
+  </data>
+  <data name="Maximum" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="Minimum" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="AlertIntervalMessage" xml:space="preserve">
+    <value>{0} ({1}) de {2} dans {3} a atteint la plage d'alerte de {4}.</value>
+  </data>
+  <data name="BackupHelp8" xml:space="preserve">
+    <value>Notification d'overlay</value>
+  </data>
+  <data name="NotificationType" xml:space="preserve">
+    <value>Type de notification</value>
+  </data>
+  <data name="ParamEP-CurrencyName" xml:space="preserve">
+    <value>Nom de la devise</value>
+  </data>
+  <data name="ParamEP-Value" xml:space="preserve">
+    <value>Valeur</value>
+  </data>
+  <data name="UpdateTranslations" xml:space="preserve">
+    <value>Mettre à jour les traductions</value>
+  </data>
+</root>

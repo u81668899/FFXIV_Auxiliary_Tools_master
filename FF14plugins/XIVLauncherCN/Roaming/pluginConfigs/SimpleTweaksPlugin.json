@@ -22,10 +22,11 @@
     "ChatTweaks@ClickableLinks",
     "ChatTweaks@ChatNameColours",
     "AutoOpenLootWindow",
-    "ChatTweaks@DisableChatMovement"
+    "ChatTweaks@DisableChatMovement",
+    "RefreshMarketPrices"
   ],
   "HiddenTweaks": [],
-  "CustomProviders": [],
+  "CustomTweakProviders": [],
   "BlacklistedTweaks": [
     "StopCraftingButton",
     "FixedShadowDistance",
@@ -34,6 +35,7 @@
     "UiAdjustments@DutyListBackground",
     "UiAdjustments@LootWindowDuplicateUniqueItemIndicator"
   ],
+  "HiddenCategories": [],
   "CustomizedCommands": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
   },
@@ -47,11 +49,15 @@
   "NoFools": false,
   "NotBaby": false,
   "AnalyticsOptOut": false,
+  "ShowAllTweaksTab": true,
+  "ShowEnabledTweaksTab": true,
+  "ShowOtherTweaksTab": true,
+  "NoCallerInLog": false,
   "ShowTweakDescriptions": true,
   "ShowTweakIDs": false,
   "CustomCulture": "",
   "Language": "zh-CN",
-  "LastSeenChangelog": "",
+  "LastSeenChangelog": "1.9.7.0",
   "AutoOpenChangelog": false,
   "DisableChangelogNotification": false,
   "ChatTweaks": {

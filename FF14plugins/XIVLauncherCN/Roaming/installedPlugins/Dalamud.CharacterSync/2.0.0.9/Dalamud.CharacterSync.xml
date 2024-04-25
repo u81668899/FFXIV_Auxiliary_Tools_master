@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dalamud.CharacterSync</name>
+    </assembly>
+    <members>
+        <member name="T:Dalamud.CharacterSync.CharacterSyncPlugin">
+            <summary>
+            Main plugin class.
+            </summary>
+        </member>
+        <member name="M:Dalamud.CharacterSync.CharacterSyncPlugin.#ctor(Dalamud.Plugin.DalamudPluginInterface)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dalamud.CharacterSync.CharacterSyncPlugin"/> class.
+            </summary>
+            <param name="pluginInterface">Dalamud plugin interface.</param>
+        </member>
+        <member name="P:Dalamud.CharacterSync.CharacterSyncPlugin.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:Dalamud.CharacterSync.CharacterSyncPlugin.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Dalamud.CharacterSync.Interface.ConfigWindow">
+            <summary>
+            Main configuration window.
+            </summary>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.ConfigWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dalamud.CharacterSync.Interface.ConfigWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.ConfigWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="T:Dalamud.CharacterSync.Interface.WarningWindow">
+            <summary>
+            A window that shows warning messages.
+            </summary>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.WarningWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Dalamud.CharacterSync.Interface.WarningWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.WarningWindow.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.WarningWindow.PreDraw">
+            <inheritdoc/>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.WarningWindow.PostDraw">
+            <inheritdoc/>
+        </member>
+        <member name="M:Dalamud.CharacterSync.Interface.WarningWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="T:Dalamud.CharacterSync.PluginAddressResolver">
+            <summary>
+            Plugin address resolver.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.PluginAddressResolver.FileInterfaceOpenFileAddress">
+            <summary>
+            Gets the address of the FileInterface::OpenFile method.
+            </summary>
+        </member>
+        <member name="M:Dalamud.CharacterSync.PluginAddressResolver.Setup64Bit(Dalamud.Game.ISigScanner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Dalamud.CharacterSync.Service">
+            <summary>
+            Dalamud and plugin services.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.Service.Configuration">
+            <summary>
+            Gets or sets the plugin configuration.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.Service.Interface">
+            <summary>
+            Gets the Dalamud plugin interface.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.Service.ClientState">
+            <summary>
+            Gets the Dalamud client state.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.Service.CommandManager">
+            <summary>
+            Gets the Dalamud command manager.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.Service.Interop">
+            <summary>
+            Gets the Dalamud command manager.
+            </summary>
+        </member>
+        <member name="P:Dalamud.CharacterSync.Service.Scanner">
+            <summary>
+            Gets the scanner.
+            </summary>
+        </member>
+        <member name="T:Dalamud.RichPresence.Config.CharacterSyncConfig">
+            <summary>
+            Plugin configuration.
+            </summary>
+        </member>
+        <member name="P:Dalamud.RichPresence.Config.CharacterSyncConfig.Version">
+            <inheritdoc/>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether the plugin is enabled.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncHotbars">
+            <summary>
+            Gets or sets a value indicating whether to sync the HOTBAR.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncMacro">
+            <summary>
+            Gets or sets a value indicating whether to sync the MACRO.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncKeybind">
+            <summary>
+            Gets or sets a value indicating whether to sync the KEYBIND.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncLogfilter">
+            <summary>
+            Gets or sets a value indicating whether to sync the LOGFLTR.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncCharSettings">
+            <summary>
+            Gets or sets a value indicating whether to sync the COMMON.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncKeyboardSettings">
+            <summary>
+            Gets or sets a value indicating whether to sync the CONTROL0.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncGamepadSettings">
+            <summary>
+            Gets or sets a value indicating whether to sync the CONTROL1.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SyncCardSets">
+            <summary>
+            Gets or sets a value indicating whether to sync the GS.DAT file.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.Cid">
+            <summary>
+            Gets or sets the Character ID, the value after CHR_*.
+            </summary>
+        </member>
+        <member name="F:Dalamud.RichPresence.Config.CharacterSyncConfig.SetName">
+            <summary>
+            Gets or sets the "set name".
+            </summary>
+        </member>
+        <member name="M:Dalamud.RichPresence.Config.CharacterSyncConfig.Save">
+            <summary>
+            Save the configuration.
+            </summary>
+        </member>
+    </members>
+</doc>

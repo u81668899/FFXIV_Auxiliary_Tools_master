@@ -1,0 +1,60 @@
+{
+  "$type": "ReadyCheckHelper.Configuration, ReadyCheckHelper",
+  "mSuppressCommandLineResponses": false,
+  "mShowReadyCheckResultsInChat": true,
+  "mMaxUnreadyToListInChat": 3,
+  "mShowReadyCheckOnPartyAllianceList": true,
+  "mClearReadyCheckOverlayEnteringInstance": true,
+  "mClearReadyCheckOverlayInCombat": false,
+  "mClearReadyCheckOverlayInCombatInInstancedCombat": true,
+  "mClearReadyCheckOverlayAfterTime": false,
+  "mTimeUntilClearReadyCheckOverlay_Sec": 60,
+  "mPartyListIconOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "mAllianceListIconOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "mCrossWorldAllianceListIconOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "mPartyListIconScale": 1.0,
+  "mAllianceListIconScale": 1.0,
+  "mCrossWorldAllianceListIconScale": 1.0,
+  "mChatChannelToUseForNotReadyMessage": 57,
+  "SuppressCommandLineResponses": false,
+  "ShowReadyCheckResultsInChat": true,
+  "MaxUnreadyToListInChat": 3,
+  "ShowReadyCheckOnPartyAllianceList": true,
+  "ClearReadyCheckOverlayEnteringInstance": true,
+  "ClearReadyCheckOverlayInCombat": false,
+  "ClearReadyCheckOverlayInCombatInInstancedCombat": true,
+  "ClearReadyCheckOverlayAfterTime": false,
+  "TimeUntilClearReadyCheckOverlay_Sec": 60,
+  "PartyListIconOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "AllianceListIconOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "CrossWorldAllianceListIconOffset": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "PartyListIconScale": 1.0,
+  "AllianceListIconScale": 1.0,
+  "CrossWorldAllianceListIconScale": 1.0,
+  "ChatChannelToUseForNotReadyMessage": 57,
+  "Version": 0
+}

@@ -29,8 +29,8 @@
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
   },
   "NotifyForReturns": true,
-  "NotifyForRepairs": true,
-  "ShowRepairToast": true,
+  "NotifyForRepairs": false,
+  "ShowRepairToast": false,
   "WebhookDispatch": true,
   "WebhookReturn": true,
   "WebhookUrl": "",
@@ -46,7 +46,7 @@
   "OverlayLockLocation": false,
   "OverlayShowRank": true,
   "OverlayShowBuild": true,
-  "OverlayHoldClosed": false,
+  "OverlayHoldClosed": true,
   "OverlayTitleTime": false,
   "OverlayAllDone": {
     "$type": "System.Numerics.Vector4, System.Private.CoreLib",

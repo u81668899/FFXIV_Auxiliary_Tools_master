@@ -95,6 +95,9 @@
         "CastMakeShiftBait": {
           "$type": "AutoHook.Classes.AutoCasts.AutoMakeShiftBait, AutoHook",
           "MakeshiftBaitStacks": 5,
+          "_onlyUseWithIntuition": false,
+          "OnlyWhenMoochNotUp": false,
+          "UseOnlyWhenMoochIIOnCD": false,
           "Enabled": false,
           "Id": 26805,
           "GpThreshold": 0,
@@ -106,6 +109,7 @@
         "CastPatience": {
           "$type": "AutoHook.Classes.AutoCasts.AutoPatience, AutoHook",
           "RefreshEarlyTime": 0,
+          "UseOnlyWhenMoochIIOnCD": false,
           "Enabled": false,
           "Id": 4106,
           "GpThreshold": 0,
@@ -1016,6 +1020,9 @@
           "CastMakeShiftBait": {
             "$type": "AutoHook.Classes.AutoCasts.AutoMakeShiftBait, AutoHook",
             "MakeshiftBaitStacks": 5,
+            "_onlyUseWithIntuition": false,
+            "OnlyWhenMoochNotUp": false,
+            "UseOnlyWhenMoochIIOnCD": false,
             "Enabled": false,
             "Id": 26805,
             "GpThreshold": 0,
@@ -1027,6 +1034,7 @@
           "CastPatience": {
             "$type": "AutoHook.Classes.AutoCasts.AutoPatience, AutoHook",
             "RefreshEarlyTime": 0,
+            "UseOnlyWhenMoochIIOnCD": false,
             "Enabled": false,
             "Id": 4106,
             "GpThreshold": 0,
@@ -1508,7 +1516,7 @@
     },
     "Presets": [],
     "SelectedGuid": "",
-    "UniqueId": "a4fb930e-730a-43f8-ad0f-2e07822a8cb1"
+    "UniqueId": "89719f2b-4f5f-427f-b741-9af4f76636af"
   },
   "ShowDebugConsole": false,
   "ShowChatLogs": true,

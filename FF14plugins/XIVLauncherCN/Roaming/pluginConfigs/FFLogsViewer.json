@@ -13,6 +13,7 @@
   "IsHistoricalDefault": true,
   "IsEncounterLayout": true,
   "IsCachingEnabled": true,
+  "IsAllJobsDefault": true,
   "NbOfDecimalDigits": 2,
   "DefaultStatTypePartyView": 1,
   "DefaultEncounterPartyView": null,
@@ -28,7 +29,7 @@
       "EncounterId": 0,
       "Difficulty": "-",
       "DifficultyId": 0,
-      "SwapId": "6.4",
+      "SwapId": "",
       "SwapNumber": 0
     },
     {
@@ -42,7 +43,7 @@
       "EncounterId": 88,
       "Difficulty": "Savage",
       "DifficultyId": 101,
-      "SwapId": "6.4",
+      "SwapId": "",
       "SwapNumber": 0
     },
     {
@@ -56,7 +57,7 @@
       "EncounterId": 89,
       "Difficulty": "Savage",
       "DifficultyId": 101,
-      "SwapId": "6.4",
+      "SwapId": "",
       "SwapNumber": 0
     },
     {
@@ -70,7 +71,7 @@
       "EncounterId": 90,
       "Difficulty": "Savage",
       "DifficultyId": 101,
-      "SwapId": "6.4",
+      "SwapId": "",
       "SwapNumber": 0
     },
     {
@@ -84,7 +85,7 @@
       "EncounterId": 91,
       "Difficulty": "Savage",
       "DifficultyId": 101,
-      "SwapId": "6.4",
+      "SwapId": "",
       "SwapNumber": 0
     },
     {
@@ -98,92 +99,8 @@
       "EncounterId": 92,
       "Difficulty": "Savage",
       "DifficultyId": 101,
-      "SwapId": "6.4",
+      "SwapId": "",
       "SwapNumber": 0
-    },
-    {
-      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
-      "Type": 2,
-      "Alias": "Abyssos",
-      "Expansion": "-",
-      "Zone": "-",
-      "ZoneId": 0,
-      "Encounter": "-",
-      "EncounterId": 0,
-      "Difficulty": "-",
-      "DifficultyId": 0,
-      "SwapId": "6.4",
-      "SwapNumber": 1
-    },
-    {
-      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
-      "Type": 1,
-      "Alias": "",
-      "Expansion": "Endwalker",
-      "Zone": "Abyssos",
-      "ZoneId": 49,
-      "Encounter": "Proto-Carbuncle",
-      "EncounterId": 83,
-      "Difficulty": "Savage",
-      "DifficultyId": 101,
-      "SwapId": "6.4",
-      "SwapNumber": 1
-    },
-    {
-      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
-      "Type": 1,
-      "Alias": "",
-      "Expansion": "Endwalker",
-      "Zone": "Abyssos",
-      "ZoneId": 49,
-      "Encounter": "Hegemone",
-      "EncounterId": 84,
-      "Difficulty": "Savage",
-      "DifficultyId": 101,
-      "SwapId": "6.4",
-      "SwapNumber": 1
-    },
-    {
-      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
-      "Type": 1,
-      "Alias": "",
-      "Expansion": "Endwalker",
-      "Zone": "Abyssos",
-      "ZoneId": 49,
-      "Encounter": "Agdistis",
-      "EncounterId": 85,
-      "Difficulty": "Savage",
-      "DifficultyId": 101,
-      "SwapId": "6.4",
-      "SwapNumber": 1
-    },
-    {
-      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
-      "Type": 1,
-      "Alias": "",
-      "Expansion": "Endwalker",
-      "Zone": "Abyssos",
-      "ZoneId": 49,
-      "Encounter": "Hephaistos",
-      "EncounterId": 86,
-      "Difficulty": "Savage",
-      "DifficultyId": 101,
-      "SwapId": "6.4",
-      "SwapNumber": 1
-    },
-    {
-      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
-      "Type": 1,
-      "Alias": "",
-      "Expansion": "Endwalker",
-      "Zone": "Abyssos",
-      "ZoneId": 49,
-      "Encounter": "Hephaistos II",
-      "EncounterId": 87,
-      "Difficulty": "Savage",
-      "DifficultyId": 101,
-      "SwapId": "6.4",
-      "SwapNumber": 1
     },
     {
       "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
@@ -306,6 +223,20 @@
       "ZoneId": 55,
       "Encounter": "Golbez",
       "EncounterId": 1069,
+      "Difficulty": "Normal",
+      "DifficultyId": 100,
+      "SwapId": "",
+      "SwapNumber": 0
+    },
+    {
+      "$type": "FFLogsViewer.LayoutEntry, FFLogsViewer",
+      "Type": 1,
+      "Alias": "",
+      "Expansion": "Endwalker",
+      "Zone": "Trials III (Extreme)",
+      "ZoneId": 55,
+      "Encounter": "Zeromus",
+      "EncounterId": 1070,
       "Difficulty": "Normal",
       "DifficultyId": 100,
       "SwapId": "",

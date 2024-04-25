@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChangeFilterEnabled" xml:space="preserve">
+    <value>收支篩選</value>
+  </data>
+  <data name="ChangeFilterLabel" xml:space="preserve">
+    <value>僅顯示收支 {0} {1} 的記錄</value>
+  </data>
+  <data name="ClusterByTime" xml:space="preserve">
+    <value>按時間聚類</value>
+  </data>
+  <data name="ClusterByTimeHelp1" xml:space="preserve">
+    <value>以 {0}小時 為間隔顯示數據</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>小時</value>
+  </data>
+  <data name="Category-RecordOptions" xml:space="preserve">
+    <value>記錄選項</value>
+  </data>
+  <data name="Category-Others" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="Category-Help" xml:space="preserve">
+    <value>按一下展開或摺疊。</value>
+  </data>
+  <data name="CustomCurrencyHelp" xml:space="preserve">
+    <value>註:
+1.插件預設的3種貨幣無法刪除
+2.不建議對非貨幣物品進行追蹤，應使用其他插件來追蹤非貨幣物品
+(但你仍然可以堅持這樣做)
+3.刪除貨幣並不會刪除已有的資料文件，如有需要請自行刪除</value>
+  </data>
+  <data name="AddCustomCurrency" xml:space="preserve">
+    <value>自定義貨幣</value>
+  </data>
+  <data name="PleaseSelect" xml:space="preserve">
+    <value>請選擇...</value>
+  </data>
+  <data name="PleaseSearch" xml:space="preserve">
+    <value>搜尋...</value>
+  </data>
+  <data name="CustomCurrencyHelp1" xml:space="preserve">
+    <value>新增失敗: 貨幣已存在</value>
+  </data>
+  <data name="CustomCurrencyHelp2" xml:space="preserve">
+    <value>刪除失敗: 你所選擇的貨幣不存在</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除 </value>
+  </data>
+  <data name="ExportFileCSVHeader" xml:space="preserve">
+    <value>時間,貨幣數,收支,地點,備註</value>
+  </data>
+  <data name="ExportFileMessage" xml:space="preserve">
+    <value>檔案已匯出到:</value>
+  </data>
+  <data name="FileRenameHelp1" xml:space="preserve">
+    <value>若留空，檔名則為:</value>
+  </data>
+  <data name="FileRenameLabel" xml:space="preserve">
+    <value>檔案名稱：</value>
+  </data>
+  <data name="FilterByTime" xml:space="preserve">
+    <value>時間篩選</value>
+  </data>
+  <data name="FirstPage" xml:space="preserve">
+    <value>首頁</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>大於</value>
+  </data>
+  <data name="LastPage" xml:space="preserve">
+    <value>尾頁</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>小於</value>
+  </data>
+  <data name="MergeTransactionsHelp1" xml:space="preserve">
+    <value>合併了 {0} 筆記錄</value>
+  </data>
+  <data name="MergeTransactionsHelp3" xml:space="preserve">
+    <value>合併地點一致 、位置相鄰且收支低於臨界值的記錄。如果臨界值為 0，則嘗試合併所有滿足條件的記錄。
+
+單向合併：正負收支分別計算合併
+雙向合併：正負收支一同計算合併</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>臨界值</value>
+  </data>
+  <data name="TwoWayMerge" xml:space="preserve">
+    <value>雙向合併</value>
+  </data>
+  <data name="OneWayMerge" xml:space="preserve">
+    <value>單項合併</value>
+  </data>
+  <data name="ManualMerge" xml:space="preserve">
+    <value>手動合併</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
+  <data name="OpenDataFolder" xml:space="preserve">
+    <value>開啟資料資料夾</value>
+  </data>
+  <data name="PreviousPage" xml:space="preserve">
+    <value>上一頁</value>
+  </data>
+  <data name="DutyRewards-RecordDutyRewards" xml:space="preserve">
+    <value>記錄副本獎勵</value>
+  </data>
+  <data name="TransactionsHelp" xml:space="preserve">
+    <value>未找到符合條件的記錄。</value>
+  </data>
+  <data name="TransactionsHelp1" xml:space="preserve">
+    <value>目前未選擇任何貨幣類型。</value>
+  </data>
+  <data name="UnknownCurrency" xml:space="preserve">
+    <value>未知的貨幣類型</value>
+  </data>
+  <data name="UnknownLocation" xml:space="preserve">
+    <value>未知位置</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>貨幣數</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>收支</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>地點</value>
+  </data>
+  <data name="TransactionsPerPage" xml:space="preserve">
+    <value>頁面大小</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="GraphLabel" xml:space="preserve">
+    <value>記錄數量:</value>
+  </data>
+  <data name="AmountGraph" xml:space="preserve">
+    <value>數量圖表</value>
+  </data>
+  <data name="AmountGraph1" xml:space="preserve">
+    <value>[時間 - 數量]</value>
+  </data>
+  <data name="DividedUnitThou" xml:space="preserve">
+    <value>(單位: 千)</value>
+  </data>
+  <data name="DividedUnitMil" xml:space="preserve">
+    <value>(單位: 百萬)</value>
+  </data>
+  <data name="DividedUnitBil" xml:space="preserve">
+    <value>(單位: 十億)</value>
+  </data>
+  <data name="ChangeGraph" xml:space="preserve">
+    <value>收支圖表</value>
+  </data>
+  <data name="ChangeGraph1" xml:space="preserve">
+    <value>[時間 - 收支]</value>
+  </data>
+  <data name="LocationGraph" xml:space="preserve">
+    <value>地點圖表</value>
+  </data>
+  <data name="LocationGraph1" xml:space="preserve">
+    <value>[地點 - 地點頻次]</value>
+  </data>
+  <data name="LocationAmountGraph" xml:space="preserve">
+    <value>地點收支圖表</value>
+  </data>
+  <data name="LocationAmountGraph1" xml:space="preserve">
+    <value>[地點 - 收支]</value>
+  </data>
+  <data name="Graphs" xml:space="preserve">
+    <value>圖表</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Transactions" xml:space="preserve">
+    <value>筆記錄</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>當前</value>
+  </data>
+  <data name="Unselect" xml:space="preserve">
+    <value>取消選取</value>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>已複製到剪貼簿</value>
+  </data>
+  <data name="NoTransactionsSelected" xml:space="preserve">
+    <value>目前未選取任何記錄</value>
+  </data>
+  <data name="CopyTransactionsHelp" xml:space="preserve">
+    <value>已複製 {0} 筆記錄至剪貼簿</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>匯出</value>
+  </data>
+  <data name="PressEnterToConfirm" xml:space="preserve">
+    <value>按 Enter 鍵確認</value>
+  </data>
+  <data name="EditHelp1" xml:space="preserve">
+    <value>已修改 {0} 筆記錄的 {1} 為</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="ChangeTextColoring" xml:space="preserve">
+    <value>變更文字顏色</value>
+  </data>
+  <data name="CurrentSettings" xml:space="preserve">
+    <value>目前設定</value>
+  </data>
+  <data name="LocationFilter" xml:space="preserve">
+    <value>地點篩選</value>
+  </data>
+  <data name="NegativeChange" xml:space="preserve">
+    <value>負收支</value>
+  </data>
+  <data name="PositiveChange" xml:space="preserve">
+    <value>正收支</value>
+  </data>
+  <data name="InverseSelect" xml:space="preserve">
+    <value>反向選取</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>全選</value>
+  </data>
+  <data name="Merge" xml:space="preserve">
+    <value>合併</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>結束日期</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>開始日期</value>
+  </data>
+  <data name="WeekDays" xml:space="preserve">
+    <value>日, 一, 二, 三, 四, 五, 六</value>
+  </data>
+  <data name="TeleportTo" xml:space="preserve">
+    <value>傳送至 {0}</value>
+  </data>
+  <data name="TeleportWithinArea" xml:space="preserve">
+    <value>地圖內傳送</value>
+  </data>
+  <data name="MergedSpecificHelp" xml:space="preserve">
+    <value>由 {0} 筆記錄合併而成</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="ExportFileMDHeader" xml:space="preserve">
+    <value># 貨幣資料匯出 -</value>
+  </data>
+  <data name="ExportFileMDHeader1" xml:space="preserve">
+    <value>| 時間 | 貨幣數 | 收支 | 地點 | 備註 |
+| --- | --- | --- | --- | --- |</value>
+  </data>
+  <data name="ExportFileType" xml:space="preserve">
+    <value>匯出文件類型</value>
+  </data>
+  <data name="ColumnsDisplayed" xml:space="preserve">
+    <value>顯示列</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="TableAppearance" xml:space="preserve">
+    <value>表格外觀</value>
+  </data>
+  <data name="UnknownContent" xml:space="preserve">
+    <value>未知副本</value>
+  </data>
+  <data name="TripleTriadWith" xml:space="preserve">
+    <value>[{0}]幻卡對局 - {1}</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>戰鬥</value>
+  </data>
+  <data name="GoldSaucer" xml:space="preserve">
+    <value>金碟</value>
+  </data>
+  <data name="HelpTranslate" xml:space="preserve">
+    <value>協助翻譯</value>
+  </data>
+  <data name="NeedHelp" xml:space="preserve">
+    <value>需要幫助</value>
+  </data>
+  <data name="DutyRewards-RecordContentName" xml:space="preserve">
+    <value>記錄副本名稱</value>
+  </data>
+  <data name="GoladSaucer-RecordMGPSource" xml:space="preserve">
+    <value>記錄金碟幣來源</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>記錄</value>
+  </data>
+  <data name="TeleportCosts-RecordTPCosts" xml:space="preserve">
+    <value>紀錄傳送開銷</value>
+  </data>
+  <data name="TripleTriad-RecordTTResult" xml:space="preserve">
+    <value>記錄九宮幻卡結果</value>
+  </data>
+  <data name="SuggestOrReport" xml:space="preserve">
+    <value>建議或回饋</value>
+  </data>
+  <data name="Exchange-RecordExchangeResult" xml:space="preserve">
+    <value>記錄交換結果</value>
+  </data>
+  <data name="CommandHelp" xml:space="preserve">
+    <value>開啟插件主介面</value>
+  </data>
+  <data name="CommandHelp1" xml:space="preserve">
+    <value>/ct &lt;貨幣名稱&gt; → 開啟指定貨幣的資料介面</value>
+  </data>
+  <data name="EditFailed" xml:space="preserve">
+    <value>編輯失敗</value>
+  </data>
+  <data name="UnknownLang" xml:space="preserve">
+    <value>未知語言</value>
+  </data>
+  <data name="CommandHelp2" xml:space="preserve">
+    <value>發現了多種符合條件的貨幣</value>
+  </data>
+  <data name="CommandHelp3" xml:space="preserve">
+    <value>未找到符合條件的貨幣</value>
+  </data>
+  <data name="ExchangeWith" xml:space="preserve">
+    <value>交易自 {0}</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Quest" xml:space="preserve">
+    <value>任務 {0}</value>
+  </data>
+  <data name="QuestRewards-RecordQuestRewards" xml:space="preserve">
+    <value>記錄任務獎勵</value>
+  </data>
+  <data name="Trade-RecordTradeTarget" xml:space="preserve">
+    <value>記錄交易對象</value>
+  </data>
+  <data name="TradeWith" xml:space="preserve">
+    <value>交易自 {0}</value>
+  </data>
+  <data name="DoubleRightClick" xml:space="preserve">
+    <value>雙擊右鍵</value>
+  </data>
+  <data name="PageComponent" xml:space="preserve">
+    <value>第 {0} 頁 / 共 {1} 頁</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="CurrencyRenameHelp1" xml:space="preserve">
+    <value>已存在相同名稱的貨幣/文檔</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>重新命名</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="FateRewards-RecordFateRewards" xml:space="preserve">
+    <value>記錄臨危受命獎勵</value>
+  </data>
+  <data name="IslandFarm" xml:space="preserve">
+    <value>無人島耕地</value>
+  </data>
+  <data name="IslandPasture" xml:space="preserve">
+    <value>無人島牧場</value>
+  </data>
+  <data name="IslandWorkshop" xml:space="preserve">
+    <value>無人島工房</value>
+  </data>
+  <data name="IslandSanctuary-RecordISResult" xml:space="preserve">
+    <value>記錄無人島相關收支</value>
+  </data>
+  <data name="Fate" xml:space="preserve">
+    <value>臨危受命 {0}</value>
+  </data>
+  <data name="SelectedTransactionsInfo" xml:space="preserve">
+    <value>計數: {0} 總和:{1} 平均值: {2} 最大值: {3} 最小值: {4} (收支)</value>
+  </data>
+  <data name="Checkbox" xml:space="preserve">
+    <value>複選框</value>
+  </data>
+  <data name="ChildframeWidthOffset" xml:space="preserve">
+    <value>寬度偏移量</value>
+  </data>
+  <data name="MobDrops-RecordMobDrops" xml:space="preserve">
+    <value>記錄野怪掉落物</value>
+  </data>
+  <data name="SpecialExchange-RecordSpecialExchangeResult" xml:space="preserve">
+    <value>記錄特殊交換結果</value>
+  </data>
+  <data name="WarpCosts-RecordTPCosts" xml:space="preserve">
+    <value>記錄特殊傳送開銷</value>
+  </data>
+  <data name="MultiCharaStats" xml:space="preserve">
+    <value>多角色資料</value>
+  </data>
+  <data name="TeleportCosts-RecordAetheryteName" xml:space="preserve">
+    <value>以太之光</value>
+  </data>
+  <data name="TeleportCosts-RecordAreaName" xml:space="preserve">
+    <value>區域名</value>
+  </data>
+  <data name="MobDrops-MobDropsNote" xml:space="preserve">
+    <value>掉落自 {0}</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>揹包</value>
+  </data>
+  <data name="PSaddleBag" xml:space="preserve">
+    <value>額外鳥包</value>
+  </data>
+  <data name="SaddleBag" xml:space="preserve">
+    <value>鳥包</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>備份</value>
+  </data>
+  <data name="BackupAllCharacter" xml:space="preserve">
+    <value>備份全部</value>
+  </data>
+  <data name="BackupCurrentCharacter" xml:space="preserve">
+    <value>備份當前</value>
+  </data>
+  <data name="BackupHelp1" xml:space="preserve">
+    <value>已成功備份 {0} 個角色的資料</value>
+  </data>
+  <data name="BackupHelp2" xml:space="preserve">
+    <value>, 失敗角色個數為 {0}</value>
+  </data>
+  <data name="BackupHelp3" xml:space="preserve">
+    <value>失敗角色列表如下:</value>
+  </data>
+  <data name="BackupHelp4" xml:space="preserve">
+    <value>已備份當前角色資料至: {0}</value>
+  </data>
+  <data name="ManualBackup" xml:space="preserve">
+    <value>手動備份</value>
+  </data>
+  <data name="AutoBackup" xml:space="preserve">
+    <value>自動備份</value>
+  </data>
+  <data name="Interval" xml:space="preserve">
+    <value>區間</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>分鐘</value>
+  </data>
+  <data name="BackupHelp5" xml:space="preserve">
+    <value>遊戲訊息通知</value>
+  </data>
+  <data name="Blacklist" xml:space="preserve">
+    <value>黑名單</value>
+  </data>
+  <data name="Main-CS-AreaRestriction" xml:space="preserve">
+    <value>區域限制</value>
+  </data>
+  <data name="Main-CS-RestrictedArea" xml:space="preserve">
+    <value>已限制區域</value>
+  </data>
+  <data name="Main-CS-SelectArea" xml:space="preserve">
+    <value>選擇區域</value>
+  </data>
+  <data name="Whitelist" xml:space="preserve">
+    <value>白名單</value>
+  </data>
+  <data name="BackupHelp6" xml:space="preserve">
+    <value>設定為 0 以禁用</value>
+  </data>
+  <data name="BackupHelp7" xml:space="preserve">
+    <value>點擊以啟用／停用</value>
+  </data>
+  <data name="MaxBackupFiles" xml:space="preserve">
+    <value>最大備份檔案數</value>
+  </data>
+  <data name="ParamEP-DestinationName" xml:space="preserve">
+    <value>目的地名稱</value>
+  </data>
+  <data name="ParamEP-FateName" xml:space="preserve">
+    <value>臨危受命名稱</value>
+  </data>
+  <data name="ParamEP-MobNames" xml:space="preserve">
+    <value>野怪名稱</value>
+  </data>
+  <data name="ParamEP-QuestName" xml:space="preserve">
+    <value>任務名稱</value>
+  </data>
+  <data name="ParamEP-TargetName" xml:space="preserve">
+    <value>目標名稱</value>
+  </data>
+  <data name="ParamEP-TTOutcome" xml:space="preserve">
+    <value>勝/負/平</value>
+  </data>
+  <data name="ParamEP-TTRivalName" xml:space="preserve">
+    <value>對手名稱</value>
+  </data>
+  <data name="PremiumSaddleBag-RecordPremiumSaddleBag" xml:space="preserve">
+    <value>記錄額外鳥包物品</value>
+  </data>
+  <data name="Retainer-RecordRetainerInventory" xml:space="preserve">
+    <value>記錄僱員物品</value>
+  </data>
+  <data name="SaddleBag-RecordSaddleBag" xml:space="preserve">
+    <value>記錄鳥包物品</value>
+  </data>
+  <data name="TripleTriad-Draw" xml:space="preserve">
+    <value>平</value>
+  </data>
+  <data name="TripleTriad-Loss" xml:space="preserve">
+    <value>負</value>
+  </data>
+  <data name="TripleTriad-Win" xml:space="preserve">
+    <value>勝</value>
+  </data>
+  <data name="CurrencyUIEdit-ShowTotalGilAmount" xml:space="preserve">
+    <value>在貨幣一覽顯示總金幣數</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>功能</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>資訊</value>
+  </data>
+  <data name="Plugin" xml:space="preserve">
+    <value>插件</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="LetterAttachments-LetterFrom" xml:space="preserve">
+    <value>信件 - {0}</value>
+  </data>
+  <data name="LetterAttachments-RecordMailAttachments" xml:space="preserve">
+    <value>記錄郵件附件物品</value>
+  </data>
+  <data name="ParamEP-SenderName" xml:space="preserve">
+    <value>寄件人名稱</value>
+  </data>
+  <data name="Trade" xml:space="preserve">
+    <value>交易</value>
+  </data>
+  <data name="AlertIntervalHelp" xml:space="preserve">
+    <value>無論本頁面的當前選擇型別是什麼，所有已建立區間都會進行警報提醒，請自由建立與組合</value>
+  </data>
+  <data name="AlertIntervalHelp1" xml:space="preserve">
+    <value>-1 將等價於 無限大/小</value>
+  </data>
+  <data name="AlertType" xml:space="preserve">
+    <value>警報類型</value>
+  </data>
+  <data name="ContainerType" xml:space="preserve">
+    <value>物品欄型別</value>
+  </data>
+  <data name="IntervalInput" xml:space="preserve">
+    <value>輸入區間</value>
+  </data>
+  <data name="IntervalList" xml:space="preserve">
+    <value>區間列表</value>
+  </data>
+  <data name="Maximum" xml:space="preserve">
+    <value>最大値</value>
+  </data>
+  <data name="Minimum" xml:space="preserve">
+    <value>最小値</value>
+  </data>
+  <data name="AlertIntervalMessage" xml:space="preserve">
+    <value>{3} 中的 {2} 的 {0} ({1}) 已達到預警區間 {4}</value>
+  </data>
+  <data name="BackupHelp8" xml:space="preserve">
+    <value>遊戲視窗通知</value>
+  </data>
+  <data name="NotificationType" xml:space="preserve">
+    <value>通知類型</value>
+  </data>
+  <data name="ParamEP-CurrencyName" xml:space="preserve">
+    <value>貨幣名稱</value>
+  </data>
+  <data name="ParamEP-Value" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="UpdateTranslations" xml:space="preserve">
+    <value>更新翻譯檔案</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Alert" xml:space="preserve">
+    <value>警報</value>
+  </data>
+  <data name="DataFiles" xml:space="preserve">
+    <value>資料檔案</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>總計</value>
+  </data>
+  <data name="CycleMode" xml:space="preserve">
+    <value>週期模式</value>
+  </data>
+  <data name="DisplayChangesInServerBar" xml:space="preserve">
+    <value>在伺服器資訊欄顯示貨幣變化</value>
+  </data>
+  <data name="DisplayedCurrency" xml:space="preserve">
+    <value>待顯示貨幣</value>
+  </data>
+  <data name="Past24Hours" xml:space="preserve">
+    <value>過去 24 小時</value>
+  </data>
+  <data name="Past3Days" xml:space="preserve">
+    <value>過去 3 天</value>
+  </data>
+  <data name="Past7Days" xml:space="preserve">
+    <value>過去 7 天</value>
+  </data>
+  <data name="PreviousCycle" xml:space="preserve">
+    <value>上一週期</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="DisplayCurrencyOverviewInGilHUD" xml:space="preserve">
+    <value>在所持金幣界面顯示貨幣一覽窗口</value>
+  </data>
+</root>

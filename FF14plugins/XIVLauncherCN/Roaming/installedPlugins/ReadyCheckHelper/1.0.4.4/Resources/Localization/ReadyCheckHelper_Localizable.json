@@ -1,0 +1,126 @@
+{
+  "Plugin Text Command Description": {
+    "message": "Use {0} to open the the configuration window.",
+    "description": "Plugin.OnLanguageChanged"
+  },
+  "Config Subcommand Help Message": {
+    "message": "Opens the settings window.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Results Subcommand Help Message": {
+    "message": "Opens a window containing the results of the last ready check to occur.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Clear Subcommand Help Message": {
+    "message": "Removes the most recent ready check icons from the party/alliance lists.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Debug Subcommand Help Message": {
+    "message": "Opens a debugging window containing party and ready check object data.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Basic Help Message": {
+    "message": "This plugin works automatically; however, some text commands are supported.  Valid subcommands are {0}, {1}, and {2}.  Use \"{3} <subcommand>\" for more information on each subcommand.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Window Title: Config": {
+    "message": "Ready Check Helper Settings",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Print Names of Unready in Chat": {
+    "message": "Show the names of those not ready in the chat window.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Max Names in Chat": {
+    "message": "Maximum number of names to show in chat:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Chat Message Channel": {
+    "message": "Chat Log Channel:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Help: Chat Message Channel": {
+    "message": "Sets the channel in which this chat message is shown.  Leave this set to the default value ({0}) unless it causes problems with your chat configuration.  This only affects the unready players message; all other messages from this plugin respect your choice of chat channel in Dalamud settings.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Draw on Party Alliance Lists": {
+    "message": "Draw ready check on party/alliance lists.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List Settings": {
+    "message": "Clear ready check from party/alliance lists:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Combat": {
+    "message": "Upon entering combat.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Instance": {
+    "message": "Upon entering instance.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Enteringing Combat in Instance": {
+    "message": "Upon entering combat while in instance.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List after X Seconds:": {
+    "message": "After a certain number of seconds:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Help: Clear Party Alliance List after X Seconds": {
+    "message": "Changes to this setting will not take effect until the next ready check concludes.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Section: Icon Size/Offset": {
+    "message": "Party and Alliance List Icon Size/Offset:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Party List Icon Offset": {
+    "message": "Party List Icon Offset",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Party List Icon Scale": {
+    "message": "Party List Icon Scale",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Alliance List Icon Offset": {
+    "message": "Alliance List Icon Offset",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Alliance List Icon Scale": {
+    "message": "Alliance List Icon Scale",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Button: Save and Close": {
+    "message": "Save and Close",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Window Title: Ready Check Results": {
+    "message": "Latest Ready Check Results",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Placeholder: No Ready Check Results Exist": {
+    "message": "No ready check has yet occurred.",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Button: Close": {
+    "message": "Close",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Window Title: Ready Check and Alliance Debug Data": {
+    "message": "Ready Check and Alliance Debug Data",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Help: Debug Set Object Address Warning": {
+    "message": "DO NOT TOUCH THIS UNLESS YOU KNOW EXACTLY WHAT YOU'RE DOING AND WHY; THE ABSOLUTE BEST CASE IS A PLUGIN CRASH.",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Window Title: Raw Ready Check Data": {
+    "message": "Debug: Raw Ready Check Data",
+    "description": "PluginUI.DrawDebugRawWindow"
+  },
+  "Window Title: Processed Ready Check Data": {
+    "message": "Debug: Processed Ready Check Data",
+    "description": "PluginUI.DrawDebugProcessedWindow"
+  }
+}

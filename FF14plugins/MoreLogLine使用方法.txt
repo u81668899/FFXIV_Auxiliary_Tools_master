@@ -1,4 +1,0 @@
-把MoreLogLine.txt和MoreLogLine.dll放在同一目录，然后act加载MoreLogLine.dll，后续版本更新只用更改ActorMove和ObjectSpawn后面数值，具体可以参考https://github.com/zhyupe/ffxiv-opcode-worker/blob/master/cn-opcodes.csv更新
-介绍:100代表boss移动
-101代表场地技能，比如e12s地火和庇护所之类
-102代表天气变化

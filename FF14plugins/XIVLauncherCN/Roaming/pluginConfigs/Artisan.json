@@ -5475,8 +5475,8 @@
       "$type": "Artisan.CraftingLogic.RecipeConfig, Artisan",
       "SolverType": "Artisan.CraftingLogic.Solvers.MacroSolverDefinition",
       "SolverFlavour": 26154,
-      "RequiredFood": 0,
-      "RequiredPotion": 0,
+      "RequiredFood": 38929,
+      "RequiredPotion": 36116,
       "RequiredManual": 0,
       "RequiredSquadronManual": 0,
       "RequiredFoodHQ": true,
@@ -5552,7 +5552,7 @@
       "$type": "Artisan.CraftingLogic.RecipeConfig, Artisan",
       "SolverType": "Artisan.CraftingLogic.Solvers.MacroSolverDefinition",
       "SolverFlavour": 26342,
-      "RequiredFood": 0,
+      "RequiredFood": 30482,
       "RequiredPotion": 0,
       "RequiredManual": 0,
       "RequiredSquadronManual": 0,
@@ -5629,12 +5629,12 @@
       "$type": "Artisan.CraftingLogic.RecipeConfig, Artisan",
       "SolverType": "Artisan.CraftingLogic.Solvers.MacroSolverDefinition",
       "SolverFlavour": 49923,
-      "RequiredFood": 0,
+      "RequiredFood": 36053,
       "RequiredPotion": 0,
       "RequiredManual": 0,
       "RequiredSquadronManual": 0,
       "RequiredFoodHQ": true,
-      "RequiredPotionHQ": true
+      "RequiredPotionHQ": false
     },
     "35597": {
       "$type": "Artisan.CraftingLogic.RecipeConfig, Artisan",
@@ -5882,12 +5882,12 @@
       "$type": "Artisan.CraftingLogic.RecipeConfig, Artisan",
       "SolverType": "Artisan.CraftingLogic.Solvers.MacroSolverDefinition",
       "SolverFlavour": 49923,
-      "RequiredFood": 0,
+      "RequiredFood": 36053,
       "RequiredPotion": 0,
       "RequiredManual": 0,
       "RequiredSquadronManual": 0,
       "RequiredFoodHQ": true,
-      "RequiredPotionHQ": true
+      "RequiredPotionHQ": false
     },
     "35588": {
       "$type": "Artisan.CraftingLogic.RecipeConfig, Artisan",
@@ -7138,7 +7138,7 @@
   "Materia": true,
   "LockMiniMenu": true,
   "EnduranceStopFail": true,
-  "EnduranceStopNQ": false,
+  "EnduranceStopNQ": true,
   "RepairPercent": 50,
   "RetainerIDs": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.UInt64, System.Private.CoreLib]], System.Private.CoreLib",
@@ -7206,15 +7206,27 @@
   "ReplaceSearch": true,
   "Version": 0,
   "AutoMode": true,
-  "CraftingLists": [
+  "CraftingLists": [],
+  "NewCraftingLists": [
     {
-      "$type": "Artisan.CraftingLists.CraftingList, Artisan",
+      "$type": "Artisan.CraftingLists.NewCraftingList, Artisan",
       "SkipLiteral": false,
       "RepairPercent": 50,
       "AddAsQuickSynth": false,
       "ID": 26441,
       "Name": "魔导机械修理材料",
-      "Items": [
+      "Recipes": [
+        {
+          "$type": "Artisan.CraftingLists.ListItem, Artisan",
+          "ID": 31023,
+          "Quantity": 9999,
+          "ListItemOptions": {
+            "$type": "Artisan.CraftingLists.ListItemOptions, Artisan",
+            "NQOnly": true
+          }
+        }
+      ],
+      "ExpandedList": [
         31023,
         31023,
         31023,
@@ -17215,17 +17227,6 @@
         31023,
         31023
       ],
-      "ListItemOptions": {
-        "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[Artisan.CraftingLists.ListItemOptions, Artisan]], System.Private.CoreLib",
-        "30987": {
-          "$type": "Artisan.CraftingLists.ListItemOptions, Artisan",
-          "NQOnly": true
-        },
-        "31023": {
-          "$type": "Artisan.CraftingLists.ListItemOptions, Artisan",
-          "NQOnly": true
-        }
-      },
       "SkipIfEnough": true,
       "Materia": true,
       "Repair": true

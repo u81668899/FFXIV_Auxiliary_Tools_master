@@ -35,15 +35,19 @@
       "Options": 8
     },
     {
-      "Pattern": "离开了小队",
-      "Options": 8
-    },
-    {
-      "Pattern": "加入了小队",
+      "Pattern": "(离开|加入)了小队",
       "Options": 8
     },
     {
       "Pattern": "降低.+?的品质变换成了",
+      "Options": 8
+    },
+    {
+      "Pattern": "探索委托",
+      "Options": 8
+    },
+    {
+      "Pattern": "(开始|停止)在.+?市场出售物品。",
       "Options": 8
     }
   ],

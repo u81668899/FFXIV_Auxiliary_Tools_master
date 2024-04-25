@@ -1,5 +1,5 @@
 {
-  "$type": "YesAlready.YesAlreadyConfiguration, YesAlready",
+  "$type": "YesAlready.Configuration, YesAlready",
   "Version": 1,
   "Enabled": true,
   "ForcedYesKey": 16,
@@ -16,6 +16,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要使用钥匙吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -24,6 +28,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要使用钢铁制操纵杆修复大门吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -32,6 +40,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要扳动排水机关的操作杆吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -40,6 +52,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要前往梅梅卢恩交易站吗？ 交通费为40金币。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -48,6 +64,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要前往你的小岛吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -56,6 +76,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要转动排水阀门吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -64,6 +88,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要前往酒杯岛吗？ 交通费为30金币。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -72,6 +100,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要前往幻影群岛吗？ ",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -80,6 +112,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要打开后营门入口吗？※会带领周围的队员一起进行移动。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -88,6 +124,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要启动斜行升降机吗？※会带领周围的队员一起进行移动。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -96,6 +136,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/要移动到(聚魔洞窟|脏兮兮的土洞|湿漉漉的水洞|热腾腾的火洞)吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -104,6 +148,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/^要.*?(魔导|电梯|密钥|内部|魔力的奔流)/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -112,6 +160,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/要骑上.*前往.*吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -120,6 +172,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要返回到",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -128,6 +184,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要跳入流沙之中吗? ",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -136,6 +196,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/要打开(隔离墙|关着的]海人门|避难地正门)/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -144,6 +208,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要使用魔导感光器吗",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -152,6 +220,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要传送吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": true,
             "ZoneText": "岩燕庙",
             "IsYes": true
@@ -160,6 +232,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要触动“审理之天平”吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -168,6 +244,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要移动到第二修炼区吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -176,6 +256,58 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要移动到第三修炼区吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要打开灯塔的门吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要将“月光石”放入门上的凹洞中吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要将“星光石”放入台上的凹洞中吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "要使用灯油吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -190,6 +322,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要用亚拉戈诗学神典石.+?， 换取以下道具吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -198,6 +334,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要交换吗？ 当前职业或等级无法穿戴该装备。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -206,6 +346,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要用怪物狩猎的战利品×25， 换取以下道具吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -214,6 +358,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/“改良型圣堂.*”ｘ1 需要以下道具进行交换。/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -222,6 +370,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/“.*”ｘ1 需要以下道具进行交换。  　　“怪物狩猎的战利品”ｘ.+?/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -236,6 +388,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要将下列道具收为收藏品吗？ /",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -244,6 +400,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要为合建设备提供.*吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -252,6 +412,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要交易优质道具吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -260,6 +424,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要继续进行交换吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -268,6 +436,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要移动到“.*”吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -276,6 +448,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要领取.*?个.*?吗？  当前持有数量：.+?个/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -284,6 +460,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要领取下列道具吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -292,6 +472,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/以.*(\\(含手续费.*\\)|)的价格购买“.*”.*。/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "利姆萨·罗敏萨下层甲板",
             "IsYes": true
@@ -300,6 +484,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要以.*金碟币的价格购买.*号仙人仙彩吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -308,6 +496,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/要不要再买一次？ /",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -316,6 +508,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要以.*?金蝶币的价格购买.*?号仙人仙彩吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -324,6 +520,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要参加吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -332,6 +532,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/要(进入|离开)吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -340,6 +544,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要中止正在倒数中的战斗开始倒计时吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -348,6 +556,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": false,
             "Text": "要修理当前所有装备吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -356,6 +568,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要传送吗?",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -364,6 +580,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要花费.+?传送到“.+?”吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -372,6 +592,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/要(进入|离开|前往)(.*军营|.*行会|(石|沙)之家|这间房屋|码头小屋|.*)吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -380,6 +604,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": false,
             "Text": "/即将返回“(厄尔庇斯育体宝殿|惊奇百宝城|梦羽宝殿|梦羽宝境|运河宝物库深层|运河宝物库神殿|运河宝物库|水城宝物库)”的回归点。/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -388,6 +616,22 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要以11880的价格购买6级暗物质×99吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
+            "ZoneRestricted": false,
+            "ZoneText": "",
+            "IsYes": true
+          },
+          {
+            "$type": "YesAlready.TextEntryNode, YesAlready",
+            "Enabled": true,
+            "Text": "确定要使用9,900点部队战绩交换桶装青磷水×99吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -402,6 +646,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要解散小队吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -410,6 +658,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要解散队伍吗？解散后会自动撤销已发布的队员招募。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -418,6 +670,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/.*?会带领周围的队员起进行移动。/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -432,6 +688,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要启动召唤魔法阵吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -440,6 +700,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/确定要对.+?进行解读吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -448,6 +712,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要打开宝箱吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -456,6 +724,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要打开宝箱吗？ 打开之后宝物地图便会消失。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -470,6 +742,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要进行强化吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -478,6 +754,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "要将优雷卡以太壶中积攒的混合以太进行结晶化吗？",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -490,16 +770,24 @@
         "Children": [
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
+            "Enabled": false,
             "Text": "/确定要将(萨维奈圆葱|釉质坚果|旧世界无花果|皇家可可豆|黄杏)种子种植在3级萨纳兰土壤中吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
           },
           {
             "$type": "YesAlready.TextEntryNode, YesAlready",
-            "Enabled": true,
+            "Enabled": false,
             "Text": "/确定要将(萨维奈圆葱)种子种植在园艺土壤中吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -514,6 +802,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": false,
             "Text": "/要接受前往“.+?”的传送邀请吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -522,6 +814,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "/^确定要加入.*?的小队吗？/",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -530,7 +826,11 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": true,
             "Text": "确定要退出任务吗？",
-            "ZoneRestricted": true,
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
+            "ZoneRestricted": false,
             "ZoneText": "天幕魔导城",
             "IsYes": true
           },
@@ -538,6 +838,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": false,
             "Text": "即将回到“最终决战天幕魔导城”的开始地点。  ※开战后进入封锁状态的区域， 　只有在战斗结束后才能解除封锁。",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": true,
             "ZoneText": "天幕魔导城",
             "IsYes": true
@@ -546,6 +850,10 @@
             "$type": "YesAlready.TextEntryNode, YesAlready",
             "Enabled": false,
             "Text": "Your text goes here",
+            "IsConditional": false,
+            "ConditionalNumberTemplate": "",
+            "ConditionalNumber": 0,
+            "ComparisonType": 3,
             "ZoneRestricted": false,
             "ZoneText": "",
             "IsYes": true
@@ -554,17 +862,21 @@
       }
     ]
   },
-  "ListRootFolder": {
+  "OkRootFolder": {
     "$type": "YesAlready.TextFolderNode, YesAlready",
     "Name": "/",
     "Children": [
       {
-        "$type": "YesAlready.ListEntryNode, YesAlready",
+        "$type": "YesAlready.OkEntryNode, YesAlready",
         "Enabled": false,
-        "Text": "Add some text here!",
-        "TargetRestricted": false,
-        "TargetText": ""
-      },
+        "Text": "Add some text here!"
+      }
+    ]
+  },
+  "ListRootFolder": {
+    "$type": "YesAlready.TextFolderNode, YesAlready",
+    "Name": "/",
+    "Children": [
       {
         "$type": "YesAlready.ListEntryNode, YesAlready",
         "Enabled": true,
@@ -588,7 +900,7 @@
       },
       {
         "$type": "YesAlready.ListEntryNode, YesAlready",
-        "Enabled": false,
+        "Enabled": true,
         "Text": "制作任务",
         "TargetRestricted": true,
         "TargetText": "格里格"
@@ -669,6 +981,13 @@
         "Text": "移动到部队工房",
         "TargetRestricted": true,
         "TargetText": "移动到其他房间"
+      },
+      {
+        "$type": "YesAlready.ListEntryNode, YesAlready",
+        "Enabled": true,
+        "Text": "制作委托：提高品质用的炼金药",
+        "TargetRestricted": true,
+        "TargetText": "阿尔德伊恩"
       }
     ]
   },
@@ -694,27 +1013,12 @@
       {
         "$type": "YesAlready.TalkEntryNode, YesAlready",
         "Enabled": true,
-        "TargetText": ""
+        "TargetText": "格里格"
       },
       {
         "$type": "YesAlready.TalkEntryNode, YesAlready",
         "Enabled": true,
-        "TargetText": ""
-      },
-      {
-        "$type": "YesAlready.TalkEntryNode, YesAlready",
-        "Enabled": true,
-        "TargetText": ""
-      },
-      {
-        "$type": "YesAlready.TalkEntryNode, YesAlready",
-        "Enabled": true,
-        "TargetText": ""
-      },
-      {
-        "$type": "YesAlready.TalkEntryNode, YesAlready",
-        "Enabled": true,
-        "TargetText": ""
+        "TargetText": "阿尔德伊恩"
       }
     ]
   },
@@ -728,10 +1032,24 @@
   "RetainerTaskResultEnabled": false,
   "GrandCompanySupplyReward": false,
   "ShopCardDialog": true,
+  "ShopExchangeItemDialogEnabled": false,
   "JournalResultCompleteEnabled": false,
-  "ContentsFinderConfirmEnabled": false,
+  "ContentsFinderConfirmEnabled": true,
   "ContentsFinderOneTimeConfirmEnabled": false,
   "InclusionShopRememberEnabled": false,
   "InclusionShopRememberCategory": 1,
-  "InclusionShopRememberSubcategory": 9
+  "InclusionShopRememberSubcategory": 8,
+  "GuildLeveDifficultyConfirm": false,
+  "FallGuysRegisterConfirm": false,
+  "FallGuysExitConfirm": false,
+  "RetainerTransferListConfirm": false,
+  "RetainerTransferProgressConfirm": false,
+  "DesynthesisResults": false,
+  "AetherialReductionResults": false,
+  "FashionCheckQuit": false,
+  "LordOfVerminionQuit": false,
+  "ChocoboRacingQuit": false,
+  "PartyFinderJoinConfirm": false,
+  "GimmickYesNo": false,
+  "LotteryWeeklyInput": false
 }

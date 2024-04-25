@@ -1,0 +1,77 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CurrencyTracker/1.3.5.1": {
+        "dependencies": {
+          "DalamudPackager": "2.1.12",
+          "IntervalUtility": "1.0.0",
+          "OmenTools": "1.0.0",
+          "TinyPinyin": "1.1.0"
+        },
+        "runtime": {
+          "CurrencyTracker.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.12": {},
+      "IntervalUtility/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/IntervalUtility.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TinyPinyin/1.1.0": {
+        "runtime": {
+          "lib/net6.0/TinyPinyin.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "OmenTools/1.0.0": {
+        "runtime": {
+          "OmenTools.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CurrencyTracker/1.3.5.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sc0PVxvgg4NQjcI8n10/VfUQBAS4O+Fw2pZrAqBdRMbthYGeogzu5+xmIGCGmsEZ/ukMOBuAqiNiB5qA3MRalg==",
+      "path": "dalamudpackager/2.1.12",
+      "hashPath": "dalamudpackager.2.1.12.nupkg.sha512"
+    },
+    "IntervalUtility/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3/7cz5Y0U5QCX/K1j8IRGDwQVsFVpXdjDhIVoJ1RnRkaTjmjr8nuyIEwkFjhXFs8ORykFLlrCXIt4f+AEsUXVA==",
+      "path": "intervalutility/1.0.0",
+      "hashPath": "intervalutility.1.0.0.nupkg.sha512"
+    },
+    "TinyPinyin/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pwe99NXsWkSeJdOwzcweorlyoB2frOlTU37QwzmnnxfRT5vRENXm4UOl5g4Nxq5V9lYOBWK1mZIozFfIlDVjYA==",
+      "path": "tinypinyin/1.1.0",
+      "hashPath": "tinypinyin.1.1.0.nupkg.sha512"
+    },
+    "OmenTools/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

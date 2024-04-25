@@ -1,6 +1,7 @@
 {
   "$type": "SomethingNeedDoing.SomethingNeedDoingConfiguration, SomethingNeedDoing",
   "Version": 1,
+  "LockWindow": false,
   "RootFolder": {
     "$type": "SomethingNeedDoing.FolderNode, SomethingNeedDoing",
     "Name": "/",
@@ -382,6 +383,14 @@
             ]
           }
         ]
+      },
+      {
+        "$type": "SomethingNeedDoing.MacroNode, SomethingNeedDoing",
+        "Name": "lifu",
+        "Contents": "/target 格里格 <wait.0.2>\n/send NUMPAD0\n/waitaddon GuildLeve <wait.0.2>\n#/click guild_leve_alchemist <wait.0.2>\n/click journal_detail_accept <wait.0.3>\n/send ESCAPE <wait.0.3>\n/send ESCAPE <wait.0.7>\n/target 阿尔德伊恩 <wait.0.2>\n/send NUMPAD0 <wait.2>\n/loop 99",
+        "CraftingLoop": false,
+        "CraftLoopCount": 0,
+        "IsLua": false
       }
     ]
   },
@@ -401,6 +410,14 @@
   "BeepFrequency": 900,
   "BeepDuration": 250,
   "BeepCount": 3,
+  "UseSNDTargeting": true,
+  "UseItemStructsVersion": true,
+  "StopMacroIfActionTimeout": true,
+  "StopMacroIfItemNotFound": true,
+  "StopMacroIfCantUseItem": true,
+  "StopMacroIfTargetNotFound": true,
+  "StopMacroIfAddonNotFound": true,
+  "StopMacroIfAddonNotVisible": true,
   "ChatType": 57,
   "ErrorChatType": 2
 }

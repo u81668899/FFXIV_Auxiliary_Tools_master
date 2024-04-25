@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Auto" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="AutoAntiAfkDescription" xml:space="preserve">
+    <value>每隔固定时间, 重置游戏内部的相关计时器, 以防止进入离开状态</value>
+  </data>
+  <data name="AutoAntiAfkTitle" xml:space="preserve">
+    <value>自动防离开状态</value>
+  </data>
+  <data name="AutoAntiCensorship-BypassText" xml:space="preserve">
+    <value>处理文本</value>
+  </data>
+  <data name="AutoAntiCensorship-FilteredText" xml:space="preserve">
+    <value>屏蔽文本</value>
+  </data>
+  <data name="AutoAntiCensorship-OrigText" xml:space="preserve">
+    <value>原始文本</value>
+  </data>
+  <data name="AutoAntiCensorship-Preview" xml:space="preserve">
+    <value>反屏蔽预览 (发送消息):</value>
+  </data>
+  <data name="AutoAntiCensorship-Preview1" xml:space="preserve">
+    <value>反屏蔽预览 (接收消息):</value>
+  </data>
+  <data name="AutoAntiCensorshipDescription" xml:space="preserve">
+    <value>发送消息/编辑招募描述时, 自动在屏蔽词内部加点, 或是将其转成拼音以防止屏蔽
+接收消息时, 自动阻止屏蔽词系统工作, 显示消息原文
+(模块与 StarlightBreaker, Chat 2 不相兼容) (请勿用于破坏游戏环境)</value>
+  </data>
+  <data name="AutoAntiCensorshipTitle" xml:space="preserve">
+    <value>自动反屏蔽词</value>
+  </data>
+  <data name="AutoCACDescription" xml:space="preserve">
+    <value>交互游戏机后, 自动开始重复游玩重击伽美什</value>
+  </data>
+  <data name="AutoCACTitle" xml:space="preserve">
+    <value>自动游玩重击伽美什</value>
+  </data>
+  <data name="AutoCancelCastDescription" xml:space="preserve">
+    <value>当目标死亡或不可选中时, 自动中断咏唱</value>
+  </data>
+  <data name="AutoCancelCastTitle" xml:space="preserve">
+    <value>自动中断咏唱</value>
+  </data>
+  <data name="AutoConfirmDesynthesizeDialogDescription" xml:space="preserve">
+    <value>道具分解界面出现后, 自动确认</value>
+  </data>
+  <data name="AutoConfirmDesynthesizeDialogTitle" xml:space="preserve">
+    <value>自动确认道具分解</value>
+  </data>
+  <data name="AutoConstantlyInspectDescription" xml:space="preserve">
+    <value>道具鉴定结果界面出现后, 自动点击继续鉴定按钮</value>
+  </data>
+  <data name="AutoConstantlyInspectTitle" xml:space="preserve">
+    <value>自动连续鉴定</value>
+  </data>
+  <data name="AutoCTSDescription" xml:space="preserve">
+    <value>交互游戏机后, 自动开始重复游玩强袭水晶塔</value>
+  </data>
+  <data name="AutoCTSTitle" xml:space="preserve">
+    <value>自动游玩强袭水晶塔</value>
+  </data>
+  <data name="AutoCutSceneSkipDescription" xml:space="preserve">
+    <value>(本模块无法跳过原本就无法跳过的动画)</value>
+  </data>
+  <data name="AutoCutSceneSkipTitle" xml:space="preserve">
+    <value>自动跳过过场动画</value>
+  </data>
+  <data name="AutoDance-AutoFinish" xml:space="preserve">
+    <value>自动使用 标准/技巧舞步结束</value>
+  </data>
+  <data name="AutoDanceDescription" xml:space="preserve">
+    <value>使用舞者技能标准/技巧舞步时, 自动使用对应的舞步技能</value>
+  </data>
+  <data name="AutoDanceTitle" xml:space="preserve">
+    <value>自动跳舞</value>
+  </data>
+  <data name="AutoDeleteLettersDescription" xml:space="preserve">
+    <value>打开莫古邮件界面, 切换到指定类别并点击开始后, 即会批量删除该类别下所有的邮件</value>
+  </data>
+  <data name="AutoDeleteLettersTitle" xml:space="preserve">
+    <value>自动批量删除邮件</value>
+  </data>
+  <data name="AutoDesynthesizeItems-SkipHQ" xml:space="preserve">
+    <value>跳过 HQ 物品</value>
+  </data>
+  <data name="AutoDesynthesizeItemsDescription" xml:space="preserve">
+    <value>打开道具分解列表, 并点击开始后, 自动分解所有道具
+(前置模块: 自动确认道具分解)</value>
+  </data>
+  <data name="AutoDesynthesizeItemsTitle" xml:space="preserve">
+    <value>自动道具分解</value>
+  </data>
+  <data name="AutoDismountDescription" xml:space="preserve">
+    <value>当骑乘坐骑时, 若尝试使用可用技能, 则自动下坐骑并使用技能</value>
+  </data>
+  <data name="AutoDismountTitle" xml:space="preserve">
+    <value>自动下坐骑</value>
+  </data>
+  <data name="AutoDrawACardDescription" xml:space="preserve">
+    <value>进入副本后, 若当前职业为占星术士, 且等级大于 30, 则自动抽卡一次</value>
+  </data>
+  <data name="AutoDrawACardTitle" xml:space="preserve">
+    <value>自动抽卡</value>
+  </data>
+  <data name="AutoExpertDelivery-SkipHQ" xml:space="preserve">
+    <value>跳过 HQ 物品</value>
+  </data>
+  <data name="AutoExpertDeliveryDescription" xml:space="preserve">
+    <value>打开筹备任务界面, 并点击开始后, 自动上交装备兑换军票</value>
+  </data>
+  <data name="AutoExpertDeliveryTitle" xml:space="preserve">
+    <value>自动筹备稀有品</value>
+  </data>
+  <data name="AutoGardensWork-AutoFertilize" xml:space="preserve">
+    <value>自动施肥</value>
+  </data>
+  <data name="AutoGardensWork-AutoGather" xml:space="preserve">
+    <value>自动收获</value>
+  </data>
+  <data name="AutoGardensWork-AutoPlant" xml:space="preserve">
+    <value>自动种植</value>
+  </data>
+  <data name="AutoGardensWork-AutoTend" xml:space="preserve">
+    <value>自动护理</value>
+  </data>
+  <data name="AutoGardensWork-Fertilizer" xml:space="preserve">
+    <value>肥料</value>
+  </data>
+  <data name="AutoGardensWork-Seed" xml:space="preserve">
+    <value>种子</value>
+  </data>
+  <data name="AutoGardensWork-Soil" xml:space="preserve">
+    <value>土壤</value>
+  </data>
+  <data name="AutoGardensWorkDescription" xml:space="preserve">
+    <value>启用并配置完成后, 帮你自动或半自动完成园圃相关作业</value>
+  </data>
+  <data name="AutoGardensWorkTitle" xml:space="preserve">
+    <value>自动园圃作业</value>
+  </data>
+  <data name="AutoCommenceDutyTitle" xml:space="preserve">
+    <value>自动任务出发确认</value>
+  </data>
+  <data name="AutoCommenceDutyDescription" xml:space="preserve">
+    <value>任务出发确认窗口出现后, 自动点击出发按钮</value>
+  </data>
+  <data name="AutoInDutySelectYesDescription" xml:space="preserve">
+    <value>进入副本后, 自动确认副本内交互物体时出现的对话框</value>
+  </data>
+  <data name="AutoInDutySelectYesTitle" xml:space="preserve">
+    <value>自动确认副本内物体对话框</value>
+  </data>
+  <data name="AutoLeveQuests-GetAreaLeveData" xml:space="preserve">
+    <value>获取本区域理符任务</value>
+  </data>
+  <data name="AutoLeveQuests-ObtainLeveClientID" xml:space="preserve">
+    <value>获取理符委托人 ID</value>
+  </data>
+  <data name="AutoLeveQuests-ObtainLevemeteID" xml:space="preserve">
+    <value>获取理符发行人 ID</value>
+  </data>
+  <data name="AutoLeveQuests-OperationDelay" xml:space="preserve">
+    <value>操作延迟 (毫秒)</value>
+  </data>
+  <data name="AutoLeveQuests-OperationDelayHelp" xml:space="preserve">
+    <value>本模块默认状态下操作速度较快, 若你身边其他玩家数量较多, 请调高操作延迟</value>
+  </data>
+  <data name="AutoLeveQuests-SelectedLeve" xml:space="preserve">
+    <value>选择理符:</value>
+  </data>
+  <data name="AutoLeveQuestsDescription" xml:space="preserve">
+    <value>配置完成并点击开始后, 自动重复完成指定的生产理符任务, 直至理符额度耗尽
+(前置模块: 自动选择并递交物品, 自动跳过对话, 自动确认任务结果)</value>
+  </data>
+  <data name="AutoLeveQuestsTitle" xml:space="preserve">
+    <value>自动批量完成生产理符</value>
+  </data>
+  <data name="AutoLogin-CharacterIndex" xml:space="preserve">
+    <value>角色索引</value>
+  </data>
+  <data name="AutoLogin-CharaIndexInputTooltip" xml:space="preserve">
+    <value>各服务器下, 第一名角色的索引为 0, 第二名为 1, 以此类推</value>
+  </data>
+  <data name="AutoLogin-CurrentWorld" xml:space="preserve">
+    <value>当前服务器</value>
+  </data>
+  <data name="AutoLogin-LoginState" xml:space="preserve">
+    <value>登录状态</value>
+  </data>
+  <data name="AutoLogin-ServerName" xml:space="preserve">
+    <value>服务器名</value>
+  </data>
+  <data name="AutoLogin-ServerNotFoundErrorMessage" xml:space="preserve">
+    <value>服务器 "{0}" 不存在, 请重新输入</value>
+  </data>
+  <data name="AutoLoginDescription" xml:space="preserve">
+    <value>启用并配置完成后, 下次开启游戏时, 自动登录到你所选择的角色</value>
+  </data>
+  <data name="AutoLoginTitle" xml:space="preserve">
+    <value>自动登录</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-DisplayLeftCurrents" xml:space="preserve">
+    <value>显示剩余标点</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-DisplayLeftCurrentsHelp" xml:space="preserve">
+    <value>仅在待显示的野外风脉泉超过 8 个时, 才需要点击此按钮</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-FieldMarkerHelp" xml:space="preserve">
+    <value>根据风脉泉界面 从右到左 依次显示为:
+A / B / C / D / 1 / 2 / 3 / 4</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-ManuallySelectCurrent" xml:space="preserve">
+    <value>手动指定待显示的风脉泉</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-ManuallySelectCurrentHelp" xml:space="preserve">
+    <value>下方勾选框与游戏原生风脉泉界面的野外风脉为逐个对应关系
+若已在目标地图, 则在选择后需要手动刷新一次标点显示</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-RefreshDisplay" xml:space="preserve">
+    <value>刷新标点显示</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-RemoveAllWaymarks" xml:space="preserve">
+    <value>清除所有标点</value>
+  </data>
+  <data name="AutoMarkAetherCurrents-RemoveSelectedAC" xml:space="preserve">
+    <value>清除已选风脉</value>
+  </data>
+  <data name="AutoMarkAetherCurrentsDescription" xml:space="preserve">
+    <value>在地图上自动标记所有风脉泉的位置, 打开风脉泉界面后, 允许自定义待显示的风脉泉</value>
+  </data>
+  <data name="AutoMarkAetherCurrentsTitle" xml:space="preserve">
+    <value>自动标记风脉泉</value>
+  </data>
+  <data name="AutoMaterializeDescription" xml:space="preserve">
+    <value>打开精制魔晶石界面, 并点击开始后, 自动精制当前类别下所有装备的魔晶石</value>
+  </data>
+  <data name="AutoMaterializeTitle" xml:space="preserve">
+    <value>自动精制魔晶石</value>
+  </data>
+  <data name="AutoMiniCactpotDescription" xml:space="preserve">
+    <value>进入仙人微彩界面后, 自动完成当日所有的仙人微彩</value>
+  </data>
+  <data name="AutoMiniCactpotTitle" xml:space="preserve">
+    <value>自动完成仙人微彩</value>
+  </data>
+  <data name="AutoMJIGather-CollectGatherPointsHelp" xml:space="preserve">
+    <value>因物体渲染距离限制, 初次使用请先开启数据采集模式, 然后飞遍全岛一次记录各采集点数据, 后续使用无需再次采集数据
+(由于游戏过图限制, 该模块采集方式无法处理水下采集点, 如有需要, 请使用 visland)</value>
+  </data>
+  <data name="AutoMJIGather-CollectGatherPointsInfo" xml:space="preserve">
+    <value>{0}获取采集点数据</value>
+  </data>
+  <data name="AutoMJIGather-GatherProcessInfo" xml:space="preserve">
+    <value>当前进度: {0} / {1}</value>
+  </data>
+  <data name="AutoMJIGather-InsufficientGatherNodes" xml:space="preserve">
+    <value>已选择的采集点数量过少 (≤ 10), 请重新选择</value>
+  </data>
+  <data name="AutoMJIGather-NodesInfo" xml:space="preserve">
+    <value>已获取 {0} 类采集点, 已选择 {1} 类, 共 {2} 个</value>
+  </data>
+  <data name="AutoMJIGather-NotInIslandMessage" xml:space="preserve">
+    <value>当前未处于无人岛区域, 已停止采集</value>
+  </data>
+  <data name="AutoMJIGather-ReachCapsMessage" xml:space="preserve">
+    <value>无人岛素材达到上限, 已停止自动采集</value>
+  </data>
+  <data name="AutoMJIGather-StopWhenReachCaps" xml:space="preserve">
+    <value>素材达到上限时停止采集并发送通知</value>
+  </data>
+  <data name="AutoMJIGatherDescription" xml:space="preserve">
+    <value>配置完成并点击开始后, 自动循环采集无人岛素材</value>
+  </data>
+  <data name="AutoMJIGatherTitle" xml:space="preserve">
+    <value>自动无人岛采集</value>
+  </data>
+  <data name="AutoMountDescription" xml:space="preserve">
+    <value>区域变更或结束采集后, 自动上坐骑</value>
+  </data>
+  <data name="AutoMountTitle" xml:space="preserve">
+    <value>自动上坐骑</value>
+  </data>
+  <data name="AutoMT-InterruptNotice" xml:space="preserve">
+    <value>注: 仅支持在两场游戏间打断, 若要在游戏过程中打断, 请手动卸载模块</value>
+  </data>
+  <data name="AutoMTDescription" xml:space="preserve">
+    <value>交互游戏机后, 自动开始重复游玩怪物投篮</value>
+  </data>
+  <data name="AutoMTTitle" xml:space="preserve">
+    <value>自动游玩怪物投篮</value>
+  </data>
+  <data name="AutoNotifyCutSceneEnd-NotificationMessage" xml:space="preserve">
+    <value>所有队友的过场动画均已结束</value>
+  </data>
+  <data name="AutoNotifyCutSceneEnd-NotificationMessageHelp" xml:space="preserve">
+    <value>提示信息外观 (Windows 10+)</value>
+  </data>
+  <data name="AutoNotifyCutSceneEndDescription" xml:space="preserve">
+    <value>在副本内, 如若队友观看过场剧情超过五秒, 则在全部队友的过场剧情都已结束时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyCutSceneEndTitle" xml:space="preserve">
+    <value>自动通知过场剧情结束</value>
+  </data>
+  <data name="AutoNotifyDutyConfirm-NoticeMessage" xml:space="preserve">
+    <value>任务: {0}</value>
+  </data>
+  <data name="AutoNotifyDutyConfirmDescription" xml:space="preserve">
+    <value>当排到副本时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyDutyConfirmTitle" xml:space="preserve">
+    <value>自动通知任务出发确认</value>
+  </data>
+  <data name="AutoNotifyDutyName-NoticeMessage" xml:space="preserve">
+    <value>副本: {0}</value>
+  </data>
+  <data name="AutoNotifyDutyName-SendWindowsToast" xml:space="preserve">
+    <value>同时发送系统通知</value>
+  </data>
+  <data name="AutoNotifyDutyNameDescription" xml:space="preserve">
+    <value>在进入副本时, 自动在聊天栏通知当前副本名称</value>
+  </data>
+  <data name="AutoNotifyDutyNameTitle" xml:space="preserve">
+    <value>自动通知副本名称</value>
+  </data>
+  <data name="AutoNotifyDutyStart-NotificationMessage" xml:space="preserve">
+    <value>副本任务已开始</value>
+  </data>
+  <data name="AutoNotifyDutyStartDescription" xml:space="preserve">
+    <value>在副本内, 当副本任务开始时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyDutyStartTitle" xml:space="preserve">
+    <value>自动通知副本开始</value>
+  </data>
+  <data name="AutoNotifyMessages-BlockOwnMessages" xml:space="preserve">
+    <value>屏蔽自己发送的消息</value>
+  </data>
+  <data name="AutoNotifyMessages-NotificationMessageHelp" xml:space="preserve">
+    <value>提示信息外观 (Windows 10+)</value>
+  </data>
+  <data name="AutoNotifyMessages-SelectedTypesAmount" xml:space="preserve">
+    <value>已选择 {0} 种消息类型</value>
+  </data>
+  <data name="AutoNotifyMessagesDescription" xml:space="preserve">
+    <value>启用并配置完毕后, 当你选择的消息类型有新消息传入时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyMessagesTitle" xml:space="preserve">
+    <value>自动通知新消息</value>
+  </data>
+  <data name="AutoNotifyReadyCheckDescription" xml:space="preserve">
+    <value>收到准备确认时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyReadyCheckTitle" xml:space="preserve">
+    <value>自动通知准备确认</value>
+  </data>
+  <data name="AutoNotifyCountdownTitle" xml:space="preserve">
+    <value>自动通知倒计时开始</value>
+  </data>
+  <data name="AutoNotifyCountdown-NotificationTitle" xml:space="preserve">
+    <value>开始倒计时</value>
+  </data>
+  <data name="AutoNotifyCountdownDescription" xml:space="preserve">
+    <value>在开始倒计时时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyLeveUpdateTitle" xml:space="preserve">
+    <value>自动通知理符限额刷新</value>
+  </data>
+  <data name="AutoNotifyLeveUpdateDescription" xml:space="preserve">
+    <value>在理符刷新时检查当前限额, 自动发送一条 Windows 系统通知, 提醒预计达限的日期</value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-NotificationTitle" xml:space="preserve">
+    <value>理符限额已达设定值或将要溢出 </value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-NumText" xml:space="preserve">
+    <value>当前限额数量: </value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-FullTimeText" xml:space="preserve">
+    <value>预计达限时间: </value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-UpdateTimeText" xml:space="preserve">
+    <value>下次刷新时间: </value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-NotificationMessageHelp" xml:space="preserve">
+    <value>提示信息外观 (Windows 10+)</value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-OnChatMessageConfig" xml:space="preserve">
+    <value>同时发送至聊天栏</value>
+  </data>
+  <data name="AutoNotifyLeveUpdate-NotificationThreshold" xml:space="preserve">
+    <value>提醒阈值</value>
+  </data>
+  <data name="AutoNotifyCountdown-NotificationMessageHelp" xml:space="preserve">
+    <value>提示信息外观 (Windows 10+)</value>
+  </data>
+  <data name="AutoNotifyRecruitmentEndDescription" xml:space="preserve">
+    <value>在发布的队员招募因各种原因结束时, 自动发送一条 Windows 系统通知</value>
+  </data>
+  <data name="AutoNotifyRecruitmentEndTitle" xml:space="preserve">
+    <value>自动通知招募结束</value>
+  </data>
+  <data name="AutoNoviceNetwork-AttemptedTimes" xml:space="preserve">
+    <value>已尝试次数</value>
+  </data>
+  <data name="AutoNoviceNetwork-HaveJoined" xml:space="preserve">
+    <value>已加入过</value>
+  </data>
+  <data name="AutoNoviceNetwork-HaveNotJoined" xml:space="preserve">
+    <value>未加入过</value>
+  </data>
+  <data name="AutoNoviceNetwork-JoinState" xml:space="preserve">
+    <value>加入状态</value>
+  </data>
+  <data name="AutoNoviceNetwork-TryJoinWhenInactive" xml:space="preserve">
+    <value>自动尝试加入新人频道</value>
+  </data>
+  <data name="AutoNoviceNetwork-TryJoinWhenInactiveHelp" xml:space="preserve">
+    <value>当游戏处于不活跃状态/后台, 且当前状态可加入新人频道时,
+每隔固定时间, 自动尝试加入新人频道一次</value>
+  </data>
+  <data name="AutoNoviceNetworkDescription" xml:space="preserve">
+    <value>点击开始后, 自动重复尝试加入新人频道</value>
+  </data>
+  <data name="AutoNoviceNetworkTitle" xml:space="preserve">
+    <value>自动加入新人频道</value>
+  </data>
+  <data name="AutoPlayCards-MeleeCard" xml:space="preserve">
+    <value>近战卡</value>
+  </data>
+  <data name="AutoPlayCards-Message" xml:space="preserve">
+    <value>将 {0} 发给了 {1}{2} {3}</value>
+  </data>
+  <data name="AutoPlayCards-RangeCard" xml:space="preserve">
+    <value>远程卡</value>
+  </data>
+  <data name="AutoPlayCards-SendMessage" xml:space="preserve">
+    <value>发送奥秘卡去向消息</value>
+  </data>
+  <data name="AutoPlayCardsDescription" xml:space="preserve">
+    <value>使用占星术士技能出卡时, 自动将当前抽到的卡发给一位适合的队友</value>
+  </data>
+  <data name="AutoPlayCardsTitle" xml:space="preserve">
+    <value>自动出卡</value>
+  </data>
+  <data name="AutoPlayerCommend-NoticeMessage" xml:space="preserve">
+    <value>已给予 {0}{1} {2} 最优队员推荐</value>
+  </data>
+  <data name="AutoPlayerCommendDescription" xml:space="preserve">
+    <value>副本完成时, 自动给予对位队友最优队员推荐</value>
+  </data>
+  <data name="AutoPlayerCommendTitle" xml:space="preserve">
+    <value>自动最优队员推荐</value>
+  </data>
+  <data name="AutoPreventDuplicateStatus-Action" xml:space="preserve">
+    <value>技能</value>
+  </data>
+  <data name="AutoPreventDuplicateStatus-DetectType" xml:space="preserve">
+    <value>检测类型</value>
+  </data>
+  <data name="AutoPreventDuplicateStatus-Member" xml:space="preserve">
+    <value>队友</value>
+  </data>
+  <data name="AutoPreventDuplicateStatus-RelatedStatus" xml:space="preserve">
+    <value>关联状态</value>
+  </data>
+  <data name="AutoPreventDuplicateStatus-Self" xml:space="preserve">
+    <value>自身</value>
+  </data>
+  <data name="AutoPreventDuplicateStatus-Target" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="AutoPreventDuplicateStatusDescription" xml:space="preserve">
+    <value>启用并配置完成后, 使用相应技能时, 会自动检测相关状态是否已存在, 以防止团辅/团减等重叠</value>
+  </data>
+  <data name="AutoPreventDuplicateStatusTitle" xml:space="preserve">
+    <value>自动防技能重复</value>
+  </data>
+  <data name="AutoQTEDescription" xml:space="preserve">
+    <value>在副本中, 自动完成全种类的动态演练 (QTE)</value>
+  </data>
+  <data name="AutoQTETitle" xml:space="preserve">
+    <value>自动完成动态演练</value>
+  </data>
+  <data name="AutoQuestAcceptDescription" xml:space="preserve">
+    <value>任务接取界面出现后, 自动点击确认按钮</value>
+  </data>
+  <data name="AutoQuestAcceptTitle" xml:space="preserve">
+    <value>自动确认任务接取</value>
+  </data>
+  <data name="AutoQuestCompleteDescription" xml:space="preserve">
+    <value>任务结果界面出现后, 自动点击完成按钮</value>
+  </data>
+  <data name="AutoQuestCompleteTitle" xml:space="preserve">
+    <value>自动确认任务结果</value>
+  </data>
+  <data name="AutoRefocusDescription" xml:space="preserve">
+    <value>在副本内, 若丢失的焦点目标再次出现, 则自动重新焦点</value>
+  </data>
+  <data name="AutoRefocusTitle" xml:space="preserve">
+    <value>自动重新焦点目标</value>
+  </data>
+  <data name="AutoRefreshInvalidPortraitsDescription" xml:space="preserve">
+    <value>打开肖像列表, 并点击开始后, 自动刷新所有肖像, 以避免出现失效状态</value>
+  </data>
+  <data name="AutoRefreshInvalidPortraitsTitle" xml:space="preserve">
+    <value>自动刷新失效肖像</value>
+  </data>
+  <data name="AutoRefreshMarketSearchResultDescription" xml:space="preserve">
+    <value>当市场道具搜索结果为 "请稍后" 时, 自动重新请求获取</value>
+  </data>
+  <data name="AutoRefreshMarketSearchResultTitle" xml:space="preserve">
+    <value>自动刷新市场搜索结果</value>
+  </data>
+  <data name="AutoRefreshPartyFinder-OnlyInactive" xml:space="preserve">
+    <value>仅未操作状态下</value>
+  </data>
+  <data name="AutoRefreshPartyFinder-RefreshInterval" xml:space="preserve">
+    <value>刷新间隔(秒)</value>
+  </data>
+  <data name="AutoRefreshPartyFinderDescription" xml:space="preserve">
+    <value>打开队员招募后, 每经过固定间隔时间时, 自动刷新一次招募板</value>
+  </data>
+  <data name="AutoRefreshPartyFinderTitle" xml:space="preserve">
+    <value>自动刷新招募板</value>
+  </data>
+  <data name="ExpandItemMenuSearchTitle" xml:space="preserve">
+    <value>物品右键菜单搜索扩展</value>
+  </data>
+  <data name="ExpandItemMenuSearchDescription" xml:space="preserve">
+    <value>启用后, 为物品右键菜单中新增一些额外的搜索功能</value>
+  </data>
+  <data name="ExpandItemMenuSearch-CollectorSearch" xml:space="preserve">
+    <value> 搜索: 光之收藏家</value>
+  </data>
+  <data name="ExpandItemMenuSearch-SearchGlamour" xml:space="preserve">
+    <value>搜索投影装备 (如果存在)</value>
+  </data>
+  <data name="ExpandItemMenuSearch-WikiSearch" xml:space="preserve">
+    <value> 搜索: Wiki</value>
+  </data>
+  <data name="AutoRemoveArmoireItemsFromDresserDescription" xml:space="preserve">
+    <value>打开投影台界面, 并点击开始后, 自动取出投影台中所有可放入收藏柜的装备
+(请预留尽可能多的背包空间并随时准备停止)</value>
+  </data>
+  <data name="AutoRemoveArmoireItemsFromDresserTitle" xml:space="preserve">
+    <value>自动取出投影台中可放入收藏柜装备</value>
+  </data>
+  <data name="AutoRequestItemSubmitDescription" xml:space="preserve">
+    <value>在递交物品时, 自动选择物品并完成递交</value>
+  </data>
+  <data name="AutoRequestItemSubmitTitle" xml:space="preserve">
+    <value>自动选择并递交物品</value>
+  </data>
+  <data name="AutoRetainerCollectDescription" xml:space="preserve">
+    <value>打开雇员列表界面后, 自动确认已探索结束雇员的探险结果并重新委派
+(前置模块: 自动跳过对话)</value>
+  </data>
+  <data name="AutoRetainerCollectTitle" xml:space="preserve">
+    <value>自动收取雇员</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-AdjustForListItems" xml:space="preserve">
+    <value>改价 (出售列表)</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-AdjustForRetainers" xml:space="preserve">
+    <value>改价 (所有雇员)</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-LowestAcceptablePrice" xml:space="preserve">
+    <value>最低可接受价格</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-MaxPriceReduction" xml:space="preserve">
+    <value>最大可接受降价值</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-MaxPriceReductionInputHelp" xml:space="preserve">
+    <value>设置为 0 以禁用</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-SeparateNQAndHQ" xml:space="preserve">
+    <value>区分 HQ 和 NQ 物品</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-SeparateNQAndHQHelp" xml:space="preserve">
+    <value>勾选则代表, 若出售物品为 HQ, 则只获取市场上 HQ 物品的价格
+如若出售物品中无 HQ, 则取 NQ 商品价格</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-SinglePriceReductionValue" xml:space="preserve">
+    <value>单次压价值</value>
+  </data>
+  <data name="AutoRetainerPriceAdjustDescription" xml:space="preserve">
+    <value>打开雇员出售列表后, 自动将所有出售商品价格改为当前市场最低价格减去指定值
+出售物品时, 自动获取当前市场最低价并完成出售
+(前置模块: 自动刷新市场搜索结果)</value>
+  </data>
+  <data name="AutoRetainerPriceAdjustTitle" xml:space="preserve">
+    <value>自动雇员改价</value>
+  </data>
+  <data name="AutoRetainersDispatch-WhatIsTheList" xml:space="preserve">
+    <value>什么是雇员登记市场变更列表?</value>
+  </data>
+  <data name="AutoRetainersDispatchDescription" xml:space="preserve">
+    <value>打开雇员窗口的雇员登记市场变更列表, 点击开始后, 自动将所有雇员的登记市场改为当前城市
+(前置模块: 自动跳过对话)</value>
+  </data>
+  <data name="AutoRetainersDispatchTitle" xml:space="preserve">
+    <value>自动变更雇员登记市场</value>
+  </data>
+  <data name="AutoSellCardsConfirm-CurrentCardNotInDeckMessage" xml:space="preserve">
+    <value>当前幻卡未被收录, 已停止自动幻卡回收</value>
+  </data>
+  <data name="AutoSellCardsConfirmDescription" xml:space="preserve">
+    <value>幻卡回收界面出现后, 自动点击确认按钮
+点击开始后, 自动回收当前所有已收录幻卡</value>
+  </data>
+  <data name="AutoSellCardsConfirmTitle" xml:space="preserve">
+    <value>自动幻卡回收</value>
+  </data>
+  <data name="AutoShareRetainersGilsEvenly-Help" xml:space="preserve">
+    <value>1. 请在雇员列表打开的状态下使用本模块
+2. 请避免在启用了 自动收取雇员 模块且有雇员 即将完成探险的情况下使用本模块
+
+调整方式说明:
+方式1: 按照固定顺序调整 (雇员间金币极端不平均的情况下至少需要 背包里有所有雇员金币总数一半的金币)
+方式2: 先取出所有金币, 再依次调整 (请自行避免因金币达到上限而蒙受损失的情况)</value>
+  </data>
+  <data name="AutoShareRetainersGilsEvenly-Method1" xml:space="preserve">
+    <value>方式1</value>
+  </data>
+  <data name="AutoShareRetainersGilsEvenly-Method2" xml:space="preserve">
+    <value>方式2</value>
+  </data>
+  <data name="AutoShareRetainersGilsEvenlyDescription" xml:space="preserve">
+    <value>配置完毕并点击开始后, 自动平均各个雇员所保管的金币数量
+(前置模块: 自动跳过对话)</value>
+  </data>
+  <data name="AutoShareRetainersGilsEvenlyTitle" xml:space="preserve">
+    <value>自动平均雇员金币</value>
+  </data>
+  <data name="AutoSkipPraetoriumDescription" xml:space="preserve">
+    <value>自动跳过神兵要塞帝国南方堡、最终决战天幕魔导城和究极神兵破坏作战的过场动画</value>
+  </data>
+  <data name="AutoSkipPraetoriumTitle" xml:space="preserve">
+    <value>自动跳过主随过场动画</value>
+  </data>
+  <data name="AutoSubmarineCollect-FailGettingSubmarineInfo" xml:space="preserve">
+    <value>获取潜水艇信息失败, 请重试</value>
+  </data>
+  <data name="AutoSubmarineCollect-LackSpecificItems" xml:space="preserve">
+    <value>{0} 不足, 已停止潜水艇自动收取</value>
+  </data>
+  <data name="AutoSubmarineCollect-WhatIsTheList" xml:space="preserve">
+    <value>什么是潜水艇列表?</value>
+  </data>
+  <data name="AutoSubmarineCollectDescription" xml:space="preserve">
+    <value>打开潜水艇列表, 并点击开始后, 自动确认潜水艇探索结果并重新委派
+(前置模块: 自动跳过过场动画)</value>
+  </data>
+  <data name="AutoSubmarineCollectTitle" xml:space="preserve">
+    <value>自动收取潜水艇</value>
+  </data>
+  <data name="AutoSummonPetDescription" xml:space="preserve">
+    <value>进入副本或副本内触发重新挑战后, 若当前职业需要但未召唤召唤兽, 则自动读条召唤召唤兽</value>
+  </data>
+  <data name="AutoSummonPetTitle" xml:space="preserve">
+    <value>自动召唤召唤兽</value>
+  </data>
+  <data name="AutoTalkSkipDescription" xml:space="preserve">
+    <value>出现对话框时, 自动快进跳过</value>
+  </data>
+  <data name="AutoTalkSkipTitle" xml:space="preserve">
+    <value>自动跳过对话</value>
+  </data>
+  <data name="AutoTankStance-OnlyAutoStanceWhenOneTank" xml:space="preserve">
+    <value>仅当队伍最多容纳一名防护职业时</value>
+  </data>
+  <data name="AutoTankStance-OnlyAutoStanceWhenOneTankHelp" xml:space="preserve">
+    <value>勾选本项意为:
+当副本默认状态下最多只能有一名防护职业时, 自动开启盾姿
+
+例: (默认状态下)
+当进入迷宫挑战/团队任务时, 队伍最多只能有一名防护职业, 自动开启盾姿
+当进入讨伐歼灭战/大型任务时, 队伍最多能有两名防护职业, 不自动开启盾姿</value>
+  </data>
+  <data name="AutoTankStanceDescription" xml:space="preserve">
+    <value>进入副本后, 若当前为防护职业且未开启盾姿, 则自动开启盾姿</value>
+  </data>
+  <data name="AutoTankStanceTitle" xml:space="preserve">
+    <value>自动开启盾姿</value>
+  </data>
+  <data name="AutoTMPDescription" xml:space="preserve">
+    <value>交互游戏机后, 自动开始重复游玩莫古抓球机</value>
+  </data>
+  <data name="AutoTMPTitle" xml:space="preserve">
+    <value>自动游玩莫古抓球机</value>
+  </data>
+  <data name="AutoWithdrawRetainersGils-Help" xml:space="preserve">
+    <value>1. 请在雇员列表打开的状态下使用本模块
+2. 请避免在启用了 自动收取雇员 模块且有雇员 即将完成探险的情况下使用本模块
+3. 请避免因金币达到上限而蒙受损失的情况</value>
+  </data>
+  <data name="AutoWithdrawRetainersGilsDescription" xml:space="preserve">
+    <value>启用并点击开始后, 自动取出所有雇员保管的所有金币
+(前置模块: 自动跳过对话)</value>
+  </data>
+  <data name="AutoWithdrawRetainersGilsTitle" xml:space="preserve">
+    <value>自动取出雇员金币</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>基础</value>
+  </data>
+  <data name="BiggerHDWindowText-FontScale" xml:space="preserve">
+    <value>缩放倍数</value>
+  </data>
+  <data name="BiggerHDWindowTextDescription" xml:space="preserve">
+    <value>启用并配置完毕后, 允许你自定义输入法窗口缩放倍数, 并使部分窗口的文本变得更加清晰</value>
+  </data>
+  <data name="BiggerHDWindowTextTitle" xml:space="preserve">
+    <value>自定义高清化输入法窗口</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>更新日志 ({0})</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>战斗</value>
+  </data>
+  <data name="CombatExpand" xml:space="preserve">
+    <value>战斗扩展</value>
+  </data>
+  <data name="CommandHelp" xml:space="preserve">
+    <value>打开主界面</value>
+  </data>
+  <data name="ConflictKey" xml:space="preserve">
+    <value>打断热键</value>
+  </data>
+  <data name="ConflictKey-InterruptMessage" xml:space="preserve">
+    <value>已成功打断当前操作</value>
+  </data>
+  <data name="ConflictKeyHelp" xml:space="preserve">
+    <value>部分模块会读取此处的热键设置, 以便让你使用热键对模块操作进行打断</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="ContactHelp" xml:space="preserve">
+    <value>本插件开源免费, 请勿倒卖与购买</value>
+  </data>
+  <data name="CurrentVersion" xml:space="preserve">
+    <value>当前版本</value>
+  </data>
+  <data name="CustomizeASTCardNamesDescription" xml:space="preserve">
+    <value>启用并配置完毕后, 可自定义占星术士六张奥秘卡各自的名称</value>
+  </data>
+  <data name="CustomizeASTCardNamesTitle" xml:space="preserve">
+    <value>自定义奥秘卡名称</value>
+  </data>
+  <data name="CustomizeSightDistance-MaxDistanceInput" xml:space="preserve">
+    <value>最大视距</value>
+  </data>
+  <data name="CustomizeSightDistanceDescription" xml:space="preserve">
+    <value>启用并配置完毕后, 可自定义当前游戏摄像头的最大视距</value>
+  </data>
+  <data name="CustomizeSightDistanceTitle" xml:space="preserve">
+    <value>自定义视距</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DevModuleDescription" xml:space="preserve">
+    <value>本地测试用模块专用临时标题与描述文本</value>
+  </data>
+  <data name="DevModuleTitle" xml:space="preserve">
+    <value>本地测试用模块</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="FastObjectInteract-Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="FastObjectInteract-AddToBlacklist" xml:space="preserve">
+    <value>添加至黑名单</value>
+  </data>
+  <data name="FastObjectInteract-AllowClickToTarget" xml:space="preserve">
+    <value>允许单击按钮以选中目标</value>
+  </data>
+  <data name="FastObjectInteract-BlacklistKeysList" xml:space="preserve">
+    <value>黑名单文本列表</value>
+  </data>
+  <data name="FastObjectInteract-BlacklistKeysListAmount" xml:space="preserve">
+    <value>已存在 {0} 个关键词</value>
+  </data>
+  <data name="FastObjectInteract-BlacklistKeysListInputHelp" xml:space="preserve">
+    <value>请输入关键词, 要求完全匹配</value>
+  </data>
+  <data name="FastObjectInteract-FontScale" xml:space="preserve">
+    <value>字体缩放倍数</value>
+  </data>
+  <data name="FastObjectInteract-LockWindow" xml:space="preserve">
+    <value>锁定窗口</value>
+  </data>
+  <data name="FastObjectInteract-MaxDisplayAmount" xml:space="preserve">
+    <value>最多同时显示个数</value>
+  </data>
+  <data name="FastObjectInteract-MinButtonWidth" xml:space="preserve">
+    <value>最短按钮长度</value>
+  </data>
+  <data name="FastObjectInteract-OnlyDisplayInViewRange" xml:space="preserve">
+    <value>仅显示在视线范围内的物体</value>
+  </data>
+  <data name="FastObjectInteract-Remove" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="FastObjectInteract-SelectedObjectKinds" xml:space="preserve">
+    <value>待显示目标类型</value>
+  </data>
+  <data name="FastObjectInteract-SelectedObjectKindsAmount" xml:space="preserve">
+    <value>已选择 {0} 种目标类型</value>
+  </data>
+  <data name="FastObjectInteract-WindowInvisibleWhenInteract" xml:space="preserve">
+    <value>交互时隐藏窗口</value>
+  </data>
+  <data name="FastObjectInteractDescription" xml:space="preserve">
+    <value>添加一个自定义悬浮窗, 列出周围可交互物体, 可直接点击其中的按钮以实现更快速的交互</value>
+  </data>
+  <data name="FastObjectInteractTitle" xml:space="preserve">
+    <value>快速目标交互</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="GoldSaucer" xml:space="preserve">
+    <value>金碟</value>
+  </data>
+  <data name="ImageLoading" xml:space="preserve">
+    <value>图片加载中</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="Interface" xml:space="preserve">
+    <value>界面</value>
+  </data>
+  <data name="InterfaceExpand" xml:space="preserve">
+    <value>界面扩展</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LatestDL" xml:space="preserve">
+    <value>最新版本下载</value>
+  </data>
+  <data name="LatestVersion" xml:space="preserve">
+    <value>最新版本</value>
+  </data>
+  <data name="ModulesConfig" xml:space="preserve">
+    <value>模块配置</value>
+  </data>
+  <data name="ModulesConfigHelp" xml:space="preserve">
+    <value>除非你知道你的操作可能带来的任何后果, 不然请不要随意修改模块配置文件中的内容</value>
+  </data>
+  <data name="Notice" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="NotificationManager-ReceiveMultipleMessages" xml:space="preserve">
+    <value>收到了 {0} 条新消息</value>
+  </data>
+  <data name="OnlyNotifyWhenBackground" xml:space="preserve">
+    <value>仅当游戏位于后台时提醒</value>
+  </data>
+  <data name="OpenFolder" xml:space="preserve">
+    <value>打开文件夹</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="PFPageSizeCustomize-DisplayAmount" xml:space="preserve">
+    <value>单页显示数量</value>
+  </data>
+  <data name="PFPageSizeCustomizeDescription" xml:space="preserve">
+    <value>允许自定义队员招募中单页可显示的招募数量, 上限为单页 100 个招募</value>
+  </data>
+  <data name="PFPageSizeCustomizeTitle" xml:space="preserve">
+    <value>自定义招募板单页显示数量</value>
+  </data>
+  <data name="PleaseSearch" xml:space="preserve">
+    <value>请搜索</value>
+  </data>
+  <data name="QuickChatPanel-ButtonIcon" xml:space="preserve">
+    <value>按钮图标</value>
+  </data>
+  <data name="QuickChatPanel-ButtonOffset" xml:space="preserve">
+    <value>按钮位置偏移</value>
+  </data>
+  <data name="QuickChatPanel-Buttons" xml:space="preserve">
+    <value>按钮</value>
+  </data>
+  <data name="QuickChatPanel-ButtonSize" xml:space="preserve">
+    <value>按钮大小</value>
+  </data>
+  <data name="QuickChatPanel-FontScale" xml:space="preserve">
+    <value>字体缩放倍数</value>
+  </data>
+  <data name="QuickChatPanel-IndividualMacros" xml:space="preserve">
+    <value>角色专用</value>
+  </data>
+  <data name="QuickChatPanel-LastUpdateTime" xml:space="preserve">
+    <value>上次更新时间</value>
+  </data>
+  <data name="QuickChatPanel-List" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="QuickChatPanel-Macro" xml:space="preserve">
+    <value>宏</value>
+  </data>
+  <data name="QuickChatPanel-Messages" xml:space="preserve">
+    <value>消息</value>
+  </data>
+  <data name="QuickChatPanel-OpenIconBrowser" xml:space="preserve">
+    <value>打开图标浏览界面</value>
+  </data>
+  <data name="QuickChatPanel-OverlayHeight" xml:space="preserve">
+    <value>窗口高度</value>
+  </data>
+  <data name="QuickChatPanel-OverlayMacroDisplayMode" xml:space="preserve">
+    <value>宏显示模式</value>
+  </data>
+  <data name="QuickChatPanel-SavedMacrosAmountText" xml:space="preserve">
+    <value>已选择 {0} 个用户宏</value>
+  </data>
+  <data name="QuickChatPanel-SavedMessagesAmountText" xml:space="preserve">
+    <value>已存储 {0} 条快捷消息</value>
+  </data>
+  <data name="QuickChatPanel-SendMessageHelp" xml:space="preserve">
+    <value>左键复制, 右键发送</value>
+  </data>
+  <data name="QuickChatPanel-SharedMacros" xml:space="preserve">
+    <value>角色共用</value>
+  </data>
+  <data name="QuickChatPanel-SpecialIconChar" xml:space="preserve">
+    <value>特殊字符</value>
+  </data>
+  <data name="QuickChatPanelDescription" xml:space="preserve">
+    <value>在聊天栏输入框旁新增一个面板, 用于快速发送/复制指定的预设文本/宏/游戏内特殊图标
+(模块与 Chat 2 不相兼容)</value>
+  </data>
+  <data name="QuickChatPanelTitle" xml:space="preserve">
+    <value>快捷聊天面板</value>
+  </data>
+  <data name="QuickChatPanelTitle-DragHelp" xml:space="preserve">
+    <value>按住 左SHIFT 键, 可拖拽调整窗口内消息与宏的位置</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Retainer" xml:space="preserve">
+    <value>雇员</value>
+  </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>搜索结果</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Settings-TipMessage0" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="Settings-TipMessage1" xml:space="preserve">
+    <value>1. 某一模块的功能可能被不同的插件以不同方式实现, 请勿在不同插件间重复开启, 以避免出现兼容性问题</value>
+  </data>
+  <data name="Settings-TipMessage2" xml:space="preserve">
+    <value>2. 若模块描述中出现"前置模块", 则代表该模块必须要有指定模块的辅助才能正常工作, 前置模块可以被其他插件的类似功能替代</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="TotalDL" xml:space="preserve">
+    <value>历史总计下载</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="DonateHelp" xml:space="preserve">
+    <value>如果你认可我的工作, 可以给我买杯 HQ 柠檬水
+
+注: 捐赠均为 无偿 性质, 我无法因为捐赠给出任何承诺或回报, 请务必三思而后行</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
+  <data name="GameNews" xml:space="preserve">
+    <value>官网新闻</value>
+  </data>
+  <data name="GameCalendar" xml:space="preserve">
+    <value>游戏活动日历</value>
+  </data>
+  <data name="GameCalendar-EventEnded" xml:space="preserve">
+    <value>(已结束)</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="AutoEnableAttackDescription" xml:space="preserve">
+    <value>进入战斗时, 自动为所有职业开启自动攻击</value>
+  </data>
+  <data name="AutoEnableAttackTitle" xml:space="preserve">
+    <value>自动开启自动攻击</value>
+  </data>
+  <data name="Settings-SendCalendarToCharWhenLogin" xml:space="preserve">
+    <value>登录时发送日历至聊天栏</value>
+  </data>
+  <data name="ExpandPlayerMenuSearch-FFLogsSearch" xml:space="preserve">
+    <value> 搜索: FFLogs</value>
+  </data>
+  <data name="ExpandPlayerMenuSearch-RisingStoneInfoNotFound" xml:space="preserve">
+    <value>未找到对应玩家的石之家信息</value>
+  </data>
+  <data name="ExpandPlayerMenuSearch-RisingStoneSearch" xml:space="preserve">
+    <value> 搜索: 石之家</value>
+  </data>
+  <data name="ExpandPlayerMenuSearch-TiebaSearch" xml:space="preserve">
+    <value> 搜索: 百度贴吧</value>
+  </data>
+  <data name="ExpandPlayerMenuSearchDescription" xml:space="preserve">
+    <value>启用后, 为玩家右键菜单中新增一些额外的搜索功能</value>
+  </data>
+  <data name="ExpandPlayerMenuSearchTitle" xml:space="preserve">
+    <value>玩家右键菜单搜索扩展</value>
+  </data>
+  <data name="QuickChatPanel-GameItems" xml:space="preserve">
+    <value>游戏物品</value>
+  </data>
+  <data name="ExpandPlayerMenuSearch-NextPageMessage" xml:space="preserve">
+    <value>已完成对第 {0} 页的查询, 正在查询下一页</value>
+  </data>
+  <data name="AutoHolmgangSelfDescription" xml:space="preserve">
+    <value>使用战士技能死斗时, 强制令自身为技能目标</value>
+  </data>
+  <data name="AutoHolmgangSelfTitle" xml:space="preserve">
+    <value>自动死斗自身</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-ProhibitLowerThanSellPrice" xml:space="preserve">
+    <value>禁止低于收购价格</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-SkipAdjustMessage" xml:space="preserve">
+    <value>物品:{0} (雇员: {1})
+(市场价: {2} / 原价:{3})
+已超过{4}: {5}, 跳过改价</value>
+  </data>
+  <data name="NoAttackWrongMandragoras-OnlyInTreasureHunt" xml:space="preserve">
+    <value>仅在宝物库中启用</value>
+  </data>
+  <data name="NoAttackWrongMandragorasDescription" xml:space="preserve">
+    <value>启用后, 若场上存在蔓德拉战队, 则禁止选中不符合当前击杀顺序的蔓德拉</value>
+  </data>
+  <data name="NoAttackWrongMandragorasTitle" xml:space="preserve">
+    <value>强制按顺序击杀蔓德拉战队</value>
+  </data>
+  <data name="AutoRetainerPriceAdjust-AdjustToLowestPriceWhenLower" xml:space="preserve">
+    <value>低于最低价时改成最低价</value>
+  </data>
+  <data name="ClipboardMultiLineToOneLineDescription" xml:space="preserve">
+    <value>在游戏内粘贴文本时, 强制将多行文本转成单行, 以方便游戏内编辑发送</value>
+  </data>
+  <data name="ClipboardMultiLineToOneLineTitle" xml:space="preserve">
+    <value>强制粘贴多行转单行</value>
+  </data>
+  <data name="AutoPlayCards-UseAantonomasia" xml:space="preserve">
+    <value>使用卡牌代称</value>
+  </data>
+  <data name="AutoPlayCards-UseAantonomasiaHelp" xml:space="preserve">
+    <value>使用 近战卡/远程卡 来代替消息中各卡牌原名</value>
+  </data>
+  <data name="BetterFollowTitle" xml:space="preserve">
+    <value>更好的自动跟随</value>
+  </data>
+  <data name="BetterFollowDescription" xml:space="preserve">
+    <value>启用并配置完成后, 解除了游戏原生自动跟随的目标限制, 并且能够锁定目标自动重新跟随</value>
+  </data>
+  <data name="BetterFollow-AutoReFollowConfig" xml:space="preserve">
+    <value>自动重新建立跟随</value>
+  </data>
+  <data name="BetterFollow-OnCombatOverConfig" xml:space="preserve">
+    <value>在战斗结束后</value>
+  </data>
+  <data name="BetterFollow-DelayConfig" xml:space="preserve">
+    <value>检查周期 (单位: 秒)</value>
+  </data>
+  <data name="BetterFollow-MoveType" xml:space="preserve">
+    <value>寻路方式:</value>
+  </data>
+  <data name="BetterFollow-OnDutyConfig" xml:space="preserve">
+    <value>在副本中启用</value>
+  </data>
+  <data name="BetterFollow-ForcedFollowConfig" xml:space="preserve">
+    <value>添加强制跟随命令 ({0})</value>
+  </data>
+  <data name="BetterFollow-ReloadIPC" xml:space="preserve">
+    <value>刷新插件状态</value>
+  </data>
+  <data name="BetterFollow-FollowDistance" xml:space="preserve">
+    <value>重新算路距离</value>
+  </data>
+  <data name="BetterFollow-ReFollowDistance" xml:space="preserve">
+    <value>重新跟随距离</value>
+  </data>
+  <data name="BetterFollow-Status" xml:space="preserve">
+    <value>跟踪状态: {0} / 跟踪目标: {1} / 目标是否在周围: {2}</value>
+  </data>
+  <data name="BetterFollow-CommandDesc" xml:space="preserve">
+    <value>对当前选择目标进行强制自动跟随</value>
+  </data>
+  <data name="BetterFollow-SystemFollow" xml:space="preserve">
+    <value>游戏原生跟随</value>
+  </data>
+  <data name="BetterFollow-NvavmeshFollow" xml:space="preserve">
+    <value>vnavmesh 跟随</value>
+  </data>
+  <data name="BetterFollow-NvavmeshFollowDesc" xml:space="preserve">
+    <value>请勿在跟随时关闭 vnavmesh 插件</value>
+  </data>
+  <data name="AutoMount-MountWhenCombatEnd" xml:space="preserve">
+    <value>当结束战斗时</value>
+  </data>
+  <data name="AutoMount-MountWhenGatherEnd" xml:space="preserve">
+    <value>当结束采集时</value>
+  </data>
+  <data name="AutoMount-MountWhenZoneChange" xml:space="preserve">
+    <value>当切换区域时</value>
+  </data>
+  <data name="BetterFollow-MountWhenFollowMount" xml:space="preserve">
+    <value>与跟随目标一同上坐骑</value>
+  </data>
+  <data name="BetterFollow-UnMountWhenFollowUnMount" xml:space="preserve">
+    <value>与跟随目标一同下坐骑</value>
+  </data>
+  <data name="BetterFollow-FlyingWhenFollowFlying" xml:space="preserve">
+    <value>与跟随目标一同起飞</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="AutoJumboCactpot-Fixed" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="AutoJumboCactpot-FixedNumber" xml:space="preserve">
+    <value>固定数字</value>
+  </data>
+  <data name="AutoJumboCactpot-NumberMode" xml:space="preserve">
+    <value>数字选取模式</value>
+  </data>
+  <data name="AutoJumboCactpot-Random" xml:space="preserve">
+    <value>随机</value>
+  </data>
+  <data name="AutoJumboCactpotDescription" xml:space="preserve">
+    <value>进入仙人仙彩界面后, 自动购买本周所有的仙人彩</value>
+  </data>
+  <data name="AutoJumboCactpotTitle" xml:space="preserve">
+    <value>自动完成仙人仙彩</value>
+  </data>
+  <data name="AutoLogin-BehaviourMode" xml:space="preserve">
+    <value>行为模式</value>
+  </data>
+  <data name="AutoLogin-HaveNotLogin" xml:space="preserve">
+    <value>未登录过</value>
+  </data>
+  <data name="AutoLogin-LoginInfoDisplayText" xml:space="preserve">
+    <value>服务器: {0} ({1}) / 角色索引: {2}</value>
+  </data>
+  <data name="AutoLogin-LoginInfoOrderHelp" xml:space="preserve">
+    <value>所有已存储数据会在登录时会按照下方列表所展示的顺序, 按照从上至下的优先级依次尝试登录</value>
+  </data>
+  <data name="AutoLogin-LoginInfos" xml:space="preserve">
+    <value>登录信息</value>
+  </data>
+  <data name="AutoLogin-LoginOnce" xml:space="preserve">
+    <value>已登录过</value>
+  </data>
+  <data name="AutoLogin-Once" xml:space="preserve">
+    <value>登录一次</value>
+  </data>
+  <data name="AutoLogin-Repeat" xml:space="preserve">
+    <value>重复登录</value>
+  </data>
+  <data name="AutoLogin-SavedLoginInfosAmount" xml:space="preserve">
+    <value>已存储 {0} 条登录数据</value>
+  </data>
+  <data name="CommandHelp-Search" xml:space="preserve">
+    <value>打开主界面, 并搜索指定关键词</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="GameCalendar-EndTimeMessage" xml:space="preserve">
+    <value>距离结束还有 {0} 天</value>
+  </data>
+  <data name="PublishTime" xml:space="preserve">
+    <value>发布时间</value>
+  </data>
+  <data name="LowVersionWarning" xml:space="preserve">
+    <value>版本过低, 请及时升级!
+任何来自非最新版本的报告与请求都不会被受理!</value>
+  </data>
+  <data name="AutoJoinExitDutyDescription" xml:space="preserve">
+    <value>添加 /pdr joinexitduty 指令, 使用后可快速进退副本一次</value>
+  </data>
+  <data name="AutoJoinExitDutyTitle" xml:space="preserve">
+    <value>自动进退副本一次</value>
+  </data>
+  <data name="Settings-HideOutdatedEvents" xml:space="preserve">
+    <value>隐藏已结束活动</value>
+  </data>
+  <data name="AutoPlayerCommend-BlacklistContents" xml:space="preserve">
+    <value>黑名单副本</value>
+  </data>
+  <data name="AutoPlayerCommend-BlacklistContentsAmount" xml:space="preserve">
+    <value>已存在 {0} 条副本数据</value>
+  </data>
+  <data name="AutoPlayerCommend-BlacklistPlayers" xml:space="preserve">
+    <value>黑名单玩家</value>
+  </data>
+  <data name="AutoPlayerCommend-BlacklistPlayersAmount" xml:space="preserve">
+    <value>已存在 {0} 条玩家数据</value>
+  </data>
+  <data name="AutoPlayerCommend-Content" xml:space="preserve">
+    <value>副本</value>
+  </data>
+  <data name="AutoPlayerCommend-PlayerName" xml:space="preserve">
+    <value>玩家名</value>
+  </data>
+  <data name="AutoPlayerCommend-SyncBlacklist" xml:space="preserve">
+    <value>同步</value>
+  </data>
+  <data name="AutoPlayerCommend-SyncBlacklistHelp" xml:space="preserve">
+    <value>同步游戏内黑名单玩家至此处</value>
+  </data>
+  <data name="AutoPlayerCommend-World" xml:space="preserve">
+    <value>服务器</value>
+  </data>
+</root>
