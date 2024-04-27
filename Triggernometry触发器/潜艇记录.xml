@@ -266,54 +266,57 @@
           <Action OrderNumber="27" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_Money}" TableVariableX="10" TableVariableY="${var:day}" ActionType="TableVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="28" NamedCallbackName="saveCsv" NamedCallbackParam="${_env[_DEFAULTCSVPATH_]}\潜艇记录.csv,${func:localtime(yyyy/MM/dd):${_timestamp}},${var:total_xlp},${var:total_xl},${var:total_esp},${var:total_es},${var:total_szp},${var:total_sz},${var:total_jzp},${var:total_jz},${var:total_Money}" ActionType="NamedCallback">
+          <Action OrderNumber="28" NamedCallbackName="command" NamedCallbackParam="/e 今日首饰收益：${func:format(System.Double,&quot;n0&quot;):${var:total_Money}}" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="29" NamedCallbackName="saveCsv" NamedCallbackParam="${_env[_DEFAULTCSVPATH_]}\潜艇记录.csv,${func:localtime(yyyy/MM/dd):${_timestamp}},${var:total_xlp},${var:total_xl},${var:total_esp},${var:total_es},${var:total_szp},${var:total_sz},${var:total_jzp},${var:total_jz},${var:total_Money}" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${_env[_DEFAULTCSVPATH_]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="29" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="^A(xlp|xl|esp|es|szp|sz|jzp|jz)$" TextAuraFontName="宋体" ActionType="TextAura">
+          <Action OrderNumber="30" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="^A(xlp|xl|esp|es|szp|sz|jzp|jz)$" TextAuraFontName="宋体" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="30" VariableName="Money" ActionType="Variable">
+          <Action OrderNumber="31" VariableName="Money" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="31" VariableName="total_xlp" ActionType="Variable">
+          <Action OrderNumber="32" VariableName="total_xlp" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="32" VariableName="total_xl" ActionType="Variable">
+          <Action OrderNumber="33" VariableName="total_xl" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="33" VariableName="total_esp" ActionType="Variable">
+          <Action OrderNumber="34" VariableName="total_esp" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="34" VariableName="total_es" ActionType="Variable">
+          <Action OrderNumber="35" VariableName="total_es" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="35" VariableName="total_szp" ActionType="Variable">
+          <Action OrderNumber="36" VariableName="total_szp" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="36" VariableName="total_sz" ActionType="Variable">
+          <Action OrderNumber="37" VariableName="total_sz" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="37" VariableName="total_jzp" ActionType="Variable">
+          <Action OrderNumber="38" VariableName="total_jzp" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="38" VariableName="total_jz" ActionType="Variable">
+          <Action OrderNumber="39" VariableName="total_jz" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="39" VariableName="total_Money" ActionType="Variable">
+          <Action OrderNumber="40" VariableName="total_Money" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="40" VariableName="day" ActionType="Variable">
+          <Action OrderNumber="41" VariableName="day" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="41" TableVariableOp="Append" TableVariableName="Data" TableVariableTarget="潜艇记录" TableTargetPersist="True" ActionType="TableVariable">
+          <Action OrderNumber="42" TableVariableOp="Append" TableVariableName="Data" TableVariableTarget="潜艇记录" TableTargetPersist="True" ActionType="TableVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="42" TableVariableName="Data" ActionType="TableVariable">
+          <Action OrderNumber="43" TableVariableName="Data" ActionType="TableVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="43" ActionType="SystemBeep">
+          <Action OrderNumber="44" ActionType="SystemBeep">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
