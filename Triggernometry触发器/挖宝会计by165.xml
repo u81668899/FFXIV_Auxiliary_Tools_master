@@ -1425,12 +1425,12 @@
                 <Actions>
                   <Action OrderNumber="1" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_失败洋葱" VariableExpression="${pvar:tb_失败洋葱}+1" VariablePersist="True" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_洋葱id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:tb_洋葱id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="2" ListVariableName="tb_洋葱id" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_洋葱id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:tb_洋葱id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="3" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_失败宝团" VariableExpression="${pvar:tb_失败宝团}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
