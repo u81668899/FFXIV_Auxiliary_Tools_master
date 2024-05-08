@@ -124,13 +124,16 @@
               <Action OrderNumber="11" VariableName="tb_yunhe" VariableExpression="0" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="12" VariableOp="UnsetRegex" VariableName="^tb_获得" VariableExpression="0" VariablePersist="True" ActionType="Variable">
+              <Action OrderNumber="12" VariableOp="UnsetRegex" VariableName="^tb_(成功|失败)..$" VariableExpression="0" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="^tb_${_ffxivplayer}获得" VariableExpression="0" VariablePersist="True" ActionType="Variable">
+              <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="^tb_获得" VariableExpression="0" VariablePersist="True" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="14" NamedCallbackName="command" NamedCallbackParam="/e 已重置" ActionType="NamedCallback">
+              <Action OrderNumber="14" VariableOp="UnsetRegex" VariableName="^tb_${_ffxivplayer}获得" VariableExpression="0" VariablePersist="True" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" NamedCallbackName="command" NamedCallbackParam="/e 已重置" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -379,7 +382,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1343,31 +1345,31 @@
           <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123|558|712|879|960|725)$" Id="ab7b25e7-1140-4767-97aa-9cd244f07743" Name="额外计算" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="出现怪记录" Id="d6da1e64-d490-48c3-baa5-314e2fda4ba5" RegularExpression="^.{14} AddCombatant 03:(?&lt;pid&gt;.{8}):(?&lt;name&gt;[^:]*):" Scheduling="FromLastAction" Description="原地 AC3&#xD;&#xA;正对boss AC4&#xD;&#xA;背对boss AC5">
+              <Trigger Enabled="true" Sequential="True" Name="出现怪记录" Id="d6da1e64-d490-48c3-baa5-314e2fda4ba5" RegularExpression="^.{14} AddCombatant 03:(?&lt;pid&gt;.{8}):(?&lt;name&gt;[^:]*):" Scheduling="FromLastAction" Description="原地 AC3&#xD;&#xA;正对boss AC4&#xD;&#xA;背对boss AC5">
                 <Actions>
                   <Action OrderNumber="1" ListVariableOp="Insert" ListVariableName="tb_洋葱id" ListVariableExpression="${pid}" ListVariableIndex="1" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河洋葱|神殿洋葱|宝库洋葱|神秘洋葱|惊奇洋葱|育体洋葱)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" ListVariableOp="Insert" ListVariableName="tb_洋葱id" ListVariableExpression="${pid}" ListVariableIndex="2" ActionType="ListVariable">
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="tb_洋葱id" ListVariableExpression="${func:dec2hex8:${numeric:hex2dec(${pid})-1}}" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河茄子|神殿茄子|宝库茄子|神秘茄子|惊奇茄子|育体茄子)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河洋葱|神殿洋葱|宝库洋葱|神秘洋葱|惊奇洋葱|育体洋葱)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" ListVariableOp="Insert" ListVariableName="tb_洋葱id" ListVariableExpression="${pid}" ListVariableIndex="3" ActionType="ListVariable">
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="tb_洋葱id" ListVariableExpression="${func:dec2hex8:${numeric:hex2dec(${pid})-2}}" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河蒜头|神殿蒜头|宝库蒜头|神秘蒜头|惊奇蒜头|育体大蒜)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河洋葱|神殿洋葱|宝库洋葱|神秘洋葱|惊奇洋葱|育体洋葱)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" ListVariableOp="Insert" ListVariableName="tb_洋葱id" ListVariableExpression="${pid}" ListVariableIndex="4" ActionType="ListVariable">
+                  <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="tb_洋葱id" ListVariableExpression="${func:dec2hex8:${numeric:hex2dec(${pid})-3}}" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河番茄|神殿番茄|宝库番茄|神秘番茄|惊奇番茄|育体番茄)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河洋葱|神殿洋葱|宝库洋葱|神秘洋葱|惊奇洋葱|育体洋葱)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="Insert" ListVariableName="tb_洋葱id" ListVariableExpression="${pid}" ListVariableIndex="5" ActionType="ListVariable">
+                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="tb_洋葱id" ListVariableExpression="${func:dec2hex8:${numeric:hex2dec(${pid})-4}}" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河王后|神殿王后|宝库王后|神秘王后|惊奇王后|育体王后)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="^(运河洋葱|神殿洋葱|宝库洋葱|神秘洋葱|惊奇洋葱|育体洋葱)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="tb_宝团id" ListVariableExpression="${pid}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
@@ -1382,7 +1384,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="死亡怪记录" Id="1fc8a0b8-fe0c-4a5a-a571-f5ab67f8f013" RegularExpression="^.{14} Death 19:(?&lt;pid&gt;.{8}):(?&lt;name&gt;[^:]*):" Scheduling="FromLastAction" Description="原地 AC3&#xD;&#xA;正对boss AC4&#xD;&#xA;背对boss AC5">
                 <Actions>
@@ -1397,29 +1398,53 @@
                       <ConditionSingle Enabled="true" ExpressionL="${pid}" ExpressionTypeL="String" ExpressionR="${lvar:tb_洋葱id[1]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_成功宝团" VariableExpression="${pvar:成功宝团}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
+                  <Action OrderNumber="3" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_失败洋葱" VariableExpression="${pvar:tb_失败洋葱}+1" VariablePersist="True" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:tb_洋葱id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_洋葱id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" ListVariableName="tb_洋葱id" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:tb_洋葱id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionGroup Enabled="true" Grouping="Or">
+                        <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_洋葱id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_洋葱id.size}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_成功宝团" VariableExpression="${pvar:tb_成功宝团}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_宝团id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" ListVariableOp="Remove" ListVariableName="tb_宝团id" ListVariableIndex="${lvar:tb_宝团id.lastindexof(${pid})}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="6" ListVariableOp="Remove" ListVariableName="tb_宝团id" ListVariableIndex="${lvar:tb_宝团id.lastindexof(${pid})}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_宝团id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_成功大象" VariableExpression="${pvar:tb_成功大象}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
+                  <Action OrderNumber="7" ListVariableName="tb_宝团id" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_宝团id.size}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_成功大象" VariableExpression="${pvar:tb_成功大象}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_大象id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="6" ListVariableOp="Remove" ListVariableName="tb_大象id" ListVariableIndex="${lvar:tb_大象id.lastindexof(${pid})}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="9" ListVariableOp="Remove" ListVariableName="tb_大象id" ListVariableIndex="${lvar:tb_大象id.lastindexof(${pid})}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_大象id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" ListVariableName="tb_大象id" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_大象id.size}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="逃亡怪记录" Id="e7cf7506-fd6d-4bbe-9bca-e0c3be7ace8b" RegularExpression="^.{14} RemoveCombatant 04:(?&lt;pid&gt;.{8}):(?&lt;name&gt;[^:]*):" Scheduling="FromLastAction" Description="原地 AC3&#xD;&#xA;正对boss AC4&#xD;&#xA;背对boss AC5">
                 <Actions>
@@ -1445,19 +1470,28 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_宝团id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_失败大象" VariableExpression="${pvar:tb_失败大象}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
+                  <Action OrderNumber="5" ListVariableName="tb_宝团id" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_宝团id.size}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" ListVariableOp="Remove" VariableOp="SetNumeric" VariableName="tb_失败大象" VariableExpression="${pvar:tb_失败大象}+1" VariablePersist="True" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_大象id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="6" ListVariableOp="Remove" ListVariableName="tb_大象id" ListVariableIndex="${lvar:tb_大象id.lastindexof(${pid})}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="7" ListVariableOp="Remove" ListVariableName="tb_大象id" ListVariableIndex="${lvar:tb_大象id.lastindexof(${pid})}" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_大象id.lastindexof(${pid})}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" ListVariableName="tb_大象id" VariableOp="SetNumeric" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:tb_大象id.size}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -2067,7 +2101,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>

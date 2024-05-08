@@ -266,7 +266,7 @@
           <Action OrderNumber="27" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="Data" TableVariableExpression="${var:total_Money}" TableVariableX="10" TableVariableY="${var:day}" ActionType="TableVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="28" NamedCallbackName="command" NamedCallbackParam="/e 今日首饰收益：${func:format(System.Double,&quot;n0&quot;):${var:total_Money}}" ActionType="NamedCallback">
+          <Action OrderNumber="28" NamedCallbackName="command" NamedCallbackParam="/e ${func:localtime(yyyy/MM/dd):${_timestamp}}首饰收益：${var:total_Money}万" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="29" NamedCallbackName="saveCsv" NamedCallbackParam="${_env[_DEFAULTCSVPATH_]}\潜艇记录.csv,${func:localtime(yyyy/MM/dd):${_timestamp}},${var:total_xlp},${var:total_xl},${var:total_esp},${var:total_es},${var:total_szp},${var:total_sz},${var:total_jzp},${var:total_jz},${var:total_Money}" ActionType="NamedCallback">
