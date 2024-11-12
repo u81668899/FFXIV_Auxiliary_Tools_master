@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<TriggernometryExport PluginVersion="1.2.0.712">
+  <ExportedFolder Id="617523df-30a3-4296-a17f-2c3e8bb01369" Name="SS怪出没检测+前置小怪报点" Enabled="true">
+    <Folders>
+      <Folder Id="53510a60-c18d-41e7-ae9f-444e6bac1b80" Name="5.0" Enabled="true">
+        <Folders>
+          <Folder ZoneFilterEnabled="True" Id="25864429-d224-406d-9532-5b43e56fafe7" ZoneFilterRegularExpression="^伊尔美格$" Name="伊尔美格" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="伊尔美格SS" Id="ed952384-5ee9-4680-b06d-294c23aadfc1" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■伊尔美格 ( 32.0  , 11.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■伊尔美格 ( 25.0  , 22.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■伊尔美格 ( 6.0  , 30.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■伊尔美格 ( 24.0  , 37.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FfxivZoneFilterRegularExpression="^345$" ZoneFilterEnabled="True" Id="0d4b1840-c2d4-4889-b9f1-62f0ff9744c9" ZoneFilterRegularExpression="^雷克兰德$" Name="雷克兰德" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="雷克兰德SS" Id="4c14e4af-e2b4-4c7e-8079-60eae0c27f97" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■雷克兰德 ( 13.0  , 10.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■雷克兰德 ( 33.0  , 12.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■雷克兰德 ( 10.0  , 25.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■雷克兰德 ( 30.0  , 36.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FfxivZoneFilterRegularExpression="^345$" ZoneFilterEnabled="True" Id="8d741980-6169-417e-b218-aec61bf84e14" ZoneFilterRegularExpression="^珂露西亚岛$" Name="珂露西亚岛" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="珂露西亚岛SS" Id="af792069-48ab-4687-b09c-702f55be4e72" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■珂露西亚岛 ( 12.3  , 15.1 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■珂露西亚岛 ( 23.9  , 15.3 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■珂露西亚岛 ( 8.6  , 29.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■珂露西亚岛 ( 33.4  , 32.9 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FfxivZoneFilterRegularExpression="^345$" ZoneFilterEnabled="True" Id="6c539f8a-70db-48cf-ba62-7a3a4fcc4339" ZoneFilterRegularExpression="^拉凯提卡大森林$" Name="拉凯提卡大森林" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="拉凯提卡大森林SS" Id="039bb6ea-da12-4e73-90df-2f6e33a643ea" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■拉凯提卡大森林 ( 30.0  , 13.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■拉凯提卡大森林 ( 8.0  , 22.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■拉凯提卡大森林 ( 19.0  , 22.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■拉凯提卡大森林 ( 15.0  , 36.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FfxivZoneFilterRegularExpression="^345$" ZoneFilterEnabled="True" Id="45fba345-2835-4565-acd7-2292e2bd47fe" ZoneFilterRegularExpression="^安穆·艾兰$" Name="安穆·艾兰" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="安穆·艾兰SS" Id="b28a37ae-fa6a-4618-934c-0b495fdcb01b" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■安穆·艾兰 ( 13.5  , 12.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■安穆·艾兰 ( 30.5  , 10.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■安穆·艾兰 ( 30.0  , 25.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■安穆·艾兰 ( 14.0  , 32.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FfxivZoneFilterRegularExpression="^345$" ZoneFilterEnabled="True" Id="0be1d9fd-9f72-4b98-b764-a5aedee6fcae" ZoneFilterRegularExpression="^黑风海$" Name="黑风海" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="黑风海SS" Id="715ade29-a751-435c-8542-5661b7c80c1c" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■黑风海 ( 8.0  , 6.8 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■黑风海 ( 26.2  , 9.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■黑风海 ( 38.0  , 14.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■黑风海 ( 33.8  , 30.1 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="c57c0bdc-5084-4767-a9e0-741319293374" Name="6.0" Enabled="true">
+        <Folders>
+          <Folder ZoneFilterEnabled="True" Id="0e92ba00-1f39-49e3-ade6-7a1b2af65d37" ZoneFilterRegularExpression="^叹息海$" Name="叹息海" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="叹息海SS" Id="b07e0569-0b37-4a93-9e00-541ca01b2b56" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■叹息海 ( 12.0  , 20.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■叹息海 ( 33.0  , 23.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■叹息海 ( 29.3  , 35.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■叹息海 ( 11.7  , 35.9 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="85d52de5-f97f-4f58-a7d3-d98018001a25" ZoneFilterRegularExpression="^萨维奈岛$" Name="萨维奈岛" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="萨维奈岛SS" Id="db1ff693-cd0b-49e9-b220-a072ccd5ec96" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■萨维奈岛 ( 22.9  , 10.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■萨维奈岛 ( 12.0  , 16.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■萨维奈岛 ( 33.2  , 25.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■萨维奈岛 ( 16.6  , 29.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="811d04a5-89f8-43cb-a837-c25de5085943" ZoneFilterRegularExpression="^厄尔庇斯$" Name="厄尔庇斯" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="厄尔庇斯SS" Id="531b747f-53ec-463b-8565-2c256b073fc3" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■厄尔庇斯 ( 17.0  , 7.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■厄尔庇斯 ( 29.1  , 7.3 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■厄尔庇斯 ( 37.8  , 13.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■厄尔庇斯 ( 7.9  , 35.9 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="75474397-3a66-4e01-b0eb-c239c73f0782" ZoneFilterRegularExpression="^天外天垓$" Name="天外天垓" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="天外天垓SS" Id="b369eaa4-c45c-45bf-b421-410b34e3fc54" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■天外天垓 ( 32.2  , 10.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■天外天垓 ( 16.1  , 16.9 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■天外天垓 ( 9.9  , 32.2 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■天外天垓 ( 23.4  , 33.3 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="b4bb94c2-2156-4f27-b5c5-3e11f79b5219" ZoneFilterRegularExpression="^加雷马$" Name="加雷马" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="加雷马SS" Id="f5c8e934-ec00-4008-b5a2-fbd54075c13c" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■加雷马 ( 32.1  , 9.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■加雷马 ( 16.8  , 9.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■加雷马 ( 32.7  , 29.1 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■加雷马 ( 21.3  , 32.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="7b93fdcf-7498-4625-90e5-7c6d7ba6db9f" ZoneFilterRegularExpression="^迷津$" Name="迷津" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="迷津SS" Id="fca6d9c0-cac8-4be7-82f7-e467e2e3d4b9" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■迷津 ( 25.3  , 8.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■迷津 ( 35.2  , 18.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■迷津 ( 9.3  , 22.1 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■迷津 ( 26.4  , 32.8 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="6f086abe-add1-4447-a642-57992b992822" Name="7.0" Enabled="true">
+        <Folders>
+          <Folder ZoneFilterEnabled="True" Id="42f9b4d8-2389-4d85-bd08-845b20d2a70d" ZoneFilterRegularExpression="^遗产之地$" Name="遗产之地" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="遗产之地SS" Id="5adcacb4-9597-4c6e-9dc5-4204151508aa" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■遗产之地 ( 30.3  , 9.6 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■遗产之地 ( 14.2  , 17.8 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■遗产之地 ( 32.5  , 22.7 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■遗产之地 ( 15.1  , 34.7 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="9e6ff567-b7d3-4c37-9eb3-95e0d39a0e62" ZoneFilterRegularExpression="^夏劳尼荒野$" Name="夏劳尼荒野" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="夏劳尼荒野SS" Id="fc9026a5-a0f8-422c-bc62-384ea76781d1" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■夏劳尼荒野 ( 11.6  , 8.3 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■夏劳尼荒野 ( 23.4  , 13.3 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■夏劳尼荒野 ( 15.0  , 30.9 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■夏劳尼荒野 ( 34.4  , 31.6 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="1bdcf67b-ecb4-4e5b-8bbd-70227f68ed8e" ZoneFilterRegularExpression="^奥阔帕恰山$" Name="奥阔帕恰山" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="奥阔帕恰山SS" Id="59d3836e-cb9c-4711-a7bf-f14042637495" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■奥阔帕恰山 ( 26.2  , 13.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■奥阔帕恰山 ( 18.4  , 17.8 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■奥阔帕恰山 ( 34.9  , 28.1 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■奥阔帕恰山 ( 15.8  , 28.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="e3f5a2e1-2eba-4e66-b28d-c1808537470e" ZoneFilterRegularExpression="^活着的记忆$" Name="活着的记忆" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="活着的记忆SS" Id="c5a8a318-c035-44cd-95eb-56345e4f573f" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■活着的记忆 ( 27.4  , 7.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■活着的记忆 ( 11.6  , 18.0 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■活着的记忆 ( 19.8  , 30.7 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■活着的记忆 ( 28.7  , 36.5 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="ad8f8a2f-c818-48b9-add2-380f861692f5" ZoneFilterRegularExpression="^克扎玛乌卡湿地$" Name="克扎玛乌卡湿地" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="克扎玛乌卡湿地SS" Id="18c83b95-8e4e-40a9-a733-4d75da43a0ab" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■克扎玛乌卡湿地 ( 16.8  , 7.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■克扎玛乌卡湿地 ( 33.2  , 8.1 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■克扎玛乌卡湿地 ( 29.7  , 24.6 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■克扎玛乌卡湿地 ( 15.9  , 32.7 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder ZoneFilterEnabled="True" Id="5993770e-8568-4210-8eb0-a27f6bdc6364" ZoneFilterRegularExpression="^亚克特尔树海$" Name="亚克特尔树海" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="亚克特尔树海SS" Id="eeb42b77-46e7-4e62-b689-1a6a4cedb7d7" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 本图级恶名精英已触发，请前往以下位置=》击杀前置小怪" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh ■■■1号■■■亚克特尔树海 ( 17.2  , 13.9 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/sh ■■■2号■■■亚克特尔树海 ( 35.6  , 22.4 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/sh ■■■3号■■■亚克特尔树海 ( 28.1  , 24.7 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/sh ■■■4号■■■亚克特尔树海 ( 12.8  , 35.7 )" ActionType="NamedCallback" ExecutionDelayExpression="3000" />
+                </Actions>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Name="SS触发" Id="6fa78182-f73c-4799-a8ca-3e4d42fb3c14" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下开始了侦察活动……$">
+        <Actions>
+          <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 级恶名精英已触发，小怪请在五分钟内建立仇恨，请在人数足够时再开怪，开怪后请勿拉脱！不要一个人单挑！开怪后请勿拉脱！" ActionType="NamedCallback" />
+          <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/sh 再次注意，开怪后请勿拉脱，不要单挑！如果不会打请不要少人接触小怪！进入战斗后不要远离小怪！谢谢配合！！" ActionType="NamedCallback" ExecutionDelayExpression="18000" />
+        </Actions>
+      </Trigger>
+      <Trigger Enabled="true" Name="SS小怪消失" Id="8676c104-e71c-4e2e-a428-d820060dba83" RegularExpression="^.{14} ChatLog 00:.*?::特殊恶名精英的手下侦察结束回去了" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/sh 级恶名精英触发失败了库啵！！真想狠狠地给镐子皮鼓踢上一脚库啵！" ActionType="NamedCallback" />
+          <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="32" KeyPressWindow="最终幻想XIV" ActionType="KeyPress" ExecutionDelayExpression="1000" />
+          <Action OrderNumber="3" TriggerOp="CancelAllTrigger" Enabled="False" ActionType="Trigger" />
+        </Actions>
+      </Trigger>
+      <Trigger Enabled="false" IsReadme="True" Name="需要配合《鲶鱼精邮差》和卫月插件《Literal Map Link》" Id="bac172fb-c81d-42df-b48a-a837e1521b32" RegularExpression="">
+        <Actions />
+      </Trigger>
+      <Trigger Enabled="false" Name="安装卫月插件需添加第三方库https://asvel.github.io/ffxiv-literal-map-link/" Id="05ce4583-2383-4c3f-8fbb-446fee69dfd6" RegularExpression="">
+        <Actions />
+      </Trigger>
+      <Trigger Enabled="false" Name="触发器会根据所在地图发送对应地图坐标宏" Id="4b8d65c9-e703-4be6-8958-b52c632e76fe" RegularExpression="">
+        <Actions />
+      </Trigger>
+      <Trigger Enabled="true" Name="！！！出SS了吗即刻标点！" Id="9a87b5fb-a125-43b3-90b6-9c0857e07c59" RegularExpression="0839::特殊恶名精英的手下开始了侦察活动">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/place" JsonPayloadExpression="{&quot;Name&quot;:&quot;安穆·艾兰SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-403.558258,&quot;Y&quot;:0.662677765,&quot;Z&quot;:-487.028046,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:443.595856,&quot;Y&quot;:-56.24444,&quot;Z&quot;:-590.7103,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:428.8793,&quot;Y&quot;:-46.3992462,&quot;Z&quot;:163.58783,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-366.589172,&quot;Y&quot;:-51.94226,&quot;Z&quot;:523.1483,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:306.268219,&quot;Y&quot;:-75.7080841,&quot;Z&quot;:676.4039,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;安穆·艾兰SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-403.558258,&quot;Y&quot;:0.662677765,&quot;Z&quot;:-487.028046,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:443.595856,&quot;Y&quot;:-56.24444,&quot;Z&quot;:-590.7103,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:428.8793,&quot;Y&quot;:-46.3992462,&quot;Z&quot;:163.58783,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-366.589172,&quot;Y&quot;:-51.94226,&quot;Z&quot;:523.1483,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:306.268219,&quot;Y&quot;:-75.7080841,&quot;Z&quot;:676.4039,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="安穆·艾兰" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;黑风海SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-652.268555,&quot;Y&quot;:408.107544,&quot;Z&quot;:-711.2586,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:215.057846,&quot;Y&quot;:360.865265,&quot;Z&quot;:-601.2745,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:811.045532,&quot;Y&quot;:406.920532,&quot;Z&quot;:-375.121948,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:600.173462,&quot;Y&quot;:-241.6,&quot;Z&quot;:423.6095,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-426.233734,&quot;Y&quot;:280.2552,&quot;Z&quot;:36.946106,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="黑风海" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;珂露西亚岛SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-470.785461,&quot;Y&quot;:366.176422,&quot;Z&quot;:-315.18335,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:145.909943,&quot;Y&quot;:327.393066,&quot;Z&quot;:-314.645172,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-630.508,&quot;Y&quot;:25.68491,&quot;Z&quot;:368.959167,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:615.3981,&quot;Y&quot;:0.7643509,&quot;Z&quot;:546.675842,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:642.5353,&quot;Y&quot;:274.117523,&quot;Z&quot;:-558.891968,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="珂露西亚岛" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;拉凯提卡大森林SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:420.077026,&quot;Y&quot;:-4.82274246,&quot;Z&quot;:-428.169,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:-127.385574,&quot;Y&quot;:-2.98965263,&quot;Z&quot;:37.9712524,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-708.2195,&quot;Y&quot;:13.0183258,&quot;Z&quot;:-26.2633381,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-341.3829,&quot;Y&quot;:5.433753,&quot;Z&quot;:748.9351,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:143.915115,&quot;Y&quot;:-24.6059189,&quot;Z&quot;:794.6463,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="拉凯提卡大森林" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;雷克兰德SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-461.7475,&quot;Y&quot;:95.8353043,&quot;Z&quot;:-556.7744,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:572.9532,&quot;Y&quot;:64.92467,&quot;Z&quot;:-482.830536,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-529.266663,&quot;Y&quot;:-1.281066,&quot;Z&quot;:167.515213,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:427.673767,&quot;Y&quot;:3.11946487,&quot;Z&quot;:717.2041,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:96.9696655,&quot;Y&quot;:2.94442177,&quot;Z&quot;:20.26123,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="雷克兰德" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;伊尔美格SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:559.154,&quot;Y&quot;:94.4519043,&quot;Z&quot;:-518.8051,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:161.187286,&quot;Y&quot;:10.8934231,&quot;Z&quot;:35.7574844,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:-795.5607,&quot;Y&quot;:69.18875,&quot;Z&quot;:409.236664,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:76.68996,&quot;Y&quot;:8.89547348,&quot;Z&quot;:704.630066,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-404.242828,&quot;Y&quot;:5.986229,&quot;Z&quot;:81.42789,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="伊尔美格" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;萨维奈岛SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-454.963,&quot;Y&quot;:32.2098,&quot;Z&quot;:-260.222,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:65.47502,&quot;Y&quot;:81.72128,&quot;Z&quot;:-548.9244,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:593.2873,&quot;Y&quot;:16.45679,&quot;Z&quot;:186.9904,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-241.8103,&quot;Y&quot;:17.19607,&quot;Z&quot;:415.5646,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:135.3607,&quot;Y&quot;:11.50743,&quot;Z&quot;:-207.1788,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="萨维奈岛" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;迷津SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:191.756,&quot;Y&quot;:171.163,&quot;Z&quot;:-646.968,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:682.408,&quot;Y&quot;:196.632,&quot;Z&quot;:-178.844,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:241.297,&quot;Y&quot;:-7.915,&quot;Z&quot;:569.179,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-594.718,&quot;Y&quot;:-25.83,&quot;Z&quot;:36.494,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:161.447,&quot;Y&quot;:67.561,&quot;Z&quot;:-282.894,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="迷津" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;加雷马SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-183.74,&quot;Y&quot;:10.8,&quot;Z&quot;:-573.805,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:568.042,&quot;Y&quot;:13.304,&quot;Z&quot;:-604.906,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:587.475,&quot;Y&quot;:-17.616,&quot;Z&quot;:363.929,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:50.798,&quot;Y&quot;:-19.434,&quot;Z&quot;:548.362,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-59.68,&quot;Y&quot;:1.878,&quot;Z&quot;:114.364,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:6,&quot;Active&quot;:false},&quot;Four&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:7,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="加雷马" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;叹息海SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-483.5468,&quot;Y&quot;:140.0943,&quot;Z&quot;:-42.36069,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:585.3564,&quot;Y&quot;:137.8866,&quot;Z&quot;:92.38979,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:400.3141,&quot;Y&quot;:133.321,&quot;Z&quot;:706.7859,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-474.626,&quot;Y&quot;:131.0696,&quot;Z&quot;:723.1201,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-135.0367,&quot;Y&quot;:56.28773,&quot;Z&quot;:450.7733,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="叹息海" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;厄尔庇斯SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-228.6377,&quot;Y&quot;:315.0642,&quot;Z&quot;:-723.4478,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:381.0306,&quot;Y&quot;:143.7159,&quot;Z&quot;:-706.255,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:814.6541,&quot;Y&quot;:156.824,&quot;Z&quot;:-398.6061,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-668.9226,&quot;Y&quot;:-39.25386,&quot;Z&quot;:724.5287,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:92.25938,&quot;Y&quot;:-2.614492,&quot;Z&quot;:-40.82136,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="厄尔庇斯" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;天外天垓SS标点&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:-262.647,&quot;Y&quot;:259.8463,&quot;Z&quot;:-235.5483,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:536.7997,&quot;Y&quot;:292.4384,&quot;Z&quot;:-568.7684,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:107.0358,&quot;Y&quot;:71.24886,&quot;Z&quot;:588.559,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-589.9744,&quot;Y&quot;:88.13312,&quot;Z&quot;:533.1575,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:-338.2911,&quot;Y&quot;:86.72733,&quot;Z&quot;:391.2183,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="天外天垓" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="13" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;奥阔帕恰山SS标点&quot;,&quot;A&quot;: {&quot;X&quot;: 217, &quot;Z&quot;: -378, &quot;Y&quot;: -128, &quot;Active&quot;: true},&quot;B&quot;: {&quot;X&quot;: -154, &quot;Z&quot;: -179, &quot;Y&quot;: -79.1, &quot;Active&quot;: true},&quot;C&quot;: {&quot;X&quot;: 663, &quot;Z&quot;: 341, &quot;Y&quot;: 123, &quot;Active&quot;: true},&quot;D&quot;: {&quot;X&quot;: -287, &quot;Z&quot;: 352, &quot;Y&quot;: 58.3, &quot;Active&quot;: true},&quot;One&quot;:{&quot;X&quot;: 233, &quot;Z&quot;: 323, &quot;Y&quot;: 25.4, &quot;Active&quot;: true},}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="奥阔帕恰山" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="14" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;克扎玛乌卡湿地SS标点&quot;,&#xD;&#xA;    &quot;A&quot;: {&quot;X&quot;: -231, &quot;Z&quot;: -701, &quot;Y&quot;: 24.6, &quot;Active&quot;: true},&#xD;&#xA;    &quot;B&quot;: {&quot;X&quot;: 590, &quot;Z&quot;: -665, &quot;Y&quot;: 22.8, &quot;Active&quot;: true},&#xD;&#xA;    &quot;C&quot;: {&quot;X&quot;: 413, &quot;Z&quot;: 157, &quot;Y&quot;: 109, &quot;Active&quot;: true},&#xD;&#xA;    &quot;D&quot;: {&quot;X&quot;: -277, &quot;Z&quot;: 564, &quot;Y&quot;: 111, &quot;Active&quot;: true},&#xD;&#xA;    &quot;One&quot;:{&quot;X&quot;: -378, &quot;Z&quot;: -334, &quot;Y&quot;: -0.399, &quot;Active&quot;: true},&#xD;&#xA;}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="克扎玛乌卡湿地" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="15" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;亚克特尔树海SS标点&quot;,&#xD;&#xA;    &quot;A&quot;: {&quot;X&quot;: -213, &quot;Z&quot;: -374, &quot;Y&quot;: 10.3, &quot;Active&quot;: true},&#xD;&#xA;    &quot;B&quot;: {&quot;X&quot;: 706, &quot;Z&quot;: 47.7, &quot;Y&quot;: 26, &quot;Active&quot;: true},&#xD;&#xA;    &quot;C&quot;: {&quot;X&quot;: 327, &quot;Z&quot;: 164, &quot;Y&quot;: -157, &quot;Active&quot;: true},&#xD;&#xA;    &quot;D&quot;: {&quot;X&quot;: -432, &quot;Z&quot;: 715, &quot;Y&quot;: -159, &quot;Active&quot;: true},&#xD;&#xA;    &quot;One&quot;:{&quot;X&quot;: 415, &quot;Z&quot;: -124, &quot;Y&quot;: 12.2, &quot;Active&quot;: true},&#xD;&#xA;}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="亚克特尔树海" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="16" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;夏劳尼荒野SS标点&quot;,&#xD;&#xA;    &quot;A&quot;: {&quot;X&quot;: -493, &quot;Z&quot;: -655, &quot;Y&quot;: 22.5, &quot;Active&quot;: true},&#xD;&#xA;    &quot;B&quot;: {&quot;X&quot;: 99.9, &quot;Z&quot;: -409, &quot;Y&quot;: -4.04, &quot;Active&quot;: true},&#xD;&#xA;    &quot;C&quot;: {&quot;X&quot;: -322, &quot;Z&quot;: 474, &quot;Y&quot;: -6.37, &quot;Active&quot;: true},&#xD;&#xA;    &quot;D&quot;: {&quot;X&quot;: 650, &quot;Z&quot;: 508, &quot;Y&quot;: 21.5, &quot;Active&quot;: true},&#xD;&#xA;    &quot;One&quot;:{&quot;X&quot;: -400, &quot;Z&quot;: -409, &quot;Y&quot;: 24.4, &quot;Active&quot;: true},&#xD;&#xA;}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="夏劳尼荒野" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="17" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;遗产之地SS标点&quot;,&#xD;&#xA;    &quot;A&quot;: {&quot;X&quot;: 441, &quot;Z&quot;: -589, &quot;Y&quot;: 121, &quot;Active&quot;: true},&#xD;&#xA;    &quot;B&quot;: {&quot;X&quot;: -363, &quot;Z&quot;: -184, &quot;Y&quot;: 45, &quot;Active&quot;: true},&#xD;&#xA;    &quot;C&quot;: {&quot;X&quot;: 552, &quot;Z&quot;: 62.9, &quot;Y&quot;: 131, &quot;Active&quot;: true},&#xD;&#xA;    &quot;D&quot;: {&quot;X&quot;: -317, &quot;Z&quot;: 663, &quot;Y&quot;: -6.42, &quot;Active&quot;: true},&#xD;&#xA;    &quot;One&quot;:{&quot;X&quot;: -192, &quot;Z&quot;: -54, &quot;Y&quot;: 43.5, &quot;Active&quot;: true},&#xD;&#xA;}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="遗产之地" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="18" JsonEndpointExpression="http://127.0.0.1:2019/place" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;活着的记忆SS标点&quot;,&#xD;&#xA;    &quot;A&quot;: {&quot;X&quot;: 300, &quot;Z&quot;: -722, &quot;Y&quot;: 45.9, &quot;Active&quot;: true},&#xD;&#xA;    &quot;B&quot;: {&quot;X&quot;: -494, &quot;Z&quot;: -170, &quot;Y&quot;: 38, &quot;Active&quot;: true},&#xD;&#xA;    &quot;C&quot;: {&quot;X&quot;: -80.2, &quot;Z&quot;: 463, &quot;Y&quot;: -0.1, &quot;Active&quot;: true},&#xD;&#xA;    &quot;D&quot;: {&quot;X&quot;: 361, &quot;Z&quot;: 754, &quot;Y&quot;: -0.076, &quot;Active&quot;: true},&#xD;&#xA;    &quot;One&quot;:{&quot;X&quot;: 655, &quot;Z&quot;: 242, &quot;Y&quot;: 40.3, &quot;Active&quot;: true},&#xD;&#xA;}" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="活着的记忆" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressExpression="-" KeyPressCode="32" KeyPressWindow="最终幻想XIV" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="200">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivtime}" ExpressionTypeL="Numeric" ExpressionR="720" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="20" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/e SS小怪标点完成！&lt;se.1&gt;" NamedCallbackName="command" NamedCallbackParam="/e SS小怪标点完成！&lt;se.1&gt;" UseTTSTextExpression="是mmr" UseTTSVolumeExpression="40" TriggerOp="CancelTrigger" Enabled="False" ActionType="NamedCallback" ExecutionDelayExpression="1000" />
+        </Actions>
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
