@@ -119,7 +119,7 @@
       </Folder>
       <Folder FFXIVJobFilter="34359738368" Id="e66e1adc-4c58-4adf-8c54-384a5c455c21" Name="可选功能 请选择勾选" Enabled="true">
         <Folders>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123|558|712|879|960|725|1209)$" Id="da7e0771-6468-4bce-a315-028fa1766dc1" Name="标记类" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(794|924|1123|558|712|879|960|725|1209)$" Id="da7e0771-6468-4bce-a315-028fa1766dc1" Name="标记类" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="8.1神殿本地标点" Id="ce6b33e4-b737-4d5b-b60c-b80959423fd8" RegularExpression="^.{14} ChatLog 00:0839::“(运河宝物库神殿|梦羽宝殿|厄尔庇斯育体宝殿)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
