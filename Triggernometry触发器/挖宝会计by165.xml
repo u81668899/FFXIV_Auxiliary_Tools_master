@@ -315,7 +315,7 @@
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e $1$1$1！！&lt;se.1&gt;" ActionType="NamedCallback" />
             </Actions>
           </Trigger>
-          <Trigger Enabled="true" Name="4.3出洞计图显示" Id="406410b5-1623-4b32-acd7-e200718fb92c" RegularExpression="^.{14} ChatLog 00:0839::“(运河宝物库神殿|水城宝物库|梦羽宝境|运河宝物库|运河宝物库深层|梦羽宝殿|惊奇百宝城|厄尔庇斯育体宝殿)”任务结束了。$">
+          <Trigger Enabled="true" Name="4.3出洞计图显示" Id="406410b5-1623-4b32-acd7-e200718fb92c" RegularExpression="^.{14} ChatLog 00:0839::“(水城宝物库|运河宝物库|运河宝物库神殿|运河宝物库深层|梦羽宝境|梦羽宝殿|惊奇百宝城|厄尔庇斯育体宝殿|加加财富天坑)”任务结束了。$">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e 完成地图数: ${pvar:tb_mapnum}" VariableOp="SetNumeric" ActionType="NamedCallback" />
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 运河：${pvar:tb_yunhe}" ActionType="NamedCallback" ExecutionDelayExpression="500">
