@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TriggernometryExport PluginVersion="1.2.0.715">
+<TriggernometryExport PluginVersion="1.2.0.718">
   <ExportedFolder Id="df9816ac-0597-4972-8472-aa7643c50121" Name="0.场地标点-启动触发器" Enabled="true">
     <Folders>
       <Folder Id="b56c4c5a-8beb-46b3-8508-cb450e5ebb69" Name="零式" Enabled="true">
@@ -341,9 +341,10 @@
             <Triggers>
               <Trigger Enabled="true" Sequential="True" Name="M2S" Id="2bbfe3be-f65b-44aa-a2eb-4cc20e8d24d0" RegularExpression="^.{14} ChatLog 00:0839::“(阿卡狄亚登天斗技场 轻量级2|阿卡狄亚零式登天斗技场 轻量级2)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
                 <Actions>
-                  <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="A:{X:100.0,Y:0.0,Z:85.0,ID:0,Active:true},B:{X:115.0,Y:0.0,Z:100.0,ID:1,Active:true},C:{X:100.0,Y:0.0,Z:115.0,ID:2,Active:true},D:{X:85.0,Y:0.0,Z:100.0,ID:3,Active:true},One:{X:91.8,Y:0.0,Z:91.8,ID:4,Active:true},Two:{X:108.2,Y:0.0,Z:91.8,ID:5,Active:true},Three:{X:108.2,Y:0.0,Z:108.2,ID:6,Active:true},Four:{X:91.8,Y:0.0,Z:108.2,ID:7,Active:true}" ActionType="Variable" />
-                  <Action OrderNumber="2" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger" />
-                  <Action OrderNumber="3" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger" />
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="A:{X:100.0,Y:0.0,Z:85.0,ID:0,Active:true},B:{X:115.0,Y:0.0,Z:100.0,ID:1,Active:true},C:{X:100.0,Y:0.0,Z:115.0,ID:2,Active:true},D:{X:85.0,Y:0.0,Z:100.0,ID:3,Active:true},One:{X:91.8,Y:0.0,Z:91.8,ID:4,Active:true},Two:{X:108.2,Y:0.0,Z:91.8,ID:5,Active:true},Three:{X:108.2,Y:0.0,Z:108.2,ID:6,Active:true},Four:{X:91.8,Y:0.0,Z:108.2,ID:7,Active:true}" Enabled="False" ActionType="Variable" />
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="A:{X:100.0,Y:0.0,Z:91.8,ID:0,Active:true},B:{X:108.2,Y:0.0,Z:100.0,ID:1,Active:true},C:{X:100.0,Y:0.0,Z:108.2,ID:2,Active:true},D:{X:91.8,Y:0.0,Z:100.0,ID:3,Active:true},One:{X:91.8,Y:0.0,Z:91.8,ID:4,Active:true},Two:{X:108.2,Y:0.0,Z:91.8,ID:5,Active:true},Three:{X:108.2,Y:0.0,Z:108.2,ID:6,Active:true},Four:{X:91.8,Y:0.0,Z:108.2,ID:7,Active:true}" ActionType="Variable" />
+                  <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger" />
+                  <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger" />
                 </Actions>
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="M1S" Id="f8e7755e-9e50-48a9-8f88-3af9eda45dbb" RegularExpression="^.{14} ChatLog 00:0839::“(阿卡狄亚登天斗技场 轻量级1|阿卡狄亚零式登天斗技场 轻量级1)”任务开始。$" PeriodRefire="Deny" RefirePeriodExpression="2000">
@@ -427,8 +428,8 @@
               <Action OrderNumber="2" VariableOp="SetString" VariableName="副本标点临时记录" VariableExpression="&quot;A&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:86.99,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:113.01,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100.0,&quot;Y&quot;:0.0,&quot;Z&quot;:113.01,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:86.99,&quot;Y&quot;:0.0,&quot;Z&quot;:100.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:90.8,&quot;Y&quot;:0.0,&quot;Z&quot;:90.8,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:109.2,&quot;Y&quot;:0.0,&quot;Z&quot;:90.8,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:109.2,&quot;Y&quot;:0.0,&quot;Z&quot;:109.2,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:90.8,&quot;Y&quot;:0.0,&quot;Z&quot;:109.2,&quot;ID&quot;:7,&quot;Active&quot;:true}" Enabled="False" ActionType="Variable" Description="1A2B" DescriptionOverride="True" />
               <Action OrderNumber="3" TriggerId="15e00c29-76dc-4940-a2a9-8894b983dca6" TriggerForce="regexp" ActionType="Trigger" />
               <Action OrderNumber="4" TriggerId="a8eefe16-9eaf-4e33-b67a-21a1fd1630ff" TriggerForce="regexp" ActionType="Trigger" />
-              <Action OrderNumber="5" FolderId="617bacdd-215e-4911-8343-c7175ce2536f" ActionType="Folder" />
-              <Action OrderNumber="6" TriggerId="a206da68-069f-48cb-9d35-f5eeb9deff6b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="10" />
+              <Action OrderNumber="5" FolderId="b4902da7-5b74-4a65-af7b-1f73d1f86598" ActionType="Folder" />
+              <Action OrderNumber="6" TriggerId="e6699abf-b0f8-4dad-b8c6-443bea687257" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="10" />
             </Actions>
           </Trigger>
         </Triggers>
