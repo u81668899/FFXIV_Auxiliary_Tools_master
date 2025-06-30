@@ -1,0 +1,26 @@
+--- @class EntityWrapper
+--- @field Type ObjectKind
+--- @field Name string
+--- @field Position Vector3
+--- @field DistanceTo number
+--- @field ContentId number
+--- @field AccountId number
+--- @field CurrentWorld number
+--- @field HomeWorld number
+--- @field CurrentHp number
+--- @field MaxHp number
+--- @field HealthPercent number
+--- @field CurrentMp number
+--- @field MaxMp number
+--- @field Target EntityWrapper
+--- @field IsCasting boolean
+--- @field IsCastInterruptible boolean
+--- @field IsInCombat boolean
+--- @field HuntRank number
+--- @field IsMounted boolean
+--- @field Status table<StatusWrapper>
+--- @field FateId number
+--- @field SetAsTarget fun(): nil
+--- @field SetAsFocusTarget fun(): nil
+--- @field ClearTarget fun(): nil
+--- @field Interact fun(): nil

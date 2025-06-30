@@ -1,0 +1,626 @@
+{
+  "Enabled": false,
+  "ListStyle": {
+    "LayoutAnchor": 0,
+    "FitContents": false,
+    "ClipContents": true,
+    "LayoutOrientation": 1,
+    "BackgroundColor": {
+      "X": 0,
+      "Y": 1,
+      "Z": 1,
+      "W": 0.4
+    },
+    "BackgroundVisible": true,
+    "BorderVisible": false,
+    "ListStyleDisable": 0,
+    "Position": {
+      "X": 512,
+      "Y": 360
+    },
+    "Size": {
+      "X": 600,
+      "Y": 200
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1
+    },
+    "IsVisible": true,
+    "NodeFlags": 16,
+    "Color": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1,
+      "W": 1
+    },
+    "AddColor": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "MultiplyColor": {
+      "X": 0.39215687,
+      "Y": 0.39215687,
+      "Z": 0.39215687
+    },
+    "Margin": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0,
+      "W": 0
+    },
+    "BaseDisable": 610
+  },
+  "CategoryConfigs": [
+    {
+      "ListNodeStyle": {
+        "LayoutAnchor": 0,
+        "FitContents": false,
+        "ClipContents": false,
+        "LayoutOrientation": 0,
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BackgroundVisible": false,
+        "BorderVisible": false,
+        "ListStyleDisable": 16,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 622
+      },
+      "HeaderStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0.5568628,
+          "Y": 0.41568628,
+          "Z": 0.047058824,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 9,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 664,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 5,
+          "Y": 5,
+          "Z": 5,
+          "W": 5
+        },
+        "BaseDisable": 108
+      },
+      "ModuleStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0.039215688,
+          "Y": 0.4117647,
+          "Z": 0.57254905,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 9,
+        "TextFlags2": 0,
+        "FontSize": 12,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 664,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "BaseDisable": 110
+      },
+      "ModuleType": 0,
+      "Enabled": true,
+      "HeaderLabel": "Daily Tasks",
+      "UseCustomLabel": false,
+      "CustomLabel": ""
+    },
+    {
+      "ListNodeStyle": {
+        "LayoutAnchor": 0,
+        "FitContents": false,
+        "ClipContents": false,
+        "LayoutOrientation": 0,
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BackgroundVisible": false,
+        "BorderVisible": false,
+        "ListStyleDisable": 16,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 622
+      },
+      "HeaderStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0.5568628,
+          "Y": 0.41568628,
+          "Z": 0.047058824,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 9,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 664,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 5,
+          "Y": 5,
+          "Z": 5,
+          "W": 5
+        },
+        "BaseDisable": 108
+      },
+      "ModuleStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0.039215688,
+          "Y": 0.4117647,
+          "Z": 0.57254905,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 9,
+        "TextFlags2": 0,
+        "FontSize": 12,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 664,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "BaseDisable": 110
+      },
+      "ModuleType": 1,
+      "Enabled": true,
+      "HeaderLabel": "Weekly Tasks",
+      "UseCustomLabel": false,
+      "CustomLabel": ""
+    },
+    {
+      "ListNodeStyle": {
+        "LayoutAnchor": 0,
+        "FitContents": false,
+        "ClipContents": false,
+        "LayoutOrientation": 0,
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BackgroundVisible": false,
+        "BorderVisible": false,
+        "ListStyleDisable": 16,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 622
+      },
+      "HeaderStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0.5568628,
+          "Y": 0.41568628,
+          "Z": 0.047058824,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 9,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 664,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 5,
+          "Y": 5,
+          "Z": 5,
+          "W": 5
+        },
+        "BaseDisable": 108
+      },
+      "ModuleStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0.039215688,
+          "Y": 0.4117647,
+          "Z": 0.57254905,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 9,
+        "TextFlags2": 0,
+        "FontSize": 12,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 664,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "BaseDisable": 110
+      },
+      "ModuleType": 2,
+      "Enabled": true,
+      "HeaderLabel": "Special Tasks",
+      "UseCustomLabel": false,
+      "CustomLabel": ""
+    }
+  ],
+  "HideDuringQuests": true,
+  "HideInDuties": true
+}

@@ -1,0 +1,57 @@
+name: Build & Publish to Dynamis Latest
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    env:
+      DALAMUD_HOME: /tmp/dalamud
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Download Dalamud Latest
+        run: |
+          wget https://goatcorp.github.io/dalamud-distrib/latest.zip -O ${{ env.DALAMUD_HOME }}.zip
+          unzip ${{ env.DALAMUD_HOME }}.zip -d ${{ env.DALAMUD_HOME }}
+
+      - name: Restore Project
+        run: dotnet restore
+
+      - name: Build Project
+        run: dotnet build --configuration Release AutoDuty/AutoDuty.csproj -p:AssemblyVersion=${{ github.ref_name }}
+
+      - name: Publish Version
+        uses: PunishXIV/dynamis-action@v1
+        id: dynamis
+        with:
+          plugin_id: 54
+          internal_name: "AutoDuty"
+          version_number: ${{ github.ref_name }}
+          path: "AutoDuty/bin/Release/AutoDuty/latest.zip"
+          type: "latest"
+          dalamud_version: "12"
+          changelog: ${{ github.event.release.body }}
+        env:
+          PUBLISHER_KEY: ${{ secrets.PUBLISHER_KEY }}
+
+      - name: Github Releases To Discord
+        uses: SethCohen/github-releases-to-discord@v1.15.0
+        with:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          color: "2105893"
+          username: "Release Changelog"
+          avatar_url: "https://s3.puni.sh/media/plugin/54/icon-15ug2vnr9m1.png"
+          footer_title: "Changelog"
+          footer_icon_url: "https://s3.puni.sh/media/plugin/54/icon-15ug2vnr9m1.png"
+          footer_timestamp: true

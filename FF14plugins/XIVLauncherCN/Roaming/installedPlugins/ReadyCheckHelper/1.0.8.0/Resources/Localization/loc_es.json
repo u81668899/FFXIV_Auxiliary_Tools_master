@@ -1,0 +1,98 @@
+{
+  "Plugin Text Command Description": {
+    "message": "Usa {0} para abrir la ventana de configuración.",
+    "description": "Plugin.OnLanguageChanged"
+  },
+  "Config Subcommand Help Message": {
+    "message": "Abre la ventana de configuración.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Results Subcommand Help Message": {
+    "message": "Abre una ventana que contiene los resultados de la última comprobación lista para ocurrir.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Clear Subcommand Help Message": {
+    "message": "Elimina los iconos de verificación lista más recientes de las listas de grupo/alianza.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Debug Subcommand Help Message": {
+    "message": "Abre una ventana de depuración que contiene el grupo y comprueba los datos de los objetos.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Basic Help Message": {
+    "message": "Este plug-in funciona automáticamente; sin embargo, algunos comandos de texto están soportados. Subcomandos válidos son {0}, {1} y {2}. Use \"{3} <subcommand>\" para más información en cada subcomando.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Window Title: Config": {
+    "message": "Ajustes de Ayuda de Comprobar Listo",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Print Names of Unready in Chat": {
+    "message": "Mostrar los nombres de aquellos que no están listos en la ventana de chat.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Max Names in Chat": {
+    "message": "Número máximo de nombres a mostrar en el chat:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Draw on Party Alliance Lists": {
+    "message": "Dibujar comprobación en las listas de partes/alianzas.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List Settings": {
+    "message": "Limpiar comprobación de lista de grupo/alianza:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Combat": {
+    "message": "Al entrar en combate.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Instance": {
+    "message": "Al ingresar la instancia.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Enteringing Combat in Instance": {
+    "message": "Al entrar en combate en la instancia.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List after X Seconds:": {
+    "message": "Después de un cierto número de segundos:",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Help: Clear Party Alliance List after X Seconds": {
+    "message": "Los cambios en este ajuste no surtirán efecto hasta que concluya la próxima comprobación.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Button: Save and Close": {
+    "message": "Guardar y cerrar",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Window Title: Ready Check Results": {
+    "message": "Últimos resultados de la comprobación",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Placeholder: No Ready Check Results Exist": {
+    "message": "Aún no se ha realizado ninguna comprobación.",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Button: Close": {
+    "message": "Cerrar",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Window Title: Ready Check and Alliance Debug Data": {
+    "message": "Realizar comprobación y datos de depuración de alianza",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Help: Debug Set Object Address Warning": {
+    "message": "NO TOQUES ESTO!! A MENOS DE QUE CONOZCAS QUE ESTAS HACIENDO Y PORQUE.",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Window Title: Raw Ready Check Data": {
+    "message": "Depuración: Datos de Comprobación Listo",
+    "description": "PluginUI.DrawDebugRawWindow"
+  },
+  "Window Title: Processed Ready Check Data": {
+    "message": "Depuración: Datos de verificación procesados",
+    "description": "PluginUI.DrawDebugProcessedWindow"
+  }
+}

@@ -1,0 +1,3 @@
+--- @class PetInfoWrapper
+--- @field Order number
+--- @field Stance number

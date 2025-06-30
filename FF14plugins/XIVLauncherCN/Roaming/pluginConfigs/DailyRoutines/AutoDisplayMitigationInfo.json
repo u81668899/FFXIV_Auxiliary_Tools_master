@@ -1,0 +1,719 @@
+{
+  "OnlyInCombat": true,
+  "TransparentOverlay": false,
+  "ResizeableOverlay": true,
+  "MoveableOverlay": true,
+  "LocalCacheVersion": "1.0.0",
+  "MitigationStatuses": [
+    {
+      "id": 1191,
+      "name": "铁壁",
+      "mitigation": {
+        "physical": 20.0,
+        "magical": 20.0,
+        "special": 20.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1856,
+      "name": "盾阵",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1174,
+      "name": "干预",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 74,
+      "name": "预警",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1176,
+      "name": "武装",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1175,
+      "name": "武装戍卫",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 82,
+      "name": "神圣领域",
+      "mitigation": {
+        "physical": 100.0,
+        "magical": 100.0,
+        "special": 100.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2674,
+      "name": "圣盾阵",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2675,
+      "name": "骑士的坚守",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 77,
+      "name": "壁垒",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 735,
+      "name": "原初的直觉",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1857,
+      "name": "原初的勇猛",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1858,
+      "name": "原初的武猛",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 89,
+      "name": "复仇",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 2678,
+      "name": "原初的血气",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 2679,
+      "name": "原初的血潮",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 746,
+      "name": "弃明投暗",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 20.0,
+        "special": 0.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 747,
+      "name": "暗影墙",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1894,
+      "name": "暗黑布道",
+      "mitigation": {
+        "physical": 5.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2682,
+      "name": "献奉",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1840,
+      "name": "石之心",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1832,
+      "name": "伪装",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1834,
+      "name": "星云",
+      "mitigation": {
+        "physical": 30.0,
+        "magical": 30.0,
+        "special": 30.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1839,
+      "name": "光之心",
+      "mitigation": {
+        "physical": 5.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1836,
+      "name": "超火流星",
+      "mitigation": {
+        "physical": 100.0,
+        "magical": 100.0,
+        "special": 100.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 2684,
+      "name": "刚玉之清",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1873,
+      "name": "节制",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2708,
+      "name": "水流幕",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 297,
+      "name": "鼓舞",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 0.0,
+        "special": 180.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1918,
+      "name": "激励",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 0.0,
+        "special": 180.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1917,
+      "name": "炽天的幕帘",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 0.0,
+        "special": 250.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 299,
+      "name": "野战治疗阵",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 500.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 317,
+      "name": "异想的幻光",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1875,
+      "name": "炽天的幻光",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2711,
+      "name": "怒涛之计",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 849,
+      "name": "命运之轮",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2717,
+      "name": "擢升",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2618,
+      "name": "坚角清汁",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2619,
+      "name": "白牛清汁",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3003,
+      "name": "整体论",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1232,
+      "name": "心眼",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1179,
+      "name": "金刚极意",
+      "mitigation": {
+        "physical": 20.0,
+        "magical": 20.0,
+        "special": 20.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1934,
+      "name": "行吟",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1951,
+      "name": "策动",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1826,
+      "name": "防守之桑巴",
+      "mitigation": {
+        "physical": 15.0,
+        "magical": 15.0,
+        "special": 15.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2707,
+      "name": "抗死",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1193,
+      "name": "雪仇",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1195,
+      "name": "牵制",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 5.0,
+        "special": 0.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1203,
+      "name": "昏乱",
+      "mitigation": {
+        "physical": 5.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 860,
+      "name": "武装解除",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 9,
+      "name": "减速",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 1715,
+      "name": "腐臭",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 2115,
+      "name": "智力精神降低",
+      "mitigation": {
+        "physical": 0.0,
+        "magical": 10.0,
+        "special": 0.0
+      },
+      "on_member": false
+    },
+    {
+      "id": 2500,
+      "name": "龙之力",
+      "mitigation": {
+        "physical": 20.0,
+        "magical": 20.0,
+        "special": 20.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1722,
+      "name": "超硬化",
+      "mitigation": {
+        "physical": 90.0,
+        "magical": 90.0,
+        "special": 90.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2496,
+      "name": "玄结界",
+      "mitigation": {
+        "physical": 20.0,
+        "magical": 20.0,
+        "special": 20.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 2119,
+      "name": "仙人盾",
+      "mitigation": {
+        "physical": 5.0,
+        "magical": 5.0,
+        "special": 5.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1719,
+      "name": "强力守护",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 194,
+      "name": "铜墙铁盾",
+      "mitigation": {
+        "physical": 20.0,
+        "magical": 20.0,
+        "special": 20.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 195,
+      "name": "坚守要塞",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 196,
+      "name": "终极堡垒",
+      "mitigation": {
+        "physical": 80.0,
+        "magical": 80.0,
+        "special": 80.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 863,
+      "name": "原初大地",
+      "mitigation": {
+        "physical": 80.0,
+        "magical": 80.0,
+        "special": 80.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 864,
+      "name": "暗黑之力",
+      "mitigation": {
+        "physical": 80.0,
+        "magical": 80.0,
+        "special": 80.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 1931,
+      "name": "灵魂之青",
+      "mitigation": {
+        "physical": 80.0,
+        "magical": 80.0,
+        "special": 80.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3829,
+      "name": "极致防御",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3832,
+      "name": "戮罪",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3835,
+      "name": "暗影卫",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3838,
+      "name": "大星云",
+      "mitigation": {
+        "physical": 40.0,
+        "magical": 40.0,
+        "special": 40.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3890,
+      "name": "世界树之干",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3892,
+      "name": "建筑神之塔",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    },
+    {
+      "id": 3896,
+      "name": "太阳星座",
+      "mitigation": {
+        "physical": 10.0,
+        "magical": 10.0,
+        "special": 10.0
+      },
+      "on_member": true
+    }
+  ]
+}

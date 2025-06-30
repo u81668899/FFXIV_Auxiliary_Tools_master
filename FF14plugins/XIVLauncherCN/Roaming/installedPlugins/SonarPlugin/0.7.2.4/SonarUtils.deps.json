@@ -1,0 +1,156 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SonarUtils/1.0.0": {
+        "dependencies": {
+          "AG.Collections.Concurrent": "0.0.9-alpha",
+          "AG.EnumLocalization": "0.0.9-alpha",
+          "BouncyCastle.Cryptography": "2.6.1",
+          "DnsClient": "1.8.0",
+          "Farmhash.Sharp": "0.9.0",
+          "XoshiroPRNG.Net": "1.6.0"
+        },
+        "runtime": {
+          "SonarUtils.dll": {}
+        }
+      },
+      "AG/0.0.9-alpha": {
+        "runtime": {
+          "lib/net9.0/AG.dll": {
+            "assemblyVersion": "0.0.0.9",
+            "fileVersion": "0.0.0.9"
+          }
+        }
+      },
+      "AG.Collections.Concurrent/0.0.9-alpha": {
+        "dependencies": {
+          "AG": "0.0.9-alpha",
+          "AG.Collections.Generic": "0.0.9-alpha"
+        },
+        "runtime": {
+          "lib/net9.0/AG.Collections.Concurrent.dll": {
+            "assemblyVersion": "0.0.0.9",
+            "fileVersion": "0.0.0.9"
+          }
+        }
+      },
+      "AG.Collections.Generic/0.0.9-alpha": {
+        "dependencies": {
+          "AG": "0.0.9-alpha"
+        },
+        "runtime": {
+          "lib/net9.0/AG.Collections.Generic.dll": {
+            "assemblyVersion": "0.0.0.9",
+            "fileVersion": "0.0.0.9"
+          }
+        }
+      },
+      "AG.EnumLocalization/0.0.9-alpha": {
+        "runtime": {
+          "lib/net9.0/AG.EnumLocalization.dll": {
+            "assemblyVersion": "0.0.0.9",
+            "fileVersion": "0.0.0.9"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/2.6.1": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.6.1.59591"
+          }
+        }
+      },
+      "Farmhash.Sharp/0.9.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/Farmhash.Sharp.dll": {
+            "assemblyVersion": "0.9.0.0",
+            "fileVersion": "0.9.0.0"
+          }
+        }
+      },
+      "XoshiroPRNG.Net/1.6.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/XoshiroPRNG.Net.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      },
+      "DnsClient/1.8.0": {
+        "runtime": {
+          "DnsClient.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SonarUtils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AG/0.0.9-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lAFLtNJP0EdUUu042Bst1mwnbYRaZx18xR50Vm8+bgeFVWKvKnnabyxxDAFSKnfxi9A4mTr2v7D7Pua3ufDQRg==",
+      "path": "ag/0.0.9-alpha",
+      "hashPath": "ag.0.0.9-alpha.nupkg.sha512"
+    },
+    "AG.Collections.Concurrent/0.0.9-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1+z6dTcu0eR5/xrUrXa7TdAgeXoLKZYW8QO4li2wESA5w6lb9g1oqiDjP863uMR6nQS9LVvl2S1p18IE35Mc+w==",
+      "path": "ag.collections.concurrent/0.0.9-alpha",
+      "hashPath": "ag.collections.concurrent.0.0.9-alpha.nupkg.sha512"
+    },
+    "AG.Collections.Generic/0.0.9-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ql4u2Iasyz6GCRRNQE9a1e4E0lL+/Ua8Hs6m7jXSk3efkGgRgpvtwANRKwF+6eYaf5awaBFID2KaGZhHDOWHMQ==",
+      "path": "ag.collections.generic/0.0.9-alpha",
+      "hashPath": "ag.collections.generic.0.0.9-alpha.nupkg.sha512"
+    },
+    "AG.EnumLocalization/0.0.9-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V2WT4mgIx8mGPMlw9kUKAibi+XhEUbZaPHv4hBcOHbx2mT8llOOKLuvRzmC3UzWRiJZPaDgcyN6WJvhwTKgGKQ==",
+      "path": "ag.enumlocalization/0.0.9-alpha",
+      "hashPath": "ag.enumlocalization.0.0.9-alpha.nupkg.sha512"
+    },
+    "BouncyCastle.Cryptography/2.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vZsG2YILhthgRqO+ZVgRff4ZFKKTl0v7kqaVBLCtRvpREhfBP33pcWrdA3PRYgWuFL1RxiUFvjMUHTdBZlJcoA==",
+      "path": "bouncycastle.cryptography/2.6.1",
+      "hashPath": "bouncycastle.cryptography.2.6.1.nupkg.sha512"
+    },
+    "Farmhash.Sharp/0.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6Ij80JrfPyiDRM4QqdlEIjev4Q97eqEakh7wFJZYmbUkWVoCJb1+YdSdoXpzvn+Fs2dXH8THRsn+uUvrhMNKpQ==",
+      "path": "farmhash.sharp/0.9.0",
+      "hashPath": "farmhash.sharp.0.9.0.nupkg.sha512"
+    },
+    "XoshiroPRNG.Net/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Agj7DDi1obbcZXzPJDGpx4ncwrlr0Q39xe/coNGJV2DU3AzhWiHF33sM2nkHlgIL1icLacx1hkqNz8No7pdWWg==",
+      "path": "xoshiroprng.net/1.6.0",
+      "hashPath": "xoshiroprng.net.1.6.0.nupkg.sha512"
+    },
+    "DnsClient/1.8.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+--- @class OfflineRetainerDataWrapper
+--- @field Name string
+--- @field VentureEndsAt number
+--- @field HasVenture boolean
+--- @field Level number
+--- @field VentureBeginsAt number
+--- @field Job number
+--- @field VentureID number
+--- @field Gil number
+--- @field RetainerID number
+--- @field MBItems number

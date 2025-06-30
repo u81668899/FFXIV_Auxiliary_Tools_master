@@ -1,0 +1,106 @@
+{
+  "Plugin Text Command Description": {
+    "message": "Utilisez {0} pour ouvrir la fenêtre de configuration.",
+    "description": "Plugin.OnLanguageChanged"
+  },
+  "Config Subcommand Help Message": {
+    "message": "Ouvre la fenêtre des paramètres.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Results Subcommand Help Message": {
+    "message": "Ouvre une fenêtre contenant les résultats du dernier appel de préparation s'étant produit.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Clear Subcommand Help Message": {
+    "message": "Supprime les icônes de vérification les plus récentes des listes d'équipe et d'alliance.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Debug Subcommand Help Message": {
+    "message": "Ouvre une fenêtre de débug contenant les données de l'appel de préparation et de l'équipe.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Basic Help Message": {
+    "message": "Ce plugin fonctionne automatiquement ; cependant, certaines commandes textuelles sont prises en charge. Les sous-commandes valides sont {0}, {1} et {2}. Utilisez \"{3} <subcommand>\" pour plus d'informations sur chaque sous-commande.",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Window Title: Config": {
+    "message": "Paramètres de Ready Check Helper",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Print Names of Unready in Chat": {
+    "message": "Afficher les noms de ceux qui ne sont pas prêts dans la fenêtre de discussion.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Max Names in Chat": {
+    "message": "Nombre maximum de noms à afficher dans le chat :",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Chat Message Channel": {
+    "message": "Canal de Discussion :",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Help: Chat Message Channel": {
+    "message": "Définit le canal de discussion dans lequel le message sera affiché dans le chat. Laissez cette option sur sa valeur par défaut ({0}) à moins que cela ne cause des soucis avec votre configuration de chat. Cela n'affecte que les messages à propos des joueurs qui ne sont pas prêts ; tous les autres messages de ce plugin respectent le canal de discussion par défaut que vous avez sélectionné dans les paramètres de Dalamud.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Draw on Party Alliance Lists": {
+    "message": "Afficher un symbole de préparation sur la liste d'équipe/d'alliance.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List Settings": {
+    "message": "Retirer les symboles la liste d'équipe/d'alliance :",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Combat": {
+    "message": "En entrant en combat.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Instance": {
+    "message": "En entrant dans une instance.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Enteringing Combat in Instance": {
+    "message": "En entrant en combat en étant dans une instance.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List after X Seconds:": {
+    "message": "Après un certain nombre de secondes :",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Help: Clear Party Alliance List after X Seconds": {
+    "message": "Les modifications apportées à ce paramètre ne prendront effet qu'à la fin du prochain Appel de préparation.",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Button: Save and Close": {
+    "message": "Enregistrer et Fermer",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Window Title: Ready Check Results": {
+    "message": "Dernier Appel de préparation",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Placeholder: No Ready Check Results Exist": {
+    "message": "Aucun Appel de préparation n'a encore été effectué.",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Button: Close": {
+    "message": "Fermer",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Window Title: Ready Check and Alliance Debug Data": {
+    "message": "Données de débug d'Appel de préparation et d'Alliance",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Help: Debug Set Object Address Warning": {
+    "message": "NE TOUCHEZ PAS À CECI À MOINS QUE VOUS NE SACHIEZ EXACTEMENT CE QUE VOUS FAITES ET POURQUOI ; LE MEILLEUR CAS POSSIBLE EST UN CRASH DU PLUGIN.",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Window Title: Raw Ready Check Data": {
+    "message": "Débug : Données brutes de l'appel de préparation",
+    "description": "PluginUI.DrawDebugRawWindow"
+  },
+  "Window Title: Processed Ready Check Data": {
+    "message": "Débug : Données traitées de l'appel de préparation",
+    "description": "PluginUI.DrawDebugProcessedWindow"
+  }
+}

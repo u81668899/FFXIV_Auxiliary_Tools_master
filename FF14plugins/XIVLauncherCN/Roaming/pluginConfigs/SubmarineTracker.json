@@ -12,6 +12,7 @@
   "ShowAll": true,
   "ShowRouteInAll": false,
   "ShowDateInAll": false,
+  "ShowDtrEntry": false,
   "ShowOnlyCurrentFC": false,
   "AutoSelectCurrent": true,
   "ShowRouteOverlay": true,
@@ -25,7 +26,7 @@
   "CustomHour": 123,
   "CustomMinute": 30,
   "NotifyForAll": true,
-  "NotifySpecific": {
+  "NotifyFCSpecific": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
   },
   "NotifyForReturns": true,
@@ -83,14 +84,15 @@
   "UploadNotification": false,
   "UploadNotificationReceived": "2023-11-22T09:37:42.9470447+08:00",
   "UploadPermission": true,
+  "ShowStorageMessage": true,
   "IgnoredCharacters": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
   },
   "SavedBuilds": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[SubmarineTracker.Data.Build+RouteBuild, SubmarineTracker]], System.Private.CoreLib"
   },
-  "FCOrder": [
-    19014409516066930
+  "FCIdOrder": [
+    9370442712186096094
   ],
   "Version": 1
 }

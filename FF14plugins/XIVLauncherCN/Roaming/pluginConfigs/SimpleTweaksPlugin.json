@@ -2,10 +2,11 @@
   "$type": "SimpleTweaksPlugin.SimpleTweaksPluginConfig, SimpleTweaksPlugin",
   "Debugging": {
     "$type": "SimpleTweaksPlugin.Debugging.DebugConfig, SimpleTweaksPlugin",
-    "SelectedPage": "",
+    "SelectedPage": "Addon Logging",
     "SavedValues": {
       "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
     },
+    "Undocked": [],
     "SelectedAtkUnitBase": 0,
     "AtkUnitBaseSearch": ""
   },
@@ -20,20 +21,28 @@
     "UiAdjustments@SellMaxTripleTriadCards",
     "AutoOpenCommendWindow",
     "ChatTweaks@ClickableLinks",
-    "ChatTweaks@ChatNameColours",
     "AutoOpenLootWindow",
-    "ChatTweaks@DisableChatMovement",
-    "RefreshMarketPrices"
+    "LeaveDutyCommand",
+    "BaitCommand",
+    "TooltipTweaks@PrecisionDurability",
+    "TooltipTweaks@PrecisionSpiritbond",
+    "UiAdjustments@ExpPercentage",
+    "UiAdjustments@HideExperienceBar",
+    "TooltipTweaks@MateriaStats",
+    "BaitCommand",
+    "BaitCommand",
+    "BaitCommand"
   ],
   "HiddenTweaks": [],
   "CustomTweakProviders": [],
   "BlacklistedTweaks": [
-    "StopCraftingButton",
-    "FixedShadowDistance",
-    "RefreshMarketPrices",
-    "TooltipTweaks",
-    "UiAdjustments@DutyListBackground",
-    "UiAdjustments@LootWindowDuplicateUniqueItemIndicator"
+    "UiAdjustments@ExtendedDesynthesisWindow",
+    "UiAdjustments@ActionPressMirroring",
+    "UiAdjustments@ControlHintMirroring",
+    "UiAdjustments@StopCraftingButton::2",
+    "UiAdjustments@FadeUnavailableActions",
+    "UiAdjustments@LockWindowPosition",
+    "UiAdjustments@SubmarineDestinationLetters"
   ],
   "HiddenCategories": [],
   "CustomizedCommands": {
@@ -44,7 +53,9 @@
   },
   "HideKofi": true,
   "ShowExperimentalTweaks": false,
-  "DisableAutoOpen": false,
+  "DisableAutoOpen": null,
+  "DisableAutoOpenConfig": false,
+  "DisableAutoOpenDebug": false,
   "ShowInDevMenu": false,
   "NoFools": false,
   "NotBaby": false,
@@ -53,55 +64,15 @@
   "ShowEnabledTweaksTab": true,
   "ShowOtherTweaksTab": true,
   "NoCallerInLog": false,
+  "UseFuzzyTweakSearch": true,
   "ShowTweakDescriptions": true,
   "ShowTweakIDs": false,
   "CustomCulture": "",
   "Language": "zh-CN",
-  "LastSeenChangelog": "1.9.7.0",
+  "LastSeenChangelog": "1.10.10.0",
   "AutoOpenChangelog": false,
   "DisableChangelogNotification": false,
-  "ChatTweaks": {
-    "$type": "SimpleTweaksPlugin.ChatTweaksConfig, SimpleTweaksPlugin",
-    "DisableChatAutoscroll": {
-      "$type": "SimpleTweaksPlugin.Tweaks.Chat.DisableChatAutoscroll+Configs, SimpleTweaksPlugin",
-      "DisablePanel0": false,
-      "DisablePanel1": false,
-      "DisablePanel2": false,
-      "DisablePanel3": false,
-      "Version": 1
-    },
-    "RenameChatTabs": {
-      "$type": "SimpleTweaksPlugin.Tweaks.Chat.RenameChatTabs+Config, SimpleTweaksPlugin",
-      "DoRenameTab0": false,
-      "DoRenameTab1": false,
-      "ChatTab0Name": "",
-      "ChatTab1Name": "",
-      "Version": 1
-    }
-  },
-  "FixedShadowDistance": {
-    "$type": "SimpleTweaksPlugin.Tweaks.FixedShadowDistance+Configs, SimpleTweaksPlugin",
-    "ShadowDistance": 1800.0,
-    "Version": 1
-  },
-  "UiAdjustments": {
-    "$type": "SimpleTweaksPlugin.UiAdjustmentsConfig, SimpleTweaksPlugin",
-    "NotificationToastAdjustments": {
-      "$type": "SimpleTweaksPlugin.Tweaks.UiAdjustment.NotificationToastAdjustments+Configs, SimpleTweaksPlugin",
-      "Hide": false,
-      "ShowInCombat": false,
-      "OffsetXPosition": 0,
-      "OffsetYPosition": 0,
-      "Scale": 1.0,
-      "Exceptions": [],
-      "Version": 1
-    },
-    "PartyUiAdjustments": {
-      "$type": "SimpleTweaksPlugin.Tweaks.UiAdjustment.PartyUiAdjustments+Configs, SimpleTweaksPlugin",
-      "HpPercent": false,
-      "ShieldShift": false,
-      "MpShield": true
-    }
-  },
+  "MetricsIdentifier": "FE1B7C3BF47CC8BE68189B330FB164083DA72235E8F94E1D820D10491D3E9A6A",
+  "FestiveDecorationType": -2,
   "Version": 3
 }

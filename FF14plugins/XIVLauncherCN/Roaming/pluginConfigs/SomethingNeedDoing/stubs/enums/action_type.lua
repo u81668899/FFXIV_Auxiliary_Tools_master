@@ -1,0 +1,50 @@
+-- Usage:
+-- luanet.load_assembly('FFXIVClientStructs')
+-- ActionType = luanet.import_type('FFXIVClientStructs.FFXIV.Client.Game.ActionType')
+-- ActionType.None
+
+--- @alias ActionTypeValue
+---| 0 # None
+---| 1 # Action
+---| 2 # Item
+---| 3 # KeyItem
+---| 4 # Ability
+---| 5 # GeneralAction
+---| 6 # BuddyAction
+---| 7 # MainCommand
+---| 8 # Companion
+---| 9 # CraftAction
+---| 10 # Unk_10
+---| 11 # PetAction
+---| 12 # Unk_12
+---| 13 # Mount
+---| 14 # PvPAction
+---| 15 # FieldMarker
+---| 16 # ChocoboRaceAbility
+---| 17 # ChocoboRaceItem
+---| 18 # Unk_18
+---| 19 # BgcArmyAction
+---| 20 # Ornament
+
+--- @class ActionType
+--- @field None ActionTypeValue
+--- @field Action ActionTypeValue
+--- @field Item ActionTypeValue
+--- @field KeyItem ActionTypeValue
+--- @field Ability ActionTypeValue
+--- @field GeneralAction ActionTypeValue
+--- @field BuddyAction ActionTypeValue
+--- @field MainCommand ActionTypeValue
+--- @field Companion ActionTypeValue
+--- @field CraftAction ActionTypeValue
+--- @field Unk_10 ActionTypeValue
+--- @field PetAction ActionTypeValue
+--- @field Unk_12 ActionTypeValue
+--- @field Mount ActionTypeValue
+--- @field PvPAction ActionTypeValue
+--- @field FieldMarker ActionTypeValue
+--- @field ChocoboRaceAbility ActionTypeValue
+--- @field ChocoboRaceItem ActionTypeValue
+--- @field Unk_18 ActionTypeValue
+--- @field BgcArmyAction ActionTypeValue
+--- @field Ornament ActionTypeValue

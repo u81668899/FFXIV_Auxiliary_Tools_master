@@ -1,0 +1,5 @@
+--- @class NodeWrapper
+--- @field Id number
+--- @field IsVisible boolean
+--- @field Text string
+--- @field NodeType NodeType

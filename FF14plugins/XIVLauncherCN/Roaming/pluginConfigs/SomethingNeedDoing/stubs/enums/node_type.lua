@@ -1,0 +1,24 @@
+-- Usage:
+-- luanet.load_assembly('FFXIVClientStructs')
+-- NodeType = luanet.import_type('FFXIVClientStructs.FFXIV.Component.GUI.NodeType')
+-- NodeType.Res
+
+--- @alias NodeTypeValue
+---| 1 # Res
+---| 2 # Image
+---| 3 # Text
+---| 4 # NineGrid
+---| 5 # Counter
+---| 8 # Collision
+---| 10 # ClippingMask
+---| 10000 # Component
+
+--- @class NodeType
+--- @field Res NodeTypeValue
+--- @field Image NodeTypeValue
+--- @field Text NodeTypeValue
+--- @field NineGrid NodeTypeValue
+--- @field Counter NodeTypeValue
+--- @field Collision NodeTypeValue
+--- @field ClippingMask NodeTypeValue
+--- @field Component NodeTypeValue

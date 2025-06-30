@@ -1,0 +1,5 @@
+--- @class TelepoWrapper
+--- @field Teleport fun(aetheryte: object): nil
+--- @field Teleport fun(aetheryteId: number, subIndex: number): nil
+--- @field GetAetherytePosition fun(aetheryteId: number): Vector3
+--- @field IsAetheryteUnlocked fun(aetheryteId: number): boolean

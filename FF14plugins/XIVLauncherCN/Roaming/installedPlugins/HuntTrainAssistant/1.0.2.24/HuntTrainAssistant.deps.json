@@ -1,0 +1,81 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HuntTrainAssistant/1.0.2.24": {
+        "dependencies": {
+          "DalamudPackager": "2.1.12",
+          "ECommons": "2.2.0.2",
+          "NightmareUI": "1.0.0",
+          "NotificationMasterAPI": "1.0.0.1"
+        },
+        "runtime": {
+          "HuntTrainAssistant.dll": {}
+        }
+      },
+      "DalamudPackager/2.1.12": {},
+      "NotificationMasterAPI/1.0.0.1": {
+        "runtime": {
+          "lib/net8.0-windows7.0/NotificationMasterAPI.dll": {
+            "assemblyVersion": "1.0.0.1",
+            "fileVersion": "1.0.0.1"
+          }
+        }
+      },
+      "ECommons/2.2.0.2": {
+        "runtime": {
+          "ECommons.dll": {
+            "assemblyVersion": "2.2.0.2",
+            "fileVersion": "2.2.0.2"
+          }
+        }
+      },
+      "NightmareUI/1.0.0": {
+        "dependencies": {
+          "ECommons": "2.2.0.2"
+        },
+        "runtime": {
+          "NightmareUI.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HuntTrainAssistant/1.0.2.24": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/2.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sc0PVxvgg4NQjcI8n10/VfUQBAS4O+Fw2pZrAqBdRMbthYGeogzu5+xmIGCGmsEZ/ukMOBuAqiNiB5qA3MRalg==",
+      "path": "dalamudpackager/2.1.12",
+      "hashPath": "dalamudpackager.2.1.12.nupkg.sha512"
+    },
+    "NotificationMasterAPI/1.0.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ta+lQtxQzHkqPC3doDn3ud8MvtwNnTgTIeXqfqu92G4lAy+/UJZ6iEefFH4MRZmX8Z99nUmUJZ4zcRvVMABzjQ==",
+      "path": "notificationmasterapi/1.0.0.1",
+      "hashPath": "notificationmasterapi.1.0.0.1.nupkg.sha512"
+    },
+    "ECommons/2.2.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NightmareUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

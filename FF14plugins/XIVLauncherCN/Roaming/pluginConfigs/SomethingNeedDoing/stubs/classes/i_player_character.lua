@@ -1,0 +1,45 @@
+-- FQN: Dalamud.Game.ClientState.Objects.SubKinds.IPlayerCharacter
+
+--- @class IPlayerCharacter
+--- @field StatusList StatusList
+--- @field IsCasting boolean
+--- @field IsCastInterruptible boolean
+--- @field CastActionType number
+--- @field CastActionId number
+--- @field CastTargetObjectId number
+--- @field CurrentCastTime number
+--- @field BaseCastTime number
+--- @field TotalCastTime number
+--- @field CurrentHp number
+--- @field MaxHp number
+--- @field CurrentMp number
+--- @field MaxMp number
+--- @field CurrentGp number
+--- @field MaxGp number
+--- @field CurrentCp number
+--- @field MaxCp number
+--- @field ShieldPercentage number
+--- @field Level number
+--- @field CompanyTag SeString
+--- @field NameId number
+--- @field StatusFlags StatusFlags
+--- @field Name SeString
+--- @field GameObjectId number
+--- @field EntityId number
+--- @field DataId number
+--- @field OwnerId number
+--- @field ObjectIndex number
+--- @field ObjectKind ObjectKind
+--- @field SubKind number
+--- @field YalmDistanceX number
+--- @field YalmDistanceZ number
+--- @field IsDead boolean
+--- @field IsTargetable boolean
+--- @field Rotation number
+--- @field HitboxRadius number
+--- @field TargetObjectId number
+--- @field TargetObject IGameObject
+
+--- @type IPlayerCharacter
+--- @as IPlayerCharacter
+IPlayerCharacter = {}

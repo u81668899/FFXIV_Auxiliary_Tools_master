@@ -1,0 +1,618 @@
+{
+  "DutyRotationChoice": {},
+  "_rotationConfigurationsDict": {},
+  "_TinctureTypeDict": {},
+  "_interruptibleMoreCheckDict": {},
+  "_raisePlayerByCastingDict": {},
+  "_raisePlayerBySwiftDict": {},
+  "_raisePlayerFirstDict": {},
+  "_RaiseTypeDict": {},
+  "_raiseBrinkOfDeathDict": {},
+  "_h2Dict": {},
+  "_offRaiserRaiseDict": {},
+  "_ignorePvPInvincibilityDict": {},
+  "_lucidDreamingMpThresholdDict": {},
+  "_healthAreaAbilityHotDict": {},
+  "_healthAreaSpellHotDict": {},
+  "_healthAreaAbilityDict": {},
+  "_healthAreaSpellDict": {},
+  "_healthSingleAbilityHotDict": {},
+  "_healthSingleSpellHotDict": {},
+  "_healthSingleAbilityDict": {},
+  "_healthSingleSpellDict": {},
+  "_healthForDyingTanksDict": {},
+  "_healthForAutoDefenseDict": {},
+  "_hostileTypeDict": {},
+  "_overrideActionAheadTimerDict": {},
+  "_action4headDict": {},
+  "_PvPRotationChoiceDict": {},
+  "_rotationChoiceDict": {},
+  "_rotationActionConfigDict": {},
+  "_rotationItemConfigDict": {},
+  "Version": 12,
+  "HasShownMainMenuMessage": false,
+  "LastSeenChangelog": "7.2.0.37",
+  "FirstTimeSetupDone": true,
+  "Events": [],
+  "DisabledJobs": [],
+  "RotationLibs": [],
+  "TargetingTypes": [],
+  "DutyStart": {
+    "MacroIndex": -1,
+    "IsShared": false
+  },
+  "DutyEnd": {
+    "MacroIndex": -1,
+    "IsShared": false
+  },
+  "AoEType": 2,
+  "PosPassageOfArms": false,
+  "PosFlameThrower": false,
+  "PosImprovisation": false,
+  "CastingStopTime": 2.5,
+  "UseAdditionalConditions": false,
+  "AutoOffAfterCombatTime": 30.0,
+  "AngleOfVisionCone": 45.0,
+  "MeleeRangeOffset": 1.0,
+  "HealWhenNothingTodoBelow": 0.8,
+  "HealthTankRatio": 0.45,
+  "HealthHealerRatio": 0.4,
+  "SwiftcastBuffer": 0.6,
+  "RaiseDelay": {
+    "X": 0.25,
+    "Y": 0.75
+  },
+  "LessMPNoRaise": 0,
+  "HealthDifference": 0.25,
+  "SpecialDuration": 3.0,
+  "TargetDelay": {
+    "X": 1.0,
+    "Y": 2.0
+  },
+  "WeaponDelay": {
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "StopCastingDelay": {
+    "X": 0.5,
+    "Y": 1.0
+  },
+  "InterruptDelay": {
+    "X": 0.5,
+    "Y": 1.0
+  },
+  "ProvokeDelay": {
+    "X": 0.5,
+    "Y": 1.0
+  },
+  "NotInCombatDelay": {
+    "X": 3.0,
+    "Y": 4.0
+  },
+  "ClickingDelay": {
+    "X": 0.1,
+    "Y": 0.15
+  },
+  "HealWhenNothingTodoDelay": {
+    "X": 0.5,
+    "Y": 1.0
+  },
+  "CountDownAhead": 0.4,
+  "MoveTargetAngle": 24.0,
+  "BossTimeToKill": 90.0,
+  "DyingTimeToKill": 10.0,
+  "IsDyingConfig": 0.02,
+  "CooldownWindowIconSize": 30.0,
+  "ControlWindowNextSizeRatio": 1.5,
+  "ControlWindowGCDSize": 40.0,
+  "ControlWindow0GCDSize": 30.0,
+  "ControlProgressHeight": 8.0,
+  "DistanceForMoving": 1.2,
+  "AutoHealTimeToKill": 8.0,
+  "MinUpdatingTime": 0.01,
+  "HealthForGuard": 0.15,
+  "TeachingModeColor": {
+    "X": 0.0,
+    "Y": 1.0,
+    "Z": 0.0,
+    "W": 1.0
+  },
+  "TargetColor": {
+    "X": 1.0,
+    "Y": 0.2,
+    "Z": 0.0,
+    "W": 0.8
+  },
+  "ControlWindowLockBg": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.55
+  },
+  "ControlWindowUnlockBg": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.75
+  },
+  "InfoWindowBg": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.4
+  },
+  "ActionSequencerIndex": 0,
+  "PoslockModifier": 0,
+  "KeyboardNoise": {
+    "X": 2,
+    "Y": 3
+  },
+  "TargetingIndex": 0,
+  "BeneficialAreaStrategy2": 1,
+  "AutoDefenseNumber": 2,
+  "AutoOffBetweenArea": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffCutScene": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffSwitchClass": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffWhenDead": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffWhenDutyCompleted": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "MoveTowardsScreenCenter": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "SayOutStateChanged": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ChangelogPopup": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowInfoOnDtr": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowInfoOnToast": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "PoslockCasting": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseKnockback": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseHpPotions": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseMpPotions": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ChooseAttackMark": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "PrioEnemyParts": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "CanAttackMarkAoe": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "FilterStopMark": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "FilterOneHpInvincible": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "JeunoTarget": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "CodTarget": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "StrongOfSheildTarget": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "TeachingMode": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "KeyBoardNoise": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "MoveAreaActionFarthest": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "StartOnCountdown": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "CountdownStartsManualMode": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "CancelStateOnCombatBeforeCountdown": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "StartOnAttackedBySomeone": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "NoNewHostiles": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseHealWhenNotAHealer": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "SwitchTargetFriendly": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseStopCasting": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "DispelAll": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "OnlyAttackInView": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "OnlyAttackInVisionCone": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "InDebug": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "LoadRotationsAtStartup": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "LoadDefaultRotations": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "DownloadCustomRotations": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoReloadRotations": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ToggleManual": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ToggleAuto": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "OnlyShowWithHostileOrInDuty": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowControlWindow": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "IsControlWindowLock": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowNextActionWindow": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "IsInfoWindowNoInputs": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "IsInfoWindowNoMove": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowItemsCooldown": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowGcdCooldown": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseOriginalCooldown": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowCooldownsAlways": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowTooltips": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "TargetHuntingRelicLevePriority": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "TargetQuestPriority": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "TargetQuestThings": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "DisableTargetDummys": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowToastsAboutDoAction": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoBurst": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "CastingStop": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "CastingStopCalculate": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoHeal": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseAbility": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseDefenseAbility": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoTankStance": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoProvokeForTank": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoUseTrueNorth": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoSpeedOutOfCombat": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseGroundBeneficialAbility": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "UseGroundBeneficialAbilityWhenMoving": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowCooldownWindow": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "RecordCastingArea": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "TargetFatePriority": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffAfterCombat": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOpenChest": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "EnableClickingCount": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoCloseChestWindow": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "HideWarning": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "OnlyHealSelfWhenNoHealer": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "ShowToggledSettingInChat": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "RecordKnockbackies": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "SetBluActions": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "HealOutOfCombat": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "FriendlyBattleNpcHeal": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "FriendlyPartyNpcHealRaise3": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "ChocoboPartyMember": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "FocusTargetIsParty": {
+    "Value": false,
+    "Enable": false,
+    "Disable": false
+  },
+  "HealWhenNothingTodo": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "IgnorePvPttk": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffWhenDeadPvP": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOffPvPMatchEnd": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  },
+  "AutoOnPvPMatchStart": {
+    "Value": true,
+    "Enable": false,
+    "Disable": false
+  }
+}

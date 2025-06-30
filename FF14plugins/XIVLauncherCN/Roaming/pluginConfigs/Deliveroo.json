@@ -1,0 +1,100 @@
+{
+  "$type": "Deliveroo.Configuration, Deliveroo",
+  "Version": 2,
+  "ItemsAvailableForPurchase": [],
+  "ItemsAvailableToPurchase": [
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 21072,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 5530,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 33916,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 13589,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 13591,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 13595,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchaseOption, Deliveroo",
+      "ItemId": 13593,
+      "SameQuantityForAllLists": false,
+      "GlobalLimit": 0
+    }
+  ],
+  "ItemsToPurchase": [
+    {
+      "$type": "Deliveroo.Configuration+PurchasePriority, Deliveroo",
+      "InternalId": "b84305e2-2725-4a24-8327-a69bf4aa57dd",
+      "ItemId": 21072,
+      "Limit": 65000,
+      "Enabled": true,
+      "Type": 1,
+      "CheckRetainerInventory": false
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchasePriority, Deliveroo",
+      "InternalId": "3d81bfbd-d5c7-4c10-8fe4-8e8c85389d89",
+      "ItemId": 33916,
+      "Limit": 999,
+      "Enabled": true,
+      "Type": 1,
+      "CheckRetainerInventory": false
+    },
+    {
+      "$type": "Deliveroo.Configuration+PurchasePriority, Deliveroo",
+      "InternalId": "d8cc6cc1-3514-49a9-b83e-30ea8d521261",
+      "ItemId": 5530,
+      "Limit": 0,
+      "Enabled": true,
+      "Type": 1,
+      "CheckRetainerInventory": false
+    }
+  ],
+  "ReservedSealCount": 0,
+  "ReserveDifferentSealCountAtMaxRank": false,
+  "ReservedSealCountAtMaxRank": 0,
+  "ChatType": 16,
+  "PauseAtRank": 0,
+  "BehaviorOnOtherWorld": 1,
+  "DisableFrameLimiter": true,
+  "UncapFrameRate": false,
+  "QuickTurnInKey": 16,
+  "TurnInWindowConfig": {
+    "$type": "Deliveroo.Configuration+MinimizableWindowConfig, Deliveroo",
+    "IsMinimized": false,
+    "IsPinned": false,
+    "IsClickthrough": false,
+    "Alpha": null
+  },
+  "ConfigWindowConfig": {
+    "$type": "LLib.ImGui.WindowConfig, LLib",
+    "IsPinned": false,
+    "IsClickthrough": false,
+    "Alpha": null
+  }
+}

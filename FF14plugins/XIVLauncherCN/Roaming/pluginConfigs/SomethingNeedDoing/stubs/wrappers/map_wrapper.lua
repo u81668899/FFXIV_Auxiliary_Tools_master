@@ -1,0 +1,3 @@
+--- @class MapWrapper
+--- @field IsFlagMarkerSet boolean
+--- @field Flag FlagWrapper

@@ -1,0 +1,45 @@
+{
+  "$type": "Saucy.Configuration, Saucy",
+  "EnableAutoMiniCactpot": false,
+  "Version": 0,
+  "UseRecommendedDeck": true,
+  "SelectedDeckIndex": -1,
+  "Stats": {
+    "$type": "Saucy.Stats, Saucy",
+    "GamesPlayedWithSaucy": 8,
+    "GamesWonWithSaucy": 4,
+    "GamesLostWithSaucy": 0,
+    "GamesDrawnWithSaucy": 4,
+    "CardsDroppedWithSaucy": 0,
+    "MGPWon": 115,
+    "NPCsPlayed": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+      "幻卡大师": 3,
+      "芙·霍芭丝": 5
+    },
+    "CardsWon": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+    },
+    "CuffMGP": 0,
+    "CuffBrutals": 0,
+    "CuffPunishings": 0,
+    "CuffBruisings": 0,
+    "CuffGamesPlayed": 0,
+    "LimbMGP": 0,
+    "LimbGamesPlayed": 0
+  },
+  "PlaySound": true,
+  "SelectedSound": "Moogle",
+  "OnlyUnobtainedCards": true,
+  "OpenAutomatically": true,
+  "SliceIsRightModuleEnabled": true,
+  "LimbConfig": {
+    "$type": "Saucy.OutOnALimb.LimbConfig, Saucy",
+    "EnableLimb": false,
+    "Tolerance": 2,
+    "Step": 10,
+    "StopAt": 18,
+    "HardStopAt": 12,
+    "LimbDifficulty": 0
+  }
+}

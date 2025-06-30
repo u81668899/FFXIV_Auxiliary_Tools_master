@@ -1,0 +1,44 @@
+-- FQN: ECommons.DalamudServices.Svc
+
+--- @class Svc
+--- @field PluginInterface IDalamudPluginInterface
+--- @field Buddies IBuddyList
+--- @field Chat IChatGui
+--- @field ClientState IClientState
+--- @field Commands ICommandManager
+--- @field Condition ICondition
+--- @field Data IDataManager
+--- @field Fates IFateTable
+--- @field FlyText IFlyTextGui
+--- @field Framework IFramework
+--- @field GameGui IGameGui
+--- @field GameNetwork IGameNetwork
+--- @field Gauges IJobGauges
+--- @field KeyState IKeyState
+--- @field Objects IObjectTable
+--- @field PfGui IPartyFinderGui
+--- @field Party IPartyList
+--- @field SigScanner ISigScanner
+--- @field Targets ITargetManager
+--- @field Toasts IToastGui
+--- @field GameConfig IGameConfig
+--- @field GameLifecycle IGameLifecycle
+--- @field GamepadState IGamepadState
+--- @field DtrBar IDtrBar
+--- @field DutyState IDutyState
+--- @field Hook IGameInteropProvider
+--- @field Texture ITextureProvider
+--- @field Log IPluginLog
+--- @field AddonLifecycle IAddonLifecycle
+--- @field AetheryteList IAetheryteList
+--- @field AddonEventManager IAddonEventManager
+--- @field GameInventory IGameInventory
+--- @field TextureSubstitution ITextureSubstitutionProvider
+--- @field TitleScreenMenu ITitleScreenMenu
+--- @field NotificationManager INotificationManager
+--- @field ContextMenu IContextMenu
+--- @field MarketBoard IMarketBoard
+
+--- @type Svc
+--- @as Svc
+Svc = {}

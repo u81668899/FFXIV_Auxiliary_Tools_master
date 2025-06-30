@@ -1,0 +1,4 @@
+--- @class BuddyWrapper
+--- @field BuddyMember table<BuddyMemberWrapper>
+--- @field CompanionInfo CompanionInfoWrapper
+--- @field PetInfo PetInfoWrapper

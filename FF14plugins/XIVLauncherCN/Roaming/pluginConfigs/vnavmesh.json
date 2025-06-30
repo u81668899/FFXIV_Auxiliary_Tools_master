@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "Payload": {
+    "AutoLoadNavmesh": true,
+    "EnableDTR": false,
+    "AlignCameraToMovement": true,
+    "ShowWaypoints": false,
+    "ForceShowGameCollision": false,
+    "CancelMoveOnUserInput": false,
+    "VoxelPathfindRandomFactor": 0.5,
+    "VoxelPathfindMaxStepsBaseFactor": 2.0,
+    "VoxelPathfindEarlyTerminationDistance": 2.0,
+    "VoxelPathfindMinSteps": 5000,
+    "VoxelPathfindMaxStepsMultiplier": 1000.0
+  }
+}

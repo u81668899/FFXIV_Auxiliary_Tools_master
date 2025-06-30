@@ -1,98 +1,84 @@
 {
-  "$type": "HaselTweaks.Configuration, HaselTweaks",
-  "Version": 4,
-  "EnabledTweaks": [],
+  "Version": 8,
+  "EnabledTweaks": [
+    "PortraitHelper",
+    "InventoryHighlight"
+  ],
   "Tweaks": {
-    "$type": "HaselTweaks.TweakConfigs, HaselTweaks",
+    "AchievementLinkTooltip": {
+      "ShowCompletionStatus": true,
+      "PreventSpoiler": true
+    },
+    "AetherCurrentHelper": {
+      "AlwaysShowDistance": false,
+      "CenterDistance": true
+    },
     "AutoSorter": {
-      "$type": "HaselTweaks.Tweaks.AutoSorter+Configuration, HaselTweaks",
       "Settings": [
         {
-          "$type": "HaselTweaks.Tweaks.AutoSorter+SortingRule, HaselTweaks",
           "Enabled": true,
-          "Category": null,
-          "Condition": null,
-          "Order": null,
-          "LocalizedCategory": null,
-          "LocalizedCondition": null,
-          "LocalizedOrder": null
+          "Category": "armoury",
+          "Condition": "ilv",
+          "Order": "des"
         }
+      ],
+      "SortArmouryOnJobChange": true
+    },
+    "BackgroundMusicKeybind": {
+      "Keybind": [
+        17,
+        77
       ]
     },
-    "CustomChatTimestamp": {
-      "$type": "HaselTweaks.Tweaks.CustomChatTimestamp+Configuration, HaselTweaks",
-      "Format": "[HH:mm] "
-    },
-    "MinimapAdjustments": {
-      "$type": "HaselTweaks.Tweaks.MinimapAdjustments+Configuration, HaselTweaks",
-      "Square": false,
-      "DefaultOpacity": 0.8,
-      "HoverOpacity": 1.0,
-      "HideCoords": true,
-      "HideWeather": true
-    },
-    "ForcedCutsceneMusic": {
-      "$type": "HaselTweaks.Tweaks.ForcedCutsceneMusic+Configuration, HaselTweaks",
-      "Restore": true
-    },
-    "ScrollableTabs": {
-      "$type": "HaselTweaks.Tweaks.ScrollableTabs+Configuration, HaselTweaks",
-      "Invert": true,
-      "HandleAetherCurrent": true,
-      "HandleArmouryBoard": true,
-      "HandleInventoryBuddy": true,
-      "HandleCurrency": true,
-      "HandleAOZNotebook": true,
-      "HandleOrnamentNoteBook": true,
-      "HandleFieldRecord": true,
-      "HandleFishGuide": true,
-      "HandleGoldSaucerCardList": true,
-      "HandleGoldSaucerCardDeckEdit": true,
-      "HandleLovmPaletteEdit": true,
-      "HandleInventory": true,
-      "HandleMJIMinionNoteBook": true,
-      "HandleMinionNoteBook": true,
-      "HandleMountNoteBook": true,
-      "HandleRetainer": true,
-      "HandleFateProgress": true,
-      "HandleAdventureNoteBook": true
+    "CharacterClassSwitcher": {
+      "DisableTooltips": false,
+      "AlwaysOpenOnClassesJobsTab": false,
+      "ForceClassesJobsSubTab": 0
     },
     "Commands": {
-      "$type": "HaselTweaks.Tweaks.Commands+Configuration, HaselTweaks",
       "EnableItemLinkCommand": true,
-      "EnableWhatMountCommand": true
+      "EnableWhatMountCommand": true,
+      "EnableWhatEmoteCommand": true,
+      "EnableWhatBardingCommand": true,
+      "EnableGlamourPlateCommand": true
     },
-    "CharacterClassSwitcher": {
-      "$type": "HaselTweaks.Tweaks.CharacterClassSwitcher+Configuration, HaselTweaks",
-      "DisableTooltips": false
+    "CustomChatMessageFormats": {
+      "FormatOverrides": {}
+    },
+    "CustomChatTimestamp": {
+      "Format": "[HH:mm] "
+    },
+    "DTR": {
+      "FpsFormat": "{0} fps"
     },
     "EnhancedExpBar": {
-      "$type": "HaselTweaks.Tweaks.EnhancedExpBar+Configuration, HaselTweaks",
       "ForcePvPSeriesBar": true,
       "ForceSanctuaryBar": true,
+      "ForceCompanionBar": true,
       "SanctuaryBarHideJob": false,
       "MaxLevelOverride": 0,
       "DisableColorChanges": false
     },
-    "AetherCurrentHelper": {
-      "$type": "HaselTweaks.Tweaks.AetherCurrentHelper+Configuration, HaselTweaks",
-      "AlwaysShowDistance": false,
-      "CenterDistance": true
+    "EnhancedIsleworksAgenda": {
+      "EnableSearchBar": true,
+      "DisableTreeListTooltips": true,
+      "SearchLanguage": 1
     },
-    "LockWindowPosition": {
-      "$type": "HaselTweaks.Tweaks.LockWindowPosition+Configuration, HaselTweaks",
-      "Inverted": false,
-      "AddLockUnlockContextMenuEntries": true,
-      "LockedWindows": []
-    },
-    "MaterialAllocation": {
-      "$type": "HaselTweaks.Tweaks.MaterialAllocation+Configuration, HaselTweaks",
-      "SaveLastSelectedTab": true,
-      "LastSelectedTab": 2,
-      "OpenGatheringLogOnItemClick": true
+    "EnhancedLoginLogout": {
+      "SkipLogo": true,
+      "ShowPets": false,
+      "EnableCharaSelectEmote": false,
+      "PreloadTerritory": true,
+      "ClearTellHistory": false,
+      "PetPosition": {
+        "X": -0.6,
+        "Y": 0,
+        "Z": 0
+      },
+      "PetMirageSettings": {},
+      "SelectedEmotes": {}
     },
     "EnhancedMaterialList": {
-      "$type": "HaselTweaks.Tweaks.EnhancedMaterialList+Configuration, HaselTweaks",
       "EnableZoneNames": true,
       "DisableZoneNameForCrystals": true,
       "ClickToOpenMap": true,
@@ -104,120 +90,238 @@
       "RestoreMaterialListAmount": 0,
       "AddSearchForItemByCraftingMethodContextMenuEntry": true
     },
+    "ForcedCutsceneMusic": {
+      "Restore": true,
+      "HandleMaster": true,
+      "HandleBgm": true,
+      "HandleSe": true,
+      "HandleVoice": true,
+      "HandleEnv": true,
+      "HandleSystem": false,
+      "HandlePerform": false
+    },
+    "GearSetGrid": {
+      "AutoOpenWithGearSetList": false,
+      "RegisterCommand": true,
+      "ConvertSeparators": true,
+      "SeparatorFilter": "===========",
+      "DisableSeparatorSpacing": false
+    },
+    "InventoryHighlight": {
+      "IgnoreQuality": true
+    },
+    "LockWindowPosition": {
+      "Inverted": false,
+      "AddLockUnlockContextMenuEntries": true,
+      "LockedWindows": []
+    },
+    "MaterialAllocation": {
+      "LastSelectedTab": 2
+    },
+    "MinimapAdjustments": {
+      "Square": false,
+      "DefaultOpacity": 0.8,
+      "HoverOpacity": 1,
+      "HideCoords": true,
+      "CoordsVisibleOnHover": true,
+      "HideWeather": true,
+      "WeatherVisibleOnHover": true,
+      "HideSun": false,
+      "SunVisibleOnHover": true,
+      "HideCardinalDirections": false,
+      "CardinalDirectionsVisibleOnHover": true
+    },
     "PortraitHelper": {
-      "$type": "HaselTweaks.Tweaks.PortraitHelper+Configuration, HaselTweaks",
-      "Presets": [],
+      "Presets": [
+        {
+          "Id": "9851dea5-cd34-4a32-9629-44edd6e095bd",
+          "Name": "\u5957\u88C5 #29: \u7A77\u56F0\u6F66\u5012\u7528",
+          "Preset": "SFRQUwEAuSzvuU48ADxnop6y7DAAPAkAyBwAYGWXQgmLKtoxSSevo6g\u002BlVC0ALQAAABDSHUAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "e8375386-2825-4335-b120-a538c26912a2",
+          "Name": "\u5957\u88C5 #2: \u9ED1\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEApbbvtYI4ADzhKCKlniwAPAAAoAkAjpczQgs3M7CtkjXNLwm8/P\u002BuANX/A5PYWVYAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "ab435beb-2d54-487e-affb-42796e8021dc",
+          "Name": "\u5957\u88C5 #44: \u8770\u86C7\u5251\u58EB",
+          "Preset": "SFRQUwEAbyVkLiY8ADwep54hl6oAPAAAoGcAlJiIQhIAAAAAAAAAAG1wfIleAKL//7KyMXQAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "48433069-f5b4-4e3e-982f-3df9fa3eacde",
+          "Name": "\u5957\u88C5 #33: \u821E\u8005",
+          "Preset": "SFRQUwEAra6atsg7ADx3pRKpoyoAPDgAyEgA\u002Bv7WQhkAAAAAK6jIL4aH/yWaAEIAfsH/oQIAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "4f2a4da8-bd99-486d-885b-a0dfedf63f8c",
+          "Name": "\u5957\u88C5 #32: \u9F99\u9A91\u58EB",
+          "Preset": "SFRQUwEAzSyoMXw6ADyyJT4oX4wAPAAAoEYATmKeQRkAAAAAAAAAAP///38yALT/MzMzf5kAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "1fe1869a-8c90-4f86-be6f-565ce71d94a4",
+          "Name": "\u5957\u88C5 #21: \u8D64\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEAvDTeOXkyADw\u002Br\u002BerQ6kAPAAAZTMAFhkaQwAAAAAALbHQL4YrMn30/14AcG4tigEAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "6d212a5f-b769-4393-8bd6-73e8f483d8a5",
+          "Name": "\u5957\u88C5 #26: \u5FCD\u8005",
+          "Preset": "SFRQUwEALrnHtT88ADwUmAStYpgAPAAAoCwAwcpMQgEAAAAAlDVmtP///8eFAIMAMzMzTO4AAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "b0974e1c-fa9a-4f3d-8cec-9c8f736b82fd",
+          "Name": "\u5957\u88C5 #26: \u5FCD\u8005",
+          "Preset": "SFRQUwEAXz2wqck7ADwqLGy0pCsAPPf/cAEAbxKDOg9BtgG3j7XKLwBzLHbC/7QAV55KH1gAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "5aa9b8d6-972d-492b-9269-6c4c71e1b845",
+          "Name": "\u5957\u88C5 #20: \u767D\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEAKCsSKuA7ADyOJUWW5B4APP//jDMA\u002Bv7VQgAAAAAAQCeOoP///3\u002BFALP/MzMzgbwAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "6cd466aa-6ae2-48da-b8be-dda481715e0f",
+          "Name": "\u5957\u88C5 #30: \u6B66\u58EB",
+          "Preset": "SFRQUwEAXrhuNvg8ADxRrqKbeqkAPPr/yBABvj\u002BKQwnzNsKgAarQL8LHpMCZ//f/MxpzNHsAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "8c6e3a08-bb96-4290-bd95-af595bbb756c",
+          "Name": "\u5957\u88C5 #25: \u9A91\u58EB",
+          "Preset": "SFRQUwEATrQcOMEyADyJpT\u002BofR4APAAAhlcA4mUOQxJvOactkzVzLmtDbZCY/8v/VDZjjAIAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "766368a1-a698-402c-b36f-fdc63de1356d",
+          "Name": "\u5957\u88C5 #23: \u673A\u5DE5\u58EB",
+          "Preset": "SFRQUwEANTqQroI3ADyHLdUhBygAPAAAoFcAwcpoQhdGuh\u002B45DN6qv///3\u002BFALP/MzMzfwIAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "5ab8fbfb-f5cc-45a1-8b01-aa3c16cf6497",
+          "Name": "\u5957\u88C5 #18: \u9752\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEA\u002BrZ5L7U2ADxcoQwnoCQAPAAAZ2wAWmQ2QhoAAAAAlDXQL////1me/7//KzMzMQoAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "a80620e9-8f2f-4728-99a9-59a870b602e5",
+          "Name": "\u5957\u88C5 #21: \u8D64\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEAy7AAAPo/ADwAAAAAAAAAPOL/lggBtcjAQRoAAAAAAAAAAMGw84iFALP/MzMzf3AAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "600c91da-f300-4d7d-8703-d4a18f86beed",
+          "Name": "\u5957\u88C5 #24: \u6218\u58EB",
+          "Preset": "SFRQUwEA66gHOCI4ADz5pdymACUAPAgAoE8AgpWBQQFaIAU4Pp10rka9/8mI/08AKQDaFAoAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "06b62ab7-c261-4183-90b8-8f595e51566c",
+          "Name": "\u5957\u88C5 #10: \u7EDD\u67AA\u6218\u58EB",
+          "Preset": "SFRQUwEAGrB5LpI5ADwPKaIoLpwAPAAAoBsBwcomQgEAAAAAAAAAAP///3\u002BFALP/MzMzf\u002BkAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "64022d82-adc5-40f0-b455-d01be8d8f777",
+          "Name": "\u5957\u88C5 #7: \u6697\u9ED1\u9A91\u58EB",
+          "Preset": "SFRQUwEAszosuEY7ADxhMFQqhSYAPAAAZFgAlJiCQgLFNiw1kjXQL////3\u002BFALP/MzMzf1kAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "9ea7effc-b89d-41a4-981e-e5b699ce5544",
+          "Name": "\u5957\u88C5 #2: \u9ED1\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEAM7gbtBM4ADwoqccmiCkAPAAAoGMAgpWlQRJQOyy4AAAAAOHh/1CFAM3/MzMzfqEAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "f639765a-47bd-4399-9976-b9526bb708a0",
+          "Name": "\u5957\u88C5 #16: \u5360\u661F\u672F\u58EB",
+          "Preset": "SFRQUwEABCrBLR87ADwwnN4st6gAPAAAnXAAJCaBQxIAAAAAAAAAAIan7hSSABEAPVNXiKEAAQABAA==",
+          "Tags": []
+        },
+        {
+          "Id": "77bc8169-1a2f-4d92-b90c-8085688908bb",
+          "Name": "\u5957\u88C5 #20: \u767D\u9B54\u6CD5\u5E08",
+          "Preset": "SFRQUwEAXDVcMCU6ADw4JqwoaaEAPBAAxikATmLaQQFmtda2ZqzPL83//8ve/3n///3/ZQIAAAAAAA==",
+          "Tags": []
+        },
+        {
+          "Id": "10a08c1a-e98f-466a-8f89-f87234c5c3ee",
+          "Name": "\u5957\u88C5 #1: \u53EC\u5524\u5E08",
+          "Preset": "SFRQUwEAdS04PMc6ADxoJZGoDi4APAAAoAMBBANHQhcAAAAAAAAAAP///zOFAP//NDNfFHIABQBLAA==",
+          "Tags": []
+        },
+        {
+          "Id": "aed5acfb-5c45-4e48-b3e1-44eb02c7f661",
+          "Name": "\u62DB\u624B",
+          "Preset": "SFRQUwEAJ7P7N786ADwZjc4ifRwAPAgAmhAA9P0DQgAAAAAAaTXILqaUw3f7/x0AerbavuYAAAAAAA==",
+          "Tags": []
+        }
+      ],
       "PresetTags": [],
-      "ShowAlignmentTool": false,
+      "ShowAlignmentTool": true,
       "AlignmentToolVerticalLines": 2,
       "AlignmentToolVerticalColor": {
-        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0,
-        "W": 1.0
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 1
       },
       "AlignmentToolHorizontalLines": 2,
       "AlignmentToolHorizontalColor": {
-        "$type": "System.Numerics.Vector4, System.Private.CoreLib",
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0,
-        "W": 1.0
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 1
       },
+      "EmbedPresetStringInThumbnails": true,
       "NotifyGearChecksumMismatch": true,
-      "ReequipGearsetOnUpdate": false
+      "ReequipGearsetOnUpdate": true,
+      "AutoUpdatePotraitOnGearUpdate": true,
+      "IgnoreDoHDoL": true
+    },
+    "ScrollableTabs": {
+      "Invert": true,
+      "HandleAetherCurrent": true,
+      "HandleArmouryBoard": true,
+      "HandleAOZNotebook": true,
+      "HandleCharacter": true,
+      "HandleCharacterClass": true,
+      "HandleCharacterRepute": true,
+      "HandleInventoryBuddy": true,
+      "HandleBuddy": true,
+      "HandleCurrency": true,
+      "HandleOrnamentNoteBook": true,
+      "HandleFieldRecord": true,
+      "HandleFishGuide": true,
+      "HandleMiragePrismPrismBox": true,
+      "HandleGoldSaucerCardList": true,
+      "HandleGoldSaucerCardDeckEdit": true,
+      "HandleLovmPaletteEdit": true,
+      "HandleInventory": true,
+      "HandleMJIMinionNoteBook": true,
+      "HandleMinionNoteBook": true,
+      "HandleMountNoteBook": true,
+      "HandleRetainer": true,
+      "HandleFateProgress": true,
+      "HandleAdventureNoteBook": true
+    },
+    "ShopItemIcons": {
+      "HandleShop": true,
+      "HandleShopExchangeItem": true,
+      "HandleInclusionShop": true,
+      "HandleShopExchangeCurrency": true,
+      "HandleGrandCompanyExchange": true,
+      "HandleFreeShop": true
     }
   },
-  "SigCacheVersion": "2023.09.06.0000.0000",
-  "SigCache": {
-    "$type": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib],[System.Int64, System.Private.CoreLib]], System.Collections.Concurrent",
-    "E8 ?? ?? ?? ?? EB 0A 48 8D 4C 24 ?? E8 ?? ?? ?? ?? 48 8D 8D ?? ?? ?? ??": 20661104,
-    "E9 ?? ?? ?? ?? 41 83 FF 47 ?? ?? ?? ?? ?? ?? ??": 15307904,
-    "E8 ?? ?? ?? ?? 44 0A E8 ?? ?? ?? ?? ?? ?? ?? ??": 19339984,
-    "48 8B 05 ?? ?? ?? ?? 8B CA 48 8B 84 C8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??": 3600928,
-    "E8 ?? ?? ?? ?? 0F B7 40 7E ?? ?? ?? ?? ?? ?? ??": 6655376,
-    "E8 ?? ?? ?? ?? 0F B7 D8 85 DB ?? ?? ?? ?? ?? ??": 19152080,
-    "E8 ?? ?? ?? ?? 0F B7 43 24 66 85 C0 75 05 0F 28 D6 EB 35 0F B7 D0 8B CA 8B C2 C1 E9 0A 81 E2 ?? ?? ?? ?? 83 E1 1F C1 E0 10 C1 E1 17 25 ?? ?? ?? ?? 81 C1 ?? ?? ?? ?? C1 E2 0D 0B C8 0B CA 89 4C 24 40 ?? ?? ?? ?? ?? ??": 21251744,
-    "E8 ?? ?? ?? ?? EB 14 40 80 FE 08 ?? ?? ?? ?? ??": 19656576,
-    "48 89 5C 24 ?? 57 48 83 EC 20 48 63 FA 48 8B D9 85 D2 0F 88 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??": 7118016,
-    "E8 ?? ?? ?? ?? 48 89 83 ?? ?? ?? ?? EB 0B ?? ??": 21245856,
-    "E8 ?? ?? ?? ?? 48 0F BF 56 ?? ?? ?? ?? ?? ?? ??": 5663120,
-    "E8 ?? ?? ?? ?? 84 C0 74 65 39 9D ?? ?? ?? ?? ??": 16547776,
-    "48 8B 41 08 F6 80 ?? ?? ?? ?? ?? 74 10 F3 0F 11 89 ?? ?? ?? ?? F3 0F 11 91 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC 48 8B 41 08 F6 80 ?? ?? ?? ?? ?? 74 09 33 C0 48 89 81 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC CC 48 89 5C 24 ?? ?? ?? ??": 19715536,
-    "E8 ?? ?? ?? ?? EB B1 48 8B 4B 28 ?? ?? ?? ?? ??": 10330608,
-    "E8 ?? ?? ?? ?? 48 8B F0 48 89 45 0F ?? ?? ?? ??+0x1C": 27095616,
-    "E8 ?? ?? ?? ?? EB 40 41 8D 40 FD ?? ?? ?? ?? ??": 14224880,
-    "E9 ?? ?? ?? ?? CC CC CC CC CC CC CC CC CC CC 48 89 5C 24 ?? 48 89 6C 24 ?? 48 89 74 24 ?? 44 88 44 24 ?? ?? ?? ?? ?? ??": 15293280,
-    "E8 ?? ?? ?? ?? 85 C0 79 0C ?? ?? ?? ?? ?? ?? ??": 6655456,
-    "E8 ?? ?? ?? ?? 0F B6 96 ?? ?? ?? ?? 48 8B 8E ?? ?? ?? ?? E8 ?? ?? ?? ?? BB ?? ?? ?? ?? ?? ?? ??": 21253552,
-    "E8 ?? ?? ?? ?? EB 03 48 8B C5 33 D2 48 89 87 ?? ?? ?? ?? 45 33 C9 4C 8B C6 8D 4A 30 E8 ?? ?? ?? ?? 48 85 C0 74 0D 48 8B D3 48 8B C8 E8 ?? ?? ?? ?? EB 03 48 8B C5 45 33 C9 48 89 87 ?? ?? ?? ?? 4C 8B C6 33 D2 B9 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 85 C0 74 0D 48 8B D3 48 8B C8 E8 ?? ?? ?? ?? EB 03 48 8B C5 45 33 C9 48 89 87 ?? ?? ?? ?? 4C 8B C6 33 D2 B9 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 85 C0 74 0D 48 8B D3 48 8B C8 E8 ?? ?? ?? ?? EB 03 48 8B C5 33 D2 48 89 87 ?? ?? ?? ?? 45 33 C9 4C 8B C6 8D 4A 30 E8 ?? ?? ?? ?? 48 85 C0 74 0D 48 8B D3 48 8B C8 E8 ?? ?? ?? ?? EB 03 48 8B C5 33 D2 48 89 87 ?? ?? ?? ?? 45 33 C9 4C 8B C6 8D 4A 60 ?? ?? ?? ?? ?? ?? ?? ??+0x11": 28065128,
-    "E9 ?? ?? ?? ?? 33 D2 E8 ?? ?? ?? ?? 48 83 C4 48 ?? ?? ?? ?? ?? ?? ?? ??": 15356176,
-    "E8 ?? ?? ?? ?? 83 BE ?? ?? ?? ?? ?? 4C 8B B4 24 ?? ?? ?? ?? 74 2D ?? ??": 21248880,
-    "E9 ?? ?? ?? ?? 83 FD 11 ?? ?? ?? ?? ?? ?? ?? ??": 15292992,
-    "48 8D 81 ?? ?? ?? ?? 89 54 24 10 ?? ?? ?? ?? ??": 5627312,
-    "E8 ?? ?? ?? ?? E9 ?? ?? ?? ?? 0F B7 93 ?? ?? ??": 21252416,
-    "40 56 48 83 EC 20 80 B9 ?? ?? ?? ?? ?? 48 8B F1 7C 08 ?? ?? ?? ?? ?? ??": 7115536,
-    "E8 ?? ?? ?? ?? 32 C0 48 8B 4D 37 ?? ?? ?? ?? ??": 19328192,
-    "E8 ?? ?? ?? ?? 49 8D 4F 10 88 85 ?? ?? ?? ?? ??": 21252976,
-    "E8 ?? ?? ?? ?? 45 33 DB FF C3 ?? ?? ?? ?? ?? ??": 7040480,
-    "E8 ?? ?? ?? ?? E9 ?? ?? ?? ?? 48 8D 4F 20 E8 ?? ?? ?? ?? 44 0F B7 83 ??": 21253440,
-    "E8 ?? ?? ?? ?? EB 27 8B D6 ?? ?? ?? ?? ?? ?? ??": 7037232,
-    "E8 ?? ?? ?? ?? 4C 8D 45 10 48 8B CF ?? ?? ?? ??": 21245040,
-    "83 FA 01 0F 87 ?? ?? ?? ?? 48 89 5C 24 ?? 48 89 6C 24 ?? ?? ?? ?? ?? ??": 16343136,
-    "48 89 5C 24 ?? 57 48 83 EC 20 48 8B FA 48 8B D9 45 84 C9 ?? ?? ?? ?? ??": 6407296,
-    "E8 ?? ?? ?? ?? 45 89 3E ?? ?? ?? ?? ?? ?? ?? ??": 5680832,
-    "E9 ?? ?? ?? ?? 41 0F B6 40 ?? 88 42 62 ?? ?? ??": 21245120,
-    "E8 ?? ?? ?? ?? BB ?? ?? ?? ?? C7 45 ?? ?? ?? ?? ?? 8B D3 C7 45 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??": 15490208,
-    "E8 ?? ?? ?? ?? 48 8B 86 ?? ?? ?? ?? 88 58 03 ??": 19148368,
-    "E8 ?? ?? ?? ?? E9 ?? ?? ?? ?? 48 8B 8E ?? ?? ?? ?? 48 8B 01 ?? ?? ?? ??": 21252144,
-    "E8 ?? ?? ?? ?? 0F B7 DD ?? ?? ?? ?? ?? ?? ?? ??": 5508800,
-    "48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC 70 48 8B 05 ?? ?? ?? ?? 48 33 C4 48 89 44 24 ?? 48 8B F1 48 8B 89 ?? ?? ?? ??": 15341264,
-    "E8 ?? ?? ?? ?? 41 B5 01 49 63 46 48 ?? ?? ?? ??": 21251712,
-    "E8 ?? ?? ?? ?? EB 09 83 FF 01 ?? ?? ?? ?? ?? ??": 15318896,
-    "E8 ?? ?? ?? ?? 41 3B 1E ?? ?? ?? ?? ?? ?? ?? ??": 5627008,
-    "E8 ?? ?? ?? ?? 0F B7 2D ?? ?? ?? ?? ?? ?? ?? ??": 19656912,
-    "E8 ?? ?? ?? ?? 48 8B DD BA ?? ?? ?? ?? 48 C1 E3 04 49 03 DE ?? ?? ?? ??": 21254512,
-    "E8 ?? ?? ?? ?? B0 01 EB 02 32 C0 48 8B 5C 24 ?? 48 8B 6C 24 ?? 48 8B 74 24 ?? 48 83 C4 30 41 5F 41 5E 41 5D 41 5C 5F C3 CC CC CC CC CC CC CC ??": 15318672,
-    "E8 ?? ?? ?? ?? 4C 8B 64 24 ?? 44 0A E8 ?? ?? ??": 19339120,
-    "E8 ?? ?? ?? ?? 48 8B F8 48 85 C0 74 47 41 8B D6 ?? ?? ?? ?? ?? ?? ?? ??": 6655104,
-    "48 8B 41 08 F6 80 ?? ?? ?? ?? ?? 74 10 84 D2 ??": 19705488,
-    "E8 ?? ?? ?? ?? 48 89 BC 24 ?? ?? ?? ?? 84 DB ??": 21252576,
-    "E8 ?? ?? ?? ?? 48 8B DE 48 8D BC 24 ?? ?? ?? ??": 14225520,
-    "E8 ?? ?? ?? ?? 44 0F B6 4B ?? 48 8B CF 44 0F B6 43 ?? 0F B6 53 26 E8 ?? ?? ?? ?? 48 8B 4F 18 0F B6 43 29 F3 0F 10 35 ?? ?? ?? ?? 88 87 ?? ?? ?? ?? 48 85 C9 74 13 0F B6 C0 66 0F 6E C8 0F 5B C9 F3 0F 5E CE E8 ?? ?? ?? ?? 0F B7 43 2C 0F B7 53 2A 48 8B 4F 18 66 89 97 ?? ?? ?? ?? 66 89 87 ?? ?? ?? ?? 48 85 C9 74 17 98 66 0F 6E D0 0F BF C2 0F 5B D2 66 0F 6E C8 0F 5B C9 E8 ?? ?? ?? ?? 44 0F B6 4B ?? 48 8B CF 44 0F B6 43 ?? 0F B6 53 2E E8 ?? ?? ?? ?? 48 8B 4F 18 0F B6 43 31 88 87 ?? ?? ?? ?? 48 85 C9 74 13 0F B6 C0 66 0F 6E C8 0F 5B C9 F3 0F 5E CE E8 ?? ?? ?? ?? 0F B7 43 32 48 8B 5C 24 ?? ?? ?? ?? ??": 21252000,
-    "48 89 5C 24 ?? 48 89 7C 24 ?? 80 79 2C 00 ?? ??": 19301296,
-    "E8 ?? ?? ?? ?? 0F B7 43 10 48 8D 4C 24 ?? ?? ??": 21256240,
-    "E8 ?? ?? ?? ?? 4C 8B 6C 24 ?? 0F BA E5 0A ?? ??": 19654240,
-    "E8 ?? ?? ?? ?? 84 DB 0F 84 ?? ?? ?? ?? 48 63 87 ?? ?? ?? ?? 45 33 C9 ??": 21252256,
-    "E8 ?? ?? ?? ?? EB 17 48 8D 4F 20 ?? ?? ?? ?? ??": 21251280,
-    "E8 ?? ?? ?? ?? 0F B7 45 F2 ?? ?? ?? ?? ?? ?? ??": 21250224,
-    "E8 ?? ?? ?? ?? 0F B7 93 ?? ?? ?? ?? 0F 28 D0 ??": 21252752,
-    "E8 ?? ?? ?? ?? 0F B6 45 92 C7 83 ?? ?? ?? ?? ??": 21251136,
-    "E8 ?? ?? ?? ?? 41 FE 85 ?? ?? ?? ?? ?? ?? ?? ??": 5539536,
-    "E9 ?? ?? ?? ?? 48 8D 47 30 ?? ?? ?? ?? ?? ?? ??": 680368,
-    "0F 10 02 0F 11 41 48 ??": 7036944,
-    "E8 ?? ?? ?? ?? 0F B6 96 ?? ?? ?? ?? 48 8B 8E ?? ?? ?? ?? E8 ?? ?? ?? ?? 44 0F B7 86 ?? ?? ?? ??": 21253312,
-    "E8 ?? ?? ?? ?? 48 8B 43 10 C6 80 ?? ?? ?? ?? ?? 48 8B 4B 10 ?? ?? ?? ??": 21246416,
-    "E9 ?? ?? ?? ?? BA ?? ?? ?? ?? 48 8B 5C 24 ?? 48 83 C4 20 ?? ?? ?? ?? ??": 16616416,
-    "E8 ?? ?? ?? ?? B1 01 0F B6 86 ?? ?? ?? ?? ?? ??": 7040880,
-    "48 8D 05 ?? ?? ?? ?? 48 89 07 48 8D 9F ?? ?? ?? ?? 48 89 AF ?? ?? ?? ?? 48 89 AF ?? ?? ?? ?? 48 89 AF ?? ?? ?? ?? 8D 75 64 ?? ?? ?? ?? ?? ?? ??+0x3": 27689200,
-    "48 89 5C 24 ?? 57 48 83 EC 30 48 83 3D ?? ?? ?? ?? ?? 8B FA 48 8B D9 0F 84 ?? ?? ?? ?? ?? ?? ??": 18943328,
-    "E8 ?? ?? ?? ?? 45 38 A4 3E ?? ?? ?? ?? ?? ?? ??": 5544976,
-    "48 8B 0D ?? ?? ?? ?? 48 8B B1 ?? ?? ?? ?? ?? ??+0x3": 34748976,
-    "40 53 48 83 EC 20 80 B9 ?? ?? ?? ?? ?? 48 8B D9 75 11 ?? ?? ?? ?? ?? ??": 16376576,
-    "E8 ?? ?? ?? ?? 49 8B 4C 24 ?? 48 8B 01 FF 90 ??": 21251376,
-    "E8 ?? ?? ?? ?? F3 0F 10 53 ?? 48 8B CF ?? ?? ??": 21255168,
-    "E8 ?? ?? ?? ?? 49 8B CD E8 ?? ?? ?? ?? E8 ?? ?? ?? ?? ?? ?? ?? ?? ?? ??": 10463648,
-    "E8 ?? ?? ?? ?? B2 01 48 8B CE E8 ?? ?? ?? ?? 32 C0 ?? ?? ?? ?? ?? ?? ??": 21252816,
-    "E8 ?? ?? ?? ?? E9 ?? ?? ?? ?? 48 8B 8E ?? ?? ?? ?? E8 ?? ?? ?? ?? E9 ?? ?? ?? ?? ?? ?? ?? ?? ??": 21251888,
-    "E8 ?? ?? ?? ?? E9 ?? ?? ?? ?? 8D 42 D3 83 F8 08 ?? ?? ?? ?? ?? ?? ?? ??": 15567264,
-    "E8 ?? ?? ?? ?? 41 80 A6 ?? ?? ?? ?? ?? 48 8D 05 ?? ?? ?? ?? ?? ?? ?? ??": 7036368,
-    "E8 ?? ?? ?? ?? 48 8B 47 28 BA ?? ?? ?? ?? ?? ??": 7039952,
-    "E8 ?? ?? ?? ?? BB ?? ?? ?? ?? 83 EB 01 ?? ?? ??": 15325216,
-    "48 8B 41 08 F6 80 ?? ?? ?? ?? ?? 74 10 F3 0F 11 89 ?? ?? ?? ?? F3 0F 11 91 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC 48 8B 41 08 F6 80 ?? ?? ?? ?? ?? 74 09 33 C0 48 89 81 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC CC 48 8B 41 08 ?? ?? ?? ??": 19715152,
-    "E8 ?? ?? ?? ?? EB 5A 48 8D 4F 20 ?? ?? ?? ?? ??": 21253488,
-    "E8 ?? ?? ?? ?? 0F B6 43 3C ?? ?? ?? ?? ?? ?? ??": 5636112,
-    "E8 ?? ?? ?? ?? 48 85 C0 75 05 0F 57 C9 ?? ?? ??": 7041168,
-    "E8 ?? ?? ?? ?? EB E0 84 C9 ?? ?? ?? ?? ?? ?? ??": 16376400
-  }
+  "LockedImGuiWindows": []
 }

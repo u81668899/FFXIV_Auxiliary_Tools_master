@@ -1,0 +1,418 @@
+{
+  "Version": 7,
+  "ChatWarning": false,
+  "Currencies": [
+    {
+      "Type": 0,
+      "ItemId": 20,
+      "Threshold": 75000,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 21,
+      "Threshold": 75000,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 22,
+      "Threshold": 75000,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 25,
+      "Threshold": 18000,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 36656,
+      "Threshold": 18000,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 27,
+      "Threshold": 3500,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 10307,
+      "Threshold": 3500,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 26533,
+      "Threshold": 3500,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 26807,
+      "Threshold": 800,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 28,
+      "Threshold": 1400,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 3,
+      "ItemId": 46,
+      "Threshold": 1400,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 4,
+      "ItemId": 47,
+      "Threshold": 1400,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    },
+    {
+      "Type": 0,
+      "ItemId": 28063,
+      "Threshold": 7500,
+      "Enabled": true,
+      "ChatWarning": false,
+      "ShowInOverlay": false,
+      "ShowItemName": true,
+      "Invert": false,
+      "WarningText": "Above Threshold"
+    }
+  ],
+  "HideInDuties": false,
+  "ListStyle": {
+    "LayoutAnchor": 0,
+    "FitContents": false,
+    "ClipContents": true,
+    "LayoutOrientation": 0,
+    "BackgroundColor": {
+      "X": 0.39215687,
+      "Y": 0.58431375,
+      "Z": 0.92941177,
+      "W": 0.33
+    },
+    "BackgroundVisible": false,
+    "BorderVisible": false,
+    "ListStyleDisable": 8,
+    "Position": {
+      "X": 960,
+      "Y": 512
+    },
+    "Size": {
+      "X": 600,
+      "Y": 200
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1
+    },
+    "IsVisible": true,
+    "NodeFlags": 16,
+    "Color": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1,
+      "W": 1
+    },
+    "AddColor": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "MultiplyColor": {
+      "X": 0.39215687,
+      "Y": 0.39215687,
+      "Z": 0.39215687
+    },
+    "Margin": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0,
+      "W": 0
+    },
+    "BaseDisable": 608
+  },
+  "CurrencyNodeStyle": {
+    "BackgroundStyle": {
+      "WrapMode": 1,
+      "ImageNodeFlags": 0,
+      "ImageStyleDisable": 6,
+      "Position": {
+        "X": -5,
+        "Y": -5
+      },
+      "Size": {
+        "X": 610,
+        "Y": 42
+      },
+      "Scale": {
+        "X": 1,
+        "Y": 1
+      },
+      "IsVisible": false,
+      "NodeFlags": 16,
+      "Color": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0.3
+      },
+      "AddColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "MultiplyColor": {
+        "X": 0.39215687,
+        "Y": 0.39215687,
+        "Z": 0.39215687
+      },
+      "Margin": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "BaseDisable": 572
+    },
+    "CurrencyIconStyle": {
+      "WrapMode": 1,
+      "ImageNodeFlags": 0,
+      "ImageStyleDisable": 6,
+      "Position": {
+        "X": 5,
+        "Y": 0
+      },
+      "Size": {
+        "X": 32,
+        "Y": 32
+      },
+      "Scale": {
+        "X": 1,
+        "Y": 1
+      },
+      "IsVisible": true,
+      "NodeFlags": 16,
+      "Color": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "AddColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "MultiplyColor": {
+        "X": 0.39215687,
+        "Y": 0.39215687,
+        "Z": 0.39215687
+      },
+      "Margin": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "BaseDisable": 616
+    },
+    "WarningTextStyle": {
+      "TextColor": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "TextOutlineColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 1
+      },
+      "BackgroundColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "AlignmentType": 0,
+      "FontType": 0,
+      "TextFlags": 9,
+      "TextFlags2": 0,
+      "FontSize": 24,
+      "LineSpacing": 0,
+      "CharacterSpacing": 0,
+      "TextStyleDisable": 664,
+      "Position": {
+        "X": 42,
+        "Y": 0
+      },
+      "Size": {
+        "X": 600,
+        "Y": 32
+      },
+      "Scale": {
+        "X": 1,
+        "Y": 1
+      },
+      "IsVisible": true,
+      "NodeFlags": 16,
+      "Color": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "AddColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "MultiplyColor": {
+        "X": 0.39215687,
+        "Y": 0.39215687,
+        "Z": 0.39215687
+      },
+      "Margin": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "BaseDisable": 616
+    },
+    "ItemCountTextStyle": {
+      "TextColor": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "TextOutlineColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 1
+      },
+      "BackgroundColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "AlignmentType": 0,
+      "FontType": 0,
+      "TextFlags": 8,
+      "TextFlags2": 0,
+      "FontSize": 12,
+      "LineSpacing": 0,
+      "CharacterSpacing": 0,
+      "TextStyleDisable": 664,
+      "Position": {
+        "X": 5,
+        "Y": 16
+      },
+      "Size": {
+        "X": 32,
+        "Y": 16
+      },
+      "Scale": {
+        "X": 1,
+        "Y": 1
+      },
+      "IsVisible": true,
+      "NodeFlags": 16,
+      "Color": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "AddColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "MultiplyColor": {
+        "X": 0.39215687,
+        "Y": 0.39215687,
+        "Z": 0.39215687
+      },
+      "Margin": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "BaseDisable": 616
+    }
+  }
+}

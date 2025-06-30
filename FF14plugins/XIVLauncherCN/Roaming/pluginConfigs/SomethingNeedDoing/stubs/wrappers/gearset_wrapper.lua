@@ -1,0 +1,10 @@
+--- @class GearsetWrapper
+--- @field IsValid boolean
+--- @field ClassJob number
+--- @field GlamourSetLink number
+--- @field ItemLevel number
+--- @field BannerIndex number
+--- @field Name string
+--- @field Items table<InventoryItemWrapper>
+--- @field Equip fun(): nil
+--- @field Update fun(): nil

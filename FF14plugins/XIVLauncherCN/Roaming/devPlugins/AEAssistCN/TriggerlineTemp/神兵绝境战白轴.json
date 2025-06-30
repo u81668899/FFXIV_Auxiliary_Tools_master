@@ -1,0 +1,2694 @@
+{
+  "GUID": "1dbeafed-3b1d-41c9-a63e-81b1e85e01ae",
+  "ConfigVersion": 6,
+  "TargetJob": 0,
+  "Author": "Nag0mi",
+  "Name": "Lite UwU",
+  "TreeRoot": {
+    "DisplayName": "Start",
+    "Childs": [
+      {
+        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeParallel, AEAssist",
+        "DisplayName": "并行",
+        "AnyReturn": false,
+        "StopWhenDead": false,
+        "Childs": [
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "11091",
+                    "RegexNameOrId": "螺旋气流",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "a5fddef3-da60-449e-8ba2-21dfd79eec18",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 4,
+                "Enable": true,
+                "Remark": "读条螺旋气流（顺劈，吃到眩晕）2.5s读条"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "range 10+R ?-degree cone",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11088,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "8735d585-c2a8-4767-849c-3ab2ac942cde",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 5,
+                "Enable": true,
+                "Remark": "下行突风（物理无读条顺劈死刑）约27s时释放"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "寒风之啸",
+                    "RegexNameOrId": "11092",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "497cca70-6868-46d7-8ec2-b9681205ccf2",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 6,
+                "Enable": true,
+                "Remark": "寒风之啸 全屏AOE 2.7s读条3s判定 约37s开始咏唱 "
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11080",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "9577eea6-f52b-4b99-b868-33f00e2cb4af",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 7,
+                "Enable": true,
+                "Remark": "烈风刃50s/55s"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11093",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "6677a5a6-5327-49b3-9275-4e8bf0001664",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 8,
+                "Enable": true,
+                "Remark": "大气爆发 读条全屏AOE  2.7s读条 约72s开始咏唱 77s伤害产生"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "11091",
+                    "RegexNameOrId": "螺旋气流",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "a5fddef3-da60-449e-8ba2-21dfd79eec18",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 9,
+                "Enable": true,
+                "Remark": "读条螺旋气流（顺劈，吃到眩晕）2.5s读条 117s"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondAfterBattleStart, AEAssist",
+                    "Remark": "",
+                    "Delay": 123.0,
+                    "DisplayName": "General/战斗开始后多少秒"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "8735d585-c2a8-4767-849c-3ab2ac942cde",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 10,
+                "Enable": true,
+                "Remark": "下行突风（物理无读条顺劈死刑）约123s时释放"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "11091",
+                    "RegexNameOrId": "螺旋气流",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "a5fddef3-da60-449e-8ba2-21dfd79eec18",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 11,
+                "Enable": true,
+                "Remark": "读条螺旋气流（顺劈，吃到眩晕）2.5s读条 137s"
+              }
+            ],
+            "GUID": "b8d7d20b-1cf0-4b87-bc76-1a4c66406d13",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 3,
+            "Enable": true,
+            "Remark": "风"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondGameLog, AEAssist",
+                    "RegexValue": "怎……怎么可能……区区蝼蚁……|My power... No...|お、おのれ……クソ虫がぁぁぁぁぁッ！！！",
+                    "LimitMsgType": false,
+                    "MsgType": 0,
+                    "Remark": null,
+                    "DisplayName": "General/聊天监控"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "cad8d6dc-9002-4168-a81e-3b5af274b87c",
+                "Important": true,
+                "Color": {
+                  "X": 0.0,
+                  "Y": 0.9401993,
+                  "Z": 0.10620187,
+                  "W": 1.0
+                },
+                "Id": 13,
+                "Enable": true,
+                "Remark": "风死 0s"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "地狱之火炎",
+                    "RegexNameOrId": "11102",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 14,
+                "Enable": true,
+                "Remark": "地狱之火炎 2.7s读条  约3.0生效"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondOnWeatherIdChanged, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "General/天气变化",
+                    "WeatherId": 3
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "7d5cc462-533e-4dd2-8fa4-f08c813b4f2d",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 15,
+                "Enable": true,
+                "Remark": "场地变化"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondGameLog, AEAssist",
+                    "RegexValue": "勇猛无比",
+                    "LimitMsgType": false,
+                    "MsgType": 0,
+                    "Remark": null,
+                    "DisplayName": "General/聊天监控"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "798ef99a-553a-49da-9f1d-92ddcd5899d8",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 16,
+                "Enable": true,
+                "Remark": "24s火神击退台词 3s后击退判定 约5s后三段死刑"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 461,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "0e69c6b7-deaf-4b00-950c-8ac115ceb92e",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 17,
+                "Enable": true,
+                "Remark": "イフリート：炎獄の楔召喚"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11099",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "8ff7ccc6-3fb9-4a65-b47d-6bad2b3ec204",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 18,
+                "Enable": true,
+                "Remark": "灼热咆哮 热风 1.7s读条 2.0生效 18秒，跳3次"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "地狱之火炎",
+                    "RegexNameOrId": "11102",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 19,
+                "Enable": true,
+                "Remark": "觉醒地狱之火炎 2.7s读条 74s开始 80s伤害出现"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11099",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "8ff7ccc6-3fb9-4a65-b47d-6bad2b3ec204",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 20,
+                "Enable": true,
+                "Remark": "灼热咆哮 热风 1.7s读条 84s开始 持续30s 跳五次"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "深红旋风",
+                        "RegexNameOrId": "11103",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 22,
+                    "Enable": false,
+                    "Remark": "深红旋风（火神冲） 2.7s读条 约120s开始"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                        "Remark": "",
+                        "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                        "ActionId": 11094,
+                        "CheckIsMe": false,
+                        "LimitType": 0
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "b8989bc9-60db-49ea-9268-c032383ac68a",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 23,
+                    "Enable": false,
+                    "Remark": "三连死刑开始"
+                  }
+                ],
+                "GUID": "b25b84cd-fa4f-487b-9b16-615e7666c5f6",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 21,
+                "Enable": false,
+                "Remark": "火神冲没压掉（正常不用管）"
+              }
+            ],
+            "GUID": "56e59b95-0c08-4ace-904a-12222432ea4e",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 12,
+            "Enable": true,
+            "Remark": "火"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondGameLog, AEAssist",
+                    "RegexValue": "不共戴天……|The blessing of Light...defies me!?|不倶戴天……。",
+                    "LimitMsgType": false,
+                    "MsgType": 0,
+                    "Remark": null,
+                    "DisplayName": "General/聊天监控"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "cad8d6dc-9002-4168-a81e-3b5af274b87c",
+                "Important": true,
+                "Color": {
+                  "X": 0.0,
+                  "Y": 0.99667776,
+                  "Z": 0.15231621,
+                  "W": 1.0
+                },
+                "Id": 25,
+                "Enable": true,
+                "Remark": "火死 0s"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "大地粉碎",
+                    "RegexNameOrId": "11517",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 26,
+                "Enable": true,
+                "Remark": " 大地粉碎2.7s读条 递减AOE"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondGameLog, AEAssist",
+                    "RegexValue": "愤怒之下吧",
+                    "LimitMsgType": false,
+                    "MsgType": 0,
+                    "Remark": null,
+                    "DisplayName": "General/聊天监控"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "798ef99a-553a-49da-9f1d-92ddcd5899d8",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 27,
+                "Enable": true,
+                "Remark": "土神落地台词"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "大地之怒",
+                    "RegexNameOrId": "11152",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 28,
+                "Enable": true,
+                "Remark": " 7s大地之怒2.7s读条 AOE 伤害出现13s"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondOnWeatherIdChanged, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "General/天气变化",
+                    "WeatherId": 5
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "fccdb5be-60c5-474b-a644-13cca9c2f126",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 29,
+                "Enable": true,
+                "Remark": "场地天气变化 15s"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "碎岩",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11106,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 30,
+                "Enable": true,
+                "Remark": "碎岩19s 无读条顺劈"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "山崩",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11107,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 31,
+                "Enable": true,
+                "Remark": "山崩掀桌子22s 无读条顺劈"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [],
+                "DisplayName": "等待条件",
+                "GUID": "8ecb2d82-7127-4c73-bab7-1fc57c154c1c",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 32,
+                "Enable": false,
+                "Remark": "30s上天 34s落地使用 大地粉碎"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "大怒震",
+                    "RegexNameOrId": "11111",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "376975cd-4c39-408a-802a-7504b9ece2d9",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 33,
+                "Enable": true,
+                "Remark": "38s 大怒震3.7s读条 一杆进洞 43s伤害产生，人群被眩晕、击退"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "地裂 分身施法id为11120",
+                    "RegexNameOrId": "11119",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "8e1259af-6cba-498a-bcf9-453ce45912ce",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 34,
+                "Enable": true,
+                "Remark": "46s地裂 读条1.9s "
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "怒震 魔法伤害 一次约8k",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11288,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 35,
+                "Enable": true,
+                "Remark": "55s怒震 无读条aoe 约每秒一次 80s上天"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "大地粉碎",
+                    "RegexNameOrId": "11110",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 36,
+                "Enable": true,
+                "Remark": " 84s大地粉碎2.7s读条 读完落地 递减AOE 注意id不同"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "怒震 魔法伤害 一次约8k",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11288,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 37,
+                "Enable": true,
+                "Remark": "106s怒震 无读条aoe 约每秒一次"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "碎岩",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11106,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 38,
+                "Enable": true,
+                "Remark": "115s 碎岩 无读条顺劈"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "碎岩",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11107,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 39,
+                "Enable": true,
+                "Remark": "119s 山崩 无读条顺劈掀桌子"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                        "Remark": "碎岩",
+                        "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                        "ActionId": 11106,
+                        "CheckIsMe": false,
+                        "LimitType": 0
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 41,
+                    "Enable": false,
+                    "Remark": "140s 碎岩 无读条顺劈"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                        "Remark": "碎岩",
+                        "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                        "ActionId": 11107,
+                        "CheckIsMe": false,
+                        "LimitType": 0
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 42,
+                    "Enable": false,
+                    "Remark": "144s 山崩 无读条顺劈掀桌子"
+                  }
+                ],
+                "GUID": "85255b14-8259-45a6-b89e-ae729fd85446",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 40,
+                "Enable": false,
+                "Remark": "还没压掉"
+              }
+            ],
+            "GUID": "5a151c57-1080-4733-9dbd-04ba20abbb51",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 24,
+            "Enable": true,
+            "Remark": "土"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondOnWeatherIdChanged, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "General/天气变化",
+                    "WeatherId": 2
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "de6fa2ea-d257-4ebc-ab6a-eea53f31a650",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 44,
+                "Enable": true,
+                "Remark": "场地变化"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11509,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "7fdbbc61-4c37-4f36-a902-2d82d1e3e553",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 45,
+                "Enable": true,
+                "Remark": "诱导爆炸全屏aoe"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "毒雾 死亡宣告 4s后移除击倒",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11123,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                    "TargetSelector": {
+                      "Enable": true,
+                      "Target": 0,
+                      "FilterDatas": [
+                        {
+                          "Filter": 2,
+                          "Remark": "",
+                          "StrParam1": "",
+                          "UintParam1": 0,
+                          "FloatParam1": 0.0,
+                          "LeftTime": 0,
+                          "JobsCategory": 1,
+                          "CompareType": 5,
+                          "BuffCompareType": 3,
+                          "Marker": 0,
+                          "Nearest": false
+                        },
+                        {
+                          "Filter": 8,
+                          "Remark": "",
+                          "StrParam1": "",
+                          "UintParam1": 783,
+                          "FloatParam1": 0.0,
+                          "LeftTime": 0,
+                          "JobsCategory": 0,
+                          "CompareType": 5,
+                          "BuffCompareType": 3,
+                          "Marker": 0,
+                          "Nearest": false
+                        }
+                      ],
+                      "NeedTargetable": false,
+                      "PMIndex": 0
+                    },
+                    "Remark": null,
+                    "DisplayName": "General/目标符合条件"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "49e720eb-aac1-499a-a84b-051d03e4f04b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 46,
+                "Enable": false,
+                "Remark": "击倒移除，hlb check"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11124",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "298ea02c-8076-4fad-95d6-45e623881f26",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 47,
+                "Enable": true,
+                "Remark": "冥暗 dpscheck"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11147",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "82a1d682-8486-4767-b66b-7e90ba8841d3",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 48,
+                "Enable": true,
+                "Remark": "究极 tlb check"
+              }
+            ],
+            "GUID": "7538d231-c2b0-4963-a0b0-bfca3fcb1095",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 43,
+            "Enable": true,
+            "Remark": "lb转场"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondOnWeatherIdChanged, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "General/天气变化",
+                    "WeatherId": 6
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "690a30fe-43ac-42a8-ad49-bf8d6201b8c5",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 50,
+                "Enable": true,
+                "Remark": "准备落地 天气变化"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11143",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "54663fad-88d9-443e-bb5b-6cb2208a2cc7",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 51,
+                "Enable": true,
+                "Remark": "魔导核爆"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "追击之究极幻想",
+                    "RegexNameOrId": "11126",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "da61e470-19af-4eaa-8f0a-d18ffd149797",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 52,
+                "Enable": true,
+                "Remark": "一运"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "怒震 魔法伤害 一次约8k",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11288,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "01fa70c3-c04d-4d5a-99aa-a0890997207b",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 53,
+                "Enable": true,
+                "Remark": "81s怒震 无读条aoe 约每秒一次"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                    "ActionId": 11129,
+                    "CheckIsMe": false,
+                    "LimitType": 0
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "3bb5bd15-96ae-4bce-a4bf-e211aa54b5d7",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 54,
+                "Enable": true,
+                "Remark": "吸附式炸弹 换T"
+              }
+            ],
+            "GUID": "de70df56-992e-4ebf-912b-6753aba6ac03",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 49,
+            "Enable": true,
+            "Remark": "一运"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "爆击之究极幻想",
+                    "RegexNameOrId": "11596",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "a9abf7bd-7aba-4e60-8b51-baccfc804aa8",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 56,
+                "Enable": true,
+                "Remark": "二运"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "魔导核爆",
+                    "RegexNameOrId": "11143",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "15d602ec-692b-4532-968f-ac26a85054b1",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 57,
+                "Enable": true,
+                "Remark": "魔导核爆 3.7s读条 4s判定"
+              }
+            ],
+            "GUID": "92f279ed-ae04-469b-9ec9-f782a44688da",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 55,
+            "Enable": true,
+            "Remark": "二运"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11597",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "fbeb38d5-9e51-4552-8b09-95d3339e7383",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 59,
+                "Enable": true,
+                "Remark": "乱击之究极幻想"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondActorControlTether, AEAssist",
+                    "Remark": "",
+                    "DisplayName": "副本流程/不支持立即检测/等待连线",
+                    "Args0": 101,
+                    "Target": 1
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "1b43f90b-4e4d-4782-aad3-29dde0fa3f15",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 60,
+                "Enable": false,
+                "Remark": "st风神连线"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "魔导核爆",
+                    "RegexNameOrId": "11143",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "15d602ec-692b-4532-968f-ac26a85054b1",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 61,
+                "Enable": true,
+                "Remark": "魔导核爆 3.7s读条 4s判定"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11147",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "82a1d682-8486-4767-b66b-7e90ba8841d3",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 62,
+                "Enable": true,
+                "Remark": "究极 tlb check"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                "CondLogicType": 0,
+                "CheckOnce": false,
+                "ReverseResult": false,
+                "TriggerConds": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                    "Strs": null,
+                    "Remark": "",
+                    "RegexNameOrId": "11144",
+                    "NeedTargetable": false,
+                    "DisplayName": "General/敌人读条使用技能"
+                  }
+                ],
+                "DisplayName": "等待条件",
+                "GUID": "82a1d682-8486-4767-b66b-7e90ba8841d3",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 63,
+                "Enable": true,
+                "Remark": "以太波动强制击退 撞球"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeParallel, AEAssist",
+                "DisplayName": "并行",
+                "AnyReturn": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                            "Remark": "",
+                            "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                            "ActionId": 11475,
+                            "CheckIsMe": false,
+                            "LimitType": 0
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "769fa3ab-e596-417e-a9bb-d512f54b7aaa",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 66,
+                        "Enable": true,
+                        "Remark": "风"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "11093",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "6677a5a6-5327-49b3-9275-4e8bf0001664",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 67,
+                        "Enable": true,
+                        "Remark": "大气爆发 读条全屏AOE  2.7s读条3s判定 5s伤害产生"
+                      }
+                    ],
+                    "GUID": "fe20daa5-c8e9-4764-80fd-fc91557ec722",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 65,
+                    "Enable": true,
+                    "Remark": "风"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                            "Remark": "",
+                            "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                            "ActionId": 11476,
+                            "CheckIsMe": false,
+                            "LimitType": 0
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "769fa3ab-e596-417e-a9bb-d512f54b7aaa",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 69,
+                        "Enable": true,
+                        "Remark": "火"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "地狱之火炎",
+                            "RegexNameOrId": "11102",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 70,
+                        "Enable": true,
+                        "Remark": "觉醒地狱之火炎 2.7s读条 3s判定"
+                      }
+                    ],
+                    "GUID": "b612fbe6-4c0c-4d28-b1d3-7629b96ca836",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 68,
+                    "Enable": true,
+                    "Remark": "火"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                            "Remark": "",
+                            "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                            "ActionId": 11477,
+                            "CheckIsMe": false,
+                            "LimitType": 0
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "769fa3ab-e596-417e-a9bb-d512f54b7aaa",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 72,
+                        "Enable": true,
+                        "Remark": "土"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "大地之怒",
+                            "RegexNameOrId": "11152",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "f9da6916-d573-4b08-9b73-7883aa699969",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 73,
+                        "Enable": true,
+                        "Remark": "大地之怒2.7s读条 AOE "
+                      }
+                    ],
+                    "GUID": "4f6e37e9-b292-4790-93ea-6f52f87b96d6",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 71,
+                    "Enable": true,
+                    "Remark": "土"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondReceviceAbilityEffect, AEAssist",
+                            "Remark": "",
+                            "DisplayName": "副本流程/不支持立即检测/等待效果触发AbilityEffect",
+                            "ActionId": 11130,
+                            "CheckIsMe": false,
+                            "LimitType": 0
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "600e0dfe-03cf-431e-924f-54b91a2e5226",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 75,
+                        "Enable": true,
+                        "Remark": "引爆"
+                      }
+                    ],
+                    "GUID": "fbe85b8f-be9f-4dc6-ae23-9d9b91bfad52",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 74,
+                    "Enable": true,
+                    "Remark": "炸弹"
+                  }
+                ],
+                "GUID": "b501d19f-d498-4b4e-b5eb-d64fc54d8453",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 64,
+                "Enable": true,
+                "Remark": "家长会"
+              }
+            ],
+            "GUID": "98b2d441-a5d2-4e77-a656-1e19fa607a8b",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 58,
+            "Enable": true,
+            "Remark": "三运"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeParallel, AEAssist",
+            "DisplayName": "并行",
+            "AnyReturn": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 8722,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 78,
+                    "Enable": true,
+                    "Remark": "风神目标检测"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "刺羽",
+                              "UintParam1": 8725,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "e75e7ed4-3c93-436c-bc39-4c3cd51a4522",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 79,
+                    "Enable": true,
+                    "Remark": "柔羽出现/约18s"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "刺羽",
+                              "UintParam1": 8726,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "e75e7ed4-3c93-436c-bc39-4c3cd51a4522",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 80,
+                    "Enable": true,
+                    "Remark": "刺羽出现/约18s"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "刺羽",
+                              "UintParam1": 8725,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "e75e7ed4-3c93-436c-bc39-4c3cd51a4522",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 81,
+                    "Enable": true,
+                    "Remark": "柔羽出现/约110s 到场中约116s"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 4,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 1529,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 82,
+                    "Enable": true,
+                    "Remark": "觉醒检测"
+                  }
+                ],
+                "GUID": "41d4d574-7111-4534-a9be-a72158e8bcb3",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 77,
+                "Enable": false,
+                "Remark": "风"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 8730,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 84,
+                    "Enable": true,
+                    "Remark": "火神目标检测"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "刺羽",
+                              "UintParam1": 8731,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            },
+                            {
+                              "Filter": 7,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 0,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "e75e7ed4-3c93-436c-bc39-4c3cd51a4522",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 85,
+                    "Enable": true,
+                    "Remark": "柱子出现//1柱（检测几柱需配合零和触发器）"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 4,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 1529,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 86,
+                    "Enable": true,
+                    "Remark": "觉醒检测"
+                  }
+                ],
+                "GUID": "ce1d94fd-8fff-406e-af43-731ac134500f",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 83,
+                "Enable": false,
+                "Remark": "火"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 8728,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": false,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 88,
+                    "Enable": true,
+                    "Remark": "爆破岩石 目标检测"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 8727,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 89,
+                    "Enable": true,
+                    "Remark": "泰坦目标检测"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 4,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 1529,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 90,
+                    "Enable": true,
+                    "Remark": "觉醒检测"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 8729,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": false,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 91,
+                    "Enable": true,
+                    "Remark": "49s石牢 目标检测"
+                  }
+                ],
+                "GUID": "71250894-acd7-483c-a349-6869e27f5739",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 87,
+                "Enable": false,
+                "Remark": "土"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondWaitTarget, AEAssist",
+                        "TargetSelector": {
+                          "Enable": true,
+                          "Target": 4,
+                          "FilterDatas": [
+                            {
+                              "Filter": 1,
+                              "Remark": "",
+                              "StrParam1": "",
+                              "UintParam1": 8734,
+                              "FloatParam1": 0.0,
+                              "LeftTime": 0,
+                              "JobsCategory": 0,
+                              "CompareType": 5,
+                              "BuffCompareType": 3,
+                              "Marker": 0,
+                              "Nearest": false
+                            }
+                          ],
+                          "NeedTargetable": true,
+                          "PMIndex": 0
+                        },
+                        "Remark": null,
+                        "DisplayName": "General/目标符合条件"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5566de9f-cd95-4a07-8583-2d8a0580499d",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 93,
+                    "Enable": true,
+                    "Remark": "神兵目标检测"
+                  }
+                ],
+                "GUID": "eca08e6d-0cfd-408f-82c1-00bd36452739",
+                "Important": false,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 92,
+                "Enable": false,
+                "Remark": "本"
+              }
+            ],
+            "GUID": "b08291ed-fc96-448e-a466-9d1a28f4ce94",
+            "Important": false,
+            "Color": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 0.4,
+              "W": 1.0
+            },
+            "Id": 76,
+            "Enable": false,
+            "Remark": "敌人目标检测"
+          }
+        ],
+        "GUID": "2030d8d8-c288-4029-921c-e3d83e0ffbb8",
+        "Important": false,
+        "Color": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.4,
+          "W": 1.0
+        },
+        "Id": 2,
+        "Enable": true,
+        "Remark": ""
+      }
+    ],
+    "GUID": "246be2b8-10e8-41a1-9cc3-03086f23d60c",
+    "Important": false,
+    "Color": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 0.4,
+      "W": 1.0
+    },
+    "Id": 1,
+    "Enable": true,
+    "Remark": ""
+  },
+  "ExposedVars": [],
+  "ExposedVarDesc": "",
+  "OpenerScript": "",
+  "Note": "究极神兵绝境战白轴精简版本",
+  "TerritoryTypeId": 777,
+  "TerritoryWeatherId": 0,
+  "TargetAcrAuthor": "",
+  "ClearCustomed": false,
+  "LogsAddress": ""
+}

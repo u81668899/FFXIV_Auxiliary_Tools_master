@@ -1,0 +1,5 @@
+--- @class OccultCrescentWrapper
+--- @field Events table<DynamicEventWrapper>
+--- @field MKDData MKDDataWrapper
+--- @field OccultCrescentState OccultCrescentStateWrapper
+--- @field ChainTargets table<EntityWrapper>

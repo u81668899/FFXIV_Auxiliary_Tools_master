@@ -1,0 +1,12 @@
+--- @class FriendWrapper
+--- @field Name string
+--- @field ContentId number
+--- @field State OnlineStatus
+--- @field IsOtherServer boolean
+--- @field CurrentWorld number
+--- @field HomeWorld number
+--- @field Location number
+--- @field GrandCompany GrandCompany
+--- @field ClientLanguage Language
+--- @field Sex number
+--- @field Job JobWrapper

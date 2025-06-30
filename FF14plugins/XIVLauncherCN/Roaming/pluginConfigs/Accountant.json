@@ -3,7 +3,7 @@
   "ShowCropTooltip": true,
   "Version": 4,
   "Enabled": true,
-  "WindowVisible": false,
+  "WindowVisible": true,
   "EnableRetainers": true,
   "EnableAirships": false,
   "EnableSubmersibles": true,
@@ -22,8 +22,12 @@
   "NoHeaderStyling": true,
   "EnableDeliveries": true,
   "EnableTribes": true,
+  "ShowFreeCompanyWarning": true,
   "LeveWarning": 85,
   "TribesFinished": 6,
+  "ShowDtr": true,
+  "ShowUnassignedInHeader": false,
+  "ShowUnderwayInHeader": true,
   "Colors": {
     "$type": "System.Collections.Generic.Dictionary`2[[Accountant.Gui.ColorId, Accountant],[System.UInt32, System.Private.CoreLib]], System.Private.CoreLib",
     "TextObjectsAway": 4280295632,
@@ -52,10 +56,6 @@
     "DisabledText": 4286611584,
     "Background": 3221225472
   },
-  "PlotNames": {
-    "$type": "System.Collections.Generic.SortedList`2[[System.UInt64, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Collections",
-    "294141707146821648": "自己家"
-  },
   "BlockedPlots": [],
   "BlockedPlayersCrops": [],
   "BlockedPlayersRetainers": [],
@@ -66,5 +66,6 @@
   "BlockedCrops": [],
   "Priorities": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
-  }
+  },
+  "FixedWindowWidth": null
 }

@@ -1,13 +1,24 @@
 {
   "$type": "JustBackup.Config, JustBackup",
   "BackupPath": "I:\\FINAL FANTASY XIV - A Realm Reborn",
+  "TempPath": "",
   "DeleteBackups": true,
   "DeleteToRecycleBin": true,
   "DaysToKeep": 7,
   "BackupAll": true,
+  "ExcludeReplays": false,
   "UseDefaultZip": false,
   "BackupPluginConfigs": true,
   "BackupsToKeep": 10,
   "NoThreadLimit": false,
+  "MaxThreads": 99,
+  "Ignore": [],
+  "TempPathes": [
+    "C:\\Users\\u8166\\AppData\\Local\\Temp\\JustBackup-1733069596086"
+  ],
+  "OverrideGamePath": "",
+  "MinIntervalBetweenBackups": 0,
+  "LastSuccessfulBackup": 0,
+  "CopyThrottle": 0,
   "Version": 1
 }

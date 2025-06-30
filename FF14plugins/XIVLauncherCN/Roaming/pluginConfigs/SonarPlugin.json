@@ -2,7 +2,7 @@
   "$type": "SonarPlugin.Config.SonarConfiguration, SonarPlugin",
   "SonarConfig": {
     "$type": "Sonar.Config.SonarConfig, Sonar",
-    "Version": 1,
+    "Version": 2,
     "LogLevel": 2,
     "HuntConfig": {
       "$type": "Sonar.Config.HuntConfig, Sonar",
@@ -12,71 +12,77 @@
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         },
         "ARealmReborn": {
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         },
         "Heavensward": {
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         },
         "Stormblood": {
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         },
         "Shadowbringers": {
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         },
         "Endwalker": {
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         },
         "Dawntrail": {
           "$type": "System.Collections.Generic.Dictionary`2[[Sonar.Enums.HuntRank, Sonar],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib",
           "None": 5,
           "B": 1,
-          "A": 2,
+          "A": 4,
           "S": 5,
           "SSMinion": 5,
-          "SS": 5
+          "SS": 5,
+          "Fate": 5
         }
       },
       "JurisdictionOverride": {
         "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[Sonar.Enums.SonarJurisdiction, Sonar]], System.Private.CoreLib"
       },
-      "Contribute": true,
-      "TrackAll": false
+      "TrackAll": true
     },
     "FateConfig": {
       "$type": "Sonar.Config.FateConfig, Sonar",
@@ -86,12 +92,24 @@
         "1763": 5,
         "1855": 5,
         "1464": 5,
-        "1432": 5
+        "1432": 5,
+        "1106": 5,
+        "1107": 5,
+        "1108": 5,
+        "1103": 5,
+        "1104": 5,
+        "1105": 5,
+        "1922": 5,
+        "1871": 5
       },
-      "Contribute": true,
-      "TrackAll": false
+      "TrackAll": true
     },
-    "ReceiveJurisdiction": 5
+    "Contribute": {
+      "$type": "Sonar.Config.SonarContributeConfig, Sonar",
+      "Disabled": [],
+      "Global": true,
+      "ReceiveJurisdiction": 5
+    }
   },
   "Colors": {
     "$type": "SonarPlugin.Config.SonarConfigurationColors, SonarPlugin",
@@ -173,60 +191,34 @@
   "Opacity": 0.75,
   "SoundVolume": 0.5,
   "Language": 0,
+  "SuppressVerification": 0,
   "MiddleClick": 2,
   "RightClick": 3,
+  "CtrlMiddleClick": 1,
+  "CtrlRightClick": 5,
+  "ShiftMiddleClick": 1,
+  "ShiftRightClick": 1,
+  "AltMiddleClick": 1,
+  "AltRightClick": 1,
   "PreferredCityState": 0,
   "DisableChatInDuty": false,
   "DisableSoundInDuty": false,
   "AllSRankSettings": false,
-  "AdvancedHuntReportSettings": true,
+  "AdvancedHuntReportSettings": false,
   "DisplayHuntDeadTimer": 300,
-  "DisplayHuntUpdateTimer": 72000,
+  "DisplayHuntUpdateTimer": 86400,
   "DisplayHuntUpdateTimerOther": 180,
-  "HuntsDisplayLimit": 100,
+  "HuntsDisplayLimit": 294,
   "DisplayFateUpdateTimer": 1800,
   "DisplayFateDeadTimer": 300,
   "FatesDisplayLimit": 100,
-  "PlaySoundSRanks": true,
+  "PlaySoundSRanks": false,
   "SoundFileSRanks": "Linkshell Transmission",
   "PlaySoundARanks": false,
   "SoundFileARanks": "Notification",
-  "SendFateToChat": [
-    1763,
-    1855,
-    1432,
-    1464,
-    1103,
-    1104,
-    1105,
-    905,
-    1106,
-    1107,
-    1108,
-    906,
-    907,
-    838,
-    793,
-    506,
-    507,
-    335,
-    646,
-    503,
-    504,
-    453,
-    855,
-    1129,
-    1194,
-    1277,
-    1172,
-    1267,
-    1320,
-    1504,
-    1518,
-    1487
-  ],
+  "SendFateToChat": [],
   "SendFateToSound": [],
-  "PlaySoundFates": false,
+  "PlaySoundFates": true,
   "SoundFileFates": "",
   "EnableFateChatReports": false,
   "EnableFateChatItalicFont": false,

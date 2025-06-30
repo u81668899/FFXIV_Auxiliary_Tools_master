@@ -1,0 +1,3370 @@
+{
+  "GUID": "7cd4ad3b-41aa-44ce-9140-509afd2dac77",
+  "ConfigVersion": 6,
+  "TargetJob": 0,
+  "Author": "RyougiMio",
+  "Name": "M1S白轴",
+  "TreeRoot": {
+    "DisplayName": "Start",
+    "Childs": [
+      {
+        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeParallel, AEAssist",
+        "DisplayName": "并行",
+        "AnyReturn": false,
+        "StopWhenDead": false,
+        "Childs": [
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37948",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 5,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Quadruple Crossing",
+                    "ToastType": 2,
+                    "ToastDuration": 5000,
+                    "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                    "Important": false,
+                    "Color": {
+                      "X": 0.98122066,
+                      "Y": 0.0,
+                      "Z": 0.7186408,
+                      "W": 1.0
+                    },
+                    "Id": 6,
+                    "Enable": false,
+                    "Remark": "Quadruple Crossing |读条00:09 第一次00:15 第二次00:17"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 4,
+                "Enable": true,
+                "Remark": "Quadruple Crossing[扇形引导] 读条00:09 第一次00:15 第二次00:17"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "38037",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 8,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 7,
+                "Enable": true,
+                "Remark": "Biscuit Maker[死刑] 读条00:28 判定00:33"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37985",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 10,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 9,
+                "Enable": true,
+                "Remark": "Nine Lives[无效果] 读条00:47 判定00:50"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeScriptNode, AEAssist",
+                    "Script": "对于一个多情况读条,比如这里的左-右刀/右-左刀. 他的读条名字相同但ID不同,\n(当然,也存在读条名字ID均不同的,或者是不同的MapEffect),\n这里要首先添加一个序列,包住所有的判定,\n然后在该序列内添加一个序列A和一个选择B(亦可看情况添加其他类型)\n在添加的序列A中添加条件检测这个读条(务必匹配到所有情况),作为起始判定.\n在添加的选择B中添加多个序列,每个序列用立即处理模式再次检测这个读条,这些序列负责检测不同的情况\n结果就如我这里写的One-two Paw序列一样.\n如果你没有理解,那么我告诉你先左后右的事件写到One-two Paw[先右刀后左刀]的立即检测下面,\n先右后左亦然.\n这是目前范式中的推荐写法,\n一般情况下你可以无脑照抄我这个示例里的处理方法.\n",
+                    "DisplayName": "脚本节点",
+                    "GUID": "5a26cfa3-5692-4181-9b13-dbc83b7b71ed",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 0.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 12,
+                    "Enable": false,
+                    "Remark": "关于读条有多种情况的说明,请点击本条查看"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b3794(2|5)\\b",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 14,
+                        "Enable": true,
+                        "Remark": ""
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 13,
+                    "Enable": true,
+                    "Remark": "One-two Paw预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37945",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 17,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "74b55aa5-2b4c-4a74-9a85-246161cd04b3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 16,
+                        "Enable": true,
+                        "Remark": "One-two Paw[先右刀后左刀]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "f432632c-0671-43e4-9d00-ca90fdfe17cf",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 18,
+                        "Enable": true,
+                        "Remark": "One-two Paw[先左刀后右刀]"
+                      }
+                    ],
+                    "GUID": "b4729899-1d2f-413d-91c8-ec037ffa19d2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 15,
+                    "Enable": true,
+                    "Remark": "One-two Paw"
+                  }
+                ],
+                "GUID": "8eeb90ff-8024-4ee7-8eab-31794bd07492",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5070422,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 11,
+                "Enable": true,
+                "Remark": "One-two Paw[左右刀][内置不同读条情况的说明书] 读条00:52 判定00:56  第一次00:58 第二次01:01"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37986",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 20,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 19,
+                "Enable": true,
+                "Remark": "Soulshade[无效果] 读条01:02 判定01:05"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37985",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 22,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 21,
+                "Enable": true,
+                "Remark": "Nine Lives[分身左右刀] 读条01:16 判定01:19"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b3798(3|1)\\b",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 25,
+                        "Enable": true,
+                        "Remark": ""
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 24,
+                    "Enable": true,
+                    "Remark": "Double/Quadruple Swipe预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37983",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 28,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 27,
+                        "Enable": true,
+                        "Remark": "Double Swipe[2222分摊]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 29,
+                        "Enable": true,
+                        "Remark": "Quadruple Swipe[44分摊]"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 26,
+                    "Enable": true,
+                    "Remark": "Double/Quadruple Swipe"
+                  }
+                ],
+                "GUID": "8eeb90ff-8024-4ee7-8eab-31794bd07492",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5070422,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 23,
+                "Enable": true,
+                "Remark": "Double/Quadruple Swipe[2/4分摊] 读条01:23 判定01:28"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b3(8959|7975)\\b",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 32,
+                        "Enable": true,
+                        "Remark": ""
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 31,
+                    "Enable": true,
+                    "Remark": "Leaping Quadruple Crossing预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37975",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 35,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          },
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                            "DisplayName": "打印信息",
+                            "Info": "L",
+                            "ToastType": 2,
+                            "ToastDuration": 1500,
+                            "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                            "Important": false,
+                            "Color": {
+                              "X": 0.98122066,
+                              "Y": 0.0,
+                              "Z": 0.7186408,
+                              "W": 1.0
+                            },
+                            "Id": 36,
+                            "Enable": false,
+                            "Remark": "L"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 34,
+                        "Enable": true,
+                        "Remark": "L"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                            "DisplayName": "打印信息",
+                            "Info": "R",
+                            "ToastType": 2,
+                            "ToastDuration": 1500,
+                            "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                            "Important": false,
+                            "Color": {
+                              "X": 0.98122066,
+                              "Y": 0.0,
+                              "Z": 0.7186408,
+                              "W": 1.0
+                            },
+                            "Id": 38,
+                            "Enable": false,
+                            "Remark": "R"
+                          }
+                        ],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 37,
+                        "Enable": true,
+                        "Remark": "R"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 33,
+                    "Enable": true,
+                    "Remark": "Leaping Quadruple Crossing"
+                  }
+                ],
+                "GUID": "8eeb90ff-8024-4ee7-8eab-31794bd07492",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5070422,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 30,
+                "Enable": true,
+                "Remark": "Leaping Quadruple Crossing[跳+引导]01:35-01:40"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "38036",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 40,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 39,
+                "Enable": true,
+                "Remark": "Bloody Scratch[AOE] 读条01:57 判定 02:02"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37953",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 42,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Mouser[P1结束]",
+                    "ToastType": 2,
+                    "ToastDuration": 5000,
+                    "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                    "Important": false,
+                    "Color": {
+                      "X": 0.98122066,
+                      "Y": 0.0,
+                      "Z": 0.7186408,
+                      "W": 1.0
+                    },
+                    "Id": 43,
+                    "Enable": false,
+                    "Remark": "Mouser |读条02:15"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 41,
+                "Enable": true,
+                "Remark": "Mouser[砸地板][P1结束] 读条02:15"
+              }
+            ],
+            "GUID": "98020eab-1e10-462a-98b7-52db40fb7e77",
+            "Important": true,
+            "Color": {
+              "X": 0.056338012,
+              "Y": 0.853799,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 3,
+            "Enable": true,
+            "Remark": "P1"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37957",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 46,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "Impact",
+                        "SetVariableVaule": 0,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "cdb97771-11c7-4f63-bb76-8da22f75c6e9",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028168678,
+                      "Y": 0.0,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 47,
+                    "Enable": false,
+                    "Remark": "击飞/击倒计数器"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 45,
+                "Enable": true,
+                "Remark": "Copycat[无效果] 读条02:44 判定02:47"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "38037",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 49,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 48,
+                "Enable": true,
+                "Remark": "Biscuit Maker[死刑] 读条03:38 第一次03:43 第二次03:46"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37963",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 51,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Shockwave",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                    "Important": false,
+                    "Color": {
+                      "X": 0.98122066,
+                      "Y": 0.0,
+                      "Z": 0.7186408,
+                      "W": 1.0
+                    },
+                    "Id": 52,
+                    "Enable": false,
+                    "Remark": "Shockwave |读条03:50 判定03:56"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "转场变量控制",
+                        "VariableName": "P",
+                        "SetVariableVaule": 3,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "bcf6e802-e3ec-43a7-a781-7fa9f2b154fd",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028168678,
+                      "Y": 0.0,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 53,
+                    "Enable": true,
+                    "Remark": "转场变量控制,请勿修改"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 50,
+                "Enable": true,
+                "Remark": "Shockwave[击退][P2结束] 读条03:50 判定03:56"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39812",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 55,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 54,
+                "Enable": true,
+                "Remark": "Grimalkin Gale[分散点名] 读条04:00 判定04:01"
+              }
+            ],
+            "GUID": "98020eab-1e10-462a-98b7-52db40fb7e77",
+            "Important": true,
+            "Color": {
+              "X": 0.056338012,
+              "Y": 0.853799,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 44,
+            "Enable": true,
+            "Remark": "P2"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37985",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 3,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 58,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 57,
+                "Enable": true,
+                "Remark": "Nine Lives[P3开场] 读条04:13 判定04:16"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b3796(5|6|7|8)\\b",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 61,
+                        "Enable": true,
+                        "Remark": ""
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 60,
+                    "Enable": true,
+                    "Remark": "Leaping One-two Paw预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37968",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 64,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 63,
+                        "Enable": true,
+                        "Remark": "R  L-R"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37967",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 66,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 65,
+                        "Enable": true,
+                        "Remark": "R R-L"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37966",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 68,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 67,
+                        "Enable": true,
+                        "Remark": "L L-R"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37965",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 70,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 69,
+                        "Enable": true,
+                        "Remark": "L R-L"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 62,
+                    "Enable": true,
+                    "Remark": "Leaping One-two Paw"
+                  }
+                ],
+                "GUID": "8eeb90ff-8024-4ee7-8eab-31794bd07492",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5070422,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 59,
+                "Enable": true,
+                "Remark": "Leaping One-two Paw[跳+左右刀]04:18-04:23"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37986",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 3,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 72,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 71,
+                "Enable": true,
+                "Remark": "Soulshade[召唤分身]"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37985",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 3,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 74,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 73,
+                "Enable": true,
+                "Remark": "Nine Lives 读条04:34 判定04:37"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b3(8959|7975)\\b",
+                            "NeedTargetable": false,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 77,
+                        "Enable": true,
+                        "Remark": "4:40-4:45 第一次4:46 第二次4:49"
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 76,
+                    "Enable": true,
+                    "Remark": "Leaping Quadruple Crossing预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "37975",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 80,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 79,
+                        "Enable": true,
+                        "Remark": "Leaping Quadruple Crossing L"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 81,
+                        "Enable": true,
+                        "Remark": "Leaping Quadruple Crossing R"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 78,
+                    "Enable": true,
+                    "Remark": "Leaping Quadruple Crossing"
+                  }
+                ],
+                "GUID": "8eeb90ff-8024-4ee7-8eab-31794bd07492",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5070422,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 75,
+                "Enable": true,
+                "Remark": "Double/Quadruple Swipe[跳+引导] 4:40-4:45 第一次4:46 第二次4:49"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b380(19|21)\\b",
+                            "NeedTargetable": true,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 84,
+                        "Enable": true,
+                        "Remark": "5:24/5:25"
+                      }
+                    ],
+                    "GUID": "fbfff605-05b7-46e0-9c77-26c6c3ee5d7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 83,
+                    "Enable": true,
+                    "Remark": "第一次 Tempestuous Tear/Nailchipper预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38019",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 87,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 86,
+                        "Enable": true,
+                        "Remark": "Tempestuous Tear"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 88,
+                        "Enable": true,
+                        "Remark": "Nailchipper"
+                      }
+                    ],
+                    "GUID": "33ba6935-3603-42d5-abe2-6640ee617b75",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 85,
+                    "Enable": true,
+                    "Remark": "第一次 Tempestuous Tear/Nailchipper"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeDelayNode, AEAssist",
+                        "DisplayName": "延迟[10.00]秒",
+                        "Delay": 10.0,
+                        "GUID": "69dfb93d-e0b6-43b5-9f98-4952b5c7a6c0",
+                        "Important": false,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 90,
+                        "Enable": true,
+                        "Remark": ""
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b380(19|21)\\b",
+                            "NeedTargetable": true,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 91,
+                        "Enable": true,
+                        "Remark": "5:49/5:55"
+                      }
+                    ],
+                    "GUID": "fbfff605-05b7-46e0-9c77-26c6c3ee5d7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 89,
+                    "Enable": true,
+                    "Remark": "第二次 Tempestuous Tear/Nailchipper预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38019",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 94,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          },
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                            "DisplayName": "打印信息",
+                            "Info": "Tempestuous Tear",
+                            "ToastType": 2,
+                            "ToastDuration": 1500,
+                            "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                            "Important": false,
+                            "Color": {
+                              "X": 0.98122066,
+                              "Y": 0.0,
+                              "Z": 0.7186408,
+                              "W": 1.0
+                            },
+                            "Id": 95,
+                            "Enable": false,
+                            "Remark": "Tempestuous Tear"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 93,
+                        "Enable": true,
+                        "Remark": "Tempestuous Tear"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38021",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 97,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          },
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                            "DisplayName": "打印信息",
+                            "Info": "Nailchipper",
+                            "ToastType": 2,
+                            "ToastDuration": 1500,
+                            "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                            "Important": false,
+                            "Color": {
+                              "X": 0.98122066,
+                              "Y": 0.0,
+                              "Z": 0.7186408,
+                              "W": 1.0
+                            },
+                            "Id": 98,
+                            "Enable": false,
+                            "Remark": "Nailchipper"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 96,
+                        "Enable": true,
+                        "Remark": "Nailchipper"
+                      }
+                    ],
+                    "GUID": "33ba6935-3603-42d5-abe2-6640ee617b75",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 92,
+                    "Enable": true,
+                    "Remark": "第二次 Tempestuous Tear/Nailchipper"
+                  }
+                ],
+                "GUID": "229b5a1a-9b36-43c3-9d92-1b42afdfff47",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5915493,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 82,
+                "Enable": true,
+                "Remark": "Tempestuous Tear/Nailchipper[44分摊/引导]5:24/5:25"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "38036",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 100,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 99,
+                "Enable": true,
+                "Remark": "Bloody Scratch[AOE] 读条06:06 判定 06:11"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37953",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 102,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "转场变量控制",
+                        "VariableName": "P",
+                        "SetVariableVaule": 4,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "bcf6e802-e3ec-43a7-a781-7fa9f2b154fd",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028168678,
+                      "Y": 0.0,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 103,
+                    "Enable": true,
+                    "Remark": "转场变量控制,请勿修改"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 101,
+                "Enable": true,
+                "Remark": "Mouser[砸地板][P3结束] 读条06:24"
+              }
+            ],
+            "GUID": "98020eab-1e10-462a-98b7-52db40fb7e77",
+            "Important": true,
+            "Color": {
+              "X": 0.056338012,
+              "Y": 0.853799,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 56,
+            "Enable": true,
+            "Remark": "P3"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37957",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 4,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 106,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 105,
+                "Enable": true,
+                "Remark": "Copycat[P4开场] 读条06:52"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b380(39|41)\\b",
+                            "NeedTargetable": true,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 109,
+                        "Enable": true,
+                        "Remark": "07:04"
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 108,
+                    "Enable": true,
+                    "Remark": "第一次 Splintering Nails/Overshadow预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38041",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 112,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 111,
+                        "Enable": true,
+                        "Remark": "Splintering Nails"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 113,
+                        "Enable": true,
+                        "Remark": "Overshadow"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 110,
+                    "Enable": true,
+                    "Remark": "第一次 Splintering Nails/Overshadow"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b380(39|41)\\b",
+                            "NeedTargetable": true,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 115,
+                        "Enable": true,
+                        "Remark": "07:16"
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 114,
+                    "Enable": true,
+                    "Remark": "第二次 Splintering Nails/Overshadow预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38041",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 118,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 117,
+                        "Enable": true,
+                        "Remark": "Splintering Nails"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 119,
+                        "Enable": true,
+                        "Remark": "Overshadow"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 116,
+                    "Enable": true,
+                    "Remark": "第二次 Splintering Nails/Overshadow"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b380(39|41)\\b",
+                            "NeedTargetable": true,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 121,
+                        "Enable": true,
+                        "Remark": "07:28"
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 120,
+                    "Enable": true,
+                    "Remark": "第三次 Splintering Nails/Overshadow预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38041",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 124,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 123,
+                        "Enable": true,
+                        "Remark": "Splintering Nails"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 125,
+                        "Enable": true,
+                        "Remark": "Overshadow"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 122,
+                    "Enable": true,
+                    "Remark": "第三次 Splintering Nails/Overshadow"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                    "DisplayName": "序列",
+                    "IgnoreNodeResult": false,
+                    "StopWhenDead": false,
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                        "CondLogicType": 0,
+                        "CheckOnce": false,
+                        "ReverseResult": false,
+                        "TriggerConds": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                            "Strs": null,
+                            "Remark": "",
+                            "RegexNameOrId": "\\b380(39|41)\\b",
+                            "NeedTargetable": true,
+                            "DisplayName": "General/敌人读条使用技能"
+                          }
+                        ],
+                        "DisplayName": "等待条件",
+                        "GUID": "a393edd5-25dd-4222-8b3b-90feff8fcaf7",
+                        "Important": true,
+                        "Color": {
+                          "X": 0.0,
+                          "Y": 1.0,
+                          "Z": 0.0,
+                          "W": 1.0
+                        },
+                        "Id": 127,
+                        "Enable": true,
+                        "Remark": "07:40"
+                      }
+                    ],
+                    "GUID": "8b73abd2-c439-49d2-a6af-41b9330d6ca2",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 126,
+                    "Enable": true,
+                    "Remark": "第四次 Splintering Nails/Overshadow预备"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "\\b(Double|Quadruple) Swipe\\b",
+                                "RegexNameOrId": "38041",
+                                "NeedTargetable": false,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.028169036,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 130,
+                            "Enable": true,
+                            "Remark": "判定读条开始时触发"
+                          }
+                        ],
+                        "GUID": "ad4f9b2a-304d-4f17-a2bc-d464fc3015a1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 129,
+                        "Enable": true,
+                        "Remark": "Splintering Nails"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "87cc7e1f-5cb9-4c65-8fed-fae52e194ec1",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 131,
+                        "Enable": true,
+                        "Remark": "Overshadow"
+                      }
+                    ],
+                    "GUID": "665a78cf-bf2b-4800-a5ea-f014d4c394f8",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 128,
+                    "Enable": true,
+                    "Remark": "第四次 Splintering Nails/Overshadow"
+                  }
+                ],
+                "GUID": "8eeb90ff-8024-4ee7-8eab-31794bd07492",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 0.5070422,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 107,
+                "Enable": true,
+                "Remark": "Splintering Nails/Overshadow[扇形分散/8人分摊]"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "38037",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 133,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 132,
+                "Enable": true,
+                "Remark": "Biscuit Maker[死刑] 读条07:51 判定07:56"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37963",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 135,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "转场变量控制",
+                        "VariableName": "P",
+                        "SetVariableVaule": 5,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "bcf6e802-e3ec-43a7-a781-7fa9f2b154fd",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028168678,
+                      "Y": 0.0,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 136,
+                    "Enable": true,
+                    "Remark": "转场变量控制,请勿修改"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 134,
+                "Enable": true,
+                "Remark": "Shockwave[击退][P4结束] 读条08:03 判定08:1"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39812",
+                        "NeedTargetable": false,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "f6e81b8d-42af-417f-b44d-260d027c6742",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.028169036,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 138,
+                    "Enable": true,
+                    "Remark": "判定读条开始时触发"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Grimalkin Gale",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "a38a734e-d22e-483c-8890-b8eb3fed8bac",
+                    "Important": false,
+                    "Color": {
+                      "X": 0.98122066,
+                      "Y": 0.0,
+                      "Z": 0.7186408,
+                      "W": 1.0
+                    },
+                    "Id": 139,
+                    "Enable": false,
+                    "Remark": "Grimalkin Gale判定08:14"
+                  }
+                ],
+                "GUID": "142c35ec-d997-44ce-876f-4fbadedb44f7",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 137,
+                "Enable": true,
+                "Remark": "Grimalkin Gale[分散点名] 判定08:14"
+              }
+            ],
+            "GUID": "98020eab-1e10-462a-98b7-52db40fb7e77",
+            "Important": true,
+            "Color": {
+              "X": 0.056338012,
+              "Y": 0.853799,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 104,
+            "Enable": true,
+            "Remark": "P4"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39611",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 5,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 142,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 141,
+                "Enable": true,
+                "Remark": "第一次Raining Cats[P5开场] 读条08:27 判定08:33"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39612",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 5,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 144,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 143,
+                "Enable": true,
+                "Remark": "第二次Raining Cats 读条08:34"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39612",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 5,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 146,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 145,
+                "Enable": true,
+                "Remark": "第三次Raining Cats 读条08:40"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39613",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 5,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 148,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 147,
+                "Enable": true,
+                "Remark": "第四次Raining Cats 读条08:45"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37957",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 5,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "5b7c35bb-3461-432c-8dfe-f7de70f1fd51",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": 0.05633807,
+                      "W": 1.0
+                    },
+                    "Id": 150,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "c94cf762-65c9-431d-8aa2-e5b6fe6be7de",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 149,
+                "Enable": true,
+                "Remark": "Copycat 09:01-09:04"
+              }
+            ],
+            "GUID": "98020eab-1e10-462a-98b7-52db40fb7e77",
+            "Important": true,
+            "Color": {
+              "X": 0.056338012,
+              "Y": 0.853799,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 140,
+            "Enable": true,
+            "Remark": "P5"
+          }
+        ],
+        "GUID": "bf0b1662-9eb4-49c1-9c59-8f497ea866fc",
+        "Important": false,
+        "Color": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.4,
+          "W": 1.0
+        },
+        "Id": 2,
+        "Enable": true,
+        "Remark": ""
+      }
+    ],
+    "GUID": "dea95c1a-f84b-42b4-a953-f130a653429e",
+    "Important": false,
+    "Color": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 0.4,
+      "W": 1.0
+    },
+    "Id": 1,
+    "Enable": true,
+    "Remark": ""
+  },
+  "ExposedVars": [],
+  "ExposedVarDesc": "",
+  "OpenerScript": "",
+  "Note": "等CN更新后再添加中文",
+  "TerritoryTypeId": 1226,
+  "TerritoryWeatherId": 1,
+  "TargetAcrAuthor": "",
+  "ClearCustomed": false,
+  "LogsAddress": ""
+}

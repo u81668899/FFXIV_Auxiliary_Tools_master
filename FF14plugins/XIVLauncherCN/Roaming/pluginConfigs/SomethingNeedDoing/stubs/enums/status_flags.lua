@@ -1,0 +1,26 @@
+-- Usage:
+-- luanet.load_assembly('Dalamud')
+-- StatusFlags = luanet.import_type('Dalamud.Game.ClientState.Objects.Enums.StatusFlags')
+-- StatusFlags.None
+
+--- @alias StatusFlagsValue
+---| 0 # None
+---| 1 # Hostile
+---| 2 # InCombat
+---| 4 # WeaponOut
+---| 8 # OffhandOut
+---| 16 # PartyMember
+---| 32 # AllianceMember
+---| 64 # Friend
+---| 128 # IsCasting
+
+--- @class StatusFlags
+--- @field None StatusFlagsValue
+--- @field Hostile StatusFlagsValue
+--- @field InCombat StatusFlagsValue
+--- @field WeaponOut StatusFlagsValue
+--- @field OffhandOut StatusFlagsValue
+--- @field PartyMember StatusFlagsValue
+--- @field AllianceMember StatusFlagsValue
+--- @field Friend StatusFlagsValue
+--- @field IsCasting StatusFlagsValue

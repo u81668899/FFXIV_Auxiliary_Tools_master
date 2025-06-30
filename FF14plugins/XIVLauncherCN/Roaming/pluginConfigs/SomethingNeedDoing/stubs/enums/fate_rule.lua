@@ -1,0 +1,26 @@
+-- Usage:
+-- luanet.load_assembly('SomethingNeedDoing')
+-- FateRule = luanet.import_type('SomethingNeedDoing.LuaMacro.Modules.FateModule+FateRule')
+-- FateRule.None
+
+--- @alias FateRuleValue
+---| 0 # None
+---| 1 # Normal
+---| 2 # Collect
+---| 3 # Escort
+---| 4 # Defend
+---| 5 # EventFate
+---| 6 # Chase
+---| 7 # ConcertedWorks
+---| 8 # Fete
+
+--- @class FateRule
+--- @field None FateRuleValue
+--- @field Normal FateRuleValue
+--- @field Collect FateRuleValue
+--- @field Escort FateRuleValue
+--- @field Defend FateRuleValue
+--- @field EventFate FateRuleValue
+--- @field Chase FateRuleValue
+--- @field ConcertedWorks FateRuleValue
+--- @field Fete FateRuleValue

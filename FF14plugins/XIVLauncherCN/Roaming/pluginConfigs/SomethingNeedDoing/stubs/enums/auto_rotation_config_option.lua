@@ -1,0 +1,34 @@
+-- Usage:
+-- luanet.load_assembly('SomethingNeedDoing')
+-- AutoRotationConfigOption = luanet.import_type('SomethingNeedDoing.External.Wrath+AutoRotationConfigOption')
+-- AutoRotationConfigOption.InCombatOnly
+
+--- @alias AutoRotationConfigOptionValue
+---| 0 # InCombatOnly
+---| 1 # DPSRotationMode
+---| 2 # HealerRotationMode
+---| 3 # FATEPriority
+---| 4 # QuestPriority
+---| 5 # SingleTargetHPP
+---| 6 # AoETargetHPP
+---| 7 # SingleTargetRegenHPP
+---| 8 # ManageKardia
+---| 9 # AutoRez
+---| 10 # AutoRezDPSJobs
+---| 11 # AutoCleanse
+---| 12 # IncludeNPCs
+
+--- @class AutoRotationConfigOption
+--- @field InCombatOnly AutoRotationConfigOptionValue
+--- @field DPSRotationMode AutoRotationConfigOptionValue
+--- @field HealerRotationMode AutoRotationConfigOptionValue
+--- @field FATEPriority AutoRotationConfigOptionValue
+--- @field QuestPriority AutoRotationConfigOptionValue
+--- @field SingleTargetHPP AutoRotationConfigOptionValue
+--- @field AoETargetHPP AutoRotationConfigOptionValue
+--- @field SingleTargetRegenHPP AutoRotationConfigOptionValue
+--- @field ManageKardia AutoRotationConfigOptionValue
+--- @field AutoRez AutoRotationConfigOptionValue
+--- @field AutoRezDPSJobs AutoRotationConfigOptionValue
+--- @field AutoCleanse AutoRotationConfigOptionValue
+--- @field IncludeNPCs AutoRotationConfigOptionValue

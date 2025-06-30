@@ -1,0 +1,7 @@
+--- @class BuddyMemberWrapper
+--- @field EntityId number
+--- @field CurrentHealth number
+--- @field MaxHealth number
+--- @field DataId number
+--- @field Synced number
+--- @field Status table<StatusWrapper>

@@ -1,0 +1,23 @@
+{
+  "Presets": [
+    {
+      "ItemID": 44178,
+      "IsHQ": true,
+      "Zones": [
+        1122,
+        1238
+      ],
+      "ClassJobs": [],
+      "Enabled": true
+    }
+  ],
+  "EnabledCheckpoints": {
+    "区域切换时": false,
+    "倒计时开始时": true,
+    "条件变更时": false
+  },
+  "ConditionStart": [],
+  "ConditionEnd": [],
+  "RefreshThreshold": 1200,
+  "SendChat": true
+}

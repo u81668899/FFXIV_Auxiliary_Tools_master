@@ -1,0 +1,81 @@
+{
+  "actions": [
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -38.98,
+        "Y": 114.71,
+        "Z": -4.16
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -40.24,
+        "Y": 114.71,
+        "Z": 3.47
+      },
+      "arguments": [
+        "2007455"
+      ],
+      "note": "Cranial Hatch"
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -40.24,
+        "Y": 114.71,
+        "Z": 3.47
+      },
+      "arguments": [
+        "2007456"
+      ],
+      "note": "Ingress"
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 0.041660503,
+        "Y": -250.29001,
+        "Z": -239.65451
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": 0.04,
+        "Y": -250.29,
+        "Z": -239.65
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    }
+  ],
+  "meta": {
+    "createdAt": 173,
+    "changelog": [
+      {
+        "version": 173,
+        "change": "kuku"
+      },
+      {
+        "version": 189,
+        "change": "Adjusted tags to string values"
+      }
+    ],
+    "notes": []
+  }
+}

@@ -1,0 +1,330 @@
+2024-10-27T18:47:27.8423057+08:00	DBUG	[Microsoft.Extensions.Hosting.Internal.Host]	[Starting]	Hosting starting
+2024-10-27T18:47:27.8529593+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message TargetPairMessage: DalamudUtilService
+2024-10-27T18:47:27.8533054+08:00	TRCE	[MareSynchronos.Services.NotificationService]	[0]	Creating NotificationService (MareSynchronos.Services.NotificationService)
+2024-10-27T18:47:27.9293989+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcCallerPenumbra]	[0]	Creating IpcCallerPenumbra (MareSynchronos.Interop.Ipc.IpcCallerPenumbra)
+2024-10-27T18:47:27.9458939+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message PenumbraRedrawCharacterMessage: IpcCallerPenumbra
+2024-10-27T18:47:27.9459147+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLoginMessage: IpcCallerPenumbra
+2024-10-27T18:47:28.0186919+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcCallerGlamourer]	[0]	Creating IpcCallerGlamourer (MareSynchronos.Interop.Ipc.IpcCallerGlamourer)
+2024-10-27T18:47:28.0266192+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLoginMessage: IpcCallerGlamourer
+2024-10-27T18:47:28.0349420+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcManager]	[0]	Creating IpcManager (MareSynchronos.Interop.Ipc.IpcManager)
+2024-10-27T18:47:28.0350198+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DelayedFrameworkUpdateMessage: IpcManager
+2024-10-27T18:47:28.0409959+08:00	DBUG	[MareSynchronos.Services.ServerConfiguration.ServerConfigurationManager]	[0]	RuntimeMethodHandle Calling config save
+2024-10-27T18:47:28.0427137+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLogoutMessage: TokenProvider
+2024-10-27T18:47:28.0427266+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLoginMessage: TokenProvider
+2024-10-27T18:47:28.0470561+08:00	TRCE	[MareSynchronos.WebAPI.Files.FileTransferOrchestrator]	[0]	Creating FileTransferOrchestrator (MareSynchronos.WebAPI.Files.FileTransferOrchestrator)
+2024-10-27T18:47:28.0482673+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message ConnectedMessage: FileTransferOrchestrator
+2024-10-27T18:47:28.0482802+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: FileTransferOrchestrator
+2024-10-27T18:47:28.0482841+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadReadyMessage: FileTransferOrchestrator
+2024-10-27T18:47:28.0514213+08:00	TRCE	[MareSynchronos.PlayerData.Pairs.PairManager]	[0]	Creating PairManager (MareSynchronos.PlayerData.Pairs.PairManager)
+2024-10-27T18:47:28.0514379+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: PairManager
+2024-10-27T18:47:28.0514493+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CutsceneEndMessage: PairManager
+2024-10-27T18:47:28.0522968+08:00	TRCE	[MareSynchronos.WebAPI.SignalR.HubFactory]	[0]	Creating HubFactory (MareSynchronos.WebAPI.SignalR.HubFactory)
+2024-10-27T18:47:28.0529224+08:00	TRCE	[MareSynchronos.WebAPI.ApiController]	[0]	Creating ApiController (MareSynchronos.WebAPI.ApiController)
+2024-10-27T18:47:28.0529316+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLoginMessage: ApiController
+2024-10-27T18:47:28.0529331+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLogoutMessage: ApiController
+2024-10-27T18:47:28.0529386+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message HubClosedMessage: ApiController
+2024-10-27T18:47:28.0529413+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message HubReconnectedMessage: ApiController
+2024-10-27T18:47:28.0529437+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message HubReconnectingMessage: ApiController
+2024-10-27T18:47:28.0529456+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CyclePauseMessage: ApiController
+2024-10-27T18:47:28.0529473+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CensusUpdateMessage: ApiController
+2024-10-27T18:47:28.0529489+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message PauseMessage: ApiController
+2024-10-27T18:47:28.0531687+08:00	DBUG	[MareSynchronos.WebAPI.ApiController]	[0]	New ServerState: Offline, prev ServerState: Offline
+2024-10-27T18:47:28.0546981+08:00	TRCE	[MareSynchronos.Services.Events.EventAggregator]	[0]	Creating EventAggregator (MareSynchronos.Services.Events.EventAggregator)
+2024-10-27T18:47:28.0547136+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message EventMessage: EventAggregator
+2024-10-27T18:47:28.0564389+08:00	TRCE	[MareSynchronos.PlayerData.Export.MareCharaFileManager]	[0]	Creating MareCharaFileManager (MareSynchronos.PlayerData.Export.MareCharaFileManager)
+2024-10-27T18:47:28.0565427+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeStartMessage: MareCharaFileManager
+2024-10-27T18:47:28.0565501+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeEndMessage: MareCharaFileManager
+2024-10-27T18:47:28.0569277+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GameObjectHandlerCreatedMessage: IpcProvider
+2024-10-27T18:47:28.0569350+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GameObjectHandlerDestroyedMessage: IpcProvider
+2024-10-27T18:47:28.0573889+08:00	TRCE	[MareSynchronos.MarePlugin]	[0]	Creating MarePlugin (MareSynchronos.MarePlugin)
+2024-10-27T18:47:28.1174706+08:00	INFO	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Starting MareMediator
+2024-10-27T18:47:28.1174969+08:00	INFO	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Started MareMediator
+2024-10-27T18:47:28.1176454+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message NotificationMessage: NotificationService
+2024-10-27T18:47:28.1214317+08:00	INFO	[MareSynchronos.FileCache.FileCacheManager]	[0]	Starting FileCacheManager
+2024-10-27T18:47:28.1214649+08:00	INFO	[MareSynchronos.FileCache.FileCacheManager]	[0]	Checking for C:\Users\u8166\AppData\Roaming\XIVLauncherCN\pluginConfigs\MareSynchronos\FileCache.csv.bak
+2024-10-27T18:47:28.1215922+08:00	INFO	[MareSynchronos.FileCache.FileCacheManager]	[0]	Started FileCacheManager
+2024-10-27T18:47:28.1223584+08:00	INFO	[MareSynchronos.Services.DalamudUtilService]	[0]	Starting DalamudUtilService
+2024-10-27T18:47:28.1223757+08:00	INFO	[MareSynchronos.Services.DalamudUtilService]	[0]	Started DalamudUtilService
+2024-10-27T18:47:28.1227415+08:00	INFO	[MareSynchronos.Services.PerformanceCollectorService]	[0]	Starting PerformanceCollectorService
+2024-10-27T18:47:28.1227544+08:00	INFO	[MareSynchronos.Services.PerformanceCollectorService]	[0]	Started PerformanceCollectorService
+2024-10-27T18:47:28.1233019+08:00	INFO	[MareSynchronos.UI.DtrEntry]	[0]	Starting DtrEntry
+2024-10-27T18:47:28.1233129+08:00	INFO	[MareSynchronos.UI.DtrEntry]	[0]	Started DtrEntry
+2024-10-27T18:47:28.1235087+08:00	INFO	[MareSynchronos.Services.Events.EventAggregator]	[0]	Starting EventAggregatorService
+2024-10-27T18:47:28.1235134+08:00	INFO	[MareSynchronos.Services.Events.EventAggregator]	[0]	Started EventAggregatorService
+2024-10-27T18:47:28.1240087+08:00	INFO	[MareSynchronos.Interop.Ipc.IpcProvider]	[0]	Starting IpcProviderService
+2024-10-27T18:47:28.1241040+08:00	INFO	[MareSynchronos.Interop.Ipc.IpcProvider]	[0]	Started IpcProviderService
+2024-10-27T18:47:28.1256552+08:00	INFO	[MareSynchronos.MarePlugin]	[0]	Launching Mare Synchronos 1.10.0
+2024-10-27T18:47:28.1257521+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message SwitchToMainUiMessage: MarePlugin
+2024-10-27T18:47:28.1257575+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLoginMessage: MarePlugin
+2024-10-27T18:47:28.1257599+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLogoutMessage: MarePlugin
+2024-10-27T18:47:28.1259086+08:00	INFO	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Starting Message Queue Processing
+2024-10-27T18:47:28.1268270+08:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2024-10-27T18:47:28.1269202+08:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Production
+2024-10-27T18:47:28.1269755+08:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: C:\Users\u8166\AppData\Roaming\XIVLauncherCN\pluginConfigs\MareSynchronos
+2024-10-27T18:47:28.1271396+08:00	DBUG	[Microsoft.Extensions.Hosting.Internal.Host]	[Started]	Hosting started
+2024-10-27T18:47:28.3284807+08:00	INFO	[MareSynchronos.Services.NotificationService]	[0]	NotificationMessage { KeepThreadContext = False, Title = Glamourer inactive, Message = Your Glamourer installation is not active or out of date. Update Glamourer to continue to use Mare. If you just updated Glamourer, ignore this message., Type = Error, TimeShownOnScreen =  }
+2024-10-27T18:47:28.3316829+08:00	TRCE	[MareSynchronos.Services.Events.EventAggregator]	[0]	Received Event: 18:47:28.125	[MarePlugin]{0}	Starting Mare Synchronos 1.10.0
+2024-10-27T18:47:28.3353555+08:00	WARN	[MareSynchronos.Services.Events.EventAggregator]	[0]	Could not delete last eventsSystem.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\u8166\AppData\Roaming\XIVLauncherCN\pluginConfigs\MareSynchronos\eventlog'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at MareSynchronos.Services.Events.EventAggregator.WriteToFile(Event receivedEvent) in D:\Code\FFXIV\__Dalamud__\__Plugins__\Mare-client\MareSynchronos\Services\Events\EventAggregator.cs:line 76
+
+2024-10-27T18:47:28.8519601+08:00	DBUG	[MareSynchronos.Services.DalamudUtilService]	[0]	Logged in
+2024-10-27T18:47:28.9402430+08:00	DBUG	[MareSynchronos.MarePlugin]	[0]	Client login
+2024-10-27T18:47:28.9597905+08:00	DBUG	[MareSynchronos.MarePlugin]	[0]	Launching Managers
+2024-10-27T18:47:28.9645498+08:00	TRCE	[MareSynchronos.FileCache.CacheMonitor]	[0]	Creating CacheMonitor (MareSynchronos.FileCache.CacheMonitor)
+2024-10-27T18:47:28.9645665+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message PenumbraInitializedMessage: CacheMonitor
+2024-10-27T18:47:28.9645691+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message HaltScanMessage: CacheMonitor
+2024-10-27T18:47:28.9645706+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message ResumeScanMessage: CacheMonitor
+2024-10-27T18:47:28.9645734+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DalamudLoginMessage: CacheMonitor
+2024-10-27T18:47:28.9645752+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message PenumbraDirectoryChangedMessage: CacheMonitor
+2024-10-27T18:47:28.9661323+08:00	DBUG	[MareSynchronos.FileCache.CacheMonitor]	[0]	Initializing Penumbra FSW on c:\ffxiv\ff14plugins\ff14mod\weiyue
+2024-10-27T18:47:28.9713296+08:00	TRCE	[MareSynchronos.UI.UiSharedService]	[0]	Creating UiSharedService (MareSynchronos.UI.UiSharedService)
+2024-10-27T18:47:28.9718811+08:00	INFO	[MareSynchronos.FileCache.CacheMonitor]	[0]	Starting Periodic Storage Directory Calculation Task
+2024-10-27T18:47:28.9724928+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DelayedFrameworkUpdateMessage: UiSharedService
+2024-10-27T18:47:28.9734405+08:00	TRCE	[MareSynchronos.WebAPI.Files.FileUploadManager]	[0]	Creating FileUploadManager (MareSynchronos.WebAPI.Files.FileUploadManager)
+2024-10-27T18:47:28.9734483+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: FileUploadManager
+2024-10-27T18:47:28.9752107+08:00	TRCE	[MareSynchronos.UI.SettingsUi]	[0]	Creating MareSynchronos.UI.SettingsUi
+2024-10-27T18:47:28.9752231+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: SettingsUi
+2024-10-27T18:47:28.9752819+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message OpenSettingsUiMessage: SettingsUi
+2024-10-27T18:47:28.9752857+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message SwitchToIntroUiMessage: SettingsUi
+2024-10-27T18:47:28.9752877+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CutsceneStartMessage: SettingsUi
+2024-10-27T18:47:28.9752905+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CutsceneEndMessage: SettingsUi
+2024-10-27T18:47:28.9752923+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CharacterDataCreatedMessage: SettingsUi
+2024-10-27T18:47:28.9752942+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadStartedMessage: SettingsUi
+2024-10-27T18:47:28.9752960+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadFinishedMessage: SettingsUi
+2024-10-27T18:47:28.9788464+08:00	TRCE	[MareSynchronos.UI.CompactUi]	[0]	Creating MareSynchronos.UI.CompactUi
+2024-10-27T18:47:28.9788660+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: CompactUi
+2024-10-27T18:47:28.9927513+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message SwitchToMainUiMessage: CompactUi
+2024-10-27T18:47:28.9927631+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message SwitchToIntroUiMessage: CompactUi
+2024-10-27T18:47:28.9927645+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CutsceneStartMessage: CompactUi
+2024-10-27T18:47:28.9927658+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CutsceneEndMessage: CompactUi
+2024-10-27T18:47:28.9927681+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadStartedMessage: CompactUi
+2024-10-27T18:47:28.9927697+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadFinishedMessage: CompactUi
+2024-10-27T18:47:28.9927723+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message RefreshUiMessage: CompactUi
+2024-10-27T18:47:28.9935619+08:00	TRCE	[MareSynchronos.UI.GposeUi]	[0]	Creating MareSynchronos.UI.GposeUi
+2024-10-27T18:47:28.9935687+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: GposeUi
+2024-10-27T18:47:28.9935716+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeStartMessage: GposeUi
+2024-10-27T18:47:28.9935744+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeEndMessage: GposeUi
+2024-10-27T18:47:28.9952159+08:00	TRCE	[MareSynchronos.UI.IntroUi]	[0]	Creating MareSynchronos.UI.IntroUi
+2024-10-27T18:47:28.9952357+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: IntroUi
+2024-10-27T18:47:28.9961473+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message SwitchToMainUiMessage: IntroUi
+2024-10-27T18:47:28.9961555+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message SwitchToIntroUiMessage: IntroUi
+2024-10-27T18:47:28.9977351+08:00	TRCE	[MareSynchronos.UI.DownloadUi]	[0]	Creating MareSynchronos.UI.DownloadUi
+2024-10-27T18:47:28.9977459+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: DownloadUi
+2024-10-27T18:47:28.9977500+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadStartedMessage: DownloadUi
+2024-10-27T18:47:28.9977515+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DownloadFinishedMessage: DownloadUi
+2024-10-27T18:47:28.9977536+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeStartMessage: DownloadUi
+2024-10-27T18:47:28.9977551+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeEndMessage: DownloadUi
+2024-10-27T18:47:28.9977595+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message PlayerUploadingMessage: DownloadUi
+2024-10-27T18:47:29.0021903+08:00	TRCE	[MareSynchronos.Services.MareProfileManager]	[0]	Creating MareProfileManager (MareSynchronos.Services.MareProfileManager)
+2024-10-27T18:47:29.0022186+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message ClearProfileDataMessage: MareProfileManager
+2024-10-27T18:47:29.0022243+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: MareProfileManager
+2024-10-27T18:47:29.0032301+08:00	TRCE	[MareSynchronos.UI.PopoutProfileUi]	[0]	Creating MareSynchronos.UI.PopoutProfileUi
+2024-10-27T18:47:29.0032441+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: PopoutProfileUi
+2024-10-27T18:47:29.0032488+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message ProfilePopoutToggle: PopoutProfileUi
+2024-10-27T18:47:29.0032518+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CompactUiChange: PopoutProfileUi
+2024-10-27T18:47:29.0042965+08:00	TRCE	[MareSynchronos.Services.CharacterAnalyzer]	[0]	Creating CharacterAnalyzer (MareSynchronos.Services.CharacterAnalyzer)
+2024-10-27T18:47:29.0043056+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CharacterDataCreatedMessage: CharacterAnalyzer
+2024-10-27T18:47:29.0054657+08:00	TRCE	[MareSynchronos.UI.DataAnalysisUi]	[0]	Creating MareSynchronos.UI.DataAnalysisUi
+2024-10-27T18:47:29.0054840+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: DataAnalysisUi
+2024-10-27T18:47:29.0054960+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message CharacterDataAnalyzedMessage: DataAnalysisUi
+2024-10-27T18:47:29.0069008+08:00	TRCE	[MareSynchronos.UI.JoinSyncshellUI]	[0]	Creating MareSynchronos.UI.JoinSyncshellUI
+2024-10-27T18:47:29.0069162+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: JoinSyncshellUI
+2024-10-27T18:47:29.0069195+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: JoinSyncshellUI
+2024-10-27T18:47:29.0077864+08:00	TRCE	[MareSynchronos.UI.CreateSyncshellUI]	[0]	Creating MareSynchronos.UI.CreateSyncshellUI
+2024-10-27T18:47:29.0077947+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: CreateSyncshellUI
+2024-10-27T18:47:29.0077961+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: CreateSyncshellUI
+2024-10-27T18:47:29.0084584+08:00	TRCE	[MareSynchronos.UI.EventViewerUI]	[0]	Creating MareSynchronos.UI.EventViewerUI
+2024-10-27T18:47:29.0084657+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: EventViewerUI
+2024-10-27T18:47:29.0098563+08:00	TRCE	[MareSynchronos.UI.EditProfileUi]	[0]	Creating MareSynchronos.UI.EditProfileUi
+2024-10-27T18:47:29.0098639+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: EditProfileUi
+2024-10-27T18:47:29.0098684+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeStartMessage: EditProfileUi
+2024-10-27T18:47:29.0098700+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message GposeEndMessage: EditProfileUi
+2024-10-27T18:47:29.0098711+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message DisconnectedMessage: EditProfileUi
+2024-10-27T18:47:29.0098723+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message ClearProfileDataMessage: EditProfileUi
+2024-10-27T18:47:29.0113361+08:00	TRCE	[MareSynchronos.UI.Components.Popup.PopupHandler]	[0]	Creating MareSynchronos.UI.Components.Popup.PopupHandler
+2024-10-27T18:47:29.0113502+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message UiToggleMessage: PopupHandler
+2024-10-27T18:47:29.0115279+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message OpenBanUserPopupMessage: PopupHandler
+2024-10-27T18:47:29.0115327+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message OpenCensusPopupMessage: PopupHandler
+2024-10-27T18:47:29.0125976+08:00	TRCE	[MareSynchronos.Services.UiService]	[0]	Creating UiService (MareSynchronos.Services.UiService)
+2024-10-27T18:47:29.0126058+08:00	TRCE	[MareSynchronos.Services.UiService]	[0]	Creating UiService
+2024-10-27T18:47:29.0126835+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message ProfileOpenStandaloneMessage: UiService
+2024-10-27T18:47:29.0126889+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message OpenSyncshellAdminPanel: UiService
+2024-10-27T18:47:29.0126914+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message OpenPermissionWindow: UiService
+2024-10-27T18:47:29.0126934+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	Subscriber added for message RemoveWindowMessage: UiService
+2024-10-27T18:47:29.9475590+08:00	INFO	[MareSynchronos.Services.NotificationService]	[0]	NotificationMessage { KeepThreadContext = False, Title = Glamourer inactive, Message = Your Glamourer installation is not active or out of date. Update Glamourer to continue to use Mare. If you just updated Glamourer, ignore this message., Type = Error, TimeShownOnScreen =  }
+2024-10-27T18:47:31.2281297+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 星喵 (HasModelInSlotLoaded)
+2024-10-27T18:47:31.3512298+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 星喵
+2024-10-27T18:47:43.4683156+08:00	DBUG	[MareSynchronos.WebAPI.ApiController]	[0]	CreateConnections called
+2024-10-27T18:47:43.5199011+08:00	TRCE	[MareSynchronos.Services.ServerConfiguration.ServerConfigurationManager]	[0]	GetSecretKey accessed, returning null because no set up characters for 十六五夜 on 1045
+2024-10-27T18:47:43.5199440+08:00	WARN	[MareSynchronos.WebAPI.ApiController]	[0]	No secret key set for current character
+2024-10-27T18:47:43.5219975+08:00	DBUG	[MareSynchronos.WebAPI.ApiController]	[0]	New ServerState: Disconnecting, prev ServerState: Offline
+2024-10-27T18:47:43.5220466+08:00	INFO	[MareSynchronos.WebAPI.ApiController]	[0]	Stopping existing connection
+2024-10-27T18:47:43.5244711+08:00	DBUG	[MareSynchronos.WebAPI.ApiController]	[0]	New ServerState: NoSecretKey, prev ServerState: Disconnecting
+2024-10-27T18:47:45.5051451+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 超大小海怪 (HasModelInSlotLoaded)
+2024-10-27T18:47:45.6006683+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 超大小海怪
+2024-10-27T18:47:53.6291625+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 我喜欢你呦 (HasModelInSlotLoaded)
+2024-10-27T18:47:53.7095911+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 我喜欢你呦
+2024-10-27T18:48:00.0422929+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 丛云添 (RenderFlags)
+2024-10-27T18:48:00.2506210+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 星喵 (HasModelInSlotLoaded)
+2024-10-27T18:48:00.3278857+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 星喵
+2024-10-27T18:48:15.9990642+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 我喜欢你呦 (HasModelInSlotLoaded)
+2024-10-27T18:48:16.1017704+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 我喜欢你呦
+2024-10-27T18:48:18.8020817+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 浅羽悠真 (RenderFlags)
+2024-10-27T18:48:18.9423545+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 浅羽悠真
+2024-10-27T18:48:28.0070054+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 龙舞 (HasModelInSlotLoaded)
+2024-10-27T18:48:28.0655370+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 龙舞
+2024-10-27T18:48:31.1984781+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 浅羽悠真 (RenderFlags)
+2024-10-27T18:48:31.3389250+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 浅羽悠真
+2024-10-27T18:48:32.0179805+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 艾爾德利奇 (RenderFlags)
+2024-10-27T18:48:32.1142088+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 艾爾德利奇
+2024-10-27T18:48:39.0184352+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 枪炮玫瑰 (HasModelInSlotLoaded)
+2024-10-27T18:48:39.1278607+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 枪炮玫瑰
+2024-10-27T18:48:46.6049818+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 枪炮玫瑰 (HasModelInSlotLoaded)
+2024-10-27T18:48:46.6409952+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 枪炮玫瑰
+2024-10-27T18:48:51.2279354+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 潘萨斯 (RenderFlags)
+2024-10-27T18:48:51.4031342+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 潘萨斯
+2024-10-27T18:48:55.9896909+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 阿膏膏 (HasModelInSlotLoaded)
+2024-10-27T18:48:56.1785768+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 阿膏膏
+2024-10-27T18:48:57.2539439+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 我喜欢你呦 (HasModelInSlotLoaded)
+2024-10-27T18:48:57.3357712+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 我喜欢你呦
+2024-10-27T18:49:19.5373659+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: START => 浅羽悠真 (RenderFlags)
+2024-10-27T18:49:19.6777071+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Global draw block: END => 浅羽悠真
+2024-10-27T18:49:21.4845496+08:00	DBUG	[Microsoft.Extensions.Hosting.Internal.Host]	[Stopping]	Hosting stopping
+2024-10-27T18:49:21.4851396+08:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application is shutting down...
+2024-10-27T18:49:21.4856457+08:00	TRCE	[MareSynchronos.MarePlugin]	[0]	Unsubscribing from all for MarePlugin (MareSynchronos.MarePlugin)
+2024-10-27T18:49:21.4866922+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	MarePlugin unsubscribed from DalamudLoginMessage
+2024-10-27T18:49:21.4866986+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	MarePlugin unsubscribed from DalamudLogoutMessage
+2024-10-27T18:49:21.4867042+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	MarePlugin unsubscribed from SwitchToMainUiMessage
+2024-10-27T18:49:21.4869299+08:00	DBUG	[MareSynchronos.MarePlugin]	[0]	Client logout
+2024-10-27T18:49:21.4884971+08:00	TRCE	[MareSynchronos.Services.UiService]	[0]	Disposing UiService (MareSynchronos.Services.UiService)
+2024-10-27T18:49:21.4885029+08:00	TRCE	[MareSynchronos.Services.UiService]	[0]	Unsubscribing from all for UiService (MareSynchronos.Services.UiService)
+2024-10-27T18:49:21.4885155+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	UiService unsubscribed from ProfileOpenStandaloneMessage
+2024-10-27T18:49:21.4885174+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	UiService unsubscribed from OpenSyncshellAdminPanel
+2024-10-27T18:49:21.4885199+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	UiService unsubscribed from OpenPermissionWindow
+2024-10-27T18:49:21.4885216+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	UiService unsubscribed from RemoveWindowMessage
+2024-10-27T18:49:21.4885264+08:00	TRCE	[MareSynchronos.Services.UiService]	[0]	Disposing UiService
+2024-10-27T18:49:21.4888212+08:00	TRCE	[MareSynchronos.UI.Components.Popup.PopupHandler]	[0]	Disposing MareSynchronos.UI.Components.Popup.PopupHandler
+2024-10-27T18:49:21.4888316+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PopupHandler unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4888350+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PopupHandler unsubscribed from OpenBanUserPopupMessage
+2024-10-27T18:49:21.4888373+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PopupHandler unsubscribed from OpenCensusPopupMessage
+2024-10-27T18:49:21.4889123+08:00	TRCE	[MareSynchronos.UI.EditProfileUi]	[0]	Disposing MareSynchronos.UI.EditProfileUi
+2024-10-27T18:49:21.4889182+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	EditProfileUi unsubscribed from DisconnectedMessage
+2024-10-27T18:49:21.4889211+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	EditProfileUi unsubscribed from GposeStartMessage
+2024-10-27T18:49:21.4889224+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	EditProfileUi unsubscribed from GposeEndMessage
+2024-10-27T18:49:21.4889249+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	EditProfileUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4889273+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	EditProfileUi unsubscribed from ClearProfileDataMessage
+2024-10-27T18:49:21.4889323+08:00	TRCE	[MareSynchronos.UI.EventViewerUI]	[0]	Disposing MareSynchronos.UI.EventViewerUI
+2024-10-27T18:49:21.4889355+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	EventViewerUI unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4889408+08:00	TRCE	[MareSynchronos.UI.CreateSyncshellUI]	[0]	Disposing MareSynchronos.UI.CreateSyncshellUI
+2024-10-27T18:49:21.4889424+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CreateSyncshellUI unsubscribed from DisconnectedMessage
+2024-10-27T18:49:21.4889452+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CreateSyncshellUI unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4889497+08:00	TRCE	[MareSynchronos.UI.JoinSyncshellUI]	[0]	Disposing MareSynchronos.UI.JoinSyncshellUI
+2024-10-27T18:49:21.4889513+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	JoinSyncshellUI unsubscribed from DisconnectedMessage
+2024-10-27T18:49:21.4889534+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	JoinSyncshellUI unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4890666+08:00	TRCE	[MareSynchronos.UI.DataAnalysisUi]	[0]	Disposing MareSynchronos.UI.DataAnalysisUi
+2024-10-27T18:49:21.4890737+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DataAnalysisUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4890786+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DataAnalysisUi unsubscribed from CharacterDataAnalyzedMessage
+2024-10-27T18:49:21.4891846+08:00	TRCE	[MareSynchronos.UI.PopoutProfileUi]	[0]	Disposing MareSynchronos.UI.PopoutProfileUi
+2024-10-27T18:49:21.4891910+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PopoutProfileUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4891949+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PopoutProfileUi unsubscribed from ProfilePopoutToggle
+2024-10-27T18:49:21.4891965+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PopoutProfileUi unsubscribed from CompactUiChange
+2024-10-27T18:49:21.4892012+08:00	TRCE	[MareSynchronos.UI.DownloadUi]	[0]	Disposing MareSynchronos.UI.DownloadUi
+2024-10-27T18:49:21.4892036+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DownloadUi unsubscribed from GposeStartMessage
+2024-10-27T18:49:21.4892044+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DownloadUi unsubscribed from GposeEndMessage
+2024-10-27T18:49:21.4892062+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DownloadUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4892083+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DownloadUi unsubscribed from DownloadStartedMessage
+2024-10-27T18:49:21.4892105+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DownloadUi unsubscribed from DownloadFinishedMessage
+2024-10-27T18:49:21.4892120+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DownloadUi unsubscribed from PlayerUploadingMessage
+2024-10-27T18:49:21.4892158+08:00	TRCE	[MareSynchronos.UI.IntroUi]	[0]	Disposing MareSynchronos.UI.IntroUi
+2024-10-27T18:49:21.4892187+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IntroUi unsubscribed from SwitchToMainUiMessage
+2024-10-27T18:49:21.4892198+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IntroUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4892213+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IntroUi unsubscribed from SwitchToIntroUiMessage
+2024-10-27T18:49:21.4892256+08:00	TRCE	[MareSynchronos.UI.GposeUi]	[0]	Disposing MareSynchronos.UI.GposeUi
+2024-10-27T18:49:21.4892280+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	GposeUi unsubscribed from GposeStartMessage
+2024-10-27T18:49:21.4892287+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	GposeUi unsubscribed from GposeEndMessage
+2024-10-27T18:49:21.4892303+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	GposeUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4892344+08:00	TRCE	[MareSynchronos.UI.CompactUi]	[0]	Disposing MareSynchronos.UI.CompactUi
+2024-10-27T18:49:21.4892366+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from CutsceneEndMessage
+2024-10-27T18:49:21.4892389+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from SwitchToMainUiMessage
+2024-10-27T18:49:21.4892402+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4892414+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from SwitchToIntroUiMessage
+2024-10-27T18:49:21.4892430+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from CutsceneStartMessage
+2024-10-27T18:49:21.4892442+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from DownloadStartedMessage
+2024-10-27T18:49:21.4892458+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from DownloadFinishedMessage
+2024-10-27T18:49:21.4892471+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CompactUi unsubscribed from RefreshUiMessage
+2024-10-27T18:49:21.4892514+08:00	TRCE	[MareSynchronos.UI.SettingsUi]	[0]	Disposing MareSynchronos.UI.SettingsUi
+2024-10-27T18:49:21.4892531+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from CutsceneEndMessage
+2024-10-27T18:49:21.4892553+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from UiToggleMessage
+2024-10-27T18:49:21.4892566+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from OpenSettingsUiMessage
+2024-10-27T18:49:21.4892579+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from SwitchToIntroUiMessage
+2024-10-27T18:49:21.4892587+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from CutsceneStartMessage
+2024-10-27T18:49:21.4892600+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from CharacterDataCreatedMessage
+2024-10-27T18:49:21.4892607+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from DownloadStartedMessage
+2024-10-27T18:49:21.4892615+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	SettingsUi unsubscribed from DownloadFinishedMessage
+2024-10-27T18:49:21.4893526+08:00	TRCE	[MareSynchronos.UI.UiSharedService]	[0]	Disposing UiSharedService (MareSynchronos.UI.UiSharedService)
+2024-10-27T18:49:21.4893562+08:00	TRCE	[MareSynchronos.UI.UiSharedService]	[0]	Unsubscribing from all for UiSharedService (MareSynchronos.UI.UiSharedService)
+2024-10-27T18:49:21.4893590+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	UiSharedService unsubscribed from DelayedFrameworkUpdateMessage
+2024-10-27T18:49:21.4908542+08:00	TRCE	[MareSynchronos.FileCache.CacheMonitor]	[0]	Disposing CacheMonitor (MareSynchronos.FileCache.CacheMonitor)
+2024-10-27T18:49:21.4908629+08:00	TRCE	[MareSynchronos.FileCache.CacheMonitor]	[0]	Unsubscribing from all for CacheMonitor (MareSynchronos.FileCache.CacheMonitor)
+2024-10-27T18:49:21.4908708+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CacheMonitor unsubscribed from DalamudLoginMessage
+2024-10-27T18:49:21.4908784+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CacheMonitor unsubscribed from PenumbraInitializedMessage
+2024-10-27T18:49:21.4908804+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CacheMonitor unsubscribed from HaltScanMessage
+2024-10-27T18:49:21.4908831+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CacheMonitor unsubscribed from ResumeScanMessage
+2024-10-27T18:49:21.4908849+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	CacheMonitor unsubscribed from PenumbraDirectoryChangedMessage
+2024-10-27T18:49:21.4913577+08:00	DBUG	[MareSynchronos.MarePlugin]	[0]	Halting MarePlugin
+2024-10-27T18:49:21.4916217+08:00	DBUG	[MareSynchronos.Interop.Ipc.IpcProvider]	[0]	Stopping IpcProvider Service
+2024-10-27T18:49:21.4916406+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IpcProvider unsubscribed from GameObjectHandlerCreatedMessage
+2024-10-27T18:49:21.4916437+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IpcProvider unsubscribed from GameObjectHandlerDestroyedMessage
+2024-10-27T18:49:21.4966999+08:00	TRCE	[MareSynchronos.Services.DalamudUtilService]	[0]	Stopping MareSynchronos.Services.DalamudUtilService
+2024-10-27T18:49:21.4967187+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	DalamudUtilService unsubscribed from TargetPairMessage
+2024-10-27T18:49:21.5006327+08:00	DBUG	[Microsoft.Extensions.Hosting.Internal.Host]	[Stopped]	Hosting stopped
+2024-10-27T18:49:21.5057213+08:00	TRCE	[MareSynchronos.WebAPI.Files.FileUploadManager]	[0]	Disposing FileUploadManager (MareSynchronos.WebAPI.Files.FileUploadManager)
+2024-10-27T18:49:21.5057354+08:00	TRCE	[MareSynchronos.WebAPI.Files.FileUploadManager]	[0]	Unsubscribing from all for FileUploadManager (MareSynchronos.WebAPI.Files.FileUploadManager)
+2024-10-27T18:49:21.5057505+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	FileUploadManager unsubscribed from DisconnectedMessage
+2024-10-27T18:49:21.5079206+08:00	TRCE	[MareSynchronos.PlayerData.Export.MareCharaFileManager]	[0]	Disposing MareCharaFileManager (MareSynchronos.PlayerData.Export.MareCharaFileManager)
+2024-10-27T18:49:21.5079289+08:00	TRCE	[MareSynchronos.PlayerData.Export.MareCharaFileManager]	[0]	Unsubscribing from all for MareCharaFileManager (MareSynchronos.PlayerData.Export.MareCharaFileManager)
+2024-10-27T18:49:21.5079380+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	MareCharaFileManager unsubscribed from GposeStartMessage
+2024-10-27T18:49:21.5079394+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	MareCharaFileManager unsubscribed from GposeEndMessage
+2024-10-27T18:49:21.5084433+08:00	TRCE	[MareSynchronos.WebAPI.ApiController]	[0]	Disposing ApiController (MareSynchronos.WebAPI.ApiController)
+2024-10-27T18:49:21.5084479+08:00	TRCE	[MareSynchronos.WebAPI.ApiController]	[0]	Unsubscribing from all for ApiController (MareSynchronos.WebAPI.ApiController)
+2024-10-27T18:49:21.5084517+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from DalamudLoginMessage
+2024-10-27T18:49:21.5084534+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from DalamudLogoutMessage
+2024-10-27T18:49:21.5084569+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from HubClosedMessage
+2024-10-27T18:49:21.5084587+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from HubReconnectedMessage
+2024-10-27T18:49:21.5084608+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from HubReconnectingMessage
+2024-10-27T18:49:21.5084623+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from CyclePauseMessage
+2024-10-27T18:49:21.5084638+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from CensusUpdateMessage
+2024-10-27T18:49:21.5084651+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	ApiController unsubscribed from PauseMessage
+2024-10-27T18:49:21.5086396+08:00	TRCE	[MareSynchronos.PlayerData.Pairs.PairManager]	[0]	Disposing PairManager (MareSynchronos.PlayerData.Pairs.PairManager)
+2024-10-27T18:49:21.5086437+08:00	TRCE	[MareSynchronos.PlayerData.Pairs.PairManager]	[0]	Unsubscribing from all for PairManager (MareSynchronos.PlayerData.Pairs.PairManager)
+2024-10-27T18:49:21.5086469+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PairManager unsubscribed from DisconnectedMessage
+2024-10-27T18:49:21.5086485+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	PairManager unsubscribed from CutsceneEndMessage
+2024-10-27T18:49:21.5099280+08:00	DBUG	[MareSynchronos.PlayerData.Pairs.PairManager]	[0]	Disposing all Pairs
+2024-10-27T18:49:21.5100244+08:00	DBUG	[MareSynchronos.WebAPI.ApiController]	[0]	New ServerState: Disconnecting, prev ServerState: NoSecretKey
+2024-10-27T18:49:21.5100464+08:00	INFO	[MareSynchronos.WebAPI.ApiController]	[0]	Stopping existing connection
+2024-10-27T18:49:21.5100490+08:00	DBUG	[MareSynchronos.WebAPI.ApiController]	[0]	New ServerState: Disconnected, prev ServerState: Disconnecting
+2024-10-27T18:49:21.5142957+08:00	TRCE	[MareSynchronos.WebAPI.Files.FileTransferOrchestrator]	[0]	Disposing FileTransferOrchestrator (MareSynchronos.WebAPI.Files.FileTransferOrchestrator)
+2024-10-27T18:49:21.5143059+08:00	TRCE	[MareSynchronos.WebAPI.Files.FileTransferOrchestrator]	[0]	Unsubscribing from all for FileTransferOrchestrator (MareSynchronos.WebAPI.Files.FileTransferOrchestrator)
+2024-10-27T18:49:21.5143200+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	FileTransferOrchestrator unsubscribed from ConnectedMessage
+2024-10-27T18:49:21.5143216+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	FileTransferOrchestrator unsubscribed from DisconnectedMessage
+2024-10-27T18:49:21.5143240+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	FileTransferOrchestrator unsubscribed from DownloadReadyMessage
+2024-10-27T18:49:21.5148708+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	TokenProvider unsubscribed from DalamudLoginMessage
+2024-10-27T18:49:21.5148756+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	TokenProvider unsubscribed from DalamudLogoutMessage
+2024-10-27T18:49:21.5148989+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcManager]	[0]	Disposing IpcManager (MareSynchronos.Interop.Ipc.IpcManager)
+2024-10-27T18:49:21.5149001+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcManager]	[0]	Unsubscribing from all for IpcManager (MareSynchronos.Interop.Ipc.IpcManager)
+2024-10-27T18:49:21.5149023+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IpcManager unsubscribed from DelayedFrameworkUpdateMessage
+2024-10-27T18:49:21.5157854+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcCallerGlamourer]	[0]	Disposing IpcCallerGlamourer (MareSynchronos.Interop.Ipc.IpcCallerGlamourer)
+2024-10-27T18:49:21.5157912+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcCallerGlamourer]	[0]	Unsubscribing from all for IpcCallerGlamourer (MareSynchronos.Interop.Ipc.IpcCallerGlamourer)
+2024-10-27T18:49:21.5157942+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IpcCallerGlamourer unsubscribed from DalamudLoginMessage
+2024-10-27T18:49:21.5166982+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcCallerPenumbra]	[0]	Disposing IpcCallerPenumbra (MareSynchronos.Interop.Ipc.IpcCallerPenumbra)
+2024-10-27T18:49:21.5167058+08:00	TRCE	[MareSynchronos.Interop.Ipc.IpcCallerPenumbra]	[0]	Unsubscribing from all for IpcCallerPenumbra (MareSynchronos.Interop.Ipc.IpcCallerPenumbra)
+2024-10-27T18:49:21.5167140+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IpcCallerPenumbra unsubscribed from PenumbraRedrawCharacterMessage
+2024-10-27T18:49:21.5167156+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	IpcCallerPenumbra unsubscribed from DalamudLoginMessage
+2024-10-27T18:49:21.5181663+08:00	TRCE	[MareSynchronos.Services.NotificationService]	[0]	Disposing NotificationService (MareSynchronos.Services.NotificationService)
+2024-10-27T18:49:21.5181736+08:00	TRCE	[MareSynchronos.Services.NotificationService]	[0]	Unsubscribing from all for NotificationService (MareSynchronos.Services.NotificationService)
+2024-10-27T18:49:21.5181837+08:00	DBUG	[MareSynchronos.Services.Mediator.MareMediator]	[0]	NotificationService unsubscribed from NotificationMessage
+2024-10-27T18:49:21.5181902+08:00	TRCE	[MareSynchronos.Services.NotificationService]	[0]	Disposing NotificationService (MareSynchronos.Services.NotificationService)
+2024-10-27T18:49:21.5181909+08:00	TRCE	[MareSynchronos.Services.NotificationService]	[0]	Unsubscribing from all for NotificationService (MareSynchronos.Services.NotificationService)

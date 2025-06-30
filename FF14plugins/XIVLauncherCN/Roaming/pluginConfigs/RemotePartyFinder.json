@@ -1,0 +1,19 @@
+{
+  "$type": "RemotePartyFinder.Configuration, RemotePartyFinder",
+  "AdvancedSettingsEnabled": false,
+  "UploadUrls": [
+    {
+      "$type": "RemotePartyFinder.UploadUrl, RemotePartyFinder",
+      "Url": "https://xivpf.com/contribute/multiple",
+      "IsDefault": true,
+      "IsEnabled": true
+    },
+    {
+      "$type": "RemotePartyFinder.UploadUrl, RemotePartyFinder",
+      "Url": "https://findingway.io/receiver",
+      "IsDefault": true,
+      "IsEnabled": true
+    }
+  ],
+  "Version": 1
+}

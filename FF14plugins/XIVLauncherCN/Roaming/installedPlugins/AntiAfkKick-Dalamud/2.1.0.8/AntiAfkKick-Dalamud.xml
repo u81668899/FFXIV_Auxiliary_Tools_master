@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AntiAfkKick-Dalamud</name>
+    </assembly>
+    <members>
+        <member name="T:AntiAfkKick.Native.IdleTimeFinder">
+            <summary>
+            Helps to find the idle time, (in milliseconds) spent since the last user input
+            </summary>
+        </member>
+        <member name="M:AntiAfkKick.Native.IdleTimeFinder.GetLastInputTime">
+            <summary>
+            Get the Last input time in milliseconds
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,4 @@
+--- @class InventoryContainerWrapper
+--- @field Count number
+--- @field FreeSlots number
+--- @field Items table<InventoryItemWrapper>

@@ -1,0 +1,1657 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XIVConfigUI</name>
+    </assembly>
+    <members>
+        <member name="T:XIVConfigUI.Attributes.ChoicesAttribute">
+            <summary>
+            The choices of the string.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.ChoicesAttribute.Lazy">
+            <summary>
+            Use lazy to let it not copy it every time.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.ChoicesAttribute.Choices">
+            <summary>
+            The choices.
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.ChoicesAttribute.Pair">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+            <param name="Show"></param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ChoicesAttribute.Pair.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+            <param name="Show"></param>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.ChoicesAttribute.Pair.Value">
+            <summary></summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.ChoicesAttribute.Pair.Show">
+            <summary></summary>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ChoicesAttribute.Pair.op_Implicit(System.String)~XIVConfigUI.Attributes.ChoicesAttribute.Pair">
+            <summary>
+            Convert to pair from string.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ChoicesAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ChoicesAttribute.GetChoices">
+            <summary>
+            How to get the choices.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.CommandAttribute">
+            <summary>
+            The sub command for some config class.
+            </summary>
+            <param name="subCommand"><see cref="P:XIVConfigUI.Attributes.CommandAttribute.SubCommand"/></param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.CommandAttribute.#ctor(System.String)">
+            <summary>
+            The sub command for some config class.
+            </summary>
+            <param name="subCommand"><see cref="P:XIVConfigUI.Attributes.CommandAttribute.SubCommand"/></param>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.CommandAttribute.SubCommand">
+            <summary>
+            The sub command
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.IntegerChoicesAttribute">
+            <summary>
+            Get the Integer Choices.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.IntegerChoicesAttribute.GetEnumType(System.Object)">
+            <summary>
+            Get Enum
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.LinkDescriptionAttribute">
+            <summary>
+            The link to a image or web about your rotation.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.LinkDescriptionAttribute.LinkDescription">
+            <summary>
+            The description.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.LinkDescriptionAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Constructer.
+            </summary>
+            <param name="url"></param>
+            <param name="description"></param>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.LinkDescription">
+            <summary>
+            Link description itself.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.LinkDescription.Description">
+            <summary>
+            Description.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.LinkDescription.Url">
+            <summary>
+            Url.
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.ListUIAttribute">
+            <summary>
+            The list item attribute.
+            </summary>
+            <param name="icon">the icon id.</param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ListUIAttribute.#ctor(System.UInt32)">
+            <summary>
+            The list item attribute.
+            </summary>
+            <param name="icon">the icon id.</param>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.ListUIAttribute.Description">
+            <summary>
+            Description about this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.ListUIAttribute.NewlineWhenInheritance">
+            <summary>
+            Should this drawing has the new line.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ListUIAttribute.DrawIndex(System.Object,System.Int32)">
+            <summary>
+            Draw the index.
+            </summary>
+            <param name="obj"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ListUIAttribute.OnClick(System.Object)">
+            <summary>
+            When it clicked.
+            </summary>
+            <param name="obj">the instance of the class.</param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ListUIAttribute.OnTick(System.Object)">
+            <summary>
+            On the <see cref="T:ImGuiNET.ImGui"/> ticks.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ListUIAttribute.GetIcon(System.Object)">
+            <summary>
+            Get the icon
+            </summary>
+            <param name="obj">the instance of the class.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.ListUIAttribute.GetDescription(System.Object)">
+            <summary>
+            Get Description.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.RangeAttribute">
+            <summary>
+            The range of the configs.
+            </summary>
+            <param name="minValue">min value</param>
+            <param name="maxValue">max value</param>
+            <param name="unitType">the unit type</param>
+            <param name="speed">the speed.</param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.RangeAttribute.#ctor(System.Single,System.Single,XIVConfigUI.Attributes.ConfigUnitType,System.Single)">
+            <summary>
+            The range of the configs.
+            </summary>
+            <param name="minValue">min value</param>
+            <param name="maxValue">max value</param>
+            <param name="unitType">the unit type</param>
+            <param name="speed">the speed.</param>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.RangeAttribute.MinValue">
+            <summary>
+            Min Value
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.RangeAttribute.MaxValue">
+            <summary>
+            Max Value
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.RangeAttribute.Speed">
+            <summary>
+            Speed
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.RangeAttribute.UnitType">
+            <summary>
+            The unit type.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.RangeAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.ConfigUnitType">
+            <summary>
+            The config unit type.
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.ConfigUnitType.None">
+            <summary>
+            None unit type.
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.ConfigUnitType.Seconds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.ConfigUnitType.Degree">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.ConfigUnitType.Yalms">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.ConfigUnitType.Percent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.ConfigUnitType.Pixels">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.UIAttribute">
+            <summary>
+            The attribute for the ui configs.
+            </summary>
+            <param name="name"></param>
+            <param name="filters">The filters</param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.UIAttribute.#ctor(System.String,System.Int32[])">
+            <summary>
+            The attribute for the ui configs.
+            </summary>
+            <param name="name"></param>
+            <param name="filters">The filters</param>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Name">
+            <summary>
+            The name of this config.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Description">
+            <summary>
+            The description about this ui item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Parent">
+            <summary>
+            The parent of this ui item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Filters">
+            <summary>
+            The filter to get this ui item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Order">
+            <summary>
+            The order of this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Section">
+            <summary>
+            The section of this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UIAttribute.Action">
+            <summary>
+            The action id 
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.UITypeAttribute">
+            <summary>
+            The ui type attribute
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:XIVConfigUI.Attributes.UITypeAttribute.#ctor(XIVConfigUI.Attributes.UiType)">
+            <summary>
+            The ui type attribute
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="P:XIVConfigUI.Attributes.UITypeAttribute.Type">
+            <summary>
+            tye type.
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.Attributes.UiType">
+            <summary>
+            Some special type
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.UiType.Color">
+            <summary/>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.UiType.Padding">
+            <summary/>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.UiType.Range">
+            <summary/>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.UiType.OneLine">
+            <summary/>
+        </member>
+        <member name="F:XIVConfigUI.Attributes.UiType.Multiline">
+            <summary/>
+        </member>
+        <member name="T:XIVConfigUI.CollapsingHeaderGroup">
+            <summary>
+            The collapsing header group for simplify the drawing.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.CollapsingHeaderGroup.#ctor">
+            <summary>
+            The collapsing header group for simplify the drawing.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.CollapsingHeaderGroup.HeaderSize">
+            <summary>
+            The size of the header.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.CollapsingHeaderGroup.#ctor(System.Collections.Generic.Dictionary{System.Func{System.String},System.Action})">
+            <summary>
+            
+            </summary>
+            <param name="headers"></param>
+        </member>
+        <member name="M:XIVConfigUI.CollapsingHeaderGroup.AddCollapsingHeader(System.Func{System.String},System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:XIVConfigUI.CollapsingHeaderGroup.RemoveCollapsingHeader(System.Func{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:XIVConfigUI.CollapsingHeaderGroup.ClearCollapsingHeader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.CollapsingHeaderGroup.Draw(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.ConditionConfigs.ConditionDrawer">
+            <summary>
+            The drawer for condition style.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConditionConfigs.ConditionDrawer.CustomDrawings">
+            <summary>
+            The custom way to draw a condition.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConditionConfigs.ConditionDrawer.CustomListUIs">
+            <summary>
+            The custom list item ui list.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConditionConfigs.ConditionDrawer.IconSize">
+            <summary>
+            The size for condition icon.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.ConditionConfigs.ConditionDrawer.Draw(System.Object)">
+            <summary>
+            The main method to draw a condition.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="T:XIVConfigUI.ConditionConfigs.ICondition">
+            <summary>
+            For the list item which wanna show icon.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConditionConfigs.ICondition.State">
+            <summary>
+            The state of this condition.
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.ConfigWindow">
+            <summary>
+            The config window.
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.ConfigWindow._searchResults">
+            <summary>
+            The searching result.
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.ConfigWindow._activeTabIndex">
+            <summary>
+            The active tab index.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Scale">
+            <summary>
+            The scale in the imgui.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.MinColumnWidth">
+            <summary>
+            The min column Width in sidebar.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.MaxIconWidth">
+            <summary>
+            The max icon width in sidebar.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.DiscordServerID">
+            <summary>
+            The discord server id.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.DiscordServerInviteLink">
+            <summary>
+            The discord server invite id.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.ShowDonate">
+            <summary>
+            Show the donate link.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Kofi">
+            <summary>
+            Your kofi page.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Patreon">
+            <summary>
+            Your patreon page.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Crowdin">
+            <summary>
+            Your project name in crowdin.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.ActiveItem">
+            <summary>
+            The active item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Collection">
+            <summary>
+            The searchable collection.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindow.Searchables">
+            <summary>
+            The all searchables for searching.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.#ctor(System.Reflection.AssemblyName,ImGuiNET.ImGuiWindowFlags)">
+            <summary>
+            Creator with assembly name.
+            </summary>
+            <param name="name"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.#ctor(System.String,ImGuiNET.ImGuiWindowFlags)">
+            <summary>
+            Create a config window.
+            </summary>
+            <param name="name"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.GetItems">
+            <summary>
+            Get all items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.ClearItems">
+            <summary>
+            Clear all items.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.Draw">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.DrawHeader(System.Single,System.Single)">
+            <summary>
+            Render the header
+            </summary>
+            <param name="wholeWidth"></param>
+            <param name="iconSize"></param>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.GetLogo(Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap@)">
+            <summary>
+            The way to get the logo.
+            </summary>
+            <param name="texture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.DrawSubHeader(System.Single)">
+            <summary>
+            Draw the sub header.
+            </summary>
+            <param name="wholeWidth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindow.DrawAbout">
+            <summary>
+            The way to draw the about.
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.ConfigWindowItem">
+            <summary>
+            The config items.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindowItem.IsSkip">
+            <summary>
+            Skip for drawing in the list.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindowItem.Name">
+            <summary>
+            The name of it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindowItem.Description">
+            <summary>
+            The description.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.ConfigWindowItem.Link">
+            <summary>
+            For the case if this is a link button
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindowItem.GetIcon(Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap@)">
+            <summary>
+            The way to get the icon.
+            </summary>
+            <param name="texture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindowItem.Draw(XIVConfigUI.ConfigWindow)">
+            <summary>
+            Draw on the body.
+            </summary>
+            <param name="window"></param>
+        </member>
+        <member name="M:XIVConfigUI.ConfigWindowItem.OnClick">
+            <summary>
+            On the item was clicked.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.GeneralJsonConverter">
+            <summary>
+            A general Converter.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.GeneralJsonConverter.Instance">
+            <summary>
+            The instance.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.GeneralJsonConverter.CanConvert(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="P:XIVConfigUI.GeneralJsonConverter.CanWrite">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.GeneralJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.GeneralJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.ImageLoader">
+            <summary>
+            A image loader.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.ImageLoader.GetTextureAction(System.UInt32,Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap@)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="texture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImageLoader.GetActionIcon(Lumina.Excel.GeneratedSheets.Action)">
+            <summary>
+            Get Action Icon.
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImageLoader.GetTexture(System.UInt32,Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap@,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="icon"></param>
+            <param name="texture"></param>
+            <param name="default"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImageLoader.GetTexture(Dalamud.Interface.Textures.GameIconLookup,Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap@)">
+            <summary>
+            
+            </summary>
+            <param name="icon"></param>
+            <param name="texture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImageLoader.GetTexture(System.String,Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap@)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="texture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.FontSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.FontSize.First">
+            <summary>
+            72
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.FontSize.Second">
+            <summary>
+            48
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.FontSize.Third">
+            <summary>
+            32
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.FontSize.Fourth">
+            <summary>
+            24
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.FontSize.Fifth">
+            <summary>
+            18
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.FontSize.Sixth">
+            <summary>
+            12
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.ImGuiHelper">
+            <summary>
+            The class for help.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.GetFont(XIVConfigUI.FontSize,Dalamud.Interface.GameFonts.GameFontFamily)">
+            <summary>
+            
+            </summary>
+            <param name="size"></param>
+            <param name="fontFamily"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.GetFont(System.Single,Dalamud.Interface.GameFonts.GameFontFamily)">
+            <summary>
+            Get the font based on size.
+            </summary>
+            <param name="size"></param>
+            <param name="fontFamily"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.PrepareGroup(System.String,System.String,System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="command"></param>
+            <param name="reset"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DrawHotKeysPopup(System.String,System.String,System.ValueTuple{System.String,System.Action,System.String[]}[])">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="command"></param>
+            <param name="pairs"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.ReactPopup(System.String,System.String,System.Action,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="command"></param>
+            <param name="reset"></param>
+            <param name="showHand"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.ExecuteHotKeysPopup(System.String,System.String,System.String,System.Boolean,System.ValueTuple{System.Action,Dalamud.Game.ClientState.Keys.VirtualKey[]}[])">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="command"></param>
+            <param name="tooltip"></param>
+            <param name="showHand"></param>
+            <param name="pairs"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SilenceImageButton(System.IntPtr,System.Numerics.Vector2,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="size"></param>
+            <param name="selected"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SilenceImageButton(System.IntPtr,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="size"></param>
+            <param name="uv0"></param>
+            <param name="uv1"></param>
+            <param name="selected"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SilenceImageButton(System.IntPtr,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.UInt32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="size"></param>
+            <param name="uv0"></param>
+            <param name="uv1"></param>
+            <param name="buttonColor"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.TextureButton(Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap,System.Single,System.Single,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="texture"></param>
+            <param name="wholeWidth"></param>
+            <param name="maxWidth"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DrawItemMiddle(System.Action,System.Single,System.Single,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="drawAction"></param>
+            <param name="wholeWidth"></param>
+            <param name="width"></param>
+            <param name="leftAlign"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.NoPaddingNoColorImageButton(System.IntPtr,System.Numerics.Vector2,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="size"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.NoPaddingNoColorImageButton(System.IntPtr,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="size"></param>
+            <param name="uv0"></param>
+            <param name="uv1"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.NoPaddingImageButton(System.IntPtr,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="size"></param>
+            <param name="uv0"></param>
+            <param name="uv1"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DrawSlotHighlight(ImGuiNET.ImDrawListPtr,System.Numerics.Vector2,System.Single,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="drawList"></param>
+            <param name="position"></param>
+            <param name="size"></param>
+            <param name="lightCol"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DrawActionOverlay(System.Numerics.Vector2,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="cursor"></param>
+            <param name="width"></param>
+            <param name="percent"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.HoveredTooltip(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.HoveredTooltip(System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="act"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.ShowTooltip(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.ShowTooltip(System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="act"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DrawLinkDescription(XIVConfigUI.Attributes.LinkDescription,System.Single,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="link"></param>
+            <param name="wholeWidth"></param>
+            <param name="drawQuestion"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.ToSymbol(XIVConfigUI.Attributes.ConfigUnitType)">
+            <summary>
+            
+            </summary>
+            <param name="unit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SelectableCombo(System.String,System.String[],System.Int32@,System.Nullable{ImGuiNET.ImFontPtr},System.Nullable{System.Numerics.Vector4},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="popUp"></param>
+            <param name="items"></param>
+            <param name="index"></param>
+            <param name="font"></param>
+            <param name="color"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SelectableCombo(System.String,System.Enum@,System.Nullable{ImGuiNET.ImFontPtr},System.Nullable{System.Numerics.Vector4},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="popUp"></param>
+            <param name="enum"></param>
+            <param name="font"></param>
+            <param name="color"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SelectableCombo(System.String,System.String,System.String[],System.Collections.Generic.List{System.Int32}@,System.Nullable{ImGuiNET.ImFontPtr},System.Nullable{System.Numerics.Vector4},System.String)">
+            <summary>
+            Selectable combo.
+            </summary>
+            <param name="popUp"></param>
+            <param name="name"></param>
+            <param name="items"></param>
+            <param name="indexes"></param>
+            <param name="font"></param>
+            <param name="color"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SelectableButton(System.String,System.Nullable{ImGuiNET.ImFontPtr},System.Nullable{System.Numerics.Vector4})">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="font"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DragFloat(System.String,System.Single,System.Single@,XIVConfigUI.Attributes.RangeAttribute)">
+            <summary>
+            Drag Float.
+            </summary>
+            <param name="name"></param>
+            <param name="width"></param>
+            <param name="value"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DragInt(System.String,System.Single,System.Int32@,XIVConfigUI.Attributes.RangeAttribute)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="width"></param>
+            <param name="value"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DragFloat2(System.String,System.Single,System.Numerics.Vector2@,XIVConfigUI.Attributes.RangeAttribute)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="width"></param>
+            <param name="value"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DragInt2(System.String,System.Single,XIVConfigUI.Vector2Int@,XIVConfigUI.Attributes.RangeAttribute)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="width"></param>
+            <param name="value"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.DragFloat4(System.String,System.Single,System.Numerics.Vector4@,XIVConfigUI.Attributes.RangeAttribute)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="width"></param>
+            <param name="value"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.SetNextWidthWithName(System.String)">
+            <summary>
+            Set the next item with the string length.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:XIVConfigUI.ImGuiHelper.GetCleanedEnumValues(System.Type)">
+            <summary>
+            Get cleaned named enu.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.JsonHelper">
+            <summary>
+            A general converter for json.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.JsonHelper.SerializeObject(System.Object)">
+            <summary>
+            <see cref="M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object)"/>
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.JsonHelper.DeserializeObject``1(System.String)">
+            <summary>
+            <see cref="M:Newtonsoft.Json.JsonConvert.DeserializeObject``1(System.String)"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.JsonHelper.DeserializeObject(System.String,System.Type)">
+            <summary>
+            <see cref="M:Newtonsoft.Json.JsonConvert.DeserializeObject(System.String)"/>
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.LocalManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:XIVConfigUI.LocalManager.OnLanguageChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.Local(System.Enum,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="enum"></param>
+            <param name="suffix"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.Local(System.Reflection.MemberInfo,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <param name="suffix"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.Local(System.Type,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="suffix"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.LocalUINameDesc(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.LocalUIName(System.Reflection.MemberInfo)">
+            <summary>
+            Get the ui name of the property.
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.LocalUIDesc(System.Reflection.MemberInfo)">
+            <summary>
+            Get the ui description of the property.
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.LocalManager.Local(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="default"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.FilterKey`1">
+            <summary>
+            The filter for drawing configs.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:XIVConfigUI.FilterKey`1.Filter">
+            <summary>
+            The filter.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.FilterKey`1.Before">
+            <summary>
+            Before drawing.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.FilterKey`1.After">
+            <summary>
+            After drawing.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.FilterKey`1.op_Implicit(`0)~XIVConfigUI.FilterKey{`0}">
+            <summary>
+            
+            </summary>
+            <param name="filter"></param>
+        </member>
+        <member name="T:XIVConfigUI.SearchableCollection">
+            <summary>
+            The collections that can be searched.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableCollection.#ctor(System.Object,XIVConfigUI.SearchableConfig)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="searchableConfig"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableCollection.GetGroups``1(XIVConfigUI.FilterKey{``0}[])">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.SearchableCollection.DrawItems(System.Int32)">
+            <summary>
+            Draw the items based on the text filter.
+            </summary>
+            <param name="filter"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableCollection.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.SearchableCollection.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfig">
+            <summary>
+            The config of your serachable
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfig.GeneralDefault">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfig.PropertyNameCreators">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfig.PropertyTypeCreators">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfig.IsPropertyValid(System.Reflection.PropertyInfo)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfig.PropertyInvalidTooltip(System.Reflection.PropertyInfo)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfig.PreNameDrawing(System.Reflection.PropertyInfo)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfig.AfterConfigChange(XIVConfigUI.SearchableConfigs.Searchable)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.CheckBoxSearch">
+            <summary>
+            The checkbox item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.CheckBoxSearch.Children">
+            <summary>
+            The children of it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.CheckBoxSearch.ActionId">
+            <summary>
+            The action id to show.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.CheckBoxSearch.AdditionalDraw">
+            <summary>
+            The additional draw of it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.CheckBoxSearch.AlwaysShowChildren">
+            <summary>
+            Should it show the child.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.CheckBoxSearch.Description">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.CheckBoxSearch.#ctor(System.Reflection.PropertyInfo,System.Object,XIVConfigUI.SearchableConfigs.Searchable[])">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+            <param name="children"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.CheckBoxSearch.AddChild(XIVConfigUI.SearchableConfigs.Searchable)">
+            <summary>
+            Add child
+            </summary>
+            <param name="child"></param>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.CheckBoxSearch.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.CheckBoxSearch.DrawChildren">
+            <summary>
+            To draw the children.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.CheckBoxSearch.DrawMiddle">
+            <summary>
+            Draw the things in middle.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.CheckBoxSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.ColorEditSearch">
+            <summary>
+            The color item.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.ColorEditSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            The color item.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.ColorEditSearch.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.ColorEditSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.DragFloatRangeSearch">
+            <summary>
+            The drag float thing.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragFloatRangeSearch.Range">
+            <summary/>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragFloatRangeSearch.Value">
+            <summary>
+            Value.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragFloatRangeSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragFloatRangeSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragFloatRangeSearch.TooltipAdditional">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.DragFloatSearch">
+            <summary>
+            The drag float thing.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragFloatSearch.Range">
+            <summary/>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragFloatSearch.Value">
+            <summary>
+            Value.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragFloatSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragFloatSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragFloatSearch.TooltipAdditional">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.DragIntRangeSearch">
+            <summary>
+            The drag int.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragIntRangeSearch.Range">
+            <summary/>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragIntRangeSearch.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragIntRangeSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragIntRangeSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragIntRangeSearch.TooltipAdditional">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.DragIntSearch">
+            <summary>
+            The drag int thing.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragIntSearch.Range">
+            <summary/>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.DragIntSearch.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragIntSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.DragIntSearch.DrawMain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.EnumSearch">
+            <summary>
+            The config for the enum.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.EnumSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            The config for the enum.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.EnumSearch.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.EnumSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.PaddingSearch">
+            <summary>
+            The padding search.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.PaddingSearch.Range">
+            <summary/>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.PaddingSearch.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.PaddingSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.PaddingSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.PaddingSearch.TooltipAdditional">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.Searchable">
+            <summary>
+            The searchable item
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.SearchableConfigs.Searchable._obj">
+            <summary/>
+        </member>
+        <member name="F:XIVConfigUI.SearchableConfigs.Searchable._default">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.SearchableConfigs.Searchable._property">
+            <summary>
+            The property.
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.SearchableConfigs.Searchable.DRAG_WIDTH">
+            <summary>
+            The width of the drag.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Scale">
+            <summary>
+            The scale of it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Parent">
+            <summary>
+            The parent item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.SearchingKeys">
+            <summary>
+            The way to search it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Name">
+            <summary>
+            The name of it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Description">
+            <summary>
+            The description about this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Command">
+            <summary>
+            The command of this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Tooltips">
+            <summary>
+            The tooltips of it.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.ID">
+            <summary>
+            The string id of this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.Color">
+            <summary>
+            The color of this item.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.Searchable.ShowInChild">
+            <summary>
+            Should this be shown in the child.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.Draw">
+            <summary>
+            To draw it.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.DrawMain">
+            <summary>
+            The way to draw it.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.ShowTooltip(System.Boolean)">
+            <summary>
+            To show the tool tips.
+            </summary>
+            <param name="showHand"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.TooltipAdditional">
+            <summary>
+            The extra tooltips.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.ResetToDefault">
+            <summary>
+            The way to reset to the default.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.DrawName">
+            <summary>
+            Draw the name of it.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.OnCommand(System.String)">
+            <summary>
+            On the string value to change this value.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.Searchable.Similarity(System.String,System.String)">
+            <summary>
+            The similarity of the two texts.
+            </summary>
+            <param name="text"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XIVConfigUI.SearchableConfigs.StringSearch">
+            <summary>
+            The text item.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.StringSearch.#ctor(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            The text item.
+            </summary>
+            <param name="property"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="P:XIVConfigUI.SearchableConfigs.StringSearch.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.SearchableConfigs.StringSearch.DrawMain">
+            <inheritdoc/>
+        </member>
+        <member name="T:XIVConfigUI.Vector2Int">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:XIVConfigUI.Vector2Int.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="F:XIVConfigUI.Vector2Int.X">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIVConfigUI.Vector2Int.Y">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIVConfigUI.XIVConfigUIMain">
+            <summary>
+            The major class.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.XIVConfigUIMain.ShowTooltip">
+            <summary>
+            Control if show tooltips.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.XIVConfigUIMain.Punchline">
+            <summary>
+            The punchline of this plugin.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.XIVConfigUIMain.Description">
+            <summary>
+            The description of this plugin.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.XIVConfigUIMain.IconUrl">
+            <summary>
+            The icon of this plugin.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.XIVConfigUIMain.UserName">
+            <summary>
+            The user name in github.
+            </summary>
+        </member>
+        <member name="P:XIVConfigUI.XIVConfigUIMain.RepoName">
+            <summary>
+            The repo name in github.
+            </summary>
+        </member>
+        <member name="M:XIVConfigUI.XIVConfigUIMain.Init(Dalamud.Plugin.IDalamudPluginInterface,System.String,System.String,System.Action{System.String},System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="pluginInterface"></param>
+            <param name="command">the command for changing config</param>
+            <param name="descriptionAboutCommand"></param>
+            <param name="onCommand"></param>
+            <param name="intiTypes">the types for init the local.</param>
+        </member>
+        <member name="M:XIVConfigUI.XIVConfigUIMain.Dispose">
+            <summary>
+            Don't forget to dispose this!
+            </summary>
+        </member>
+    </members>
+</doc>

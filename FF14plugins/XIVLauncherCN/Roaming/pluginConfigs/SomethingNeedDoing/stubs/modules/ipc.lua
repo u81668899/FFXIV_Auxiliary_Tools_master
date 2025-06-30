@@ -1,0 +1,252 @@
+--- @class Root
+--- @field IsInstalled fun(name: string): boolean
+--- @field GetAvailablePlugins fun(): object
+
+--- @class InventoryTools
+--- @field InventoryCountByType fun(inventoryTypeId: number, contentId: number?): number
+--- @field InventoryCountByTypes fun(inventoryTypeIds: object, contentId: number?): number
+--- @field ItemCount fun(itemId: number, contentId: number, inventoryTypeId: number): number
+--- @field ItemCountHQ fun(itemId: number, contentId: number, inventoryTypeId: number): number
+--- @field ItemCountOwned fun(itemId: number, onlyCurrentCharacter: boolean, inventoryTypeIds: object): number
+--- @field EnableUiFilter fun(filterKey: string): boolean
+--- @field DisableUiFilter fun(): boolean
+--- @field ToggleUiFilter fun(filterKey: string): boolean
+--- @field EnableBackgroundFilter fun(filterKey: string): boolean
+--- @field DisableBackgroundFilter fun(): boolean
+--- @field ToggleBackgroundFilter fun(filterKey: string): boolean
+--- @field EnableCraftList fun(filterKey: string): boolean
+--- @field DisableCraftList fun(): boolean
+--- @field ToggleCraftList fun(filterKey: string): boolean
+--- @field AddItemToCraftList fun(filterKey: string, itemId: number, quantity: number): boolean
+--- @field RemoveItemFromCraftList fun(filterKey: string, itemId: number, quantity: number): boolean
+--- @field GetFilterItems fun(filterKey: string): object
+--- @field GetCraftItems fun(filterKey: string): object
+--- @field GetRetrievalItems fun(): object
+--- @field GetCharacterItems fun(contentId: number): object
+--- @field GetCharactersOwnedByActive fun(includeOwner: boolean): object
+--- @field GetCharacterItemsByType fun(contentId: number, inventoryTypeId: number): object
+--- @field ItemAdded fun(itemId: table<number, ItemFlags, number, number>): boolean
+--- @field ItemRemoved fun(itemId: table<number, ItemFlags, number, number>): boolean
+--- @field GetCraftLists fun(): object
+--- @field GetSearchFilters fun(): object
+--- @field AddNewCraftList fun(craftList: string, itemsToAdd: object): string
+--- @field CurrentCharacter fun(): number?
+--- @field RetainerChanged fun(retainerId: number?): boolean
+--- @field IsInitialized fun(): boolean
+
+--- @class ARDiscard
+--- @field GetItemsToDiscard fun(): object
+
+--- @class Artisan
+--- @field GetEnduranceStatus fun(): boolean
+--- @field SetEnduranceStatus fun(enabled: boolean): nil
+--- @field IsListRunning fun(): boolean
+--- @field IsListPaused fun(): boolean
+--- @field SetListPause fun(paused: boolean): nil
+--- @field GetStopRequest fun(): boolean
+--- @field SetStopRequest fun(stop: boolean): nil
+--- @field CraftItem fun(itemId: number, quantity: number): nil
+
+--- @class AutoDuty
+--- @field ListConfig fun(): nil
+--- @field GetConfig fun(key: string): string
+--- @field SetConfig fun(key: string, value: string): nil
+--- @field Run fun(territoryType: number, loops: number, bareMode: boolean): nil
+--- @field Start fun(startFromZero: boolean): nil
+--- @field Stop fun(): nil
+--- @field IsNavigating fun(): boolean?
+--- @field IsLooping fun(): boolean?
+--- @field IsStopped fun(): boolean?
+--- @field ContentHasPath fun(contentId: number): boolean?
+
+--- @class AutoHook
+--- @field SetPluginState fun(enable: boolean): nil
+--- @field SetAutoGigState fun(enable: boolean): nil
+--- @field SetAutoGigSize fun(size: number): nil
+--- @field SetAutoGigSpeed fun(speed: number): nil
+--- @field SetPreset fun(name: string): nil
+--- @field CreateAndSelectAnonymousPreset fun(name: string): nil
+--- @field DeleteSelectedPreset fun(): nil
+--- @field DeleteAllAnonymousPresets fun(): nil
+
+--- @class AutoRetainer
+--- @field GetMultiModeEnabled fun(): boolean
+--- @field SetMultiModeEnabled fun(enabled: boolean): nil
+--- @field IsBusy fun(): boolean
+--- @field GetInventoryFreeSlotCount fun(): number
+--- @field GetEnabledRetainers fun(): object
+--- @field AreAnyRetainersAvailableForCurrentChara fun(): boolean
+--- @field AbortAllTasks fun(): nil
+--- @field DisableAllFunctions fun(): nil
+--- @field EnableMultiMode fun(): nil
+--- @field EnqueueHET fun(onFailure: object): nil
+--- @field CanAutoLogin fun(): boolean
+--- @field Relog fun(charaNameWithWorld: string): boolean
+--- @field GetOptionRetainerSense fun(): boolean
+--- @field SetOptionRetainerSense fun(enabled: boolean): nil
+--- @field GetOptionRetainerSenseThreshold fun(): number
+--- @field SetOptionRetainerSenseThreshold fun(threshold: number): nil
+--- @field GetClosestRetainerVentureSecondsRemaining fun(cid: number): number?
+--- @field EnqueueInitiation fun(): nil
+--- @field GetGCInfo fun(): table?<number, number, Vector3>
+--- @field GetRegisteredCharacters fun(): table<number>
+--- @field GetOfflineCharacterData fun(cid: number): OfflineCharacterDataWrapper
+
+--- @class BossMod
+--- @field Get fun(name: string): string
+--- @field Create fun(name: string, overwrite: boolean): boolean
+--- @field Delete fun(name: string): boolean
+--- @field GetActive fun(): string
+--- @field SetActive fun(name: string): boolean
+--- @field ClearActive fun(): boolean
+--- @field GetForceDisabled fun(): boolean
+--- @field SetForceDisabled fun(): boolean
+--- @field AddTransientStrategy fun(): nil
+--- @field AddTransientStrategyTargetEnemyOID fun(): nil
+
+--- @class Deliveroo
+--- @field IsTurnInRunning fun(): boolean
+
+--- @class Dropbox
+--- @field IsBusy fun(): boolean
+--- @field GetItemQuantity fun(id: number, hq: boolean): number
+--- @field SetItemQuantity fun(id: number, hq: boolean, quantity: number): nil
+--- @field BeginTradingQueue fun(): nil
+--- @field Stop fun(): nil
+
+--- @class Lifestream
+--- @field ExecuteCommand fun(command: string): nil
+--- @field IsBusy fun(): boolean
+--- @field Abort fun(): nil
+--- @field CanVisitSameDC fun(world: string): boolean
+--- @field CanVisitCrossDC fun(world: string): boolean
+--- @field TPAndChangeWorld fun(): nil
+--- @field GetWorldChangeAetheryteByTerritoryType fun(): number?
+--- @field ChangeWorld fun(world: string): boolean
+--- @field ChangeWorldById fun(worldId: number): boolean
+--- @field AethernetTeleport fun(destination: string): boolean
+--- @field AethernetTeleportByPlaceNameId fun(placeNameId: number): boolean
+--- @field AethernetTeleportById fun(aethernetSheetRowId: number): boolean
+--- @field HousingAethernetTeleportById fun(housingAethernetSheetRow: number): boolean
+--- @field AethernetTeleportToFirmament fun(): boolean
+--- @field GetActiveAetheryte fun(): number
+--- @field GetActiveResidentialAetheryte fun(): number
+--- @field Teleport fun(aetheryteId: number, subIndex: number): boolean
+--- @field TeleportToFC fun(): boolean
+--- @field TeleportToHome fun(): boolean
+--- @field TeleportToApartment fun(): boolean
+--- @field GetPlotEntrance fun(territory: number, plot: number): Vector3?
+--- @field EnterApartment fun(enter: boolean): nil
+--- @field EnqueueInnShortcut fun(innIndex: number?): nil
+--- @field EnqueueLocalInnShortcut fun(innIndex: number?): nil
+--- @field CanChangeInstance fun(): boolean
+--- @field GetNumberOfInstances fun(): boolean
+--- @field ChangeInstance fun(number: number): nil
+--- @field GetCurrentInstance fun(): number
+--- @field HasApartment fun(): boolean?
+--- @field HasPrivateHouse fun(): boolean?
+--- @field HasFreeCompanyHouse fun(): boolean?
+--- @field CanMoveToWorkshop fun(): boolean
+--- @field MoveToWorkshop fun(): nil
+--- @field GetRealTerritoryType fun(): number
+
+--- @class vnavmesh
+--- @field IsReady fun(): boolean
+--- @field BuildProgress fun(): number
+--- @field Reload fun(): boolean
+--- @field Rebuild fun(): boolean
+--- @field Pathfind fun(from: Vector3, to: Vector3, fly: boolean): async<table<Vector3>>
+--- @field PathfindAndMoveTo fun(dest: Vector3, fly: boolean): boolean
+--- @field PathfindInProgress fun(): boolean
+--- @field Stop fun(): nil
+--- @field IsRunning fun(): boolean
+--- @field NearestPoint fun(p: Vector3, halfExtentXZ: number, halfExtentY: number): Vector3?
+--- @field PointOnFloor fun(p: Vector3, allowUnlandable: boolean, halfExtentXZ: number): Vector3?
+
+--- @class PandorasBox
+--- @field GetFeatureEnabled fun(featureName: string): boolean?
+--- @field GetConfigEnabled fun(configName: string, configValue: string): boolean?
+--- @field SetFeatureEnabled fun(featureName: string, enabled: boolean): nil
+--- @field SetConfigEnabled fun(configName: string, configValue: string, enabled: boolean): nil
+--- @field PauseFeature fun(featureName: string, duration: number): nil
+
+--- @class Questionable
+--- @field IsRunning fun(): boolean
+--- @field GetCurrentQuestId fun(): string
+--- @field GetCurrentStepData fun(): object
+--- @field IsQuestLocked fun(questId: string): boolean
+--- @field ImportQuestPriority fun(data: string): boolean
+--- @field ClearQuestPriority fun(): boolean
+--- @field AddQuestPriority fun(questId: string): boolean
+--- @field InsertQuestPriority fun(position: number, questId: string): boolean
+--- @field ExportQuestPriority fun(): string
+
+--- @class TextAdvance
+--- @field Stop fun(): nil
+--- @field IsBusy fun(): boolean
+--- @field IsInExternalControl fun(): boolean
+--- @field IsEnabled fun(): boolean
+--- @field IsPaused fun(): boolean
+--- @field GetEnableQuestAccept fun(): boolean
+--- @field GetEnableQuestComplete fun(): boolean
+--- @field GetEnableRewardPick fun(): boolean
+--- @field GetEnableCutsceneEsc fun(): boolean
+--- @field GetEnableCutsceneSkipConfirm fun(): boolean
+--- @field GetEnableRequestHandin fun(): boolean
+--- @field GetEnableRequestFill fun(): boolean
+--- @field GetEnableTalkSkip fun(): boolean
+--- @field GetEnableAutoInteract fun(): boolean
+
+--- @class Tippy
+--- @field RegisterTip fun(text: string): boolean
+--- @field RegisterMessage fun(text: string): boolean
+
+--- @class visland
+--- @field IsRouteRunning fun(): boolean
+--- @field IsRoutePaused fun(): boolean
+--- @field SetRoutePaused fun(paused: boolean): nil
+--- @field StopRoute fun(): nil
+--- @field StartRoute fun(routeName: string, loop: boolean): nil
+
+--- @class WrathCombo
+--- @field RegisterForLeaseWithCallback fun(jobName: string, callbackName: string, callbackData: string): object?
+--- @field GetAutoRotationState fun(): boolean
+--- @field SetAutoRotationState fun(leaseId: object, enabled: boolean): nil
+--- @field IsCurrentJobAutoRotationReady fun(): boolean
+--- @field SetCurrentJobAutoRotationReady fun(leaseId: object): nil
+--- @field ReleaseControl fun(leaseId: object): nil
+--- @field GetAutoRotationConfigState fun(): AutoRotationConfigOption
+--- @field SetAutoRotationConfigState fun(leaseId: object, configOption: AutoRotationConfigOption): nil
+
+--- @class YesAlready
+--- @field IsPluginEnabled fun(): boolean
+--- @field SetPluginEnabled fun(state: boolean): nil
+--- @field IsBotherEnabled fun(name: string): boolean
+--- @field SetBotherEnabled fun(name: string, state: boolean): nil
+--- @field PausePlugin fun(milliseconds: number): nil
+--- @field PauseBother fun(name: string, milliseconds: number): boolean
+
+--- @class IPC
+--- @field Root Root
+--- @field InventoryTools InventoryTools
+--- @field ARDiscard ARDiscard
+--- @field Artisan Artisan
+--- @field AutoDuty AutoDuty
+--- @field AutoHook AutoHook
+--- @field AutoRetainer AutoRetainer
+--- @field BossMod BossMod
+--- @field Deliveroo Deliveroo
+--- @field Dropbox Dropbox
+--- @field Lifestream Lifestream
+--- @field vnavmesh vnavmesh
+--- @field PandorasBox PandorasBox
+--- @field Questionable Questionable
+--- @field TextAdvance TextAdvance
+--- @field Tippy Tippy
+--- @field visland visland
+--- @field WrathCombo WrathCombo
+--- @field YesAlready YesAlready
+
+--- @type IPC
+--- @as IPC
+IPC = {}

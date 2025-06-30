@@ -1,0 +1,73 @@
+{
+  "$type": "AEAssist.PluginConfig, AEAssist",
+  "Version": 0,
+  "Password": "whosyourdaddy",
+  "FFLogsV1Key": "",
+  "LanguageType": 1,
+  "PathfindingUrl": "http://localhost:5000",
+  "PositionBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "BorderBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "FlankBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "BehindBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "HitBox": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "ShowMeleePosHelper": false,
+  "ShowPlayerHitbox": false,
+  "MeleePosChange": false,
+  "ShowPlayerHitbox_BattleOnly": false,
+  "ShowTargetHitbox": false,
+  "ACTLogDir": "",
+  "LogoPath": "",
+  "DisplayShortcut": true,
+  "KeepWindowInSight": true,
+  "MessageChatType": 16
+}

@@ -1,0 +1,460 @@
+{
+  "Version": 2,
+  "Enabled": true,
+  "HideInDuties": true,
+  "HideInQuestEvents": true,
+  "WeeklyTimerConfig": {
+    "TimerEnabled": false,
+    "HideSeconds": false,
+    "UseCustomLabel": false,
+    "CustomLabel": "",
+    "Style": {
+      "ProgressBarNodeStyle": {
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 1
+        },
+        "BarColor": {
+          "X": 0,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "ProgressBarStyleDisable": 0,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 400,
+          "Y": 48
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 616
+      },
+      "ModuleNameStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 4,
+        "TextFlags": 11,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 648,
+        "Position": {
+          "X": 12,
+          "Y": -24
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 616
+      },
+      "TimerTextStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 11,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 648,
+        "Position": {
+          "X": 250,
+          "Y": -22
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 24,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 616
+      },
+      "Position": {
+        "X": 400,
+        "Y": 400
+      },
+      "Size": {
+        "X": 400,
+        "Y": 32
+      },
+      "Scale": {
+        "X": 0.8,
+        "Y": 0.8
+      },
+      "IsVisible": true,
+      "NodeFlags": 16,
+      "Color": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "AddColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "MultiplyColor": {
+        "X": 0.39215687,
+        "Y": 0.39215687,
+        "Z": 0.39215687
+      },
+      "Margin": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "BaseDisable": 618
+    }
+  },
+  "DailyTimerConfig": {
+    "TimerEnabled": false,
+    "HideSeconds": false,
+    "UseCustomLabel": false,
+    "CustomLabel": "",
+    "Style": {
+      "ProgressBarNodeStyle": {
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 1
+        },
+        "BarColor": {
+          "X": 0,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "ProgressBarStyleDisable": 0,
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "X": 400,
+          "Y": 48
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 616
+      },
+      "ModuleNameStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 4,
+        "TextFlags": 11,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 648,
+        "Position": {
+          "X": 12,
+          "Y": -24
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 16,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 616
+      },
+      "TimerTextStyle": {
+        "TextColor": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "TextOutlineColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 1
+        },
+        "BackgroundColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "AlignmentType": 0,
+        "FontType": 0,
+        "TextFlags": 11,
+        "TextFlags2": 0,
+        "FontSize": 24,
+        "LineSpacing": 0,
+        "CharacterSpacing": 0,
+        "TextStyleDisable": 648,
+        "Position": {
+          "X": 250,
+          "Y": -22
+        },
+        "Size": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "IsVisible": true,
+        "NodeFlags": 24,
+        "Color": {
+          "X": 1,
+          "Y": 1,
+          "Z": 1,
+          "W": 1
+        },
+        "AddColor": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "MultiplyColor": {
+          "X": 0.39215687,
+          "Y": 0.39215687,
+          "Z": 0.39215687
+        },
+        "Margin": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "BaseDisable": 616
+      },
+      "Position": {
+        "X": 400,
+        "Y": 475
+      },
+      "Size": {
+        "X": 400,
+        "Y": 32
+      },
+      "Scale": {
+        "X": 0.8,
+        "Y": 0.8
+      },
+      "IsVisible": true,
+      "NodeFlags": 16,
+      "Color": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1,
+        "W": 1
+      },
+      "AddColor": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "MultiplyColor": {
+        "X": 0.39215687,
+        "Y": 0.39215687,
+        "Z": 0.39215687
+      },
+      "Margin": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "W": 0
+      },
+      "BaseDisable": 618
+    }
+  }
+}

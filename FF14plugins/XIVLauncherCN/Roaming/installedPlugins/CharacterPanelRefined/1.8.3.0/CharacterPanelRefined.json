@@ -1,0 +1,50 @@
+{
+  "Disabled": false,
+  "Testing": false,
+  "ScheduledForDeletion": false,
+  "InstalledFromUrl": "OFFICIAL",
+  "WorkingPluginId": "8a44ebc0-abe4-4828-944b-0d60e7f1eb71",
+  "IsThirdParty": false,
+  "EffectiveVersion": "1.8.3.0",
+  "EffectiveApiLevel": 12,
+  "Author": "Kouzukii",
+  "Name": "Character Panel Refined",
+  "Punchline": "Refine the character panel to display only useful information like crit and direct hit chance",
+  "Description": "Character Panel Refined cuts away useless information from the character panel, while adding useful stats like critical hit and direct hit percentages as well as estimates damage output to allow for easier comparison of gear.",
+  "Changelog": null,
+  "Tags": [
+    "character",
+    "stats"
+  ],
+  "CategoryTags": [
+    "ui"
+  ],
+  "IsHide": false,
+  "InternalName": "CharacterPanelRefined",
+  "AssemblyVersion": "1.8.3.0",
+  "TestingAssemblyVersion": null,
+  "IsTestingExclusive": false,
+  "RepoUrl": "https://github.com/Kouzukii/ffxiv-characterstatus-refined",
+  "ApplicableVersion": "any",
+  "MinimumDalamudVersion": null,
+  "DalamudApiLevel": 12,
+  "TestingDalamudApiLevel": null,
+  "DownloadCount": 0,
+  "LastUpdate": 1750751991,
+  "DownloadLinkInstall": "https://gh.atmoomen.top/https://raw.githubusercontent.com/Dalamud-DailyRoutines/PluginDistD17/main/stable/CharacterPanelRefined/latest.zip",
+  "DownloadLinkUpdate": "https://gh.atmoomen.top/https://raw.githubusercontent.com/Dalamud-DailyRoutines/PluginDistD17/main/testing-live/CharacterPanelRefined/latest.zip",
+  "DownloadLinkTesting": "https://gh.atmoomen.top/https://raw.githubusercontent.com/Dalamud-DailyRoutines/PluginDistD17/main/testing-live/CharacterPanelRefined/latest.zip",
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "LoadPriority": 0,
+  "CanUnloadAsync": false,
+  "SupportsProfiles": true,
+  "ImageUrls": [
+    "https://raw.githubusercontent.com/Kouzukii/ffxiv-characterstatus-refined/master/images/image1.png",
+    "https://raw.githubusercontent.com/Kouzukii/ffxiv-characterstatus-refined/master/images/image2.png"
+  ],
+  "IconUrl": "https://raw.githubusercontent.com/Kouzukii/ffxiv-characterstatus-refined/master/images/icon.png",
+  "AcceptsFeedback": true,
+  "FeedbackMessage": null,
+  "_Dip17Channel": "stable"
+}

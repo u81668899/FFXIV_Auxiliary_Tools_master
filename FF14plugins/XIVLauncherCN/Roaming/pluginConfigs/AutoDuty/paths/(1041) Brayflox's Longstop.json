@@ -1,0 +1,167 @@
+{
+  "actions": [
+    {
+      "tag": "None",
+      "name": "ConditionAction",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "ObjectData;2001462;IsTargetable;false\u0026ModifyIndex;4"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 21.82,
+        "Y": 7.1,
+        "Z": 27.4
+      },
+      "arguments": [
+        "1004346"
+      ],
+      "note": "Goblin Pathfinder"
+    },
+    {
+      "tag": "None",
+      "name": "ConditionAction",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "ItemCount;2000521;\u003C;1\u0026ModifyIndex;0"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 105.56,
+        "Y": -0.13,
+        "Z": 12.14
+      },
+      "arguments": [
+        "2001462"
+      ],
+      "note": "Runstop Headgate"
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": 112.59,
+        "Y": -2.44,
+        "Z": -12.91
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 38.689632,
+        "Y": 5.519903,
+        "Z": -103.78054
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "StopForCombat",
+      "position": {
+        "X": 42.73,
+        "Y": 6.98,
+        "Z": -80.07
+      },
+      "arguments": [
+        "false"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -5.17,
+        "Y": 5.74,
+        "Z": -83.51
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -107.99,
+        "Y": -2.38,
+        "Z": -26.81
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -90.04,
+        "Y": 10.93,
+        "Z": -95.78
+      },
+      "arguments": [
+        "2001466"
+      ],
+      "note": "Longstop Gutgate"
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -27.24,
+        "Y": 35.5,
+        "Z": -236.09
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    }
+  ],
+  "meta": {
+    "createdAt": 130,
+    "changelog": [
+      {
+        "version": 161,
+        "change": "Converted to new JSON Structure"
+      },
+      {
+        "version": 163,
+        "change": "Converted to newer JSON Structure"
+      },
+      {
+        "version": 164,
+        "change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "version": 189,
+        "change": "Adjusted tags to string values"
+      }
+    ],
+    "notes": []
+  }
+}

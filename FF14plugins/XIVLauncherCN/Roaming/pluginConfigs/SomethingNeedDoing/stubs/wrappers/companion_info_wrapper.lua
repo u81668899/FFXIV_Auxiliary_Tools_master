@@ -1,0 +1,18 @@
+--- @class CompanionInfoWrapper
+--- @field TimeLeft number
+--- @field BardingHead number
+--- @field BardingChest number
+--- @field BardingFeet number
+--- @field CurrentXP number
+--- @field Rank number
+--- @field Stars number
+--- @field SkillPoints number
+--- @field DefenderLevel number
+--- @field AttackerLevel number
+--- @field HealerLevel number
+--- @field ActiveCommand number
+--- @field FavoriteFeed number
+--- @field CurrentColorStainId number
+--- @field Mounted boolean
+--- @field Name string
+--- @field IsBuddyEquipUnlocked fun(buddyEquipId: number): boolean

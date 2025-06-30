@@ -1,0 +1,2623 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penumbra.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiCollection">
+            <summary> API methods pertaining to collection management. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollections">
+            <returns> A list of the GUIDs of all currently installed collections together with their display names, excluding the empty collection. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionsByIdentifier(System.String)">
+            <summary> Returns all collections for which either
+            <list type="number">
+                <item> the name is equal to the given identifier up to case, </item>
+                <item> the identifier is parsable to a GUID and the GUID corresponds to an existing collection, </item>
+                <item> or the identifier is at least 8 characters long and the GUID as a hex-string starts with the identifier. </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.GetChangedItemsForCollection(System.Guid)">
+            <returns>A dictionary of affected items in <paramref name="collectionId"/> via GUID and known objects or null.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollection(Penumbra.Api.Enums.ApiCollectionType)">
+            <returns> The GUID and name of the collection assigned to the given <paramref name="type"/>, the empty GUID for the empty collection, or null if nothing is assigned. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionForObject(System.Int32)">
+            <returns>Return whether the object at <paramref name="gameObjectIdx" /> produces a valid identifier, if the identifier has a collection assigned, and the collection that affects the object.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollection(Penumbra.Api.Enums.ApiCollectionType,System.Nullable{System.Guid},System.Boolean,System.Boolean)">
+            <summary>
+            Set a collection by GUID for a specific type.
+            </summary>
+            <param name="type">The collection type to set.</param>
+            <param name="collectionId">The GUID of the collection to set it to, null to remove the association if allowed. </param>
+            <param name="allowCreateNew">Allow only setting existing types or also creating an unset type.</param>
+            <param name="allowDelete">Allow deleting existing collections if <paramref name="collectionId"/> is empty.</param>
+            <returns>InvalidArgument if type is invalid,
+            NothingChanged if the new collection is the same as the old,<br />
+            AssignmentDeletionDisallowed if <paramref name="collectionId"/> is null and <paramref name="allowDelete"/> is false, and the assignment exists,<br />
+            or if Default, Current or Interface would be deleted.<br />
+            CollectionMissing if the new collection can not be found,<br />
+            AssignmentCreationDisallowed if <paramref name="allowCreateNew"/> is false and the assignment does not exist,<br />
+            or Success, as well as the GUID of the previous collection (empty if no assignment existed).
+            </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollectionForObject(System.Int32,System.Nullable{System.Guid},System.Boolean,System.Boolean)">
+            <summary>
+            Set a collection by GUID for a specific game object.
+            </summary>
+            <param name="gameObjectIdx">The index of the desired game object in the object table.</param>
+            <param name="collectionId">The GUID of the collection to set it to, null to remove the association if allowed. </param>
+            <param name="allowCreateNew">Allow only setting existing individuals or also creating a new individual assignment.</param>
+            <param name="allowDelete">Allow deleting existing individual assignments if <paramref name="collectionId"/> is null.</param>
+            <returns>InvalidIdentifier if <paramref name="gameObjectIdx"/> does not produce an existing game object or the object is not identifiable,
+            NothingChanged if the new collection is the same as the old,<br />
+            AssignmentDeletionDisallowed if <paramref name="collectionId"/> is null and <paramref name="allowDelete"/> is false, and the assignment exists,<br />
+            CollectionMissing if the new collection can not be found,<br />
+            AssignmentCreationDisallowed if <paramref name="allowCreateNew"/> is false and the assignment does not exist,<br />
+            or Success, as well as the name of the previous collection (empty if no assignment existed).</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiCollection.CheckCurrentChangedItemFunc">
+            <summary> Obtain a function object that can check if the current collection contains a given changed item by listing the mods changing it. </summary>
+            <remarks> Throws an <seealso cref="T:System.ObjectDisposedException"/> on invocation if the collection storage is not valid anymore, so clear this on <seealso cref="T:Penumbra.Api.IpcSubscribers.Disposed"/>. </remarks>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiEditing">
+            <summary> API methods pertaining to the editing of mods or game files. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureFile(System.String,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)">
+            <summary>
+            Convert the given texture file into a different type or format and potentially add mip maps.
+            </summary>
+            <param name="inputFile"> The path to the input file, which may be of .dds, .tex or .png format. </param>
+            <param name="outputFile"> The desired output path. Can be the same as input. </param>
+            <param name="textureType"> The file type and format to convert the data to. </param>
+            <param name="mipMaps"> Whether to add mip maps or not. Ignored for .png. </param>
+            <returns> A task for when the conversion is finished or has failed. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureData(System.Byte[],System.Int32,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)">
+            <summary>
+            Convert the given RGBA32 texture data into a different type or format and potentially add mip maps.
+            </summary>
+            <param name="rgbaData"> The input byte data for a picture given in RGBA32 format. </param>
+            <param name="width"> The width of the input picture. The height is computed from the size of <paramref name="rgbaData"/> and this. </param>
+            <param name="outputFile"> The desired output path. Can be the same as input. </param>
+            <param name="textureType"> The file type and format to convert the data to. </param>
+            <param name="mipMaps"> Whether to add mip maps or not. Ignored for .png. </param>
+            <returns> A task for when the conversion is finished or has failed. </returns>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiGameState">
+            <summary> API methods pertaining to the currently tracked game state. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiGameState.GetDrawObjectInfo(System.IntPtr)">
+            <param name="drawObject"></param>
+            <returns>The game object associated with the given <paramref name="drawObject">draw object</paramref>
+            and the GUID and name of the collection associated with this game object.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndex(System.Int32)">
+            <summary>
+            Obtain the parent game object index for an unnamed cutscene actor by its <paramref name="actorIdx">index</paramref>.
+            </summary>
+            <param name="actorIdx"></param>
+            <returns>The parent game object index.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndexFunc">
+            <summary> Obtain a function object to get the parent of a cutscene actor from Penumbra. </summary>
+            <remarks> Throws an <seealso cref="T:System.ObjectDisposedException"/> on invocation if the cutscene storage is not valid anymore, so clear this on <seealso cref="T:Penumbra.Api.IpcSubscribers.Disposed"/>. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiGameState.GetGameObjectFromDrawObjectFunc">
+            <summary> Obtain a function object to get the game object a draw object belongs to from Penumbra. </summary>
+            <remarks> Throws an <seealso cref="T:System.ObjectDisposedException"/> on invocation if the draw object storage is not valid anymore, so clear this on <seealso cref="T:Penumbra.Api.IpcSubscribers.Disposed"/>. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiGameState.SetCutsceneParentIndex(System.Int32,System.Int32)">
+            <summary>
+            Set the cutscene parent of <paramref name="copyIdx"/> in Penumbras internal state to a new value.
+            </summary>
+            <param name="copyIdx"> The index of the cutscene actor to be changed. </param>
+            <param name="newParentIdx"> The new index of the cutscene actors parent or -1 for no parent. </param>
+            <returns> Success when the new parent could be set, or InvalidArgument if either index is out of its respective range. </returns>
+            <remarks>
+            Checks that the new parent exists as a game object if the value is not -1 before assigning. If it does not, InvalidArgument is given, too.
+            Please only use this for good reason and if you know what you are doing, probably only for actor copies you actually create yourself.
+            </remarks>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiGameState.CreatingCharacterBase">
+            <summary>
+            Triggered when a character base is created and a corresponding gameObject could be found,
+            before the Draw Object is actually created, so customize and equipdata can be manipulated beforehand.
+            </summary>
+            <returns><inheritdoc cref="T:Penumbra.Api.CreatingCharacterBaseDelegate"/></returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiGameState.CreatedCharacterBase">
+            <summary>
+            Triggered after a character base was created if a corresponding gameObject could be found,
+            so you can apply flag changes after finishing.
+            </summary>
+            <returns><inheritdoc cref="T:Penumbra.Api.CreatedCharacterBaseDelegate"/></returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiGameState.GameObjectResourceResolved">
+            <summary>
+            Triggered whenever a resource is redirected by Penumbra for a specific, identified game object.
+            Does not trigger if the resource is not requested for a known game object.
+            </summary>
+            <returns><inheritdoc cref="T:Penumbra.Api.GameObjectResourceResolvedDelegate"/></returns>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApi">
+            <summary> The entire API. </summary>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Collection">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiCollection"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Editing">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiEditing"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.GameState">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiGameState"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Meta">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiMeta"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Mods">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiMods"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.ModSettings">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiModSettings"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.PluginState">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiPluginState"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Redraw">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiRedraw"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Resolve">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiResolve"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.ResourceTree">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiResourceTree"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Temporary">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiTemporary"/>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApi.Ui">
+            <inheritdoc cref="T:Penumbra.Api.Api.IPenumbraApiUi"/>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiBase">
+            <summary> Base interface for the API that is always available, regardless of version. </summary>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApiBase.ApiVersion">
+            <summary>
+            The API version is staggered in two parts.
+            The major/Breaking version only increments if there are changes breaking backwards compatibility.
+            The minor/Feature version increments any time there is something added
+            and resets when Breaking is incremented.
+            </summary>
+        </member>
+        <member name="P:Penumbra.Api.Api.IPenumbraApiBase.Valid">
+            <summary> Whether the API is still usable. </summary>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiMeta">
+            <summary> API methods pertaining to current metadata manipulations. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMeta.GetPlayerMetaManipulations">
+            <returns>A base64 encoded, zipped json-string with a prepended version-byte of the current manipulations
+            in the collection currently associated with the player.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMeta.GetMetaManipulations(System.Int32)">
+            <returns>A base64 encoded, zipped json-string with a prepended version-byte of the current manipulations
+            in the given collection applying to the given game object or the default collection if it does not exist.</returns>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiMods">
+            <summary> API methods pertaining to management of mods. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.GetModList">
+            <returns>A list of all installed mods. The first string is their directory name, the second string is their mod name.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.InstallMod(System.String)">
+            <summary> Try to unpack and install a valid mod file (.pmp, .ttmp, .ttmp2) as if installed manually. </summary>
+            <param name="modFilePackagePath">The file that should be unpacked.</param>
+            <returns>Success, MissingFile. Success does not indicate successful installing, just successful queueing for install.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.ReloadMod(System.String,System.String)">
+            <summary> Try to reload an existing mod given by its <paramref name="modDirectory" /> name or <paramref name="modName" />.</summary>
+            <remarks>Reload is the same as if triggered by button press and might delete the mod if it is not valid anymore.</remarks>
+            <returns>ModMissing if the mod can not be found or Success</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.AddMod(System.String)">
+            <summary> Try to add a new mod inside the mod root directory.</summary>
+            <remarks>Note that success does only imply a successful call, not a successful mod load.</remarks>
+            <param name="modDirectory">The name (not full name) of the mod directory.</param>
+            <returns>FileMissing if <paramref name="modDirectory" /> does not exist, InvalidArgument if the path leads outside the root directory, Success otherwise.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.DeleteMod(System.String,System.String)">
+            <summary>Try to delete a mod  given by its <paramref name="modDirectory" /> name or <paramref name="modName" />.</summary>
+            <remarks>Note that success does only imply a successful call, not successful deletion.</remarks>
+            <returns>NothingDone if the mod can not be found, Success otherwise.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiMods.ModDeleted">
+            <summary> Triggers whenever a mod is deleted. </summary>
+            <returns>The base directory name of the deleted mod.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiMods.ModAdded">
+            <summary> Triggers whenever a mod is added. </summary>
+            <returns>The base directory name of the new mod.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiMods.ModMoved">
+            <summary> Triggers whenever a mods base name is changed from inside Penumbra. </summary>
+            <returns>The previous base directory name of the mod and the new base directory name of the mod.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.GetModPath(System.String,System.String)">
+            <summary>
+            Get the internal full filesystem path including search order for the specified mod
+            given by its <paramref name="modDirectory" /> name or <paramref name="modName" />.
+            </summary>
+            <returns>On Success, the full path, a bool indicating whether the entire path is default (true) or manually set (false),
+            and a bool indicating whether the sort order name ignoring the folder path is default (true) or manually set (false).
+            Otherwise, returns ModMissing if the mod can not be found.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.SetModPath(System.String,System.String,System.String)">
+            <summary>
+            Set the internal search order and filesystem path of the specified mod
+            given by its <paramref name="modDirectory" /> name or <paramref name="modName" />
+            to the <paramref name="newPath" />.
+            </summary>
+            <returns>InvalidArgument if <paramref name="newPath" /> is empty, ModMissing if the mod can not be found,
+            PathRenameFailed if <paramref name="newPath"/> could not be set or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItems(System.String,System.String)">
+            <summary> Get the overall changed items of a single mod given by its <paramref name="modDirectory"/> name or <paramref name="modName"/>, regardless of settings. </summary>
+            <returns> A possibly empty dictionary of affected items and known objects or null. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterDictionary">
+            <summary> Get a dictionary of dictionaries to check all mods changed items. </summary>
+            <returns> A dictionary of mod identifier to changed item dictionary. </returns>
+            <remarks> Throws an <seealso cref="T:System.ObjectDisposedException"/> on access if the mod storage is not valid anymore, so clear this on <seealso cref="T:Penumbra.Api.IpcSubscribers.Disposed"/>. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterList">
+            <summary> Get a list of dictionaries to check all mods changed items. </summary>
+            <returns> A list all mods changed item dictionaries. </returns>
+            <remarks>
+                The order of mods is unspecified, but the same as in GetModList (assuming no changes in mods have taken place between calls). <br/>
+                Throws an <seealso cref="T:System.ObjectDisposedException"/> on access if the mod storage is not valid anymore, so clear this on <seealso cref="T:Penumbra.Api.IpcSubscribers.Disposed"/>.
+            </remarks>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiModSettings">
+            <summary> API methods pertaining to the management of mod settings. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAvailableModSettings(System.String,System.String)">
+            <summary>
+            Obtain the potential settings of a mod given by its <paramref name="modDirectory" /> name or <paramref name="modName" />.
+            </summary>
+            <returns>A dictionary of group names to lists of option names and the group type. Null if the mod could not be found.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettingsWithTemp(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Obtain the enabled state, the priority, the settings of a mod given by its <paramref name="modDirectory" /> name or <paramref name="modName" /> in the specified collection.
+            </summary>
+            <param name="collectionId">Specify the collection.</param>
+            <param name="modDirectory">Specify the mod via its directory name.</param>
+            <param name="modName">Specify the mod via its (non-unique) display name.</param>
+            <param name="ignoreInheritance">Whether the settings need to be from the given collection or can be inherited from any other by it. (True: given collection only)</param>
+            <param name="ignoreTemporary"> Whether the settings need to be actual settings or can be temporary. </param>
+            <param name="key"> The key for the settings lock. If <paramref name="ignoreTemporary"/> is false, settings with a key greater than 0 that is different from this will be ignored. </param>
+            <returns>ModMissing, CollectionMissing or Success. <para />
+            On Success, a tuple of Enabled State, Priority, a dictionary of option group names and lists of enabled option names and a bool whether the settings are inherited (true) or not.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettings(System.Guid,System.String,System.String,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettingsWithTemp(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAllModSettings(System.Guid,System.Boolean,System.Boolean,System.Int32)">
+            <summary> Obtain the enabled state, the priority, the settings of all mods in the specified collection. </summary>
+            <param name="collectionId"> Specify the collection. </param>
+            <param name="ignoreInheritance"> Whether the settings need to be from the given collection or can be inherited from any other by it. (True: given collection only) </param>
+            <param name="ignoreTemporary"> Whether the settings need to be actual settings or can be temporary. </param>
+            <param name="key"> The key for the settings lock. If <paramref name="ignoreTemporary"/> is false, settings with a key greater than 0 that is different from this will be ignored. </param>
+            <returns> CollectionMissing or Success, on Success, a dictionary of mod directory names to a tuple of (Enabled, Priority, Settings, Inherited, Temporary). Mods that have no settings at all are left out. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.TryInheritMod(System.Guid,System.String,System.String,System.Boolean)">
+            <summary> Try to set the inheritance state of a mod in a collection. </summary>
+            <returns>ModMissing, CollectionMissing, InvalidArgument (GUID is nil), NothingChanged or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetMod(System.Guid,System.String,System.String,System.Boolean)">
+            <summary> Try to set the enabled state of a mod in a collection. </summary>
+            <returns>ModMissing, CollectionMissing, InvalidArgument (GUID is nil), NothingChanged or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModPriority(System.Guid,System.String,System.String,System.Int32)">
+            <summary> Try to set the priority of a mod in a collection. </summary>
+            <returns>ModMissing, CollectionMissing, InvalidArgument (GUID is nil), NothingChanged or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSetting(System.Guid,System.String,System.String,System.String,System.String)">
+            <summary> Try to set a specific option group of a mod in the given collection to a specific value. </summary>
+            <remarks>Removes inheritance. Single Selection groups should provide a single option, Multi Selection can provide multiple.
+            If any setting can not be found, it will not change anything.</remarks>
+            <returns>ModMissing, CollectionMissing, OptionGroupMissing, SettingMissing, InvalidArgument (GUID is nil), NothingChanged or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSettings(System.Guid,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String})">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSetting(System.Guid,System.String,System.String,System.String,System.String)"/>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiModSettings.ModSettingChanged">
+            <summary> This event gets fired when any setting in any collection changes. </summary>
+            <returns><inheritdoc cref="T:Penumbra.Api.ModSettingChangedDelegate" /></returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiModSettings.CopyModSettings(System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Copy all current settings for a mod to another mod.
+            </summary>
+            <param name="collectionId">Specify the collection to work in, leave null to do it in all collections.</param>
+            <param name="modDirectoryFrom">Specify the mod to take the settings from via its directory name.</param>
+            <param name="modDirectoryTo">Specify the mod to put the settings on via its directory name. If the mod does not exist, it will be added as unused settings.</param>
+            <returns>CollectionMissing if collectionName is not empty but does not exist or Success.</returns>
+            <remarks>If the target mod exists, the settings will be fixed before being applied. If the source mod does not exist, it will use unused settings if available and remove existing settings otherwise.</remarks>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiPluginState">
+            <summary> API methods pertaining to Penumbras own state. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetModDirectory">
+            <returns> The full path of the current penumbra root directory. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetConfiguration">
+            <returns> The entire current penumbra configuration as a json encoded string. </returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiPluginState.ModDirectoryChanged">
+            <summary>
+            Fired whenever a mod directory change is finished.
+            </summary>
+            <returns>The full path of the mod directory and whether Penumbra treats it as valid.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetEnabledState">
+            <returns>True if Penumbra is enabled, false otherwise.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiPluginState.EnabledChange">
+            <summary>
+            Fired whenever the enabled state of Penumbra changes.
+            </summary>
+            <returns>True if the new state is enabled, false if the new state is disabled</returns>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiRedraw">
+            <summary> API methods pertaining to the redrawing of actors. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawObject(System.Int32,Penumbra.Api.Enums.RedrawType)">
+            <summary>
+            Queue redrawing of the actor with the given object <paramref name="gameObjectIndex" />, if it exists, with the given RedrawType <paramref name="setting"/>.
+            </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawAll(Penumbra.Api.Enums.RedrawType)">
+            <summary>
+            Queue redrawing of all currently available actors with the given RedrawType <paramref name="setting"/>.
+            </summary>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiRedraw.GameObjectRedrawn">
+            <summary>
+            Triggered whenever a game object is redrawn via Penumbra.
+            </summary>
+            /<returns><inheritdoc cref="T:Penumbra.Api.GameObjectRedrawnDelegate"/></returns>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiResolve">
+            <summary> API methods pertaining to the resolving of paths. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveDefaultPath(System.String)">
+            <summary>
+            Resolve a given <paramref name="gamePath" /> via Penumbra using the Base collection.
+            </summary>
+            <returns>The resolved path, or the given path if Penumbra would not manipulate it.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveInterfacePath(System.String)">
+            <summary>
+            Resolve a given <paramref name="gamePath" /> via Penumbra using the Interface collection.
+            </summary>
+            <returns>The resolved path, or the given path if Penumbra would not manipulate it.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveGameObjectPath(System.String,System.Int32)">
+            <summary>
+            Resolve a given <paramref name="gamePath" /> via Penumbra using collection applying to the <paramref name="gameObjectIdx"/> 
+            given by its index in the game object table.
+            </summary>
+            <remarks>If the object does not exist in the table, the default collection is used.</remarks>
+            <returns>The resolved path, or the given path if Penumbra would not manipulate it.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPath(System.String)">
+            <summary>
+            Resolve a given <paramref name="gamePath" /> via Penumbra using the collection currently applying to the player character.
+            </summary>
+            <returns>The resolved path, or the given path if Penumbra would not manipulate it.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolveGameObjectPath(System.String,System.Int32)">
+            <summary>
+            Reverse resolves a given local <paramref name="moddedPath" /> into its replacement in form of all applicable game paths
+            for the collection applying to the <paramref name="gameObjectIdx"/>th game object in the game object table.
+            </summary>
+            <remarks>If the object does not exist in the table, the default collection is used.</remarks>
+            <returns>A list of game paths resolving to the modded path.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolvePlayerPath(System.String)">
+            <summary>
+            Reverse resolves a given local <paramref name="moddedPath" /> into its replacement in form of all applicable game paths
+            for the collection currently applying to the player character.
+            </summary>
+            <returns>A list of game paths resolving to the modded path.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPaths(System.String[],System.String[])">
+            <summary>
+            Resolve all game paths in <paramref name="forward"/> and reserve all paths in <paramref name="reverse"/> at once.
+            </summary>
+            <param name="forward">Paths to forward-resolve.</param>
+            <param name="reverse">Paths to reverse-resolve.</param>
+            <returns>A pair of an array of forward-resolved single paths of the same length as <paramref name="forward"/> and an array of arrays of reverse-resolved paths.
+            The outer array has the same length as <paramref name="reverse"/> while each inner array can have arbitrary length.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPathsAsync(System.String[],System.String[])">
+            <summary>
+            Resolve all game paths in <paramref name="forward"/> and reserve all paths in <paramref name="reverse"/> at once asynchronously.
+            </summary>
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPaths(System.String[],System.String[])"/>
+            <remarks> Can be called from outside of framework. Can theoretically produce incoherent state when collections change during evaluation. </remarks>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiResourceTree">
+            <summary> API methods pertaining to the tracking of resources in use by actors. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcePaths(System.UInt16[])">
+            <summary>
+            Get the given game objects' resources, as dictionaries of actual paths (that may be FS paths for redirected resources, or game paths for swapped or vanilla resources) to game paths.
+            </summary>
+            <param name="gameObjects"> The game object indices for which to get the resources. </param>
+            <returns> An array of resource path dictionaries, of the same length and in the same order as the given game object index array. </returns>
+            <remarks> This function is best called right after the game objects are redrawn, as it may fail to resolve paths if relevant mod settings have changed since then. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcePaths">
+            <summary>
+            Get the player and player-owned game objects' resources, as dictionaries of actual paths (that may be FS paths for redirected resources, or game paths for swapped or vanilla resources) to game paths.
+            </summary>
+            <returns> A dictionary of game object indices to resource path dictionaries. </returns>
+            <remarks> This function is best called right after the game objects are redrawn, as it may fail to resolve paths if relevant mod settings have changed since then. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean,System.UInt16[])">
+            <summary>
+            Get the given game objects' resources of a given type, as dictionaries of resource handles to actual paths and, optionally, names and icons.
+            </summary>
+            <param name="type"> Type of the resources to get, for example <see cref="F:Penumbra.Api.Enums.ResourceType.Mtrl"/> for materials. </param>
+            <param name="withUiData"> Whether to get names and icons along with the paths. </param>
+            <param name="gameObjects"> The game object indices for which to get the resources. </param>
+            <returns> An array of resource information dictionaries, of the same length and in the same order as the given game object index array. </returns>
+            <remarks>
+            It is the caller's responsibility to make sure the returned resource handles are still in use on the game object's draw object before using them. <para />
+            Also, callers should not use UI data for non-UI purposes.
+            </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean)">
+            <summary>
+            Get the player and player-owned game objects' resources of a given type, as dictionaries of resource handles to actual paths and, optionally, names and icons.
+            </summary>
+            <param name="type"> Type of the resources to get, for example <see cref="F:Penumbra.Api.Enums.ResourceType.Mtrl"/> for materials. </param>
+            <param name="withUiData"> Whether to get names and icons along with the paths. </param>
+            <returns> A dictionary of game object indices to resource information dictionaries. </returns>
+            <remarks>
+            It is the caller's responsibility to make sure the returned resource handles are still in use on the game object's draw object before using them. <para />
+            Also, callers should not use UI data for non-UI purposes.
+            </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourceTrees(System.Boolean,System.UInt16[])">
+            <summary>
+            Get the given game objects' resource tree.
+            </summary>
+            <param name="withUiData"> Whether to get names and icons along with the paths. </param>
+            <param name="gameObjects"> The game object indices for which to get the resources. </param>
+            <returns> An array of resource tree JObjects, of the same length and in the same order as the given game object index array. </returns>
+            <remarks>
+            It is the caller's responsibility to make sure the returned resource handles are still in use on the game object's draw object before using them. <para />
+            Also, callers should not use UI data for non-UI purposes.
+            </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourceTrees(System.Boolean)">
+            <summary>
+            Get the player and player-owned game objects' resource trees.
+            </summary>
+            <param name="withUiData"> Whether to get names and icons along with the paths. </param>
+            <returns> A dictionary of game object indices to resource trees. </returns>
+            <remarks>
+            It is the caller's responsibility to make sure the returned resource handles are still in use on the game object's draw object before using them. <para />
+            Also, callers should not use UI data for non-UI purposes.
+            </remarks>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiTemporary">
+            <summary> API methods pertaining to the management of temporary collections and mods. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettings(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)">
+            <summary> Temporarily set the settings of a mod in a collection to given values. </summary>
+            <param name="collectionId"> The collection to manipulate. </param>
+            <param name="modDirectory"> Specify the mod via its directory name. </param>
+            <param name="modName"> Specify the mod via its (non-unique) display name. </param>
+            <param name="inherit"> Whether the mod should be forced to inherit from parent collections (if this is true, the other settings do not matter). </param>
+            <param name="enabled"> Whether the mod should be enabled or disabled. </param>
+            <param name="priority"> The desired priority for the mod. </param>
+            <param name="options"> The new settings for the mod, as a map of Group Name -> All enabled Options (should be only one for single select groups).</param>
+            <param name="source"> A string to describe the source of those temporary settings. This is displayed to the user. </param>
+            <param name="key"> An optional lock to prevent other plugins and the user from changing these settings. Changes in mod structure will still remove the settings. Use 0 for no lock, or negative numbers for an identification lock that does not prevent the user from editing the temporary settings, but allows you to use <seealso cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettings(System.Guid,System.Int32)"/> with the same key to only remove your settings. </param>
+            <returns> Success, CollectionMissing if the collection does not exist, TemporarySettingImpossible if the collection can not have settings, ModMissing if the mod can not be identified, TemporarySettingDisallowed if there is already a temporary setting with a different key, OptionGroupMissing if a group can not be found, OptionMissing if an option can not be found. </returns>
+            <remarks> If not all groups are set in <paramref name="options"/>, they will be set to their default settings. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)">
+            <summary> Temporarily set the settings of a mod in a collection to given values. </summary>
+            <param name="objectIndex"> The game object index of the object whose collection you want to change. </param>
+            <param name="modDirectory"> Specify the mod via its directory name. </param>
+            <param name="modName"> Specify the mod via its (non-unique) display name. </param>
+            <param name="inherit"> Whether the mod should be forced to inherit from parent collections (if this is true, the other settings do not matter). </param>
+            <param name="enabled"> Whether the mod should be enabled or disabled. </param>
+            <param name="priority"> The desired priority for the mod. </param>
+            <param name="options"> The new settings for the mod, as a map of Group Name -> All enabled Options (should be only one for single select groups).</param>
+            <param name="source"> A string to describe the source of those temporary settings. This is displayed to the user. </param>
+            <param name="key"> An optional lock to prevent other plugins and the user from changing these settings. Changes in mod structure will still remove the settings. Use 0 for no lock. </param>
+            <returns> Success, InvalidArgument if the game object does not exist, TemporarySettingImpossible if the collection can not have settings, ModMissing if the mod can not be identified, TemporarySettingDisallowed if there is already a temporary setting with a different key, OptionGroupMissing if a group can not be found, OptionMissing if an option can not be found. </returns>
+            <remarks> If not all groups are set in <paramref name="options"/>, they will be set to their default settings. </remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)">
+            <summary> Temporarily set the settings of a mod in a collection to given values. </summary>
+            <param name="collectionId"> The collection to manipulate. </param>
+            <param name="modDirectory"> Specify the mod via its directory name. </param>
+            <param name="modName"> Specify the mod via its (non-unique) display name. </param>
+            <param name="key"> An optional key to a potential lock applied to those settings. </param>
+            <returns> Success, NothingDone if no temporary settings could be removed with this key, CollectionMissing if the collection does not exist, TemporarySettingDisallowed if the key did not correspond to the lock. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)">
+            <summary> Temporarily set the settings of a mod in a collection to given values. </summary>
+            <param name="objectIndex"> The game object index of the object whose collection you want to change. </param>
+            <param name="modDirectory"> Specify the mod via its directory name. </param>
+            <param name="modName"> Specify the mod via its (non-unique) display name. </param>
+            <param name="key"> An optional key to a potential lock applied to those settings. </param>
+            <returns> Success, NothingDone if the mod did not have temporary settings in this collection, InvalidArgument if the game object does not exist, TemporarySettingDisallowed if the key did not correspond to the lock. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettings(System.Guid,System.Int32)">
+            <summary> Temporarily set the settings of a mod in a collection to given values. </summary>
+            <param name="collectionId"> The collection to manipulate. </param>
+            <param name="key"> An optional key to a lock applied to those settings. All settings that use this key will be removed, all others ignored. </param>
+            <returns> Success, NothingDone if no temporary settings could be removed with this key, CollectionMissing if the collection does not exist. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettingsPlayer(System.Int32,System.Int32)">
+            <summary> Temporarily set the settings of a mod in a collection to given values. </summary>
+            <param name="objectIndex"> The game object index of the object whose collection you want to change. </param>
+            <param name="key"> An optional key to a lock applied to those settings. All settings that can be removed with this key will be removed, all others ignored. </param>
+            <returns> Success, NothingDone if no temporary settings could be removed with this key, InvalidArgument if the game object does not exist. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.CreateTemporaryCollection(System.String)">
+            <summary> Create a temporary collection. </summary>
+            <param name="name"> The name for the collection. Arbitrary and only used internally for debugging. </param>
+            <returns> The GUID of the created temporary collection. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.DeleteTemporaryCollection(System.Guid)">
+            <summary> Remove the temporary collection of the given name. </summary>
+            <param name="collectionId"> The chosen temporary collection to remove. </param>
+            <returns> NothingChanged or Success. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.AssignTemporaryCollection(System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            Assign an existing temporary collection to an actor that currently occupies a specific slot.
+            </summary>
+            <param name="collectionId">The chosen collection assigned to the actor.</param>
+            <param name="actorIndex">The current object table index of the actor.</param>
+            <param name="forceAssignment">Whether to assign even if the actor is already assigned either a temporary or a permanent collection.</param>
+            <returns>Success, InvalidArgument if the actor can not be identified, CollectionMissing if the collection does not exist, CharacterCollectionExists if <paramref name="forceAssignment"/> is false and the actor is already assigned a collection, and AssignmentDeletionFailed if <paramref name="forceAssignment"/> is true and the existing temporary assignment could not be deleted. </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryModAll(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)">
+            <summary>
+            Set a temporary mod with the given paths, manipulations and priority and the name tag to all regular and temporary collections.
+            </summary>
+            <param name="tag">Custom name for the temporary mod.</param>
+            <param name="paths">List of redirections (can be swaps or redirections).</param>
+            <param name="manipString">Zipped Base64 string of meta manipulations.</param>
+            <param name="priority">Desired priority.</param>
+            <returns>InvalidGamePath, InvalidManipulation or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryMod(System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)">
+            <summary> Set a temporary mod with the given paths, manipulations and priority and the name tag to a specific collection.
+            </summary>
+            <param name="tag">Custom name for the temporary mod.</param>
+            <param name="collectionId">GUID of the collection the mod should apply to. Can be a temporary collection.</param>
+            <param name="paths">List of redirections (can be swaps or redirections).</param>
+            <param name="manipString">Zipped Base64 string of meta manipulations.</param>
+            <param name="priority">Desired priority.</param>
+            <returns>CollectionMissing, InvalidGamePath, InvalidManipulation, InvalidArgument (GUID is nil) or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModAll(System.String,System.Int32)">
+            <summary>
+            Remove the temporary mod with the given tag and priority from the temporary mods applying to all collections, if it exists.
+            </summary>
+            <param name="tag">The tag to look for.</param>
+            <param name="priority">The initially provided priority.</param>
+            <returns>NothingDone or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryMod(System.String,System.Guid,System.Int32)">
+            <summary>
+            Remove the temporary mod with the given tag and priority from the temporary mods applying to a specific collection, if it exists.
+            </summary>
+            <param name="tag">The tag to look for.</param>
+            <param name="collectionId">GUID of the collection the mod should apply to. Can be a temporary collection.</param>
+            <param name="priority">The initially provided priority.</param>
+            <returns>CollectionMissing, NothingDone or Success.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)">
+            <summary> Get the current temporary settings of a mod in the given collection. </summary>
+            <param name="collectionId"> The collection to query. </param>
+            <param name="modDirectory"> Specify the mod via its directory name. </param>
+            <param name="modName"> Specify the mod via its (non-unique) display name. </param>
+            <param name="key"> The key for the settings lock.</param>
+            <returns>
+            The settings as (ForceInherit, Enabled, Priority, Settings) or null if none are registered,
+            the registered source for the temporary settings or empty,
+            and Success, CollectionMissing, ModMissing or TemporarySettingDisallowed if the used key was > 0 and different from the provided key.
+            </returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)">
+            <summary> Get the current temporary settings of a mod in the collection assigned to a given game object. </summary>
+            <param name="objectIndex"> The game object index of the object whose collection you want to change. </param>
+            <param name="modDirectory"> Specify the mod via its directory name. </param>
+            <param name="modName"> Specify the mod via its (non-unique) display name. </param>
+            <param name="key"> The key for the settings lock.</param>
+            <returns>
+            The settings as (ForceInherit, Enabled, Priority, Settings) or null if none are registered,
+            the registered source for the temporary settings or empty,
+            and Success, InvalidArgument if the game object does not exist, ModMissing, or TemporarySettingDisallowed if the used key was > 0 and different from the provided key.
+            </returns>
+        </member>
+        <member name="T:Penumbra.Api.Api.IPenumbraApiUi">
+            <summary> API methods pertaining to Penumbras UI. </summary>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiUi.ChangedItemTooltip">
+            <summary>
+            Triggered when the user hovers over a listed changed object in a mod tab.<para />
+            Can be used to append tooltips.
+            </summary>
+            <returns> The type of the changed item and its ID if known. </returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiUi.ChangedItemClicked">
+            <summary>
+            Triggered when the user clicks a listed changed object in a mod tab.
+            </summary>
+            <returns> The mouse button clicked, the type of the changed item and its ID if known. </returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiUi.PreSettingsTabBarDraw">
+            <summary>
+            Triggered before the settings tab bar for a mod is drawn, after the title group is drawn.
+            </summary>
+            <returns>The directory name of the currently selected mod, the total used width of the title bar and the width of the title box.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiUi.PreSettingsPanelDraw">
+            <summary>
+            Triggered before the content of a mod settings panel is drawn.
+            </summary>
+            <returns>The directory name of the currently selected mod.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiUi.PostEnabledDraw">
+            <summary>
+            Triggered after the Enabled Checkbox line in settings is drawn, but before options are drawn.
+            </summary>
+            <returns>The directory name of the currently selected mod.</returns>
+        </member>
+        <member name="E:Penumbra.Api.Api.IPenumbraApiUi.PostSettingsPanelDraw">
+            <summary>
+            Triggered after the content of a mod settings panel is drawn, but still in the child window.
+            </summary>
+            <returns>The directory name of the currently selected mod.</returns>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiUi.OpenMainWindow(Penumbra.Api.Enums.TabType,System.String,System.String)">
+            <summary>
+            Open the Penumbra main config window.
+            </summary>
+            <param name="tab">Open the window at a specific tab. Use TabType.None to not change the tab. </param>
+            <param name="modDirectory">Select a mod specified via its directory name in the mod tab, empty if none.</param>
+            <param name="modName">Select a mod specified via its mod name in the mod tab, empty if none.</param>
+            <returns>InvalidArgument if <paramref name="tab"/> is invalid,
+            ModMissing if <paramref name="modDirectory"/> or <paramref name="modName"/> are set non-empty and the mod does not exist,
+            Success otherwise.</returns>
+            <remarks>If <paramref name="tab"/> is not TabType.Mods, the mod will not be selected regardless of other parameters and ModMissing will not be returned.</remarks>
+        </member>
+        <member name="M:Penumbra.Api.Api.IPenumbraApiUi.CloseMainWindow">
+            <summary> Close the Penumbra main config window. </summary>
+        </member>
+        <member name="T:Penumbra.Api.GameObjectRedrawnDelegate">
+            <summary>Used when a game object is redrawn by Penumbra.</summary>
+            <returns>The <paramref name="objectPtr" /> to the redrawn object and its <paramref name="objectTableIndex" />.</returns>
+        </member>
+        <member name="T:Penumbra.Api.ModSettingChangedDelegate">
+            <summary>
+            Used when the setting of a mod is changed in any way.
+            </summary>
+            <returns>The <paramref name="type" /> of change, <para />
+            the <paramref name="collectionId" /> in which the setting is changed, <para />
+            the <paramref name="modDirectory" /> name of the mod, <para />
+            and whether the change was <paramref name="inherited" /> or not.</returns>
+        </member>
+        <member name="T:Penumbra.Api.CreatingCharacterBaseDelegate">
+            <summary>
+            Used before a new character base draw object is created from a <paramref name="gameObject" />.
+            </summary>
+            <returns>A pointer to the source <paramref name="gameObject" />, <para />
+            the <paramref name="collectionId" /> used for the object, <para />
+            a pointer to the used <paramref name="modelId" /> (of type <c>ushort*</c>), <para />
+            a pointer to the <paramref name="customize" /> array, <para />
+            and a pointer to the <paramref name="equipData" /> array.</returns>
+        </member>
+        <member name="T:Penumbra.Api.CreatedCharacterBaseDelegate">
+            <summary>
+            Used after a character base <paramref name="drawObject" /> has been created from a <paramref name="gameObject" />.
+            </summary>
+            <returns>A pointer to the source <paramref name="gameObject" />, <para />
+            the <paramref name="collectionId" /> used for the object, <para />
+            a pointer to newly created <paramref name="drawObject" />.</returns>
+        </member>
+        <member name="T:Penumbra.Api.GameObjectResourceResolvedDelegate">
+            <summary>
+            Used when a specific game object has resolved a path to a non-default path.
+            </summary>
+            <returns>A pointer to the source <paramref name="gameObject" />, <para />
+            the original <paramref name="gamePath" /> that was resolved by Penumbra, <para />
+            the resulting <paramref name="localPath" /> returned by Penumbra.</returns>
+        </member>
+        <member name="T:Penumbra.Api.Enums.ChangedItemType">
+            <summary>
+            Describes known types of changed items that could provide special care.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.GroupType">
+            <summary>
+            The selection type for mod option groups.
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.GroupType.Single">
+            <summary>
+            Exactly one option of this group has to be selected (if any exist).
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.GroupType.Multi">
+            <summary>
+            Any number of options in this group can be toggled on or off at the same time.
+            Limits the number of options in a single group to 32 at the most.
+            Each option is its own data container, which are independent of each other.
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.GroupType.Imc">
+            <summary>
+            Any number of options in this group can be toggled on or off at the same time.
+            Affects a single IMC entry, to manipulate different parts of a model in a user-facing way.
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.GroupType.Combining">
+            <summary>
+            Any number of options in this group can be toggled on or off at the same time.
+            Limits the number of options in a single group to 8 at the most.
+            Each combination of options is its own data container, resulting in 2^N separate data containers.
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.GroupType.Complex">
+            <summary>
+            A group consisting of multiple separate subgroups where the options can depend on each other.
+            Each subgroup behaves the same way as its regular group type, just with optional dependencies on the other options.
+            The total number of options is still limited by the settings bit size.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.ModSettingChange">
+            <summary>
+            Describes the way a mod can change its settings.
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.Inheritance">
+            <summary> It was set to inherit from other collections or not to inherit anymore. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.EnableState">
+            <summary> It was enabled or disabled. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.Priority">
+            <summary> Its priority was changed. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.Setting">
+            <summary> A specific setting for an option group was changed. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.MultiInheritance">
+            <summary> Multiple mods were set to inherit from other collections or not inherit anymore at once. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.MultiEnableState">
+            <summary> Multiple mods were enabled or disabled at once. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.TemporaryMod">
+            <summary> A temporary mod was enabled or disabled. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.Edited">
+            <summary> A mod was edited. Only invoked on edits affecting the current players collection and for that for now. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.ModSettingChange.TemporarySetting">
+            <summary> A temporary setting was added, removed or changed. </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.MouseButton">
+            <summary>
+            Describes which mouse button was used to click an element.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.PenumbraApiEc">
+            <summary>
+            Error codes returned by some Penumbra.Api calls.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.RedrawType">
+            <summary>
+            The way a specific game object shall be redrawn.
+            Actors can be redrawn immediately or after GPose.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.TabType">
+            <summary>
+            The different tabs of the main window that are available.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Enums.TextureType">
+            <summary>
+            The different types of textures a given texture can be converted to.
+            </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.Png">
+            <summary> Convert the texture to .png. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.AsIsTex">
+            <summary> Keep the texture format as it is but save as .tex. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.AsIsDds">
+            <summary> Keep the texture format as it is but save as .dds. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.RgbaTex">
+            <summary> Convert the texture to RGBA32 and save as .tex. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.RgbaDds">
+            <summary> Convert the texture to RGBA32 and save as .dds. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.Bc3Tex">
+            <summary> Convert the texture to BC3 and save as .tex. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.Bc3Dds">
+            <summary> Convert the texture to BC3 and save as .dds. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.Bc7Tex">
+            <summary> Convert the texture to BC3 and save as .tex. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.Bc7Dds">
+            <summary> Convert the texture to BC3 and save as .dds. </summary>
+        </member>
+        <member name="F:Penumbra.Api.Enums.TextureType.Targa">
+            <summary> Convert the texture to .tga. </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionProvider">
+            <summary>
+            Specialized disposable Provider for Actions.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionProvider`1">
+            <summary>
+            Specialized disposable Provider for Actions.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionProvider`2">
+            <summary>
+            <inheritdoc cref="T:Penumbra.Api.Helpers.ActionProvider`1"/>
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionProvider`3">
+            <summary>
+            <inheritdoc cref="T:Penumbra.Api.Helpers.ActionProvider`1"/>
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionSubscriber">
+            <summary>
+            Specialized subscriber only allowing to invoke actions.
+            </summary>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ActionSubscriber.Valid">
+            <summary> Whether the subscriber could successfully be created. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ActionSubscriber.Invoke">
+            <summary> Invoke the action. See the source of the subscriber for details.</summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionSubscriber`1">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.ActionSubscriber"/> 
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ActionSubscriber`1.Valid">
+            <summary> Whether the subscriber could successfully be created. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ActionSubscriber`1.Invoke(`0)">
+            <summary> Invoke the action. See the source of the subscriber for details.</summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionSubscriber`2">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.ActionSubscriber"/> 
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ActionSubscriber`2.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.ActionSubscriber`1.Valid"/> 
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ActionSubscriber`2.Invoke(`0,`1)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.ActionSubscriber.Invoke"/> 
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ActionSubscriber`3">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.ActionSubscriber"/> 
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ActionSubscriber`3.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.ActionSubscriber`1.Valid"/> 
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ActionSubscriber`3.Invoke(`0,`1,`2)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.ActionSubscriber.Invoke"/> 
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ConvertingDict`3">
+            <summary> A dictionary that implicitly can be converted to a read-only dictionary with different value type. </summary>
+            <typeparam name="TKey"> The type of the keys. </typeparam>
+            <typeparam name="TValueFrom"> The actual type of the values. </typeparam>
+            <typeparam name="TValueTo"> The read-only type of the values. </typeparam>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`3.#ctor(System.Collections.Generic.IReadOnlyDictionary{`0,`1})">
+            <summary> A dictionary that implicitly can be converted to a read-only dictionary with different value type. </summary>
+            <typeparam name="TKey"> The type of the keys. </typeparam>
+            <typeparam name="TValueFrom"> The actual type of the values. </typeparam>
+            <typeparam name="TValueTo"> The read-only type of the values. </typeparam>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`3.Original">
+            <summary> Obtain the original dictionary. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`3.ConvertValue(`1@)">
+            <summary> Conversion between values. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`3.ContainsKey(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`3.TryGetValue(`0,`2@)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`3.Item(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`3.Values">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`3.Count">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`3.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.ConvertingDict`4">
+            <summary> A dictionary that implicitly can be converted to a read-only dictionary with different value type. </summary>
+            <typeparam name="TKeyFrom"> The actual type of the keys. </typeparam>
+            <typeparam name="TKeyTo"> The read-only type of the keys. </typeparam>
+            <typeparam name="TValueFrom"> The actual type of the values. </typeparam>
+            <typeparam name="TValueTo"> The read-only type of the values. </typeparam>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.#ctor(System.Collections.Generic.IReadOnlyDictionary{`0,`2})">
+            <summary> A dictionary that implicitly can be converted to a read-only dictionary with different value type. </summary>
+            <typeparam name="TKeyFrom"> The actual type of the keys. </typeparam>
+            <typeparam name="TKeyTo"> The read-only type of the keys. </typeparam>
+            <typeparam name="TValueFrom"> The actual type of the values. </typeparam>
+            <typeparam name="TValueTo"> The read-only type of the values. </typeparam>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`4.Original">
+            <summary> Obtain the original dictionary. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.ConvertKey(`0@)">
+            <summary> Conversion between keys. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.ConvertKeyBack(`1@)">
+            <summary> Conversion between keys. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.ConvertValue(`2@)">
+            <summary> Conversion between values. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.ContainsKey(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.TryGetValue(`1,`3@)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`4.Item(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`4.Keys">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`4.Values">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.ConvertingDict`4.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.ConvertingDict`4.Count">
+            <inheritdoc/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.GameResourceDict">
+            <summary> Wrapper dictionary. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.GameResourceDict.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.IntPtr,System.ValueTuple{System.String,System.String,System.UInt32}})">
+            <summary> Wrapper dictionary. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.GameResourceDict.ConvertValue(System.ValueTuple{System.String,System.String,System.UInt32}@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.GameResourceDict.Create(System.Collections.Generic.IReadOnlyDictionary{System.IntPtr,System.ValueTuple{System.String,System.String,System.UInt32}})">
+            <summary> Create dictionary or null. </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.AvailableModSettings">
+            <summary> Wrapper dictionary. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.AvailableModSettings.#ctor(System.Collections.Generic.IReadOnlyDictionary{System.String,System.ValueTuple{System.String[],System.Int32}})">
+            <summary> Wrapper dictionary. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.AvailableModSettings.ConvertValue(System.ValueTuple{System.String[],System.Int32}@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.AvailableModSettings.Create(System.Collections.Generic.IReadOnlyDictionary{System.String,System.ValueTuple{System.String[],System.Int32}})">
+            <summary> Create dictionary or null. </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventProvider">
+            <summary>
+            Specialized disposable Provider for Events.<para />
+            Will execute the unsubscriber action on dispose if any is provided.<para />
+            Can only be invoked and disposed.
+            </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventProvider.Invoke">
+            <summary> Invoke the event.</summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventProvider`1">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.EventProvider"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventProvider`1.Invoke(`0)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.EventProvider.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventProvider`2">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.EventProvider"/> 
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventProvider`2.Invoke(`0,`1)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.EventProvider.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventProvider`3">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.EventProvider"/> 
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventProvider`3.Invoke(`0,`1,`2)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.EventProvider.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventProvider`4">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.EventProvider"/> 
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventProvider`4.Invoke(`0,`1,`2,`3)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.EventProvider.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventProvider`5">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.EventProvider"/> 
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventProvider`5.Invoke(`0,`1,`2,`3,`4)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.EventProvider.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventSubscriber">
+            <summary>
+            Specialized disposable Subscriber for Events.<para />
+            Subscriptions are wrapped to be individually exception-safe.<para/>
+            Can be enabled and disabled.<para/>
+            </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber.Enable">
+            <summary>
+            Enable all currently subscribed actions registered with this EventSubscriber.
+            Does nothing if it is already enabled.
+            </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber.Disable">
+            <summary>
+            Disable all subscribed actions registered with this EventSubscriber.
+            Does nothing if it is already disabled.
+            Does not forget the actions, only disables them.
+            </summary>
+        </member>
+        <member name="E:Penumbra.Api.Helpers.EventSubscriber.Event">
+            <summary>
+            Add or remove an action to the IPC event, if it is valid.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventSubscriber`1">
+            <summary><inheritdoc cref="T:Penumbra.Api.Helpers.EventSubscriber"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`1.Enable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Enable"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`1.Disable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Disable"/> </summary>
+        </member>
+        <member name="E:Penumbra.Api.Helpers.EventSubscriber`1.Event">
+            <summary><inheritdoc cref="E:Penumbra.Api.Helpers.EventSubscriber.Event"/> </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventSubscriber`2">
+            <summary><inheritdoc cref="T:Penumbra.Api.Helpers.EventSubscriber"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`2.Enable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Enable"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`2.Disable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Disable"/> </summary>
+        </member>
+        <member name="E:Penumbra.Api.Helpers.EventSubscriber`2.Event">
+            <summary><inheritdoc cref="E:Penumbra.Api.Helpers.EventSubscriber.Event"/> </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventSubscriber`3">
+            <summary><inheritdoc cref="T:Penumbra.Api.Helpers.EventSubscriber"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`3.Enable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Enable"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`3.Disable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Disable"/> </summary>
+        </member>
+        <member name="E:Penumbra.Api.Helpers.EventSubscriber`3.Event">
+            <summary><inheritdoc cref="E:Penumbra.Api.Helpers.EventSubscriber.Event"/> </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventSubscriber`4">
+            <summary><inheritdoc cref="T:Penumbra.Api.Helpers.EventSubscriber"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`4.Enable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Enable"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`4.Disable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Disable"/> </summary>
+        </member>
+        <member name="E:Penumbra.Api.Helpers.EventSubscriber`4.Event">
+            <summary><inheritdoc cref="E:Penumbra.Api.Helpers.EventSubscriber.Event"/> </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.EventSubscriber`5">
+            <summary><inheritdoc cref="T:Penumbra.Api.Helpers.EventSubscriber"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`5.Enable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Enable"/> </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.EventSubscriber`5.Disable">
+            <summary><inheritdoc cref="M:Penumbra.Api.Helpers.EventSubscriber.Disable"/> </summary>
+        </member>
+        <member name="E:Penumbra.Api.Helpers.EventSubscriber`5.Event">
+            <summary><inheritdoc cref="E:Penumbra.Api.Helpers.EventSubscriber.Event"/> </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`1">
+            <summary>
+            Specialized disposable Provider for Funcs.
+            </summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`2">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncProvider`1"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`3">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncProvider`1"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`4">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncProvider`1"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`5">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncProvider`1"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`6">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncProvider`1"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncProvider`7">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncProvider`1"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`1">
+            <summary>
+            Specialized subscriber only allowing to invoke functions with a return.
+            </summary>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid">
+            <summary> Whether the subscriber could successfully be created. </summary>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`1.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke">
+            <summary> Invoke the function. See the source of the subscriber for details.</summary>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`2">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`2.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`2.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`2.Invoke(`0)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`3">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`3.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`3.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`3.Invoke(`0,`1)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`4">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`4.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`4.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`4.Invoke(`0,`1,`2)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`5">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`5.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`5.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`5.Invoke(`0,`1,`2,`3)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`6">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`6.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`6.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`6.Invoke(`0,`1,`2,`3,`4)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.Helpers.FuncSubscriber`7">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="P:Penumbra.Api.Helpers.FuncSubscriber`7.Valid">
+            <inheritdoc cref="P:Penumbra.Api.Helpers.FuncSubscriber`1.Valid"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`7.#ctor(Dalamud.Plugin.IDalamudPluginInterface,System.String)">
+            <inheritdoc cref="T:Penumbra.Api.Helpers.FuncSubscriber`1"/>
+        </member>
+        <member name="M:Penumbra.Api.Helpers.FuncSubscriber`7.Invoke(`0,`1,`2,`3,`4,`5)">
+            <inheritdoc cref="M:Penumbra.Api.Helpers.FuncSubscriber`1.Invoke"/>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCollections">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollections"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollections.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollections"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCollections.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollections.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollections"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollections.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCollectionsByIdentifier">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionsByIdentifier(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollectionsByIdentifier.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionsByIdentifier(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCollectionsByIdentifier.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollectionsByIdentifier.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionsByIdentifier(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollectionsByIdentifier.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetChangedItemsForCollection">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetChangedItemsForCollection(System.Guid)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemsForCollection.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetChangedItemsForCollection(System.Guid)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetChangedItemsForCollection.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemsForCollection.Invoke(System.Guid)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetChangedItemsForCollection(System.Guid)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemsForCollection.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCollection">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollection(Penumbra.Api.Enums.ApiCollectionType)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollection.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollection(Penumbra.Api.Enums.ApiCollectionType)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCollection.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollection.Invoke(Penumbra.Api.Enums.ApiCollectionType)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollection(Penumbra.Api.Enums.ApiCollectionType)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollection.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCollectionForObject">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionForObject(System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollectionForObject.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionForObject(System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCollectionForObject.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollectionForObject.Invoke(System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.GetCollectionForObject(System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCollectionForObject.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.SetCollection">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollection(Penumbra.Api.Enums.ApiCollectionType,System.Nullable{System.Guid},System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCollection.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollection(Penumbra.Api.Enums.ApiCollectionType,System.Nullable{System.Guid},System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.SetCollection.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCollection.Invoke(Penumbra.Api.Enums.ApiCollectionType,System.Nullable{System.Guid},System.Boolean,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollectionForObject(System.Int32,System.Nullable{System.Guid},System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCollection.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.SetCollectionForObject">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollectionForObject(System.Int32,System.Nullable{System.Guid},System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCollectionForObject.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollectionForObject(System.Int32,System.Nullable{System.Guid},System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.SetCollectionForObject.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCollectionForObject.Invoke(System.Int32,System.Nullable{System.Guid},System.Boolean,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.SetCollectionForObject(System.Int32,System.Nullable{System.Guid},System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCollectionForObject.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.CheckCurrentChangedItemFunc">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.CheckCurrentChangedItemFunc"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CheckCurrentChangedItemFunc.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.CheckCurrentChangedItemFunc"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.CheckCurrentChangedItemFunc.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CheckCurrentChangedItemFunc.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiCollection.CheckCurrentChangedItemFunc"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CheckCurrentChangedItemFunc.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiCollection)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ConvertTextureFile">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureFile(System.String,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ConvertTextureFile.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureFile(System.String,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ConvertTextureFile.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ConvertTextureFile.Invoke(System.String,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureFile(System.String,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ConvertTextureFile.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiEditing)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ConvertTextureData">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureData(System.Byte[],System.Int32,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ConvertTextureData.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureData(System.Byte[],System.Int32,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ConvertTextureData.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ConvertTextureData.Invoke(System.Byte[],System.Int32,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiEditing.ConvertTextureData(System.Byte[],System.Int32,System.String,Penumbra.Api.Enums.TextureType,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ConvertTextureData.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiEditing)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetDrawObjectInfo">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetDrawObjectInfo(System.IntPtr)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetDrawObjectInfo.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetDrawObjectInfo(System.IntPtr)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetDrawObjectInfo.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetDrawObjectInfo.Invoke(System.IntPtr)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetDrawObjectInfo(System.IntPtr)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetDrawObjectInfo.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndex">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndex(System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndex.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndex(System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndex.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndex.Invoke(System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndex(System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndex.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.SetCutsceneParentIndex">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.SetCutsceneParentIndex(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCutsceneParentIndex.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.SetCutsceneParentIndex(System.Int32,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.SetCutsceneParentIndex.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCutsceneParentIndex.Invoke(System.Int32,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.SetCutsceneParentIndex(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetCutsceneParentIndex.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.CreatingCharacterBase">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiGameState.CreatingCharacterBase"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.CreatingCharacterBase.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreatingCharacterBase.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.IntPtr,System.Guid,System.IntPtr,System.IntPtr,System.IntPtr}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreatingCharacterBase.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.CreatedCharacterBase">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiGameState.CreatedCharacterBase"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.CreatedCharacterBase.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreatedCharacterBase.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.IntPtr,System.Guid,System.IntPtr}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreatedCharacterBase.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GameObjectResourcePathResolved">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiGameState.GameObjectResourceResolved"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GameObjectResourcePathResolved.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GameObjectResourcePathResolved.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.IntPtr,System.String,System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GameObjectResourcePathResolved.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndexFunc">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndexFunc"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndexFunc.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetCutsceneParentIndexFunc"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndexFunc.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndexFunc.Invoke">
+            <inheritdoc cref="T:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndexFunc"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCutsceneParentIndexFunc.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetGameObjectFromDrawObjectFunc">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetGameObjectFromDrawObjectFunc"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectFromDrawObjectFunc.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiGameState.GetGameObjectFromDrawObjectFunc"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetGameObjectFromDrawObjectFunc.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectFromDrawObjectFunc.Invoke">
+            <inheritdoc cref="T:Penumbra.Api.IpcSubscribers.GetGameObjectFromDrawObjectFunc"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectFromDrawObjectFunc.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiGameState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetPlayerMetaManipulations">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMeta.GetPlayerMetaManipulations"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerMetaManipulations.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMeta.GetPlayerMetaManipulations"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetPlayerMetaManipulations.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerMetaManipulations.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMeta.GetPlayerMetaManipulations"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerMetaManipulations.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMeta)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetMetaManipulations">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMeta.GetMetaManipulations(System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetMetaManipulations.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMeta.GetMetaManipulations(System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetMetaManipulations.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetMetaManipulations.Invoke(System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMeta.GetMetaManipulations(System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetMetaManipulations.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMeta)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetModList">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetModList"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModList.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetModList"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetModList.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModList.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetModList"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModList.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.InstallMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.InstallMod(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.InstallMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.InstallMod(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.InstallMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.InstallMod.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.InstallMod(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.InstallMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ReloadMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.ReloadMod(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReloadMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.ReloadMod(System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ReloadMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReloadMod.Invoke(System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.ReloadMod(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReloadMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.AddMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.AddMod(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.AddMod(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.AddMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddMod.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.AddMod(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.DeleteMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.DeleteMod(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.DeleteMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.DeleteMod(System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.DeleteMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.DeleteMod.Invoke(System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.DeleteMod(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.DeleteMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ModDeleted">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiMods.ModDeleted" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ModDeleted.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModDeleted.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModDeleted.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ModAdded">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiMods.ModAdded" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ModAdded.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModAdded.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModAdded.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ModMoved">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiMods.ModMoved" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ModMoved.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModMoved.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String,System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModMoved.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetModPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetModPath(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetModPath(System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetModPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModPath.Invoke(System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetModPath(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.SetModPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.SetModPath(System.String,System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetModPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.SetModPath(System.String,System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.SetModPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetModPath.Invoke(System.String,System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.SetModPath(System.String,System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetModPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetChangedItems">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItems(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItems.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItems(System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetChangedItems.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItems.Invoke(System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItems(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItems.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterDictionary">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterDictionary"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterDictionary.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterDictionary"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterDictionary.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterDictionary.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterDictionary"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterDictionary.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterList">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterList"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterList.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterList"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterList.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterList.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiMods.GetChangedItemAdapterList"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetChangedItemAdapterList.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiMods)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetAvailableModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAvailableModSettings(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetAvailableModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAvailableModSettings(System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetAvailableModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetAvailableModSettings.Invoke(System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAvailableModSettings(System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetAvailableModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCurrentModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettings(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCurrentModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettings(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCurrentModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCurrentModSettings.Invoke(System.Guid,System.String,System.String,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettings(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCurrentModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetCurrentModSettingsWithTemp">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettingsWithTemp(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCurrentModSettingsWithTemp.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettingsWithTemp(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetCurrentModSettingsWithTemp.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCurrentModSettingsWithTemp.Invoke(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetCurrentModSettingsWithTemp(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetCurrentModSettingsWithTemp.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetAllModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAllModSettings(System.Guid,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetAllModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAllModSettings(System.Guid,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetAllModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetAllModSettings.Invoke(System.Guid,System.Boolean,System.Boolean,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.GetAllModSettings(System.Guid,System.Boolean,System.Boolean,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetAllModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.TryInheritMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TryInheritMod(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TryInheritMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TryInheritMod(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.TryInheritMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TryInheritMod.Invoke(System.Guid,System.String,System.Boolean,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TryInheritMod(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TryInheritMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.TrySetMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetMod(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetMod(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.TrySetMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetMod.Invoke(System.Guid,System.String,System.Boolean,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetMod(System.Guid,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.TrySetModPriority">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModPriority(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModPriority.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModPriority(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.TrySetModPriority.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModPriority.Invoke(System.Guid,System.String,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModPriority(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModPriority.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.TrySetModSetting">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSetting(System.Guid,System.String,System.String,System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModSetting.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSetting(System.Guid,System.String,System.String,System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.TrySetModSetting.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModSetting.Invoke(System.Guid,System.String,System.String,System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSetting(System.Guid,System.String,System.String,System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModSetting.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.TrySetModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSettings(System.Guid,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String})"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSettings(System.Guid,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String})"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.TrySetModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModSettings.Invoke(System.Guid,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String},System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.TrySetModSettings(System.Guid,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String})"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.TrySetModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ModSettingChanged">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiModSettings.ModSettingChanged" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ModSettingChanged.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModSettingChanged.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{Penumbra.Api.Enums.ModSettingChange,System.Guid,System.String,System.Boolean}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModSettingChanged.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.CopyModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.CopyModSettings(System.Nullable{System.Guid},System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CopyModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.CopyModSettings(System.Nullable{System.Guid},System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.CopyModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CopyModSettings.Invoke(System.Nullable{System.Guid},System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiModSettings.CopyModSettings(System.Nullable{System.Guid},System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CopyModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiModSettings)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.Launching">
+            <summary>Triggered when Penumbra starts launching before any actual initialization of the plugin. </summary>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.Launching.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.Launching.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.Int32,System.Int32}[])">
+            <summary> Create a new event subscriber. The passed values are the major and minor API version being setup. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.Launching.Provider(Dalamud.Plugin.IDalamudPluginInterface)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.Initialized">
+            <summary>Triggered when the Penumbra API is initialized and ready.</summary>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.Initialized.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.Initialized.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.Initialized.Provider(Dalamud.Plugin.IDalamudPluginInterface)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.Disposed">
+            <summary>Triggered when the Penumbra API is fully disposed and unavailable.</summary>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.Disposed.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.Disposed.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.Disposed.Provider(Dalamud.Plugin.IDalamudPluginInterface)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ApiVersion">
+            <inheritdoc cref="P:Penumbra.Api.Api.IPenumbraApiBase.ApiVersion"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ApiVersion.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="P:Penumbra.Api.Api.IPenumbraApiBase.ApiVersion"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ApiVersion.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ApiVersion.Invoke">
+            <inheritdoc cref="P:Penumbra.Api.Api.IPenumbraApiBase.ApiVersion"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ApiVersion.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiBase)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetModDirectory">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetModDirectory"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModDirectory.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetModDirectory"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetModDirectory.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModDirectory.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetModDirectory"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetModDirectory.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiPluginState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetConfiguration">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetConfiguration"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetConfiguration.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetConfiguration"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetConfiguration.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetConfiguration.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetConfiguration"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetConfiguration.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiPluginState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ModDirectoryChanged">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiPluginState.ModDirectoryChanged" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ModDirectoryChanged.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModDirectoryChanged.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String,System.Boolean}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ModDirectoryChanged.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiPluginState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetEnabledState">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetEnabledState"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetEnabledState.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetEnabledState"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetEnabledState.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiPluginState.GetEnabledState"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetEnabledState.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiPluginState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.EnabledChange">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiPluginState.EnabledChange" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.EnabledChange.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.EnabledChange.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.Boolean}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.EnabledChange.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiPluginState)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RedrawObject">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawObject(System.Int32,Penumbra.Api.Enums.RedrawType)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RedrawObject.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawObject(System.Int32,Penumbra.Api.Enums.RedrawType)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RedrawObject.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RedrawObject.Invoke(System.Int32,Penumbra.Api.Enums.RedrawType)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawObject(System.Int32,Penumbra.Api.Enums.RedrawType)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RedrawObject.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiRedraw)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RedrawAll">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawAll(Penumbra.Api.Enums.RedrawType)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RedrawAll.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawAll(Penumbra.Api.Enums.RedrawType)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RedrawAll.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RedrawAll.Invoke(Penumbra.Api.Enums.RedrawType)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiRedraw.RedrawAll(Penumbra.Api.Enums.RedrawType)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RedrawAll.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiRedraw)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GameObjectRedrawn">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiRedraw.GameObjectRedrawn" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GameObjectRedrawn.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GameObjectRedrawn.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.IntPtr,System.Int32}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GameObjectRedrawn.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiRedraw)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ResolveDefaultPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveDefaultPath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveDefaultPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveDefaultPath(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ResolveDefaultPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveDefaultPath.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveDefaultPath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveDefaultPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ResolveInterfacePath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveInterfacePath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveInterfacePath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveInterfacePath(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ResolveInterfacePath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveInterfacePath.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveInterfacePath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveInterfacePath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ResolveGameObjectPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveGameObjectPath(System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveGameObjectPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveGameObjectPath(System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ResolveGameObjectPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveGameObjectPath.Invoke(System.String,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolveGameObjectPath(System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolveGameObjectPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ResolvePlayerPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPath(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ResolvePlayerPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPath.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ReverseResolveGameObjectPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolveGameObjectPath(System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReverseResolveGameObjectPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolveGameObjectPath(System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ReverseResolveGameObjectPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReverseResolveGameObjectPath.Invoke(System.String,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolveGameObjectPath(System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReverseResolveGameObjectPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ReverseResolvePlayerPath">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolvePlayerPath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReverseResolvePlayerPath.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolvePlayerPath(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ReverseResolvePlayerPath.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReverseResolvePlayerPath.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ReverseResolvePlayerPath(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ReverseResolvePlayerPath.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ResolvePlayerPaths">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPaths(System.String[],System.String[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPaths.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPaths(System.String[],System.String[])"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ResolvePlayerPaths.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPaths.Invoke(System.String[],System.String[])">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPaths(System.String[],System.String[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPaths.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ResolvePlayerPathsAsync">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPathsAsync(System.String[],System.String[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPathsAsync.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPathsAsync(System.String[],System.String[])"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ResolvePlayerPathsAsync.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPathsAsync.Invoke(System.String[],System.String[])">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResolve.ResolvePlayerPathsAsync(System.String[],System.String[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ResolvePlayerPathsAsync.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResolve)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetGameObjectResourcePaths">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcePaths(System.UInt16[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourcePaths.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcePaths(System.UInt16[])"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetGameObjectResourcePaths.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourcePaths.Invoke(System.UInt16[])">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcePaths(System.UInt16[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourcePaths.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResourceTree)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetPlayerResourcePaths">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcePaths"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourcePaths.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcePaths"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetPlayerResourcePaths.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourcePaths.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcePaths"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourcePaths.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResourceTree)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetGameObjectResourcesOfType">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean,System.UInt16[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourcesOfType.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean,System.UInt16[])"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetGameObjectResourcesOfType.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourcesOfType.Invoke(Penumbra.Api.Enums.ResourceType,System.Boolean,System.UInt16[])">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean,System.UInt16[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourcesOfType.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResourceTree)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetPlayerResourcesOfType">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourcesOfType.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetPlayerResourcesOfType.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourcesOfType.Invoke(Penumbra.Api.Enums.ResourceType,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourcesOfType(Penumbra.Api.Enums.ResourceType,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourcesOfType.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResourceTree)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetGameObjectResourceTrees">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourceTrees(System.Boolean,System.UInt16[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourceTrees.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourceTrees(System.Boolean,System.UInt16[])"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetGameObjectResourceTrees.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourceTrees.Invoke(System.Boolean,System.UInt16[])">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetGameObjectResourceTrees(System.Boolean,System.UInt16[])"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetGameObjectResourceTrees.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResourceTree)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.GetPlayerResourceTrees">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourceTrees(System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourceTrees.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourceTrees(System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.GetPlayerResourceTrees.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourceTrees.Invoke(System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiResourceTree.GetPlayerResourceTrees(System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.GetPlayerResourceTrees.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiResourceTree)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.CreateTemporaryCollection">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.CreateTemporaryCollection(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreateTemporaryCollection.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.CreateTemporaryCollection(System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.CreateTemporaryCollection.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreateTemporaryCollection.Invoke(System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.CreateTemporaryCollection(System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CreateTemporaryCollection.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.DeleteTemporaryCollection">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.DeleteTemporaryCollection(System.Guid)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.DeleteTemporaryCollection.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.DeleteTemporaryCollection(System.Guid)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.DeleteTemporaryCollection.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.DeleteTemporaryCollection.Invoke(System.Guid)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.DeleteTemporaryCollection(System.Guid)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.DeleteTemporaryCollection.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.AssignTemporaryCollection">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AssignTemporaryCollection(System.Guid,System.Int32,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AssignTemporaryCollection.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AssignTemporaryCollection(System.Guid,System.Int32,System.Boolean)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.AssignTemporaryCollection.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AssignTemporaryCollection.Invoke(System.Guid,System.Int32,System.Boolean)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AssignTemporaryCollection(System.Guid,System.Int32,System.Boolean)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AssignTemporaryCollection.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.AddTemporaryModAll">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryModAll(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddTemporaryModAll.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryModAll(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.AddTemporaryModAll.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddTemporaryModAll.Invoke(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryModAll(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddTemporaryModAll.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.AddTemporaryMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryMod(System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddTemporaryMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryMod(System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.AddTemporaryMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddTemporaryMod.Invoke(System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.AddTemporaryMod(System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.AddTemporaryMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RemoveTemporaryModAll">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModAll(System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModAll.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModAll(System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RemoveTemporaryModAll.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModAll.Invoke(System.String,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModAll(System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModAll.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RemoveTemporaryMod">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryMod(System.String,System.Guid,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryMod.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryMod(System.String,System.Guid,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RemoveTemporaryMod.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryMod.Invoke(System.String,System.Guid,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryMod(System.String,System.Guid,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryMod.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.SetTemporaryModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettings(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetTemporaryModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettings(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.SetTemporaryModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetTemporaryModSettings.Invoke(System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettings(System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetTemporaryModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.SetTemporaryModSettingsPlayer">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetTemporaryModSettingsPlayer.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.SetTemporaryModSettingsPlayer.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetTemporaryModSettingsPlayer.Invoke(System.Int32,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.SetTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Collections.Generic.IReadOnlyList{System.String}},System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.SetTemporaryModSettingsPlayer.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettings.Invoke(System.Guid,System.String,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettingsPlayer">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettingsPlayer.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettingsPlayer.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettingsPlayer.Invoke(System.Int32,System.String,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveTemporaryModSettingsPlayer.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettings(System.Guid,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettings(System.Guid,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettings.Invoke(System.Guid,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettings(System.Guid,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettingsPlayer">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettingsPlayer(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettingsPlayer.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettingsPlayer(System.Int32,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettingsPlayer.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettingsPlayer.Invoke(System.Int32,System.Int32)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.RemoveAllTemporaryModSettingsPlayer(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.RemoveAllTemporaryModSettingsPlayer.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettings">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettings.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettings.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettings.Invoke(System.Guid,System.String,System.Nullable{System.ValueTuple{System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}}}@,System.String@,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettings(System.Guid,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettings.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettingsPlayer">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettingsPlayer.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettingsPlayer.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettingsPlayer.Invoke(System.Int32,System.String,System.Nullable{System.ValueTuple{System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}}}@,System.String@,System.Int32,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiTemporary.QueryTemporaryModSettingsPlayer(System.Int32,System.String,System.String,System.Int32)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.QueryTemporaryModSettingsPlayer.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiTemporary)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ChangedItemTooltip">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiUi.ChangedItemTooltip" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ChangedItemTooltip.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ChangedItemTooltip.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{Penumbra.Api.Enums.ChangedItemType,System.UInt32}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ChangedItemTooltip.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.ChangedItemClicked">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiUi.ChangedItemClicked" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.ChangedItemClicked.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ChangedItemClicked.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{Penumbra.Api.Enums.MouseButton,Penumbra.Api.Enums.ChangedItemType,System.UInt32}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.ChangedItemClicked.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.PreSettingsTabBarDraw">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiUi.PreSettingsTabBarDraw" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.PreSettingsTabBarDraw.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PreSettingsTabBarDraw.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String,System.Single,System.Single}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PreSettingsTabBarDraw.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.PreSettingsDraw">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiUi.PreSettingsPanelDraw" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.PreSettingsDraw.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PreSettingsDraw.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PreSettingsDraw.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.PostEnabledDraw">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiUi.PostEnabledDraw" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.PostEnabledDraw.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PostEnabledDraw.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PostEnabledDraw.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.PostSettingsDraw">
+            <inheritdoc cref="E:Penumbra.Api.Api.IPenumbraApiUi.PostSettingsPanelDraw" />
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.PostSettingsDraw.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PostSettingsDraw.Subscriber(Dalamud.Plugin.IDalamudPluginInterface,System.Action{System.String}[])">
+            <summary> Create a new event subscriber. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.PostSettingsDraw.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.OpenMainWindow">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiUi.OpenMainWindow(Penumbra.Api.Enums.TabType,System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.OpenMainWindow.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiUi.OpenMainWindow(Penumbra.Api.Enums.TabType,System.String,System.String)"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.OpenMainWindow.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.OpenMainWindow.Invoke(Penumbra.Api.Enums.TabType,System.String,System.String)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiUi.OpenMainWindow(Penumbra.Api.Enums.TabType,System.String,System.String)"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.OpenMainWindow.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+        <member name="T:Penumbra.Api.IpcSubscribers.CloseMainWindow">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiUi.CloseMainWindow"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CloseMainWindow.#ctor(Dalamud.Plugin.IDalamudPluginInterface)">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiUi.CloseMainWindow"/>
+        </member>
+        <member name="F:Penumbra.Api.IpcSubscribers.CloseMainWindow.Label">
+            <summary> The label. </summary>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CloseMainWindow.Invoke">
+            <inheritdoc cref="M:Penumbra.Api.Api.IPenumbraApiUi.CloseMainWindow"/>
+        </member>
+        <member name="M:Penumbra.Api.IpcSubscribers.CloseMainWindow.Provider(Dalamud.Plugin.IDalamudPluginInterface,Penumbra.Api.Api.IPenumbraApiUi)">
+            <summary> Create a provider. </summary>
+        </member>
+    </members>
+</doc>

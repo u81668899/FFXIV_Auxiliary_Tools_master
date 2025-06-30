@@ -1,0 +1,7 @@
+--- @class AddonWrapper
+--- @field Exists boolean
+--- @field Ready boolean
+--- @field AtkValues table<AtkValueWrapper>
+--- @field Nodes table<NodeWrapper>
+--- @field GetAtkValue fun(index: number): AtkValueWrapper
+--- @field GetNode fun(nodeIds: object): NodeWrapper

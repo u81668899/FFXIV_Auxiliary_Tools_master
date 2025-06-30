@@ -1,0 +1,104 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SoundFilter/1.5.0": {
+        "dependencies": {
+          "DalamudPackager": "12.0.0",
+          "DotNet.Glob": "3.1.3",
+          "DotNet.ReproducibleBuilds": "1.2.25",
+          "Fody": "6.9.1",
+          "Resourcer.Fody": "1.8.1"
+        },
+        "runtime": {
+          "SoundFilter.dll": {}
+        },
+        "resources": {
+          "de/SoundFilter.resources.dll": {
+            "locale": "de"
+          },
+          "es/SoundFilter.resources.dll": {
+            "locale": "es"
+          },
+          "fr/SoundFilter.resources.dll": {
+            "locale": "fr"
+          },
+          "ja/SoundFilter.resources.dll": {
+            "locale": "ja"
+          },
+          "pt-BR/SoundFilter.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "zh-Hans/SoundFilter.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "zh-Hant/SoundFilter.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "DalamudPackager/12.0.0": {},
+      "DotNet.Glob/3.1.3": {
+        "runtime": {
+          "lib/netcoreapp2.1/DotNet.Glob.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DotNet.ReproducibleBuilds/1.2.25": {},
+      "Fody/6.9.1": {},
+      "Resourcer.Fody/1.8.1": {
+        "dependencies": {
+          "Fody": "6.9.1"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SoundFilter/1.5.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/12.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J5TJLV3f16T/E2H2P17ClWjtfEBPpq3yxvqW46eN36JCm6wR+EaoaYkqG9Rm5sHqs3/nK/vKjWWyvEs/jhKoXw==",
+      "path": "dalamudpackager/12.0.0",
+      "hashPath": "dalamudpackager.12.0.0.nupkg.sha512"
+    },
+    "DotNet.Glob/3.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hOfHw7MLJw/tbXaFwR1oiDb+dIXDp8URTxp5Pco42OOhiw77wrUNx6v6syNygHZbWwYdXQocL2Mo1l5FnfDVjg==",
+      "path": "dotnet.glob/3.1.3",
+      "hashPath": "dotnet.glob.3.1.3.nupkg.sha512"
+    },
+    "DotNet.ReproducibleBuilds/1.2.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xCXiw7BCxHJ8pF6wPepRUddlh2dlQlbr81gXA72hdk4FLHkKXas7EH/n+fk5UCA/YfMqG1Z6XaPiUjDbUNBUzg==",
+      "path": "dotnet.reproduciblebuilds/1.2.25",
+      "hashPath": "dotnet.reproduciblebuilds.1.2.25.nupkg.sha512"
+    },
+    "Fody/6.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y33IOTstqsDaq2+1Cweu4s/V2iAAaRY6bPIANCre3Wlx9REc+ONyYmUdCc67Z12dy0N2Haq3t7QP4ANndsu/HA==",
+      "path": "fody/6.9.1",
+      "hashPath": "fody.6.9.1.nupkg.sha512"
+    },
+    "Resourcer.Fody/1.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FPeK4jKyyX5+mIjTnHNReGZk2/2xDhmu44UsBI5w9WEhbr4oTMmht3rnBr46A+GCGepC4+2N41K4vExDYiGNVQ==",
+      "path": "resourcer.fody/1.8.1",
+      "hashPath": "resourcer.fody.1.8.1.nupkg.sha512"
+    }
+  }
+}

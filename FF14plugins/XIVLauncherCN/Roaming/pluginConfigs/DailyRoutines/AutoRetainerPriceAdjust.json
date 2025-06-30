@@ -1,8 +1,36 @@
 {
-  "PriceReduction": 1,
-  "LowestAcceptablePrice": 100,
-  "SeparateNQAndHQ": true,
-  "MaxPriceReduction": 0,
-  "ProhibitLowerThanSellPrice": true,
-  "AdjustToLowestPriceWhenLower": true
+  "ItemConfigs": {
+    "0_NQ": {
+      "ItemID": 0,
+      "IsHQ": false,
+      "ItemName": "通用物品配置",
+      "AdjustBehavior": 0,
+      "AdjustValues": {
+        "固定值": 1,
+        "百分比": 10
+      },
+      "PriceMinimum": 100,
+      "PriceMaximum": 100000000,
+      "PriceExpected": 200,
+      "PriceMaxReduction": 0,
+      "AbortLogic": {}
+    },
+    "0_HQ": {
+      "ItemID": 0,
+      "IsHQ": true,
+      "ItemName": "通用物品配置",
+      "AdjustBehavior": 0,
+      "AdjustValues": {
+        "固定值": 1,
+        "百分比": 10
+      },
+      "PriceMinimum": 100,
+      "PriceMaximum": 100000000,
+      "PriceExpected": 200,
+      "PriceMaxReduction": 0,
+      "AbortLogic": {}
+    }
+  },
+  "SendProcessMessage": true,
+  "OperationDelay": 0
 }

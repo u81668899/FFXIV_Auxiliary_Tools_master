@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextAdvance</name>
+    </assembly>
+    <members>
+        <member name="M:TextAdvance.Native.ApplicationIsActivated">
+            <summary>Returns true if the current application has focus, false otherwise</summary>
+        </member>
+        <member name="F:TextAdvance.Navmesh.NavmeshManager.Pathfind">
+            <summary>
+            Vector3 from, Vector3 to, bool fly
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Navmesh.NavmeshManager.NearestPoint">
+            <summary>
+            Vector3 p, float halfExtentXZ, float halfExtentY
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Navmesh.NavmeshManager.PointOnFloor">
+            <summary>
+            Vector3 p, bool allowUnlandable, float halfExtentXZ
+            </summary>
+        </member>
+        <member name="T:TextAdvance.Services.IPCTester">
+            <summary>
+            If you are using ECommons, you can copy this class and you will have ready to use IPC. Otherwise, IPC method names are generated as following: "TextAdvance.MethodName"
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Services.IPCTester.EnableExternalControl">
+            <summary>
+            Enables external control of TextAdvance. 
+            First argument = your plugin's name. 
+            Second argument is options. Copy ExternalTerritoryConfig to your plugin. Configure it as you wish: set "null" values to features that you want to keep as configured by user. Set "true" or "false" to forcefully enable or disable feature. 
+            Returns whether external control successfully enabled or not. When already in external control, it will succeed if called again if plugin name matches with one that already has control and new settings will take effect, otherwise it will fail.
+            External control completely disables territory-specific settings.
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Services.IPCTester.DisableExternalControl">
+            <summary>
+            Disables external control. Will fail if external control is obtained from other plugin.
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Services.IPCTester.IsInExternalControl">
+            <summary>
+            Indicates whether external control is enabled.
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Services.IPCTester.IsEnabled">
+            <summary>
+            Indicates whether user has plugin enabled. Respects territory configuration. If in external control, will return true.
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Services.IPCTester.IsPaused">
+            <summary>
+            Indicates whether plugin is paused by other plugin.
+            </summary>
+        </member>
+        <member name="F:TextAdvance.Services.IPCTester.GetEnableQuestAccept">
+            <summary>
+            All the functions below return currently configured plugin state with respect for territory config and external control. 
+            However, it does not includes IsEnabled or IsPaused check. A complete check whether TextAdvance is currently ready to process appropriate event will look like: <br></br>
+            IsEnabled() &amp;&amp; !IsPaused() &amp;&amp; GetEnableQuestAccept()
+            </summary>
+        </member>
+    </members>
+</doc>

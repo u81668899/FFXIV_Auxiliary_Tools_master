@@ -1,0 +1,19 @@
+{
+  "$type": "Redirect.Configuration, Redirect",
+  "Version": 1,
+  "DefaultMouseoverFriendly": false,
+  "DefaultModelMouseoverFriendly": false,
+  "DefaultMouseoverHostile": false,
+  "DefaultModelMouseoverHostile": false,
+  "DefaultMouseoverGround": false,
+  "DefaultCursorMouseover": false,
+  "EnableMacroQueueing": false,
+  "QueuePotions": false,
+  "QueueSprint": false,
+  "QueueGroundActions": false,
+  "IgnoreErrors": true,
+  "DefaultRedirection": "UI Mouseover",
+  "Redirections": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[Redirect.Redirection, Redirect]], System.Private.CoreLib"
+  }
+}

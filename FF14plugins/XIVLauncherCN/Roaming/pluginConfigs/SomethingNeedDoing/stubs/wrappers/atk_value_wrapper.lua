@@ -1,0 +1,2 @@
+--- @class AtkValueWrapper
+--- @field ValueString string

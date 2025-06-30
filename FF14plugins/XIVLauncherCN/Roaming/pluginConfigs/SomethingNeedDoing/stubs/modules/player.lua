@@ -1,0 +1,27 @@
+--- @class Player
+--- @field GetJob fun(classJobId: number): JobWrapper
+--- @field GetGearset fun(id: number): GearsetWrapper
+--- @field GrandCompany number
+--- @field GCRankMaelstrom number
+--- @field GCRankImmortalFlames number
+--- @field GCRankTwinAdders number
+--- @field FishingBait number
+--- @field Entity EntityWrapper
+--- @field FreeCompany FreeCompanyWrapper
+--- @field Job JobWrapper
+--- @field Gearset GearsetWrapper
+--- @field Gearsets table<GearsetWrapper>
+--- @field IsMoving boolean
+--- @field IsInDuty boolean
+--- @field IsOnIsland boolean
+--- @field CanMount boolean
+--- @field CanFly boolean
+--- @field Revivable boolean
+--- @field Available boolean
+--- @field IsBusy boolean
+--- @field Status table<StatusWrapper>
+--- @field Bingo BingoWrapper
+
+--- @type Player
+--- @as Player
+Player = {}

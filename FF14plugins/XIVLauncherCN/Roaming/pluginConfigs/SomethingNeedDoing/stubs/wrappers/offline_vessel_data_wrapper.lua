@@ -1,0 +1,3 @@
+--- @class OfflineVesselDataWrapper
+--- @field Name string
+--- @field ReturnTime number

@@ -1,0 +1,3884 @@
+{
+  "GUID": "39ed1088-0d69-4dbb-b161-4058b7dfe697",
+  "ConfigVersion": 6,
+  "TargetJob": 0,
+  "Author": "RyougiMio",
+  "Name": "M2S白轴",
+  "TreeRoot": {
+    "DisplayName": "Start",
+    "Childs": [
+      {
+        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeParallel, AEAssist",
+        "DisplayName": "并行",
+        "AnyReturn": false,
+        "StopWhenDead": false,
+        "Childs": [
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37251",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 5,
+                    "Enable": true,
+                    "Remark": "Call Me Honey"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 4,
+                "Enable": true,
+                "Remark": "Call Me Honey[AOE] 00:05-00:10"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3725(2|3)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 7,
+                    "Enable": true,
+                    "Remark": "Splash/Drop of Venom"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37253",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 10,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 9,
+                        "Enable": true,
+                        "Remark": "Drop of Venom"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 11,
+                        "Enable": true,
+                        "Remark": "Splash of Venom"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 8,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 6,
+                "Enable": true,
+                "Remark": "Splash/Drop of Venom[分散/分摊读条]00:12-00:17"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3725(4|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 13,
+                    "Enable": true,
+                    "Remark": "Tempting Twist/Honey Beeline"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37255",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 16,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 15,
+                        "Enable": true,
+                        "Remark": "Tempting Twist[月环]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 17,
+                        "Enable": true,
+                        "Remark": "Honey Beeline[直线]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 14,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 12,
+                "Enable": true,
+                "Remark": "Tempting Twist/Honey Beeline[月环/直线]00:22-00:28"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3725(2|3)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 19,
+                    "Enable": true,
+                    "Remark": "Splash/Drop of Venom"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37253",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 22,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 21,
+                        "Enable": true,
+                        "Remark": "Drop of Venom"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 23,
+                        "Enable": true,
+                        "Remark": "Splash of Venom"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 20,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 18,
+                "Enable": true,
+                "Remark": "Splash/Drop of Venom[分散/分摊读条]00:35-00:40"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3725(4|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 25,
+                    "Enable": true,
+                    "Remark": "Tempting Twist/Honey Beeline"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37255",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 28,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 27,
+                        "Enable": true,
+                        "Remark": "Tempting Twist[月环]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 29,
+                        "Enable": true,
+                        "Remark": "Honey Beeline[直线]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 26,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 24,
+                "Enable": true,
+                "Remark": "Tempting Twist/Honey Beeline[月环/直线]00:42-00:47"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3727(6|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 31,
+                    "Enable": true,
+                    "Remark": "Stinging Slash/Killer Sting"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37275",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 34,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 33,
+                        "Enable": true,
+                        "Remark": "Stinging Slash[双死刑]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 35,
+                        "Enable": true,
+                        "Remark": "Killer Sting[分摊死刑]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 32,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 30,
+                "Enable": true,
+                "Remark": "Stinging Slash/Killer Sting[一二仇死刑/分摊死刑]00:55-00:59"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39972",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 37,
+                    "Enable": true,
+                    "Remark": "Honey B. Live: 1st Beat"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Honey B. Live: 1st Beat 01:11-01:19",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "6d2bdc7c-a44e-4200-83e4-8fbc83d2721d",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 38,
+                    "Enable": false,
+                    "Remark": "Honey B. Live: 1st Beat 01:11-01:19"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 2,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 39,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 36,
+                "Enable": true,
+                "Remark": "Honey B. Live: 1st Beat[大AOE] 01:11-01:19"
+              }
+            ],
+            "GUID": "3ec674e9-d7fc-49c5-9105-da52d949e15b",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.95774674,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 3,
+            "Enable": true,
+            "Remark": "P1"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3729(3|2)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 2,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 42,
+                    "Enable": true,
+                    "Remark": "Center/Outerstage Combo"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37293",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 45,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 44,
+                        "Enable": true,
+                        "Remark": "Outerstage Combo[先钢铁]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 46,
+                        "Enable": true,
+                        "Remark": "Center Combo[先月环]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 43,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 41,
+                "Enable": true,
+                "Remark": "Center/Outerstage Combo[三连 月环/钢铁]01:22-01:27"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37279",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 48,
+                    "Enable": true,
+                    "Remark": "Love Me Tender"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 47,
+                "Enable": true,
+                "Remark": "Love Me Tender[召唤塔] 01:38-01:42"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39805",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 50,
+                    "Enable": true,
+                    "Remark": "Loveseeker"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 49,
+                "Enable": true,
+                "Remark": "Loveseeker[钢铁]02:13-02:16"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37279",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 52,
+                    "Enable": true,
+                    "Remark": "Love Me Tender"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 51,
+                "Enable": true,
+                "Remark": "Love Me Tender 02:26-02:30"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3729(3|2)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 2,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 54,
+                    "Enable": true,
+                    "Remark": "Center/Outerstage Combo"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37293",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 57,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 56,
+                        "Enable": true,
+                        "Remark": "Outerstage Combo[先钢铁]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 58,
+                        "Enable": true,
+                        "Remark": "Center Combo[先月环]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 55,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 53,
+                "Enable": true,
+                "Remark": "Center/Outerstage Combo[三连 月环/钢铁]02:43-02:48"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37263",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 60,
+                    "Enable": true,
+                    "Remark": "Honey B. Finale"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Honey B. Finale",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "6d2bdc7c-a44e-4200-83e4-8fbc83d2721d",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 61,
+                    "Enable": false,
+                    "Remark": "Honey B. Finale"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 3,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 62,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 59,
+                "Enable": true,
+                "Remark": "Honey B. Finale[AOE]03:02-03:07"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 40,
+            "Enable": true,
+            "Remark": "P2"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3727(6|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 3,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 65,
+                    "Enable": true,
+                    "Remark": "Stinging Slash/Killer Sting"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37275",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 68,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 67,
+                        "Enable": true,
+                        "Remark": "Stinging Slash[双死刑]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 69,
+                        "Enable": true,
+                        "Remark": "Killer Sting[分摊死刑]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 66,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 64,
+                "Enable": true,
+                "Remark": "Stinging Slash/Killer Sting[一二仇死刑/分摊死刑]03:17-03:21"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37245",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 71,
+                    "Enable": true,
+                    "Remark": "Alarm Pheromones"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 70,
+                "Enable": true,
+                "Remark": "Alarm Pheromones[小怪召唤] 03:26-03:29"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39973",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 73,
+                    "Enable": true,
+                    "Remark": "Honey B. Live: 2nd Beat"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Honey B. Live: 2nd Beat",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "6d2bdc7c-a44e-4200-83e4-8fbc83d2721d",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 74,
+                    "Enable": false,
+                    "Remark": "Honey B. Live: 2nd Beat"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 4,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 75,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 72,
+                "Enable": true,
+                "Remark": "Honey B. Live: 2nd Beat[AOE] 04:06-04:14"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 63,
+            "Enable": true,
+            "Remark": "P3"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3968(8|9)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 4,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 78,
+                    "Enable": true,
+                    "Remark": "Spread Love/Drops of Love"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "39688",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 81,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 80,
+                        "Enable": true,
+                        "Remark": "Spread Love"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 82,
+                        "Enable": true,
+                        "Remark": "Drops of Love"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 79,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 77,
+                "Enable": true,
+                "Remark": "Spread Love/Drops of Love[稍后 分散/分摊] 04:17-04:22"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37279",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 84,
+                    "Enable": true,
+                    "Remark": "Love Me Tender"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 83,
+                "Enable": true,
+                "Remark": "Love Me Tender 04:28-04:32"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3969(2|3)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 86,
+                    "Enable": true,
+                    "Remark": "Tempting Twist/Honey Beeline"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "39693",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 89,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 88,
+                        "Enable": true,
+                        "Remark": "Tempting Twist[月环]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 90,
+                        "Enable": true,
+                        "Remark": "Honey Beeline[直线]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 87,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 85,
+                "Enable": true,
+                "Remark": "Tempting Twist/Honey Beeline[月环/直线][P4]04:51-04:56"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37263",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 92,
+                    "Enable": true,
+                    "Remark": "Honey B. Finale"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Honey B. Finale",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "6d2bdc7c-a44e-4200-83e4-8fbc83d2721d",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 93,
+                    "Enable": false,
+                    "Remark": "Honey B. Finale"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 5,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 94,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 91,
+                "Enable": true,
+                "Remark": "Honey B. Finale 05:05-05:10"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 76,
+            "Enable": true,
+            "Remark": "P4"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3725(2|3)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 5,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 97,
+                    "Enable": true,
+                    "Remark": "Splash/Drop of Venom"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37253",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 100,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 99,
+                        "Enable": true,
+                        "Remark": "Drop of Venom"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 101,
+                        "Enable": true,
+                        "Remark": "Splash of Venom"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 98,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 96,
+                "Enable": true,
+                "Remark": "Splash/Drop of Venom[分散/分摊读条]05:24-05:29"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37245",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 103,
+                    "Enable": true,
+                    "Remark": "Alarm Pheromones"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 102,
+                "Enable": true,
+                "Remark": "Alarm Pheromones 05:31-05:34"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37268",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 105,
+                    "Enable": true,
+                    "Remark": "Poison Sting"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 104,
+                "Enable": true,
+                "Remark": "Poison Sting [放毒]05:37-05:42"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37288",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 107,
+                    "Enable": true,
+                    "Remark": "Bee Sting "
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 106,
+                "Enable": true,
+                "Remark": "Bee Sting[44分摊] 06:03-06:08"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3727(6|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 109,
+                    "Enable": true,
+                    "Remark": "Stinging Slash/Killer Sting"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37275",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 112,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 111,
+                        "Enable": true,
+                        "Remark": "Stinging Slash[双死刑]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 113,
+                        "Enable": true,
+                        "Remark": "Killer Sting[分摊死刑]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 110,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 108,
+                "Enable": true,
+                "Remark": "Stinging Slash/Killer Sting[一二仇死刑/分摊死刑]06:11-06:15"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3725(4|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 115,
+                    "Enable": true,
+                    "Remark": "Tempting Twist/Honey Beeline"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37255",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 118,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 117,
+                        "Enable": true,
+                        "Remark": "Tempting Twist[月环]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 119,
+                        "Enable": true,
+                        "Remark": "Honey Beeline[直线]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 116,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 114,
+                "Enable": true,
+                "Remark": "Tempting Twist/Honey Beeline[月环/直线]06:23-06:28"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "39974",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 121,
+                    "Enable": true,
+                    "Remark": "Honey B. Live: 3rd Beat"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Honey B. Live: 3rd Beat",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "6d2bdc7c-a44e-4200-83e4-8fbc83d2721d",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 122,
+                    "Enable": false,
+                    "Remark": "Honey B. Live: 3rd Beat"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 6,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 123,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 120,
+                "Enable": true,
+                "Remark": "Honey B. Live: 3rd Beat [AOE]06:45-06:53"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 95,
+            "Enable": true,
+            "Remark": "P5"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3968(8|9)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 6,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 126,
+                    "Enable": true,
+                    "Remark": "Spread Love/Drops of Love"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "39688",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 129,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 128,
+                        "Enable": true,
+                        "Remark": "Spread Love"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 130,
+                        "Enable": true,
+                        "Remark": "Drops of Love"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 127,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 125,
+                "Enable": true,
+                "Remark": "Spread Love/Drops of Love[稍后 分散/分摊]  06:55-07:00"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3729(3|2)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 132,
+                    "Enable": true,
+                    "Remark": "Center/Outerstage Combo"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37293",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 135,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 134,
+                        "Enable": true,
+                        "Remark": "Outerstage Combo[先钢铁]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 136,
+                        "Enable": true,
+                        "Remark": "Center Combo[先月环]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 133,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 131,
+                "Enable": true,
+                "Remark": "Center/Outerstage Combo[三连 月环/钢铁]07:02-07:07"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3729(3|2)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 138,
+                    "Enable": true,
+                    "Remark": "Center/Outerstage Combo"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37293",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 141,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 140,
+                        "Enable": true,
+                        "Remark": "Outerstage Combo[先钢铁]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 142,
+                        "Enable": true,
+                        "Remark": "Center Combo[先月环]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 139,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 137,
+                "Enable": true,
+                "Remark": "Center/Outerstage Combo[三连 月环/钢铁]07:22-07:27"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3969(2|3)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 144,
+                    "Enable": true,
+                    "Remark": "Tempting Twist/Honey Beeline"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "39693",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 147,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 146,
+                        "Enable": true,
+                        "Remark": "Tempting Twist[月环]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 148,
+                        "Enable": true,
+                        "Remark": "Honey Beeline[直线]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 145,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 143,
+                "Enable": true,
+                "Remark": "Tempting Twist/Honey Beeline[月环/直线][P6]07:46-07:52"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37263",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 150,
+                    "Enable": true,
+                    "Remark": "Honey B. Finale"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreePrintDebugInfoNode, AEAssist",
+                    "DisplayName": "打印信息",
+                    "Info": "Honey B. Finale",
+                    "ToastType": 2,
+                    "ToastDuration": 1500,
+                    "GUID": "6d2bdc7c-a44e-4200-83e4-8fbc83d2721d",
+                    "Important": false,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 151,
+                    "Enable": false,
+                    "Remark": "Honey B. Finale"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 7,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 152,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 149,
+                "Enable": true,
+                "Remark": "Honey B. Finale[AOE]08:00-08:05"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 124,
+            "Enable": true,
+            "Remark": "P6"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "\\b3727(6|5)\\b",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 7,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "1c81e985-102f-4884-9451-403434acac7e",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.30985916,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 155,
+                    "Enable": true,
+                    "Remark": "Stinging Slash/Killer Sting"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSelect, AEAssist",
+                    "DisplayName": "选择",
+                    "Childs": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [
+                          {
+                            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                            "CondLogicType": 0,
+                            "CheckOnce": true,
+                            "ReverseResult": false,
+                            "TriggerConds": [
+                              {
+                                "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                                "Strs": null,
+                                "Remark": "",
+                                "RegexNameOrId": "37275",
+                                "NeedTargetable": true,
+                                "DisplayName": "General/敌人读条使用技能"
+                              }
+                            ],
+                            "DisplayName": "立即检测",
+                            "GUID": "6acef7e2-ff4d-4432-b2d7-4e65a8d88b92",
+                            "Important": true,
+                            "Color": {
+                              "X": 0.11267614,
+                              "Y": 1.0,
+                              "Z": 0.0,
+                              "W": 1.0
+                            },
+                            "Id": 158,
+                            "Enable": true,
+                            "Remark": ""
+                          }
+                        ],
+                        "GUID": "1c93c834-3196-4940-95b4-2db5cd7f18ba",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 157,
+                        "Enable": true,
+                        "Remark": "Stinging Slash[双死刑]"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                        "DisplayName": "序列",
+                        "IgnoreNodeResult": false,
+                        "StopWhenDead": false,
+                        "Childs": [],
+                        "GUID": "bd0cd6ba-f50a-4861-ad46-4be4c0d162c3",
+                        "Important": true,
+                        "Color": {
+                          "X": 1.0,
+                          "Y": 1.0,
+                          "Z": 0.4,
+                          "W": 1.0
+                        },
+                        "Id": 159,
+                        "Enable": true,
+                        "Remark": "Killer Sting[分摊死刑]"
+                      }
+                    ],
+                    "GUID": "1ad03dd2-a928-4a50-ae82-3350960a21eb",
+                    "Important": true,
+                    "Color": {
+                      "X": 1.0,
+                      "Y": 1.0,
+                      "Z": 0.4,
+                      "W": 1.0
+                    },
+                    "Id": 156,
+                    "Enable": true,
+                    "Remark": ""
+                  }
+                ],
+                "GUID": "6814a489-1975-49bb-8783-0dadd92b14c3",
+                "Important": true,
+                "Color": {
+                  "X": 0.97652584,
+                  "Y": 0.66018647,
+                  "Z": 0.0,
+                  "W": 1.0
+                },
+                "Id": 154,
+                "Enable": true,
+                "Remark": "Stinging Slash/Killer Sting[一二仇死刑/分摊死刑]08:14-08:18"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37290",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 161,
+                    "Enable": true,
+                    "Remark": "Rotten Heart"
+                  },
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeActionNode, AEAssist",
+                    "TriggerActions": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerAction.TriggerActionAddVariable, AEAssist",
+                        "Remark": "",
+                        "VariableName": "P",
+                        "SetVariableVaule": 8,
+                        "DisplayName": "General/设置变量"
+                      }
+                    ],
+                    "DisplayName": "行为",
+                    "GUID": "83b64d77-1824-48b4-aafd-e2b1ffec87ef",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.0,
+                      "Y": 0.028169155,
+                      "Z": 1.0,
+                      "W": 1.0
+                    },
+                    "Id": 162,
+                    "Enable": true,
+                    "Remark": "转场变量"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 160,
+                "Enable": true,
+                "Remark": "Rotten Heart 08:30-08:35[AOE 上毒]08:30-08:35"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 153,
+            "Enable": true,
+            "Remark": "P7"
+          },
+          {
+            "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+            "DisplayName": "序列",
+            "IgnoreNodeResult": false,
+            "StopWhenDead": false,
+            "Childs": [
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37251",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 8,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 165,
+                    "Enable": true,
+                    "Remark": "Call Me Honey"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 164,
+                "Enable": true,
+                "Remark": "Call Me Honey[1st][AOE]08:47-08:52"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37251",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 8,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 167,
+                    "Enable": true,
+                    "Remark": "Call Me Honey"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 166,
+                "Enable": true,
+                "Remark": "Call Me Honey[2nd][AOE]09:04-09:09"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37251",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 8,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 169,
+                    "Enable": true,
+                    "Remark": "Call Me Honey"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 168,
+                "Enable": true,
+                "Remark": "Call Me Honey[3rd][AOE]09:21-09:26"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37251",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 8,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 171,
+                    "Enable": true,
+                    "Remark": "Call Me Honey"
+                  }
+                ],
+                "GUID": "724b5730-675b-4389-a0ca-b813865ba4ff",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 170,
+                "Enable": true,
+                "Remark": "Call Me Honey[4th][AOE]09:38-09:43"
+              },
+              {
+                "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeSequence, AEAssist",
+                "DisplayName": "序列",
+                "IgnoreNodeResult": false,
+                "StopWhenDead": false,
+                "Childs": [
+                  {
+                    "$type": "AEAssist.CombatRoutine.Trigger.Node.TreeCondNode, AEAssist",
+                    "CondLogicType": 0,
+                    "CheckOnce": false,
+                    "ReverseResult": false,
+                    "TriggerConds": [
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondEnemyCastSpell, AEAssist",
+                        "Strs": null,
+                        "Remark": "",
+                        "RegexNameOrId": "37303",
+                        "NeedTargetable": true,
+                        "DisplayName": "General/敌人读条使用技能"
+                      },
+                      {
+                        "$type": "AEAssist.CombatRoutine.Trigger.TriggerCond.TriggerCondVariable, AEAssist",
+                        "VariableName": "P",
+                        "CompareType": 0,
+                        "VariableVaule": 8,
+                        "Remark": null,
+                        "DisplayName": "General/变量值"
+                      }
+                    ],
+                    "DisplayName": "等待条件",
+                    "GUID": "2d76fcef-01f5-4610-ac99-5d7e9cb7e331",
+                    "Important": true,
+                    "Color": {
+                      "X": 0.056337953,
+                      "Y": 1.0,
+                      "Z": 0.0,
+                      "W": 1.0
+                    },
+                    "Id": 173,
+                    "Enable": true,
+                    "Remark": "Sheer Heart Attack"
+                  }
+                ],
+                "GUID": "dfea655b-9224-408f-a9bf-003133e3cf4d",
+                "Important": true,
+                "Color": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 0.4,
+                  "W": 1.0
+                },
+                "Id": 172,
+                "Enable": true,
+                "Remark": "Sheer Heart Attack[狂暴] 09:55-10:05"
+              }
+            ],
+            "GUID": "c13f1bad-eae0-4a03-a063-f5feaf3e5636",
+            "Important": true,
+            "Color": {
+              "X": 0.0,
+              "Y": 0.98591566,
+              "Z": 1.0,
+              "W": 1.0
+            },
+            "Id": 163,
+            "Enable": true,
+            "Remark": "P8"
+          }
+        ],
+        "GUID": "885638ff-defc-4b4f-ba81-3125c6b8a7ed",
+        "Important": false,
+        "Color": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.4,
+          "W": 1.0
+        },
+        "Id": 2,
+        "Enable": true,
+        "Remark": ""
+      }
+    ],
+    "GUID": "48d2d82b-3ae5-4dc4-b598-87651416217a",
+    "Important": false,
+    "Color": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 0.4,
+      "W": 1.0
+    },
+    "Id": 1,
+    "Enable": true,
+    "Remark": ""
+  },
+  "ExposedVars": [],
+  "ExposedVarDesc": "",
+  "OpenerScript": "",
+  "Note": "",
+  "TerritoryTypeId": 1228,
+  "TerritoryWeatherId": 1,
+  "TargetAcrAuthor": "",
+  "ClearCustomed": false,
+  "LogsAddress": ""
+}

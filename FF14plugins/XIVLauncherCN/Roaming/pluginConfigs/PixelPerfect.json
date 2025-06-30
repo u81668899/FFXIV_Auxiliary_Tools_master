@@ -1,6 +1,6 @@
 {
   "$type": "PixelPerfect.Config, PixelPerfect",
-  "Version": 5,
+  "Version": 7,
   "Bitch": true,
   "DoodleBag": [
     {
@@ -10,6 +10,8 @@
       "Job": 0,
       "JobsBool": [
         true,
+        false,
+        false,
         false,
         false,
         false,
@@ -63,7 +65,9 @@
         "Y": 1.0,
         "Z": 1.0,
         "W": 1.0
-      }
+      },
+      "Zed": 0.0,
+      "Zedding": false
     }
   ]
 }

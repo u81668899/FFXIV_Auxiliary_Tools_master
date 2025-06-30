@@ -1,0 +1,98 @@
+{
+  "Plugin Text Command Description": {
+    "message": "{0} で設定ウインドウを開く。",
+    "description": "Plugin.OnLanguageChanged"
+  },
+  "Config Subcommand Help Message": {
+    "message": "設定ウインドウを開きます。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Results Subcommand Help Message": {
+    "message": "最後に行われたレディチェック結果を含むウインドウを開きます。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Clear Subcommand Help Message": {
+    "message": "パーティ/アライアンスリストから、最新のレディチェックアイコンを削除します。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Debug Subcommand Help Message": {
+    "message": "パーティやレディチェックオブジェクトのデータを含むデバックウインドウを開きます。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Basic Help Message": {
+    "message": "このプラグインは自動で動作します。しかし、いくつかのテキストコマンドをサポートしています。  有効なサブコマンドは {0}, {1}, {2} です。 各コマンドの詳細については \"{3} <subcommand>\" を使用してください。",
+    "description": "Plugin.ProcessTextCommand_Help"
+  },
+  "Window Title: Config": {
+    "message": "Ready Check Helper の設定",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Print Names of Unready in Chat": {
+    "message": "チャットウインドウに準備ができていないキャラクターの名前を表示する。",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Max Names in Chat": {
+    "message": "チャットに表示する名前の最大数：",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Draw on Party Alliance Lists": {
+    "message": "レデイチェックをパーティ/アライアンスリストに表示する。",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List Settings": {
+    "message": "パーティ/アライアンスリストからレデイチェックを削除する。：",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Combat": {
+    "message": "戦闘開始時",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Entering Instance": {
+    "message": "インスタンス突入時",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List upon Enteringing Combat in Instance": {
+    "message": "インスタンス内で戦闘を開始した時",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Config Option: Clear Party Alliance List after X Seconds:": {
+    "message": "一定秒数経過後：",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Help: Clear Party Alliance List after X Seconds": {
+    "message": "この設定の変更は、次回のレディチェックが終了するまで有効になりません。",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Button: Save and Close": {
+    "message": "保存して閉じる",
+    "description": "PluginUI.DrawSettingsWindow"
+  },
+  "Window Title: Ready Check Results": {
+    "message": "最新のレディチェック結果",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Placeholder: No Ready Check Results Exist": {
+    "message": "まだレディチェックが行われていません。",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Button: Close": {
+    "message": "閉じる",
+    "description": "PluginUI.DrawReadyCheckResultsWindow"
+  },
+  "Window Title: Ready Check and Alliance Debug Data": {
+    "message": "レディチェックとアライアンスのデバックデータ",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Help: Debug Set Object Address Warning": {
+    "message": "この設定が何を行っているのか正確に理解していない場合は触らないでください！プラグインがクラッシュする可能性があります。",
+    "description": "PluginUI.DrawDebugWindow"
+  },
+  "Window Title: Raw Ready Check Data": {
+    "message": "デバック: 生のレディチェックデータ",
+    "description": "PluginUI.DrawDebugRawWindow"
+  },
+  "Window Title: Processed Ready Check Data": {
+    "message": "デバック: 処理済みのレディチェックデータ",
+    "description": "PluginUI.DrawDebugProcessedWindow"
+  }
+}

@@ -1,0 +1,4 @@
+--- @class FrameworkWrapper
+--- @field EorzeaTime number
+--- @field ClientLanguage number
+--- @field Region number

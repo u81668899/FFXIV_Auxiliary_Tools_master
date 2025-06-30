@@ -1,0 +1,3 @@
+--- @class ExcelSheetWrapper
+--- @field GetRow fun(rowId: number): ExcelRowWrapper
+--- @field GetSubRow fun(rowId: number, subRowId: number): ExcelRowWrapper

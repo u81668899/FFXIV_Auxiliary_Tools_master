@@ -1,0 +1,4 @@
+--- @class LimitBreakWrapper
+--- @field CurrentUnits number
+--- @field BarUnits number
+--- @field BarCount number

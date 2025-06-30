@@ -1,0 +1,204 @@
+﻿Version: 3
+EnabledTweaks: []
+Tweaks:
+  AchievementTrackerConfiguration:
+    Achievements: []
+    BarColour:
+      X: 1
+      Y: 1
+      Z: 1
+      W: 1
+    UpdateFrequency: 60
+    AutoRemoveCompleted: false
+  AddresBook:
+    Locations: []
+  AddresBookDebug:
+    Locations: []
+  ARTurnIn:
+    InventoryFreeSlotThreshold: 50
+    ExcludedCharacters: []
+  AutoFollow:
+    MovementType: Direct
+    DistanceToKeep: 3
+    DisableIfFurtherThan: 0
+    OnlyInDuty: false
+    MountAndFly: false
+    AutoFollowName: ''
+  AutoSelectGardening:
+    SelectedSoil: 0
+    SelectedSeed: 0
+    IncludeFertilzing: false
+    SelectedFertilizer: 0
+    AutoConfirm: false
+    Fallback: false
+    OnlyShowInventoryItems: false
+  ClickToMove:
+    MovementType: Direct
+  Commands:
+    EnableTPFlag: false
+    EnableTPGC: false
+    EnableEquip: false
+    EnableDesynth: false
+    EnableLowerQuality: false
+    EnableUseItem: false
+  DateWithDestiny:
+    blacklist: []
+    whitelist: []
+    zones: []
+    YokaiMode: false
+    StayInMeleeRange: true
+    PrioritizeForlorns: false
+    PrioritizeBonusFates: false
+    PrioritizeStartedFates: true
+    BonusWhenTwist: false
+    EquipWatch: true
+    SwapMinions: true
+    SwapZones: true
+    FullAuto: true
+    AutoMount: true
+    AutoFly: true
+    PathToFate: true
+    AutoSync: true
+    AutoTarget: true
+    AutoMoveToMobs: true
+    MaxDuration: 900
+    MinTimeRemaining: 120
+    MaxProgress: 90
+    ShowFateTimeRemaining: false
+    ShowFateBonusIndicator: false
+  DebugTools:
+    AutoVoidIslandRest: false
+    EnableTPClick: false
+    EnableNoClip: false
+    NoClipSpeed: 0.05
+    EnableMoveSpeed: false
+    EnableDirectActions: false
+    EnableTPMarker: false
+    EnableTPOffset: false
+    EnableTPAbsolute: false
+  EnhancedDutyStartEnd:
+    StartMsg: ''
+    Players: []
+    CheckForAll: false
+    CheckForAny: false
+    EndMsg: ''
+    AutoLeaveOnEnd: false
+    TimeToWait: 0
+  EnhancedLoginLogout:
+    Chars:
+    - CID: 0
+      Name: Global
+      LoginCommands: []
+    - CID: 19014409516066930
+      Name: 十六五夜
+      LoginCommands: []
+    RunCommandsWhenARIsActive: false
+  GettingTooAttached:
+    NumberOfLoops: 10000
+  GMAlert:
+    Toast: false
+    ChatMessage: false
+    Sound: false
+    BeepCount: 3
+    BeepDuration: 250
+    BeepFrequency: 900
+    KillGame: false
+    Commands: []
+  HuntRelayHelper:
+    Channels:
+    - Item1: Ls1
+      Item2: l1
+      Item3: true
+      Item4: false
+    - Item1: Ls2
+      Item2: l2
+      Item3: true
+      Item4: false
+    - Item1: Ls3
+      Item2: l3
+      Item3: true
+      Item4: false
+    - Item1: Ls4
+      Item2: l4
+      Item3: true
+      Item4: false
+    - Item1: Ls5
+      Item2: l5
+      Item3: true
+      Item4: false
+    - Item1: Ls6
+      Item2: l6
+      Item3: true
+      Item4: false
+    - Item1: Ls7
+      Item2: l7
+      Item3: true
+      Item4: false
+    - Item1: Ls8
+      Item2: l8
+      Item3: true
+      Item4: false
+    - Item1: FreeCompany
+      Item2: fc
+      Item3: true
+      Item4: false
+    - Item1: NoviceNetwork
+      Item2: n
+      Item3: true
+      Item4: false
+    - Item1: CrossLinkShell1
+      Item2: cwl1
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell2
+      Item2: cwl2
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell3
+      Item2: cwl3
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell4
+      Item2: cwl4
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell5
+      Item2: cwl5
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell6
+      Item2: cwl6
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell7
+      Item2: cwl7
+      Item3: false
+      Item4: false
+    - Item1: CrossLinkShell8
+      Item2: cwl8
+      Item3: false
+      Item4: false
+    OnlySendLocalHuntsToLocalChannels: true
+    AssumeBlankWorldsAreLocal: false
+    DontRepeatRelays: true
+    OverrideMinionFlag: true
+    AllowPartialWorldMatches: false
+    DryRun: false
+    ChatMessagePattern: '[<world>] <type> -> <flag>'
+    AssumedLocality: PlayerHomeWorld
+    Types:
+    - Item1: SRank
+      Item2: S Rank
+      Item3: s rank, rank s, /(?:^|\W)[sS](?:$|\W)/
+    - Item1: Minions
+      Item2: Minions
+      Item3: ssminion, /\bminions?\b/
+    - Item1: Train
+      Item2: Train
+      Item3: train
+    - Item1: FATE
+      Item2: FATE
+      Item3: boss, fate
+  SimpleCurrencyAlertConfig:
+    Alerts: []
+ShowDebug: false

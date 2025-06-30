@@ -1,7 +1,8 @@
 {
   "$type": "ZodiacBuddy.PluginConfiguration, ZodiacBuddy",
+  "DisableTeleport": false,
   "Version": 1,
-  "BraveEchoChannel": 56,
+  "BraveEchoChannel": 16,
   "BraveEchoTarget": true,
   "BonusLight": {
     "$type": "ZodiacBuddy.BonusLight.BonusLightConfiguration, ZodiacBuddy",
@@ -24,8 +25,8 @@
   },
   "InformationWindow": {
     "$type": "ZodiacBuddy.InformationWindow.InformationWindowConfiguration, ZodiacBuddy",
-    "ManualSize": false,
-    "ClickThrough": false,
+    "ManualSize": true,
+    "ClickThrough": true,
     "ProgressColor": 4287902819,
     "ProgressAutoSize": true,
     "ProgressSize": 130

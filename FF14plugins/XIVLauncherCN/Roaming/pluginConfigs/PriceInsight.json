@@ -1,6 +1,6 @@
 {
   "$type": "PriceInsight.Configuration, PriceInsight",
-  "Version": 0,
+  "Version": 2,
   "ShowRegion": false,
   "ShowDatacenter": true,
   "ShowWorld": true,
@@ -8,8 +8,8 @@
   "ShowMostRecentPurchase": false,
   "ShowMostRecentPurchaseRegion": false,
   "ShowMostRecentPurchaseWorld": true,
-  "ShowDailySaleVelocity": false,
-  "ShowAverageSalePrice": false,
+  "ShowDailySaleVelocityIn": 1,
+  "ShowAverageSalePriceIn": 0,
   "UseCurrentWorld": false,
   "RefreshWithAlt": true,
   "PrefetchInventory": true,

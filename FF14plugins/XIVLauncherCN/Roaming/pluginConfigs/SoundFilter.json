@@ -2,9 +2,9 @@
   "$type": "SoundFilter.Config.Configuration, SoundFilter",
   "Enabled": true,
   "ShowLog": false,
-  "LogEnabled": false,
+  "LogEnabled": true,
   "LogFiltered": false,
-  "LogEntries": 20,
+  "LogEntries": 100,
   "Version": 2,
   "Filters": [
     {
@@ -15,7 +15,8 @@
         "sound/system/se_ui.scd/49",
         "sound/system/se_ui.scd/116",
         "sound/system/se_ui.scd/99",
-        "sound/system/se_ui.scd/111"
+        "sound/system/se_ui.scd/111",
+        "sound/system/se_ui.scd/153"
       ]
     }
   ]

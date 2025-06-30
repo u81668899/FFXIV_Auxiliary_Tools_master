@@ -1,0 +1,6 @@
+--- @class EnvManagerWrapper
+--- @field DayTimeSeconds number
+--- @field ActiveTransitionTime number
+--- @field CurrentTransitionTime number
+--- @field IsInGame number
+--- @field TransitionTime number

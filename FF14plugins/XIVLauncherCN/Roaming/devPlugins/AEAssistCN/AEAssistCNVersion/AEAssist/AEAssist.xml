@@ -1,0 +1,4067 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AEAssist</name>
+    </assembly>
+    <members>
+        <member name="T:AEAssist.Extension.GameObjectExtension">
+            <summary>
+            <para>继承关系</para>
+            <para>LocalPlayer->PlayerCharacter->BattleCharacter->Character->GameObject</para>
+            </summary>
+        </member>
+        <member name="M:AEAssist.Extension.GameObjectExtension.HasCanDispel(Dalamud.Game.ClientState.Objects.Types.IBattleChara)">
+            <summary>
+            是否拥有可驱散buff
+            </summary>
+            <param name="characterAgent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Extension.GameObjectExtension.HitAnyAura(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Collections.Generic.List{System.UInt32},System.Int32)">
+            <summary>
+            返回在指定buff列表中自身存在的第一个buffId
+            </summary>
+            <param name="characterAgent"></param>
+            <param name="auras"></param>
+            <param name="msLeft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Extension.GameObjectExtension.Distance(Dalamud.Game.ClientState.Objects.Types.IGameObject,Dalamud.Game.ClientState.Objects.Types.IGameObject,AEAssist.Define.DistanceMode)">
+            <summary>
+            计算两目标的距离
+            </summary>
+            <param name="source">第一个目标</param>
+            <param name="target">第二个目标</param>
+            <param name="mode">模式</param>
+            <returns>如果 <paramref name="mode"/> 等于 DistanceMode.IgnoreAll 返回两目标圈距离；</returns>
+            <exception cref="T:System.ArgumentNullException"/>
+            <remarks>
+            默认模式返回俩目标圈距离。
+            如果需要获取目标圈距离且不忽视高度, 
+            <para><paramref name="mode"/> 参数设置为 DistanceMode.IgnoreAll &amp; DistanceMode.IgnoreHeight 或者 DistanceMode.IgnoreSourceHitbox | DistanceMode.IgnoreTargetHitbox</para>
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Extension.GameObjectExtension.InBehind(Dalamud.Game.ClientState.Objects.Types.IGameObject,System.Numerics.Vector3,System.Boolean)">
+            <summary>
+            点坐标是否在gameObject的背后
+            </summary>
+            <param name="gameObject"></param>
+            <param name="pos"></param>
+            <param name="checkPositional">True检查是否有身位</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Extension.GameObjectExtension.IsBehindTarget(Dalamud.Game.ClientState.Objects.Types.IGameObject,Dalamud.Game.ClientState.Objects.Types.IGameObject)">
+            <summary>
+            source是否在target的背后
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Extension.GameObjectExtension.IsInEnemiesList(Dalamud.Game.ClientState.Objects.Types.IGameObject)">
+            <summary>
+            判断GameObject是否在仇恨列表内
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AEAssist.Extension.LocalPlayerExtension">
+            <summary>
+            表示操作的对象都是本地角色
+            </summary>
+        </member>
+        <member name="M:AEAssist.Extension.LocalPlayerExtension.IsMounted(Dalamud.Game.ClientState.Objects.Types.ICharacter)">
+            <summary>
+            自身是否在骑乘状态
+            </summary>
+            <param name="chr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Extension.LocalPlayerExtension.IsFlight(Dalamud.Game.ClientState.Objects.Types.ICharacter)">
+            <summary>
+            自身是否在飞行状态
+            </summary>
+            <param name="chr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.AutoHelper.PolarToCartesian(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            按照角度和距离计算坐标
+            </summary>
+            <param name="radius"></param>
+            <param name="angleDegrees"></param>
+            <param name="centerX"></param>
+            <param name="centerY"></param>
+            <param name="centerZ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.AutoHelper.PolarToCartesian(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            按照角度和距离计算坐标，可自定义基准角度
+            </summary>
+            <param name="radius">半径</param>
+            <param name="angleDegrees">角度（度）</param>
+            <param name="baseAngleDegrees">基准角度（度），设为0度的参考点</param>
+            <param name="centerX">中心点X坐标</param>
+            <param name="centerY">中心点Y坐标</param>
+            <param name="centerZ">中心点Z坐标</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.AutoHelper.GetPositionWithAngleDegrees(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Single,System.Single)">
+            <summary>
+            获取角色指定角度方向上的位置（角度制）
+            </summary>
+            <param name="BattleChara">角色</param>
+            <param name="distance">距离</param>
+            <param name="angleDegrees">角度（角度制），0表示正前方，180表示正后方</param>
+            <returns>目标位置</returns>
+        </member>
+        <member name="M:AEAssist.Helper.AutoHelper.GetPositionWithAbsoluteOffset(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Single,System.Single,System.Single)">
+            <summary>
+            获取角色指定角度方向上的位置，支持绝对左右偏移
+            </summary>
+            <param name="BattleChara">角色</param>
+            <param name="distance">前后距离</param>
+            <param name="angleDegrees">角度（角度制），0表示正前方，180表示正后方</param>
+            <param name="lateralOffset">绝对左右偏移量，正值向右偏移，负值向左偏移</param>
+            <returns>目标位置</returns>
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.SendMessage(System.String)">
+            发送宏指令
+        </member>
+        <member name="T:AEAssist.Helper.ChatHelper.Print">
+            <summary>
+            本地打印纯文本，别人看不到，也没有声音
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Say(System.String)">
+            说话频道 /s
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Shout(System.String)">
+            喊话频道 /sh
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Yell(System.String)">
+            呼喊频道 /y
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.PvPTeam(System.String)">
+            战队频道 /pt
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Echo(System.String)">
+            默语频道 /e
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Party(System.String)">
+            小队频道 /p
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Alliance(System.String)">
+            团队频道 /a
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.FreeCompany(System.String)">
+            部队频道 /fc
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.CustomEmote(System.String)">
+            自定义表情
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.StandardEmote(System.String)">
+            标准表情
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.Urgent(System.String)">
+            红字警告(淡红色)
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.ErrorMessage(System.String)">
+            红字报错(正红色)
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.NPCDialogue(System.String)">
+            NPC说话频道
+        </member>
+        <member name="M:AEAssist.Helper.ChatHelper.Print.ColorText(System.Object[])">
+            <summary>
+            打印自定义彩色文本，如：ColorText("哈哈哈",69,"你好",22,"!")
+            </summary>
+            <param name="args">每个参数一段文本，文本参数后面跟int的颜色值参数，不带颜色默认白色</param>
+        </member>
+        <member name="T:AEAssist.Helper.HotkeyHelper">
+            <summary>
+            用于Hotkey绘制相关
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawSpellImage(System.Numerics.Vector2,System.String)">
+            <summary>
+            绘制hotkey技能图片，放在Draw()中
+            </summary>
+            <param name="imgPath">图片相对路径，如：@"Resources\Spells\Potion.png"</param>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawSpellImage(System.Numerics.Vector2,System.UInt32)">
+            <summary>
+            绘制hotkey技能图片，放在Draw()中
+            </summary>
+            <param name="spellId">技能id</param>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawSpellInfo(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2,System.Boolean)">
+            <summary>
+            通常用于IHotkeyResolver的DrawExternal方法中，绘制了边框、冷却时间、charges、以及技能不可用时黑掉。这是个总和的绘制方法，如果你需要自己定制绘制请使用别的拆分的绘制方法。
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawSpellInfo(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2,System.Boolean,AEAssist.Helper.SpellHelper.MyDrawSpellDelegate)">
+            <summary>
+            通常用于IHotkeyResolver的DrawExternal方法中，绘制了边框、冷却时间、charges、以及技能不可用时黑掉。这是个总和的绘制方法，如果你需要自己定制绘制请使用别的拆分的绘制方法。
+            </summary>
+            <param name="action">自定义一个委托方法，来绘制图标的覆盖图层，如激活状态、禁用状态等，不包含冷却时间和技能层数</param>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawActiveState(System.Numerics.Vector2)">
+            <summary>
+            用于DrawExternal方法中，绘制热键激活状态，边框会发白。isActive味true的时候用
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawGeneralState(System.Numerics.Vector2)">
+            <summary>
+            用于DrawExternal方法中，绘制热键常规状态，正常带阴影的边框。
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawDisabledState(System.Numerics.Vector2)">
+            <summary>
+            用于DrawExternal方法中，绘制热键禁用状态，图标会黑掉。
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawCooldownText(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2)">
+            <summary>
+            用于DrawExternal方法中，在左下角绘制冷却时间的文字
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawCooldownText(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2,System.TimeSpan)">
+            <summary>
+            用于DrawExternal方法中，在左下角绘制冷却时间的文字
+            </summary>
+            <param name="cooldown">自定义的冷却时间</param>
+        </member>
+        <member name="M:AEAssist.Helper.HotkeyHelper.DrawChargeText(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2)">
+            <summary>
+            用于DrawExternal方法中，在右下角绘制技能层数的文字
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.KeyHelper.Send(AEAssist.Define.HotKey.Keys)">
+            <summary>
+            Send a virtual key.
+            </summary>
+            <param name="key">Key to send.</param>
+        </member>
+        <member name="M:AEAssist.Helper.KeyHelper.Send(AEAssist.Define.HotKey.Keys,System.Collections.Generic.IEnumerable{AEAssist.Define.HotKey.Keys})">
+            <summary>
+            Send a virtual key with modifiers.
+            </summary>
+            <param name="key">Key to send.</param>
+            <param name="mods">Modifiers to press.</param>
+        </member>
+        <member name="M:AEAssist.Helper.LogHelper.Print(System.String)">
+            <summary>
+            日志和聊天框打印
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:AEAssist.Helper.LogHelper.Print(System.String,System.String)">
+            <summary>
+            日志和聊天框打印
+            </summary>
+            <param name="title"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:AEAssist.Helper.LogHelper.PrintError(System.String)">
+            <summary>
+            日志和聊天框打印（错误类型）
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:AEAssist.Helper.LogHelper.PrintError(System.String,System.String)">
+            <summary>
+            日志和聊天框打印（错误类型）
+            </summary>
+            <param name="title"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:AEAssist.Helper.MathHelper.TryAdd``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            在list中添加一个唯一的元素
+            </summary>
+        </member>
+        <member name="T:AEAssist.Helper.MeleePosHelper2">
+            <summary>
+            更加优秀的近战身位系统
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.Init(AEAssist.CombatRoutine.View.JobView.JobViewWindow,System.String)">
+            <summary>
+            请在切换acr时注册
+            </summary>
+            <param name="qt">qt实例</param>
+            <param name="qtName">用于控制是否自动真北的qt名称</param>
+        </member>
+        <member name="P:AEAssist.Helper.MeleePosHelper2.LastPos">
+            <summary>
+            最近的一次身位
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.InQueue(AEAssist.CombatRoutine.View.MeleePosHelper.Pos)">
+            <summary>
+            当前是否存在一个某身位的显示器，剩余时间小于200ms忽略
+            </summary>
+            <param name="dir">身位</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.DrawMeleePos(AEAssist.CombatRoutine.View.MeleePosHelper.Pos,System.Int32,System.UInt32)">
+            <summary>
+            画一个身位提示，立即生效
+            </summary>
+            <param name="dir">身位</param>
+            <param name="time">持续时间</param>
+            <param name="actionId">技能id，用于判断技能是否已经释放</param>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.DrawMeleePosOffset(AEAssist.CombatRoutine.View.MeleePosHelper.Pos,System.Int32,System.UInt32)">
+            <summary>
+            画一个身位提示，带有AE的提前使用gcd的时间补正延迟生效，一般用于构建slot时调用
+            </summary>
+            <param name="dir">身位</param>
+            <param name="time">持续时间</param>
+            <param name="actionId">技能id，用于判断技能是否已经释放</param>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.Update">
+            <summary>
+            用于OnBattleUpdate
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.Completed(AEAssist.CombatRoutine.Spell)">
+            <summary>
+            用于AfterSpell
+            </summary>
+            <param name="spell"></param>
+        </member>
+        <member name="M:AEAssist.Helper.MeleePosHelper2.DrawTimeLeftWindow">
+            <summary>
+            显示一个身位倒计时窗口，放在刷新帧中
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.PartyHelper.DeadAllies">
+            <summary>
+            死亡单位
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.PartyHelper.Party">
+            <summary>
+            整个队伍
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.PartyHelper.CastableParty">
+            <summary>
+            可施法的队友(包括自己)
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.PartyHelper.GetAnotherTank(Dalamud.Game.ClientState.Objects.Types.IBattleChara)">
+            <summary>
+            当队伍内仅存在两个T时，返回作为参数的另外一个T
+            </summary>
+            <param name="tank1"></param>
+            <returns>如果T的数量并非两个的时候则返回null</returns>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper">
+            <summary>
+            Raphael助手类，负责与Raphael制作解决方案生成器交互，为FFXIV游戏中的制作系统提供自动化支持。
+            该类包含生成最佳制作解决方案的方法、技能与动作ID的转换工具、物品和配方数据的处理工具，
+            以及各种用于获取玩家数据和配方信息的辅助方法。
+            </summary>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.Skills">
+            <summary>
+            定义制作系统中可用的技能枚举，包括基础制作技能、品质提升技能、辅助技能和专业技能。
+            每个技能都有唯一标识符，并带有简短说明以表明其效果和消耗。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.Tasks">
+            <summary>
+            存储正在进行的解决方案生成任务，键为唯一的制作状态标识符，值为取消令牌和任务对象的元组
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.SkillList">
+            <summary>
+            存储所有解决方案的技能列表序列，由Raphael CLI生成的技能步骤
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper._skillToAction">
+            <summary>
+            技能枚举到实际游戏动作ID的映射表，二维数组[技能枚举索引, 职业索引]
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper._actionToSkill">
+            <summary>
+            游戏动作ID到技能枚举的反向映射字典
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.#cctor">
+            <summary>
+            类构造函数，初始化技能ID映射表
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GenerateSolution(AEAssist.Helper.RaphaelHelper.CraftState,AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig)">
+            <summary>
+            生成一个工艺品制作的解决方案
+            </summary>
+            <param name="craft">工艺品制作状态，包含配方信息和玩家属性</param>
+            <param name="config">解决方案配置，用于调整生成器的行为</param>
+            <returns>生成的解决方案ID，如果生成失败则返回-1</returns>
+            <remarks>
+            该方法会调用外部Raphael CLI程序，基于提供的配方状态和配置生成最优的制作步骤序列。
+            生成过程会考虑玩家的属性、技能可用性和配方特性，产生一个制作宏。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.CreateRaphaelProcess(System.String,System.String)">
+            <summary>
+            创建并配置Raphael进程
+            </summary>
+            <param name="cliPath">Raphael CLI可执行文件的路径</param>
+            <param name="arguments">命令行参数</param>
+            <returns>配置好的进程对象，准备执行</returns>
+            <remarks>
+            设置进程启动参数、输出重定向和错误处理，为执行Raphael CLI做准备。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RegisterProcessCancellation(System.Diagnostics.Process,System.Threading.CancellationTokenSource)">
+            <summary>
+                注册进程取消操作
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.BuildCommandArguments(AEAssist.Helper.RaphaelHelper.CraftState,AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig)">
+            <summary>
+            构建命令行参数
+            </summary>
+            <param name="craft">工艺品制作状态</param>
+            <param name="config">解决方案配置</param>
+            <returns>格式化的命令行参数字符串</returns>
+            <remarks>
+            根据传入的制作状态和配置，生成适合Raphael CLI的命令行参数。
+            包括物品ID、配方ID、玩家属性、技能可用性和各种配置选项。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.AppendConfigFlag(System.Text.StringBuilder,System.Boolean,System.String)">
+            <summary>
+                向命令行添加布尔标志
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.AppendConfigValue(System.Text.StringBuilder,System.Boolean,System.String,System.Int32)">
+            <summary>
+                向命令行添加数值参数
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.ExecuteRaphaelProcess(System.Diagnostics.Process,System.String,System.Threading.Tasks.TaskCompletionSource{System.Int32})">
+            <summary>
+            执行Raphael进程并处理结果
+            </summary>
+            <param name="process">配置好的Raphael进程</param>
+            <param name="key">唯一的任务键</param>
+            <param name="taskResult">任务完成源，用于异步结果通知</param>
+            <returns>解决方案ID，失败则返回-1</returns>
+            <remarks>
+            启动进程，监控执行，处理输出，并在完成后解析结果。
+            设置超时机制确保进程不会无限挂起。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.HandleProcessFailure(System.Diagnostics.Process,System.String,System.Threading.Tasks.TaskCompletionSource{System.Int32},System.String)">
+            <summary>
+                处理进程执行失败的情况
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SafeKillProcess(System.Diagnostics.Process)">
+            <summary>
+                安全地终止进程
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.ProcessSuccessfulResult(System.String,System.String,System.Threading.Tasks.TaskCompletionSource{System.Int32})">
+            <summary>
+                处理成功的结果
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.NormalizeOutput(System.String)">
+            <summary>
+                标准化输出格式
+            </summary>
+            <param name="output">从Raphael CLI获取的原始输出</param>
+            <returns>处理过的标准化文本，适合解析为宏步骤</returns>
+            <remarks>
+            对Raphael输出进行多项格式化处理：
+            1. 移除引号、方括号等特殊字符
+            2. 将逗号替换为换行符，使每个动作单独一行
+            3. 将数字"2"替换为罗马数字"II"
+            4. 修正特定技能名称，如将"MasterMend"修正为"MastersMend"
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GetStartingQuality(Lumina.Excel.Sheets.Recipe,System.Boolean)">
+            <summary>
+            获取制作的起始品质值
+            </summary>
+            <param name="recipe">制作的配方</param>
+            <param name="assumeMaxStartingQuality">是否假设最大起始品质</param>
+            <returns>起始品质值</returns>
+            <remarks>
+            如果假设最大起始品质，则返回理论最大值；
+            否则根据当前配方笔记中分配的HQ材料计算实际起始品质。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GetStartingQuality(Lumina.Excel.Sheets.Recipe,System.Int32[])">
+            <summary>
+            根据给定的HQ材料数量计算起始品质值
+            </summary>
+            <param name="recipe">制作配方</param>
+            <param name="hqCount">各材料的HQ数量数组</param>
+            <returns>计算得出的起始品质值</returns>
+            <remarks>
+            根据配方的材料和每种材料的HQ数量计算实际的起始品质。
+            计算公式考虑物品等级、数量及HQ材料的比例，以及配方的材料品质系数。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.Ingredients(Lumina.Excel.Sheets.Recipe)">
+            <summary>
+            获取配方的所有材料信息
+            </summary>
+            <param name="recipe">制作配方</param>
+            <returns>材料信息的集合，包含每种材料的物品信息和数量</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeMaxQuality(Lumina.Excel.Sheets.Recipe)">
+            <summary>
+            计算配方的最大品质值
+            </summary>
+            <param name="recipe">制作配方</param>
+            <returns>配方的最大品质值</returns>
+            <remarks>
+            根据配方的等级表中的基础品质值和配方的品质系数计算最终的最大品质值。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GetKey(AEAssist.Helper.RaphaelHelper.CraftState)">
+            <summary>
+            生成工艺品制作状态的唯一键
+            </summary>
+            <param name="craft">工艺品制作状态</param>
+            <returns>唯一标识制作状态的字符串</returns>
+            <remarks>
+            生成的键包含以下信息的组合：
+            1. 配方的等级、进度、最大品质和耐久度
+            2. 玩家的制作精度、加工精度和CP值
+            3. 配方是专家配方还是标准配方
+            这个键用于跟踪和识别特定的制作状态，防止重复生成相同配置的解决方案。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.InProgress(AEAssist.Helper.RaphaelHelper.CraftState)">
+            <summary>
+            检查是否有对应工艺品制作状态的任务正在进行
+            </summary>
+            <param name="craft">工艺品制作状态</param>
+            <returns>如果有对应的任务正在进行则返回true，否则返回false</returns>
+            <remarks>
+            使用GetKey方法生成的唯一键检查Tasks字典中是否存在对应的任务。
+            用于防止为同一制作状态重复启动解决方案生成过程。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.CLIExists">
+            <summary>
+                检查Raphael CLI是否存在
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.ParseMacro(System.String)">
+            <summary>
+                解析宏文本为步骤列表
+            </summary>
+            <param name="macro">原始宏文本</param>
+            <returns>步骤列表</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SkillNameToActionId(System.String,ECommons.ExcelServices.Job,System.Boolean)">
+            <summary>
+            将技能名称转换为对应职业的动作ID
+            </summary>
+            <param name="skillName">技能名称</param>
+            <param name="job">制作职业</param>
+            <param name="useEnglishNames">是否使用英文名称</param>
+            <returns>对应的游戏动作ID，如果找不到对应技能则返回0</returns>
+            <remarks>
+            这个方法先将技能名称转换为Skills枚举，然后再获取该技能在指定职业下的实际动作ID。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SkillNameToEnum(System.String,System.Boolean)">
+            <summary>
+            将技能名称转换为Skills枚举值
+            </summary>
+            <param name="skillName">技能名称字符串</param>
+            <param name="useEnglishNames">是否使用英文名称进行匹配，默认为true</param>
+            <returns>对应的Skills枚举值，如果找不到匹配则返回Skills.None</returns>
+            <remarks>
+            此方法会处理各种特殊情况，如名称中的空格、数字替换（如"2"替换为"II"）等。
+            首先尝试直接匹配技能名称，如果失败则尝试移除空格和撇号后再次匹配。
+            "Touch Combo"和"Touch Combo (Refined Touch Route)"会被映射到特殊的枚举值。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.ActionId(AEAssist.Helper.RaphaelHelper.Skills,ECommons.ExcelServices.Job)">
+            <summary>
+            获取指定技能在特定职业下的实际动作ID
+            </summary>
+            <param name="skill">技能枚举值</param>
+            <param name="job">制作职业</param>
+            <returns>对应的游戏动作ID，如果不适用则返回0</returns>
+            <remarks>
+            对于宇宙探索相关的MaterialMiracle技能，返回固定的ID值。
+            对于其他技能，通过预先计算的映射表查找特定职业下的实际动作ID。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.CancelGeneration(AEAssist.Helper.RaphaelHelper.CraftState)">
+            <summary>
+                取消正在进行的解决方案生成
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GetSelectedRecipeEntry">
+            <summary>
+            获取当前选中的配方条目
+            </summary>
+            <returns>指向当前选中配方条目的指针，如果没有选中配方则返回null</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GetCurrentRecipe">
+            <summary>
+            获取当前选中的配方
+            </summary>
+            <returns>当前选中的配方对象，如果没有选中配方则返回null</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeDurability(Lumina.Excel.Sheets.Recipe,Lumina.Excel.Sheets.RecipeLevelTable)">
+            <summary>
+            计算配方的耐久度
+            </summary>
+            <param name="recipe">制作配方</param>
+            <param name="leveltable">配方等级表</param>
+            <returns>配方的耐久度值</returns>
+            <remarks>
+            根据等级表中的基础耐久度和配方的耐久度系数计算最终耐久度。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeDifficulty(Lumina.Excel.Sheets.Recipe,Lumina.Excel.Sheets.RecipeLevelTable)">
+            <summary>
+            计算配方的难度值（进度）
+            </summary>
+            <param name="recipe">制作配方</param>
+            <param name="leveltable">配方等级表</param>
+            <returns>配方的难度值</returns>
+            <remarks>
+            根据等级表中的基础难度和配方的难度系数计算最终难度（进度）值。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeDifficulty(Lumina.Excel.Sheets.Recipe)">
+            <summary>
+            使用配方自带的等级表计算配方的难度值
+            </summary>
+            <param name="recipe">制作配方</param>
+            <returns>配方的难度值</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeDurability(Lumina.Excel.Sheets.Recipe)">
+            <summary>
+            使用配方自带的等级表计算配方的耐久度
+            </summary>
+            <param name="recipe">制作配方</param>
+            <returns>配方的耐久度值</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeMaxQuality(Lumina.Excel.Sheets.Recipe,Lumina.Excel.Sheets.RecipeLevelTable)">
+            <summary>
+            计算配方的最大品质值
+            </summary>
+            <param name="recipe">制作配方</param>
+            <param name="leveltable">配方等级表</param>
+            <returns>配方的最大品质值</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.MissionHasMaterialMiracle(Lumina.Excel.Sheets.Recipe)">
+            <summary>
+            检查配方是否有"宇宙探索"材料奇迹技能
+            </summary>
+            <param name="recipe">要检查的制作配方</param>
+            <returns>如果配方支持宇宙探索材料奇迹则返回true，否则返回false</returns>
+            <remarks>
+            此方法分析游戏数据库中的任务表，确定指定的配方是否支持宇宙探索系统中的"材料奇迹"特殊技能。
+            处理流程：
+            1. 首先查找包含目标配方ID的MissionRecipe记录
+            2. 如果找不到对应记录，说明不是宇宙探索制作，直接返回false
+            3. 找到包含该MissionRecipe的MissionUnit
+            4. 获取MissionUnit关联的MissionToDo
+            5. 检查MissionToDo是否包含MaterialMiracle(41269)技能
+            
+            此功能对于优化宇宙探索制作至关重要，因为材料奇迹技能可以显著改变制作策略。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.BuildCraftStateForRecipe(AEAssist.Helper.RaphaelHelper.CharacterStats,ECommons.ExcelServices.Job,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+            根据角色属性、职业和配方创建制作状态
+            </summary>
+            <param name="stats">角色属性</param>
+            <param name="job">制作职业</param>
+            <param name="recipe">制作配方</param>
+            <returns>创建的制作状态对象</returns>
+            <remarks>
+            整合所有制作相关信息，包括配方属性、玩家属性、技能可用性，
+            以及根据配方类型（普通/收藏品等）设置适当的品质阈值。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GetRecipeLevelTable(Lumina.Excel.Sheets.Recipe,System.Int32)">
+            <summary>
+                获取配方等级表
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SetCollectableQualityThresholds(AEAssist.Helper.RaphaelHelper.CraftState,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+                设置收藏品品质阈值
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SetHWDQualityThresholds(AEAssist.Helper.RaphaelHelper.CraftState,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+                设置伊修加德重建品质阈值
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SetSatisfactionQualityThresholds(AEAssist.Helper.RaphaelHelper.CraftState,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+                设置蛮族供货品质阈值
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SetSharlayanQualityThresholds(AEAssist.Helper.RaphaelHelper.CraftState,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+                设置萨雷安工艺馆品质阈值
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SetBankaQualityThresholds(AEAssist.Helper.RaphaelHelper.CraftState,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+                设置瓦库梅卡伊梅卡伊工艺馆品质阈值
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.SetGenericCollectableQualityThresholds(AEAssist.Helper.RaphaelHelper.CraftState,Lumina.Excel.Sheets.Recipe)">
+            <summary>
+                设置通用收藏品品质阈值
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.GenerateSolutionAsync(AEAssist.Helper.RaphaelHelper.CraftState,AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig)">
+            <summary>
+            异步生成工艺品制作的解决方案
+            </summary>
+            <param name="craft">工艺品制作状态</param>
+            <param name="config">解决方案配置</param>
+            <returns>表示异步操作的任务，完成时返回解决方案ID</returns>
+            <remarks>
+            这是GenerateSolution方法的异步包装器，允许在不阻塞调用线程的情况下生成解决方案。
+            </remarks>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.IngredientExtension">
+            <summary>
+            表示配方中的一个材料及其数量
+            </summary>
+            <remarks>
+            这是一个简单的记录类型，用于在处理配方材料时存储物品和对应的需求数量。
+            使用required修饰符确保创建时必须指定这些属性。
+            </remarks>
+        </member>
+        <member name="P:AEAssist.Helper.RaphaelHelper.IngredientExtension.Item">
+            <summary>
+            材料的物品信息
+            </summary>
+        </member>
+        <member name="P:AEAssist.Helper.RaphaelHelper.IngredientExtension.Amount">
+            <summary>
+            配方需要的材料数量
+            </summary>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig">
+            <summary>
+            Raphael解决方案配置类，定义生成解决方案时的各种选项和约束。
+            通过这些配置选项，可以调整解决方案生成器的行为，以满足不同的制作需求。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.BackloadProgress">
+            <summary>
+            启用进度后置优化，将制作进度操作尽可能放在宏的末尾，优先提高品质。
+            默认为false。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.EnsureReliability">
+            <summary>
+            启用可靠性保证，生成的解决方案会考虑最不利的情况，确保制作成功。
+            会显著增加解决方案生成时间，默认为false。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.ExactCraftsmanship">
+            <summary>
+            指定精确的制作精度值，使解决方案生成器使用该确切值而非玩家当前属性。
+            当需要为特定制作精度值优化宏时非常有用，比如针对特定装备配置生成宏。
+            设置为0时不生效，使用玩家当前制作精度值。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.HeartAndSoul">
+            <summary>
+            启用心无旁骛(Heart and Soul)技能的使用考虑。
+            允许解决方案在需要时插入心无旁骛技能，默认为false。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.HQConsiderations">
+            <summary>
+            考虑HQ材料影响，在生成解决方案时考虑起始品质。
+            默认为false，忽略HQ材料带来的起始品质。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.MinControl">
+            <summary>
+            指定最小加工精度要求，确保生成的解决方案适用于至少达到此加工精度的角色。
+            设置为0时不生效，使用玩家当前加工精度值。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.MinCP">
+            <summary>
+            指定最小制作力(CP)要求，确保生成的解决方案至少需要这么多CP才能执行。
+            设置为0时不生效，使用玩家当前CP值。
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RaphaelSolutionConfig.QuickInno">
+            <summary>
+            启用快速工匠的幻想技能考虑，允许在解决方案中使用专家技能"快速工匠的幻想"。
+            默认为false。
+            </summary>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.CraftState">
+            <summary>
+            表示一个制作状态的记录类，包含配方信息、玩家属性和制作配置。
+            用于传递给解决方案生成器，提供生成最优制作宏所需的全部信息。
+            </summary>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.CharacterStats">
+            <summary>
+            表示角色的制作相关属性，包括制作精度、加工精度、制作力和等级等。
+            提供各种方法获取角色当前属性、基础属性和装备属性。
+            </summary>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeData">
+            <summary>
+            表示配方笔记中的配方数据结构
+            </summary>
+            <remarks>
+            此结构通过指针直接访问游戏内存中的配方笔记数据。
+            提供对当前打开的配方笔记中所有配方的访问能力，包括配方列表、数量和当前选中的配方索引。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeData.Ptr">
+            <summary>
+            获取指向配方笔记数据的指针
+            </summary>
+            <returns>配方笔记数据指针，如果配方笔记未打开则返回null</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeData.FindRecipeById(System.UInt32)">
+            <summary>
+            通过配方ID查找对应的配方条目
+            </summary>
+            <param name="id">要查找的配方ID</param>
+            <returns>找到的配方条目指针，如果未找到则返回null</returns>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry">
+            <summary>
+            表示配方笔记中的配方材料条目
+            </summary>
+            <remarks>
+            存储材料的可用数量、已分配数量等信息。
+            提供方法设置HQ材料数量、NQ材料数量或特定的材料组合。
+            </remarks>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.NumAvailableNQ">
+            <summary>可用的NQ材料数量</summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.NumAvailableHQ">
+            <summary>可用的HQ材料数量</summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.NumAssignedNQ">
+            <summary>已分配的NQ材料数量</summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.NumAssignedHQ">
+            <summary>已分配的HQ材料数量</summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.ItemId">
+            <summary>材料的物品ID</summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.NumTotal">
+            <summary>配方需要的总材料数量</summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.SetMaxHQ(System.Boolean)">
+            <summary>
+            设置最大HQ材料数量
+            </summary>
+            <param name="updateUI">是否更新UI，默认为true</param>
+            <remarks>
+            尽可能使用HQ材料，将可用的HQ材料数量分配到配方，剩余所需材料使用NQ材料。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.SetMaxNQ(System.Boolean)">
+            <summary>
+            设置最大NQ材料数量
+            </summary>
+            <param name="updateUI">是否更新UI，默认为true</param>
+            <remarks>
+            尽可能使用NQ材料，将可用的NQ材料数量分配到配方，剩余所需材料使用HQ材料。
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeNoteIngredientEntry.SetSpecific(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            设置特定数量的NQ和HQ材料
+            </summary>
+            <param name="nq">要分配的NQ材料数量</param>
+            <param name="hq">要分配的HQ材料数量</param>
+            <param name="updateUI">是否更新UI，默认为true</param>
+            <remarks>
+            根据指定的NQ和HQ数量分配材料，会检查总数是否超过配方需求并进行适当调整。
+            当可用材料总数不足时会输出错误日志。
+            </remarks>
+        </member>
+        <member name="T:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeEntry">
+            <summary>
+            表示配方笔记中的一个完整配方条目
+            </summary>
+            <remarks>
+            存储配方的材料列表、配方ID和制作类型。
+            提供访问材料的方法和获取已分配HQ材料数量的功能。
+            </remarks>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeEntry.Ingredients">
+            <summary>原始材料数据数组</summary>
+        </member>
+        <member name="P:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeEntry.IngredientsSpan">
+            <summary>
+            材料条目的Span视图，方便访问各个材料
+            </summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeEntry.RecipeId">
+            <summary>配方ID</summary>
+        </member>
+        <member name="F:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeEntry.CraftType">
+            <summary>制作类型</summary>
+        </member>
+        <member name="M:AEAssist.Helper.RaphaelHelper.RecipeNoteRecipeEntry.GetAssignedHQIngredients">
+            <summary>
+            获取已分配的HQ材料数量数组
+            </summary>
+            <returns>包含每种材料已分配HQ数量的数组</returns>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.SetPos(System.String,System.Numerics.Vector3)">
+            <summary>
+             TP移动
+            </summary>
+            <param name="regexRole">留空表示全体生效 支持正则 比如"H1|H2"就是让两个奶妈处理指令</param>
+            <param name="command"></param>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.LockPos(System.String,System.Numerics.Vector3,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="regexRole"></param>
+            <param name="targetPoint"></param>
+            <param name="durationInMs">锁定多久 毫秒</param>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.SlideTp(System.String,System.Numerics.Vector3,System.Int64)">
+            <summary>
+            滑步Tp
+            </summary>
+            <param name="regexRole"></param>
+            <param name="targetPoint"></param>
+            <param name="slideTime">读条时间小于多少直接拉断 单位ms</param>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.Stop(System.String,System.Boolean)">
+            <summary>
+            true是停手 false是恢复
+            </summary>
+            <param name="regexRole"></param>
+            <param name="stop"></param>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.MoveTo(System.String,System.Numerics.Vector3)">
+            <summary>
+            绿玩移动
+            </summary>
+            <param name="regexRole"></param>
+            <param name="targetPoint">坐标</param>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.MoveStop(System.String)">
+            <summary>
+            打断绿玩移动
+            </summary>
+            <param name="regexRole"></param>
+        </member>
+        <member name="M:AEAssist.Helper.RemoteControlHelper.GetRoleByPlayerName(System.String)">
+            <summary>
+            根据玩家名字获取职能
+            </summary>
+            <param name="name"></param>
+            <returns>没设置的返回""</returns>
+        </member>
+        <member name="M:AEAssist.Helper.SpellExtension.IsUnlock(System.UInt32)">
+            <summary>
+            以下条件任意不符合 就返回false
+            玩家学习了该技能
+            玩家当前等级符合要求
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.SpellExtension.IsUnlock(AEAssist.CombatRoutine.Spell)">
+            <summary>
+            以下条件任意不符合 就返回false
+            玩家学习了该技能
+            玩家当前等级符合要求
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.SpellExtension.IsReady(System.UInt32)">
+            <summary>
+            检查一个技能是否学习，等级是否足够，是否可用(技能栏里亮了没)，充能数是否足够，cd是否满足等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.SpellExtension.IsReadyWithCanCast(AEAssist.CombatRoutine.Spell)">
+            <summary>
+            检查技能是否可用，包含了IsUnlock()，!RecentlyUsed(500)，Charges >= 1 等等，有了这个就不需要检测冷却时间了
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.SpellHelper.DrawSpellInfo(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2,System.Boolean)">
+            <summary>
+            通常用于IHotkeyResolver的DrawExternal方法中
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.SpellHelper.DrawSpellInfo(AEAssist.CombatRoutine.Spell,System.Numerics.Vector2,System.Boolean,AEAssist.Helper.SpellHelper.MyDrawSpellDelegate)">
+            <summary>
+            通常用于IHotkeyResolver的DrawExternal方法中
+            </summary>
+            <param name="action">自定义一个委托方法，来绘制图标的覆盖图层，如激活状态、禁用状态等，不包含冷却时间和技能层数</param>
+        </member>
+        <member name="M:AEAssist.Helper.SplHelper.AddPoint(System.String,System.Numerics.Vector3)">
+            <summary>
+            在指定坐标画点
+            </summary>
+            <param name="name">绘制名称</param>
+            <param name="pos">坐标</param>
+        </member>
+        <member name="M:AEAssist.Helper.SplHelper.AddPoint(System.String,System.Single,System.Single,System.Single)">
+            <summary>
+            在指定坐标画点
+            </summary>
+            <param name="name">绘制名称</param>
+            <param name="x">x</param>
+            <param name="y">y</param>
+            <param name="z">z</param>
+        </member>
+        <member name="M:AEAssist.Helper.SplHelper.Delete(System.String)">
+            <summary>
+            删除指定名称的绘制
+            </summary>
+            <param name="name">绘制名称</param>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.GetNearbyEnemyCount(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Int32,System.Int32)">
+            <summary>
+            获取某个单位附近敌人的数量
+            </summary>
+            <param name="target">以哪个单位为圆心</param>
+            <param name="spellCastRange">施法距离，如果target离自己超出这个距离则返回0</param>
+            <param name="damageRange">伤害范围</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.IsBoss(Dalamud.Game.ClientState.Objects.Types.IBattleChara)">
+            <summary>
+            判断目标是不是boss
+            </summary>
+            <param name="target">目标</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.GetNearbyEnemyCount(System.Int32)">
+            <summary>
+            获取自身周围的敌人数量
+            </summary>
+            <param name="range">范围</param>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.GetEnemyCountInsideSector(Dalamud.Game.ClientState.Objects.Types.IBattleChara,Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Single,System.Single)">
+            <summary>
+            指定距离的扇形范围内敌人的数量
+            </summary>
+            <param name="me"></param>
+            <param name="target"></param>
+            <param name="sectorRadius">技能半径</param>
+            <param name="sectorAngle">技能夹角(角度 非弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.GetEnemyCountInsideRect(Dalamud.Game.ClientState.Objects.Types.IBattleChara,Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Single,System.Single)">
+            <summary>
+            指定距离的矩形范围内敌人的数量，包含跟自身目标圈重合的敌人
+            </summary>
+            <param name="me"></param>
+            <param name="target"></param>
+            <param name="length">长度</param>
+            <param name="width">宽度</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.TargercastingIsbossaoe(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Int32)">
+            <summary>
+            指定目标施放的是否是BossAOE,且读条剩余时间是否小于指定数值
+            </summary>
+            <param name="target"></param>
+            <param name="timeleft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.targetCastingIsBossAOE(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Int32)">
+            <summary>
+            指定目标施放的是否是BossAOE,且读条剩余时间是否小于指定数值
+            </summary>
+            <param name="target">目标对象</param>
+            <param name="timeLeft">读条剩余时间(毫秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.TargercastingIsDeathSentence(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Int32)">
+            <summary>
+            指定目标施放的是否是死刑,且读条剩余时间是否小于指定数值
+            </summary>
+            <param name="target"></param>
+            <param name="timeleft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.targetCastingIsDeathSentence(Dalamud.Game.ClientState.Objects.Types.IBattleChara)">
+            <summary>
+            指定目标施放的是否是死刑
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.targetCastingIsDeathSentenceWithTime(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Int32)">
+            <summary>
+            指定目标施放的是否是死刑
+            </summary>
+            <param name="target"></param>
+            <param name="timeLeft">读条剩余时间(毫秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.GetMostCanTargetObjects(System.UInt32,System.Int32)">
+            <summary>
+            获得最适合放AOE技能的目标（包括各种形状的AOE）
+            </summary>
+            <param name="Count">期望aoe到的最小敌人数</param>
+            <param name="ActionID">技能ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.TargetHelper.GetMostTarget(System.Collections.Generic.IEnumerable{Dalamud.Game.ClientState.Objects.Types.IGameObject},AEAssist.Module.Avoid.IConvexPolygon{AEAssist.Avoid.Shape},System.Single)">
+            <summary>
+            选择最合适的aoe目标 参见
+            <para><see cref="M:AEAssist.Helper.TargetHelper.GetMostTargetByRectDamageOnTarget(System.Collections.Generic.IEnumerable{Dalamud.Game.ClientState.Objects.Types.IGameObject},System.Single,System.Single,System.Single)"/></para>
+            <para><see cref="M:AEAssist.Helper.TargetHelper.GetMostTargetBySectorDamageOnTarget(System.Collections.Generic.IEnumerable{Dalamud.Game.ClientState.Objects.Types.IGameObject},System.Single,System.Int32)"/></para>
+            <para><see cref="M:AEAssist.Helper.TargetHelper.GetMostTargetByCircleDamageOnTarget(System.Collections.Generic.IEnumerable{Dalamud.Game.ClientState.Objects.Types.IGameObject},System.Single,System.Single)"/></para>
+            </summary>
+            <param name="targets">待选目标</param>
+            <param name="DamageShape">伤害范围</param>
+            <param name="range"></param>
+            <returns>最合适的aoe目标</returns>
+        </member>
+        <member name="M:AEAssist.Helper.TimeHelper.UtcNow">
+            <summary>
+            世界标准时间戳
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.TimeHelper.GetDateTime(System.Int64)">
+            <summary>
+            从世界标准时间戳解析时间信息
+            </summary>
+        </member>
+        <member name="M:AEAssist.Helper.TimeHelper.GetWebDateTime">
+            <summary>
+            获取网页时间
+            </summary>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:AEAssist.Helper.TimeHelper.StringToDatetime(System.String)">
+            <summary>
+            将String格式时间"2023-1-14 5:14:19"转换成DateTime格式
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Helper.WindowHelper.ShowMessageBox(System.String,System.String)">
+            <summary>
+            显示一个信息确认框
+            </summary>
+            <param name="text"></param>
+            <param name="title"></param>
+        </member>
+        <member name="M:AEAssist.Helper.WindowHelper.ShowDialogBox(System.String,System.Action{System.Windows.Forms.DialogResult},System.String)">
+            <summary>
+            显示一个对话框
+            </summary>
+            <param name="text"></param>
+            <param name="callback">点击是或否时执行的回调</param>
+            <param name="title"></param>
+        </member>
+        <member name="M:AEAssist.API.Helper.GameHelper.RotationToMatrix4x4(System.Single)">
+            <summary>
+            从rotation获取绕y轴旋转的矩阵
+            </summary>
+            <param name="rotation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiContentFinderCondition.Request(Lumina.Excel.Sheets.ContentFinderCondition,System.Boolean)">
+            <summary>
+            申请指定副本
+            </summary>
+            <param name="contentFinderCondition">副本</param>
+            <param name="UnrestrictedParty">是否解限</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiContentFinderCondition.Request(Lumina.Excel.Sheets.ContentFinderCondition,AEAssist.API.MemoryApi.ContentFinderConditionOption@)">
+            <summary>
+            申请指定副本
+            </summary>
+            <param name="contentFinderCondition">副本</param>
+            <param name="option">详细设置 <see cref="M:AEAssist.API.MemoryApi.MemApiContentFinderCondition.Request(Lumina.Excel.Sheets.ContentFinderCondition,System.Boolean)"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiContentFinderCondition.RequestDawn(AEAssist.API.MemoryApi.DawnContent,System.Byte[])">
+            <summary>
+            Trust 申请亲信副本
+            </summary>
+            <param name="content">亲信副本</param>
+            <param name="uints">队员数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiContentFinderCondition.RequestDawnWithDawnContent(AEAssist.API.MemoryApi.DawnContent,System.Byte[])">
+            <summary>
+            亲信申请副本
+            </summary>
+            <param name="content">副本</param>
+            <param name="uints">队员数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiContentFinderCondition.RequestDawnStory(System.UInt32)">
+            <summary>
+            剧情辅助器申请副本
+            </summary>
+            <param name="dawnContent">副本</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.PartyRequirements.Add(AEAssist.API.MemoryApi.IPartyMember)">
+            <summary>
+            添加队员
+            </summary>
+            <param name="member">实现了IPartyMember接口的类 <see cref="T:AEAssist.API.MemoryApi.IPartyMember"/> 由于涉及到比较 涉及到不同实例存在可能相等的情况请重写GetHashCode()以及Equals 或者实现 <see cref="T:System.IEquatable`1"/>接口 参见<see cref="T:AEAssist.API.MemoryApi.DawmPartyMember"/></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="F:AEAssist.API.MemoryApi.ContentFinderConditionOption.Config0x331to334">
+            <summary>
+            通常为1
+            </summary>
+        </member>
+        <member name="F:AEAssist.API.MemoryApi.ContentFinderConditionOption.UnrestrictedParty">
+            <summary>
+            解限
+            </summary>
+        </member>
+        <member name="F:AEAssist.API.MemoryApi.ContentFinderConditionOption.MinimalIL">
+            <summary>
+            最低装等
+            </summary>
+        </member>
+        <member name="F:AEAssist.API.MemoryApi.ContentFinderConditionOption.LevelSync">
+            <summary>
+            等级同步
+            </summary>
+        </member>
+        <member name="T:AEAssist.API.MemoryApi.DawnContent">
+            <summary>
+            重要！理解代码主要从这开始
+            重写Lumina的DawnContent 主要添加副本前置任务以及是否有亲信副本 以及 剧情辅助器限制的npc
+            </summary>
+            <param name="page"></param>
+            <param name="offset"></param>
+            <param name="row"></param>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.DawnContent.#ctor(Lumina.Excel.ExcelPage,System.UInt32,System.UInt32)">
+            <summary>
+            重要！理解代码主要从这开始
+            重写Lumina的DawnContent 主要添加副本前置任务以及是否有亲信副本 以及 剧情辅助器限制的npc
+            </summary>
+            <param name="page"></param>
+            <param name="offset"></param>
+            <param name="row"></param>
+        </member>
+        <member name="F:AEAssist.API.MemoryApi.DawnContent.DawnStoryDawnContentParticipable">
+            <summary>
+            剧情辅助器限制的npc。实际上剧情辅助器能用的npc与本表内容无关，只与本表的RowId有关。DawnContentParticipable表所有RowId与本表相等的表都是当前副本可用的npc。
+            全才或其他可变职业在DawnContentParticipable表现是有多个npc。
+            </summary>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiFishing.GetAllTriangleCanFishByMesh(FFXIVClientStructs.FFXIV.Common.Component.BGCollision.MeshPCB.FileNode*,System.Collections.Generic.Dictionary{System.Numerics.Vector3,AEAssist.API.MemoryApi.TriangleShape}@)">
+            <summary>
+            从mesh网格中获取所有可以钓鱼的三角形
+            </summary>
+            <param name="Root"></param>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.API.MemoryApi.MemApiFishing.FindCanFishing">
+            <summary>
+            查找已经渲染的可以钓鱼的最近三角形区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AEAssist.API.MemoryApi.MemApiFishing.FakeGameObject">
+            <summary>
+            伪造游戏对象 主要是为了调用游戏内的函数GetPosition
+            </summary>
+        </member>
+        <member name="T:AEAssist.JobApi.JobApi_Dancer">
+            <summary>
+                舞者的职业数据内存API
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Dancer.Esprit">
+            <summary>
+                伶俐数量
+            </summary>
+            <returns>当前伶俐值</returns>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Dancer.FourFoldFeathers">
+            <summary>
+                幻扇数量
+            </summary>
+            <returns>当前幻扇值</returns>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Dancer.IsDancing">
+            <summary>
+                是否在大小舞状态中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Dancer.NextStep">
+            <summary>
+                下一个舞步
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.AttunmentTimerRemaining">
+            <summary>
+            三神宝石的持续时间
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.HasAetherflowStacks">
+            <summary>
+            有以太超流
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.AetherflowStacks">
+            <summary>
+            以太超流层数
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.SummonTimerRemaining">
+            <summary>
+            召唤兽在场的时间
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.Attunement">
+            <summary>
+            召唤技能次数(原始)
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.AttunementAdjust">
+            <summary>
+            召唤技能层数(修正)
+            </summary>
+        </member>
+        <member name="P:AEAssist.JobApi.JobApi_Summoner.HasPet">
+            <summary>
+                有宝石兽
+            </summary>
+        </member>
+        <member name="M:AEAssist.MeleePos.ConvexShape.#ctor(AEAssist.MeleePos.Brush)">
+            <summary>
+            
+            </summary>
+            <param name="color"></param>
+            <param name="lineThick">小于0就是填充,大于0就是只画线框</param>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.CheckAddon(System.String)">
+            <summary>
+            检测窗口是否存在
+            </summary>
+            <param name="addonName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.WaitAddonUntil(System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            一直等到指定窗口存在或消失，才继续往下执行，超时后返回false
+            （使用该函数前加上 await 关键字）
+            </summary>
+            <param name="addonName">窗口名称</param>
+            <param name="visible">是否可见</param>
+            <param name="timeout">超时限制 ms</param>
+            <param name="delay">固定延时，防止自动交互太快</param>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.GetAddonValue(System.String,System.UInt32)">
+            <summary>
+            获取窗口上的信息
+            </summary>
+            <param name="addonName"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.SetAddonValue(System.String,System.UInt32,System.Int32)">
+            <summary>
+            设置控件文本
+            </summary>
+            <param name="addonName"></param>
+            <param name="nodeIndex"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.SetAddonClicked(System.String,System.Object[])">
+            <summary>
+            点击窗口上的按钮
+            </summary>
+            <param name="addonName"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.InteractWithUnit(System.UInt32,System.Boolean)">
+            <summary>
+            与游戏内单位交互
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.InteractWithUnit(System.String,System.Boolean)">
+            <summary>
+            与游戏内单位交互
+            </summary>
+            <param name="objectName">单位名字，如有重复找最近单位</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiAddon.InteractWithUnit(System.String[],System.Boolean)">
+            <summary>
+            与游戏内单位交互
+            </summary>
+            <param name="objectName">符合数组包含的单位名字，如有重复找最近单位</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiBuff.HitAnyAura(Dalamud.Game.ClientState.Objects.Types.IBattleChara,System.Collections.Generic.List{System.UInt32},System.Int32)">
+            <summary>
+            返回在指定buff列表中自身存在的第一个buffId
+            </summary>
+            <param name="battleCharacter"></param>
+            <param name="auras"></param>
+            <param name="msLeft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiChatMessage.Toast2(System.String,System.Int32,System.Int32)">
+            <summary>
+            显示一个文本提示，用于在游戏中显示简短的消息。
+            </summary>
+            <param name="msg">要显示的消息文本。</param>
+            <param name="s">文本提示的样式。支持蓝色提示（1）和红色提示（2）两种</param>
+            <param name="time">文本提示显示的时间（单位毫秒）。如显示3秒，填写3000即可</param>
+        </member>
+        <member name="T:AEAssist.MemoryApi.DutySchedule">
+            <summary>
+            副本进度信息
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.DutySchedule.CountPoint">
+            <summary>
+            副本总体需要进度
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.DutySchedule.NowPoint">
+            <summary>
+            副本当前进度
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.DutySchedule.NowPointName">
+            <summary>
+            副本当前进度名称
+            </summary>
+        </member>
+        <member name="T:AEAssist.MemoryApi.MemApiDuty">
+            <summary>
+            副本状态相关API
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiDuty.IsBoundByDuty">
+            <summary>
+            是否在副本里
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AEAssist.MemoryApi.MemApiDuty.DutyInfo">
+            <summary>
+            副本信息
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiDuty.GetSchedule">
+            <summary>
+            副本进度信息
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiDuty.DutyMembersNumber">
+            <summary>
+            副本人数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MemApiDuty.InMission">
+            <summary>
+            副本是否正式开始
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MemApiDuty.InBossBattle">
+            <summary>
+            是否进入boss房间锁定状态
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MemApiDuty.IsOver">
+            <summary>
+            副本是否结束
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiMaker.GetMarker(AEAssist.MemoryApi.Marker)">
+            头顶标记部分
+        </member>
+        <member name="P:AEAssist.MemoryApi.MemApiMaker.WayMarkArray">
+            场地标点部分
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiMap.ZoneName(System.UInt32)">
+            地图id转地图名称
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiMap.AddZoneLimitList(System.UInt32)">
+            <summary>
+            向ZoneLimitList添加一个新的刚初始化的项
+            </summary>
+            <param name="zoneid"></param>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiMap.ReZoneLimitList(System.UInt32)">
+            <summary>
+            向ZoneLimitList重置其中的一个项
+            </summary>
+            <param name="zoneid"></param>
+        </member>
+        <member name="T:AEAssist.MemoryApi.MemApiMapEffect.ContentDirectorWrapper">
+            <summary>
+            Create by Sbago, 2021-09-07
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiMove.SlideTp(System.Numerics.Vector3,System.Int64)">
+            <summary>
+             滑步Tp
+            </summary>
+            <param name="target"></param>
+            <param name="time">读条时间小于多少直接拉断</param>
+        </member>
+        <member name="T:AEAssist.MemoryApi.MemApiMove2">
+            <summary>
+            有任何问题请联系作者Sbago
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiMove2.MoveTo(Dalamud.Game.ClientState.Objects.Types.ICharacter,System.Numerics.Vector3)">
+            <summary>
+            此方法只是因为寻路插件的moveto无法调整视角而写，使用此方法会无法控制角色
+            </summary>
+            <param name="chara"></param>
+            <param name="tar"></param>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MoveOption.Speed">
+            <summary>
+            设置-1时默认速度
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MoveOption.DontDisplayAnimationOfChangePos">
+            <summary>
+            设置为true时瞬移到目标位置
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MoveOption.DontDisplayAnimationOfChangeRot">
+            <summary>
+            设置为true时不播放转向动画
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MoveOption.IsWalk">
+            <summary>
+            false 奔跑 true 走路
+            </summary>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MoveOption.DontDisplayAnimationOfRun">
+            <summary>
+            设置为true时不播放奔跑动画
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.CancelCast">
+            <summary>
+            打断读条
+            </summary>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.GetGCDDuration(System.Boolean)">
+            <summary>
+            获取gcd
+            </summary>
+            <param name="Check">如果为真，当gcd不转的时候将会模拟计算gcd时间</param>
+            <returns>返回总GCD时间</returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.MapCenter(System.Numerics.Vector3)">
+            <summary>
+             返回场地中间的位置
+            </summary>
+            <param name="fallback"> 如果找不到，使用传入的fallback位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.CheckActionChange(System.UInt32)">
+            <summary>
+            返回可变技能的当前id
+            </summary>
+            <param name="spellId">base spellid</param>
+            <returns>当前id</returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.CheckActionCanUse(System.UInt32,System.Single,System.Single)">
+            <summary>
+            判断技能是否可用。目标是不再进行繁琐的技能条件判定。
+            </summary>
+            <param name="actionId">技能id</param>
+            <param name="gcdTimel">gcd能用的时间</param>
+            <param name="abilityTimel">能力技能用的时间</param>
+            <returns></returns>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.CanCastEx(System.UInt32,Dalamud.Game.ClientState.Objects.Types.IGameObject,System.Boolean)">
+            <summary>
+            不考虑cd的可使用判断
+            </summary>
+            <param name="actionId"></param>
+            <param name="target"></param>
+            <param name="checkCastingActive"></param>
+            <returns></returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.ResolveTarget(System.UInt32,Dalamud.Game.ClientState.Objects.Types.IBattleChara)">
+            <summary>
+            目标能否成为技能的对象
+            </summary>
+            <param name="actionId">技能id</param>
+            <param name="target">目标</param>
+            <returns>返回null 技能无法对自身使用且目标无法成为技能对象;可能返回自身或者target</returns>
+        </member>
+        <member name="M:AEAssist.MemoryApi.MemApiSpell.LineOfSightChecker.IsBlocked(FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject*,FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject*)">
+            <summary>
+            使用底层的 BGCollisionModule 直接检查两个角色之间是否存在视线遮挡。
+            </summary>
+            <param name="source">来源角色。</param>
+            <param name="target">目标角色。</param>
+            <param name="hitPoint">如果被阻挡，返回碰撞点的坐标。</param>
+            <returns>如果视线被阻挡，返回 true；否则返回 false。</returns>
+        </member>
+        <member name="F:AEAssist.MemoryApi.MemApiSpellCastSuccess.LastTarget">
+            <summary>
+            上一个成功释放的技能目标
+            </summary>
+        </member>
+        <member name="M:AEAssist.AEPlugin.IAEPlugin.BuildPlugin">
+            <summary>
+            插件的基本信息 以后新增的内容都放到Plugin中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.AEPlugin.IAEPlugin.Update">
+            <summary>
+            每帧更新
+            </summary>
+        </member>
+        <member name="M:AEAssist.AEPlugin.IAEPlugin.OnPluginUI">
+            <summary>
+            在主界面选中插件时调用 一般用来处理插件的介绍和入口交互
+            </summary>
+        </member>
+        <member name="M:AEAssist.AEPlugin.IAEPlugin.OnExternalUI">
+            <summary>
+            额外的独立UI渲染 哪怕不选中这个插件也会调用.
+            </summary>
+        </member>
+        <member name="M:AEAssist.AEPlugin.IAEPlugin.AfterVerified">
+            <summary>
+            验证完毕之后的回调
+            </summary>
+        </member>
+        <member name="P:AEAssist.AEPlugin.PluginSetting.Name">
+            <summary>
+            插件名（显示在主界面的名字）
+            </summary>
+        </member>
+        <member name="P:AEAssist.AEPlugin.PluginSetting.LimitLevel">
+            <summary>
+            限制低于多少等级的码不可用
+            </summary>
+        </member>
+        <member name="P:AEAssist.AEPlugin.PluginSetting.HandleChatCallback">
+            <summary>
+            处理聊天的回调 参数1是聊天类型 参数2是内容
+            </summary>
+        </member>
+        <member name="P:AEAssist.AEPlugin.PluginSetting.EventHandleCallback">
+            <summary>
+            事件处理器 
+            </summary>
+        </member>
+        <member name="M:AEAssist.IModule.OnUpdate">
+            <summary>
+            游戏里每帧触发
+            </summary>
+        </member>
+        <member name="M:AEAssist.IUIModule.OnDrawUI">
+            <summary>
+            每次UI刷新触发
+            </summary>
+        </member>
+        <member name="M:AEAssist.CoroutineSystem.WaitAsync(AEAssist.Coroutine,System.Int64,System.Func{System.Boolean},System.Threading.CancellationTokenSource)">
+            <summary>
+            
+            </summary>
+            <param name="self"></param>
+            <param name="time"></param>
+            <param name="cond">传入一个回调，回调返回false时 等待提前结束 方法返回true</param>
+            <param name="cancellationTokenSource"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AEAssist.Define.DistanceMode">
+            <summary>
+            计算距离的模式，多个模式可以=>DistanceMode.IgnoreSourceHitbox | IgnoreTargetHitbox
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.DistanceMode.Point">
+            <summary>
+            不做任何处理，点与点的距离
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.DistanceMode.IgnoreSourceHitbox">
+            <summary>
+            忽视Source目标的Hitbox
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.DistanceMode.IgnoreTargetHitbox">
+            <summary>
+            忽视Target目标的Hitbox
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.DistanceMode.IgnoreHeight">
+            <summary>
+            忽视高度差
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.DistanceMode.IgnoreAll">
+            <summary>
+            全忽视
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.DistanceMode.IgnoreHitbox">
+            <summary>
+            目标圈距离.不忽视高度差
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.HotKey.KeyValue.None">
+            <summary>
+            没有按键状态
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.HotKey.KeyValue.Down">
+            <summary>
+            按键摁下
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.HotKey.KeyValue.Pressed">
+            <summary>
+            按键按下并抬起
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.HotKey.KeyValue.Released">
+            <summary>
+            按键抬起瞬间
+            </summary>
+        </member>
+        <member name="T:AEAssist.Define.Map.ZoneLimit">
+            <summary>
+            单个区域限制类
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.MoveForward">
+            <summary>
+            前进
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.MoveBack">
+            <summary>
+            后退
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.MoveLeft">
+            <summary>
+            左转
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.MoveRight">
+            <summary>
+            右转
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.StrafeLeft">
+            <summary>
+            左平移
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.StrafeRight">
+            <summary>
+            右平移
+            </summary>
+        </member>
+        <member name="F:AEAssist.Define.MoveControlCongfigKey.JUMP">
+            <summary>
+            跳跃 向上
+            </summary>
+        </member>
+        <member name="M:AEAssist.GUI.ImGuiHelper.ToggleButton(System.String,System.Boolean@)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="v"></param>
+            <returns> 被点击后返回true 无交互返回false </returns>
+        </member>
+        <member name="M:AEAssist.GUI.ImGuiHelper.Separator(System.UInt32,System.UInt32)">
+            <summary>
+            一个带上下间距的分割线
+            </summary>
+            <param name="topHeight">上间距</param>
+            <param name="bottomHeight">下间距</param>
+        </member>
+        <member name="M:AEAssist.GUI.ImGuiHelper.IsRightMouseClicked">
+            右键点击
+        </member>
+        <member name="M:AEAssist.GUI.ImGuiHelper.LinkText(System.String,System.String,System.String,System.Nullable{System.Drawing.Color})">
+            <summary>
+            超链接文字
+            </summary>
+            <param name="label">显示文本</param>
+            <param name="link">链接</param>
+            <param name="tooltip">提示文本</param>
+            <param name="color">文本颜色,默认null为imgui文本颜色</param>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Data.NotoriousMonster">
+            <summary>
+            恶名精英NameId
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.SpellTargetType">
+            <summary>
+            技能目标代名词
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.SpellTargetType.SpecifyTarget">
+            <summary>
+            指定单位
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.SpellTargetType.Location">
+            <summary>
+            在场地中指定地点
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.SpellTargetType.DynamicTarget">
+            <summary>
+            动态目标Spell，在释放时再计算目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.SpellTargetType.MapCenter">
+            <summary>
+            场地中心
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.SpellTargetType">
+            <summary>
+            目标类型，可以指定固定目标、小队列表、动态目标（技能释放时再计算目标）
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.SpellCategory">
+            <summary>
+            技能类型，有默认，爆发药，疾跑、道具
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Spell.#ctor(System.UInt32,AEAssist.CombatRoutine.SpellTargetType)">
+            <summary>
+            创建一个Spell
+            </summary>
+            <param name="id">技能id</param>
+            <param name="targetIndex">目标类型</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Spell.#ctor(System.UInt32,Dalamud.Game.ClientState.Objects.Types.IBattleChara)">
+            <summary>
+            指定目标Spell
+            </summary>
+            <param name="id">技能id</param>
+            <param name="target">目标单位</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Spell.#ctor(System.UInt32,System.Func{Dalamud.Game.ClientState.Objects.Types.IBattleChara})">
+            <summary>
+            动态目标Spell，在释放时再计算目标
+            </summary>
+            <param name="id">技能id</param>
+            <param name="getSpecifyTargetFunc">用来计算目标的委托函数</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Spell.#ctor(System.UInt32,System.Numerics.Vector3)">
+            <summary>
+            场地Spell
+            </summary>
+            <param name="id">技能id</param>
+            <param name="pos">释放pos</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Spell.#ctor(System.UInt32,System.Boolean)">
+            <summary>
+            道具Spell
+            </summary>
+            <param name="itemId">物品id</param>
+            <param name="isHq">是否为HQ</param>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.Hq">
+            <summary>
+            如果是道具类型 是否使用HQ道具
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.Pos">
+            <summary>
+            释放坐标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.UsePos">
+            <summary>
+            是否使用释放坐标，默认为否
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.WaitServerAcq">
+            <summary>
+            是否等待服务器确认，默认为是
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Spell.DontUseGcdOpt">
+            <summary>
+            不使用gcd偏移优化，默认为否
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.SpecifyTarget">
+            <summary>
+            指定目标单位
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.GetDynamicsTarget">
+            <summary>
+            获取目标的委托函数，用于在技能释放时再计算目标
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.RecastTime">
+            <summary>
+            复唱时间
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.Cooldown">
+            <summary>
+            冷却时间
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.Charges">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.MaxCharges">
+            <summary>
+            最大层数
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.CastTime">
+            <summary>
+            咏唱时间
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.MPNeed">
+            <summary>
+            魔法消耗
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Spell.ActionRange">
+            <summary>
+            技能施法距离
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Spell.DontUseGcd">
+            <summary>
+            不使用gcd偏移优化
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Module.BattleData.CurrGcdAbilityCount">
+            <summary>
+            设置当前Gcd内能力技插入数量
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.BattleData.SetSequence(AEAssist.CombatRoutine.Module.InternalSlotSequenceData)">
+            <summary>
+            设置接下来的技能队列
+            </summary>
+            <param name="slotSequence"></param>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.CountDownHandler">
+            <summary>
+                倒计时管理,主要对外提供AddAction方法
+            </summary>
+            <seealso cref="M:AEAssist.CombatRoutine.Module.CountDownHandler.AddAction(System.Int32,System.UInt32,AEAssist.CombatRoutine.SpellTargetType)" />
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.CountDownHandler.AddAction(System.Int32,System.UInt32,AEAssist.CombatRoutine.SpellTargetType)">
+            <summary>
+                添加倒计时行为
+            </summary>
+            <param name="timeLeft">倒计时还剩多少秒</param>
+            <param name="spellId">具体的技能Id</param>
+            <param name="spellTargetType">技能的目标类型,默认自己</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.CountDownHandler.AddPotionAction(System.Int32)">
+            <summary>
+            使用爆发药
+            </summary>
+            <param name="timeleft"></param>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Module.MultiMap`2.Item(`0)">
+            <summary>
+                返回内部的list
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.MultiMap`2.GetAll(`0)">
+            <summary>
+                不返回内部的list,copy一份出来
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Opener.IOpener.InitCountDown(AEAssist.CombatRoutine.Module.CountDownHandler)">
+            <summary>
+                初始化CountDown期间的行为,为了应对黑魔那种不同起手之间倒计时处理不一样的情况
+                <seealso cref="T:AEAssist.CombatRoutine.Module.CountDownHandler" />
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.PlayerOptions">
+            <summary>
+             一些跟随战斗重置控制的
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.PlayerOptions.Stop">
+            <summary>
+                是否停手
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.PlayerOptions.Reset">
+            <summary>
+                重置PlayerOptions中的数据
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.SlotMode">
+            <summary>
+            Slot的执行模式,决定着这个Slot从哪个队列作为入口
+            <see cref="F:AEAssist.CombatRoutine.Module.SlotMode.Gcd"/>
+            <see cref="F:AEAssist.CombatRoutine.Module.SlotMode.OffGcd"/>
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotMode.Always">
+            <summary>
+            推荐PVP或者PVE近战需要判断远程技能/当前目标不是正常ACR的目标时使用
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotMode.Gcd">
+            <summary>
+            进入GCD队列执行,会在满足CanUseGCD的情况下进行检测
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotMode.OffGcd">
+            <summary>
+            进入能力技能的队列执行,会在不满足CanUseGcd的情况下进行检测
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.ISlotResolver">
+            <summary>
+                针对当前要使用什么技能的求解器
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.ISlotResolver.Check">
+            <summary>
+                返回大于等于0说明这个求解器被命中了
+                接下来就是调用Build方法构建想要使用的Slot了
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.ISlotResolver.Build(AEAssist.CombatRoutine.Module.Slot)">
+            <summary>
+                构建当前要使用的Slot
+                <seealso cref="T:AEAssist.CombatRoutine.Module.Slot" />
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.ISlotSequence">
+            <summary>
+                固定的Slot队列,每次使用时都会创建一个新的
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Module.ISlotSequence.Sequence">
+            <summary>
+                构建的Slot队列
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.ISlotSequence.StartCheck">
+            <summary>
+                Sequence运行前,返回值大于等于0说明可以用,反之不可以
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.ISlotSequence.StopCheck(System.Int32)">
+            <summary>
+                Sequence运行中,返回值大于等于0说明可以中断
+            </summary>
+            <returns></returns>
+            <param name="index">执行到哪一步了</param>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.Slot">
+            <summary>
+                通用的Slot,决定接下来一段时间内连续释放的一批技能
+                可以是Gcd+能力技
+                可以是能力技+gcd
+                也可以是单个技能
+                还可以是一连串的组合
+                <seealso cref="M:AEAssist.CombatRoutine.Module.Slot.Add(AEAssist.CombatRoutine.Module.SlotAction)" />
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.Slot.maxDuration">
+            <summary>
+            释放失败后的尝试时间，默认2500ms
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.Slot.Wait2NextGcd">
+            <summary>
+            强制延后能力技到下个gcd
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.#ctor(System.Int32)">
+            <param name="maxDura">释放失败后的尝试时间，默认2500ms</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.Insert(AEAssist.CombatRoutine.Module.SlotAction,System.Int32)">
+            <summary>
+            插入一个技能 默认插在队列头
+            </summary>
+            <param name="slotAction"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.Add(AEAssist.CombatRoutine.Module.SlotAction)">
+            <summary>
+            在队列尾部追加一个技能
+            </summary>
+            <param name="slotAction"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.Add(AEAssist.CombatRoutine.Spell)">
+            <summary>
+                追加一个Spell到队列中
+            </summary>
+            <param name="spell"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.Add2NdWindowAbility(AEAssist.CombatRoutine.Spell)">
+            <summary>
+                添加一个在后半GCD才使用的能力技
+            </summary>
+            <param name="spell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.AddDelaySpell(System.Int32,AEAssist.CombatRoutine.Spell)">
+            <summary>
+                添加一个延迟一定时间释放的技能
+            </summary>
+            <param name="delay"></param>
+            <param name="spell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Slot.AppendSequence(AEAssist.CombatRoutine.Module.ISlotSequence,System.Boolean)">
+            <summary>
+            Slot在即将结束时，追加一个队列，比如黑魔打完火3 开始打火4*n
+            </summary>
+            <param name="slotSequence"></param>
+            <param name="wait2nextGcd">队列是否从下个gcd可用时开始遍历执行</param>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Module.SlotAction">
+            <summary>
+                代表一个想要执行的行为
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotAction.WaitType.None">
+            <summary>
+                不等待,立即使用
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotAction.WaitType.WaitInMs">
+            <summary>
+                等待一定时间
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotAction.WaitType.WaitForSndHalfWindow">
+            <summary>
+                等待后半GCD窗口
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Module.SlotAction.MaxDuration">
+            <summary>
+                Spell使用失败时,最多尝试多久
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.SlotAction.#ctor(AEAssist.CombatRoutine.Module.SlotAction.WaitType,System.Int32,AEAssist.CombatRoutine.Spell)">
+            <summary>
+                完全的控制
+            </summary>
+            <param name="wait">等待一定时间</param>
+            <param name="timeInMs">如果是WaitType.WaitInMs,这里就是具体的ms值</param>
+            <param name="spell"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.SlotAction.#ctor(AEAssist.CombatRoutine.Spell)">
+            <summary>
+                立即使用一个Spell
+            </summary>
+            <param name="spell"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Module.Target.TargetSelectorModule.CountDownString">
+            <remarks>
+            Pattern:<br/>
+            <code>Battle commencing in|距离战斗开始|戰鬥開始|戦闘開始</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match with 4 alternative expressions, atomically.<br/>
+                ○ Match the string "Battle commencing in".<br/>
+                ○ Match the string "距离战斗开始".<br/>
+                ○ Match the string "戰鬥開始".<br/>
+                ○ Match the string "戦闘開始".<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.QCall_AssemblyHandle.SetPath(System.String)">
+            <summary>
+            设置dll路径 当
+            </summary>
+            <param name="path">路径</param>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.IRotationEntry.AuthorName">
+            <summary>
+            最短2个字符
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEntry.Build(System.String)">
+            <summary>
+                创建Rotation的入口,只会被调用一次
+            </summary>
+            <returns>插件的核心 <seealso cref="T:AEAssist.CombatRoutine.Rotation" /></returns>
+            <param name="settingFolder">
+                配置文件的存放目录,包含你的代码存放的文件夹的名字
+                推荐配置文件采用<see cref="!:SystemJsonHelper" />来序列化
+            </param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEntry.GetRotationUI">
+            <summary>
+            返回一个自定义的UI 推荐使用通用的QT ui
+            </summary>
+            <param name="jobViewWindow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEntry.OnDrawSetting">
+            <summary>
+            画设置UI
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationUI.Update">
+            <summary>
+            一般用来处理快捷键的检查
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.IRotationEventHandler">
+            <summary>
+                常用的事件回调处理
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnPreCombat">
+            <summary>
+            非战斗情况下的回调 例如远敏可以考虑此时唱跑步歌 T可以考虑切姿态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnResetBattle">
+            <summary>
+            在战斗重置(一般时团灭重来,脱战等)时触发
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnNoTarget">
+            <summary>
+            ACR默认再没目标时是不工作的 为了兼容没目标时的处理 比如舞者在转阶段可能要提前跳舞
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnSpellCastSuccess(AEAssist.CombatRoutine.Module.Slot,AEAssist.CombatRoutine.Spell)">
+            <summary>
+            读条技能读条判定成功 (读条快结束 可以滑步的时间点)
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.BeforeSpell(AEAssist.CombatRoutine.Module.Slot,AEAssist.CombatRoutine.Spell)">
+            <summary>
+            某个技能使用之前的处理
+            </summary>
+            <param name="slot"></param>
+            <param name="spell"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.AfterSpell(AEAssist.CombatRoutine.Module.Slot,AEAssist.CombatRoutine.Spell)">
+            <summary>
+                某个技能使用之后的处理,比如诗人在刷Dot之后记录这次是否是强化buff的Dot
+            如果是读条技能，则是服务器判定它释放成功的时间点，比上面的要慢一点
+            </summary>
+            <param name="slot">这个技能归属的Slot</param>
+            <param name="spell">某个使用完的技能</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnBattleUpdate(System.Int32)">
+            <summary>
+                战斗中每帧都会触发的逻辑
+            </summary>
+            <param name="currTimeInMs">从战斗开始到现在的时间,单位毫秒(ms)</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnEnterRotation">
+            <summary>
+            切到当前ACR
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnExitRotation">
+            <summary>
+            从当前ACR退出
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.IRotationEventHandler.OnTerritoryChanged">
+            <summary>
+            地图切换时触发
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.ITargetResolver.ResolveTarget(Dalamud.Game.ClientState.Objects.Types.IBattleChara@)">
+            <summary>
+                尝试主动选择目标(进入战斗后生效)
+            </summary>
+            <param name="agent"></param>
+            <returns>如果当前决定切换目标,返回true,否则永远返回false</returns>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.ITriggerHandler">
+            <summary>
+                自定义的触发器处理类,用来处理特定情况下的行为
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.ITriggerHandler.ListeningActionName">
+            <summary>
+                监听的自定义行为的ActionName
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.ITriggerHandler.Handle(System.String)">
+            <summary>
+                在TriggerLine编辑器中编辑的自定义行为(CustomTrigger)
+            </summary>
+            <param name="args">参数</param>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Rotation">
+            <summary>
+                每个输出的核心类,代表着对应作者对这个输出插件的一切控制.
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.#ctor(System.Collections.Generic.List{AEAssist.CombatRoutine.Module.SlotResolverData})">
+            <summary>
+            </summary>
+            <param name="authorName">作者名 长度必须大于等于2</param>
+            <param name="slotResolvers">
+                每一个ISlotResolver都是一个Slot的求解器 (Slot: 决定接下来要释放什么技能)
+                SlotResolver的SlotMode决定它在哪个队列被计算
+                传入的SlotResolvers将按照传入的顺序遍历求解(GCD队列,OffGcd队列在PVE中分开判断。PVP时合并)
+                <seealso cref="T:AEAssist.CombatRoutine.Module.ISlotResolver" />
+            </param>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Rotation.TargetJob">
+            <summary>
+            适配的职业
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Rotation.AcrType">
+            <summary>
+            ACR类型
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Rotation.MinLevel">
+            <summary>
+            适配的最小等级
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Rotation.MaxLevel">
+            <summary>
+            适配的最大等级
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.Rotation.Description">
+            <summary>
+            ACR描述
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddOpener(System.Func{System.UInt32,AEAssist.CombatRoutine.Module.Opener.IOpener})">
+            <summary>
+            起手,包含倒计时的处理
+            </summary>
+            <param name="opener">参数是角色等级</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.SetRotationEventHandler(AEAssist.CombatRoutine.IRotationEventHandler)">
+            <summary>
+                添加一些事件回调
+            </summary>
+            <param name="rotationEventHandler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddTargetResolver(AEAssist.CombatRoutine.ITargetResolver[])">
+            <summary>
+                追加TargetResolver,可以添加多个
+            </summary>
+            <param name="targetResolver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddHotkeyEventHandlers(AEAssist.CombatRoutine.Module.Hotkey.IHotkeyEventHandler[])">
+            <summary>
+                提供一些快捷键事件的处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddSlotSequences(AEAssist.CombatRoutine.Module.ISlotSequence[])">
+            <summary>
+                一共提供多少个固定的技能轴,比如战斗中固定的爆发轴/资源连击轴
+                每个轴都带进入条件和跳出条件
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddTriggerCondition(AEAssist.CombatRoutine.Trigger.ITriggerCond[])">
+            <summary>
+            添加触发器条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddTriggerAction(AEAssist.CombatRoutine.Trigger.ITriggerAction[])">
+            <summary>
+            添加触发器行为
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddCanUseHighPrioritySlotCheck(System.Func{AEAssist.CombatRoutine.Module.SlotMode,AEAssist.CombatRoutine.Module.Slot,System.Int32})">
+            <summary>
+            时间轴可以往SlotResolver计算中插入更高优先级的技能, 你的ACR将决定这个技能是否可用,返回>=0表示可用.
+            </summary>
+            <param name="check"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddTriggerlineUpgradeFromStr(System.Func{System.String,System.String})">
+            <summary>
+            时间轴文件自动升级的字符串替换
+            </summary>
+            <param name="upgrade"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddTriggerlineUpgradeFromData(System.Action{AEAssist.CombatRoutine.Trigger.TriggerLine})">
+            <summary>
+            时间轴文件自动升级时的结构改变
+            </summary>
+            <param name="upgrade"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Rotation.AddCanPauseACRCheck(System.Func{System.Int32})">
+            <summary>
+            特定情况下返回>=0需要暂停一下acr
+            </summary>
+            <param name="canPauseCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.ActionQueueInMs">
+            <summary>
+            提前使用下一个gcd时间
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.Ping">
+            <summary>
+            GCD偏移提前多久使用Gcd(毫秒)
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.CastingSpellSuccessRemainTiming">
+            <summary>
+            读条技能成功判定的剩余时间
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.WaitForSuccessTime">
+            <summary>
+            技能释放后等服务器确认的超时时间
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.AttackRange">
+            <summary>
+            最小可攻击到敌人的距离
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.CastingSpellSuccessRemainTimingSlideTp">
+            <summary>
+            读条技能成功判定的剩余时间(滑步TP用)
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.AutoFinalBurstCheckTime">
+            <summary>
+            最终爆发TTK检测时间
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.AutoInterrupt">
+            <summary>
+            检测到可打断读条时自动打断
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.GeneralSettings.MaxAbilityTimesInGcd">
+            <summary>
+            Gcd内最大能力技数量
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.OverlayScale">
+            <summary>
+            窗口缩放
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.TimeToKillCheckTime">
+            <summary>
+            通用TTK机制检测时间
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.TTKIgnoreDamage">
+            <summary>
+            TTK可忽略的最低伤害值
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.UpdateInterval3">
+            <summary>
+            ACR运行间隔
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.InputSimulate">
+            <summary>
+            模拟键盘按键输入
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.GeneralSettings.NoClipGCD3">
+            <summary>
+            全局能力技不卡GCD
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.GeneralSettings.OptimizeGcd">
+            <summary>
+            是否开启优化Gcd偏移
+            </summary>
+        </member>
+        <member name="P:AEAssist.CombatRoutine.GeneralSettings.GlobalNotWaitServerAcq">
+            <summary>
+            全局能力技不等服务器回包
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.AutoTrigger">
+            <summary>
+            自动加载时间轴
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.GeneralSettings.DontUseSpellWhenDeadInTriggerline">
+            <summary>
+            死亡时, 强制使用技能/高优先级队列/爆发药/设置面向等无效化
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.LockPosSetting.ZoneLimitList">
+            区域范围限制
+        </member>
+        <member name="F:AEAssist.CombatRoutine.PotionSetting.NotAutoPotion3">
+            <summary>
+            副本外不吃爆发药
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.PotionSetting.NotAutoPotionWithoutHighEndTerritory3">
+            <summary>
+            非高难本不吃爆发药
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.TargetSelectorConfig">
+            <summary>
+            目标选择器
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.Enable">
+            <summary>
+            目标选择器总开关
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.DtrShow">
+            <summary>
+            DTR栏显示开关
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.NoTargetOnly">
+            <summary>
+            有目标时不自动切换目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.SelectorMode">
+            <summary>
+            目标选择器模式
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.DisableWhenDead">
+            <summary>
+            死亡自动禁用目标选择器
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.SelectWhenCountdown">
+            <summary>
+            倒计时自动选择目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.CusRangeEnable">
+            <summary>
+            自定义索敌范围开关
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.CusRange">
+            <summary>
+            自定义索敌范围
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.NoSelectStatus">
+            <summary>
+            不选中带有此状态列表的目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.NoSelectStatus2Status">
+            <summary>
+            当我有自定义状态时不选择有自定义状态的目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.IgnoreDummy">
+            <summary>
+            排除木人
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.SelectEnemyListObject">
+            <summary>
+            始终将敌人列表内的敌人添加到可选中范围内
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.EnemyListOnly">
+            <summary>
+            在野外时排除非敌对目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.TargetSelectorConfig.SmartMode">
+            <summary>
+            智能管控模式
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Trigger.ITriggerBase.Draw">
+            <summary>
+            返回false表示使用默认的反射画法
+            返回true表示自定义界面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Trigger.ITriggerlineCheck.Check(AEAssist.GUI.Tree.TreeCompBase,AEAssist.GUI.Tree.TreeNodeBase,AEAssist.CombatRoutine.Trigger.TriggerLine,AEAssist.CombatRoutine.Trigger.Node.Env,AEAssist.CombatRoutine.Trigger.TriggerlineCheckResult)">
+            <summary>
+            
+            </summary>
+            <param name="currNode">这个对象当前在哪个节点里</param>
+            <param name="parent">所在节点的父节点</param>
+            <param name="env">检查时的一些临时数据,比如修改变量的行为可以检查Env里有没有那个变量,没有就说明前面没配设置变量的行为</param>
+            <param name="checkResult">检查结果,根据情况可以添加Warning,还是Error</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.Trigger.Node.ITriggerScript.Check(AEAssist.CombatRoutine.Trigger.Node.ScriptEnv,AEAssist.CombatRoutine.Trigger.ITriggerCondParams)">
+            <summary>
+            Check返回True代表此节点执行完毕 否则激活后会一直触发
+            </summary>
+            <param name="scriptEnv">本场战斗里缓存的数据</param>
+            <param name="condParams">战斗事件</param>
+            <returns></returns>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.Node.ScriptEnv">
+            <summary>
+            脚本之间传递参数/实现通信用
+            </summary>
+        </member>
+        <member name="F:AEAssist.CombatRoutine.Trigger.Node.ScriptEnv.KV">
+            <summary>
+            传递的参数
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.EnemyCastSpellCondParams">
+            <summary>
+            单位使用技能事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.OnMapEffectCreateEvent">
+            <summary>
+            MapEffect创建事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.TetherCondParams">
+            <summary>
+            连线事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.ReceviceAbilityEffectCondParams">
+            <summary>
+            效果生效时间事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.ReceviceNoTargetAbilityEffectCondParams">
+            <summary>
+            无目标效果生效时间事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.TargetIconEffectCondParams">
+            <summary>
+            特定点名效果事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.TargetIconEffectTestCondParams">
+            <summary>
+            特定点名效果事件(新)
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.AfterSpellCondParams">
+            <summary>
+            某个技能使用结束事件
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.Trigger.AddStatusCondParams">
+            <summary>
+            添加Buff
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyResolver.HotKeyResolver_NormalSpell.#ctor(System.UInt32,AEAssist.CombatRoutine.SpellTargetType,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="spellId"></param>
+            <param name="useHighPrioritySlot">false代表强制用,true代表使用高优先级队列</param>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.View.JobView.IHotkeyResolver">
+            <summary>
+            快捷键事件
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.IHotkeyResolver.Draw(System.Numerics.Vector2)">
+            <summary>
+            画快捷键的显示. 只能画快捷键图片本身
+            </summary>
+            <param name="size">显示的总区域大小</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.IHotkeyResolver.DrawExternal(System.Numerics.Vector2,System.Boolean)">
+            <summary>
+            画快捷键显示的额外信息，比如边框、冷却时间、charges等 (相当于新建了一个图层).拆分开来是因为前者需要统一加个ToolTip和点击处理
+            </summary>
+            <param name="size"></param>
+            <param name="isActive">快捷键现在是否被激活(持续0.5s)</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.IHotkeyResolver.Check">
+            <summary>
+            返回大于等于0说明这个快捷键事件可以触发
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.IHotkeyResolver.Run">
+            <summary>
+            执行当前的快捷键事件
+            </summary>
+            <param name="hotkey"></param>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.View.JobView.HotkeyWindow">
+            快捷键窗口类
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.HotkeyDict">
+            用于储存所有hotkey控件的字典
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.ActiveList">
+            处于激活状态的hotkey列表
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.HotkeyNameList">
+            动态按顺序储存hotkey名称的list，用于排序显示hotkey
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.HotkeyUnVisibleList">
+            隐藏的hotkey列表
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.HotkeyLineCount">
+            hotkey按钮一行有几个
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.AddHotkey(System.String,AEAssist.CombatRoutine.View.JobView.IHotkeyResolver)">
+            <summary>
+            添加新的qt控件
+            </summary>
+            <param name="name">hotkey的名称</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.SetHotkeyToolTip(System.String)">
+            设置上一次add添加的hotkey的toolTip
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.GetHotkeyArray">
+            返回包含当前所有hotkey名字的数组
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.SetHotkey(System.String)">
+            激活单个快捷键,mo无效
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.HotkeySettingView">
+            用于draw一个更改qt排序显示等设置的视图
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.HotkeyFormat(AEAssist.Define.HotKey.Keys)">
+            快捷键显示格式化
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.HotkeyWindow.RunHotkey">
+            <summary>
+            运行键盘快捷键模块,一般放在update中
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.#ctor(AEAssist.CombatRoutine.View.JobView.JobViewSave,System.Action,System.String)">
+            <summary>
+            在当前职业循环插件中创建一个gui视图
+            </summary>
+            <param name="save">保存设置的方法</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetMainStyle">
+            <summary>
+            初始化主窗口风格
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.EndMainStyle">
+            <summary>
+            注销主窗口风格
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.AddTab(System.String,System.Action{AEAssist.CombatRoutine.View.JobView.JobViewWindow})">
+            <summary>
+            增加一栏说明
+            </summary>
+            <param name="tabName"></param>
+            <param name="draw"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetUpdateAction(System.Action)">
+            <summary>
+            设置UI上的Update处理
+            </summary>
+            <param name="updateAction"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.AddQt(System.String,System.Boolean)">
+            <summary>
+            添加新的qt控件
+            </summary>
+            <param name="name">qt的名称</param>
+            <param name="qtValueDefault">qt的bool默认值</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.AddQt(System.String,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            添加新的qt控件，并且自定义方法
+            </summary>
+            <param name="name">qt的名称</param>
+            <param name="qtValueDefault">qt的bool默认值</param>
+            <param name="action">按下时触发的方法</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetQtToolTip(System.String)">
+            设置上一次add添加的hotkey的toolTip
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.DrawQtWindow">
+            画一个新的Qt窗口
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.QtSettingView">
+            创建一个更改qt排序显示等设置的视图
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.GetQt(System.String)">
+            获取指定名称qt的bool值
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetQt(System.String,System.Boolean)">
+            设置指定qt的值
+            <returns>成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.ReverseQt(System.String)">
+            反转指定qt的值
+            <returns>成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.Reset">
+            【这个函数已经不在起作用！！重置qt请自行添加！】
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.NewDefault(System.String,System.Boolean)">
+            给指定qt设置新的默认值
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetDefaultFromNow">
+            将当前所有Qt状态记录为新的默认值
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.GetQtArray">
+            返回包含当前所有qt名字的数组 不要在update里调用
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.DrawHotkeyWindow">
+            画一个新的hotkey窗口
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.AddHotkey(System.String,AEAssist.CombatRoutine.View.JobView.IHotkeyResolver)">
+            <summary>
+            添加新的qt控件
+            </summary>
+            <param name="name">hotkey的名称</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.GetActiveList">
+            <summary>
+            获取当前激活的hotkey列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetHotkeyToolTip(System.String)">
+            设置上一次add添加的hotkey的toolTip
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.SetHotkey(System.String)">
+            激活单个快捷键,mo无效
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.CancelHotkey(System.String)">
+            取消激活单个快捷键
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.GetHotkeyArray">
+            返回包含当前所有hotkey名字的数组
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.HotkeySettingView">
+            用于draw一个更改hotkey排序显示等设置的视图
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.MainControlView(System.Boolean@,System.Boolean@)">
+            <summary>
+            用于开关自动输出的控件组合
+            </summary>
+            <param name="buttonValue">主开关</param>
+            <param name="stopButton">传入控制停手的变量</param>
+            <returns>1：摁下主按钮 2：摁下缩放按钮</returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.JobViewWindow.ChangeStyleView">
+            风格设置控件
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.MainColor">
+            主颜色
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.QtWindowBgAlpha">
+            Qt窗口背景透明度
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.QtUnVisibleList">
+            隐藏的qt列表
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.QtLineCount">
+            QT按钮一行有几个
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.HotkeyUnVisibleList">
+            隐藏的hotkey列表
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.HotkeyLineCount">
+            hotkey按钮一行有几个
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.JobViewSave.LockWindow">
+            窗口拖动
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.MainWindow.MainControlView(System.Boolean@,System.Boolean@,System.Action)">
+            <summary>
+            用于开关自动输出的控件组合
+            </summary>
+            <param name="buttonValue">主开关</param>
+            <param name="stopButton">传入控制停手的变量</param>
+            <returns>1：摁下主按钮 2：摁下缩放按钮</returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.MainWindow.ChangeStyleView">
+            风格设置控件
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.QtStyle.MainColor">
+            主颜色
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.QtStyle.QtWindowBgAlpha">
+            Qt窗口背景透明度
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtStyle.SetMainStyle">
+            <summary>
+            初始化主窗口风格
+            </summary>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtStyle.EndMainStyle">
+            <summary>
+            注销主窗口风格，绝对不能少
+            </summary>
+        </member>
+        <member name="T:AEAssist.CombatRoutine.View.JobView.QtWindow">
+            Qt窗口类
+        </member>
+        <member name="F:AEAssist.CombatRoutine.View.JobView.QtWindow.QtDict">
+            用于储存所有qt控件的字典
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.QtWindow.QtNameList">
+            动态按顺序储存qt名称的list，用于排序显示qt
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.QtWindow.QtUnVisibleList">
+            隐藏的qt列表
+        </member>
+        <member name="P:AEAssist.CombatRoutine.View.JobView.QtWindow.QtLineCount">
+            QT按钮一行有几个
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.QtControl.Reset">
+            重置qt状态
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.AddQt(System.String,System.Boolean)">
+            <summary>
+            添加新的qt控件
+            </summary>
+            <param name="name">qt的名称</param>
+            <param name="qtValueDefault">qt的bool默认值</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.AddQt(System.String,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            添加新的qt控件
+            </summary>
+            <param name="name">qt的名称</param>
+            <param name="qtValueDefault">qt的bool默认值</param>
+            <param name="action">按下时触发的方法</param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.SetQtToolTip(System.String)">
+            设置上一次add添加的hotkey的toolTip
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.GetQt(System.String)">
+            获取指定名称qt的bool值
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.SetQt(System.String,System.Boolean)">
+            设置指定qt的值
+            <returns>成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.ReverseQt(System.String)">
+            反转指定qt的值
+            <returns>成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.NewDefault(System.String,System.Boolean)">
+            给指定qt设置新的默认值
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.SetDefaultFromNow">
+            将当前所有Qt状态记录为新的默认值
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.GetQtArray">
+            返回包含当前所有qt名字的数组
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.DrawQtWindow(AEAssist.CombatRoutine.View.JobView.QtStyle)">
+            画一个新的Qt窗口
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.QtSettingView">
+            用于draw一个更改qt排序显示等设置的视图
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.QtSwitchButton(System.String,System.Boolean@,AEAssist.CombatRoutine.View.JobView.QtStyle@)">
+            重新包装的开关按钮控件，一般用于QT按钮
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.JobView.QtWindow.QtSwitchButton(System.String,System.Boolean@,System.Numerics.Vector4,AEAssist.CombatRoutine.View.JobView.QtStyle@)">
+            重新包装的开关按钮控件，接受自定义颜色而不是全局颜色
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.MeleePosHelper.Draw(AEAssist.CombatRoutine.View.MeleePosHelper.Pos,System.Int32)">
+            <summary>
+            设置近战身位指示器如何显示
+            </summary>
+            <param name="dir"></param>
+            <param name="progress">0~100</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.OverlayHelper.DrawPotion(System.Boolean)">
+            <summary>
+            爆发药
+            </summary>
+            <param name="isHorizontal"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.OverlayHelper.DrawActionIconButton(System.UInt32,System.Boolean,System.Boolean)">
+            <summary>
+            技能图标按钮
+            </summary>
+            <param name="ActionId"></param>
+            <param name="isHorizontal"></param>
+            <param name="isAdjust"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.OverlayHelper.DrawIconButton(System.Int32,System.Action,System.Boolean,System.Boolean)">
+            <summary>
+            图标按钮
+            </summary>
+            <param name="ActionId"></param>
+            <param name="isHorizontal"></param>
+            <param name="isAdjust"></param>
+        </member>
+        <member name="M:AEAssist.CombatRoutine.View.OverlayHelper.DrawTriggerlineInfo">
+            <summary>
+            时间轴信息
+            </summary>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.LevelUp(System.UInt32,System.UInt32)">
+            <summary>
+            升级事件
+            </summary>
+            <param name="classJobId"></param>
+            <param name="level"></param>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.FullGp">
+            <summary>
+            是否满GP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest._taskManager">
+            <summary>
+            任务管理
+            </summary>
+        </member>
+        <member name="F:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest._isRunning">
+            <summary>
+            任务是否进行
+            </summary>
+        </member>
+        <member name="F:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest._centerpos">
+            <summary>
+            采集区域中心
+            </summary>
+        </member>
+        <member name="F:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest._levelChange">
+            <summary>
+            等级发生变化
+            </summary>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.Check">
+            <summary>
+            任务检测
+            </summary>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.Submit">
+            <summary>
+            提交任务
+            </summary>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.打开任务面板">
+            <summary>
+            打开接任务的面板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.Yes">
+            <summary>
+            提示菜单等
+            </summary>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.OnAddonSelectYesno(Dalamud.Game.Addon.Lifecycle.AddonEvent,Dalamud.Game.Addon.Lifecycle.AddonArgTypes.AddonArgs)">
+            <summary>
+            处理对话框
+            </summary>
+            <param name="type"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.GetAvailableMissions(System.Collections.Generic.List{AEAssist.Internal.Plugins.CosmicHelperTest.MissionData}@)">
+            <summary>
+            获取可用任务列表
+            </summary>
+            <returns>可用的任务数据列表</returns>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.GetMissionFromName(System.String)">
+            <summary>
+            根据任务名获取任务
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.GetMissionRecipe(System.UInt32)">
+            <summary>
+            获取任务需求列表
+            </summary>
+            <param name="missionid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.TryFindNearestGatherPoint(FFXIVClientStructs.FFXIV.Common.Math.Vector3@)">
+            <summary>
+            尝试找最近的采集点
+            </summary>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.EnqueueMoveToGatheringPoint(FFXIVClientStructs.FFXIV.Common.Math.Vector3)">
+            <summary>
+            导航去路径点
+            </summary>
+            <param name="pos"></param>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.EnqueueInteractWith(System.Numerics.Vector3)">
+            <summary>
+            与导航处目标交互
+            </summary>
+            <param name="pos"></param>
+        </member>
+        <member name="M:AEAssist.Internal.Plugins.CosmicHelperTest.CosmicHelperTest.TryGetNearestEvent(System.Predicate{FFXIVClientStructs.FFXIV.Client.Game.Event.EventHandlerInfo},System.Predicate{FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject},FFXIVClientStructs.FFXIV.Common.Math.Vector3,System.UInt32@,System.UInt32@)">
+            <summary>
+            
+            </summary>
+            <param name="conditionInfo"></param>
+            <param name="conditionObj"></param>
+            <param name="source"></param>
+            <param name="eventID"></param>
+            <param name="eventObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:AEAssist.Internal.Plugins.CosmicHelperTest.MissionData.ClassType">
+            <summary>
+            1->10 2->50 3->90 456->100
+            </summary>
+        </member>
+        <member name="T:AEAssist.ACT.ActorControl.FFXIVIpcActorControlTarget">
+            Structural representation of the packet sent by the server
+            to update certain player details / status
+        </member>
+        <member name="P:AEAssist.Module.Avoid.ISelector`1.Result">
+            <summary>
+            最佳目标结果
+            </summary>
+        </member>
+        <member name="P:AEAssist.Module.Avoid.ISelector`1.Targets">
+            <summary>
+            可影响的目标列表
+            </summary>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.ISelector`1.CanSelect(`0)">
+            <summary>
+            能否选到对象
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.ISelector`1.OnSelect(AEAssist.Module.Avoid.IConvexPolygon{AEAssist.Avoid.Shape}@,`0)">
+            <summary>
+            选到对象时伤害范围的变化
+            </summary>
+            <param name="shape"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.ISupport.GetFastestPointByDir(System.Numerics.Vector2)">
+            <summary>
+            凸多边形给定方向的最大投影坐标
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.IConvexPolygon`1.SetOringin(System.Numerics.Vector3)">
+            <summary>
+            选择给定的基点后多边形的变化 必须要实现
+            </summary>
+            <param name="oringin"></param>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.SectorConvexPolygon.GetFastestPointByDir(System.Numerics.Vector2)">
+            <summary>
+            各个点在指定方向的投影（有向）的最大值 
+            </summary>
+            <param name="dir">方向 单位向量</param>
+            <returns></returns>
+        </member>
+        <member name="F:AEAssist.Module.Avoid.MinkowskiDifferencePolygon.Vertices">
+            <summary>
+            顶点集合
+            </summary>
+        </member>
+        <member name="F:AEAssist.Module.Avoid.MinkowskiDifferencePolygon.Simplex">
+            <summary>
+            是否相交用到的三角形
+            </summary>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.MinkowskiDifferencePolygon.AddPoint(System.Numerics.Vector2)">
+            <summary>
+            添加顶点
+            </summary>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.MinkowskiDifferencePolygon.IsIntersect">
+            <summary>
+            GJK 查找两个多边形的闵可夫斯基差多边形是否存在由3个顶点组成的多边形包含原点
+            存在着多边形相交，否则不相交
+            从任意方向开始找
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AEAssist.Module.Avoid.TargetSelector">
+            <summary>
+            技能对象必须是目标
+            </summary>
+        </member>
+        <member name="F:AEAssist.Module.Avoid.TargetSelector.GameObjectPolygon2Ds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AEAssist.Module.Avoid.TargetSelector.#ctor(System.Collections.Generic.IEnumerable{Dalamud.Game.ClientState.Objects.Types.IGameObject},AEAssist.Module.Avoid.IConvexPolygon{AEAssist.Avoid.Shape},System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="gameObjects">目标</param>
+            <param name="damagePolygon">伤害范围</param>
+            <param name="range">可选的范围</param>
+        </member>
+        <member name="M:AEAssist.Command.CommandMgr.TargetSelectorRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>^(?:(?:(?&lt;type&gt;on|off|switch))|(?:(?&lt;mode&gt;mode)(?&lt;modeNum&gt;[1-9]))|(?:(?&lt;noTarget&gt;NoTargetOnly)\\s+(?&lt;noTargetState&gt;on|off|switch)))$</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match with 3 alternative expressions.<br/>
+                ○ "type" capture group.<br/>
+                    ○ Match with 2 alternative expressions.<br/>
+                        ○ Match a sequence of expressions.<br/>
+                            ○ Match 'o'.<br/>
+                            ○ Match with 2 alternative expressions.<br/>
+                                ○ Match 'n'.<br/>
+                                ○ Match the string "ff".<br/>
+                        ○ Match the string "switch".<br/>
+                ○ Match a sequence of expressions.<br/>
+                    ○ "mode" capture group.<br/>
+                        ○ Match the string "mode".<br/>
+                    ○ "modeNum" capture group.<br/>
+                        ○ Match a character in the set [1-9].<br/>
+                ○ Match a sequence of expressions.<br/>
+                    ○ "noTarget" capture group.<br/>
+                        ○ Match the string "NoTargetOnly".<br/>
+                    ○ Match a whitespace character atomically at least once.<br/>
+                    ○ "noTargetState" capture group.<br/>
+                        ○ Match with 2 alternative expressions.<br/>
+                            ○ Match a sequence of expressions.<br/>
+                                ○ Match 'o'.<br/>
+                                ○ Match with 2 alternative expressions.<br/>
+                                    ○ Match 'n'.<br/>
+                                    ○ Match the string "ff".<br/>
+                            ○ Match the string "switch".<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="P:AEAssist.Function.Trust.Windows.Func.AutoRun">
+            <summary>
+            0或1 无事发生 3 自动行走 4 跟随
+            </summary>
+        </member>
+        <member name="M:AEAssist.Function.Trust.Windows.Func.FllowObject(FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject*)">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:AEAssist.Function.Trust.Windows.Func.FlyPitchAngle">
+            <summary>
+            <para>俯仰角</para>
+            <para>前进方向与水平面的夹角</para>
+            <para>-pi/2到pi/2之间（-1.57到1.57）， 向下为正，向上为负</para>
+            游戏内大概只允许 俯角最大值80度 仰角最大值45度；
+            </summary>
+        </member>
+        <member name="M:AEAssist.Function.Trust.Windows.Func.Jump">
+            <summary>
+            更像是按了空格
+            </summary>
+        </member>
+        <member name="M:AEAssist.Function.Trust.Windows.Func.FlyInGround(System.Boolean)">
+            <summary>
+            改了汇编 修改后记得恢复
+            48 ?? ?? 48 89 58 ?? 55 56 57 48 ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? ?? ?? 0F 29 78
+            </summary>
+        </member>
+        <member name="T:AEAssist.Function.Native.IdleTimeFinder">
+            <summary>
+            Helps to find the idle time, (in milliseconds) spent since the last user input
+            </summary>
+        </member>
+        <member name="M:AEAssist.Function.Native.IdleTimeFinder.GetLastInputTime">
+            <summary>
+            Get the Last input time in milliseconds
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeMs">
+            <summary>
+            当前时间，毫秒
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.Hidealls">
+            <summary>
+            不对玩家显示的技能名，如"--sync--"、"Reset"等
+            </summary>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.ParseToFloat(System.String)">
+            <summary>
+            将字符串转换为浮点数
+            </summary>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.FloatToMsLong(System.Single)">
+            <summary>
+            将时间点的float转为毫秒的long
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.CheckSyncTime(AEAssist.Triggerline2.Timeline.Timeline.SyncLine)">
+            <summary>
+            检测syncLine是否匹配当前时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.Error(System.String)">
+            <summary>
+            卫月日志错误
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.Log(System.String)">
+            <summary>
+            卫月日志信息
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.Print(System.String)">
+            <summary>
+            输出到聊天框
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimelineDirectory">
+            <summary>
+            存放txt文件的目录
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.StartTime">
+            <summary>
+            时间轴的起始时间，用于相对时间计算
+            <remarks>-1是时间轴停止，0表示时间轴启动</remarks>
+            </summary>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.OnStart">
+            <summary>
+            时间轴启动，请确保已经添加了时间轴触发器
+            </summary>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.OnLoop(System.Int64)">
+            <summary>
+            放在循环帧中
+            </summary>
+            <param name="timestamp">当前时间戳，单位ms，可相对时间</param>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.OnTerritoryChanged(System.UInt32)">
+            <summary>
+            地图变化时加载txt文件
+            </summary>
+            <param name="territoryId"></param>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.LoadAndParse(System.String)">
+            <summary>
+            加载时间轴文件并解析
+            </summary>
+            <param name="timelineFilePath"></param>
+            <returns>失败返回false</returns>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.AddTimeTrigger(System.Single,System.Threading.Tasks.Task,System.String,System.String,System.Int32,System.Numerics.Vector2)">
+            <summary>
+            添加时间轴触发器
+            </summary>
+            <param name="time">触发的时间，即txt时间轴行开头的浮点数，单位秒</param>
+            <param name="action">行为</param>
+            <param name="name">触发器的名称，可重复</param>
+            <param name="description">描述</param>
+            <param name="timeOffset">时间偏移，向前为负，向后为正，单位毫秒</param>
+            <param name="randomShake">触发时间的随机抖动范围，单位毫秒</param>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.Name">
+            <summary>
+            触发器的名称
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.Action">
+            <summary>
+            行为
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.Time">
+            <summary>
+            触发的时间，即txt时间轴行开头的浮点数，单位秒
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.TimeMs">
+            <summary>
+            实际的触发时间，单位为毫秒
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.TimeOffset">
+            <summary>
+            时间偏移，向前为负，向后为正，单位毫秒
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.RandomShake">
+            <summary>
+            触发时间的随机抖动范围，单位毫秒
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.TimeTrigger.Used">
+            <summary>
+            是否已经触发过
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.SyncTime">
+            <summary>
+            行开头的时间点，用于校准同步
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.Name">
+            <summary>
+            名称
+            <remarks>为行第二位的字符串，一般为技能名</remarks>
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.NameWithTrans">
+            <summary>
+            翻译后的名称
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.Duration">
+            <summary>
+            当前行的持续时间，一般用于给玩家看的
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.SyncNetRegex">
+            <summary>
+            用于同步的日志
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.Window">
+            <summary>
+            窗口时间，当前时间不在窗口时间内则忽略当前行
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.OriginalJump">
+            <summary>
+            时间线跳转，从txt文本中读取的数据，跳转目标可能是label也可能是时间
+            <remarks>普通jump首先要完成当前行的同步才会进行时间跳转。如果跳转到时间 0，时间轴将停止播放。</remarks>
+            <remarks>Forcejump强制跳转，在时间到达当前行但未同步时，或当前行完成同步时跳转。</remarks>
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.Jump">
+            <summary>
+            时间线跳转，读取全部txt后，重新计算的数据，只包含目标时间
+            <remarks>普通jump首先要完成当前行的同步才会进行时间跳转。如果跳转到时间 0，时间轴将停止播放。</remarks>
+            <remarks>Forcejump强制跳转，在时间到达当前行但未同步时，或当前行完成同步时跳转。</remarks>
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncLine.Used">
+            <summary>
+            当前行是否已经匹配到过了
+            </summary>
+        </member>
+        <member name="P:AEAssist.Triggerline2.Timeline.Timeline.SyncNetRegex.Params">
+            <summary>
+            原始json文本
+            </summary>
+        </member>
+        <member name="M:AEAssist.Triggerline2.Timeline.Timeline.SyncNetRegex.MyRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>(?&lt;=\\s|\\{|\\[)(\\w+)(?=\\s*:)</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Zero-width positive lookbehind.<br/>
+                ○ Match a character in the set [[{\s] right-to-left.<br/>
+            ○ 1st capture group.<br/>
+                ○ Match a word character atomically at least once.<br/>
+            ○ Zero-width positive lookahead.<br/>
+                ○ Match a whitespace character atomically any number of times.<br/>
+                ○ Match ':'.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:AEAssist.Verify.NekoStructs.Unpack``1(System.Byte[])">
+            <summary>
+            byte[]转化成结构体
+            </summary>
+            <param name="bytes"></param>
+            <param name="strcutType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AEAssist.Verify.NekoStructs.Pack``1(``0)">
+            <summary>
+            结构体转化成byte[]
+            </summary>
+            <param name="structure"></param>
+            <returns></returns>
+        </member>
+        <member name="P:AEAssist.Verify.VIP.Key">
+            <summary>
+            码是多少
+            </summary>
+        </member>
+        <member name="P:AEAssist.Verify.VIP.Level">
+            <summary>
+            权限等级
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ActionExecutors.ActionHandlerFactory">
+            <summary>
+            动作处理器工厂，负责管理和分发动作到对应的处理器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ActionHandlerFactory.RegisterHandler(TimelineExecutor.ActionExecutors.IActionHandler)">
+            <summary>
+            注册动作处理器
+            </summary>
+            <param name="handler">要注册的处理器</param>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ActionHandlerFactory.UnregisterHandler(TimelineExecutor.Models.ActionType)">
+            <summary>
+            取消注册动作处理器
+            </summary>
+            <param name="actionType">要取消注册的动作类型</param>
+            <returns>是否成功取消注册</returns>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ActionHandlerFactory.GetHandler(TimelineExecutor.Models.ActionType)">
+            <summary>
+            获取指定类型的动作处理器
+            </summary>
+            <param name="actionType">动作类型</param>
+            <returns>处理器实例，如果不存在则返回null</returns>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ActionHandlerFactory.ProcessAction(TimelineExecutor.Models.Action)">
+            <summary>
+            处理指定的动作
+            </summary>
+            <param name="action">要处理的动作</param>
+            <returns>处理结果，true表示成功处理，false表示处理失败</returns>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ActionHandlerFactory.ClearHandlers">
+            <summary>
+            清除所有注册的处理器
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ActionExecutors.IActionHandler">
+            <summary>
+            动作处理器接口，用于处理特定类型的动作
+            </summary>
+        </member>
+        <member name="P:TimelineExecutor.ActionExecutors.IActionHandler.SupportedActionType">
+            <summary>
+            获取此处理器支持的动作类型
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.IActionHandler.HandleAction(TimelineExecutor.Models.Action)">
+            <summary>
+            处理指定的动作
+            </summary>
+            <param name="action">要处理的动作</param>
+            <returns>处理结果，true表示成功处理，false表示处理失败</returns>
+        </member>
+        <member name="T:TimelineExecutor.ActionExecutors.SkillActionHandler">
+            <summary>
+            技能动作处理器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.SkillActionHandler.HandleAction(TimelineExecutor.Models.Action)">
+            <summary>
+            处理技能动作
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ActionExecutors.ToggleActionHandler">
+            <summary>
+            开关动作处理器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ToggleActionHandler.HandleAction(TimelineExecutor.Models.Action)">
+            <summary>
+            处理开关动作
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ToggleActionHandler.GetToggleState(System.String)">
+            <summary>
+            获取开关状态
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ActionExecutors.ToggleActionHandler.UpdateToggleInUI(System.String,System.Boolean)">
+            <summary>
+            在UI中更新开关状态
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ConditionEvaluators.ConditionHandlerFactory">
+            <summary>
+            条件评估器工厂，负责管理和分发条件到对应的评估器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.ConditionHandlerFactory.RegisterHandler(TimelineExecutor.ConditionEvaluators.IConditionHandler)">
+            <summary>
+            注册条件评估器
+            </summary>
+            <param name="handler">要注册的评估器</param>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.ConditionHandlerFactory.UnregisterHandler(TimelineExecutor.Models.ConditionType)">
+            <summary>
+            取消注册条件评估器
+            </summary>
+            <param name="conditionType">要取消注册的条件类型</param>
+            <returns>是否成功取消注册</returns>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.ConditionHandlerFactory.GetHandler(TimelineExecutor.Models.ConditionType)">
+            <summary>
+            获取指定类型的条件评估器
+            </summary>
+            <param name="conditionType">条件类型</param>
+            <returns>评估器实例，如果不存在则返回null</returns>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.ConditionHandlerFactory.EvaluateCondition(TimelineExecutor.Models.TimelineCondition)">
+            <summary>
+            评估指定的条件
+            </summary>
+            <param name="condition">要评估的条件</param>
+            <returns>评估结果，true表示条件满足，false表示条件不满足</returns>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.ConditionHandlerFactory.ClearHandlers">
+            <summary>
+            清除所有注册的评估器
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ConditionEvaluators.IConditionHandler">
+            <summary>
+            条件评估器接口，用于评估特定类型的条件
+            </summary>
+        </member>
+        <member name="P:TimelineExecutor.ConditionEvaluators.IConditionHandler.SupportedConditionType">
+            <summary>
+            获取此评估器支持的条件类型
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.IConditionHandler.EvaluateCondition(TimelineExecutor.Models.TimelineCondition)">
+            <summary>
+            评估指定的条件
+            </summary>
+            <param name="condition">要评估的条件</param>
+            <returns>评估结果，true表示条件满足，false表示条件不满足</returns>
+        </member>
+        <member name="T:TimelineExecutor.ConditionEvaluators.SkillConditionHandler">
+            <summary>
+            技能可用性条件评估器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.SkillConditionHandler.EvaluateCondition(TimelineExecutor.Models.TimelineCondition)">
+            <summary>
+            评估技能可用性条件
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ConditionEvaluators.TeamCountConditionHandler">
+            <summary>
+            团队计数条件评估器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.TeamCountConditionHandler.EvaluateCondition(TimelineExecutor.Models.TimelineCondition)">
+            <summary>
+            评估团队计数条件
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.TeamCountConditionHandler.EvaluateComparison(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据运算符比较两个值
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ConditionEvaluators.TeamHpConditionHandler">
+            <summary>
+            团队血量条件评估器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.ConditionEvaluators.TeamHpConditionHandler.EvaluateCondition(TimelineExecutor.Models.TimelineCondition)">
+            <summary>
+            评估团队血量条件
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.DefaultSkillExecutor">
+            <summary>
+            默认技能执行器实现 - 重构为基于工厂模式的模块化设计
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.DefaultSkillExecutor.ExecuteSkill(System.String,System.String,System.Boolean)">
+            <summary>
+            执行技能 - 委托给技能动作处理器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.DefaultSkillExecutor.SetToggle(System.String,System.Boolean)">
+            <summary>
+            设置开关 - 委托给开关动作处理器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.DefaultSkillExecutor.GetToggleState(System.String)">
+            <summary>
+            获取开关状态 - 委托给开关动作处理器
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.DefaultConditionEvaluator">
+            <summary>
+            默认条件评估器实现 - 重构为基于工厂模式的模块化设计
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.DefaultConditionEvaluator.EvaluateCondition(TimelineExecutor.Models.TimelineCondition)">
+            <summary>
+            评估条件 - 委托给条件评估器工厂
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.TimelineExecutor">
+            <summary>
+            时间轴执行器，用于执行时间轴动作
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.CalculateActionExecutionTimes">
+            <summary>
+            计算所有动作的实际执行时间
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.InitializeVariables">
+            <summary>
+            初始化变量
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.Start">
+            <summary>
+            开始执行时间轴
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.Start(System.Single)">
+            <summary>
+            开始执行时间轴(倒计时)
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.Stop">
+            <summary>
+            停止执行时间轴
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.Unload">
+            <summary>
+            卸载时间轴执行器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.RunTimeline">
+            <summary>
+            执行时间轴
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.ExecuteEntry(TimelineExecutor.Models.TimelineEntry)">
+            <summary>
+            执行单个时间轴条目
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.ExecuteAction(TimelineExecutor.Models.Action)">
+            <summary>
+            执行单个动作
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.HandleJump(System.Object,System.Boolean)">
+            <summary>
+            处理时间轴跳转
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.HandleSyncEvent(System.String)">
+            <summary>
+            处理sync事件
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.ParseSyncEvent(System.String)">
+            <summary>
+            解析sync事件数据
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.FindMatchingEntry(TimelineExecutor.SyncEvent)">
+            <summary>
+            查找匹配的时间轴条目
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.HandleGameEvent(TimelineExecutor.GameEventType,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            处理游戏事件
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineExecutor.ConvertGameEventToSync(TimelineExecutor.GameEventType,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            将游戏事件转换为sync事件格式
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ISkillExecutor">
+            <summary>
+            技能执行接口
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.IConditionEvaluator">
+            <summary>
+            条件评估接口
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.TimelineEventArgs">
+            <summary>
+            时间轴事件参数
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.TimelineEntryEventArgs">
+            <summary>
+            时间轴条目事件参数
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ActionExecutedEventArgs">
+            <summary>
+            动作执行事件参数
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.SyncEvent">
+            <summary>
+            Sync事件数据模型
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.SyncEventArgs">
+            <summary>
+            Sync事件参数
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.GameEventType">
+            <summary>
+            游戏事件类型
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.TimelineLogger">
+            <summary>
+            时间轴日志控制器
+            </summary>
+        </member>
+        <member name="M:TimelineExecutor.TimelineParser.LoadFromFile(System.String)">
+            <summary>
+            从JSON文件中加载时间轴配置
+            </summary>
+            <param name="filePath">JSON文件路径</param>
+            <returns>时间轴配置对象</returns>
+        </member>
+        <member name="M:TimelineExecutor.TimelineParser.ParseTimelineJson(System.String)">
+            <summary>
+            解析时间轴JSON字符串
+            </summary>
+            <param name="json">JSON字符串</param>
+            <returns>时间轴配置对象</returns>
+        </member>
+        <member name="T:TimelineExecutor.ActionConverter">
+            <summary>
+            自定义动作类型转换器
+            </summary>
+        </member>
+        <member name="T:TimelineExecutor.ConditionConverter">
+            <summary>
+            自定义条件类型转换器
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CountDownString_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the CountDownString method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.CountDownString_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CountDownString_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CountDownString_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CountDownString_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CountDownString_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CountDownString_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CountDownString_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CountDownString_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the TargetSelectorRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TargetSelectorRegex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.MyRegex_2">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the MyRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.MyRegex_2.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_2.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.MyRegex_2.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_2.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.MyRegex_2.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_2.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.IndexOfAnyWordChar(System.ReadOnlySpan{System.Char})">
+            <summary>Finds the next index of any character that matches a word character.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.IsWordChar(System.Char)">
+            <summary>Determines whether the character is part of the [\w] set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_asciiExceptWordChars">
+            <summary>Supports searching for characters in or not in "\0\u0001\u0002\u0003\u0004\u0005\u0006\a\b\t\n\v\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^`{|}~\u007f".</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,29 @@
+{
+  "Author": "Critical_Impact",
+  "Name": "Allagan Tools",
+  "InternalName": "InventoryTools",
+  "AssemblyVersion": "1.11.1.4",
+  "Description": "Allagan Tools 的主要功能是帮助你在角色、雇员、部队之间追踪物品。通过其筛选系统，你将不会再丢失物品，或不清楚它们应该被放在哪。\n\n虽然这是它的主要功能，它还包含了大量其他功能，包括：\n\t- 制作规划\n\t- 集市板整合\n\t- 搜索/整理物品时在库存中高亮显示物品，以及为制作选择材料时的高亮\n\t- 包含商人和来源信息的物品窗口\n\t- 支持搜索的副本/怪物/飞空艇/潜水艇窗口\n\t- 让你进行复杂物品搜索的筛选系统\n\t- 悬停时显示物品位置的工具提示整合",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/Critical-Impact/InventoryTools",
+  "Tags": [
+    "Inventory",
+    "Sorting",
+    "Filtering"
+  ],
+  "DalamudApiLevel": 11,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "ImageUrls": [
+    "https://raw.githubusercontent.com/Critical-Impact/InventoryTools/main/InventoryTools/Images/banner1.png",
+    "https://raw.githubusercontent.com/Critical-Impact/InventoryTools/main/InventoryTools/Images/screenshot1.png",
+    "https://raw.githubusercontent.com/Critical-Impact/InventoryTools/main/InventoryTools/Images/screenshot2.png",
+    "https://raw.githubusercontent.com/Critical-Impact/InventoryTools/main/InventoryTools/Images/screenshot3.png",
+    "https://raw.githubusercontent.com/Critical-Impact/InventoryTools/main/InventoryTools/Images/screenshot4.png"
+  ],
+  "IconUrl": "https://raw.githubusercontent.com/Critical-Impact/InventoryTools/main/InventoryTools/Images/icon.png",
+  "Punchline": "在《最终幻想14》中轻松整理物品，快速找到/展示物品放置位置，规划你的制作，搜索怪物、副本、飞空艇和潜水艇！",
+  "AcceptsFeedback": true
+}

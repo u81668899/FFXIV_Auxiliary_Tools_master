@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lifestream</name>
+    </assembly>
+    <members>
+        <member name="M:Lifestream.IPC.IPCProvider.ChangeWorldById(System.UInt32)">
+            <summary>
+            Requests Lifestream to change world of current character to a different one.
+            </summary>
+            <param name="worldId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.AethernetTeleport(System.String)">
+            <summary>
+            Requests aethernet teleport to be executed by name, if possible. Must be within an aetheryte or aetheryte shard range.
+            </summary>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.AethernetTeleportByPlaceNameId(System.UInt32)">
+            <summary>
+            Requests aethernet teleport to be executed by Place Name ID from <see cref="T:Lumina.Excel.Sheets.PlaceName"/> sheet, if possible. Must be within an aetheryte or aetheryte shard range. 
+            </summary>
+            <param name="placeNameRowId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.AethernetTeleportById(System.UInt32)">
+            <summary>
+            Requests aethernet teleport to be executed by ID from <see cref="T:Lumina.Excel.Sheets.Aetheryte"/> sheet, if possible. Must be within an aetheryte or aetheryte shard range. 
+            </summary>
+            <param name="aethernetSheetRowId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.HousingAethernetTeleportById(System.UInt32)">
+            <summary>
+            Requests aethernet teleport to be executed by ID from <see cref="T:Lumina.Excel.Sheets.HousingAethernet"/> sheet, if possible. Must be within an aetheryte shard range. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.AethernetTeleportToFirmament">
+            <summary>
+            Requests aethernet teleport to Firmament. Must be within a Foundation aetheryte range. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.GetActiveAetheryte">
+            <summary>
+            Retrieves active aetheryte/aetheryte shard ID if present
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.GetActiveCustomAetheryte">
+            <summary>
+            Retrieves active custom aetheryte ID if present
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.IPC.IPCProvider.GetActiveResidentialAetheryte">
+            <summary>
+            Retrieves active housing aetheryte shard ID if present
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Lifestream.IPC.TextAdvanceIPC.EnableExternalControl">
+            <summary>
+            Enables external control of TextAdvance. 
+            First argument = your plugin's name. 
+            Second argument is options. Copy ExternalTerritoryConfig to your plugin. Configure it as you wish: set "null" values to features that you want to keep as configured by user. Set "true" or "false" to forcefully enable or disable feature. 
+            Returns whether external control successfully enabled or not. When already in external control, it will succeed if called again if plugin name matches with one that already has control and new settings will take effect, otherwise it will fail.
+            External control completely disables territory-specific settings.
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.TextAdvanceIPC.DisableExternalControl">
+            <summary>
+            Disables external control. Will fail if external control is obtained from other plugin.
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.TextAdvanceIPC.IsInExternalControl">
+            <summary>
+            Indicates whether external control is enabled.
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.TextAdvanceIPC.IsEnabled">
+            <summary>
+            Indicates whether user has plugin enabled. Respects territory configuration. If in external control, will return true.
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.TextAdvanceIPC.IsPaused">
+            <summary>
+            Indicates whether plugin is paused by other plugin.
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.TextAdvanceIPC.GetEnableQuestAccept">
+            <summary>
+            All the functions below return currently configured plugin state with respect for territory config and external control. 
+            However, it does not includes IsEnabled or IsPaused check. A complete check whether TextAdvance is currently ready to process appropriate event will look like: <br></br>
+            IsEnabled() &amp;&amp; !IsPaused() &amp;&amp; GetEnableQuestAccept()
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.VnavmeshIPC.Pathfind">
+            <summary>
+            Vector3 from, Vector3 to, bool fly
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.VnavmeshIPC.NearestPoint">
+            <summary>
+            Vector3 p, float halfExtentXZ, float halfExtentY
+            </summary>
+        </member>
+        <member name="F:Lifestream.IPC.VnavmeshIPC.PointOnFloor">
+            <summary>
+            Vector3 p, bool allowUnlandable, float halfExtentXZ
+            </summary>
+        </member>
+        <member name="T:Lifestream.Systems.Custom.CustomAethernet">
+            <summary>
+            For when sheets contain so little information or it's so much pain in the ass to get that it's just easier to define everything here.
+            </summary>
+        </member>
+        <member name="M:Lifestream.Tasks.CrossDC.TaskTpAndGoToWard.Enqueue(System.String,Lifestream.Enums.ResidentialAetheryteKind,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="world"></param>
+            <param name="residentialArtheryte"></param>
+            <param name="ward">Starts with 0</param>
+            <param name="plot">Starts with 0</param>
+            <param name="isApartment"></param>
+            <param name="isApartmentSubdivision"></param>
+        </member>
+        <member name="M:Lifestream.Tasks.CrossDC.TaskTpAndGoToWard.SelectApartment(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="apartmentNum">Starts with 0</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Lifestream.Utils.ParseSheetValueRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>^&lt;([a-z]+):([0-9]+):([a-z]+)&gt;$</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match '&lt;'.<br/>
+            ○ 1st capture group.<br/>
+                ○ Match a character in the set [A-Za-z\u212A] atomically at least once.<br/>
+            ○ Match ':'.<br/>
+            ○ 2nd capture group.<br/>
+                ○ Match a character in the set [0-9] atomically at least once.<br/>
+            ○ Match ':'.<br/>
+            ○ 3rd capture group.<br/>
+                ○ Match a character in the set [A-Za-z\u212A] atomically at least once.<br/>
+            ○ Match '&gt;'.<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Lifestream.Utils.ParseQuestDialogueTextSheetRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>^&lt;QuestDialogueText:([a-z_/0-9]+):([0-9]+):([a-z]+)&gt;$</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match '&lt;'.<br/>
+            ○ Match a character in the set [Qq].<br/>
+            ○ Match a character in the set [Uu].<br/>
+            ○ Match a character in the set [Ee].<br/>
+            ○ Match a character in the set [Ss].<br/>
+            ○ Match a character in the set [Tt].<br/>
+            ○ Match a character in the set [Dd].<br/>
+            ○ Match a character in the set [Ii].<br/>
+            ○ Match a character in the set [Aa].<br/>
+            ○ Match a character in the set [Ll].<br/>
+            ○ Match a character in the set [Oo].<br/>
+            ○ Match a character in the set [Gg].<br/>
+            ○ Match a character in the set [Uu].<br/>
+            ○ Match a character in the set [Ee].<br/>
+            ○ Match a character in the set [Tt].<br/>
+            ○ Match a character in the set [Ee].<br/>
+            ○ Match a character in the set [Xx].<br/>
+            ○ Match a character in the set [Tt].<br/>
+            ○ Match ':'.<br/>
+            ○ 1st capture group.<br/>
+                ○ Match a character in the set [/-9A-Z_a-z\u212A] atomically at least once.<br/>
+            ○ Match ':'.<br/>
+            ○ 2nd capture group.<br/>
+                ○ Match a character in the set [0-9] atomically at least once.<br/>
+            ○ Match ':'.<br/>
+            ○ 3rd capture group.<br/>
+                ○ Match a character in the set [A-Za-z\u212A] atomically at least once.<br/>
+            ○ Match '&gt;'.<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Lifestream.Utils.GetPlotEntrance(System.UInt32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="territory"></param>
+            <param name="plot">Start with 0</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lifestream.Utils.GetTerritory(Lifestream.Enums.ResidentialAetheryteKind)">
+            <summary>
+            
+            </summary>
+            <param name="r"></param>
+            <returns>Aetheryte city (Limsa, Uldah, etc)</returns>
+        </member>
+        <member name="M:Lifestream.Utils.GetResidentialTerritory(Lifestream.Enums.ResidentialAetheryteKind)">
+            <summary>
+            
+            </summary>
+            <param name="r"></param>
+            <returns>Residential TerritoryType id (mist, goblet, etc)</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the ParseSheetValueRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseSheetValueRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the ParseQuestDialogueTextSheetRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ParseQuestDialogueTextSheetRegex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_nonAscii_326E1FD0AD567A84CAD13F2BE521A57789829F59D59ABE37F9E111D0182B6601">
+            <summary>Supports searching for characters in or not in "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzK".</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_nonAscii_E773E77612E811772E2C6D9CBD9CA4426D7446578CFC8AB19B5821F9FBEC8E97">
+            <summary>Supports searching for characters in or not in "/0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzK".</summary>
+        </member>
+    </members>
+</doc>

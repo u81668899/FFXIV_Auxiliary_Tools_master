@@ -1,0 +1,441 @@
+{
+  "actions": [
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -70.55,
+        "Y": 28,
+        "Z": -76.76
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "Revival",
+      "name": "Revival",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [],
+      "note": "CheckPoint1"
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 92.59085,
+        "Y": 25.356941,
+        "Z": -33.224667
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 154.57,
+        "Y": 55.75,
+        "Z": -46.78
+      },
+      "arguments": [
+        "2007397"
+      ],
+      "note": "Bone Key"
+    },
+    {
+      "tag": "Treasure",
+      "name": "TreasureCoffer",
+      "position": {
+        "X": 137.21,
+        "Y": 55.69,
+        "Z": -48.71
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 167.19,
+        "Y": 55.75,
+        "Z": -59.66
+      },
+      "arguments": [
+        "2007373"
+      ],
+      "note": "Imposing Gate"
+    },
+    {
+      "tag": "Treasure",
+      "name": "TreasureCoffer",
+      "position": {
+        "X": 184.73,
+        "Y": 55.69,
+        "Z": -62.5
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 171.77386,
+        "Y": 55.625,
+        "Z": -72.24998
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 178.07,
+        "Y": 56.75,
+        "Z": -78.19
+      },
+      "arguments": [
+        "false"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "2007388",
+        "2007390"
+      ],
+      "note": "Lift Lever"
+    },
+    {
+      "tag": "None",
+      "name": "Wait",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "10000"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 187.15,
+        "Y": 85.67,
+        "Z": -86.48
+      },
+      "arguments": [
+        "true"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 199.67,
+        "Y": 85.65,
+        "Z": -79.41
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 178.08673,
+        "Y": 99.50001,
+        "Z": 3.459605
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 178.15,
+        "Y": 99.5,
+        "Z": 28.35
+      },
+      "arguments": [
+        "false"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": 243.85,
+        "Y": 113.43,
+        "Z": 14.81
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "Revival",
+      "name": "Revival",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [],
+      "note": "CheckPoint2"
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 299.63,
+        "Y": 143.87,
+        "Z": -157.77
+      },
+      "arguments": [
+        "2007398"
+      ],
+      "note": "Airstone"
+    },
+    {
+      "tag": "Treasure",
+      "name": "TreasureCoffer",
+      "position": {
+        "X": 336.29,
+        "Y": 143.99,
+        "Z": -151.14
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "DutySpecificCode",
+      "position": {
+        "X": 341.02,
+        "Y": 143.93,
+        "Z": -160.71
+      },
+      "arguments": [
+        "1"
+      ],
+      "note": "Tailwind Relic"
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 336.09,
+        "Y": 144,
+        "Z": -159.8
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 343.44,
+        "Y": 144.88,
+        "Z": -165.26
+      },
+      "arguments": [
+        "true"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "WaitFor",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "IsReady"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 419.71,
+        "Y": 149.91,
+        "Z": -257.38
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Wait",
+      "position": {
+        "X": 437.42,
+        "Y": 151.32,
+        "Z": -270.5
+      },
+      "arguments": [
+        "3000"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "2007399"
+      ],
+      "note": "Airstone"
+    },
+    {
+      "tag": "None",
+      "name": "DutySpecificCode",
+      "position": {
+        "X": 415.48,
+        "Y": 151.22,
+        "Z": -296.45
+      },
+      "arguments": [
+        "2"
+      ],
+      "note": "Tailwind Relic"
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 414.39,
+        "Y": 151.38,
+        "Z": -291.19
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 412.3019,
+        "Y": 152.8067,
+        "Z": -300.4169
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "WaitFor",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "IsReady"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 341.08862,
+        "Y": 166.6538,
+        "Z": -408.063
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": 318.84,
+        "Y": 166.66,
+        "Z": -415.47
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    }
+  ],
+  "meta": {
+    "createdAt": 106,
+    "changelog": [
+      {
+        "version": 114,
+        "change": "Fixed Missing Interaction with Lift Lever"
+      },
+      {
+        "version": 161,
+        "change": "Converted to new JSON Structure"
+      },
+      {
+        "version": 163,
+        "change": "Converted to newer JSON Structure"
+      },
+      {
+        "version": 164,
+        "change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "version": 181,
+        "change": "Fixed Vnav issues with moving objects and sharp corners"
+      },
+      {
+        "version": 181,
+        "change": "BMR causing boss confusion with mini-boss"
+      },
+      {
+        "version": 189,
+        "change": "Adjusted tags to string values"
+      }
+    ],
+    "notes": []
+  }
+}

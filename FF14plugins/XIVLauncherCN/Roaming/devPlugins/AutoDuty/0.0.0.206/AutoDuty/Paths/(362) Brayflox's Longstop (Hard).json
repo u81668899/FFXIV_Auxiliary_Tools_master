@@ -1,0 +1,292 @@
+{
+  "actions": [
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -3.68,
+        "Y": -2.38,
+        "Z": -5.96
+      },
+      "arguments": [
+        "2002325"
+      ],
+      "note": "Tiny Key"
+    },
+    {
+      "tag": "Treasure",
+      "name": "TreasureCoffer",
+      "position": {
+        "X": 64.57,
+        "Y": 3.41,
+        "Z": -9.9
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": 104.01,
+        "Y": -0.08,
+        "Z": 12.5
+      },
+      "arguments": [
+        "2002182"
+      ],
+      "note": "Runstop Headgate"
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": 111.8,
+        "Y": -2.55,
+        "Z": -36.46
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 89.52,
+        "Y": 4.72,
+        "Z": -100.15
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "WaitFor",
+      "position": {
+        "X": 83.04,
+        "Y": 4.73,
+        "Z": -102.25
+      },
+      "arguments": [
+        "Combat"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 39.34,
+        "Y": 5.9,
+        "Z": -92.07
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 34.5,
+        "Y": 7.05,
+        "Z": -125.09
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Wait",
+      "position": {
+        "X": 46.92,
+        "Y": 7.14,
+        "Z": -127.1
+      },
+      "arguments": [
+        "15000"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 45.85255,
+        "Y": 7.0103893,
+        "Z": -129.5
+      },
+      "arguments": [],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "MoveTo",
+      "position": {
+        "X": 44.4,
+        "Y": 7.01,
+        "Z": -133
+      },
+      "arguments": [
+        "false"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Wait",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "1000"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "WaitFor",
+      "position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "arguments": [
+        "IsReady"
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -13.9,
+        "Y": 25.41,
+        "Z": -171.53
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "Treasure",
+      "name": "TreasureCoffer",
+      "position": {
+        "X": -41.32,
+        "Y": 18.65,
+        "Z": -119.77
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -88.1,
+        "Y": 13.67,
+        "Z": -125.75
+      },
+      "arguments": [
+        "2002642"
+      ],
+      "note": "Tiny Key"
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -95.86,
+        "Y": 13.02,
+        "Z": -123.64
+      },
+      "arguments": [
+        "2002184"
+      ],
+      "note": "Swiftmake Checkgate"
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -101.39,
+        "Y": 20.74,
+        "Z": -178.08
+      },
+      "arguments": [
+        "2002644"
+      ],
+      "note": "Tiny Key"
+    },
+    {
+      "tag": "None",
+      "name": "Interactable",
+      "position": {
+        "X": -101.31,
+        "Y": 21.31,
+        "Z": -188.72
+      },
+      "arguments": [
+        "2002884"
+      ],
+      "note": "Swiftmake Checkgate"
+    },
+    {
+      "tag": "None",
+      "name": "Boss",
+      "position": {
+        "X": -27.24,
+        "Y": 35.5,
+        "Z": -236.09
+      },
+      "arguments": [
+        ""
+      ],
+      "note": ""
+    }
+  ],
+  "meta": {
+    "createdAt": 106,
+    "changelog": [
+      {
+        "version": 161,
+        "change": "Converted to new JSON Structure"
+      },
+      {
+        "version": 163,
+        "change": "Converted to newer JSON Structure"
+      },
+      {
+        "version": 164,
+        "change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "version": 171,
+        "change": "Replaced interactable names with DataID\u0027s, Added extra waitfor for gobbies to spawn"
+      },
+      {
+        "version": 182,
+        "change": "Adjusted pre 2nd boss area transition"
+      },
+      {
+        "version": 189,
+        "change": "Adjusted tags to string values"
+      }
+    ],
+    "notes": []
+  }
+}

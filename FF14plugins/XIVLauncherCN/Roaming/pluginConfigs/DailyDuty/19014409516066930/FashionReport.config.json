@@ -1,4 +1,6 @@
 {
+  "CompletionMode": 1,
+  "ClickableLink": true,
   "ModuleEnabled": true,
   "OnLoginMessage": true,
   "OnZoneChangeMessage": true,
@@ -8,25 +10,22 @@
   "CustomTodoLabel": "",
   "OverrideTextColor": false,
   "TodoTextColor": {
-    "X": 1.0,
-    "Y": 1.0,
-    "Z": 1.0,
-    "W": 1.0
+    "X": 1,
+    "Y": 1,
+    "Z": 1,
+    "W": 1
   },
   "TodoTextOutline": {
-    "X": 0.0,
-    "Y": 0.0,
-    "Z": 0.0,
-    "W": 1.0
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "W": 1
   },
-  "StyleChanged": true,
   "UseCustomChannel": false,
   "MessageChatChannel": 1,
   "UseCustomStatusMessage": false,
   "CustomStatusMessage": "",
   "UseCustomResetMessage": false,
   "CustomResetMessage": "",
-  "Suppressed": false,
-  "CompletionMode": 1,
-  "ClickableLink": true
+  "Suppressed": false
 }

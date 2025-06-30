@@ -1,0 +1,7 @@
+--- @class FreeCompanyWrapper
+--- @field GrandCompany GrandCompany
+--- @field Rank number
+--- @field OnlineMemebers number
+--- @field TotalMembers number
+--- @field Name string
+--- @field Id number

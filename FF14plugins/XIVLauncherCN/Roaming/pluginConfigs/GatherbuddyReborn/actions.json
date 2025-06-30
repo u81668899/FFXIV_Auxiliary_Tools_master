@@ -1,0 +1,167 @@
+[
+  {
+    "Enabled": true,
+    "Name": "Default",
+    "NodeType": {
+      "Regular": true,
+      "Unspoiled": true,
+      "Legendary": true,
+      "Ephemeral": true
+    },
+    "ItemLevel": {
+      "UseGlv": false,
+      "Min": 1,
+      "Max": 100
+    },
+    "ItemType": {
+      "Crystals": true,
+      "Collectables": true,
+      "Other": true,
+      "Fish": true
+    },
+    "UseGivingLandOnCooldown": false,
+    "GatherableMinGP": 0,
+    "CollectableMinGP": 0,
+    "CollectableActionsMinGP": 970,
+    "CollectableAlwaysUseSolidAge": true,
+    "CollectableManualScores": false,
+    "CollectableTagetScore": 1000,
+    "CollectableMinScore": 1000,
+    "ChooseBestActionsAutomatically": false,
+    "SpendGPOnBestNodesOnly": false,
+    "GatherableActions": {
+      "Bountiful": {
+        "MinYieldBonus": 1,
+        "Enabled": false,
+        "MinGP": 100,
+        "MaxGP": 2000
+      },
+      "Yield1": {
+        "FirstStepOnly": false,
+        "MinIntegrity": 1,
+        "Enabled": false,
+        "MinGP": 400,
+        "MaxGP": 2000
+      },
+      "Yield2": {
+        "FirstStepOnly": true,
+        "MinIntegrity": 8,
+        "Enabled": false,
+        "MinGP": 500,
+        "MaxGP": 2000
+      },
+      "SolidAge": {
+        "MinYieldTotal": 1,
+        "Enabled": true,
+        "MinGP": 300,
+        "MaxGP": 2000
+      },
+      "TwelvesBounty": {
+        "FirstStepOnly": false,
+        "MinIntegrity": 1,
+        "Enabled": false,
+        "MinGP": 150,
+        "MaxGP": 2000
+      },
+      "GivingLand": {
+        "FirstStepOnly": false,
+        "MinIntegrity": 1,
+        "Enabled": false,
+        "MinGP": 200,
+        "MaxGP": 2000
+      },
+      "Gift1": {
+        "MinBoonChance": 0,
+        "MaxBoonChance": 100,
+        "FirstStepOnly": false,
+        "MinIntegrity": 1,
+        "Enabled": false,
+        "MinGP": 50,
+        "MaxGP": 2000
+      },
+      "Gift2": {
+        "MinBoonChance": 0,
+        "MaxBoonChance": 100,
+        "FirstStepOnly": false,
+        "MinIntegrity": 1,
+        "Enabled": false,
+        "MinGP": 100,
+        "MaxGP": 2000
+      },
+      "Tidings": {
+        "MinBoonChance": 0,
+        "MaxBoonChance": 100,
+        "FirstStepOnly": false,
+        "MinIntegrity": 1,
+        "Enabled": false,
+        "MinGP": 200,
+        "MaxGP": 2000
+      }
+    },
+    "CollectableActions": {
+      "Scrutiny": {
+        "Enabled": true,
+        "MinGP": 770,
+        "MaxGP": 2000
+      },
+      "Scour": {
+        "Enabled": true,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "Brazen": {
+        "Enabled": true,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "Meticulous": {
+        "Enabled": true,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "SolidAge": {
+        "Enabled": true,
+        "MinGP": 300,
+        "MaxGP": 2000
+      }
+    },
+    "Consumables": {
+      "Cordial": {
+        "ItemId": 6141,
+        "Enabled": true,
+        "MinGP": 0,
+        "MaxGP": 740
+      },
+      "Food": {
+        "ItemId": 0,
+        "Enabled": false,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "Potion": {
+        "ItemId": 127960,
+        "Enabled": true,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "Manual": {
+        "ItemId": 4635,
+        "Enabled": false,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "SquadronManual": {
+        "ItemId": 0,
+        "Enabled": false,
+        "MinGP": 0,
+        "MaxGP": 2000
+      },
+      "SquadronPass": {
+        "ItemId": 0,
+        "Enabled": false,
+        "MinGP": 0,
+        "MaxGP": 2000
+      }
+    }
+  }
+]

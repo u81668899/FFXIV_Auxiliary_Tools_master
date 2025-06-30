@@ -1,0 +1,95 @@
+{
+  "$type": "AEAssist.PluginConfig, AEAssist",
+  "AutoACRUpdate": true,
+  "OnlyShowEnVersion": false,
+  "UseProxy": false,
+  "Version": 0,
+  "Password": "闲鱼小店死全家",
+  "FFLogsV1Key": "",
+  "PathfindingUrl": "http://localhost:5000",
+  "PositionBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "BorderBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "BorderBrush2": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "TrueBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "ErrorBrush": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "HitBox": {
+    "$type": "AEAssist.MeleePos.Brush, AEAssist",
+    "Thickness": 1.0,
+    "Color": {
+      "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+      "X": 0.29803923,
+      "Y": 0.6862745,
+      "Z": 0.3137255,
+      "W": 0.2
+    }
+  },
+  "ShowMeleePosHelper": false,
+  "ShowPlayerHitbox": false,
+  "MeleePosChange": false,
+  "ShowPlayerHitbox_BattleOnly": false,
+  "ShowTargetHitbox": false,
+  "LongTargetHitbox": false,
+  "ShowAutoAtackTargetHitbox": false,
+  "LogoPath": "",
+  "KeepWindowInSight": true,
+  "ACRUpdateSupportJob": [],
+  "AcrRemark": "",
+  "AcrFilePath": "",
+  "SupportUrl": "",
+  "ReportUrl": "",
+  "IsENVersion": false,
+  "MessageChatType": 16,
+  "IsDevelopMode": false,
+  "AutoMoveReplaceWithGuide": false,
+  "ExamCompleted": "06DB94220A7D589F5DC021AFECA5F260"
+}

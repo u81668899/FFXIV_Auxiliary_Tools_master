@@ -1,0 +1,32 @@
+{
+  "Overlays": [],
+  "FollowLatestLog": false,
+  "HideOverlaysWhenNotActive": true,
+  "HideOverlayDuringCutscene": false,
+  "ErrorReports": false,
+  "UpdateCheck": true,
+  "WSServerIP": "127.0.0.1",
+  "WSServerPort": 10501,
+  "WSServerSSL": false,
+  "WSServerRunning": true,
+  "TunnelRegion": null,
+  "Version": null,
+  "LastUpdateCheck": "0001-01-01T00:00:00",
+  "EventSourceConfigs": {
+    "CactbotESConfig": {
+      "OverlayData": {},
+      "LastUpdateCheck": "0001-01-01T00:00:00"
+    },
+    "MiniParse": {
+      "OverlayData": {},
+      "UpdateInterval": 1,
+      "EnmityIntervalMs": 100,
+      "SortKey": "encdps",
+      "SortDesc": true,
+      "UpdateDpsDuringImport": false,
+      "EndEncounterAfterWipe": true,
+      "EndEncounterOutOfCombat": true,
+      "LogLines": false
+    }
+  }
+}

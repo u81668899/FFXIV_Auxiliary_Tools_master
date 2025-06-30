@@ -1,0 +1,136 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PeepingTom/1.7.21": {
+        "dependencies": {
+          "DalamudPackager": "12.0.0",
+          "Fody": "6.9.1",
+          "NAudio.Core": "2.2.1",
+          "NAudio.Wasapi": "2.2.1",
+          "PeepingTom.Ipc": "2.0.0",
+          "Resourcer.Fody": "1.8.1",
+          "Peeping Tom.Ipc": "2.0.0.0"
+        },
+        "runtime": {
+          "PeepingTom.dll": {}
+        },
+        "resources": {
+          "de/PeepingTom.resources.dll": {
+            "locale": "de"
+          },
+          "es/PeepingTom.resources.dll": {
+            "locale": "es"
+          },
+          "fr/PeepingTom.resources.dll": {
+            "locale": "fr"
+          },
+          "ja/PeepingTom.resources.dll": {
+            "locale": "ja"
+          },
+          "pt-BR/PeepingTom.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
+      "DalamudPackager/12.0.0": {},
+      "Fody/6.9.1": {},
+      "NAudio.Core/2.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "assemblyVersion": "2.2.1.0",
+            "fileVersion": "2.2.1.0"
+          }
+        }
+      },
+      "NAudio.Wasapi/2.2.1": {
+        "dependencies": {
+          "NAudio.Core": "2.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Wasapi.dll": {
+            "assemblyVersion": "2.2.1.0",
+            "fileVersion": "2.2.1.0"
+          }
+        }
+      },
+      "Resourcer.Fody/1.8.1": {
+        "dependencies": {
+          "Fody": "6.9.1"
+        }
+      },
+      "PeepingTom.Ipc/2.0.0": {
+        "runtime": {
+          "Peeping Tom.Ipc.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Peeping Tom.Ipc/2.0.0.0": {
+        "runtime": {
+          "Peeping Tom.Ipc.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PeepingTom/1.7.21": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/12.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J5TJLV3f16T/E2H2P17ClWjtfEBPpq3yxvqW46eN36JCm6wR+EaoaYkqG9Rm5sHqs3/nK/vKjWWyvEs/jhKoXw==",
+      "path": "dalamudpackager/12.0.0",
+      "hashPath": "dalamudpackager.12.0.0.nupkg.sha512"
+    },
+    "Fody/6.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y33IOTstqsDaq2+1Cweu4s/V2iAAaRY6bPIANCre3Wlx9REc+ONyYmUdCc67Z12dy0N2Haq3t7QP4ANndsu/HA==",
+      "path": "fody/6.9.1",
+      "hashPath": "fody.6.9.1.nupkg.sha512"
+    },
+    "NAudio.Core/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GgkdP6K/7FqXFo7uHvoqGZTJvW4z8g2IffhOO4JHaLzKCdDOUEzVKtveoZkCuUX8eV2HAINqi7VFqlFndrnz/g==",
+      "path": "naudio.core/2.2.1",
+      "hashPath": "naudio.core.2.2.1.nupkg.sha512"
+    },
+    "NAudio.Wasapi/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lFfXoqacZZe0WqNChJgGYI+XV/n/61LzPHT3C1CJp4khoxeo2sziyX5wzNYWeCMNbsWxFvT3b3iXeY1UYjBhZw==",
+      "path": "naudio.wasapi/2.2.1",
+      "hashPath": "naudio.wasapi.2.2.1.nupkg.sha512"
+    },
+    "Resourcer.Fody/1.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FPeK4jKyyX5+mIjTnHNReGZk2/2xDhmu44UsBI5w9WEhbr4oTMmht3rnBr46A+GCGepC4+2N41K4vExDYiGNVQ==",
+      "path": "resourcer.fody/1.8.1",
+      "hashPath": "resourcer.fody.1.8.1.nupkg.sha512"
+    },
+    "PeepingTom.Ipc/2.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Peeping Tom.Ipc/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

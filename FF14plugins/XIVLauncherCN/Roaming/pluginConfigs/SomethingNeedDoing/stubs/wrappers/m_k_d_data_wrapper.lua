@@ -1,0 +1,5 @@
+--- @class MKDDataWrapper
+--- @field QuestId number
+--- @field ZoneNameId number
+--- @field CipherItemId number
+--- @field CipherNameId number

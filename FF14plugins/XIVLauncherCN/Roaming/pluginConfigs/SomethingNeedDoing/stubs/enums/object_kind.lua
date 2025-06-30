@@ -1,0 +1,40 @@
+-- Usage:
+-- luanet.load_assembly('Dalamud')
+-- ObjectKind = luanet.import_type('Dalamud.Game.ClientState.Objects.Enums.ObjectKind')
+-- ObjectKind.None
+
+--- @alias ObjectKindValue
+---| 0 # None
+---| 1 # Player
+---| 2 # BattleNpc
+---| 3 # EventNpc
+---| 4 # Treasure
+---| 5 # Aetheryte
+---| 6 # GatheringPoint
+---| 7 # EventObj
+---| 8 # MountType
+---| 9 # Companion
+---| 10 # Retainer
+---| 11 # Area
+---| 12 # Housing
+---| 13 # Cutscene
+---| 14 # CardStand
+---| 15 # Ornament
+
+--- @class ObjectKind
+--- @field None ObjectKindValue
+--- @field Player ObjectKindValue
+--- @field BattleNpc ObjectKindValue
+--- @field EventNpc ObjectKindValue
+--- @field Treasure ObjectKindValue
+--- @field Aetheryte ObjectKindValue
+--- @field GatheringPoint ObjectKindValue
+--- @field EventObj ObjectKindValue
+--- @field MountType ObjectKindValue
+--- @field Companion ObjectKindValue
+--- @field Retainer ObjectKindValue
+--- @field Area ObjectKindValue
+--- @field Housing ObjectKindValue
+--- @field Cutscene ObjectKindValue
+--- @field CardStand ObjectKindValue
+--- @field Ornament ObjectKindValue

@@ -1,0 +1,16 @@
+--- @class OfflineCharacterDataWrapper
+--- @field CID number
+--- @field Name string
+--- @field World string
+--- @field Enabled boolean
+--- @field RetainerData table<OfflineRetainerDataWrapper>
+--- @field InventorySpace number
+--- @field VentureCoffers number
+--- @field Gil number
+--- @field OfflineAirshipData table<OfflineVesselDataWrapper>
+--- @field OfflineSubmarineData table<OfflineVesselDataWrapper>
+--- @field Ceruleum number
+--- @field RepairKits number
+--- @field RetainersAwaitingProcessing boolean
+--- @field SubsAwaitingProcessing boolean
+--- @field AnyAwaitingProcessing boolean

@@ -7,14 +7,7 @@
       "$type": "BetterPartyFinder.ConfigurationFilter, BetterPartyFinder",
       "Name": "<未命名预设>",
       "DutiesMode": 0,
-      "Duties": [
-        943,
-        26,
-        941,
-        939,
-        937,
-        963
-      ],
+      "Duties": [],
       "Categories": [
         2,
         3,
@@ -28,11 +21,12 @@
         11,
         12,
         13,
-        14
+        14,
+        15,
+        1
       ],
-      "Jobs": [],
-      "JobsLimit": [
-        0
+      "Jobs": [
+        536870912
       ],
       "SearchArea": 4294967295,
       "LootRule": 4294967295,
@@ -42,10 +36,7 @@
       "AllowHugeItemLevel": true,
       "MinItemLevel": null,
       "MaxItemLevel": null,
-      "Players": [],
-      "Description": [],
-      "DescriptionLike": [],
-      "DescriptionExclude": []
+      "Players": []
     }
   },
   "SelectedPreset": null,

@@ -1,0 +1,17 @@
+--- @class JobWrapper
+--- @field Id number
+--- @field Name string
+--- @field Abbreviation string
+--- @field IsCrafter boolean
+--- @field IsGatherer boolean
+--- @field IsMeleeDPS boolean
+--- @field IsRangedDPS boolean
+--- @field IsMagicDPS boolean
+--- @field IsHealer boolean
+--- @field IsTank boolean
+--- @field IsDPS boolean
+--- @field IsDiscipleOfWar boolean
+--- @field IsDiscipleOfMagic boolean
+--- @field IsBlu boolean
+--- @field IsLimited boolean
+--- @field Level number

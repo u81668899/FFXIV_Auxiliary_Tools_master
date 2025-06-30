@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AutoHook/4.3.4.1": {
+        "dependencies": {
+          "DalamudPackager": "12.0.0",
+          "HtmlAgilityPack": "1.11.61",
+          "PunishLib": "2.0.0.1"
+        },
+        "runtime": {
+          "AutoHook.dll": {}
+        },
+        "resources": {
+          "de/AutoHook.resources.dll": {
+            "locale": "de"
+          },
+          "es/AutoHook.resources.dll": {
+            "locale": "es"
+          },
+          "fr/AutoHook.resources.dll": {
+            "locale": "fr"
+          },
+          "it/AutoHook.resources.dll": {
+            "locale": "it"
+          },
+          "ja/AutoHook.resources.dll": {
+            "locale": "ja"
+          },
+          "ko/AutoHook.resources.dll": {
+            "locale": "ko"
+          },
+          "ru/AutoHook.resources.dll": {
+            "locale": "ru"
+          },
+          "zh/AutoHook.resources.dll": {
+            "locale": "zh"
+          }
+        }
+      },
+      "DalamudPackager/12.0.0": {},
+      "HtmlAgilityPack/1.11.61": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.61.0",
+            "fileVersion": "1.11.61.0"
+          }
+        }
+      },
+      "ECommons/2.2.0.2": {
+        "runtime": {
+          "ECommons.dll": {
+            "assemblyVersion": "4.3.4.1",
+            "fileVersion": "4.3.4.1"
+          }
+        }
+      },
+      "PunishLib/2.0.0.1": {
+        "dependencies": {
+          "ECommons": "2.2.0.2"
+        },
+        "runtime": {
+          "PunishLib.dll": {
+            "assemblyVersion": "4.3.4.1",
+            "fileVersion": "4.3.4.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutoHook/4.3.4.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalamudPackager/12.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J5TJLV3f16T/E2H2P17ClWjtfEBPpq3yxvqW46eN36JCm6wR+EaoaYkqG9Rm5sHqs3/nK/vKjWWyvEs/jhKoXw==",
+      "path": "dalamudpackager/12.0.0",
+      "hashPath": "dalamudpackager.12.0.0.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.61": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hqZASeEFHS9quHvfZSwaULoAJLWkOYVPiQjc3P9J4pQS8vSYzrP3bxe04Vm7vYYuxwbQhq9hCSVvZVLTyRaNaQ==",
+      "path": "htmlagilitypack/1.11.61",
+      "hashPath": "htmlagilitypack.1.11.61.nupkg.sha512"
+    },
+    "ECommons/2.2.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PunishLib/2.0.0.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

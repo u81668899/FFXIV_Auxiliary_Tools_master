@@ -1,0 +1,7 @@
+--- @class BingoWrapper
+--- @field HasWeeklyBingoJournal boolean
+--- @field IsWeeklyBingoExpired boolean
+--- @field WeeklyBingoNumSecondChancePoints number
+--- @field WeeklyBingoNumPlacedStickers number
+--- @field GetWeeklyBingoOrderDataRow fun(wonderousTailsIndex: number): object
+--- @field GetWeeklyBingoTaskStatus fun(wonderousTailsIndex: number): WeeklyBingoTaskStatus

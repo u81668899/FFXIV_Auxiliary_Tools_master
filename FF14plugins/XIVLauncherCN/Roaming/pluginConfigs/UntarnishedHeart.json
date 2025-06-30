@@ -1,0 +1,263 @@
+{
+  "$type": "UntarnishedHeart.Configuration, UntarnishedHeart",
+  "Version": 0,
+  "MoveType": 1,
+  "LeaderMode": false,
+  "RunTimes": -1,
+  "Presets": [
+    {
+      "$type": "UntarnishedHeart.Executor.ExecutorPreset, UntarnishedHeart",
+      "Name": "O5 魔列车",
+      "Remark": "",
+      "Zone": 748,
+      "Steps": [
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "魔列车",
+          "StopWhenBusy": false,
+          "StopInCombat": true,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -15.0
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 8510,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 5000
+        }
+      ],
+      "AutoOpenTreasures": false,
+      "DutyDelay": 500,
+      "IsValid": true
+    },
+    {
+      "$type": "UntarnishedHeart.Executor.ExecutorPreset, UntarnishedHeart",
+      "Name": "假火 (测试用)",
+      "Remark": "",
+      "Zone": 1045,
+      "Steps": [
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "伊弗利特",
+          "StopWhenBusy": false,
+          "StopInCombat": true,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": 11.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 207,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 5000
+        }
+      ],
+      "AutoOpenTreasures": false,
+      "DutyDelay": 500,
+      "IsValid": true
+    },
+    {
+      "$type": "UntarnishedHeart.Executor.ExecutorPreset, UntarnishedHeart",
+      "Name": "极风 (测试用)",
+      "Remark": "",
+      "Zone": 297,
+      "Steps": [
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "Note1",
+          "StopWhenBusy": false,
+          "StopInCombat": false,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": -0.24348414,
+            "Y": -1.9395045,
+            "Z": -14.213441
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 245,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 8000
+        },
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "Note2",
+          "StopWhenBusy": false,
+          "StopInCombat": false,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": -0.63603175,
+            "Y": -1.8021163,
+            "Z": 0.6449276
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 245,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 5000
+        }
+      ],
+      "AutoOpenTreasures": false,
+      "DutyDelay": 500,
+      "IsValid": true
+    },
+    {
+      "$type": "UntarnishedHeart.Executor.ExecutorPreset, UntarnishedHeart",
+      "Name": "糖豆人坐标",
+      "Remark": "",
+      "Zone": 1165,
+      "Steps": [
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "第一关独木桥终点",
+          "StopWhenBusy": false,
+          "StopInCombat": true,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": -0.63076663,
+            "Y": 18.943367,
+            "Z": -369.59305
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 0,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 5000
+        },
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "第一关大摆锤终点",
+          "StopWhenBusy": false,
+          "StopInCombat": true,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": -200.44492,
+            "Y": 13.590895,
+            "Z": -359.46783
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 0,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 5000
+        },
+        {
+          "$type": "UntarnishedHeart.Executor.ExecutorPresetStep, UntarnishedHeart",
+          "Note": "第三关终点",
+          "StopWhenBusy": false,
+          "StopInCombat": true,
+          "StopWhenAnyAlive": false,
+          "Position": {
+            "$type": "System.Numerics.Vector3, System.Private.CoreLib",
+            "X": -9.943038,
+            "Y": 39.609077,
+            "Z": 123.06693
+          },
+          "MoveType": 2,
+          "WaitForGetClose": false,
+          "DataID": 0,
+          "ObjectKind": 2,
+          "WaitForTarget": true,
+          "InteractWithTarget": false,
+          "Commands": "",
+          "CommandCondition": {
+            "$type": "UntarnishedHeart.Executor.CommandCondition, UntarnishedHeart",
+            "Conditions": [],
+            "RelationType": 0,
+            "ExecuteType": 0,
+            "TimeValue": 0.0
+          },
+          "Delay": 5000
+        }
+      ],
+      "AutoOpenTreasures": false,
+      "DutyDelay": 500,
+      "IsValid": true
+    }
+  ],
+  "ContentsFinderOption": {
+    "$type": "OmenTools.Helpers.ContentsFinderOption, OmenTools",
+    "Supply": false,
+    "Config817to820": true,
+    "UnrestrictedParty": false,
+    "MinimalIL": false,
+    "LevelSync": false,
+    "SilenceEcho": false,
+    "ExplorerMode": false,
+    "LootRules": 0,
+    "IsLimitedLevelingRoulette": false,
+    "Unknown9": false
+  },
+  "ContentEntryType": 0
+}

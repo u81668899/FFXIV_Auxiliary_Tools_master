@@ -1,0 +1,3646 @@
+{
+  "$type": "Dalamud.Configuration.Internal.DalamudConfiguration, Dalamud",
+  "MainRepoUrl": "https://gh.atmoomen.top/https://raw.githubusercontent.com/Dalamud-DailyRoutines/PluginDistD17/main/pluginmaster.json",
+  "BadWords": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "欢迎来到艾欧泽亚！",
+      "感谢您对于最终幻想14的支持，如有问题欢迎使用电话和在线客服服务。",
+      "感谢您对于最终幻想14的支持，如有问题欢迎使用客服电话和论坛服务。",
+      "请勿相信游戏内任何礼包、福袋性质的网址，谨防被骗。",
+      "发现游戏内玩家使用外挂、代打、出售土地、买卖游戏币、使用非官方允许的第三方软件等违规行为，请及时举报。",
+      "举报方式：官网的违规处理平台进行举报。",
+      "最终幻想14官网：ff.web.sdo.com"
+    ]
+  },
+  "DutyFinderTaskbarFlash": false,
+  "DutyFinderChatMessage": false,
+  "LanguageOverride": "zh",
+  "LastVersion": "12.0.1.8",
+  "SeenFtueLevels": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+    "AutoUpdate": 1
+  },
+  "LastChangelogMajorMinor": "10.0.",
+  "GeneralChatType": 16,
+  "DoPluginTest": false,
+  "DalamudBetaKey": null,
+  "ThirdRepoList": {
+    "$type": "System.Collections.Generic.List`1[[Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://love.puni.sh/ment.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/daemitus/MyDalamudPlugins/master/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Karlin-Z/DalamudPlugins/refs/heads/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/akira0245/DalamudPlugins/api4/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/UnknownX7/DalamudPluginRepo/master/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Eternita-S/MyDalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/MeowZWR/DalamudPlugin/main/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Bluefissure/DalamudPlugins/Bluefissure/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://asvel.github.io/ffxiv-literal-map-link/",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/NukoOoOoOoO/DalamudPlugins/dev/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/LittleNightmare/MyDalamudPlugins/main/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/4679/DalamudPlugins/main/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/NukoOoOoOoO/DalamudPlugins/extra/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Sevii77/ffxiv_materialui_accent/master/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/44451516/ffxiv_bossmod/CN/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/NiGuangOwO/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/RedAsteroid/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/tssailzz8/MyPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/NightmareXIV/MyDalamudPlugins/main/cn.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/gamous/DalamudPluginsCN-Dev/main/MordionGaol.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/LiangYuxuan/dalamud-plugin-cn-fetcher/master/pluginmaster_gh.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/AtmoOmen/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/uiharuayako/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Nesb01t/DalamudPlugins/master/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Tianyi94/MyDalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/moewcorp/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://puni.sh/api/repository/croizat",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/ArchiDog1998/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://plogon.meowrs.com/pants",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://gitea.com/Errer/NekohackAuth/raw/branch/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://kamori.goats.dev/Plugin/PluginMaster",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/zhouhuichen741/dalamud-plugins/master/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Errerer/DalamudPlugins/refs/heads/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://puni.sh/api/repository/herc",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/ryonive/Dalamud-Darkness-Repo/main/ffxiv_custom_repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Loskh/AoAoEnergy/refs/heads/master/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Bluefissure/MultiHit/CN/repo.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/44451516-ff14/BossmodRebornCN/refs/heads/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://dalamud_cn_3rd.otters.cloud/plugins/Mare",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Karlin-Z/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://gh.atmoomen.top/DalamudPlugins/main/pluginmaster-cn.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/tssailzz8/MyPlugins/master/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Bluefissure/DalamudPlugins/refs/heads/Bluefissure/pluginmaster_api10.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/extrant/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/FFXIV-CombatReborn/CombatRebornRepo/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/decorwdyun/DalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/Cindy-Master/DalamudPlugins/refs/heads/main/plugin.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://gp.xuolu.com/love.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://raw.githubusercontent.com/NightmareXIV/MyDalamudPlugins/main/pluginmaster.json",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://plogon.meowrs.com/cn",
+        "IsEnabled": true,
+        "Name": null
+      },
+      {
+        "$type": "Dalamud.Configuration.ThirdPartyRepoSettings, Dalamud",
+        "Url": "https://aonyx.ffxiv.wang/plugin/pluginmaster?apilevel=12",
+        "IsEnabled": true,
+        "Name": null
+      }
+    ]
+  },
+  "ThirdRepoSpeedbumpDismissed": true,
+  "HiddenPluginInternalName": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": []
+  },
+  "SeenPluginInternalName": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "AntiAfkKick-Dalamud",
+      "YesAlready",
+      "Penumbra",
+      "NoKillPlugin",
+      "SimpleTweaksPlugin",
+      "BDTHPlugin",
+      "XIVComboExpanded",
+      "EasyZoom",
+      "SomethingNeedDoing",
+      "MiniCactpotSolver",
+      "FauxHollowsSolver",
+      "WondrousTailsSolver",
+      "DalamudFontReplacer",
+      "DalamudRepoBrowser",
+      "LootMaster",
+      "SonarPlugin",
+      "Visibility",
+      "JustBackup",
+      "Weatherman",
+      "HeelsPlugin",
+      "Prioritizer",
+      "SmartCast(Endwalker)",
+      "ChatTwo",
+      "NoClippy",
+      "NominaOcculta",
+      "OOBlugin",
+      "QoLBar",
+      "ReAction",
+      "SelectString",
+      "BurntToast",
+      "Compass",
+      "DamageInfoPlugin",
+      "EasyEyes",
+      "EngageTimer",
+      "Globetrotter",
+      "Glamaholic",
+      "Housemate",
+      "JobBars",
+      "ItemSearchPlugin",
+      "Kapture",
+      "MarketBoardPlugin",
+      "MOAction",
+      "PennyPincher",
+      "PixelPerfect",
+      "PriceCheck",
+      "Quest Map",
+      "QuestAWAY",
+      "RepairMe",
+      "SoundFilter",
+      "TeleporterPlugin",
+      "TheGreatSeparator",
+      "Tourist",
+      "TriadBuddy",
+      "WaymarkPresetPlugin",
+      "WheresWOLdo",
+      "AutoVisor",
+      "ChatCoordinates",
+      "Fractionality",
+      "GoldSaucerAssist",
+      "GoodMemory",
+      "JobIcons",
+      "MacroChain",
+      "NeatNoter",
+      "NinjutsuAssist",
+      "NotificationMaster",
+      "PvPSelector",
+      "VFXEditor",
+      "XIVChat",
+      "EnmityHp",
+      "DelvUI",
+      "DeepDungeonDex",
+      "Dalamud.LoadingImage",
+      "Cammy",
+      "AdventurerInNeed",
+      "MaterialUI",
+      "MapLinker",
+      "Namingway",
+      "PixelPerfectEx",
+      "ZodiacBuddy",
+      "BigPlayerDebuffs",
+      "OopsAllLalafells",
+      "PlayerTags",
+      "Splatoon",
+      "BetterPartyFinder",
+      "XIVCombo",
+      "BDTHPlugin",
+      "SimpleTweaksPlugin",
+      "HeelsPlugin",
+      "Globetrotter",
+      "ChatBubbles",
+      "MarketBoardPlugin",
+      "GoodMemory",
+      "XIVCombo",
+      "JobIcons",
+      "PingPlugin",
+      "FPSPlugin",
+      "PriceCheck",
+      "PeepingTom",
+      "MiniCactpotSolver",
+      "PennyPincher",
+      "RezPls",
+      "DamageInfoPlugin",
+      "Dalamud.LoadingImage",
+      "ItemSearchPlugin",
+      "DeepDungeonDex",
+      "NoKillPlugin",
+      "Visibility",
+      "TriadBuddy",
+      "DelvUI",
+      "PixelPerfect",
+      "MOAction",
+      "Tourist",
+      "OopsAllLalafells",
+      "Housemate",
+      "EasyEyes",
+      "JobBars",
+      "TeleporterPlugin",
+      "QoLBar",
+      "BetterPartyFinder",
+      "WaymarkPresetPlugin",
+      "Kapture",
+      "ChatCoordinates",
+      "orchestrion",
+      "MapLinker",
+      "FauxHollowsSolver",
+      "EngageTimer",
+      "VFXEditor",
+      "HarpHero",
+      "AdventurerInNeed",
+      "TitleEdit",
+      "WinTitle",
+      "AutoVisor",
+      "Quest Map",
+      "MacroChain",
+      "Glamaholic",
+      "Compass",
+      "RepairMe",
+      "WheresWOLdo",
+      "BurntToast",
+      "SoundFilter",
+      "Reset enmity command",
+      "NeatNoter",
+      "QuestAWAY",
+      "Namingway",
+      "NotificationMaster",
+      "XIVChat",
+      "FlyTextFilter",
+      "TheGreatSeparator",
+      "SonarPlugin",
+      "Prioritizer",
+      "EasyZoom",
+      "LootMaster",
+      "MidiBard",
+      "SmartCast(Endwalker)",
+      "Cammy",
+      "DalamudRepoBrowser",
+      "Fractionality",
+      "ReAction",
+      "OOBlugin",
+      "AntiAfkKick-Dalamud",
+      "Splatoon",
+      "EnmityHp",
+      "SelectString",
+      "JustBackup",
+      "DalamudFontReplacer",
+      "NoClippy",
+      "PvPSelector",
+      "FauxHollowsSolver",
+      "NinjutsuAssist",
+      "ReadyCheckHelper",
+      "TextAdvance",
+      "EnemyListDebuffs",
+      "Dalamud.FindAnything",
+      "BigPlayerDebuffs",
+      "ChatTwo",
+      "NominaOcculta",
+      "PixelPerfectEx",
+      "Penumbra",
+      "MiniCactpotSolver",
+      "WondrousTailsSolver",
+      "SomethingNeedDoing",
+      "XIVComboExpanded",
+      "YesAlready",
+      "ZodiacBuddy",
+      "GoldSaucerAssist",
+      "PlayerTags",
+      "Weatherman",
+      "Line",
+      "Lock",
+      "SeletRollItem",
+      "XIVComboExpandedest",
+      "SeeBuff",
+      "OBSPlugin",
+      "PartyIcons",
+      "HuntBuddy",
+      "ACT",
+      "Inviter",
+      "HousingPos",
+      "SmartVote",
+      "CurrencyAlert",
+      "WindowLocker",
+      "StarlightBreaker",
+      "SoundSetter",
+      "Macrology",
+      "FFLogsViewer",
+      "AetherSenseRedux",
+      "DrawCure",
+      "MakePlacePlugin",
+      "ARealmRecorded",
+      "CharacterPanelRefined",
+      "DailyDuty",
+      "faderPlugin",
+      "JobAssist",
+      "PrefPro",
+      "DeathRecap",
+      "ChatAlerts",
+      "ChillFrames",
+      "GatherBuddy",
+      "MPTickBar",
+      "NoTankYou",
+      "LiteralMapLink",
+      "MultiboxPlugin",
+      "RoleplayersToolbox",
+      "AdaptiveHud",
+      "Accountant",
+      "AetherCompass",
+      "AutoTranslateXIV",
+      "KingdomHeartsPlugin",
+      "ReloadPluginCommand",
+      "WExtras",
+      "AudibleCharacterStatus",
+      "ProperHousing",
+      "FlashOnTell",
+      "UnloadErrorFuckOff",
+      "DSREyeLocator",
+      "DoubleWeaver",
+      "Messenger",
+      "Dalamud.FullscreenCutscenes",
+      "TextToTalk",
+      "WindowSizeUnlock",
+      "MimicryHelper",
+      "SkillDisplay",
+      "SkillSwap",
+      "Snooper",
+      "TextBoxStyler",
+      "TheHeartOfTheParty",
+      "IMEPlugin",
+      "Zoom",
+      "Browsingway",
+      "Distance",
+      "Imagenation",
+      "Mini",
+      "RankSSpawnHelper",
+      "OceanFishin",
+      "Dalamud.CharacterSync",
+      "ChatTyper",
+      "NamePlateDebuffs",
+      "ObjectExplorer",
+      "UsedName",
+      "SunderingWorld",
+      "Mastercraft",
+      "Instancinator",
+      "AbyssosToolbox",
+      "PriceInsight",
+      "AutoFaka",
+      "ItemVendorLocation",
+      "HaselTweaks",
+      "WhereAmIAgain",
+      "Glamourer",
+      "RankSSpawnHelper-Extra",
+      "BatteryGauge",
+      "cl_showpos",
+      "FCNameColor",
+      "GentleTouch",
+      "owofy",
+      "SillyChat",
+      "VanillaHotbarExtender",
+      "Neko",
+      "OofPlugin",
+      "Tippy",
+      "DeathRoll",
+      "Dalamud.DiscordBridge",
+      "Dalamud.RichPresence",
+      "EurekaTrackerAutoPopper",
+      "ExtraChat",
+      "FaderPlugin",
+      "DeviceChangeFix",
+      "ActionTimeline",
+      "AbilityAnts",
+      "InventoryTools",
+      "CoinPouch",
+      "DutyTracker",
+      "Echoglossian",
+      "GoodFriend",
+      "HighFpsPhysicsPlugin",
+      "HUDManager",
+      "HuntHelper",
+      "KikoGuide",
+      "Ktisis",
+      "NextUIPlugin",
+      "NoSoliciting",
+      "NOTED",
+      "OrangeGuidanceTomestone",
+      "PartyListLayout",
+      "PatMe",
+      "PartyPlanner",
+      "Redirect",
+      "ReSanctuary",
+      "RemotePartyFinder",
+      "ResLogger2.Plugin",
+      "RoleplayProfiles",
+      "WhatDidYouSay",
+      "ShowGear",
+      "StackSellPrice",
+      "Stormtalons",
+      "TargetFurniture",
+      "TheDot",
+      "TidyChat",
+      "Tilted",
+      "TPie",
+      "Waitingway.Dalamud",
+      "WhereIsMyMouse",
+      "WhichPatchWasThat",
+      "Wholist",
+      "Wordsmith",
+      "WorkshopOptimizerPlugin",
+      "XIVDeck.FFXIVPlugin",
+      "XIVLogger",
+      "xivr",
+      "NekoLewd",
+      "XIVMoneyTracker",
+      "ActionEffectRange",
+      "FakeName",
+      "AutoMiniGame",
+      "SkipCutscene",
+      "KitchenSync",
+      "AutoHook",
+      "AutoLogin",
+      "AutoMammet",
+      "Beachcomber",
+      "CollectorsAnxiety",
+      "CrossUp",
+      "DeepDungeonTracker",
+      "MBHistory",
+      "ExpandedSearchInfo",
+      "Ffxiv2Mqtt",
+      "FishNotify",
+      "GearsetHelperPlugin",
+      "HimbeertoniRaidTool",
+      "InventorySearchBar",
+      "LiFu",
+      "Marketbuddy",
+      "MidiBard2",
+      "MiniMappingway",
+      "MonsterLootHunter",
+      "PlayerTrack",
+      "QuestMap",
+      "Radar",
+      "SplatoonX",
+      "AutoAction_CN",
+      "BossMod",
+      "Artisan",
+      "BetterMountRoulette",
+      "BetterPlaytime",
+      "DDD",
+      "Congratulations",
+      "MarketUploader",
+      "SeeBoss",
+      "IINACT",
+      "AutoRetainer",
+      "Avarice",
+      "LazyLoot",
+      "PandorasBox",
+      "Palace Pal",
+      "EurekaHelper",
+      "Doorbell",
+      "EmoteLog",
+      "Lifestream",
+      "Fungah",
+      "PriceInsightCN",
+      "BlueMageHelper",
+      "Honorific",
+      "Hunty",
+      "MemoryMarker",
+      "Tf2Hud",
+      "TooltipNotes",
+      "Tf2CriticalHitsPlugin",
+      "ClarityInChaos",
+      "BozjaBuddy",
+      "SubmarineTracker",
+      "borderless-fix",
+      "HuntTrainAssistant",
+      "autoSweep",
+      "CombatCursorContainment",
+      "CopyTranslated",
+      "TrackyTrack",
+      "AetheryteLinkInChat",
+      "XIVDupeFinder",
+      "LogogramHelper",
+      "PalacePal",
+      "FuckAnimationLock",
+      "HybridCamera",
+      "MacroRecorded",
+      "Mappy",
+      "NecroLens",
+      "PositionalGuide",
+      "PushyFinder",
+      "SortaKinda",
+      "WhoDidThat",
+      "Yes Already",
+      "CollectableCalculator",
+      "CurrencyTracker",
+      "Orbwalker",
+      "XIVFakeNews",
+      "XIVIslandCollector",
+      "XIVAutoKey",
+      "XIVSpeedTrainer",
+      "XIVSlothComboX",
+      "DailyRoutines",
+      "visland",
+      "VFXEditorCN",
+      "XIVHardWareMonitor",
+      "Craftimizer",
+      "FFXIVRPCalendarPlugin",
+      "LMeter",
+      "XIVWindowResizer",
+      "PartyListExtras",
+      "BetterInBlue",
+      "WhosTalking",
+      "Deliveroo",
+      "G4EUkrChatSupport",
+      "DynamicBridge",
+      "EldenRing",
+      "TwitchXIV",
+      "AutoTimer",
+      "Chameleon",
+      "Automaton",
+      "DistantSeas",
+      "Collections",
+      "AvantGarde",
+      "PetRenamer",
+      "XCount",
+      "CustomizePlus",
+      "TargetLines",
+      "TalkCopy",
+      "RotationSolver",
+      "LuckyStar",
+      "HousingChecker",
+      "vnavmesh",
+      "NyaDraw",
+      "GatherbuddyReborn",
+      "AEAssistLoader",
+      "AutoDuty",
+      "ARControl",
+      "AutoMountBgm",
+      "Brio",
+      "DelvCD",
+      "DontBanMyPlugin",
+      "Moodles",
+      "EasyTranslate.DalamudPlugin",
+      "Hyperborea",
+      "MapPartyAssist",
+      "Saucy",
+      "SimpleTodo",
+      "UntarnishedHeart",
+      "Umbra",
+      "Eventy",
+      "Squadronista",
+      "AEAssistV3",
+      "Aetherment",
+      "NekoHackBoxAuth",
+      "BossModReborn",
+      "PVPAuto",
+      "PvpStats",
+      "QuestSolver",
+      "UmbraX",
+      "AutoJailMarker",
+      "SaucyX",
+      "RoleplayingVoiceDalamud",
+      "XAT.Plugin",
+      "MacroMate",
+      "IQ.SonarEcho",
+      "CharaCradThief",
+      "Teleport",
+      "MarketSpy",
+      "RandomClassSelector",
+      "MareSynchronos",
+      "GambaGames",
+      "GlamourSpamRemover",
+      "VieraVoice4",
+      "CountdownMessages",
+      "HousingTimeoutReminder",
+      "HuntAlerts",
+      "FoodCheck",
+      "RetainerTrack",
+      "AutoQuest",
+      "I-Ching",
+      "Questionable",
+      "Dalamud.CharacterSyncX",
+      "FuckDalamudCN",
+      "EasyZoomReborn",
+      "SimpleMarketBoard",
+      "AllaganItemSearch",
+      "Tallafell",
+      "AllaganMarket",
+      "ARealmRecordedLite",
+      "heliosphere-plugin",
+      "XIVChatTools",
+      "CurrencySpender",
+      "NekoHackBox",
+      "DynamicUIScaling",
+      "I-Ching-GL",
+      "I-Ching-API12",
+      "PFRadar",
+      "vsatisfy",
+      "Gearsetter",
+      "Coyote-FFXiv",
+      "ICE",
+      "TeamcraftListMaker",
+      "Wikilinx",
+      "ActionTimelineEx",
+      "WrathCombo"
+    ]
+  },
+  "DevPluginSettings": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[Dalamud.Configuration.Internal.DevPluginSettings, Dalamud]], System.Private.CoreLib",
+    "C:\\Users\\u8166\\AppData\\Roaming\\XIVLauncherCN\\devPlugins": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": true,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "00000000-0000-0000-0000-000000000000",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\u8166\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\UmbraX\\Umbra.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": true,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "ff3fd096-7e8a-40c5-8ed6-cf561f91a560",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\u8166\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\AE\\AEAssistCNVersion\\AEAssistLoader.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": false,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "d7371047-1963-43ed-854b-223c4fdaeaf2",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\u8166\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\MakePlacePlugin\\MakePlacePlugin.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": false,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "4113ad1c-20eb-49ea-9d5d-acd9193631bb",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\u8166\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\HousingPos\\HousingPos.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": true,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "7ad92174-0905-4fca-9459-f147bc8547a4",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\1650\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\allagan_tools\\InventoryTools.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": true,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "abd13cf0-df85-428c-af0d-b92c85041237",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\1650\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\AEAssistCN\\AEAssistCNVersion\\AEAssistLoader.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": false,
+      "NotifyForErrors": true,
+      "AutomaticReloading": false,
+      "WorkingPluginId": "6718e534-f3db-4ced-90b6-f44b18faeb22",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    "C:\\Users\\1650\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\AutoDuty\\0.0.0.199\\AutoDuty.dll": {
+      "$type": "Dalamud.Configuration.Internal.DevPluginSettings, Dalamud",
+      "StartOnBoot": true,
+      "NotifyForErrors": true,
+      "AutomaticReloading": true,
+      "WorkingPluginId": "8c8d57eb-0d9a-4b44-915f-8d426f77fabe",
+      "DismissedValidationProblems": {
+        "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "$values": []
+      }
+    }
+  },
+  "DevPluginLoadLocations": {
+    "$type": "System.Collections.Generic.List`1[[Dalamud.Configuration.DevPluginLocationSettings, Dalamud]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "Dalamud.Configuration.DevPluginLocationSettings, Dalamud",
+        "Path": "C:\\Users\\1650\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\allagan_tools\\InventoryTools.dll",
+        "IsEnabled": true
+      },
+      {
+        "$type": "Dalamud.Configuration.DevPluginLocationSettings, Dalamud",
+        "Path": "C:\\Users\\1650\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\AEAssistCN\\AEAssistCNVersion\\AEAssistLoader.dll",
+        "IsEnabled": true
+      },
+      {
+        "$type": "Dalamud.Configuration.DevPluginLocationSettings, Dalamud",
+        "Path": "C:\\Users\\1650\\AppData\\Roaming\\XIVLauncherCN\\devPlugins\\AutoDuty\\0.0.0.199\\AutoDuty.dll",
+        "IsEnabled": true
+      }
+    ]
+  },
+  "GlobalUiScale": 1.1,
+  "UseAxisFontsFromGame": false,
+  "DefaultFontSpec": {
+    "$type": "Dalamud.Interface.FontIdentifier.SingleFontSpec, Dalamud",
+    "FontId": {
+      "$type": "Dalamud.Interface.FontIdentifier.SystemFontId, Dalamud",
+      "EnglishName": "Regular",
+      "LocaleNames": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+        "ca-es": "Normal",
+        "cs-cz": "obyčejné",
+        "da-dk": "normal",
+        "de-de": "Standard",
+        "el-gr": "Κανονικά",
+        "en-us": "Regular",
+        "es-es": "Normal",
+        "es-es_tradnl": "Normal",
+        "es-mx": "Normal",
+        "eu-es": "Arrunta",
+        "fi-fi": "Normaali",
+        "fr-ca": "Normal",
+        "fr-fr": "Normal",
+        "hu-hu": "Normál",
+        "it-it": "Normale",
+        "nb-no": "Normal",
+        "nl-nl": "Standaard",
+        "pl-pl": "Normalny",
+        "pt-br": "Normal",
+        "pt-pt": "Normal",
+        "ru-ru": "Обычный",
+        "sk-sk": "Normálne",
+        "sl-si": "Navadno",
+        "sv-se": "Normal",
+        "tr-tr": "Normal",
+        "zh-cn": "Regular"
+      },
+      "Family": {
+        "$type": "Dalamud.Interface.FontIdentifier.SystemFontFamilyId, Dalamud",
+        "EnglishName": "SimHei",
+        "LocaleNames": {
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+          "en-us": "SimHei",
+          "zh-cn": "黑体"
+        }
+      },
+      "Weight": 400,
+      "Stretch": 5,
+      "Style": 0
+    },
+    "SizePx": 13.333333,
+    "LineHeight": 1.0,
+    "GlyphOffset": {
+      "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "LetterSpacing": 0.0,
+    "GlyphRanges": null
+  },
+  "FontGammaLevel": 1.4,
+  "ImeStateIndicatorOpacity": 1.0,
+  "ToggleUiHide": false,
+  "ToggleUiHideDuringCutscenes": true,
+  "ToggleUiHideDuringGpose": true,
+  "PrintDalamudWelcomeMsg": false,
+  "PrintPluginsWelcomeMsg": false,
+  "AutoUpdatePlugins": false,
+  "DoButtonsSystemMenu": false,
+  "LogLevel": 2,
+  "LogSynchronously": false,
+  "LogAutoScroll": true,
+  "LogOpenAtStartup": false,
+  "LogLinesLimit": 10000,
+  "LogCommandHistory": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": []
+  },
+  "DevBarOpenAtStartup": false,
+  "ImGuiAssertsEnabledAtStartup": false,
+  "IsDocking": false,
+  "EnablePluginUISoundEffects": false,
+  "EnablePluginUiAdditionalOptions": true,
+  "IsDisableViewport": true,
+  "IsGamepadNavigationEnabled": false,
+  "IsFocusManagementEnabled": false,
+  "IsResumeGameAfterPluginLoad": false,
+  "DalamudBetaKind": "release",
+  "PluginSafeMode": false,
+  "PluginWaitBeforeFree": null,
+  "ReportShutdownCrashes": false,
+  "SavedStyles": null,
+  "SavedStylesVersioned": {
+    "$type": "System.Collections.Generic.List`1[[Dalamud.Interface.Style.StyleModel, Dalamud]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "Dalamud.Interface.Style.StyleModelV1, Dalamud",
+        "a": 1.0,
+        "b": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "c": 6.0,
+        "d": 0.0,
+        "e": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.5
+        },
+        "f": 1,
+        "g": 6.0,
+        "h": 1.0,
+        "i": 4.0,
+        "ab": 0.0,
+        "j": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 6.0,
+          "Y": 4.0
+        },
+        "k": 4.0,
+        "l": 0.0,
+        "m": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 5.0
+        },
+        "n": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 4.0
+        },
+        "o": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 2.0
+        },
+        "p": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 4.0
+        },
+        "q": 21.0,
+        "r": 16.0,
+        "s": 8.0,
+        "t": 10.0,
+        "u": 4.0,
+        "v": 2.0,
+        "w": 4.0,
+        "x": 0.0,
+        "y": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.5,
+          "Y": 0.5
+        },
+        "z": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.15
+        },
+        "aa": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 3.0,
+          "Y": 3.0
+        },
+        "col": {
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+          "Text": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.9411765,
+            "Y": 0.95686275,
+            "Z": 0.96862745,
+            "W": 1.0
+          },
+          "TextDisabled": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.41960785,
+            "Y": 0.47843137,
+            "Z": 0.54901963,
+            "W": 1.0
+          },
+          "WindowBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 1.0
+          },
+          "ChildBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.12156863,
+            "Y": 0.14509805,
+            "Z": 0.2,
+            "W": 1.0
+          },
+          "PopupBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.14509805,
+            "Y": 0.16862746,
+            "Z": 0.22745098,
+            "W": 1.0
+          },
+          "Border": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 1.0
+          },
+          "BorderShadow": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.050980393,
+            "Y": 0.0627451,
+            "Z": 0.09411765,
+            "W": 1.0
+          },
+          "FrameBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.1764706,
+            "Y": 0.20392157,
+            "Z": 0.27058825,
+            "W": 1.0
+          },
+          "FrameBgHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22352941,
+            "Y": 0.25490198,
+            "Z": 0.32156864,
+            "W": 1.0
+          },
+          "FrameBgActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.19607843,
+            "Y": 0.22352941,
+            "Z": 0.3019608,
+            "W": 1.0
+          },
+          "TitleBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.11764706,
+            "Y": 0.14117648,
+            "Z": 0.19607843,
+            "W": 1.0
+          },
+          "TitleBgActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "TitleBgCollapsed": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "MenuBarBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.16078432,
+            "Z": 0.21568628,
+            "W": 1.0
+          },
+          "ScrollbarBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.10980392,
+            "Y": 0.1254902,
+            "Z": 0.1764706,
+            "W": 1.0
+          },
+          "ScrollbarGrab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 1.0
+          },
+          "ScrollbarGrabHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.33333334,
+            "Z": 0.40784314,
+            "W": 1.0
+          },
+          "ScrollbarGrabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.4,
+            "Z": 0.47058824,
+            "W": 1.0
+          },
+          "CheckMark": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 1.0
+          },
+          "SliderGrab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 1.0
+          },
+          "SliderGrabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "Button": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.42352942,
+            "Z": 0.65882355,
+            "W": 1.0
+          },
+          "ButtonHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.25882354,
+            "Y": 0.47058824,
+            "Z": 0.72156864,
+            "W": 1.0
+          },
+          "ButtonActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.18039216,
+            "Y": 0.32941177,
+            "Z": 0.53333336,
+            "W": 1.0
+          },
+          "Header": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "HeaderHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22352941,
+            "Y": 0.25490198,
+            "Z": 0.32156864,
+            "W": 1.0
+          },
+          "HeaderActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.19607843,
+            "Y": 0.22352941,
+            "Z": 0.3019608,
+            "W": 1.0
+          },
+          "Separator": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 0.53333336
+          },
+          "SeparatorHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.33333334,
+            "Z": 0.40784314,
+            "W": 1.0
+          },
+          "SeparatorActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.4,
+            "Z": 0.47058824,
+            "W": 1.0
+          },
+          "ResizeGrip": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 0.4
+          },
+          "ResizeGripHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "ResizeGripActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.5019608,
+            "Z": 0.8235294,
+            "W": 1.0
+          },
+          "Tab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "TabHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.25882354,
+            "Y": 0.47058824,
+            "Z": 0.72156864,
+            "W": 1.0
+          },
+          "TabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.28309774,
+            "Y": 0.42473775,
+            "Z": 0.62886596,
+            "W": 1.0
+          },
+          "TabUnfocused": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.11764706,
+            "Y": 0.14117648,
+            "Z": 0.19607843,
+            "W": 1.0
+          },
+          "TabUnfocusedActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.21568628,
+            "Y": 0.2901961,
+            "Z": 0.42352942,
+            "W": 1.0
+          },
+          "DockingPreview": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 1.0
+          },
+          "DockingEmptyBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 1.0
+          },
+          "PlotLines": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "PlotLinesHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.41568628,
+            "Y": 0.6901961,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "PlotHistogram": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.43529412,
+            "Y": 0.8117647,
+            "Z": 0.5921569,
+            "W": 1.0
+          },
+          "PlotHistogramHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.49803922,
+            "Y": 0.8745098,
+            "Z": 0.654902,
+            "W": 1.0
+          },
+          "TableHeaderBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.16078432,
+            "Z": 0.21568628,
+            "W": 1.0
+          },
+          "TableBorderStrong": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 1.0
+          },
+          "TableBorderLight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.1764706,
+            "Y": 0.20392157,
+            "Z": 0.27058825,
+            "W": 1.0
+          },
+          "TableRowBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 0.0
+          },
+          "TableRowBgAlt": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.16078432,
+            "Z": 0.21568628,
+            "W": 0.4
+          },
+          "TextSelectedBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 0.2
+          },
+          "DragDropTarget": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.84313726,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "NavHighlight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "NavWindowingHighlight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.84313726,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "NavWindowingDimBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 0.8
+          },
+          "ModalWindowDimBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.050980393,
+            "Y": 0.0627451,
+            "Z": 0.09411765,
+            "W": 0.6
+          }
+        },
+        "name": "Daily Routines - Code Cobalt",
+        "dol": {
+          "$type": "Dalamud.Interface.Style.DalamudColors, Dalamud",
+          "a": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "b": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7,
+            "W": 1.0
+          },
+          "c": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7,
+            "W": 1.0
+          },
+          "d": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.5,
+            "Y": 0.5,
+            "Z": 0.5,
+            "W": 1.0
+          },
+          "e": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "f": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.878,
+            "Y": 0.878,
+            "Z": 0.878,
+            "W": 1.0
+          },
+          "g": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.709,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "h": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.6,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "i": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.8,
+            "Z": 0.1333333,
+            "W": 1.0
+          },
+          "j": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7058824,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "k": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 0.4,
+            "W": 1.0
+          },
+          "l": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.77,
+            "Y": 0.7,
+            "Z": 0.965,
+            "W": 1.0
+          },
+          "m": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.4,
+            "Y": 0.4,
+            "Z": 0.4,
+            "W": 1.0
+          },
+          "n": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.117,
+            "Y": 1.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "o": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.439,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "p": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.639,
+            "Y": 0.207,
+            "Z": 0.933,
+            "W": 1.0
+          },
+          "q": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.501,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "r": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.886,
+            "Y": 0.407,
+            "Z": 0.658,
+            "W": 1.0
+          },
+          "s": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.898,
+            "Y": 0.8,
+            "Z": 0.501,
+            "W": 1.0
+          }
+        },
+        "ver": 0
+      },
+      {
+        "$type": "Dalamud.Interface.Style.StyleModelV1, Dalamud",
+        "a": 1.0,
+        "b": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "c": 6.0,
+        "d": 0.0,
+        "e": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.5
+        },
+        "f": 1,
+        "g": 6.0,
+        "h": 1.0,
+        "i": 4.0,
+        "ab": 0.0,
+        "j": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 6.0,
+          "Y": 4.0
+        },
+        "k": 4.0,
+        "l": 0.0,
+        "m": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 5.0
+        },
+        "n": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 4.0
+        },
+        "o": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 2.0
+        },
+        "p": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 4.0
+        },
+        "q": 21.0,
+        "r": 16.0,
+        "s": 8.0,
+        "t": 10.0,
+        "u": 4.0,
+        "v": 2.0,
+        "w": 4.0,
+        "x": 0.0,
+        "y": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.5,
+          "Y": 0.5
+        },
+        "z": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.15
+        },
+        "aa": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 3.0,
+          "Y": 3.0
+        },
+        "col": {
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+          "Text": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.9411765,
+            "Y": 0.95686275,
+            "Z": 0.96862745,
+            "W": 1.0
+          },
+          "TextDisabled": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.41960785,
+            "Y": 0.47843137,
+            "Z": 0.54901963,
+            "W": 1.0
+          },
+          "WindowBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 1.0
+          },
+          "ChildBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.12156863,
+            "Y": 0.14509805,
+            "Z": 0.2,
+            "W": 1.0
+          },
+          "PopupBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.14509805,
+            "Y": 0.16862746,
+            "Z": 0.22745098,
+            "W": 1.0
+          },
+          "Border": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 1.0
+          },
+          "BorderShadow": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.050980393,
+            "Y": 0.0627451,
+            "Z": 0.09411765,
+            "W": 1.0
+          },
+          "FrameBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.1764706,
+            "Y": 0.20392157,
+            "Z": 0.27058825,
+            "W": 1.0
+          },
+          "FrameBgHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22352941,
+            "Y": 0.25490198,
+            "Z": 0.32156864,
+            "W": 1.0
+          },
+          "FrameBgActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.19607843,
+            "Y": 0.22352941,
+            "Z": 0.3019608,
+            "W": 1.0
+          },
+          "TitleBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.11764706,
+            "Y": 0.14117648,
+            "Z": 0.19607843,
+            "W": 1.0
+          },
+          "TitleBgActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "TitleBgCollapsed": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "MenuBarBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.16078432,
+            "Z": 0.21568628,
+            "W": 1.0
+          },
+          "ScrollbarBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.10980392,
+            "Y": 0.1254902,
+            "Z": 0.1764706,
+            "W": 1.0
+          },
+          "ScrollbarGrab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 1.0
+          },
+          "ScrollbarGrabHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.33333334,
+            "Z": 0.40784314,
+            "W": 1.0
+          },
+          "ScrollbarGrabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.4,
+            "Z": 0.47058824,
+            "W": 1.0
+          },
+          "CheckMark": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 1.0
+          },
+          "SliderGrab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 1.0
+          },
+          "SliderGrabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "Button": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.42352942,
+            "Z": 0.65882355,
+            "W": 1.0
+          },
+          "ButtonHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.25882354,
+            "Y": 0.47058824,
+            "Z": 0.72156864,
+            "W": 1.0
+          },
+          "ButtonActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.18039216,
+            "Y": 0.32941177,
+            "Z": 0.53333336,
+            "W": 1.0
+          },
+          "Header": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "HeaderHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22352941,
+            "Y": 0.25490198,
+            "Z": 0.32156864,
+            "W": 1.0
+          },
+          "HeaderActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.19607843,
+            "Y": 0.22352941,
+            "Z": 0.3019608,
+            "W": 1.0
+          },
+          "Separator": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 0.53333336
+          },
+          "SeparatorHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.33333334,
+            "Z": 0.40784314,
+            "W": 1.0
+          },
+          "SeparatorActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.4,
+            "Z": 0.47058824,
+            "W": 1.0
+          },
+          "ResizeGrip": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 0.4
+          },
+          "ResizeGripHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "ResizeGripActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.5019608,
+            "Z": 0.8235294,
+            "W": 1.0
+          },
+          "Tab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16470589,
+            "Y": 0.19607843,
+            "Z": 0.27450982,
+            "W": 1.0
+          },
+          "TabHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.25882354,
+            "Y": 0.47058824,
+            "Z": 0.72156864,
+            "W": 1.0
+          },
+          "TabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.28309774,
+            "Y": 0.42473775,
+            "Z": 0.62886596,
+            "W": 1.0
+          },
+          "TabUnfocused": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.11764706,
+            "Y": 0.14117648,
+            "Z": 0.19607843,
+            "W": 1.0
+          },
+          "TabUnfocusedActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.21568628,
+            "Y": 0.2901961,
+            "Z": 0.42352942,
+            "W": 1.0
+          },
+          "DockingPreview": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 1.0
+          },
+          "DockingEmptyBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 1.0
+          },
+          "PlotLines": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "PlotLinesHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.41568628,
+            "Y": 0.6901961,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "PlotHistogram": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.43529412,
+            "Y": 0.8117647,
+            "Z": 0.5921569,
+            "W": 1.0
+          },
+          "PlotHistogramHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.49803922,
+            "Y": 0.8745098,
+            "Z": 0.654902,
+            "W": 1.0
+          },
+          "TableHeaderBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.16078432,
+            "Z": 0.21568628,
+            "W": 1.0
+          },
+          "TableBorderStrong": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22745098,
+            "Y": 0.26666668,
+            "Z": 0.34509805,
+            "W": 1.0
+          },
+          "TableBorderLight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.1764706,
+            "Y": 0.20392157,
+            "Z": 0.27058825,
+            "W": 1.0
+          },
+          "TableRowBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 0.0
+          },
+          "TableRowBgAlt": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.16078432,
+            "Z": 0.21568628,
+            "W": 0.4
+          },
+          "TextSelectedBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.5647059,
+            "Z": 0.8862745,
+            "W": 0.2
+          },
+          "DragDropTarget": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.84313726,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "NavHighlight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.627451,
+            "Z": 0.9411765,
+            "W": 1.0
+          },
+          "NavWindowingHighlight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.84313726,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "NavWindowingDimBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.101960786,
+            "Y": 0.11764706,
+            "Z": 0.16862746,
+            "W": 0.8
+          },
+          "ModalWindowDimBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.050980393,
+            "Y": 0.0627451,
+            "Z": 0.09411765,
+            "W": 0.6
+          }
+        },
+        "name": "Daily Routines - Code Cobalt",
+        "dol": {
+          "$type": "Dalamud.Interface.Style.DalamudColors, Dalamud",
+          "a": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "b": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7,
+            "W": 1.0
+          },
+          "c": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7,
+            "W": 1.0
+          },
+          "d": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.5,
+            "Y": 0.5,
+            "Z": 0.5,
+            "W": 1.0
+          },
+          "e": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "f": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.878,
+            "Y": 0.878,
+            "Z": 0.878,
+            "W": 1.0
+          },
+          "g": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.709,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "h": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.6,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "i": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.8,
+            "Z": 0.1333333,
+            "W": 1.0
+          },
+          "j": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7058824,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "k": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 0.4,
+            "W": 1.0
+          },
+          "l": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.77,
+            "Y": 0.7,
+            "Z": 0.965,
+            "W": 1.0
+          },
+          "m": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.4,
+            "Y": 0.4,
+            "Z": 0.4,
+            "W": 1.0
+          },
+          "n": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.117,
+            "Y": 1.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "o": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.439,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "p": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.639,
+            "Y": 0.207,
+            "Z": 0.933,
+            "W": 1.0
+          },
+          "q": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.501,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "r": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.886,
+            "Y": 0.407,
+            "Z": 0.658,
+            "W": 1.0
+          },
+          "s": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.898,
+            "Y": 0.8,
+            "Z": 0.501,
+            "W": 1.0
+          }
+        },
+        "ver": 0
+      },
+      {
+        "$type": "Dalamud.Interface.Style.StyleModelV1, Dalamud",
+        "a": 1.0,
+        "b": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "c": 0.0,
+        "d": 1.0,
+        "e": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.5
+        },
+        "f": 1,
+        "g": 1.0,
+        "h": 1.0,
+        "i": 2.0,
+        "ab": 0.0,
+        "j": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 3.0
+        },
+        "k": 1.0,
+        "l": 0.0,
+        "m": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 8.0,
+          "Y": 4.0
+        },
+        "n": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 4.0
+        },
+        "o": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 4.0,
+          "Y": 2.0
+        },
+        "p": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "q": 21.0,
+        "r": 12.0,
+        "s": 1.0,
+        "t": 10.0,
+        "u": 1.0,
+        "v": 4.0,
+        "w": 1.0,
+        "x": 0.0,
+        "y": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.5,
+          "Y": 0.5
+        },
+        "z": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "aa": {
+          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 3.0,
+          "Y": 3.0
+        },
+        "col": {
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+          "Text": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "TextDisabled": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.5,
+            "Y": 0.5,
+            "Z": 0.5,
+            "W": 1.0
+          },
+          "WindowBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.16862746,
+            "Y": 0.19607843,
+            "Z": 0.2901961,
+            "W": 0.8627451
+          },
+          "ChildBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.12941177,
+            "Y": 0.21176471,
+            "Z": 0.43137255,
+            "W": 0.0
+          },
+          "PopupBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.14901961,
+            "Y": 0.21568628,
+            "Z": 0.34509805,
+            "W": 0.9098039
+          },
+          "Border": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13725491,
+            "Y": 0.3764706,
+            "Z": 0.6901961,
+            "W": 0.7529412
+          },
+          "BorderShadow": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 0.0
+          },
+          "FrameBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 0.14901961
+          },
+          "FrameBgHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.8333333,
+            "Y": 0.8333333,
+            "Z": 0.8333333,
+            "W": 0.4
+          },
+          "FrameBgActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.8352941,
+            "Y": 0.8352941,
+            "Z": 0.8352941,
+            "W": 0.654902
+          },
+          "TitleBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.039215688,
+            "Y": 0.1254902,
+            "Z": 0.4117647,
+            "W": 0.80784315
+          },
+          "TitleBgActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.23137255,
+            "Y": 0.3137255,
+            "Z": 0.49803922,
+            "W": 1.0
+          },
+          "TitleBgCollapsed": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.23137255,
+            "Y": 0.3137255,
+            "Z": 0.49803922,
+            "W": 1.0
+          },
+          "MenuBarBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.14901961,
+            "Y": 0.21568628,
+            "Z": 0.34509805,
+            "W": 0.9098039
+          },
+          "ScrollbarBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 0.0
+          },
+          "ScrollbarGrab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.45882353,
+            "Y": 0.5686275,
+            "Z": 0.7607843,
+            "W": 1.0
+          },
+          "ScrollbarGrabHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.50980395,
+            "Y": 0.61960787,
+            "Z": 0.8156863,
+            "W": 1.0
+          },
+          "ScrollbarGrabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.50980395,
+            "Y": 0.61960787,
+            "Z": 0.8156863,
+            "W": 1.0
+          },
+          "CheckMark": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.86,
+            "Y": 0.86,
+            "Z": 0.86,
+            "W": 1.0
+          },
+          "SliderGrab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.8392157,
+            "Y": 0.84313726,
+            "Z": 0.96862745,
+            "W": 1.0
+          },
+          "SliderGrabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.8392157,
+            "Y": 0.84313726,
+            "Z": 0.96862745,
+            "W": 1.0
+          },
+          "Button": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2901961,
+            "Y": 0.38039216,
+            "Z": 0.6117647,
+            "W": 1.0
+          },
+          "ButtonHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.3529412,
+            "Y": 0.44313726,
+            "Z": 0.6745098,
+            "W": 1.0
+          },
+          "ButtonActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.40408602,
+            "Y": 0.51165205,
+            "Z": 0.7875817,
+            "W": 1.0
+          },
+          "Header": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.10980392,
+            "Y": 0.22745098,
+            "Z": 0.43529412,
+            "W": 1.0
+          },
+          "HeaderHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2784314,
+            "Y": 0.3764706,
+            "Z": 0.5882353,
+            "W": 1.0
+          },
+          "HeaderActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2784314,
+            "Y": 0.3764706,
+            "Z": 0.5882353,
+            "W": 1.0
+          },
+          "Separator": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.22352941,
+            "Y": 0.35686275,
+            "Z": 0.654902,
+            "W": 1.0
+          },
+          "SeparatorHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.1,
+            "Y": 0.4,
+            "Z": 0.75,
+            "W": 0.78
+          },
+          "SeparatorActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.1,
+            "Y": 0.4,
+            "Z": 0.75,
+            "W": 1.0
+          },
+          "ResizeGrip": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.79,
+            "Y": 0.79,
+            "Z": 0.79,
+            "W": 0.25
+          },
+          "ResizeGripHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.78,
+            "Y": 0.78,
+            "Z": 0.78,
+            "W": 0.67
+          },
+          "ResizeGripActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.88,
+            "Y": 0.88,
+            "Z": 0.88,
+            "W": 0.95
+          },
+          "Tab": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.12941177,
+            "Y": 0.21960784,
+            "Z": 0.4117647,
+            "W": 1.0
+          },
+          "TabHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.25882354,
+            "Y": 0.34901962,
+            "Z": 0.5803922,
+            "W": 1.0
+          },
+          "TabActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2249499,
+            "Y": 0.35910985,
+            "Z": 0.6993007,
+            "W": 1.0
+          },
+          "TabUnfocused": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.068,
+            "Y": 0.10199998,
+            "Z": 0.14800003,
+            "W": 0.9724
+          },
+          "TabUnfocusedActive": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.13599998,
+            "Y": 0.26199996,
+            "Z": 0.424,
+            "W": 1.0
+          },
+          "DockingPreview": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.26,
+            "Y": 0.59,
+            "Z": 0.98,
+            "W": 0.7
+          },
+          "DockingEmptyBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.2,
+            "Y": 0.2,
+            "Z": 0.2,
+            "W": 1.0
+          },
+          "PlotLines": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.61,
+            "Y": 0.61,
+            "Z": 0.61,
+            "W": 1.0
+          },
+          "PlotLinesHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.43,
+            "Z": 0.35,
+            "W": 1.0
+          },
+          "PlotHistogram": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.9,
+            "Y": 0.7,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "PlotHistogramHovered": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.6,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "TableHeaderBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 0.14901961
+          },
+          "TableBorderStrong": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.31,
+            "Y": 0.31,
+            "Z": 0.35,
+            "W": 1.0
+          },
+          "TableBorderLight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.23,
+            "Y": 0.23,
+            "Z": 0.25,
+            "W": 1.0
+          },
+          "TableRowBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 0.0
+          },
+          "TableRowBgAlt": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 0.06
+          },
+          "TextSelectedBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.26,
+            "Y": 0.59,
+            "Z": 0.98,
+            "W": 0.35
+          },
+          "DragDropTarget": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 0.0,
+            "W": 0.9
+          },
+          "NavHighlight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.26,
+            "Y": 0.59,
+            "Z": 0.98,
+            "W": 1.0
+          },
+          "NavWindowingHighlight": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 0.7
+          },
+          "NavWindowingDimBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8,
+            "W": 0.2
+          },
+          "ModalWindowDimBg": {
+            "$type": "System.Numerics.Vector4, System.Private.CoreLib",
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8,
+            "W": 0.35
+          }
+        },
+        "name": "FFXIV Clear Blue Theme (AAMix)",
+        "dol": {
+          "$type": "Dalamud.Interface.Style.DalamudColors, Dalamud",
+          "a": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.8642534,
+            "Y": 0.4027968,
+            "Z": 0.43769705,
+            "W": 1.0
+          },
+          "b": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7,
+            "W": 1.0
+          },
+          "c": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7,
+            "W": 1.0
+          },
+          "d": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.5,
+            "Y": 0.5,
+            "Z": 0.5,
+            "W": 1.0
+          },
+          "e": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "f": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.878,
+            "Y": 0.878,
+            "Z": 0.878,
+            "W": 1.0
+          },
+          "g": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.709,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "h": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.6,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "i": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.8,
+            "Z": 0.1333333,
+            "W": 1.0
+          },
+          "j": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.8959276,
+            "Y": 0.42566693,
+            "Z": 0.42566693,
+            "W": 1.0
+          },
+          "k": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 0.4,
+            "W": 1.0
+          },
+          "l": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.77,
+            "Y": 0.7,
+            "Z": 0.965,
+            "W": 1.0
+          },
+          "m": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.4,
+            "Y": 0.4,
+            "Z": 0.4,
+            "W": 1.0
+          },
+          "n": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.117,
+            "Y": 1.0,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "o": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.0,
+            "Y": 0.439,
+            "Z": 1.0,
+            "W": 1.0
+          },
+          "p": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.639,
+            "Y": 0.207,
+            "Z": 0.933,
+            "W": 1.0
+          },
+          "q": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 1.0,
+            "Y": 0.501,
+            "Z": 0.0,
+            "W": 1.0
+          },
+          "r": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.886,
+            "Y": 0.407,
+            "Z": 0.658,
+            "W": 1.0
+          },
+          "s": {
+            "$type": "System.Nullable`1[[System.Numerics.Vector4, System.Private.CoreLib]], System.Private.CoreLib",
+            "X": 0.898,
+            "Y": 0.8,
+            "Z": 0.501,
+            "W": 1.0
+          }
+        },
+        "ver": 0
+      }
+    ]
+  },
+  "ChosenStyle": "FFXIV Clear Blue Theme (AAMix)",
+  "SavedProfiles": {
+    "$type": "System.Collections.Generic.List`1[[Dalamud.Plugin.Internal.Profiles.ProfileModel, Dalamud]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1, Dalamud",
+        "b": false,
+        "p": 0,
+        "e": true,
+        "c": 0,
+        "Plugins": {
+          "$type": "System.Collections.Generic.List`1[[Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud]], System.Private.CoreLib",
+          "$values": [
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "AutoDuty",
+              "WorkingPluginId": "4ddbb8dd-3358-4a1a-ba50-c7af70a00bb0",
+              "IsEnabled": false
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "BossMod",
+              "WorkingPluginId": "b512727b-fdea-4e0f-9114-95be080cc27b",
+              "IsEnabled": false
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "BossModReborn",
+              "WorkingPluginId": "fea29d00-089a-4faf-b437-2ef461c20643",
+              "IsEnabled": false
+            }
+          ]
+        },
+        "id": "2c206d38-12e2-41ac-9b55-585a5743d9cf",
+        "n": "自动亲信（散装）"
+      },
+      {
+        "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1, Dalamud",
+        "b": false,
+        "p": 0,
+        "e": true,
+        "c": 0,
+        "Plugins": {
+          "$type": "System.Collections.Generic.List`1[[Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud]], System.Private.CoreLib",
+          "$values": [
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "PennyPincher",
+              "WorkingPluginId": "99b7f14a-fcd2-4bed-b82f-513b77212730",
+              "IsEnabled": false
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "ARealmRecorded",
+              "WorkingPluginId": "7763022d-a57d-4216-87f5-e778ee278296",
+              "IsEnabled": false
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "AntiAfkKick-Dalamud",
+              "WorkingPluginId": "ddc0965b-cbc1-40ce-9574-51e7832f68ff",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "OBSPlugin",
+              "WorkingPluginId": "f45d25e0-a8d1-4430-81bb-68235bd16306",
+              "IsEnabled": false
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "PeepingTom",
+              "WorkingPluginId": "90c99170-7ce5-4d37-bc46-8604c78a5936",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "SimpleTweaksPlugin",
+              "WorkingPluginId": "01db3a07-737d-4b5b-a657-318f8794d8f5",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "PixelPerfect",
+              "WorkingPluginId": "8380143e-4ac8-4700-9399-bc97613b8ec0",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "SoundFilter",
+              "WorkingPluginId": "d3b0a105-3f8d-4974-9086-de2a253409a6",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "StarlightBreaker",
+              "WorkingPluginId": "e0bc0ce9-a8bf-43d4-bbba-670596be6796",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "TeleporterPlugin",
+              "WorkingPluginId": "3df49b8a-0bd5-41b1-801d-8425d9827835",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "LiteralMapLink",
+              "WorkingPluginId": "b68c1dfb-85dc-4d43-a628-39f423331efb",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "BurntToast",
+              "WorkingPluginId": "6e44da25-76ba-4bcb-a4e4-2026dd9c7f96",
+              "IsEnabled": true
+            }
+          ]
+        },
+        "id": "4e7d2094-a529-491b-a454-ec856da62ecc",
+        "n": "常驻（底层）"
+      },
+      {
+        "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1, Dalamud",
+        "b": false,
+        "p": 0,
+        "e": true,
+        "c": 0,
+        "Plugins": {
+          "$type": "System.Collections.Generic.List`1[[Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud]], System.Private.CoreLib",
+          "$values": [
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "Marketbuddy",
+              "WorkingPluginId": "63ac4f81-f567-4733-8d19-429c98ec05c1",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "RemotePartyFinder",
+              "WorkingPluginId": "c1bba864-c23e-4381-8a61-e0e5b247715b",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "SomethingNeedDoing",
+              "WorkingPluginId": "0f07775d-2ed5-4240-b2a2-52422baa5c6c",
+              "IsEnabled": false
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "MarketBoardPlugin",
+              "WorkingPluginId": "122af82b-a612-4c20-86cc-1e44167f55d4",
+              "IsEnabled": true
+            },
+            {
+              "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+              "InternalName": "Visibility",
+              "WorkingPluginId": "8529d7a3-cec0-43c0-a1db-621dd0b66ac5",
+              "IsEnabled": true
+            }
+          ]
+        },
+        "id": "7f3dbe24-1f07-49ef-9f88-ac6d73b7c819",
+        "n": "常驻（体验层）"
+      }
+    ]
+  },
+  "DefaultProfile": {
+    "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1, Dalamud",
+    "b": false,
+    "p": 0,
+    "e": true,
+    "c": 0,
+    "Plugins": {
+      "$type": "System.Collections.Generic.List`1[[Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "MiniCactpotSolver",
+          "WorkingPluginId": "e19ad0da-4a47-4b1b-8afd-3c2d090792c6",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "ZodiacBuddy",
+          "WorkingPluginId": "f64335ee-2ce0-4fd5-8e4a-277546bb3274",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "EasyEyes",
+          "WorkingPluginId": "f9f426aa-0ed9-47d8-a3e0-585e02ccb0a7",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Prioritizer",
+          "WorkingPluginId": "e72c6e0c-ab11-4f26-81a5-fa19371f8150",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "WaymarkPresetPlugin",
+          "WorkingPluginId": "f27cc1a0-48a2-4029-8990-17a236bbbdac",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "SonarPlugin",
+          "WorkingPluginId": "88bb1254-e8a4-4931-884d-41d5a398eb18",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "TriadBuddy",
+          "WorkingPluginId": "28be245a-0900-4e22-b8ec-3248c9a79b55",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "CharacterPanelRefined",
+          "WorkingPluginId": "8a44ebc0-abe4-4828-944b-0d60e7f1eb71",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "EurekaTrackerAutoPopper",
+          "WorkingPluginId": "e7cca6c1-63d0-417d-843b-cacb381c3794",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Globetrotter",
+          "WorkingPluginId": "d15dce62-e110-4794-9efe-7296d040964d",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Housemate",
+          "WorkingPluginId": "9854acc9-5ec3-438e-b69d-6d65f0ec5ad6",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Inviter",
+          "WorkingPluginId": "9466c1c3-5163-4a67-8021-3ef8bed5f29d",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "GatherBuddy",
+          "WorkingPluginId": "11341355-76f4-4067-a373-64fbf749ef2d",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "SubmarineTracker",
+          "WorkingPluginId": "25620b50-7adc-46a8-ae05-d1d9459bb03e",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "WhoDidThat",
+          "WorkingPluginId": "6ef442be-7679-4df2-8808-127f003c9233",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "AutoHook",
+          "WorkingPluginId": "90b08cc5-8eab-4cac-bbd7-8ed41364b151",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Dalamud.CharacterSync",
+          "WorkingPluginId": "2c6ea5aa-2278-4f25-8714-5cd150769542",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "BDTHPlugin",
+          "WorkingPluginId": "fb41ad6b-45bd-4e7a-9544-45cc853aa0de",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "SplatoonX",
+          "WorkingPluginId": "879317e8-1f3d-4b45-8bd3-bce19257d108",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "GatherbuddyReborn",
+          "WorkingPluginId": "0242b449-7113-4fb0-8011-1174d0c5d0d5",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "PriceInsight",
+          "WorkingPluginId": "a74c3111-8bcf-49bc-a461-5778d7a23527",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "NyaDraw",
+          "WorkingPluginId": "3ea4112b-60d8-4a54-a678-e943a3e6a65a",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "FFLogsViewer",
+          "WorkingPluginId": "253e4083-9982-4105-b644-64a47e757f6b",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "FPSPlugin",
+          "WorkingPluginId": "89d2d77c-ae72-4d13-8336-9125cf6e1151",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "HuntTrainAssistant",
+          "WorkingPluginId": "a1f8a48c-5c08-4aaa-b13d-16a78a3426c3",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "PandorasBox",
+          "WorkingPluginId": "0cfd6723-8aef-4925-a398-5b47ffb053bc",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "ReadyCheckHelper",
+          "WorkingPluginId": "d18f1c91-4508-4709-a86f-880a91e93299",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "BetterPartyFinder",
+          "WorkingPluginId": "54fe3cd5-45c0-4d0b-9b7e-63bdc6b42823",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Automaton",
+          "WorkingPluginId": "a04600aa-057e-46eb-8eae-143026d74f39",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "CharaCradThief",
+          "WorkingPluginId": "281a0734-dbd8-4903-ac5c-299addb1a19d",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "HaselTweaks",
+          "WorkingPluginId": "ff8aaae8-8fa4-43a8-b6d1-bfb3c5c1c823",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Penumbra",
+          "WorkingPluginId": "b9426edd-9cb2-4eb2-b727-6d5ac8dab336",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Aetherment",
+          "WorkingPluginId": "142d9e4b-2361-480c-8a78-28af24b33f3c",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "ChatCoordinates",
+          "WorkingPluginId": "8f0f12ee-c3a1-40ab-b9a9-71b316747826",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "QuestSolver",
+          "WorkingPluginId": "de10c0f1-9d82-4bd0-b398-60a4f5f61b83",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "visland",
+          "WorkingPluginId": "f90f3d17-65c3-4bdc-bc46-27af7c1c6eaa",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "LazyLoot",
+          "WorkingPluginId": "af3dff8f-a687-47b6-ac8a-1669befb6fa7",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "DailyRoutines",
+          "WorkingPluginId": "733ea06d-e11c-4de2-888f-9c8282e3b6ae",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "IINACT",
+          "WorkingPluginId": "59f33e4c-c38f-4dd4-9ce4-fd854054164b",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "HousingPos",
+          "WorkingPluginId": "ba49407c-5119-42e4-99ba-5355175490ca",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "RetainerTrack",
+          "WorkingPluginId": "9298ff29-6db5-4219-8941-51d7fb436b76",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Dalamud.CharacterSyncX",
+          "WorkingPluginId": "b232016d-254c-408e-a772-a66d5760aa07",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "FuckDalamudCN",
+          "WorkingPluginId": "9a7e7906-8ad4-46b7-82ee-7f00a3e424c8",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "EasyZoomReborn",
+          "WorkingPluginId": "04611ae4-4391-42de-9137-4a0f42998225",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "ARealmRecordedLite",
+          "WorkingPluginId": "54eb84fa-37a7-41c8-b9a3-5b3e4e95c2ca",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "I-Ching-GL",
+          "WorkingPluginId": "8e5a9f19-7985-4ae9-85ca-202751c30cbf",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "RotationSolver",
+          "WorkingPluginId": "6ac79d21-63d2-40f4-bef5-cb181d15534b",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "PFRadar",
+          "WorkingPluginId": "8d22f11c-9791-4de9-b11a-8d8ad5ebf880",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "vsatisfy",
+          "WorkingPluginId": "0a36e123-1f5f-46ba-89d6-155552dc56ea",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "AEAssistV3",
+          "WorkingPluginId": "6718e534-f3db-4ced-90b6-f44b18faeb22",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Gearsetter",
+          "WorkingPluginId": "3082c05a-04c2-4ba5-ad38-37760a156581",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "InventoryTools",
+          "WorkingPluginId": "41740fce-c891-40a3-9727-a51841a32da6",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "UntarnishedHeart",
+          "WorkingPluginId": "dbe84b2c-5132-4773-90d2-4e5794dcd80a",
+          "IsEnabled": false
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Questionable",
+          "WorkingPluginId": "30ddc3ed-9158-4a96-9734-bb2c9c9a81d5",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "vnavmesh",
+          "WorkingPluginId": "98917cc1-b47e-4213-a9fc-0362b61ca466",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "SimpleTweaksPlugin",
+          "WorkingPluginId": "96bdee28-91da-4487-b2b1-3ab6817bdcc5",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Lifestream",
+          "WorkingPluginId": "0675f35e-5126-4738-b28c-451988fa4584",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Deliveroo",
+          "WorkingPluginId": "f842ec65-16cb-4c1e-9879-3d72ad011194",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "ICE",
+          "WorkingPluginId": "dd4ec5aa-4814-40af-aee4-3ca6705ef09b",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "BossModReborn",
+          "WorkingPluginId": "e3813e7a-0f2d-4e0f-9545-56043513c826",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "AutoDuty",
+          "WorkingPluginId": "71bddd2e-2a8b-447e-9e44-5ef8653bc254",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "Artisan",
+          "WorkingPluginId": "c053e58a-88ca-4261-8a51-88a01dbabf28",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "AutoRetainer",
+          "WorkingPluginId": "23cbee6f-cd84-4457-9df1-2f2a6056d64a",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "YesAlready",
+          "WorkingPluginId": "9f1023fa-4c7b-42e1-b948-42cf6c8a084f",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "TextAdvance",
+          "WorkingPluginId": "07bc9224-0403-4e5e-b544-e1c04035d6ba",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "StarlightBreaker",
+          "WorkingPluginId": "ead4a8c5-dbf3-4dbe-93fa-7b50f3c14afc",
+          "IsEnabled": true
+        },
+        {
+          "$type": "Dalamud.Plugin.Internal.Profiles.ProfileModelV1+ProfileModelV1Plugin, Dalamud",
+          "InternalName": "SomethingNeedDoing",
+          "WorkingPluginId": "b5e6616e-2ea1-4d33-8885-a00f7b32f588",
+          "IsEnabled": true
+        }
+      ]
+    },
+    "id": "00000000-0000-0000-0000-000000000000",
+    "n": "DEFAULT"
+  },
+  "ProfilesEnabled": true,
+  "ProfilesHasSeenTutorial": true,
+  "UseManualProxy": true,
+  "ProxyProtocol": "socks5",
+  "ProxyHost": "127.0.0.1",
+  "ProxyPort": 7890,
+  "DefaultUiPreset": {
+    "$type": "Dalamud.Interface.Windowing.Persistence.PresetModel, Dalamud",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "n": "New Preset",
+    "w": {
+      "$type": "System.Collections.Generic.Dictionary`2[[System.UInt32, System.Private.CoreLib],[Dalamud.Interface.Windowing.Persistence.PresetModel+PresetWindow, Dalamud]], System.Private.CoreLib",
+      "314727601": {
+        "$type": "Dalamud.Interface.Windowing.Persistence.PresetModel+PresetWindow, Dalamud",
+        "p": false,
+        "ct": false,
+        "a": 1.0,
+        "IsDefault": false
+      },
+      "11194379": {
+        "$type": "Dalamud.Interface.Windowing.Persistence.PresetModel+PresetWindow, Dalamud",
+        "p": false,
+        "ct": false,
+        "a": 0.7945,
+        "IsDefault": false
+      }
+    }
+  },
+  "DtrOrder": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "LazyLoot",
+      "YesAlready",
+      "vnavmesh",
+      "bmr-autorotation",
+      "bmr-ai",
+      "DailyRoutines-AutoCountPlayers",
+      "SplatoonPriority",
+      "LifestreamInstance",
+      "AEAssist-TargetSelector",
+      "FPS Display",
+      "DailyRoutines-InstanceZoneChangeCommand",
+      "CurrencyTracker",
+      "SubmarineTracker",
+      "Rotation Solver",
+      "S怪触发小助手-当前几线",
+      "WOLdo",
+      "Auto Attack",
+      "[HaselTweaks] Instance",
+      "[HaselTweaks] FPS",
+      "[HaselTweaks] Busy",
+      "Orchestrion",
+      "Ping0",
+      "XIV HardWare Monitor",
+      "vbm-autorotation",
+      "vbm-ai",
+      "Accountant.DTR",
+      "Quest Solver",
+      "DailyRoutines-GameTimeLeft",
+      "DailyRoutines-WorldTravelCommand",
+      "DailyRoutines-AutoDisplayMitigationInfo"
+    ]
+  },
+  "DtrIgnore": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "LazyLoot",
+      "vnavmesh",
+      "YesAlready",
+      "DailyRoutines-AutoCountPlayers",
+      "SplatoonPriority",
+      "AEAssist-TargetSelector",
+      "DailyRoutines-InstanceZoneChangeCommand",
+      "SubmarineTracker",
+      "Rotation Solver"
+    ]
+  },
+  "DtrSpacing": 10,
+  "DtrSwapDirection": false,
+  "ShowTsm": true,
+  "ReduceMotions": true,
+  "IsMbCollect": true,
+  "AcceptedTOSHash": "99F45D7967F4E12FDF3FB2E6B11DF518EBC4F3A232B64DA7B184AEC13200DEE1",
+  "EffectiveLanguage": "zh",
+  "ShowDevBarInfo": true,
+  "LastFeedbackContactDetails": "",
+  "PluginTestingOptIns": {
+    "$type": "System.Collections.Generic.List`1[[Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "DamageInfoPlugin",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "EasyEyes",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "NoKillPlugin",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "Quest Map",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "TriadBuddy",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "SimpleTweaksPlugin",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "EurekaTrackerAutoPopper",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "CoinPouch",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "KikoGuide",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "ReSanctuary",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "ARealmRecorded",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "SubmarineTracker",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "DailyRoutines",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "BurntToast",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "GatherbuddyReborn",
+        "Branch": "testing-live"
+      },
+      {
+        "$type": "Dalamud.Configuration.Internal.PluginTestingOptIn, Dalamud",
+        "InternalName": "vnavmesh",
+        "Branch": "testing-live"
+      }
+    ]
+  },
+  "PluginAutoUpdatePreferences": {
+    "$type": "System.Collections.Generic.List`1[[Dalamud.Configuration.Internal.AutoUpdatePreference, Dalamud]], System.Private.CoreLib",
+    "$values": []
+  },
+  "WindowIsImmersive": false,
+  "ReShadeHandlingModeV2": 0,
+  "SwapChainHookMode": 0,
+  "GameNetworkUpHitch": 30.0,
+  "GameNetworkDownHitch": 30.0,
+  "FrameworkUpdateHitch": 50.0,
+  "UiBuilderHitch": 100.0,
+  "UseTexturePluginTracking": false,
+  "PluginInstallerOpen": 1,
+  "AutoUpdateBehavior": 0,
+  "CheckPeriodicallyForUpdates": true,
+  "SendUpdateNotificationToChat": false,
+  "UpdateDisabledPlugins": false,
+  "NotificationAnchorPosition": {
+    "$type": "System.Numerics.Vector2, System.Private.CoreLib",
+    "X": 1.0,
+    "Y": 1.0
+  }
+}

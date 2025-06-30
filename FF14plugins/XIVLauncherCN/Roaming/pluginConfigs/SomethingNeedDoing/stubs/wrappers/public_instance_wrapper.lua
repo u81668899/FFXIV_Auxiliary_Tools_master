@@ -1,0 +1,4 @@
+--- @class PublicInstanceWrapper
+--- @field TerritoryTypeId number
+--- @field InstanceId number
+--- @field IsInstancedArea boolean

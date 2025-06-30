@@ -10,6 +10,26 @@
   "CheckNpcHideBeaten": true,
   "CheckNpcHideCompleted": true,
   "NpcStats": {
-    "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[TriadBuddyPlugin.Configuration+NpcStatInfo, TriadBuddy]], System.Private.CoreLib"
+    "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[TriadBuddyPlugin.Configuration+NpcStatInfo, TriadBuddy]], System.Private.CoreLib",
+    "2293771": {
+      "$type": "TriadBuddyPlugin.Configuration+NpcStatInfo, TriadBuddy",
+      "Cards": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+      },
+      "NumCoins": 40,
+      "NumWins": 4,
+      "NumDraws": 0,
+      "NumLosses": 0
+    },
+    "2293770": {
+      "$type": "TriadBuddyPlugin.Configuration+NpcStatInfo, TriadBuddy",
+      "Cards": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+      },
+      "NumCoins": 98,
+      "NumWins": 1,
+      "NumDraws": 5,
+      "NumLosses": 0
+    }
   }
 }
